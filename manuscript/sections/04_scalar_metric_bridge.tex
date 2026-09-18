@@ -1,0 +1,93 @@
+﻿\section{Cubic-Galileon Scalar--Metric Bridge}
+
+The cosmological parent action is taken to be
+\[
+S=
+\int d^4x\sqrt{-g}
+\left[
+\frac{M_{\rm Pl}^2}{2}R
+-\frac12\nabla_\mu T\nabla^\mu T
++\frac{1}{\Lambda^3}\Box T(\nabla T)^2
+-V(T)
++\mathcal L_m
+\right].
+\]
+Using
+\[
+X\equiv-\frac12\nabla_\mu T\nabla^\mu T,
+\]
+this corresponds to
+\[
+G_2=X-V(T),\qquad
+G_3=\frac{2X}{\Lambda^3},\qquad
+G_4=\frac{M_{\rm Pl}^2}{2},\qquad
+G_5=0
+\]
+in the convention \(\mathcal L_3=-G_3\Box T\).
+
+The model belongs to the kinetic-gravity-braiding subclass of Horndeski theory \citep{BelliniSawicki2014}. Since \(G_4\) is constant and \(G_5=0\),
+\[
+M_*^2=M_{\rm Pl}^2,\qquad
+\alpha_M=0,\qquad
+\alpha_T=0.
+\]
+The scalar--metric mixing is controlled by the braiding function
+\[
+\alpha_B
+=
+\frac{2\dot{\bar T}^{\,3}}
+{HM_{\rm Pl}^2\Lambda^3},
+\]
+and
+\[
+\alpha_K
+=
+\frac{\dot{\bar T}^{\,2}}
+{H^2M_{\rm Pl}^2}
++
+6\alpha_B.
+\]
+The scalar no-ghost combination is
+\[
+D_{\rm kin}
+=
+\alpha_K+\frac32\alpha_B^2.
+\]
+
+For numerical work we softly break shift symmetry with
+\[
+V(T)=V_0-\mu^3T.
+\]
+The scalar energy density and pressure are
+\[
+\rho_T
+=
+\frac12\dot T^2+V(T)
++\frac{6H\dot T^3}{\Lambda^3},
+\]
+\[
+P_T
+=
+\frac12\dot T^2-V(T)
+-\frac{2\dot T^2\ddot T}{\Lambda^3}.
+\]
+The shift current
+\[
+J=\dot T+\frac{6H\dot T^2}{\Lambda^3}
+\]
+obeys
+\[
+\dot J+3HJ=\mu^3.
+\]
+
+The closed-FLRW background equation is
+\[
+3M_{\rm Pl}^2
+\left(
+H^2+\frac{1}{a^2R_H^2}
+\right)
+=
+\rho_m+\rho_r+\rho_T.
+\]
+
+The bridge does not require the bare Horndeski sound speed to become negative. Instead, the BHSM-inspired reduced response can lower the effective long-wavelength stiffness while the positive \(p^2\) term stabilizes shorter wavelengths.

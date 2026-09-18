@@ -1,0 +1,28 @@
+﻿name: validate-manuscript
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  numerical-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements.txt pytest matplotlib
+      - run: python -m pytest -q
+      - run: python code/figures.py
+
+  latex-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y latexmk texlive-latex-extra texlive-fonts-recommended
+      - run: |
+          cd manuscript
+          latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex

@@ -1,0 +1,73 @@
+﻿\section{Constraint-Reduced Response and the Topographic Kernel}
+
+Let \(\widehat{\mathcal H}\) be the physical Hessian after constraints and gauge directions have been removed. For a selected topographic branch \(P\) and physical complement \(Q\), the exact Schur/Feshbach reduced operator is
+\[
+\mathcal K
+=
+P\left[
+\widehat{\mathcal H}
+-
+\widehat{\mathcal H}Q
+(Q\widehat{\mathcal H}Q)^{-1}
+Q\widehat{\mathcal H}
+\right]P.
+\]
+
+For one scalar harmonic, write the quadratic block as
+\[
+\widehat{\mathcal H}_n
+=
+\begin{pmatrix}
+A(p) & C(p)\\
+C^\dagger(p) & D(p)
+\end{pmatrix}.
+\]
+The exact reduced stiffness is
+\[
+K_{\rm red}(p)=A(p)-C(p)D^{-1}(p)C^\dagger(p).
+\]
+
+A minimal long-wavelength realization is
+\[
+A(p)=Z_0p,\qquad
+D(p)=M_c^2+c_cp,\qquad
+C(p)=g\sqrt p.
+\]
+Then
+\[
+K_{\rm red}(p)
+=
+Z_0p-\frac{g^2p}{M_c^2+c_cp}.
+\]
+For \(c_cp\ll M_c^2\),
+\[
+K_{\rm red}(p)
+=
+\left(Z_0-\frac{g^2}{M_c^2}\right)p
++
+\frac{g^2c_c}{M_c^4}p^2
++O(p^3).
+\]
+
+Thus a positive \(p^2\) stiffness can arise from a coupled second-order parent system after a stable complement is integrated out. In this interpretation the old static operator
+\[
+-\nabla^2+B\nabla^4
+\]
+is a low-energy spatial derivative expansion, not evidence for a fundamental fourth-order time equation.
+
+Define
+\[
+\chi\equiv\frac{g^2}{M_c^2},
+\qquad
+L_c^2\equiv\frac{c_c}{M_c^2}.
+\]
+After canonical normalization of the leading spatial term, the reduced kernel may be written schematically as
+\[
+K_{\rm topo}(p)
+=
+m_T^2+
+(c_s^2-\chi)p
++
+\chi L_c^2p^2+\cdots.
+\]
+The signs of the temporal kinetic term and of the full physical gradient matrix must be checked independently; a positive spatial \(p^2\) coefficient by itself is not a complete ghost analysis.

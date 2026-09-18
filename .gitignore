@@ -1,0 +1,17 @@
+﻿__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# LaTeX temporary/build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+manuscript/build/
