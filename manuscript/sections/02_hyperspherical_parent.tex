@@ -1,10 +1,16 @@
+
 \section{Hyperspherical Parent and Harmonic Convention}
 
 We use a closed FLRW geometry
 \[
-ds^2=-dt^2+a^2(t)R_H^2\left[d\chi^2+\sin^2\chi\,d\Omega_2^2\right],
+ds^2=-dt^2+a^2(t)R_H^2\left[d\psi^2+\sin^2\psi\,d\Omega_2^2\right],
 \]
-with \(a_0=1\). Thus \(R_H\) is the present-day comoving curvature radius and the physical curvature radius is \(aR_H\).
+with \(a_0=1\). Here \(\psi\) is a dimensionless radial angle on the unit three-sphere, \(R_H\) is the present-day comoving curvature radius, and the physical curvature radius is \(aR_H\). To avoid mixing dimensional and angular radial coordinates, define
+\[
+D_C(z)=c\int_0^z\frac{dz'}{H(z')},
+\qquad
+\psi(z)=\frac{D_C(z)}{R_H}.
+\]
 
 Scalar harmonics satisfy
 \[
@@ -23,27 +29,46 @@ p_1=\frac{3}{a^2R_H^2}.
 \]
 This convention is used throughout. Older scalar-topographic notes employed more than one normalization for the lowest mode; no numerical forecast is carried forward here without first converting it to the convention above.
 
-\subsection{Exact light-cone form of the n=1 mode}
+\subsection{Exact observer-sky form of the n=1 scalar mode}
 
-Embed the unit three-sphere in \(\mathbb R^4\). The \(n=1\) harmonics are the four coordinate functions restricted to \(S^3\). A general real \(n=1\) mode can therefore be written
+Embed the unit three-sphere in \(\mathbb R^4\). The \(n=1\) scalar harmonics are the four coordinate functions restricted to \(S^3\). A general real \(n=1\) scalar mode can therefore be written
 \[
-T_1(\chi,\hat{\mathbf n})
+T_1(\psi,\hat{\mathbf n})
 =
 A\left[
-\cos\alpha\cos\chi
+\cos\alpha\cos\psi
 +
-\sin\alpha\sin\chi\,
+\sin\alpha\sin\psi\,
 (\hat{\mathbf n}\cdot\hat{\mathbf p})
 \right].
 \]
-At fixed redshift this contains an exact sky monopole plus an exact sky dipole and no higher angular multipoles. The dipole part is
+At fixed radial shell this scalar function contains an exact sky monopole plus an exact sky dipole and no higher angular multipoles. Its dipolar part is
 \[
 T_{1,{\rm dip}}(z,\hat{\mathbf n})
 =
 A\sin\alpha\,
-\sin\!\left[\frac{\chi(z)}{R_H}\right]
-(\hat{\mathbf n}\cdot\hat{\mathbf p}),
+\sin\!\psi(z)\,
+(\hat{\mathbf n}\cdot\hat{\mathbf p}).
 \]
-where \(\chi(z)\) denotes the comoving radial distance in dimensional units when written inside the sine as \(\chi/R_H\).
+This removes an ambiguity present in simplified radial descriptions: the zonal term \(\cos\psi\) alone is isotropic for an observer at its pole. A sky dipole in the scalar field is supplied by a generic orientation of the full \(n=1\) eigenspace relative to the observer.
 
-This removes an ambiguity present in simplified radial descriptions: the zonal term \(\cos\chi\) alone is isotropic for an observer at its pole. A sky dipole is supplied by a generic orientation of the full \(n=1\) eigenspace relative to the observer.
+\subsection{Exceptional lowest scalar harmonic and metric-response caveat}
+
+The existence of the scalar function above must be distinguished from its use as an ordinary scalar \emph{metric} perturbation of closed FLRW. A common closed-universe convention labels scalar eigenvalues as
+\[
+k^2=N^2-1,
+\qquad N=1,2,3,\ldots
+\]
+for unit positive curvature. Our convention \(n(n+2)\) is related by
+\[
+N=n+1.
+\]
+Thus our first nonconstant \(n=1\) scalar level maps to \(N=2\) in that literature.
+
+Gauge-invariant closed-FLRW perturbation constructions contain factors such as
+\[
+\frac{1}{N^2-4\mathcal K},
+\]
+which are singular at \(N=2\) for \(\mathcal K=+1\), and the usual scalar-derived tensor-harmonic construction treats the lowest \(N=1,2\) sectors as exceptional \citep{KieferVardanyan2022}. This does not remove the \(S^3\) scalar eigenfunction itself. It means that the ordinary metric-perturbation construction degenerates precisely at the harmonic level used here.
+
+Accordingly, the monopole-plus-dipole result above is an exact statement about the topographic scalar pattern. A physical luminosity-distance, velocity, or gravitational-potential dipole does \emph{not} follow from that geometry alone. The bridge requires a separate constrained, gauge-invariant derivation of the scalar--metric response in this exceptional sector. Until that calculation is supplied, every metric or light-cone prediction sourced by the \(n=1\) field is conditional on this consistency requirement.
