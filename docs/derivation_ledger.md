@@ -92,3 +92,13 @@ calibration input, not independently reproduced by the current repository.
 
 Status:
 pre-existing prospective model forecast. Current DESI DR2 BAO results are reported as well described by flat LambdaCDM, so the frozen value must not be presented as a current empirical best fit or retuned after comparison.
+
+
+## D10 — exceptional n=1 no-go in regular one-field closed FLRW
+For manuscript n=1: `k^2=3` and `D_iD_jQ=-gamma_ijQ`, hence `(D_iD_j+k^2 gamma_ij/3)Q=0`. The scalar-derived trace-free metric harmonic is absent; under the regular one-scalar diffeomorphism constraints this sector is nondynamical/pure gauge.
+
+## D11 — first physical n=2 pure-dipole subspace
+`T_2=A_AB X^A X^B`, `A_A^A=0`, decomposes on an observer shell as `A44(c^2-s^2/3)+2cs a_i n^i+s^2 S_ij n^i n^j`. The pure cross term is `T_2,dip=A sin(2 psi) p_hat.n_hat`.
+
+## D12 — corrected physical harmonic filter
+`n=2` softened and `n>=3` stiffened gives `1/15 < ell^2 < 1/8`, with next physical response `|(T3/S3)/(T2/S2)|=8 C2/(15 C3)`.

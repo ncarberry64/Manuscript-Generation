@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import hashlib
 import json
@@ -48,18 +48,24 @@ def test_r1_background_reproduces_and_is_admissible():
     assert abs(rows[-1]["E"] - 1.0) < 1.0e-8
 
 
-def test_harmonic_filter_selects_n1_only():
-    ell = 0.40
+def test_harmonic_filter_selects_first_physical_n2():
+    ell = 0.32
     assert perturbations.selective_filter_condition(ell)
+    assert perturbations.physical_scalar_harmonic_min() == 2
 
-    # The sign of F_n = 1 - ell^2 n(n+2) determines whether chi softens
-    # (positive) or stiffens (negative) the harmonic.
-    f1 = 1.0 - ell * ell * perturbations.nu(1)
-    assert f1 > 0.0
+    assert 1.0 - ell * ell * perturbations.nu(2) > 0.0
+    for n in range(3, 25):
+        assert 1.0 - ell * ell * perturbations.nu(n) < 0.0
 
-    for n in range(2, 25):
-        fn = 1.0 - ell * ell * perturbations.nu(n)
-        assert fn < 0.0
+    psi = np.array([0.0, 0.1, 0.25])
+    np.testing.assert_allclose(
+        perturbations.n2_pure_dipole_envelope(psi),
+        np.sin(2.0 * psi), rtol=0.0, atol=1e-15
+    )
+
+    c2, c3 = 0.05, 0.40
+    ratio = perturbations.n3_to_n2_response_ratio(c2, c3)
+    assert 0.0 < ratio < 8.0 / 15.0
 
 
 def test_r1_growth_forecast_reproduces():

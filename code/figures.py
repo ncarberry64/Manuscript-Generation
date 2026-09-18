@@ -1,4 +1,4 @@
-﻿"""Generate manuscript figures from the canonical R1 implementation.
+"""Generate manuscript figures from the canonical R1 implementation.
 
 No observational comparison data are read by this script.
 """
@@ -75,7 +75,7 @@ def save_growth():
 
 
 def save_filter():
-    ell = 0.40
+    ell = 0.32
     ns = np.arange(1, 11)
     f = np.array([1.0 - ell * ell * perturbations.nu(int(n)) for n in ns])
 
@@ -84,7 +84,7 @@ def save_filter():
     ax.axhline(0.0, linewidth=1.0)
     ax.set_xlabel("S3 harmonic index n")
     ax.set_ylabel(r"$1-\ell^2 n(n+2)$")
-    ax.set_title(r"Harmonic filter sign for $\ell=0.40$")
+    ax.set_title(r"Physical harmonic filter sign for $\ell=0.32$")
     ax.set_xticks(ns)
     fig.tight_layout()
     fig.savefig(OUT / "harmonic_filter.png", dpi=220)
