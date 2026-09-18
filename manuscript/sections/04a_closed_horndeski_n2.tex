@@ -1,0 +1,136 @@
+﻿\section{Exact Closed-Horndeski Kernel for the First Physical Scalar Mode}
+
+The previous section uses the Bellini--Sawicki functions to organize the cubic-Galileon background. For the curvature-scale mode, however, the flat-FLRW perturbation formulas are not sufficient. We therefore specialize the non-flat Horndeski quadratic action derived by Akama and Kobayashi \citep{AkamaKobayashi2019}.
+
+For
+\[
+G_2=X-V(T),\qquad
+G_3=\frac{2X}{\Lambda^3},\qquad
+G_4=\frac{M_{\rm Pl}^2}{2},\qquad
+G_5=0,
+\]
+their tensor coefficients reduce exactly to
+\[
+\mathcal F_T=\mathcal G_T=M_{\rm Pl}^2.
+\]
+Because \(G_4\) is constant and \(G_5=0\), the explicit curvature contributions to their \(\Theta\) and \(\Sigma\) vanish. The remaining coefficients are
+\[
+\boxed{
+\Theta
+=
+HM_{\rm Pl}^2-\frac{\dot T^3}{\Lambda^3}
+}
+\]
+and
+\[
+\boxed{
+\Sigma
+=
+\frac12\dot T^2
++\frac{12H\dot T^3}{\Lambda^3}
+-3M_{\rm Pl}^2H^2.
+}
+\]
+Equivalently,
+\[
+\Theta
+=
+HM_{\rm Pl}^2
+\left(1-\frac{\alpha_B}{2}\right).
+\]
+
+Define
+\[
+r(t)
+\equiv
+\frac{M_{\rm Pl}^2\Sigma}{\Theta^2},
+\qquad
+\kappa(t)\equiv\frac{K}{a^2}.
+\]
+The first physical scalar harmonic has alternative-convention index \(N=3\), so
+\[
+k^2=K(N^2-1)=8K.
+\]
+The two Akama--Kobayashi scalar constraints then reduce to
+\[
+\Sigma\,\delta n
++8\Theta\kappa\,\chi
++3\Theta\dot\zeta
++5M_{\rm Pl}^2\kappa\,\zeta=0,
+\]
+\[
+\Theta\,\delta n
+-M_{\rm Pl}^2\dot\zeta
+-M_{\rm Pl}^2\kappa\,\chi=0.
+\]
+They can be solved algebraically:
+\[
+\boxed{
+\delta n
+=
+\frac{5M_{\rm Pl}^2}{\Theta(r+8)}
+\left[
+\dot\zeta
+-\frac{M_{\rm Pl}^2\kappa}{\Theta}\zeta
+\right]
+}
+\]
+and
+\[
+\boxed{
+\chi
+=
+-\frac{r+3}{\kappa(r+8)}\dot\zeta
+-\frac{5M_{\rm Pl}^2}{\Theta(r+8)}\zeta.
+}
+\]
+
+The reduced kinetic coefficient of this \(n=2\) mode is therefore
+\[
+\boxed{
+\mathcal G_{S,2}
+=
+M_{\rm Pl}^2
+\frac{5(r+3)}{r+8}.
+}
+\]
+Using the cubic-Galileon \(\alpha\)-functions gives the exact identity
+\[
+r+3
+=
+\frac{D_{\rm kin}}
+{2(1-\alpha_B/2)^2},
+\]
+so that
+\[
+\boxed{
+\mathcal G_{S,2}
+=
+M_{\rm Pl}^2
+\frac{5D_{\rm kin}}
+{D_{\rm kin}
++10(1-\alpha_B/2)^2}.
+}
+\]
+Thus, provided \(\Theta\neq0\), positivity of the previously computed \(D_{\rm kin}\) is sufficient for positivity of the pure gravity--scalar kinetic coefficient of the first physical closed-universe scalar harmonic.
+
+For completeness, the corresponding non-flat Horndeski gradient coefficient is
+\[
+\mathcal F_{S,2}
+=
+\frac1a\frac{d}{dt}
+\left[
+\frac{5}{r+8}
+\left(
+\frac{aM_{\rm Pl}^4}{\Theta}
+\right)
+\right]
+-M_{\rm Pl}^2
++
+\frac{5}{r+8}
+\frac{M_{\rm Pl}^6}{\Theta^2}
+\frac{K}{a^2}.
+\]
+The repository evaluates this expression as a gravity--scalar diagnostic only. The late-time R1 background contains matter and radiation, whose perturbations introduce additional dynamical variables and source terms. Consequently, \(\mathcal F_{S,2}\) is not promoted here to a complete matter-era stability or light-cone transfer result.
+
+This section closes an important part of the bridge: the first physical harmonic has an explicit constrained scalar--metric kernel rather than only a geometric identification. The remaining observable calculation is the coupled matter/radiation plus topographic-response system and its gauge-invariant transformation to the metric and velocity variables entering distance, growth, and lensing observables.
