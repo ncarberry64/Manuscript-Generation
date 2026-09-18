@@ -14,8 +14,8 @@ def C_n(n: int, c_s2: float, chi: float, ell: float) -> float:
     return c_s2 - chi*(1.0 - ell*ell*nu(n))
 
 def selective_filter_condition(ell: float) -> bool:
-    e2 = ell*ell
-    return (1.0/8.0) < e2 < (1.0/3.0)
+    ell2 = ell * ell
+    return (1.0 / 15.0) < ell2 < (1.0 / 8.0)
 
 def response_per_source(n: int, a: float, R_H: float, c_s2: float, chi: float, ell: float) -> float:
     p = p_n(n, a, R_H)
@@ -34,3 +34,14 @@ def n2_to_n1_response_ratio(c1: float, c2: float) -> float:
 def quadrupole_to_dipole_response_ratio(c1: float, c2: float) -> float:
     """Legacy compatibility alias; prefer n2_to_n1_response_ratio()."""
     return n2_to_n1_response_ratio(c1, c2)
+
+
+def physical_scalar_harmonic_min() -> int:
+    return 2
+
+def n2_pure_dipole_envelope(psi):
+    import numpy as np
+    return np.sin(2.0 * np.asarray(psi))
+
+def n3_to_n2_response_ratio(c2: float, c3: float) -> float:
+    return 8.0 * c2 / (15.0 * c3)

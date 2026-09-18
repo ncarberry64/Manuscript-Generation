@@ -40,3 +40,12 @@
 - Unique derivation of `q`, `lambda`, `ell`, or the source normalization.
 - Unique microscopic origin of the observed supernova dipole axis.
 - Proof that the entire Hubble tension is explained by the carried-forward low-z distance dipole.
+
+
+## Round-2 correction: first physical compact-space scalar mode
+- `n=1` maps to the exceptional literature `N=2` sector and is not retained as the ordinary propagating scalar carrier.
+- The carrier is promoted to manuscript `n=2` / literature `N=3`.
+- The pure `A_{4i}` degree-two subspace is an exact sky dipole with radial factor `sin(2 psi)`.
+- The corrected filter interval is `1/15 < ell^2 < 1/8`.
+- Higher physical harmonics `n>=3` are stiffened.
+- The frozen R1 numerical manifest remains unchanged.
