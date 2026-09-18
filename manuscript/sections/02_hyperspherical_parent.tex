@@ -1,0 +1,49 @@
+﻿\section{Hyperspherical Parent and Harmonic Convention}
+
+We use a closed FLRW geometry
+\[
+ds^2=-dt^2+a^2(t)R_H^2\left[d\chi^2+\sin^2\chi\,d\Omega_2^2\right],
+\]
+with \(a_0=1\). Thus \(R_H\) is the present-day comoving curvature radius and the physical curvature radius is \(aR_H\).
+
+Scalar harmonics satisfy
+\[
+-\nabla_\gamma^2Y_n=\frac{n(n+2)}{R_H^2}Y_n,
+\qquad
+n=0,1,2,\ldots,
+\]
+with degeneracy \((n+1)^2\). The physical spatial eigenvalue entering the time-dependent perturbation equations is
+\[
+p_n(a)=\frac{n(n+2)}{a^2R_H^2}.
+\]
+
+The first nonconstant eigenspace is therefore
+\[
+p_1=\frac{3}{a^2R_H^2}.
+\]
+This convention is used throughout. Older scalar-topographic notes employed more than one normalization for the lowest mode; no numerical forecast is carried forward here without first converting it to the convention above.
+
+\subsection{Exact light-cone form of the \(n=1\) mode}
+
+Embed the unit three-sphere in \(\mathbb R^4\). The \(n=1\) harmonics are the four coordinate functions restricted to \(S^3\). A general real \(n=1\) mode can therefore be written
+\[
+T_1(\chi,\hat{\mathbf n})
+=
+A\left[
+\cos\alpha\cos\chi
++
+\sin\alpha\sin\chi\,
+(\hat{\mathbf n}\cdot\hat{\mathbf p})
+\right].
+\]
+At fixed redshift this contains an exact sky monopole plus an exact sky dipole and no higher angular multipoles. The dipole part is
+\[
+T_{1,{\rm dip}}(z,\hat{\mathbf n})
+=
+A\sin\alpha\,
+\sin\!\left[\frac{\chi(z)}{R_H}\right]
+(\hat{\mathbf n}\cdot\hat{\mathbf p}),
+\]
+where \(\chi(z)\) denotes the comoving radial distance in dimensional units when written inside the sine as \(\chi/R_H\).
+
+This removes an ambiguity present in simplified radial descriptions: the zonal term \(\cos\chi\) alone is isotropic for an observer at its pole. A sky dipole is supplied by a generic orientation of the full \(n=1\) eigenspace relative to the observer.

@@ -1,0 +1,99 @@
+﻿\section{Numerical Implementation and Preregistration Protocol}
+
+The numerical pipeline is separated into
+\[
+\boxed{
+\text{background}
+\rightarrow
+\text{physical scalar response}
+\rightarrow
+\text{observables}
+\rightarrow
+\text{comparison}.
+}
+\]
+Prediction generation and data comparison are implemented in separate scripts.
+
+\subsection{Background system}
+
+Let \(v=\dot T\). Expanding the scalar current equation gives
+\[
+\left(1+\frac{12Hv}{\Lambda^3}\right)\dot v
++
+\frac{6v^2}{\Lambda^3}\dot H
+=
+\mu^3-3H\left(v+\frac{6Hv^2}{\Lambda^3}\right).
+\]
+The Raychaudhuri equation gives
+\[
+\frac{2v^2}{\Lambda^3}\dot v
+-
+2M_{\rm Pl}^2\dot H
+=
+\rho_m+\frac43\rho_r+v^2+\frac{6Hv^3}{\Lambda^3}
+-\frac{2M_{\rm Pl}^2}{a^2R_H^2}.
+\]
+At each integration step these equations form a \(2\times2\) linear system for \((\dot v,\dot H)\). The remaining equations are
+\[
+\dot T=v,\qquad
+\dot a=aH.
+\]
+
+The Friedmann equation is retained as an independent residual check:
+\[
+3M_{\rm Pl}^2
+\left(H^2+\frac{1}{a^2R_H^2}\right)
+-
+(\rho_m+\rho_r+\rho_T)
+=0.
+\]
+
+\subsection{Dimensionless variables}
+
+We integrate in \(N=\ln a\) with
+\[
+E=\frac{H}{H_0},
+\quad
+\phi=\frac{T}{M_{\rm Pl}},
+\quad
+\lambda=\frac{\Lambda^3}{M_{\rm Pl}H_0^2},
+\quad
+q=\frac{\mu^3}{M_{\rm Pl}H_0^2}.
+\]
+
+The exploratory reference branch R1 uses
+\[
+\Omega_{m0}=0.31,\quad
+\Omega_{r0}=9.0\times10^{-5},\quad
+\Omega_{k0}=-0.018,\quad
+\lambda=1,\quad q=3.
+\]
+The constant \(V_0\) is determined only by the shooting condition \(E(a=1)=1\).
+
+\subsection{Initial conditions}
+
+The numerical integration begins at
+\[
+z_i=100.
+\]
+The decaying homogeneous current solution is removed using the matter-era particular solution
+\[
+J_i\simeq\frac{2\mu^3}{9H_i}.
+\]
+The initial scalar velocity is the positive small-velocity root of
+\[
+v_i+\frac{6H_iv_i^2}{\Lambda^3}=J_i.
+\]
+
+\subsection{Growth grid}
+
+Before prospective comparison, predictions are generated on the fixed grid
+\[
+k=\{0.02,0.05,0.10,0.15,0.20\}\ {\rm Mpc}^{-1}
+\]
+and
+\[
+z=\{0.5,0.8,1.0,1.5,2.1\}.
+\]
+
+A deterministic JSON manifest containing the action version, parameters, numerical tolerances, calibration values, and predicted observables is hashed with SHA-256. Any later scientific or numerical revision creates a new manifest version rather than overwriting the previous freeze.
