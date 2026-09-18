@@ -1,8 +1,9 @@
+
 \section{Predictions and Falsification Criteria}
 
 \subsection{Low-redshift calibration}
 
-The existing Pantheon+SH0ES tomographic analysis provides the observational normalization
+The Pantheon+ data release and cosmological analysis provide the supernova basis for the carried-forward tomographic calibration used here \citep{Scolnic2022,Brout2022}. The earlier scalar-topographic analysis reported
 \[
 A_\mu^\star=-0.0412\pm0.009
 \]
@@ -29,17 +30,17 @@ and at sufficiently low redshift,
 (+0.01895\pm0.00414)\cos\theta.
 \]
 
-This datum normalizes only the observed \(n=1\) response,
+These numbers are a carried-forward calibration input; the present repository does not independently rerun the Pantheon+ tomographic likelihood. They normalize only the observed \(n=1\) response,
 \[
 A_\mu
 =
 \frac{\mathcal K_{\rm SN}S_1}{p_1C_1},
 \]
-and does not independently determine \(S_1\), \(\mathcal K_{\rm SN}\), or \(C_1\).
+and do not independently determine \(S_1\), \(\mathcal K_{\rm SN}\), or \(C_1\). Their interpretation as a metric/light-cone response is additionally conditional on resolving the exceptional closed-FLRW \(n=1\) sector.
 
 \subsection{Curvature}
 
-The pre-existing prospective curvature forecast is retained as
+The pre-existing prospective curvature forecast is retained without retuning:
 \[
 \boxed{\Omega_k=-0.018\pm0.004}.
 \]
@@ -52,13 +53,15 @@ R_H
 \]
 The sign prediction is \(\Omega_k<0\) in the usual FLRW curvature convention.
 
+This value is a frozen model forecast, not a current empirical best fit. DESI DR2 BAO results are reported as well described by flat \(\Lambda\)CDM, even while combinations with other probes motivate tests of extensions such as dynamical dark energy \citep{DESIDR2ResultsII2025}. The purpose of retaining \(-0.018\pm0.004\) is therefore prospective falsification: it must be compared against independent curvature inference without being moved toward the observed result.
+
 \subsection{Harmonic hierarchy}
 
-The bridge predicts selective \(n=1\) softening with no analogous \(n\ge2\) enhancement. A future source-normalized \(n=2\) susceptibility comparable to or larger than the \(n=1\) susceptibility would reject the minimal harmonic-filter branch.
+The bridge predicts selective \(n=1\) softening with no analogous \(n\ge2\) enhancement. A future source-normalized \(S^3\) \(n=2\) susceptibility comparable to or larger than the \(n=1\) susceptibility would reject the minimal harmonic-filter branch. This statement is made at the compact-space harmonic level; comparison to a measured sky quadrupole requires an explicit observer-shell projection.
 
 \subsection{Fixed-axis test}
 
-A prospective independent supernova sample should first test the frozen axis
+A prospective independent supernova sample should first test the carried-forward axis
 \[
 (211.48^\circ,-12.81^\circ)
 \]
@@ -70,16 +73,17 @@ At large \(n\),
 \[
 C_n\simeq\chi\ell^2n^2,
 \]
-so the extra scalar susceptibility falls as \(n^{-2}\). The model therefore predicts a strong separation between the horizon-scale dipole and conventional clustering modes.
+so the extra scalar susceptibility falls as \(n^{-2}\). The model therefore predicts a strong separation between the first nonconstant compact-space level and conventional clustering modes.
 
 \subsection{Failure conditions}
 
 The minimal bridge is disfavored if one or more of the following are established with adequate precision:
 \begin{enumerate}
 \item independent curvature measurements exclude the frozen negative-\(\Omega_k\) forecast;
-\item the source-normalized \(n=2\) response is comparable to or exceeds \(n=1\);
+\item the source-normalized \(S^3\) \(n=2\) response is comparable to or exceeds \(n=1\);
 \item an independent low-redshift sample excludes the frozen dipole axis while finding a stable incompatible physical axis;
-\item a coherent dipole of comparable amplitude persists into a redshift regime in which the model predicts loss of enhanced susceptibility;
+\item a coherent metric/light-cone dipole of comparable amplitude persists into a redshift regime in which the completed model predicts loss of enhanced susceptibility;
 \item ordinary RSD modes show a large scale-independent modification incompatible with the high-\(n\) suppression;
-\item lensing requires a metric response incompatible with the same scalar propagator that controls matter clustering.
+\item lensing requires a metric response incompatible with the same completed scalar--metric propagator that controls matter clustering;
+\item no gauge-invariant physical metric response exists for the exceptional closed-FLRW harmonic corresponding to the proposed \(n=1\) topographic mode.
 \end{enumerate}

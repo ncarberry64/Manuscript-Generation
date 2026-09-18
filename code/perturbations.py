@@ -1,4 +1,4 @@
-﻿"""Minimal harmonic-filter utilities for the BHSM/topographic bridge."""
+"""Minimal harmonic-filter utilities for the BHSM/topographic bridge."""
 from __future__ import annotations
 import math
 
@@ -24,5 +24,13 @@ def response_per_source(n: int, a: float, R_H: float, c_s2: float, chi: float, e
         raise ZeroDivisionError("n=0 has no inverse-gradient response in this massless form")
     return 1.0/(p*c)
 
-def quadrupole_to_dipole_response_ratio(c1: float, c2: float) -> float:
+def n2_to_n1_response_ratio(c1: float, c2: float) -> float:
+    """Source-normalized S3 n=2 to n=1 susceptibility ratio.
+
+    This is not, without observer-shell projection, a sky-quadrupole/dipole ratio.
+    """
     return 3.0*c1/(8.0*c2)
+
+def quadrupole_to_dipole_response_ratio(c1: float, c2: float) -> float:
+    """Legacy compatibility alias; prefer n2_to_n1_response_ratio()."""
+    return n2_to_n1_response_ratio(c1, c2)
