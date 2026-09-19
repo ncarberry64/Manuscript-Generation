@@ -1,0 +1,21 @@
+{
+  "schema": "bhsm-native-r1-n2-source-semantics-v1",
+  "R1_mode_semantics": "CALIBRATED_INITIAL_DATA_BRANCH",
+  "claims_spontaneous_stationary_parent_source": false,
+  "stationary_zero_momentum_theorem": {
+    "condition": "p_eta=0 on X>=0,kappa1>0,w>0",
+    "consequence": "D0eta=0 and J_i_eta=0"
+  },
+  "dynamic_parent_source_gate": {
+    "legendre_condition": "kappa1+X^3-6 X^2 |D0eta|^2 > 0",
+    "common_self_adjoint_domain_required": true,
+    "constraints_required": true,
+    "mixed_metric_topographic_variation_required": true
+  },
+  "mixed_response": {
+    "spatial_stress_mixing_can_be_nonzero": true,
+    "static_zero_frequency_shift_phase_block": "ZERO",
+    "B_g2_status": "ACTION_OWNED_FORMULA_PROJECTED_NUMERICS_OPEN"
+  },
+  "promotion_rule": "R1 may be a BHSM-native conditional calibrated bridge without an action-selected nonzero parent current; spontaneous-generation language is forbidden until the source gate closes"
+}

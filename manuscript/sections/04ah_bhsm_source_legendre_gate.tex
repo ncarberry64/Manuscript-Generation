@@ -1,0 +1,162 @@
+\section{Topographic source semantics and the Lorentzian Legendre gate}
+\label{sec:bhsm-source-legendre}
+
+The BHSM-native cosmological mode must be distinguished from a claim that the
+stationary parent background spontaneously generates a nonzero directional
+current.  Later BHSM action audits make this distinction exact.
+
+\subsection{Lorentzian topographic kinetic gate}
+
+For the retained topographic density
+\begin{equation}
+\mathcal L_\eta
+=
+-wF(X),
+\qquad
+F(X)
+=
+\frac{\kappa_1}{2}X+\frac18X^4,
+\end{equation}
+with
+\begin{equation}
+X
+=
+|D_i\eta|^2-|D_0\eta|^2,
+\end{equation}
+the canonical momentum is
+\begin{equation}
+p_\eta
+=
+w(\kappa_1+X^3)D_0\eta .
+\end{equation}
+
+The exact velocity Legendre Hessian has transverse and velocity-parallel
+eigenvalues
+\begin{align}
+\lambda_\perp
+&=
+w(\kappa_1+X^3),
+\\
+\lambda_\parallel
+&=
+w\left[
+\kappa_1+X^3
+-
+6X^2|D_0\eta|^2
+\right].
+\end{align}
+
+\paragraph{Theorem 11 (Legendre admissibility).}
+On the retained
+$X\ge0$, $\kappa_1>0$, $w>0$ branch, a dynamical topographic background is
+locally Legendre-admissible only if
+\begin{equation}
+\boxed{
+\kappa_1+X^3
+-
+6X^2|D_0\eta|^2
+>
+0.
+}
+\label{eq:legendre-cone}
+\end{equation}
+Equality is a singular Legendre map; a negative value is a genuine negative
+velocity direction before any cosmological Schur reduction.
+
+\subsection{Stationary zero-momentum theorem}
+
+Because $w(\kappa_1+X^3)>0$ on the retained branch,
+\begin{equation}
+p_\eta=0
+\quad\Longleftrightarrow\quad
+D_0\eta=0.
+\end{equation}
+The eta momentum density
+\begin{equation}
+J_i^\eta
+=
+w(\kappa_1+X^3)
+\langle D_0\eta,D_i\eta\rangle
+\end{equation}
+therefore obeys
+\begin{equation}
+\boxed{
+p_\eta=0
+\quad\Longrightarrow\quad
+J_i^\eta=0.
+}
+\label{eq:stationary-current-zero}
+\end{equation}
+
+Thus a stationary zero-momentum background cannot be cited as an action-owned
+nonzero coexact $n=2$ momentum source.
+
+\subsection{Metric/topographic mixed variation}
+
+The absence of a stationary momentum current does \emph{not} imply the absence
+of every metric/topographic response.  The retained action has the exact
+local mixed second variation
+\begin{equation}
+B_{g\phi}[\gamma,\phi]
+=
+\int d\mu_g\,w\,\gamma^{\mu\nu}
+\left[
+2F''(X)(j\!\cdot\!d\phi)A_{\mu\nu}
++
+2F'(X)j_{(\mu}\partial_{\nu)}\phi
+-
+F'(X)g_{\mu\nu}(j\!\cdot\!d\phi)
+\right].
+\label{eq:exact-metric-topographic-mixed}
+\end{equation}
+
+Equation~\eqref{eq:exact-metric-topographic-mixed} shows that a
+nonhomogeneous spatial metric mode can couple through the actual background
+derivatives and Noether current.  It is the action source for the projected
+entries of $\mathcal B_{g2}$ in
+Sec.~\ref{sec:bhsm-metric-kkt}.
+
+For a static block-diagonal background with
+$D_0\eta=0$, the shift/phase mixed block at zero phase frequency vanishes.
+Accordingly, no static rotational momentum source is manufactured by the
+topographic sector.
+
+\subsection{R1 source semantics}
+
+The R1 bridge does not claim that the stationary parent background
+spontaneously creates the observed dipole amplitude.  Its one-mode amplitude
+is fixed by the declared supernova calibration, and the subsequent evolution
+is the response of that physical mode.
+
+The source term $\mathcal J_2$ in the reduced action therefore has two
+logically distinct uses:
+
+\begin{enumerate}
+\item \emph{initial-data/calibrated branch}: the physical $n=2$ mode is
+      present as reduced initial data and the observational calibration fixes
+      its normalization;
+\item \emph{action-selected sourced branch}: a nonzero parent current or
+      exchange sector continuously sources the mode.
+\end{enumerate}
+
+The current manuscript uses the first interpretation for R1.  It does not
+claim the second unless a nonzero parent source is independently derived.
+
+\subsection{Consequence for retained-action closure}
+
+A future action-selected dynamical source branch must satisfy all of the
+following:
+
+\begin{enumerate}
+\item the Legendre cone in Eq.~\eqref{eq:legendre-cone};
+\item the parent Hamiltonian, momentum and gauge constraints;
+\item the common self-adjoint physical domain;
+\item the projected mixed variation
+      Eq.~\eqref{eq:exact-metric-topographic-mixed};
+\item the action-provenance gate of
+      Sec.~\ref{sec:bhsm-action-provenance}.
+\end{enumerate}
+
+Failure to derive such a source does not invalidate the conditional
+initial-data bridge.  It prevents promotion of the calibrated branch to a
+spontaneously generated retained-action BHSM cosmology.
