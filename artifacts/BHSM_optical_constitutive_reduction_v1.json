@@ -1,0 +1,39 @@
+{
+  "schema": "bhsm-optical-constitutive-reduction-v1",
+  "status": "CONDITIONAL_CONSTITUTIVE_REDUCTION_WITH_FINITE_OPEN_NORMALIZATIONS",
+  "seam_export": {
+    "static_shape": "E0[Q_Sigma]=epsilon_Sigma (Q_Sigma/Q) Theta(r-r_star)/r^2",
+    "dynamic_shape": "E1=(epsilon_Sigma/Q)[Qdot_Sigma Theta/r^2 - Q_Sigma rdot_star delta(r-r_star)/r_star^2]",
+    "derived_from": [
+      "canonical topographic flux div F_T=S",
+      "g_T=-Q F_T",
+      "retained spherical neighborhood law Q S_enc=V_Sigma^2/r^2"
+    ],
+    "still_open": [
+      "common-action orientation epsilon_Sigma",
+      "field normalization/coupling Q in the cosmological psi convention",
+      "whether the dynamical source is E0, dE0/dt, or a further action-selected combination"
+    ]
+  },
+  "local_metric_response": {
+    "metric_hessian": "[[a,b],[b,c]]",
+    "mixed_column": "[u,v]^T",
+    "determinant": "Delta_g=ac-b^2",
+    "response": "R_gpsi=[(b v-c u)/Delta_g, (b u-a v)/Delta_g]^T",
+    "weyl": "R_W=[u(b-c)+v(b-a)]/[2(ac-b^2)]"
+  },
+  "covariance_pullback": {
+    "source": "C_J=C_grav+E_Sigma C_Sigma E_Sigma^dagger+C_xi",
+    "topography": "C_psi=G_psi C_J G_psi^dagger",
+    "metric": "C_h=R_gpsi C_psi R_gpsi^dagger",
+    "optical": "Q_opt=O_opt R_gpsi G_psi C_J G_psi^dagger R_gpsi^dagger O_opt^dagger",
+    "rare_events": "C_Sigma^shot=lambda_Sigma <q_Sigma q_Sigma^dagger>"
+  },
+  "important_result": "The optical noise covariance is not an independent 7x7 phenomenological object; it is the pushforward of a smaller upstream BHSM source covariance.",
+  "open_numerical_objects": [
+    "projected local physical metric Hessian entries a,b,c",
+    "projected mixed entries u,v",
+    "seam export normalization/orientation",
+    "source event/correlation statistics"
+  ]
+}
