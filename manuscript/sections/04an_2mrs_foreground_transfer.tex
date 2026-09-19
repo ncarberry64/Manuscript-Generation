@@ -1,0 +1,47 @@
+\section{Frozen 2MRS foreground-transfer test}
+\label{sec:2mrs-foreground-transfer}
+
+The illustrative local-coherence cutoff is replaced here by a foreground
+field constructed from the 2MRS galaxy distribution.  For supernova \(i\),
+\[
+{\cal F}_i =
+{C_K(\chi_i)\over S_K(\chi_i)}
+\sum_s
+\Delta\chi_{is}\,
+\delta_s(\hat{\mathbf n}_i),
+\]
+where \(\delta_s\) is the fixed \(10^\circ\) Gaussian-smoothed density contrast
+in shell \(s\) and \(\Delta\chi_{is}\) is only the portion of that shell lying
+in front of the source.  The score is standardized without using supernova
+residuals.  Only one foreground amplitude is fitted.
+
+The frozen analysis used 277 Pantheon+ Hubble-flow
+supernovae and 38600 2MRS galaxies with
+\(z<0.05\).  Relative to the fixed-axis plus nuisance-control model, adding
+the foreground score gave
+\[
+\Delta\chi^2 = 1.619359,
+\qquad
+\beta_F = 0.015286
+\pm 0.007846\ {\rm mag},
+\]
+with a redshift-blocked permutation value
+\[
+p_{\rm perm}=0.076.
+\]
+The preregistered classification is
+\texttt{not\_established}.
+
+As a transfer check, the foreground coefficient was calibrated only for
+\(0.01\le z\le0.03\) and then held fixed for \(0.03<z\le0.15\).  The held-out
+change was
+\[
+\Delta\chi^2_{\rm heldout}
+=
+-4.107958.
+\]
+
+This test does not identify the physical source of the foreground signal.
+The 2MRS field is a matter-density proxy, not yet an action-normalized BHSM
+de-encapsulation map, and conventional peculiar-velocity, lensing and survey
+selection effects remain alternative explanations.

@@ -1,0 +1,134 @@
+{
+  "baseline": {
+    "chi2": 125.92776186490129,
+    "deltaM": -0.06475982909085705,
+    "omega_m": 0.4624999999999999
+  },
+  "claim_boundary": [
+    "This tests a 2MRS density proxy for LOS topography, not a BHSM-specific seam/de-encapsulation catalog.",
+    "A positive result can also arise from conventional local-structure effects unless separately controlled.",
+    "The 10-degree smoothing scale is carried forward from earlier exploratory work and was not rescanned here."
+  ],
+  "classification": "not_established",
+  "data": {
+    "galaxy_path": "C:\\Users\\carbe\\2MRS_galaxies.csv",
+    "n_galaxies_zlt0p05": 38600,
+    "n_sn": 277,
+    "sn_path": "C:\\Users\\carbe\\Pantheon+SH0ES_HF_only.csv"
+  },
+  "foreground_definition": {
+    "angular_smoothing_sigma_deg": 10.0,
+    "fixed_axis_dec_deg": -12.81,
+    "fixed_axis_ra_deg": 211.48,
+    "score_mean_raw": 0.022502318727586144,
+    "score_sd_raw": 0.5528581419853,
+    "shell_edges": [
+      0.0,
+      0.01,
+      0.02,
+      0.03,
+      0.04,
+      0.05
+    ],
+    "shells": [
+      {
+        "density_mean_at_sn_positions": 60.66448602978705,
+        "density_sd_at_sn_positions": 58.36977063410679,
+        "n_galaxies": 3174,
+        "zhi": 0.01,
+        "zlo": 0.0
+      },
+      {
+        "density_mean_at_sn_positions": 157.7366119909865,
+        "density_sd_at_sn_positions": 98.70710009169596,
+        "n_galaxies": 9516,
+        "zhi": 0.02,
+        "zlo": 0.01
+      },
+      {
+        "density_mean_at_sn_positions": 221.47118605672756,
+        "density_sd_at_sn_positions": 78.50491421566993,
+        "n_galaxies": 11380,
+        "zhi": 0.03,
+        "zlo": 0.02
+      },
+      {
+        "density_mean_at_sn_positions": 170.46206960792748,
+        "density_sd_at_sn_positions": 68.48626105269047,
+        "n_galaxies": 9469,
+        "zhi": 0.04,
+        "zlo": 0.03
+      },
+      {
+        "density_mean_at_sn_positions": 83.94324596830647,
+        "density_sd_at_sn_positions": 31.004124918002194,
+        "n_galaxies": 5061,
+        "zhi": 0.05,
+        "zlo": 0.04
+      }
+    ]
+  },
+  "low_to_high_transfer": {
+    "beta_foreground_calibration": 0.04300170273417242,
+    "calibration_chi2": 27.27707694121529,
+    "n_calibration": 83,
+    "n_validation": 194,
+    "validation_chi2_fixed_foreground": 77.79167164683383,
+    "validation_chi2_null": 73.68371362582087,
+    "validation_delta_chi2": -4.107958021012962
+  },
+  "primary": {
+    "beta_foreground_err": 0.007845718759150822,
+    "beta_foreground_mag_per_score_sigma": 0.01528646318799862,
+    "blocked_permutation_p": 0.076,
+    "chi2_full": 111.33586338619362,
+    "chi2_null": 112.9552223560905,
+    "delta_chi2": 1.6193589698968793,
+    "leave_one_shell_out": [
+      {
+        "beta_foreground": 0.014700596535972848,
+        "left_out_shell": [
+          0.0,
+          0.01
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.020865871231786688,
+        "left_out_shell": [
+          0.01,
+          0.02
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.004080222338351114,
+        "left_out_shell": [
+          0.02,
+          0.03
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.015431850390267959,
+        "left_out_shell": [
+          0.03,
+          0.04
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.01699634227077608,
+        "left_out_shell": [
+          0.04,
+          0.05
+        ],
+        "sign_matches_primary": true
+      }
+    ],
+    "n_permutations": 999,
+    "sign_stable_all_shell_dropouts": true,
+    "t_foreground": 1.948382762276473
+  },
+  "schema": "r1-2mrs-foreground-transfer-result-v1"
+}
