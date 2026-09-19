@@ -1,0 +1,209 @@
+\section{Single-calibration closure and cross-observable predictions}
+\label{sec:bhsm-single-calibration}
+
+The preceding theorems reduce the cosmological anisotropic response to one
+physical $n=2$ phase-space state $X_2$ and one common response operator
+$\mathcal R_2$.  The remaining overall normalization of the linear one-mode
+branch can therefore be fixed by one observational calibration without
+introducing an independent amplitude for each observable.
+
+\subsection{Amplitude factorization}
+
+For a fixed background branch and a fixed normalized physical mode shape,
+write
+\begin{equation}
+X_2(z)=A_2\,\widehat X_2(z),
+\end{equation}
+where $\widehat X_2$ is the unit-normalized reduced solution and $A_2$ is the
+single branch amplitude.  For any scalar linear observable,
+Eq.~\eqref{eq:final-observable-kernel} becomes
+\begin{equation}
+\mathcal A_{\mathcal O}(z)
+=
+A_2\,\mathcal F_{\mathcal O}(z),
+\label{eq:observable-F-kernel}
+\end{equation}
+with
+\begin{equation}
+\mathcal F_{\mathcal O}(z)
+=
+\mathcal L_{\mathcal O,z}
+\mathcal R_2(z)
+\widehat X_2(z).
+\end{equation}
+The functions $\mathcal F_{\mathcal O}$ are fixed by the reduced action and
+the chosen background branch.
+
+\subsection{Single-calibration theorem}
+
+\paragraph{Theorem 4 (one calibration fixes all linear amplitudes).}
+Suppose there exists one calibration observable $\mathcal C$ at redshift
+$z_\star$ for which
+$\mathcal F_{\mathcal C}(z_\star)\neq0$.  Then the single-mode amplitude is
+\begin{equation}
+\boxed{
+A_2
+=
+\frac{
+\mathcal A_{\mathcal C}^{\rm obs}(z_\star)
+}{
+\mathcal F_{\mathcal C}(z_\star)
+}
+}
+\label{eq:A2-calibration}
+\end{equation}
+and every other linear observable is predicted by
+\begin{equation}
+\boxed{
+\mathcal A_{\mathcal O}(z)
+=
+\mathcal A_{\mathcal C}^{\rm obs}(z_\star)
+\frac{
+\mathcal F_{\mathcal O}(z)
+}{
+\mathcal F_{\mathcal C}(z_\star)
+}.
+}
+\label{eq:cross-observable-prediction}
+\end{equation}
+Thus no second anisotropic amplitude parameter is available once the branch,
+mode normalization and one calibration are fixed.
+
+\paragraph{Proof.}
+Equation~\eqref{eq:observable-F-kernel} is linear in the single branch
+amplitude $A_2$.  Solving the calibration equation for $A_2$ gives
+Eq.~\eqref{eq:A2-calibration}.  Substitution into the response of any other
+observable gives Eq.~\eqref{eq:cross-observable-prediction}. \hfill$\square$
+
+\subsection{Reference supernova calibration}
+
+The current reference branch carries forward the low-redshift supernova
+distance-modulus calibration
+\begin{equation}
+A_\mu^\star
+=
+-0.0412\pm0.009,
+\qquad
+0.01<z<0.03,
+\label{eq:reference-A-mu}
+\end{equation}
+with reference sky axis
+\begin{equation}
+{\rm RA}=211.48^\circ,
+\qquad
+{\rm Dec}=-12.81^\circ .
+\label{eq:reference-axis}
+\end{equation}
+Because
+\begin{equation}
+\delta\mu
+=
+\frac{5}{\ln 10}
+\frac{\delta D_L}{D_L},
+\end{equation}
+this corresponds to
+\begin{equation}
+\boxed{
+\left(
+\frac{\delta D_L}{D_L}
+\right)_\star
+=
+-0.01897\pm0.00414
+}
+\label{eq:reference-DL-fraction}
+\end{equation}
+for the reference calibration bin.
+
+Equations~\eqref{eq:reference-A-mu}--\eqref{eq:reference-DL-fraction} are
+calibration inputs to the reference branch.  They are not derived by
+Theorem~4 and they are not treated as independent calibrations of the other
+observables.
+
+\subsection{Parameter-free amplitude ratios after calibration}
+
+For any two observables on the same frozen branch,
+\begin{equation}
+\boxed{
+\frac{
+\mathcal A_{\mathcal O_1}(z_1)
+}{
+\mathcal A_{\mathcal O_2}(z_2)
+}
+=
+\frac{
+\mathcal F_{\mathcal O_1}(z_1)
+}{
+\mathcal F_{\mathcal O_2}(z_2)
+}
+}
+\label{eq:amplitude-ratio}
+\end{equation}
+provided the denominator is nonzero.  The overall mode amplitude cancels.
+
+This is the principal route from a one-observable calibration to genuine
+cross-observable prediction.  In particular, once the numerical kernels are
+evaluated, the supernova calibration fixes the absolute anisotropic
+normalization for
+\begin{equation}
+\delta H/H,\qquad
+\delta D_A/D_A,\qquad
+\delta(f\sigma_8)/(f\sigma_8),\qquad
+\delta(\Phi+\Psi),
+\end{equation}
+without fitting those amplitudes independently.
+
+\subsection{Shared-axis theorem as a falsification test}
+
+The pure one-mode branch also carries one common axis
+$\hat{\mathbf p}$.  Therefore
+\begin{equation}
+\delta\mathcal O_i(z,\hat{\mathbf n})
+=
+\mathcal A_{\mathcal O_i}(z)
+(\hat{\mathbf n}\!\cdot\!\hat{\mathbf p})
+\end{equation}
+for every scalar linear observable in the branch.
+
+A persistent, statistically resolved disagreement between the axes inferred
+from independent observables, after survey masks, calibration systematics,
+and local-structure contamination are controlled, falsifies the pure
+single-$n=2$ realization even if individual amplitudes agree.
+
+\subsection{Reference-branch versus framework-wide statements}
+
+Theorem~4 is structural.  The numerical functions
+$\mathcal F_{\mathcal O}(z)$ are branch-dependent.  Accordingly:
+
+\begin{itemize}
+\item the existence of one common amplitude $A_2$ and one common axis is a
+      consequence of the single-mode linear branch;
+\item the particular numerical values of
+      $\mathcal F_{\mathcal O}(z)$ on R1 are reference-branch predictions;
+\item the supernova amplitude in
+      Eq.~\eqref{eq:reference-A-mu} is an observational calibration input;
+\item no cross-observable amplitude may be promoted to a framework-wide
+      prediction until its kernel has been evaluated from the reduced
+      operator chain.
+\end{itemize}
+
+\subsection{Closure target}
+
+The final numerical closure task for the manuscript is now finite and
+explicit:
+\begin{equation}
+\boxed{
+\left\{
+\mathcal F_{D_L}(z),
+\mathcal F_H(z),
+\mathcal F_{D_A}(z),
+\mathcal F_{f\sigma_8}(z),
+\mathcal F_{\rm lens}(z)
+\right\}_{\rm R1}.
+}
+\label{eq:final-kernel-set}
+\end{equation}
+Once the five frozen-branch kernels in
+Eq.~\eqref{eq:final-kernel-set} are evaluated from the already-defined
+operators, one supernova calibration determines all corresponding
+anisotropic amplitudes through
+Eq.~\eqref{eq:cross-observable-prediction}.
