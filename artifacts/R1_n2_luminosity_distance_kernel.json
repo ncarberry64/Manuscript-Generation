@@ -1,0 +1,354 @@
+{
+  "calibration": {
+    "A_mu": -0.0412,
+    "A_mu_sigma": 0.009,
+    "F_DL_row_at_z_star": [
+      0.18424726670416228,
+      -0.003520884651229548
+    ],
+    "calibration_equation": "F_DL(z_star) dot X_anchor = observed_deltaDL_over_DL",
+    "null_residual": -6.077583843663189e-20,
+    "observed_deltaDL_over_DL": -0.01897330116627094,
+    "observed_deltaDL_over_DL_sigma": 0.004144653167389282,
+    "unit_null_direction": [
+      0.019106074244823742,
+      0.9998174623034704
+    ],
+    "z_star": 0.02
+  },
+  "calibration_rank_audit": {
+    "conclusion": "single amplitude calibration fixes the physical amplitude only after the normalized mode direction Xhat_2 is fixed by theory or a preregistered branch condition",
+    "cross_observable_rows": [
+      {
+        "Weyl_response_along_calibration_null": -0.029286252899482817,
+        "det_DL_Weyl": -0.005396897185917282,
+        "det_DL_fsigma8": 0.016445836109714562,
+        "fsigma8_response_along_calibration_null": 0.08924330015204582,
+        "z": 0.3
+      },
+      {
+        "Weyl_response_along_calibration_null": -0.03244006679963172,
+        "det_DL_Weyl": -0.005978084865373569,
+        "det_DL_fsigma8": 0.017125842228364267,
+        "fsigma8_response_along_calibration_null": 0.09293335213523661,
+        "z": 0.5
+      },
+      {
+        "Weyl_response_along_calibration_null": -0.03493355986966,
+        "det_DL_Weyl": -0.006437588024720305,
+        "det_DL_fsigma8": 0.00975290825363811,
+        "fsigma8_response_along_calibration_null": 0.052924139145510266,
+        "z": 0.8
+      },
+      {
+        "Weyl_response_along_calibration_null": -0.03367787206561093,
+        "det_DL_Weyl": -0.0062061887398980825,
+        "det_DL_fsigma8": -0.005859236514501293,
+        "fsigma8_response_along_calibration_null": -0.0317951364367902,
+        "z": 1.0
+      },
+      {
+        "Weyl_response_along_calibration_null": -0.012538377431686242,
+        "det_DL_Weyl": -0.002310583539290246,
+        "det_DL_fsigma8": -0.09231338932947183,
+        "fsigma8_response_along_calibration_null": -0.5009384416226986,
+        "z": 1.5
+      },
+      {
+        "Weyl_response_along_calibration_null": 0.03355931987847457,
+        "det_DL_Weyl": 0.006184341835572815,
+        "det_DL_fsigma8": 0.002228816246792157,
+        "fsigma8_response_along_calibration_null": 0.01209466736560352,
+        "z": 2.1
+      }
+    ],
+    "independent_scalar_calibrations": 1,
+    "phase_space_dimension": 2,
+    "rank": 1,
+    "remaining_state_direction_dimension": 1
+  },
+  "claim_boundary": {
+    "derived_now": [
+      "gauge-invariant luminosity-distance state-space row",
+      "closed-S3 distance geometry",
+      "curved weak-lensing kernel for pure observer-sky dipole",
+      "distance-duality equality F_DA=F_DL",
+      "calibration-rank audit"
+    ],
+    "important_logic": "the earlier single-calibration theorem remains valid conditional on a fixed normalized mode trajectory; the SN amplitude alone does not determine that trajectory",
+    "not_yet_claimed": [
+      "unique calibrated physical state vector",
+      "final scalar f_sigma8 anisotropy amplitude",
+      "final scalar lensing amplitude",
+      "full-redshift radial H observable"
+    ]
+  },
+  "geometry": {
+    "K": 0.018,
+    "Q_2_dip_per_mu": "sin(2 sqrt(K) chi)",
+    "S_K": "sin(sqrt(K) chi)/sqrt(K)",
+    "angular_laplacian_Q_dip": "-2 Q_dip"
+  },
+  "lightcone_formula": {
+    "convergence": "kappa=-V_o+curved f_K lensing integral",
+    "distance": "deltaD_L/D_L=phi_s+delta_z+(C_K/S_K)delta_chi-kappa",
+    "distance_duality": "F_DA=F_DL",
+    "radial": "delta_chi=-delta_z/Hconf_s+integral(psi-phi)dchi",
+    "redshift": "delta_z=(psi-V)_o-(psi-V)_s-integral (psi-phi)' dchi"
+  },
+  "model": "R1",
+  "rows": [
+    {
+      "F_DA": [
+        0.1842809451514163,
+        -0.0035617897317910927
+      ],
+      "F_DL": [
+        0.1842809451514163,
+        -0.0035617897317910927
+      ],
+      "F_fractional_fsigma8": [
+        2.196680344187968,
+        0.03076351844315679
+      ],
+      "F_kappa": [
+        -0.1765563919288375,
+        0.00011106301084552866
+      ],
+      "F_local_Weyl": [
+        0.060514795853039545,
+        -0.025154943880083602
+      ],
+      "chi": 0.009972684737283249,
+      "dipole_radial": 0.0026759489252660795,
+      "z": 0.01
+    },
+    {
+      "F_DA": [
+        0.18424726670416228,
+        -0.003520884651229548
+      ],
+      "F_DL": [
+        0.18424726670416228,
+        -0.003520884651229548
+      ],
+      "F_fractional_fsigma8": [
+        2.221813400124829,
+        0.0308132083241503
+      ],
+      "F_kappa": [
+        -0.1766369161175035,
+        0.00014453551129357226
+      ],
+      "F_local_Weyl": [
+        0.059323129063767646,
+        -0.025319898562981356
+      ],
+      "chi": 0.01989089714740511,
+      "dipole_radial": 0.005337262438409303,
+      "z": 0.02
+    },
+    {
+      "F_DA": [
+        0.18421794952868803,
+        -0.003479577170962175
+      ],
+      "F_DL": [
+        0.18421794952868803,
+        -0.003479577170962175
+      ],
+      "F_fractional_fsigma8": [
+        2.247693243135478,
+        0.03086003559316498
+      ],
+      "F_kappa": [
+        -0.17671595146687621,
+        0.0001779700883442958
+      ],
+      "F_local_Weyl": [
+        0.05810362419031537,
+        -0.025484170871387702
+      ],
+      "chi": 0.02975486841601534,
+      "dipole_radial": 0.00798398418848672,
+      "z": 0.03
+    },
+    {
+      "F_DA": [
+        0.18414384223394634,
+        -0.003180015008977605
+      ],
+      "F_DL": [
+        0.18414384223394634,
+        -0.003180015008977605
+      ],
+      "F_fractional_fsigma8": [
+        2.449094783385281,
+        0.031044016183163207
+      ],
+      "F_kappa": [
+        -0.1772272277266958,
+        0.0004108242779538963
+      ],
+      "F_local_Weyl": [
+        0.0487619747096209,
+        -0.026612805745180747
+      ],
+      "chi": 0.0973019495081933,
+      "dipole_radial": 0.02610588663449326,
+      "z": 0.1
+    },
+    {
+      "F_DA": [
+        0.1854528213640956,
+        -0.002262148587338612
+      ],
+      "F_DL": [
+        0.1854528213640956,
+        -0.002262148587338612
+      ],
+      "F_fractional_fsigma8": [
+        3.205157645711086,
+        0.028010433166674373
+      ],
+      "F_kappa": [
+        -0.17827700109069097,
+        0.001060815302451132
+      ],
+      "F_local_Weyl": [
+        0.013725332365999456,
+        -0.02955388481676044
+      ],
+      "chi": 0.2763049444549642,
+      "dipole_radial": 0.07407249279483964,
+      "z": 0.3
+    },
+    {
+      "F_DA": [
+        0.18946275727478507,
+        -0.0013942980185636586
+      ],
+      "F_DL": [
+        0.18946275727478507,
+        -0.0013942980185636586
+      ],
+      "F_fractional_fsigma8": [
+        4.19795586226051,
+        0.012729219316766934
+      ],
+      "F_kappa": [
+        -0.17871576806053735,
+        0.001679019642766243
+      ],
+      "F_local_Weyl": [
+        -0.034350313431468285,
+        -0.03178956995575051
+      ],
+      "chi": 0.4357800420435952,
+      "dipole_radial": 0.1166657670594466,
+      "z": 0.5
+    },
+    {
+      "F_DA": [
+        0.20005150001010102,
+        -0.0007430660409368927
+      ],
+      "F_DL": [
+        0.20005150001010102,
+        -0.0007430660409368927
+      ],
+      "F_fractional_fsigma8": [
+        5.973420296468517,
+        -0.061215646697494
+      ],
+      "F_kappa": [
+        -0.17829004742919863,
+        0.0025252761064773277
+      ],
+      "F_local_Weyl": [
+        -0.12819998341085884,
+        -0.03249009213500532
+      ],
+      "chi": 0.6422362675813206,
+      "dipole_radial": 0.1714783733910309,
+      "z": 0.8
+    },
+    {
+      "F_DA": [
+        0.2077067983553526,
+        -0.0011684837597217175
+      ],
+      "F_DL": [
+        0.2077067983553526,
+        -0.0011684837597217175
+      ],
+      "F_fractional_fsigma8": [
+        7.1005906603863025,
+        -0.1674901220373011
+      ],
+      "F_kappa": [
+        -0.1773721345763657,
+        0.0030239622812275792
+      ],
+      "F_local_Weyl": [
+        -0.1978812454174024,
+        -0.02990259665012062
+      ],
+      "chi": 0.7609107686624651,
+      "dipole_radial": 0.20275817508169092,
+      "z": 1.0
+    },
+    {
+      "F_DA": [
+        0.20033516173767904,
+        -0.006265357581123889
+      ],
+      "F_DL": [
+        0.20033516173767904,
+        -0.006265357581123889
+      ],
+      "F_fractional_fsigma8": [
+        7.0657996892172905,
+        -0.6360542389595844
+      ],
+      "F_kappa": [
+        -0.17355305692280815,
+        0.003997050714176775
+      ],
+      "F_local_Weyl": [
+        -0.30355409993414934,
+        -0.006739880543292998
+      ],
+      "chi": 1.0050505433045267,
+      "dipole_radial": 0.26642625517412494,
+      "z": 1.5
+    },
+    {
+      "F_DA": [
+        0.09583554098301864,
+        -0.00996216438605316
+      ],
+      "F_DL": [
+        0.09583554098301864,
+        -0.00996216438605316
+      ],
+      "F_fractional_fsigma8": [
+        0.2861892186504172,
+        0.006627924752117577
+      ],
+      "F_kappa": [
+        -0.16838420872184412,
+        0.0046071731634570985
+      ],
+      "F_local_Weyl": [
+        -0.00021622695712542397,
+        0.03356957884036613
+      ],
+      "chi": 1.2258431552587001,
+      "dipole_radial": 0.32302890739570583,
+      "z": 2.1
+    }
+  ],
+  "schema": "r1-n2-gauge-invariant-DL-state-kernel-v1",
+  "status": "GAUGE_INVARIANT_DL_STATE_SPACE_KERNEL_EVALUATED"
+}

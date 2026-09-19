@@ -1,0 +1,358 @@
+{
+  "anchor": {
+    "dust_initial_response": [
+      0.0,
+      0.0
+    ],
+    "n2_state_basis": [
+      "zeta",
+      "d_zeta_dN"
+    ],
+    "z": 2.1
+  },
+  "claim_boundary": {
+    "derived_now": [
+      "dust gauge-invariant response to physical n=2 mode",
+      "state-space fractional f_sigma8 response kernel",
+      "gauge-invariant local Weyl/lensing-potential kernel"
+    ],
+    "not_used": "the curvature-defective Newtonian-gauge DAE is not used in this calculation",
+    "still_open": [
+      "single-calibration state vector from full D_L light cone",
+      "line-of-sight convergence/shear kernel",
+      "full luminosity-distance kernel",
+      "full-redshift H observable kernel"
+    ]
+  },
+  "dust_dense_output_derivative_residual_max": 5.888089391059559e-09,
+  "gauge_invariant_potentials": {
+    "Phi_DFKT": "zeta+H chi",
+    "Psi_DFKT": "delta_n+dot(chi)",
+    "Weyl_combination": "Psi_DFKT-Phi_DFKT"
+  },
+  "matter_equations": {
+    "closed_S3_scalar_eigenvalue": "k2/a2=8 K/a2",
+    "continuity": "dot(delta_m)+3 dot(H v_m)=-(3 dot(zeta)+k2/a2 chi)+k2/a2 v_m",
+    "velocity": "dot(v_m)=-delta_n"
+  },
+  "model": "R1",
+  "rows": [
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": 0.00010816688320580692,
+          "Phi_eff": -0.00010811347856271199,
+          "Psi_DFKT": -0.00010806007391961706,
+          "Weyl_combination": -0.00021622695712542397,
+          "chi": -0.31833750847327275,
+          "chi_dot": 0.017426680609244863,
+          "delta_n": -0.01753474068316448
+        },
+        {
+          "Phi_DFKT": -0.016784792414197253,
+          "Phi_eff": 0.016784789420183063,
+          "Psi_DFKT": 0.016784786426168874,
+          "Weyl_combination": 0.03356957884036613,
+          "chi": -0.0053438070203264834,
+          "chi_dot": -0.9831070466906253,
+          "delta_n": 0.9998918331167942
+        }
+      ],
+      "delta_m_dN_kernel": [
+        0.08764759106145041,
+        0.0020298515821075276
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        0.2861892186504172,
+        0.006627924752117577
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        -0.00021622695712542397,
+        0.03356957884036613
+      ],
+      "z": 2.1
+    },
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": 0.1517770497964473,
+          "Phi_eff": -0.15177704996707467,
+          "Psi_DFKT": -0.15177705013770204,
+          "Weyl_combination": -0.30355409993414934,
+          "chi": -0.059073630231605376,
+          "chi_dot": 3.070892103819004,
+          "delta_n": -3.222669153956706
+        },
+        {
+          "Phi_DFKT": 0.003369940267704888,
+          "Phi_eff": -0.003369940271646499,
+          "Psi_DFKT": -0.0033699402755881097,
+          "Weyl_combination": -0.006739880543292998,
+          "chi": -0.029705389595527494,
+          "chi_dot": 0.06904480632481998,
+          "delta_n": -0.07241474660040809
+        }
+      ],
+      "delta_m_dN_kernel": [
+        2.5608554567256294,
+        -0.23052492856524115
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          0.26867216865415094,
+          -0.04351370152099859
+        ],
+        [
+          0.2676903964960691,
+          -0.024906665614537613
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        7.0657996892172905,
+        -0.6360542389595844
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        -0.30355409993414934,
+        -0.006739880543292998
+      ],
+      "z": 1.5
+    },
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": 0.09894062264943751,
+          "Phi_eff": -0.0989406227087012,
+          "Psi_DFKT": -0.09894062276796489,
+          "Weyl_combination": -0.1978812454174024,
+          "chi": 0.11733353963552332,
+          "chi_dot": 0.6445167650767558,
+          "delta_n": -0.7434573878447207
+        },
+        {
+          "Phi_DFKT": 0.014951298315796162,
+          "Phi_eff": -0.01495129832506031,
+          "Psi_DFKT": -0.014951298334324459,
+          "Weyl_combination": -0.02990259665012062,
+          "chi": -0.01711459493164096,
+          "chi_dot": 0.09828764054576039,
+          "delta_n": -0.11323893888008485
+        }
+      ],
+      "delta_m_dN_kernel": [
+        2.9463890017206125,
+        -0.06950000036204018
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          0.9293927852097558,
+          -0.07601446095366816
+        ],
+        [
+          0.45840552951770086,
+          -0.011143571766639557
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        7.1005906603863025,
+        -0.1674901220373011
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        -0.1978812454174024,
+        -0.02990259665012062
+      ],
+      "z": 1.0
+    },
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": 0.0640999917509597,
+          "Phi_eff": -0.06409999170542942,
+          "Psi_DFKT": -0.06409999165989913,
+          "Weyl_combination": -0.12819998341085884,
+          "chi": 0.14287954615689008,
+          "chi_dot": 0.23491107762551053,
+          "delta_n": -0.29901106928540966
+        },
+        {
+          "Phi_DFKT": 0.01624504607932386,
+          "Phi_eff": -0.01624504606750266,
+          "Psi_DFKT": -0.01624504605568146,
+          "Weyl_combination": -0.03249009213500532,
+          "chi": -0.012196115112581667,
+          "chi_dot": 0.06066423921978309,
+          "delta_n": -0.07690928527546455
+        }
+      ],
+      "delta_m_dN_kernel": [
+        2.5908017993453893,
+        -0.0265505522365004
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          1.2221560323096687,
+          -0.08086685629470083
+        ],
+        [
+          0.4890128598010799,
+          -0.005239337591447241
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        5.973420296468517,
+        -0.061215646697494
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        -0.12819998341085884,
+        -0.03249009213500532
+      ],
+      "z": 0.8
+    },
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": 0.017175156717822326,
+          "Phi_eff": -0.017175156715734143,
+          "Psi_DFKT": -0.017175156713645955,
+          "Weyl_combination": -0.034350313431468285,
+          "chi": 0.1544572578711371,
+          "chi_dot": 0.017092242808663487,
+          "delta_n": -0.03426739952230944
+        },
+        {
+          "Phi_DFKT": 0.01589478498099097,
+          "Phi_eff": -0.015894784977875255,
+          "Psi_DFKT": -0.015894784974759536,
+          "Weyl_combination": -0.03178956995575051,
+          "chi": -0.0076068110400843,
+          "chi_dot": 0.01874367392245053,
+          "delta_n": -0.03463845889721007
+        }
+      ],
+      "delta_m_dN_kernel": [
+        1.8931639354099785,
+        0.005740531755722337
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          1.6300843958815854,
+          -0.08217075712296981
+        ],
+        [
+          0.5054117840722941,
+          0.001392432618216112
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        4.19795586226051,
+        0.012729219316766934
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        -0.034350313431468285,
+        -0.03178956995575051
+      ],
+      "z": 0.5
+    },
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": -0.006862666184892785,
+          "Phi_eff": 0.006862666182999728,
+          "Psi_DFKT": 0.00686266618110667,
+          "Weyl_combination": 0.013725332365999456,
+          "chi": 0.15465348295194914,
+          "chi_dot": -0.004081729806708768,
+          "delta_n": 0.010944395987815438
+        },
+        {
+          "Phi_DFKT": 0.014776942410185213,
+          "Phi_eff": -0.01477694240838022,
+          "Psi_DFKT": -0.014776942406575224,
+          "Weyl_combination": -0.02955388481676044,
+          "chi": -0.006463126548177671,
+          "chi_dot": 0.00341655655242361,
+          "delta_n": -0.018193498958998834
+        }
+      ],
+      "delta_m_dN_kernel": [
+        1.4360727999734864,
+        0.012550091331689266
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          1.8669764518603573,
+          -0.08075092089549121
+        ],
+        [
+          0.50607558937063,
+          0.004290167425298821
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        3.205157645711086,
+        0.028010433166674373
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        0.013725332365999456,
+        -0.02955388481676044
+      ],
+      "z": 0.3
+    },
+    {
+      "basis_potentials": [
+        {
+          "Phi_DFKT": -0.03083947902159967,
+          "Phi_eff": 0.030839479025381145,
+          "Psi_DFKT": 0.030839479029162623,
+          "Weyl_combination": 0.06167895805076229,
+          "chi": 0.1556597984577149,
+          "chi_dot": 0.014617356156450812,
+          "delta_n": 0.01622212287271181
+        },
+        {
+          "Phi_DFKT": 0.01249466584451461,
+          "Phi_eff": -0.01249466585053232,
+          "Psi_DFKT": -0.01249466585655003,
+          "Weyl_combination": -0.02498933170106464,
+          "chi": -0.007169655841605923,
+          "chi_dot": -0.006567946787048328,
+          "delta_n": -0.005926719069501703
+        }
+      ],
+      "delta_m_dN_kernel": [
+        0.8834675143655195,
+        0.012490332711538935
+      ],
+      "dust_transfer_delta_m_v_m": [
+        [
+          2.1636001418743556,
+          -0.07731087742695653
+        ],
+        [
+          0.5020213938084486,
+          0.0068806289589545275
+        ]
+      ],
+      "fractional_fsigma8_kernel_per_unit_initial_n2_state": [
+        2.1723032467918437,
+        0.03071170117927016
+      ],
+      "weyl_kernel_Psi_minus_Phi": [
+        0.06167895805076229,
+        -0.02498933170106464
+      ],
+      "z": 0.0
+    }
+  ],
+  "schema": "r1-physical-n2-growth-lensing-transfer-v1",
+  "status": "DIRECT_COVARIANT_MATTER_AND_WEYL_TRANSFER_EVALUATED"
+}
