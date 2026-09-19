@@ -1,0 +1,115 @@
+{
+  "claim_boundary": [
+    "This is a BHSM seam-charge proxy, not an action-normalized de-encapsulation map.",
+    "K-band luminosity is only a baryonic-mass proxy.",
+    "No SMBH mass or accretion information is used."
+  ],
+  "classification": "not_established",
+  "data": {
+    "k_magnitude_column": "Kmag",
+    "n_galaxies": 38601,
+    "n_sn": 277
+  },
+  "foreground": {
+    "score_mean_raw": 0.01943354489090449,
+    "score_sd_raw": 0.543875144264799,
+    "shells": [
+      {
+        "median_relative_seam_weight": 1.0,
+        "n_galaxies": 3175,
+        "zhi": 0.01,
+        "zlo": 0.0
+      },
+      {
+        "median_relative_seam_weight": 1.0,
+        "n_galaxies": 9516,
+        "zhi": 0.02,
+        "zlo": 0.01
+      },
+      {
+        "median_relative_seam_weight": 1.0,
+        "n_galaxies": 11380,
+        "zhi": 0.03,
+        "zlo": 0.02
+      },
+      {
+        "median_relative_seam_weight": 1.0,
+        "n_galaxies": 9469,
+        "zhi": 0.04,
+        "zlo": 0.03
+      },
+      {
+        "median_relative_seam_weight": 1.0,
+        "n_galaxies": 5061,
+        "zhi": 0.05,
+        "zlo": 0.04
+      }
+    ]
+  },
+  "low_to_high_transfer": {
+    "beta_foreground_calibration": 0.04317976786146183,
+    "calibration_chi2": 27.257410325586402,
+    "n_calibration": 83,
+    "n_validation": 194,
+    "validation_chi2_fixed_foreground": 78.65230694757935,
+    "validation_chi2_null": 73.68371362582087,
+    "validation_delta_chi2": -4.968593321758476
+  },
+  "primary": {
+    "beta_foreground_err": 0.007804864269566229,
+    "beta_foreground_mag_per_score_sigma": 0.014543148293438692,
+    "blocked_permutation_p": 0.091,
+    "delta_chi2": 1.482902803351081,
+    "leave_one_shell_out": [
+      {
+        "beta_foreground": 0.014813453970476627,
+        "left_out_shell": [
+          0.0,
+          0.01
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.019989516212175044,
+        "left_out_shell": [
+          0.01,
+          0.02
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.0029297304462379617,
+        "left_out_shell": [
+          0.02,
+          0.03
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.014955574977240621,
+        "left_out_shell": [
+          0.03,
+          0.04
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.016244105202246856,
+        "left_out_shell": [
+          0.04,
+          0.05
+        ],
+        "sign_matches_primary": true
+      }
+    ],
+    "sign_stable_all_shell_dropouts": true,
+    "t_foreground": 1.863344164759826
+  },
+  "schema": "r1-2mrs-bhsm-seam-transfer-result-v1",
+  "source_chain": {
+    "mass_proxy": "M_b proportional to L_K",
+    "object_weight": "10^(-0.2 m_K) d_L",
+    "seam_scaling": "V_Sigma^2 proportional to sqrt(M_b)",
+    "weight_exponent_fitted": false
+  }
+}
