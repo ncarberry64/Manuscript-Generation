@@ -1,0 +1,41 @@
+{
+  "schema": "r1-2mrs-foreground-transfer-v1",
+  "status": "FROZEN_BEFORE_CURRENT_FOREGROUND_TRANSFER_EVALUATION",
+  "parent_commit_required": "03b44c8",
+  "scientific_question": "Does a single path-integrated 2MRS foreground-density score explain Pantheon+ Hubble residual structure beyond a fixed-axis dipole and nuisance controls?",
+  "sn_redshift_range": [0.01, 0.15],
+  "galaxy_shell_edges": [0.0, 0.01, 0.02, 0.03, 0.04, 0.05],
+  "angular_smoothing_sigma_deg": 10.0,
+  "smoothing_provenance": "carried forward from the strongest controlled regression smoothing in the March 2026 exploratory 2MRS scan; not rescanned in this test",
+  "foreground_rule": "Only the fraction of a galaxy shell lying in front of each SN contributes.",
+  "shell_density_definition": "Gaussian-smoothed 2MRS count at the SN direction, standardized within each shell across the SN sightline sample.",
+  "closed_s3_transfer": "F_raw=(C_K/S_K)(chi_SN) * sum_s delta_s(nhat_SN) * DeltaChi_visible_s",
+  "score_normalization": "z-score F_raw over the analysis sample; normalization uses no SN residual information",
+  "fixed_axis_ra_deg": 211.48,
+  "fixed_axis_dec_deg": -12.81,
+  "primary_model": "Hubble residual ~ intercept + foreground_score + fixed_axis_cosine + available host-mass and survey controls",
+  "null_model": "Hubble residual ~ intercept + fixed_axis_cosine + same nuisance controls",
+  "primary_statistic": "Delta chi2 = chi2_null - chi2_full",
+  "permutation": {
+    "type": "shuffle foreground score within fixed SN-redshift blocks",
+    "redshift_edges": [0.01, 0.02, 0.03, 0.04, 0.06, 0.10, 0.15],
+    "seed": 20260919,
+    "two_sided_sign_policy": "source-export sign remains open; significance is based on Delta chi2"
+  },
+  "classification": {
+    "strong": "blocked permutation p < 0.01 AND foreground coefficient sign is stable under all leave-one-shell-out checks",
+    "provisional": "blocked permutation p < 0.05",
+    "not_established": "otherwise"
+  },
+  "secondary_transfer_test": {
+    "calibration_redshift": [0.01, 0.03],
+    "validation_redshift": [0.03, 0.15],
+    "rule": "fit one foreground amplitude at low z, carry it unchanged to the higher-z sample, and report weighted residual improvement without refitting the foreground amplitude"
+  },
+  "claim_boundary": [
+    "2MRS galaxy density is a foreground-structure proxy, not yet a BHSM-specific de-encapsulation map",
+    "ordinary peculiar-velocity, lensing, selection and density effects remain possible explanations",
+    "no shell-specific foreground coefficient may be selected after seeing the residuals",
+    "no current-data smoothing optimization is allowed"
+  ]
+}
