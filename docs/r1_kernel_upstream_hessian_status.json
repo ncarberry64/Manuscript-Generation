@@ -1,0 +1,36 @@
+{
+  "schema": "bhsm-native-r1-upstream-hessian-v1",
+  "source_lineage": {
+    "bhsm_v5_11_primary_result": "BHSM_QUADRATIC_OPERATOR_COMPLEX_PARTIAL",
+    "scalar_topographic_status": "HOMOGENEOUS_HESSIAN_EXACT_FULL_NONHOMOGENEOUS_DOMAIN_OPEN",
+    "metric_topographic_mixing": "NONZERO_FORMULA_OPEN",
+    "full_self_adjoint_domain": "OPEN"
+  },
+  "n2_scalar_topographic_block": {
+    "matrix": [
+      ["lambda_rho+5", "-I_2"],
+      ["-I_2_conjugate", "13"]
+    ],
+    "overall_scale": "1/L^2",
+    "positivity_condition": "|I_2|^2 < 13*(lambda_rho+5)"
+  },
+  "remaining_action_owned_objects": [
+    "A_g_n2",
+    "B_g2",
+    "I_2",
+    "lambda_rho",
+    "D_phys_n2"
+  ],
+  "kernel_status": {
+    "F_DL": "BLOCKED_BY_COMMON_N2_RESPONSE",
+    "F_H": "BLOCKED_BY_COMMON_N2_RESPONSE",
+    "F_DA": "BLOCKED_BY_COMMON_N2_RESPONSE",
+    "F_fsigma8": "BLOCKED_BY_COMMON_N2_RESPONSE",
+    "F_lens": "BLOCKED_BY_COMMON_N2_RESPONSE"
+  },
+  "existing_growth_py": {
+    "quantity": "R_fsigma8=Dprime_R1/Dprime_LCDM",
+    "classification": "REFERENCE_BACKGROUND_GROWTH_RATIO_NOT_DIRECTIONAL_N2_KERNEL"
+  },
+  "closure_rule": "derive one physical n=2 mixed Hessian; do not fit five kernels independently"
+}
