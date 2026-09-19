@@ -1,27 +1,44 @@
 {
-  "schema": "bhsm-native-r1-effective-representation-gate-v1",
-  "physical_dimension": 2,
-  "BHSM_state": ["q2", "Pi2"],
-  "effective_state": ["zeta2", "Pi_zeta2"],
-  "required_conditions": [
-    "invertible_state_map_U",
-    "same_physical_n2_harmonic",
-    "positive_mapped_kinetic_coefficient",
-    "consistent_constraint_solution",
-    "single_calibration_only",
-    "no_duplicate_scalar_degree_of_freedom"
-  ],
-  "exact_effective_n2_kernel": {
-    "status": "AVAILABLE",
-    "kinetic": "G_S2=Mpl2*5*Dkin/[Dkin+10*(1-alphaB_BS/2)^2]",
-    "lapse_constraint": "AVAILABLE",
-    "shift_constraint": "AVAILABLE"
-  },
-  "curved_newtonian_DAE": {
-    "status": "COMPATIBILITY_AUDIT_ONLY",
-    "foundational_for_predictions": false
-  },
-  "prediction_track": "ELIGIBLE_FOR_NUMERICAL_CLOSURE_AFTER_MATCHING_CHECKS",
-  "provenance_track": "SEVEN_RETAINED_ACTION_MATRIX_ELEMENTS_REMAIN_OPEN",
-  "claim_until_both_close": "BHSM_NATIVE_CONDITIONAL_BRIDGE_PREDICTIONS"
+    "schema":  "bhsm-native-r1-effective-representation-gate-v1",
+    "physical_dimension":  2,
+    "BHSM_state":  [
+                       "q2",
+                       "Pi2"
+                   ],
+    "effective_state":  [
+                            "zeta2",
+                            "Pi_zeta2"
+                        ],
+    "required_conditions":  [
+                                "invertible_state_map_U",
+                                "same_physical_n2_harmonic",
+                                "positive_mapped_kinetic_coefficient",
+                                "consistent_constraint_solution",
+                                "single_calibration_only",
+                                "no_duplicate_scalar_degree_of_freedom"
+                            ],
+    "exact_effective_n2_kernel":  {
+                                      "status":  "AVAILABLE",
+                                      "kinetic":  "G_S2=Mpl2*5*Dkin/[Dkin+10*(1-alphaB_BS/2)^2]",
+                                      "lapse_constraint":  "AVAILABLE",
+                                      "shift_constraint":  "AVAILABLE"
+                                  },
+    "curved_newtonian_DAE":  {
+                                 "status":  "COMPATIBILITY_AUDIT_ONLY",
+                                 "foundational_for_predictions":  false
+                             },
+    "prediction_track":  "REDUCED_GRAVITY_SCALAR_N2_PROPAGATOR_EVALUATED",
+    "provenance_track":  "SEVEN_RETAINED_ACTION_MATRIX_ELEMENTS_REMAIN_OPEN",
+    "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_BRIDGE_PREDICTIONS",
+    "reduced_propagator":  {
+                               "anchor_redshift":  2.1,
+                               "state":  [
+                                             "zeta",
+                                             "d_zeta_dN"
+                                         ],
+                               "artifact":  "artifacts/R1_n2_reduced_propagator.json",
+                               "exact_constraints":  true,
+                               "full_matter_radiation_response":  "OPEN",
+                               "observable_kernels":  "OPEN"
+                           }
 }
