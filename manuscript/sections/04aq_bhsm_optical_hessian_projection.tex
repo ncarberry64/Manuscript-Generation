@@ -1,0 +1,95 @@
+\section{Action projection contract for the local optical Hessian}
+\label{sec:bhsm-optical-hessian-projection}
+
+The constitutive reduction leaves five local physical coefficients
+$(a,b,c,u,v)$.  These are not phenomenological parameters.  Let $e_A$ and
+$e_\psi$ be the two physical scalar metric basis directions on the common
+closed-FLRW KKT domain.  Then
+\begin{align}
+a&=\langle e_A,\widehat{\mathcal H}_{gg}e_A\rangle,\\
+b&=\langle e_A,\widehat{\mathcal H}_{gg}e_\psi\rangle,\\
+c&=\langle e_\psi,\widehat{\mathcal H}_{gg}e_\psi\rangle.
+\end{align}
+Thus
+\begin{equation}
+\boxed{
+\mathcal A_g^{\rm loc}
+=
+P_g^\dagger\widehat{\mathcal H}_{gg}P_g
+=
+\begin{pmatrix}a&b\\b&c\end{pmatrix}.
+}
+\end{equation}
+
+For the normalized local topographic profile $\varphi_{\rm loc}$, the retained
+mixed second variation
+\begin{equation}
+B_{g\varphi}[\gamma,\varphi]
+=
+\int d\mu_g\,w\,\gamma^{\mu\nu}
+\left[
+2F''(X)(j\!\cdot\!d\varphi)A_{\mu\nu}
++
+2F'(X)j_{(\mu}\partial_{\nu)}\varphi
+-
+F'(X)g_{\mu\nu}(j\!\cdot\!d\varphi)
+\right]
+\end{equation}
+defines
+\begin{equation}
+\boxed{
+u=B_{g\varphi}[e_A,\varphi_{\rm loc}],
+\qquad
+v=B_{g\varphi}[e_\psi,\varphi_{\rm loc}].
+}
+\end{equation}
+Equivalently,
+\begin{equation}
+\mathcal B_{g\psi}^{\rm loc}
+=
+P_g^\dagger\widehat{\mathcal H}_{g\varphi}\varphi_{\rm loc}
+=
+\begin{pmatrix}u\\v\end{pmatrix}.
+\end{equation}
+
+If
+\begin{equation}
+c_\varphi
+=
+\langle\varphi_{\rm loc},
+\widehat{\mathcal H}_{\varphi\varphi}\varphi_{\rm loc}\rangle,
+\end{equation}
+the same-domain Schur curvature is
+\begin{equation}
+\boxed{
+k_{\rm loc}
+=
+c_\varphi
+-
+(\mathcal B_{g\psi}^{\rm loc})^\dagger
+(\mathcal A_g^{\rm loc})^{-1}
+\mathcal B_{g\psi}^{\rm loc}.
+}
+\end{equation}
+
+The numerical action calculation must return
+\begin{equation}
+\boxed{
+a,\;b,\;c,\;u,\;v,\;c_\varphi
+}
+\end{equation}
+together with the basis/profile normalizations, $\Delta_g=ac-b^2$, the
+response residual
+$\|\mathcal A_g\mathcal R_{g\psi}+\mathcal B_{g\psi}\|$, the Schur curvature,
+the Legendre-gate status, and the common-domain status.  No supernova
+calibration enters this extraction.
+
+Under an invertible physical metric coordinate change $P_g\to P_gS$,
+\begin{equation}
+\mathcal A_g\to S^\dagger\mathcal A_gS,
+\qquad
+\mathcal B_{g\psi}\to S^\dagger\mathcal B_{g\psi},
+\qquad
+\mathcal R_{g\psi}\to S^{-1}\mathcal R_{g\psi},
+\end{equation}
+so the reconstructed physical metric perturbation is basis invariant.
