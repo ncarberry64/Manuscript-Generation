@@ -1,4 +1,4 @@
-﻿"""Matter/radiation sourced n=2 closed-Horndeski constraint block.
+"""Matter/radiation sourced n=2 closed-Horndeski constraint block.
 
 This module specializes the Newtonian-gauge 00, 0i and traceless-ij equations
 of Gambino & Pace (arXiv:2412.01781) to the manuscript cubic-Galileon/KGB
@@ -38,6 +38,28 @@ import closed_horndeski_n2 as ch
 OMEGA_M0 = 0.31
 OMEGA_R0 = 9.0e-5
 MPL2 = 1.0
+
+
+def gp_alpha_quantities(v: float, H: float) -> dict[str, float]:
+    """Return the alpha functions in the Gambino-Pace/Gleyzes convention.
+
+    The repository's closed_horndeski_n2.alpha_quantities() stores the
+    Bellini-Sawicki braiding alpha_B^BS, for which
+        D_kin = alpha_K + (3/2) (alpha_B^BS)^2.
+
+    The curvature-aware Gambino-Pace equations use the convention
+        alpha = alpha_K + 6 (alpha_B^GP)^2,
+
+    so for constant Planck mass:
+        alpha_B^GP = -alpha_B^BS / 2.
+    """
+    q_bs = ch.alpha_quantities(v, H)
+    return {
+        "alpha_B": -0.5 * q_bs["alpha_B"],
+        "alpha_K": q_bs["alpha_K"],
+        "D_kin": q_bs["D_kin"],
+        "alpha_B_BS": q_bs["alpha_B"],
+    }
 
 
 @dataclass(frozen=True)
@@ -90,7 +112,7 @@ def density_source(
 
 
 def constraint_matrix(v: float, H: float) -> np.ndarray:
-    q = ch.alpha_quantities(v, H)
+    q = gp_alpha_quantities(v, H)
     alpha_b = q["alpha_B"]
     alpha_k = q["alpha_K"]
     return np.array(
@@ -106,7 +128,7 @@ def constraint_matrix(v: float, H: float) -> np.ndarray:
 
 
 def determinant_identity(v: float, H: float) -> tuple[float, float]:
-    q = ch.alpha_quantities(v, H)
+    q = gp_alpha_quantities(v, H)
     alpha_b = q["alpha_B"]
     alpha_k = q["alpha_K"]
     dkin = q["D_kin"]
@@ -115,14 +137,12 @@ def determinant_identity(v: float, H: float) -> tuple[float, float]:
     analytic = -2.0 * H * H * (
         alpha_k + 6.0 * alpha_b * alpha_b
     )
-    via_dkin = -2.0 * H * H * (
-        dkin + 4.5 * alpha_b * alpha_b
-    )
+    via_dkin = -2.0 * H * H * dkin
 
     if not math.isclose(
         analytic, via_dkin, rel_tol=2e-14, abs_tol=2e-14
     ):
-        raise AssertionError("determinant D_kin identity failed")
+        raise AssertionError("GP/BS alpha_B convention identity failed")
 
     return direct, analytic
 
@@ -140,7 +160,7 @@ def constraint_rhs(
     _, shifted = harmonic_scales(a)
     kappa = background.KCURV / (a * a)
 
-    q = ch.alpha_quantities(v, H)
+    q = gp_alpha_quantities(v, H)
     alpha_b = q["alpha_B"]
     alpha_k = q["alpha_K"]
 
@@ -151,6 +171,9 @@ def constraint_rhs(
         rho_m, rho_r, state.v_m, state.v_r
     )
 
+    # Gambino-Pace Eq. (8), exact source form:
+    # (6 - alpha_K + 12 alpha_B) H^2 Phi
+    # - 2(D^2+3K)/a^2 Phi, after Phi=Psi.
     phi_coeff = (
         (6.0 - alpha_k + 12.0 * alpha_b) * H * H
         - 2.0 * shifted
@@ -281,7 +304,7 @@ def diagnostics(sol, z: float) -> dict:
     N = math.log(1.0 / (1.0 + z))
     y_bg = np.asarray(sol.sol(N), dtype=float)
     _, v, H = [float(x) for x in y_bg]
-    q = ch.alpha_quantities(v, H)
+    q = gp_alpha_quantities(v, H)
 
     direct, analytic = determinant_identity(v, H)
     T = local_transfer_matrix(N, y_bg)

@@ -21,6 +21,26 @@ For the present cubic-Galileon subclass,
 \qquad
 M^2=M_{\rm Pl}^2.
 \]
+The curvature-aware equations use the Gleyzes/Gambino--Pace braiding normalization. To distinguish it from the Bellini--Sawicki braiding function used in the previous sections, we write
+\[
+\boxed{
+\alpha_B^{\rm GP}
+=
+-\frac12\alpha_B^{\rm BS}
+}.
+\]
+The kineticity is unchanged,
+\[
+\alpha_K^{\rm GP}=\alpha_K^{\rm BS},
+\]
+and therefore
+\[
+\alpha_K+6(\alpha_B^{\rm GP})^2
+=
+\alpha_K+\frac32(\alpha_B^{\rm BS})^2
+=
+D_{\rm kin}.
+\]
 For ideal dust and ideal radiation we set the scalar anisotropic stress to zero, so the traceless spatial equation gives
 \[
 \boxed{\Phi=\Psi}.
@@ -38,12 +58,14 @@ Writing
 \]
 the sourced \(00\) equation becomes
 \[
-6(1+\alpha_B)H\dot\Phi
+6(1+\alpha_B^{\rm GP})H\dot\Phi
 +
-(\alpha_K-6\alpha_B)H^2\dot\pi
+(\alpha_K-6\alpha_B^{\rm GP})H^2\dot\pi
 +
 \left[
-(6-\alpha_K+12\alpha_B)H^2+10\kappa
+(6-\alpha_K+12\alpha_B^{\rm GP})H^2
++
+10\kappa
 \right]\Phi
 \]
 \[
@@ -52,9 +74,9 @@ the sourced \(00\) equation becomes
 \left[
 \frac{\rho+p}{2M_{\rm Pl}^2}
 +
-\dot H(1+\alpha_B)
+\dot H(1+\alpha_B^{\rm GP})
 +
-\kappa\left(1-\frac83\alpha_B\right)
+\kappa\left(1-\frac83\alpha_B^{\rm GP}\right)
 \right]\pi
 =
 -\frac{\delta\rho}{M_{\rm Pl}^2}.
@@ -64,9 +86,9 @@ The \(0i\) equation is
 \[
 2\dot\Phi
 -
-2H\alpha_B\dot\pi
+2H\alpha_B^{\rm GP}\dot\pi
 +
-2(1+\alpha_B)H\Phi
+2(1+\alpha_B^{\rm GP})H\Phi
 +
 \left(
 2\dot H+\frac{\rho+p}{M_{\rm Pl}^2}
@@ -97,14 +119,11 @@ Its determinant is
 \det\mathcal C
 =
 -2H^2
-\left(
-\alpha_K+6\alpha_B^2
-\right)
+\left[
+\alpha_K+6(\alpha_B^{\rm GP})^2
+\right]
 =
--2H^2
-\left(
-D_{\rm kin}+\frac92\alpha_B^2
-\right).
+\boxed{-2H^2D_{\rm kin}}.
 }
 \]
 Thus the same positive-\(D_{\rm kin}\) branch used in the background and Round-3 kinetic audit guarantees that this sourced rate block is nonsingular.
@@ -129,7 +148,7 @@ and
 \qquad
 \dot v_r
 =
-Hv_r-\Phi-\frac14\delta_r,
+-\Phi-\frac14\delta_r,
 \]
 with
 \[
