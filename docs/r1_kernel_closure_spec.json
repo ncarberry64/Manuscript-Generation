@@ -47,5 +47,12 @@
                                               "F_H",
                                               "F_fsigma8",
                                               "F_lens"
-                                          ]
+                                          ],
+    "los_topography_identifiability":  {
+                                           "one_SN_scalar_calibration_cannot_fix_two_amplitudes":  true,
+                                           "local_component_normalized_by_existing_SN_reference":  true,
+                                           "global_n2_amplitude_requires_independent_theory_or_observable":  true,
+                                           "source_shape_requires_foreground_map":  true,
+                                           "deencapsulation_source_normalization_action_owned_open":  true
+                                       }
 }

@@ -27,9 +27,9 @@
                                  "status":  "COMPATIBILITY_AUDIT_ONLY",
                                  "foundational_for_predictions":  false
                              },
-    "prediction_track":  "GROWTH_AND_LOCAL_WEYL_STATE_KERNELS_EVALUATED",
+    "prediction_track":  "GLOBAL_N2_PLUS_LOCAL_LOS_TOPOGRAPHY_CANDIDATE",
     "provenance_track":  "SEVEN_RETAINED_ACTION_MATRIX_ELEMENTS_REMAIN_OPEN",
-    "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_BRIDGE_PREDICTIONS",
+    "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_GLOBAL_PLUS_LOS_TOPOGRAPHIC_RESPONSE",
     "reduced_propagator":  {
                                "anchor_redshift":  2.1,
                                "state":  [
@@ -48,5 +48,19 @@
                                     "Newtonian_curved_DAE_used":  false,
                                     "luminosity_distance_light_cone":  "OPEN",
                                     "calibrated_single_state":  "OPEN"
-                                }
+                                },
+    "los_topographic_transfer":  {
+                                     "artifact":  "artifacts/BHSM_los_topographic_transfer_candidate.json",
+                                     "status":  "EXPLORATORY_SOURCE_EXPORT_AND_LOS_TRANSFER_CANDIDATE",
+                                     "parent_geometry":  "S3_RH",
+                                     "local_metric_deformation":  "gamma_ij=a^2 exp(2 psi) gamma_bar_ij",
+                                     "local_volume_rate":  "H_local=H+dot_psi",
+                                     "seam_charge_candidate":  "V_Sigma^2=(c^2/8pi) integral H_Sigma DeltaK_uu dA",
+                                     "source_export_sign":  "OPEN",
+                                     "dynamic_psi_normalization":  "OPEN",
+                                     "low_z_SN_calibrates":  "LOCAL_COMPONENT_IN_THIS_EXPLORATORY_TEST",
+                                     "global_n2_amplitude":  "OPEN_THEORY_OWNED",
+                                     "coherence_cutoff":  "ILLUSTRATIVE_zc_0p03_NOT_FROZEN",
+                                     "foreground_catalog_replacement":  "REQUIRED_FOR_PREDICTION"
+                                 }
 }

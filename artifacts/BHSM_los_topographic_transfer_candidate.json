@@ -1,0 +1,107 @@
+{
+  "bhsm_source_provenance": {
+    "candidate_acceleration": "g_T=-Q F_T",
+    "neighborhood_profile": "|g_T|=V_Sigma^2(1/r-r_star/r^2), r>=r_star",
+    "psi_source_normalization": "OPEN_ACTION_ATTACHMENT",
+    "seam_charge": "V_Sigma^2=(c^2/8pi) integral_Sigma H_Sigma DeltaK_uu dA",
+    "source_export_orientation": "OPEN_ACTION_LEVEL_SIGN_CONVENTION",
+    "spherical_weak_field": "V_Sigma^2=GM/r_star",
+    "static_flux": "F_T=grad(T)-B grad(Laplacian(T))",
+    "static_operator": "div(F_T)=Laplacian(T)-B Laplacian^2(T)=S"
+  },
+  "calibration_policy": {
+    "A_mu_ref": -0.0412,
+    "A_mu_ref_sigma": 0.009,
+    "global_n2_amplitude": "NOT_SIMULTANEOUSLY_INFERRED_FROM_THE_SAME_SCALAR_CALIBRATION",
+    "low_z_SN_normalizes": "LOCAL_TOPOGRAPHIC_RESPONSE_ONLY",
+    "z_ref": 0.02
+  },
+  "claim_boundary": {
+    "derived_or_reused": [
+      "closed-S3 radial C_K/S_K geometry",
+      "localized-source saturation mechanism",
+      "BHSM seam charge candidate",
+      "BHSM spherical neighborhood-flow shape",
+      "finite-correlation path decorrelation formula"
+    ],
+    "not_yet_claimed": [
+      "action-normalized de-encapsulation-to-psi source map",
+      "foreground-catalog prediction",
+      "SMBH-specific source law",
+      "unique global-n2/local-topography amplitude split",
+      "formal BHSM cosmology closure"
+    ]
+  },
+  "geometry": {
+    "linear_curvature_response": "delta R3=-(4/a^2)(bar_Laplacian+3/R_H^2) psi",
+    "local_metric_ansatz": "gamma_ij=a^2 exp(2 psi) gamma_bar_ij",
+    "local_volume_rate": "H_local=H+dot(psi)",
+    "n2_shifted_factor": 5,
+    "parent": "S^3(R_H)"
+  },
+  "illustrative_coherence_proxy": {
+    "status": "ILLUSTRATIVE_NOT_FITTED_NOT_FROZEN; replace with foreground/source map",
+    "z_coherence": 0.03
+  },
+  "rows": [
+    {
+      "A_mu_local_mag": -0.0412,
+      "chi_H0_units": 0.0198908971474051,
+      "normalized_local_transfer": 1.0,
+      "z": 0.02
+    },
+    {
+      "A_mu_local_mag": -0.012598245519318173,
+      "chi_H0_units": 0.09730194950819324,
+      "normalized_local_transfer": 0.30578265823587797,
+      "z": 0.1
+    },
+    {
+      "A_mu_local_mag": -0.004434744714758629,
+      "chi_H0_units": 0.276304944454964,
+      "normalized_local_transfer": 0.10763943482423856,
+      "z": 0.3
+    },
+    {
+      "A_mu_local_mag": -0.002809918368625072,
+      "chi_H0_units": 0.43578004204359483,
+      "normalized_local_transfer": 0.06820190215109398,
+      "z": 0.5
+    },
+    {
+      "A_mu_local_mag": -0.00190407825965952,
+      "chi_H0_units": 0.6422362675813202,
+      "normalized_local_transfer": 0.04621549173930874,
+      "z": 0.8
+    },
+    {
+      "A_mu_local_mag": -0.001605499485051546,
+      "chi_H0_units": 0.7609107686624648,
+      "normalized_local_transfer": 0.03896843410319287,
+      "z": 1.0
+    },
+    {
+      "A_mu_local_mag": -0.0012123415771635878,
+      "chi_H0_units": 1.005050543304527,
+      "normalized_local_transfer": 0.02942576643600941,
+      "z": 1.5
+    },
+    {
+      "A_mu_local_mag": -0.000991016324683363,
+      "chi_H0_units": 1.2258431552587001,
+      "normalized_local_transfer": 0.02405379428843114,
+      "z": 2.1
+    }
+  ],
+  "schema": "bhsm-los-topographic-transfer-candidate-v1",
+  "seam_identity_witness": {
+    "GM": 2.0,
+    "R_H": 10.0,
+    "V_sigma2": 0.4472135954999579,
+    "V_sigma4": 0.19999999999999998,
+    "expected_V_sigma4": 0.2,
+    "r_star": 4.47213595499958,
+    "xi_c": 1.0
+  },
+  "status": "EXPLORATORY_SOURCE_EXPORT_AND_LOS_TRANSFER_CANDIDATE"
+}
