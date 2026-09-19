@@ -27,9 +27,9 @@
                                  "status":  "COMPATIBILITY_AUDIT_ONLY",
                                  "foundational_for_predictions":  false
                              },
-    "prediction_track":  "GROWTH_AND_LOCAL_WEYL_STATE_KERNELS_EVALUATED",
+    "prediction_track":  "DL_GROWTH_WEYL_STATE_SPACE_KERNELS_EVALUATED_BRANCH_DIRECTION_OPEN",
     "provenance_track":  "SEVEN_RETAINED_ACTION_MATRIX_ELEMENTS_REMAIN_OPEN",
-    "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_BRIDGE_PREDICTIONS",
+    "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_STATE_SPACE_PREDICTIONS",
     "reduced_propagator":  {
                                "anchor_redshift":  2.1,
                                "state":  [
@@ -48,5 +48,14 @@
                                     "Newtonian_curved_DAE_used":  false,
                                     "luminosity_distance_light_cone":  "OPEN",
                                     "calibrated_single_state":  "OPEN"
-                                }
+                                },
+    "luminosity_distance_transfer":  {
+                                         "artifact":  "artifacts/R1_n2_luminosity_distance_kernel.json",
+                                         "gauge_invariant_DL_state_kernel":  "EVALUATED",
+                                         "closed_S3_geometry":  "EVALUATED",
+                                         "distance_duality":  "EVALUATED",
+                                         "calibration_rank":  1,
+                                         "phase_space_dimension":  2,
+                                         "normalized_mode_direction":  "OPEN"
+                                     }
 }

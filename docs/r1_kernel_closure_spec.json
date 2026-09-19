@@ -47,5 +47,11 @@
                                               "F_H",
                                               "F_fsigma8",
                                               "F_lens"
-                                          ]
+                                          ],
+    "calibration_rank_audit":  {
+                                   "phase_space_dimension":  2,
+                                   "SN_scalar_constraints":  1,
+                                   "normalized_mode_direction_required_before_scalar_predictions":  true,
+                                   "second_observational_fit_allowed":  false
+                               }
 }
