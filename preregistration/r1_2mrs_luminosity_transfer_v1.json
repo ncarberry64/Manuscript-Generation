@@ -1,0 +1,29 @@
+{
+  "schema": "r1-2mrs-luminosity-transfer-v1",
+  "status": "FROZEN_BEFORE_EVALUATION",
+  "parent_density_result": "487899b",
+  "scientific_question": "Does a luminosity-weighted foreground-well proxy transfer where raw 2MRS number density did not?",
+  "motivation": "BHSM/local-topography source strength should track gravitational-well/source strength more closely than unweighted galaxy counts.",
+  "primary_weight": "K_s-band luminosity proxy proportional to 10^(-0.4 m_K) d_L(z)^2 within each shell",
+  "no_free_exponent": true,
+  "shell_edges": [0.0,0.01,0.02,0.03,0.04,0.05],
+  "angular_smoothing_sigma_deg": 10.0,
+  "foreground_visibility": "only foreground shell path length contributes",
+  "closed_s3_transfer": "F_L=(C_K/S_K)(chi_SN) sum_s DeltaChi_visible * delta_LK,s(nhat)",
+  "controls": "same fixed axis, host-mass if available, survey dummies",
+  "fixed_axis_ra_deg": 211.48,
+  "fixed_axis_dec_deg": -12.81,
+  "primary_statistic": "Delta chi2 beyond axis+controls",
+  "permutation": "redshift-blocked shuffle of the luminosity-weighted foreground score",
+  "classification": {
+    "strong": "p<0.01 and sign stable under every leave-one-shell-out test",
+    "provisional": "p<0.05",
+    "not_established": "otherwise"
+  },
+  "secondary_transfer": "fit one foreground amplitude at 0.01<=z<=0.03 and carry it unchanged to 0.03<z<=0.15",
+  "claim_boundary": [
+    "K_s luminosity is a stellar-mass/gravitational-well proxy, not an SMBH mass measurement",
+    "this is a new preregistered hypothesis after failure of the raw-count predictor",
+    "no K-band field selection by SN residual performance is allowed; the first valid supported K-band magnitude field is used by fixed priority"
+  ]
+}
