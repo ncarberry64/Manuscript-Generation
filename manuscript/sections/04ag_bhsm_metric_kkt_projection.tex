@@ -1,0 +1,206 @@
+\section{Physical $n=2$ metric KKT projection}
+\label{sec:bhsm-metric-kkt}
+
+The remaining cosmological action object can be written explicitly in a
+two-variable scalar metric basis once the momentum constraint and scalar
+longitudinal gauge have been handled.  Later BHSM fixed-boundary work supplies
+an exact action-derived domain architecture for this reduction, although its
+radial coefficients belong to a different background and are not imported
+numerically into cosmology.
+
+\subsection{Action-derived domain architecture}
+
+For a nonzero scalar harmonic, the induced metric trace before scalar gauge
+fixing has two components,
+\begin{equation}
+\Theta
+=
+\psi(1)+\frac14\Box_4E(1),
+\qquad
+\mathcal E=E(1).
+\end{equation}
+The radial lapse $A$ and scalar normal--tangential shift $B$ are not induced
+metric trace data.  The action-derived fixed-$h$ construction proceeds in the
+following order:
+
+\begin{enumerate}
+\item vary before gauge fixing;
+\item use the momentum equation to eliminate the shift sector;
+\item choose the scalar longitudinal gauge $E=0$;
+\item impose the induced-metric Dirichlet trace
+      $\psi(1)=0$;
+\item retain the matcher reaction
+      $\eta_{\rm tr}=P_\psi(1)$;
+\item quotient endpoint-preserving radial diffeomorphisms.
+\end{enumerate}
+
+The extended Green current contains the finite matcher pairing
+\begin{equation}
+\psi_1\eta_2-\psi_2\eta_1,
+\end{equation}
+which cancels the canonical-momentum endpoint current on the constrained
+domain.  This gives equal operator and adjoint domains in the corresponding
+indefinite KKT saddle problem.
+
+\paragraph{Domain proposition.}
+The cosmological $n=2$ metric calculation adopts this sequence as the
+\emph{action-derived domain architecture candidate}
+$\mathcal D_{g,\rm phys}^{(2)}$.  The domain architecture is inherited; the
+background-dependent radial coefficients are not.
+
+\subsection{Two-variable physical metric block}
+
+After the above reduction, let
+\begin{equation}
+y_g
+=
+\begin{pmatrix}
+A\\
+\psi
+\end{pmatrix}
+\end{equation}
+denote the scalar metric coordinates.  The physical metric Hessian projected
+onto the $n=2$ harmonic is
+\begin{equation}
+\boxed{
+\mathcal A_g^{(2)}
+=
+\begin{pmatrix}
+a_{AA} & a_{A\psi}\\
+a_{A\psi} & a_{\psi\psi}
+\end{pmatrix},
+}
+\label{eq:Ag2-explicit}
+\end{equation}
+where each entry is an action matrix element evaluated on
+$\mathcal D_{g,\rm phys}^{(2)}$.
+
+The critical-fold principal operator previously derived in BHSM demonstrates
+that a lapse--Weyl saddle structure of this type is action generated, but its
+numerical coefficients are branch specific.  They are not substituted into
+Eq.~\eqref{eq:Ag2-explicit}.
+
+\subsection{Projected metric--topographic source}
+
+Let
+\begin{equation}
+X_2
+=
+\begin{pmatrix}
+q_2\\
+\Pi_2
+\end{pmatrix}.
+\end{equation}
+The mixed physical Hessian defines the source map
+\begin{equation}
+\boxed{
+\mathcal B_{g2}
+=
+\begin{pmatrix}
+b_{Aq} & b_{A\Pi}\\
+b_{\psi q} & b_{\psi\Pi}
+\end{pmatrix}.
+}
+\label{eq:Bg2-explicit}
+\end{equation}
+
+The retained BHSM scalar/topographic action already supplies a nonzero
+metric--topographic stress-mixing second variation.  Projecting that bilinear
+form onto the physical $n=2$ mode and the two metric basis directions defines
+the entries in Eq.~\eqref{eq:Bg2-explicit}.  In particular, for metric test
+variation $\gamma$ and topographic test variation $\phi$, the source contains
+terms of the form
+\begin{equation}
+B_{g\phi}[\gamma,\phi]
+=
+\int d\mu_g\,w\,\gamma^{\mu\nu}
+\left[
+2F''(X)(j\!\cdot\!d\phi)A_{\mu\nu}
++
+2F'(X)j_{(\mu}\partial_{\nu)}\phi
+-
+F'(X)g_{\mu\nu}(j\!\cdot\!d\phi)
+\right].
+\label{eq:metric-topographic-mixed-form}
+\end{equation}
+Thus the remaining coefficients are matrix elements of a stored action
+variation, not independent phenomenological couplings.
+
+\subsection{Explicit response formula}
+
+Define
+\begin{equation}
+\Delta_g
+=
+a_{AA}a_{\psi\psi}-a_{A\psi}^2.
+\end{equation}
+If $\Delta_g\neq0$, then
+\begin{equation}
+(\mathcal A_g^{(2)})^{-1}
+=
+\frac1{\Delta_g}
+\begin{pmatrix}
+a_{\psi\psi} & -a_{A\psi}\\
+-a_{A\psi} & a_{AA}
+\end{pmatrix},
+\end{equation}
+and the physical metric response is
+\begin{equation}
+\boxed{
+\mathcal R_{g2}
+=
+-(\mathcal A_g^{(2)})^{-1}\mathcal B_{g2}.
+}
+\label{eq:Rg2-explicit}
+\end{equation}
+
+Therefore all metric response amplitudes are fixed once the seven independent
+action matrix elements
+\begin{equation}
+\boxed{
+a_{AA},\;
+a_{A\psi},\;
+a_{\psi\psi},\;
+b_{Aq},\;
+b_{A\Pi},\;
+b_{\psi q},\;
+b_{\psi\Pi}
+}
+\label{eq:seven-matrix-elements}
+\end{equation}
+are evaluated on the physical domain.
+
+\subsection{Schur consistency with the scalar/topographic block}
+
+With the candidate scalar/topographic block
+$\mathcal C_{2,\rm ST}$ from
+Sec.~\ref{sec:closed-flrw-metric-tangent}, the reduced mode operator is
+\begin{equation}
+\boxed{
+\mathcal K_2
+=
+\mathcal C_{2,\rm ST}
+-
+\mathcal B_{g2}^{\dagger}
+(\mathcal A_g^{(2)})^{-1}
+\mathcal B_{g2}.
+}
+\label{eq:K2-explicit-metric}
+\end{equation}
+Equations~\eqref{eq:Rg2-explicit} and
+\eqref{eq:K2-explicit-metric} show that the observable metric response and
+the mode self-energy correction are controlled by the same finite set of
+action matrix elements.
+
+\subsection{Updated closure count}
+
+The action-provenance problem is now reduced to two tasks:
+
+\begin{enumerate}
+\item confirm that the fixed-$h$ matcher/Green-current architecture above is
+      the correct physical domain for the closed-FLRW $n=2$ branch;
+\item evaluate the seven matrix elements in
+      Eq.~\eqref{eq:seven-matrix-elements} from the retained action.
+\end{enumerate}
+
+No additional observable-specific anisotropic coefficient is permitted.
