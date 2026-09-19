@@ -1,0 +1,37 @@
+{
+  "schema": "bhsm-native-r1-kernel-closure-v1",
+  "branch": "R1",
+  "calibration": {
+    "observable": "SN_distance_modulus_dipole",
+    "redshift_bin": [0.01, 0.03],
+    "A_mu": -0.0412,
+    "A_mu_sigma": 0.009,
+    "axis_ra_deg": 211.48,
+    "axis_dec_deg": -12.81,
+    "status": "carried_forward_reference_calibration"
+  },
+  "required_kernels": [
+    "F_DL",
+    "F_H",
+    "F_DA",
+    "F_fsigma8",
+    "F_lens"
+  ],
+  "shared_objects": [
+    "X2",
+    "R_g2",
+    "R_m2",
+    "R_2"
+  ],
+  "forbidden_operations": [
+    "independent_directional_amplitude_refit",
+    "post_hoc_kernel_retuning_to_prospective_data",
+    "duplicate_physical_scalar_mode",
+    "changing_frozen_R1_manifest"
+  ],
+  "allowed_verdicts": [
+    "R1_KERNEL_CLOSURE",
+    "R1_BRANCH_FALSIFIED",
+    "ACTION_PROVENANCE_CONDITIONAL"
+  ]
+}
