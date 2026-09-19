@@ -1,0 +1,134 @@
+\section{Closed-FLRW metric tangent and the canonical $n=2$ scalar/topographic candidate}
+\label{sec:closed-flrw-metric-tangent}
+
+A later BHSM audit identified a normalization conflict in an older critical-
+fold construction that attempted to use a branch coordinate $X$ as though it
+were a local curvature perturbation.  That issue must not be imported into
+the cosmological bridge.
+
+\subsection{Do not identify the branch coordinate with a local curvature field}
+
+In the retained BHSM lineage, the quantity
+\begin{equation}
+X=H^2+a^{-2}
+\end{equation}
+is an on-shell branch coordinate.  It is not a stored independent local
+scalar field $X(x)$.  Moreover, the same value of $X$ occurs in different
+geometric branches with different scalar-curvature normalization.  Therefore
+an equation of the form
+\begin{equation}
+\delta R_4=\delta X
+\end{equation}
+is not a branch-independent metric-tangent law.
+
+The cosmological bridge instead uses the direct Fr\'echet derivative of the
+four-dimensional scalar curvature with respect to the metric:
+\begin{equation}
+\boxed{
+D R_g[k]
+=
+\nabla_\mu\nabla_\nu k^{\mu\nu}
+-
+\Box\,\mathrm{tr}_g k
+-
+R_{\mu\nu}k^{\mu\nu}.
+}
+\label{eq:DR-metric}
+\end{equation}
+After the scalar gauge quotient, Eq.~\eqref{eq:DR-metric} is projected
+directly onto the physical closed-FLRW $n=2$ scalar metric sector.  No
+intermediate $X\to R_4$ normalization is introduced.
+
+\paragraph{Theorem 9 (cosmological metric-tangent normalization).}
+Let $k_{\mu\nu}^{(2)}$ be a physical $n=2$ scalar metric perturbation of the
+closed-FLRW background.  Then the action-level curvature variation entering
+the cosmological metric Hessian is uniquely normalized by
+\begin{equation}
+\delta R_4^{(2)}
+=
+D R_{\bar g}[k^{(2)}],
+\end{equation}
+modulo the already-quotiented scalar gauge directions.  Any auxiliary branch
+coordinate may be used only after its map to
+$D R_{\bar g}[k^{(2)}]$ has been independently derived on that same branch.
+
+\paragraph{Proof.}
+Equation~\eqref{eq:DR-metric} is the geometric Fr\'echet derivative of scalar
+curvature.  It depends only on the background metric and its tangent
+$k_{\mu\nu}^{(2)}$.  A branch coordinate has no independent status in this
+variation unless its derivative with respect to the metric is specified.
+Therefore the direct metric derivative fixes the normalization without a
+branch-dependent scalar intermediary. \hfill$\square$
+
+\subsection{Lowest Robin collar candidate}
+
+The v5.7 scalar/topographic boundary problem selects the lowest admissible
+self-adjoint homogeneous collar mode with Robin zero-flux data.  The
+corresponding constant collar profile has
+\begin{equation}
+\lambda_\rho=0.
+\end{equation}
+For the nonhomogeneous physical $n=2$ extension, the minimal
+harmonic-preserving candidate is to retain this lowest radial profile and
+extend the $S^3$ harmonic without changing its normalized boundary amplitude.
+On that candidate,
+\begin{equation}
+I_2=1.
+\end{equation}
+
+These two values are \emph{candidate domain data}, not a theorem that the full
+retained-action trace/extension map must take this form.
+
+Substitution into Eq.~\eqref{eq:C2-ST} gives
+\begin{equation}
+\boxed{
+\mathcal C_{2,\rm ST}^{\rm cand}
+=
+\frac1{L^2}
+\begin{pmatrix}
+5 & -1\\
+-1 & 13
+\end{pmatrix}.
+}
+\label{eq:C2-ST-candidate}
+\end{equation}
+Its determinant is
+\begin{equation}
+\det(L^2\mathcal C_{2,\rm ST}^{\rm cand})=64
+\end{equation}
+and its eigenvalues are
+\begin{equation}
+\boxed{
+\lambda_\pm
+=
+\frac{9\pm\sqrt{17}}{L^2},
+}
+\label{eq:C2-ST-candidate-eigs}
+\end{equation}
+both strictly positive.
+
+\subsection{What this closes and what remains}
+
+Equation~\eqref{eq:C2-ST-candidate} closes the scalar/topographic side of the
+mixed-Hessian calculation on one explicit, self-adjoint, lowest-radial
+candidate extension.  It does not prove that the retained action selects that
+extension.
+
+The remaining cosmological action object is therefore reduced to
+\begin{equation}
+\boxed{
+\left\{
+\mathcal A_g^{(2)},
+\mathcal B_{g2},
+\mathcal D_{g,\rm phys}^{(2)}
+\right\}
+}
+\label{eq:remaining-metric-data}
+\end{equation}
+together with action-level confirmation or rejection of the candidate
+$(\lambda_\rho,I_2)=(0,1)$.
+
+The next derivation must evaluate
+$\mathcal A_g^{(2)}$ and $\mathcal B_{g2}$ directly from the retained action on
+the closed-FLRW physical metric tangent.  It must not reuse the invalid
+coefficient-one critical-fold map between $X$ and $R_4$.
