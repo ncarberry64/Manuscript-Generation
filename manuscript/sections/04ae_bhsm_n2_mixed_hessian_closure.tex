@@ -1,0 +1,185 @@
+\section{The single upstream closure object: the physical $n=2$ mixed Hessian}
+\label{sec:bhsm-n2-mixed-hessian}
+
+The finite-kernel inventory shows that the five anisotropic observable kernels
+are not presently independent numerical objects.  Their common upstream
+input is the physical metric--topographic Hessian in the first admissible
+$n=2$ scalar sector.  This section reduces that object as far as the retained
+BHSM action presently permits.
+
+\subsection{Retained scalar/topographic operator}
+
+The BHSM v5.11 quadratic-operator audit gives the formal scalar/topographic
+block
+\begin{equation}
+\mathcal H_{\rm ST}
+=
+\begin{pmatrix}
+-\partial_\rho^2+5 & -\mathcal I_{\rm mix}\\
+-\mathcal I_{\rm mix}^\dagger & -\Delta_B+5
+\end{pmatrix},
+\label{eq:bhsm-ST-formal}
+\end{equation}
+where the collar field and Berger-boundary field require a trace/extension
+map $\mathcal I_{\rm mix}$ whose full nonhomogeneous domain remains open.
+
+For the physical scalar harmonic $n=2$ on a unit $S^3$ section,
+\begin{equation}
+-\Delta_B e_2=8e_2.
+\end{equation}
+Let $\lambda_\rho\ge0$ denote the collar radial eigenvalue on the selected
+self-adjoint radial domain and let
+\begin{equation}
+I_2
+=
+\langle u_\rho,\mathcal I_{\rm mix}e_2\rangle
+\end{equation}
+be the projected trace/extension matrix element.  Then the retained
+scalar/topographic $n=2$ block has the conditional form
+\begin{equation}
+\boxed{
+\mathcal C_{2,\rm ST}
+=
+\frac1{L^2}
+\begin{pmatrix}
+\lambda_\rho+5 & -I_2\\
+-I_2^\ast & 13
+\end{pmatrix}.
+}
+\label{eq:C2-ST}
+\end{equation}
+
+\paragraph{Theorem 7 (scalar/topographic $n=2$ positivity criterion).}
+On a one-mode collar/boundary reduction with
+$\lambda_\rho\ge0$, the block in Eq.~\eqref{eq:C2-ST} is positive definite if
+and only if
+\begin{equation}
+\boxed{
+|I_2|^2
+<
+13(\lambda_\rho+5).
+}
+\label{eq:I2-positivity}
+\end{equation}
+
+\paragraph{Proof.}
+The first principal minor is $\lambda_\rho+5>0$.  Positivity of the
+$2\times2$ Hermitian matrix is therefore equivalent to positivity of its
+determinant,
+\[
+13(\lambda_\rho+5)-|I_2|^2>0.
+\]
+The common factor $L^{-2}$ is positive. \hfill$\square$
+
+\subsection{Physical metric--topographic block}
+
+Let $\mathcal A_g^{(2)}$ denote the gauge-reduced scalar metric Hessian
+projected onto the same physical $n=2$ representation, and let
+$\mathcal B_{g2}$ denote the projected metric--topographic mixed block.  The
+complete retained cosmological closure object is
+\begin{equation}
+\boxed{
+\mathbb H_2^{\rm phys}
+=
+\begin{pmatrix}
+\mathcal A_g^{(2)} & \mathcal B_{g2}\\
+\mathcal B_{g2}^\dagger & \mathcal C_{2,\rm ST}
+\end{pmatrix}.
+}
+\label{eq:H2-phys}
+\end{equation}
+
+The later BHSM action audit already classifies the metric--scalar/topographic
+mixing as nonzero in source structure but not yet fully evaluated on a common
+nonhomogeneous domain.  Therefore neither
+$\mathcal A_g^{(2)}$ nor $\mathcal B_{g2}$ may be replaced by the positive
+diagnostic coefficients used in the finite gauge-bookkeeping model.
+
+\subsection{Single upstream closure theorem}
+
+\paragraph{Theorem 8 (one Hessian closes all five observable kernels).}
+Assume that:
+
+\begin{enumerate}
+\item $\mathbb H_2^{\rm phys}$ is evaluated from the retained action on a
+      common self-adjoint physical domain;
+\item $\mathcal A_g^{(2)}$ is invertible after the physical gauge quotient;
+\item Eq.~\eqref{eq:I2-positivity} and the full Schur-positivity conditions
+      hold on the selected branch;
+\item the initial-data prescription for the reduced $n=2$ branch is fixed.
+\end{enumerate}
+
+Then the five R1 observable kernels
+\begin{equation}
+\mathcal F_{D_L},\quad
+\mathcal F_H,\quad
+\mathcal F_{D_A},\quad
+\mathcal F_{f\sigma_8},\quad
+\mathcal F_{\rm lens}
+\end{equation}
+are all determined by this single upstream object together with covariant
+matter conservation and the observation functionals of
+Sec.~\ref{sec:bhsm-observable-transfer}.
+
+\paragraph{Proof.}
+The physical Schur reduction gives
+\begin{equation}
+\mathcal K_2
+=
+\mathcal C_{2,\rm ST}
+-
+\mathcal B_{g2}^\dagger
+(\mathcal A_g^{(2)})^{-1}
+\mathcal B_{g2},
+\end{equation}
+and the induced metric response is
+\begin{equation}
+\mathcal R_{g2}
+=
+-(\mathcal A_g^{(2)})^{-1}\mathcal B_{g2}.
+\end{equation}
+The matter-response theorem then fixes $\mathcal R_{m2}$ from
+$\mathcal R_{g2}$ and the same $n=2$ state.  Finally each observable kernel is
+the corresponding linear observation functional acting on the common
+response.  No independent kernel dynamics remain. \hfill$\square$
+
+\subsection{Correction to the numerical inventory}
+
+The existing \texttt{code/growth.py} quantity
+\begin{equation}
+R_{f\sigma_8}
+=
+D'_{\rm R1}/D'_{\Lambda{\rm CDM}}
+\end{equation}
+is a useful isotropic/reference growth-ratio diagnostic.  It is not the
+directional BHSM-native kernel $\mathcal F_{f\sigma_8}$ defined in the present
+closure protocol.  It must therefore not be promoted to that role without
+the common $n=2$ response map.
+
+Likewise, the current luminosity-distance, Hubble and lensing expressions in
+the manuscript specify observation functionals or phenomenological
+relationships, not action-evaluated anisotropic kernels.
+
+\subsection{Scientific consequence}
+
+The numerical problem is therefore smaller than ``compute five unrelated
+kernels'' but more fundamental than the existing background-growth
+calculation.  The exact remaining action object is
+\begin{equation}
+\boxed{
+\left\{
+\mathcal A_g^{(2)},
+\mathcal B_{g2},
+I_2,
+\lambda_\rho,
+\mathcal D_{\rm phys}^{(2)}
+\right\},
+}
+\label{eq:remaining-Hessian-data}
+\end{equation}
+where $\mathcal D_{\rm phys}^{(2)}$ is the common self-adjoint physical
+domain.
+
+Once Eq.~\eqref{eq:remaining-Hessian-data} is action-derived, all five
+observable kernels follow through Theorems 1--8 without introducing new
+anisotropic fit parameters.
