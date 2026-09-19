@@ -1,0 +1,62 @@
+\section{Spatial-current support gate for the local optical source}
+\label{sec:bhsm-optical-current-gate}
+
+The retained phase-specialized metric--topographic second variation gives,
+on a static block-diagonal background,
+\begin{equation}
+\boxed{
+B_{g\varphi}^{\rm spatial}[\gamma,\varphi]
+=
+\int d\mu_g\,w\,\gamma^{ij}
+\left[
+2F''(X)(j^k\nabla_k\varphi)A_{ij}
++
+2F'(X)j_{(i}\nabla_{j)}\varphi
+-
+F'(X)g_{ij}(j^k\nabla_k\varphi)
+\right].
+}
+\label{eq:spatial-current-mixed}
+\end{equation}
+Here $j_i=\langle D_i\eta,T\eta\rangle$ is the spatial target Noether current.
+The static conditions $D_0\eta=0$ and $j_0=0$ remove the static shift/phase
+block but do not force $j_i$ to vanish.
+
+It follows immediately that
+\begin{equation}
+\boxed{
+j_i=0
+\quad\hbox{or}\quad
+\nabla_i\varphi=0
+\quad\Longrightarrow\quad
+u=v=0.
+}
+\end{equation}
+Thus a nonzero spatial target current and nonconstant local texture are
+necessary, though not sufficient, for this channel to source the local metric
+response.
+
+For the physical scalar metric basis,
+\begin{align}
+u&=\int d\mu_g\,w\,(e_A)^{ij}\mathcal S_{ij}[j,\varphi],\\
+v&=\int d\mu_g\,w\,(e_\psi)^{ij}\mathcal S_{ij}[j,\varphi].
+\end{align}
+
+If $\varphi=q\widehat\varphi$ has one fixed normalized shape and stochastic
+amplitude $q$, then
+\begin{equation}
+\mathcal B_{g\psi}^{\rm loc}=q\,b_{\rm loc}
+\end{equation}
+and
+\begin{equation}
+\boxed{
+C_B
+=
+{\rm Var}(q)\,
+b_{\rm loc}b_{\rm loc}^\dagger,
+}
+\end{equation}
+which has rank at most one.  For $m$ independent physical texture channels,
+the corresponding topographic covariance has rank at most $m$ before
+additional independent source sectors are included.  This gives a
+cross-observable low-rank prediction for the stochastic optical extension.
