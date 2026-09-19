@@ -1,0 +1,36 @@
+{
+  "schema": "r1-2mrs-bhsm-seam-transfer-v1",
+  "status": "FROZEN_BEFORE_EVALUATION",
+  "parent_result_commit": "96182ca",
+  "scientific_question": "Does the BHSM seam-charge scaling transfer where raw counts and linear K-band luminosity weighting failed?",
+  "bhsm_source_chain": [
+    "r_star^2 = G M_b R_H / (xi_c c^2)",
+    "V_Sigma^2 = G M_b / r_star",
+    "therefore V_Sigma^4 = xi_c G M_b c^2 / R_H",
+    "hence V_Sigma^2 proportional to sqrt(M_b)"
+  ],
+  "mass_proxy_assumption": "M_b proportional to L_K with no fitted mass-to-light exponent",
+  "object_weight": "sqrt(L_K) proportional to 10^(-0.2 m_K) d_L",
+  "no_fitted_weight_exponent": true,
+  "shell_edges": [0.0,0.01,0.02,0.03,0.04,0.05],
+  "angular_smoothing_sigma_deg": 10.0,
+  "foreground_visibility": "only shell path length in front of the SN contributes",
+  "closed_s3_transfer": "F_BHSM=(C_K/S_K)(chi_SN) sum_s DeltaChi_visible delta_seam,s(nhat)",
+  "controls": "same fixed axis, host-mass if available, survey dummies",
+  "fixed_axis_ra_deg": 211.48,
+  "fixed_axis_dec_deg": -12.81,
+  "primary_statistic": "Delta chi2 beyond fixed-axis plus nuisance controls",
+  "permutation": "same redshift-blocked shuffle used in the two prior frozen foreground tests",
+  "classification": {
+    "strong": "blocked permutation p < 0.01 and sign stable under every leave-one-shell-out test",
+    "provisional": "blocked permutation p < 0.05",
+    "not_established": "otherwise"
+  },
+  "secondary_transfer": "fit one foreground amplitude at 0.01<=z<=0.03 and carry it unchanged to 0.03<z<=0.15",
+  "claim_boundary": [
+    "This is a BHSM seam-charge proxy, not an action-normalized de-encapsulation map.",
+    "K-band luminosity is only a baryonic-mass proxy.",
+    "No SMBH mass or accretion information is used.",
+    "The exponent 1/2 comes from the retained seam-radius plus seam-charge relations and is not fit to SN residuals."
+  ]
+}
