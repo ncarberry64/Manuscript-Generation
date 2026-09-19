@@ -1,0 +1,190 @@
+\section{Representation-invariant numerical bridge}
+\label{sec:representation-invariant-bridge}
+
+The retained-action provenance program and the effective four-dimensional
+response calculation serve different purposes.  The former determines
+whether the physical mode is selected by the BHSM parent action.  The latter
+provides a practical representation in which the already-defined physical
+two-dimensional mode can be propagated through a cosmological background.
+
+A numerical effective representation is admissible only if it is a change of
+coordinates on the same physical phase space rather than the introduction of
+a second scalar degree of freedom.
+
+\subsection{Phase-space equivalence}
+
+Let
+\begin{equation}
+X_2
+=
+\begin{pmatrix}
+q_2\\
+\Pi_2
+\end{pmatrix}
+\end{equation}
+denote the BHSM-native physical state, and let
+\begin{equation}
+Z_2
+=
+\begin{pmatrix}
+\zeta_2\\
+\Pi_{\zeta,2}
+\end{pmatrix}
+\end{equation}
+denote an effective closed-Horndeski representation of the same mode.
+Suppose
+\begin{equation}
+\boxed{
+X_2=U(z)Z_2,
+\qquad
+\det U(z)\ne0.
+}
+\label{eq:XUZ}
+\end{equation}
+
+\paragraph{Theorem 12 (representation invariance).}
+If the reduced quadratic operator, metric response and observation functional
+are transformed by the same invertible map $U$, then all linear physical
+observables are invariant.
+
+\paragraph{Proof.}
+If
+\begin{equation}
+S_2^{(2)}
+=
+\frac12 X_2^\dagger\mathcal K_2X_2,
+\end{equation}
+then Eq.~\eqref{eq:XUZ} gives
+\begin{equation}
+S_2^{(2)}
+=
+\frac12
+Z_2^\dagger
+\left(
+U^\dagger\mathcal K_2U
+\right)
+Z_2.
+\end{equation}
+Thus
+\begin{equation}
+\mathcal K_{2,Z}
+=
+U^\dagger\mathcal K_2U.
+\end{equation}
+Likewise,
+\begin{equation}
+h_2
+=
+\mathcal R_{g2}X_2
+=
+\mathcal R_{g2}UZ_2,
+\end{equation}
+so
+\begin{equation}
+\mathcal R_{g2,Z}
+=
+\mathcal R_{g2}U.
+\end{equation}
+For any linear observation functional
+$\mathcal L_{\mathcal O}$,
+\begin{equation}
+\delta\mathcal O
+=
+\mathcal L_{\mathcal O}\mathcal R_{2}UZ_2.
+\end{equation}
+The observable is therefore unchanged.  Since $U$ is invertible, the physical
+phase-space dimension is unchanged. \hfill$\square$
+
+\subsection{Numerical consequence}
+
+The theorem permits the exact closed-Horndeski $n=2$ scalar kernel already
+derived for R1 to be used as an \emph{effective response representation} of
+the BHSM-native mode, provided the following matching conditions are checked:
+
+\begin{enumerate}
+\item both descriptions contain exactly one physical scalar mode, hence a
+      two-dimensional phase space;
+\item the state map $U(z)$ is nonsingular over the integration interval;
+\item kinetic signs and mode normalization are mapped consistently;
+\item lapse/shift constraint solutions are those of the physical $n=2$
+      harmonic rather than the exceptional $n=1$ sector;
+\item the same supernova calibration is transported through $U$ without a
+      second amplitude fit.
+\end{enumerate}
+
+No claim is made that the effective Horndeski field is an additional BHSM
+fundamental field.
+
+\subsection{Exact R1 effective kernel already available}
+
+For the R1 Horndeski representation, define
+\begin{equation}
+r
+=
+\frac{M_{\rm Pl}^2\Sigma}{\Theta^2},
+\qquad
+\kappa=\frac{K}{a^2}.
+\end{equation}
+The physical $n=2$ lapse and shift constraints are
+\begin{align}
+\delta n
+&=
+\frac{5M_{\rm Pl}^2}{\Theta(r+8)}
+\left[
+\dot\zeta
+-
+\frac{M_{\rm Pl}^2\kappa}{\Theta}\zeta
+\right],
+\\
+\chi
+&=
+-\frac{r+3}{\kappa(r+8)}\dot\zeta
+-
+\frac{5M_{\rm Pl}^2}{\Theta(r+8)}\zeta .
+\end{align}
+The physical kinetic coefficient is
+\begin{equation}
+\boxed{
+\mathcal G_{S,2}
+=
+M_{\rm Pl}^2
+\frac{5D_{\rm kin}}
+{D_{\rm kin}
++
+10(1-\alpha_B^{\rm BS}/2)^2}.
+}
+\label{eq:GS2-representation}
+\end{equation}
+For $D_{\rm kin}>0$ and $\Theta\ne0$, this coefficient is positive.
+
+This supplies a closed effective representation of the same two-dimensional
+$n=2$ state.  It does not by itself discharge the retained-action provenance
+gate.
+
+\subsection{Do not reuse the failed curved-EFT DAE as a proof}
+
+The earlier curvature-aware Newtonian-gauge DAE is retained only as a
+compatibility audit because its constraint-preservation defect is
+curvature-linked.  The numerical closure route in this paper therefore uses
+the exact reduced $n=2$ action and constraint solution above, not the failed
+DAE as foundational evidence.
+
+\subsection{Two-track closure statement}
+
+The manuscript now has two explicitly separated completion tracks:
+
+\begin{description}
+\item[Prediction track.]
+Use the exact reduced closed-Horndeski $n=2$ representation to evaluate the
+R1 metric, matter and observable transfer kernels without introducing any new
+physical scalar or fit amplitude.
+
+\item[Provenance track.]
+Evaluate the seven retained-action matrix elements of
+Sec.~\ref{sec:bhsm-metric-kkt} and confirm the common BHSM physical domain.
+This decides whether the numerical bridge can be promoted from conditional
+BHSM-native predictions to unconditional retained-action predictions.
+\end{description}
+
+The prediction track may close before the provenance track; its claim label
+remains conditional until both coincide.
