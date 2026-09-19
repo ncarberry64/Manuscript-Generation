@@ -1,0 +1,31 @@
+{
+  "schema": "geometry-first-paper-reframe-v1",
+  "status": "FRAMING_ONLY_NO_SCIENTIFIC_PARAMETER_CHANGE",
+  "central_thesis": "physical degrees of freedom are identified after constrained geometric reduction rather than assumed as fundamental fields",
+  "foundational_chain": [
+    "geometry",
+    "action",
+    "constraints and boundary conditions",
+    "gauge quotient",
+    "physical tangent space",
+    "physical Hessian",
+    "Schur/Feshbach reduction",
+    "metric and matter response",
+    "optical propagation",
+    "observables"
+  ],
+  "effective_representation_status": "compatibility and translation language, not foundational ontology",
+  "evidence_body": [
+    "physical n=2 mode selection",
+    "metric-response theorem",
+    "growth/Weyl state-space transfer",
+    "gauge-invariant luminosity-distance kernel",
+    "BHSM optical transfer",
+    "constitutive and Hessian projection contracts",
+    "current-support gate",
+    "low-rank covariance theorem",
+    "negative preregistered foreground-transfer results"
+  ],
+  "scientific_values_changed": false,
+  "frozen_prediction_parameters_changed": false
+}

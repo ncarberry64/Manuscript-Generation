@@ -8,8 +8,7 @@
 \usepackage[numbers,sort&compress]{natbib}
 \setlength{\emergencystretch}{2em}
 
-\title{Boundary-Mode Topographic Cosmology:\\
-A Reduced-Response Bridge from Berger--Hopf Geometry to Late-Time Structure Growth}
+\title{Geometry Before Fields: Constraint-Reduced Cosmology, Optical Transport, and Predictive Structure in the Berger--Hopf Framework}
 \author{Norman P. Carberry\\Independent Researcher}
 \date{Working draft --- September 2026}
 
@@ -22,10 +21,49 @@ A Reduced-Response Bridge from Berger--Hopf Geometry to Late-Time Structure Grow
 \maketitle
 
 \begin{abstract}
-We develop a late-time cosmological bridge between a scalar topographic effective field theory on compact spatial sections \(S^3(R_H)\) and the constraint-reduced response architecture of the Berger--Hopf program. A closed-FLRW gauge audit changes the identification of the relevant infrared carrier: the first nonconstant scalar harmonic in our convention, \(n=1\), maps to the exceptional \(N=2\) sector of standard closed-universe perturbation theory and is nondynamical or pure gauge in the regular single-field covariant scalar sector. The first propagating scalar harmonic is therefore our \(n=2\) (\(N=3\) in the alternative convention). This does not remove the sky-dipole mechanism. A general degree-two scalar harmonic on \(S^3\) contains observer-sky monopole, dipole, and quadrupole pieces, and a pure cross-term subspace produces an exact sky dipole proportional to \(\sin[2\psi(z)]\,\hat{\mathbf n}\!\cdot\!\hat{\mathbf p}\). The reduced Schur/Feshbach response can selectively soften this first physical harmonic while stiffening all propagating \(n\ge3\) modes when \(1/15<\ell^2<1/8\). Reference Branch R1 and its frozen numerical manifest are left unchanged because the background and high-\(n\) growth calculation do not depend on the identity of the curvature-scale carrier. The theoretical harmonic identification is amended prospectively before comparison with the targeted independent data. The resulting framework is falsifiable through curvature, the fixed dipole axis and radial envelope, compact-harmonic hierarchy, growth, and lensing tests.
+We present a geometry-first alternative to representation-first effective
+modeling and develop its cosmological consequences within the Berger--Hopf
+Standard Model (BHSM) program.  The central methodological distinction is
+that physical degrees of freedom are not assumed at the outset as fundamental
+fields.  They are identified only after variation of the underlying action,
+enforcement of constraints and boundary conditions, quotienting of gauge
+redundancies, and reduction of the physical Hessian.  Field-like variables
+then arise as coordinates on the surviving physical response rather than as
+prior ontological assumptions.
+
+We apply this workflow to a closed hyperspherical cosmological parent
+$S^3(R_H)$.  The exceptional lowest scalar harmonic is separated from the
+first ordinary physical scalar carrier, yielding a reduced physical
+$n=2$ phase-space state $X_2=(q_2,\Pi_2)^T$.  Metric response follows from the
+same constraint-reduced Hessian through a Schur/Feshbach map rather than from
+an independently postulated scalar--metric coupling.  The resulting state is
+propagated to observables using a gauge-invariant closed-$S^3$
+luminosity-distance kernel and a Jacobi/Sachs optical transport system for
+photon redshift, convergence, and shear.
+
+Local unresolved geometry is treated as stochastic topographic response rather
+than as an exhaustive sum over foreground objects.  This leads to a finite
+optical state and covariance evolution and, for $m$ physical topographic
+texture channels, the normalization-independent prediction
+$\operatorname{rank}C_{\rm topo}\le m$ for the isolated cross-observable
+covariance.  In the one-channel limit the topographic covariance is rank one
+and all $2\times2$ covariance minors vanish.
+
+Intermediate effective-field representations are retained as compatibility
+languages rather than as foundational definitions of the theory.  A
+curvature-dependent constraint-preservation defect encountered in one such
+representation illustrates why agreement at the level of effective equations
+does not by itself establish equivalence to the underlying constraint-reduced
+geometry.  The framework is deliberately falsifiable: homogeneous
+state-selection models and multiple preregistered foreground proxies fail
+held-out tests and are rejected rather than retuned.  The surviving
+construction yields prospective tests involving luminosity distance, growth,
+lensing, redshift perturbations, common angular structure, and
+cross-observable covariance.
 \end{abstract}
 
 \input{sections/01_introduction}
+\input{sections/01a_geometry_before_fields}
 \input{sections/02_hyperspherical_parent}
 \input{sections/03_reduced_response}
 \input{sections/04_scalar_metric_bridge}
@@ -40,18 +78,21 @@ We develop a late-time cosmological bridge between a scalar topographic effectiv
 \input{sections/04aq_bhsm_optical_hessian_projection}
 \input{sections/04ar_bhsm_optical_current_gate}
 \input{sections/04as_bhsm_optical_low_rank_covariance}
+\input{sections/04at_effective_representation_audit}
 \input{sections/04a_closed_horndeski_n2}
 \input{sections/04b_matter_sourced_n2}
 \input{sections/04c_bianchi_dictionary_n2}
 \input{sections/05_harmonic_selection}
 \input{sections/06_observables}
 \input{sections/07_predictions_falsification}
+\input{sections/07a_geometry_first_implications}
 \input{sections/08_numerical_protocol}
 \input{sections/09_results_R1}
 \input{sections/09a_reference_figures}
 \input{sections/10_discussion}
 \input{sections/11_conclusions}
 
+\input{sections/09_geometry_first_conclusion}
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 \end{document}
