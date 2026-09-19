@@ -1,0 +1,14 @@
+{
+  "schema": "bhsm-optical-low-rank-covariance-theorem-v1",
+  "status": "NORMALIZATION_INDEPENDENT_STRUCTURAL_PREDICTION",
+  "theorem": "C_O^topo=M_O C_q M_O^dagger implies rank(C_O^topo)<=rank(C_q)<=m",
+  "one_channel": {
+    "covariance": "sigma_q^2 m_O m_O^dagger",
+    "rank": 1,
+    "minor_identity": "Cii*Cjj-|Cij|^2=0",
+    "R1": 1,
+    "rho21": 0
+  },
+  "important_boundary": "Rank applies to the isolated BHSM topographic contribution after conventional covariance and measurement noise are accounted for.",
+  "microscopic_status": "Actual compact full-preimage spatial-current background remains unevaluated; theorem does not assume numerical u,v."
+}

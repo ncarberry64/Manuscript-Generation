@@ -1,0 +1,63 @@
+\section{Low-rank cross-observable covariance theorem}
+\label{sec:bhsm-optical-low-rank}
+
+Even before the compact full-preimage spatial-current background is
+numerically available, the optical construction makes a normalization-
+independent prediction.  Let $q\in\mathbb R^m$ contain the active physical
+topographic texture amplitudes and let $M_O$ be the complete linear response
+from those amplitudes to a fixed observable vector $O$.  Then
+\begin{equation}
+\boxed{
+C_O^{\rm topo}
+=
+M_O C_q M_O^\dagger
+}
+\end{equation}
+and hence
+\begin{equation}
+\boxed{
+{\rm rank}\,C_O^{\rm topo}
+\le
+{\rm rank}\,C_q
+\le
+m.
+}
+\end{equation}
+
+For one active texture channel,
+\begin{equation}
+C_O^{\rm topo}
+=
+\sigma_q^2 m_Om_O^\dagger,
+\end{equation}
+so every pair satisfies
+\begin{equation}
+\boxed{
+C_{ii}C_{jj}-|C_{ij}|^2=0.
+}
+\end{equation}
+Equivalently, in the noiseless isolated limit,
+\begin{equation}
+R_1=\frac{\lambda_1}{\sum_i\lambda_i}=1,
+\qquad
+\rho_{21}=\frac{\lambda_2}{\lambda_1}=0.
+\end{equation}
+
+The rank statement applies to the BHSM topographic contribution, not to raw
+survey covariance.  The test object is
+\begin{equation}
+\widehat C_{\rm res}
+=
+\widehat C_{\rm obs}
+-
+\widehat C_{\rm std}
+-
+\widehat N,
+\end{equation}
+with the standard-physics and measurement covariances constructed
+independently of the BHSM rank target.
+
+A residual covariance requiring more than the action-allowed number of
+independent eigenmodes falsifies that BHSM texture-channel count even if
+individual pairwise correlations are nonzero.  This test does not require the
+absolute seam-export normalization.
