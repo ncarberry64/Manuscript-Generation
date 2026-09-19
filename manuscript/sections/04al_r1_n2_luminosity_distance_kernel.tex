@@ -1,0 +1,47 @@
+\section{Gauge-invariant luminosity-distance kernel and calibration-rank audit}
+\label{sec:r1-n2-DL-kernel}
+
+The remaining light-cone observable is evaluated with the gauge-invariant geometric luminosity-distance construction.\footnote{J. Yoo and F. Scaccabarozzi, JCAP 09 (2016) 046, arXiv:1606.08453.}
+For positive spatial curvature the background transverse distance and lensing efficiency use $S_K(\chi)=\sin(\sqrt K\chi)/\sqrt K$, with the corresponding curved-FLRW line-of-sight kernel.\footnote{See also T. Pyne and M. Birkinshaw, MNRAS 348 (2004) 581 for the linear luminosity distance in curved perturbed FLRW spacetimes.}
+
+For the pure $A_{4i}$ physical $n=2$ mode, per unit $\mu=\hat{\mathbf n}\cdot\hat{\mathbf p}$,
+\begin{equation}
+Q_{2,\rm dip}(\chi)=\sin(2\sqrt K\,\chi),
+\qquad \widehat\nabla^2 Q_{2,\rm dip}=-2Q_{2,\rm dip}.
+\end{equation}
+
+The fixed-observed-redshift distance fluctuation is
+\begin{equation}
+\boxed{
+\frac{\delta D_L}{D_L}
+=\phi_s+\delta z+\frac{C_K(\chi_s)}{S_K(\chi_s)}\delta\chi-\kappa,
+}
+\end{equation}
+with $C_K(\chi)=\cos(\sqrt K\chi)$ and the redshift, radial and convergence distortions evaluated along the same R1 physical-$n=2$ metric response.
+
+\subsection{State-space calibration row}
+At the reference bin center $z_\star=0.02$, the resulting luminosity-distance row on the $(\zeta,d\zeta/dN)$ state anchored at $z=2.1$ is
+\begin{equation}
+\boxed{
+\mathcal F_{D_L}(z_\star)=(1.842472667e-01,\,-3.520884651e-03).
+}
+\end{equation}
+
+The carried-forward SN calibration imposes one scalar constraint on this two-dimensional state:
+\begin{equation}
+\mathcal F_{D_L}(z_\star)\cdot X_{2,\rm anchor}=-1.897330117e-02\pm4.144653167e-03.
+\end{equation}
+
+The corresponding unit null direction is
+\begin{equation}
+n_{\rm cal}=(1.910607424e-02,\,9.998174623e-01),\qquad \mathcal F_{D_L}\cdot n_{\rm cal}=0.
+\end{equation}
+
+\subsection{Calibration-rank consequence}
+This numerical light-cone calculation exposes a logical condition implicit in the single-calibration theorem: one amplitude calibration determines the model only after the normalized physical mode trajectory $\widehat X_2$ has been fixed independently.
+The luminosity-distance row has rank one on a two-dimensional phase space.  The growth and Weyl rows are not generally parallel to it, so motion along $n_{\rm cal}$ leaves the SN calibration unchanged while altering the other observables.
+
+\boxed{\text{The next prediction-closure object is the theory-selected normalized state direction }\widehat X_2.}
+
+\subsection{Claim boundary}
+No second observational calibration is introduced.  Until the branch direction is fixed by the retained action or by an explicit preregistered theoretical branch condition, the manuscript reports the observable kernels as state-space rows rather than unique scalar amplitudes.
