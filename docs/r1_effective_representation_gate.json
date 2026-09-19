@@ -27,7 +27,7 @@
                                  "status":  "COMPATIBILITY_AUDIT_ONLY",
                                  "foundational_for_predictions":  false
                              },
-    "prediction_track":  "REDUCED_GRAVITY_SCALAR_N2_PROPAGATOR_EVALUATED",
+    "prediction_track":  "GROWTH_AND_LOCAL_WEYL_STATE_KERNELS_EVALUATED",
     "provenance_track":  "SEVEN_RETAINED_ACTION_MATRIX_ELEMENTS_REMAIN_OPEN",
     "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_BRIDGE_PREDICTIONS",
     "reduced_propagator":  {
@@ -40,5 +40,13 @@
                                "exact_constraints":  true,
                                "full_matter_radiation_response":  "OPEN",
                                "observable_kernels":  "OPEN"
-                           }
+                           },
+    "growth_lensing_transfer":  {
+                                    "artifact":  "artifacts/R1_n2_growth_lensing_transfer.json",
+                                    "dust_growth_state_kernel":  "EVALUATED",
+                                    "local_weyl_state_kernel":  "EVALUATED",
+                                    "Newtonian_curved_DAE_used":  false,
+                                    "luminosity_distance_light_cone":  "OPEN",
+                                    "calibrated_single_state":  "OPEN"
+                                }
 }

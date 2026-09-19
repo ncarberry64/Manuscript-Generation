@@ -309,7 +309,7 @@ def write_tex(report: dict, path: Path) -> None:
             "The representation-invariant prediction track can now be "
             "evaluated at the reduced gravity--scalar level. "
             "For the physical $n=2$ harmonic, "
-            "$-(\mathcal D^2+3K)=5K$."
+            "$-(\\mathcal D^2+3K)=5K$."
         ),
         "",
         "The exact reduced equation integrated here is",
@@ -364,7 +364,7 @@ def write_tex(report: dict, path: Path) -> None:
             "closed-Horndeski $n=2$ kinetic coefficient and constraints."
         ),
         (
-            "The current $\mathcal F_{S,2}$ implementation is explicitly "
+            "The current $\\mathcal F_{S,2}$ implementation is explicitly "
             "the gravity--scalar expression; the complete "
             "matter+radiation scalar stability/response system is not "
             "yet included.  Consequently this result is not yet the "
