@@ -21,9 +21,14 @@
                                         "positivity_condition":  "|I_2|^2 \u003c 13*(lambda_rho+5)"
                                     },
     "remaining_action_owned_objects":  [
-                                           "A_g_n2",
-                                           "B_g2",
-                                           "D_g_phys_n2",
+                                           "confirm_D_g_phys_n2",
+                                           "a_AA",
+                                           "a_Apsi",
+                                           "a_psipsi",
+                                           "b_Aq",
+                                           "b_APi",
+                                           "b_psiq",
+                                           "b_psiPi",
                                            "confirm_or_reject_lambda_rho_0_I2_1"
                                        ],
     "kernel_status":  {
@@ -62,5 +67,26 @@
                                                              13.123105625617661
                                                          ],
                                       "status":  "CONDITIONAL_HARMONIC_PRESERVING_EXTENSION_CANDIDATE"
-                                  }
+                                  },
+    "metric_kkt_projection":  {
+                                  "basis":  [
+                                                "A",
+                                                "psi"
+                                            ],
+                                  "domain_architecture":  "FIXED_H_MATCHER_GREEN_CURRENT_CANDIDATE",
+                                  "physical_domain_confirmed_for_closed_flrw":  false,
+                                  "A_g_n2_entries":  [
+                                                         "a_AA",
+                                                         "a_Apsi",
+                                                         "a_psipsi"
+                                                     ],
+                                  "B_g2_entries":  [
+                                                       "b_Aq",
+                                                       "b_APi",
+                                                       "b_psiq",
+                                                       "b_psiPi"
+                                                   ],
+                                  "response":  "R_g2=-(A_g_n2)^-1 B_g2",
+                                  "remaining_count":  7
+                              }
 }
