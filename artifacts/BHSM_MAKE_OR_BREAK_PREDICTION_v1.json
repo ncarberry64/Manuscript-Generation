@@ -1,0 +1,52 @@
+{
+  "schema": "bhsm-make-or-break-validation-v1",
+  "data_kind": "SYNTHETIC_ONLY_NO_TARGET_DATA",
+  "protocol_sha256": "b5e2748284c6c489bdb74394f4b23ef69067f7ba7eb7cd72aab9564755af0756",
+  "gate_a_consistent": {
+    "state": [
+      0.20000000000000007,
+      -0.10000000000000003
+    ],
+    "chi2_perp": 7.703719777548943e-33,
+    "dof": 2,
+    "p_value": 1.0,
+    "reject": false,
+    "whitened_design_condition": 1.0,
+    "scope": "specific two-state deterministic realization"
+  },
+  "gate_a_inconsistent": {
+    "state": [
+      0.19999999999999996,
+      -0.10000000000000049
+    ],
+    "chi2_perp": 300.0,
+    "dof": 2,
+    "p_value": 7.175095973164448e-66,
+    "reject": true,
+    "whitened_design_condition": 1.0,
+    "scope": "specific two-state deterministic realization"
+  },
+  "gate_b_fixed_null_example": {
+    "eigenvalues_descending": [
+      1.5251386368461484,
+      0.004096977658683016,
+      -0.007445131542994808
+    ],
+    "lambda2": 0.004096977658683016,
+    "rho21": 0.002686298517199199,
+    "principal_minors": [
+      -0.009407402168818524,
+      0.00479463422412206,
+      -0.0005241334439716125
+    ],
+    "negative_eigenvalues_retained": true,
+    "p_value": 0.6341,
+    "reject": false,
+    "draws": 9999,
+    "seed": 20260919,
+    "primary_statistic": "unprojected scaled lambda2 (upper tail)",
+    "scope": "independently fixed one-channel iid Gaussian null",
+    "composite_rank_null_calibrated": false
+  },
+  "target_readiness": "BLOCKED_PENDING_TARGET_DESIGN_AND_INDEPENDENT_NUISANCE_FREEZE"
+}
