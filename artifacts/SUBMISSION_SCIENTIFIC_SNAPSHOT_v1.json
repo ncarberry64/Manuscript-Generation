@@ -58,5 +58,10 @@
     "matplotlib": "3.11.0",
     "pytest": "9.0.3"
   },
-  "note": "Full-suite test run uses this scientific source content; subsequent changes are prose, typesetting, requirements documentation and packaging."
+  "note": "Full-suite test run uses this scientific source content; subsequent changes are prose, typesetting, requirements documentation and packaging.",
+  "pytest_collection": {
+    "count": 88,
+    "sha256": "c9d7c1c4af5e6ad09674ebde641aa0263db15439a9ca9c254fdb689072407f0b",
+    "normalization": "UTF-8 compact JSON of sorted [classname, name] pairs from the completed full run"
+  }
 }

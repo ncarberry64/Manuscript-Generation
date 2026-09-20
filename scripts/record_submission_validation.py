@@ -41,6 +41,15 @@ def record():
     totals = {k: sum(int(s.get(k, 0)) for s in suites) for k in ("tests", "failures", "errors", "skipped")}
     if totals["failures"] or totals["errors"] or totals["tests"] == 0:
         raise RuntimeError(f"Failed or empty suite: {totals}")
+    cases = [case for suite in suites for case in suite.findall("testcase")]
+    identifiers = sorted((case.get("classname", ""), case.get("name", "")) for case in cases)
+    collection_hash = hashlib.sha256(json.dumps(identifiers, separators=(",", ":")).encode()).hexdigest()
+    expected = snapshot["pytest_collection"]
+    if (len(cases) != totals["tests"] or len(cases) != expected["count"]
+            or collection_hash != expected["sha256"]):
+        raise RuntimeError("JUnit collection is incomplete or differs from the full tested snapshot")
+    if any(case.find("failure") is not None or case.find("error") is not None for case in cases):
+        raise RuntimeError("JUnit contains a failed test despite its summary counters")
     skipped = [(case.get("name"), case.find("skipped").get("type"))
                for suite in suites for case in suite.findall("testcase") if case.find("skipped") is not None]
     if skipped != [("test_dae_preserves_00_0i_constraints_from_index_consistent_seed", "pytest.xfail")]:
@@ -79,6 +88,7 @@ def record():
 The scientific snapshot is identified by SHA-256 **{snapshot['fingerprint_sha256']}** in SUBMISSION_SCIENTIFIC_SNAPSHOT_v1.json. The final intended review commit is HEAD on theory/cosmology-universe-manuscript-final; resolve with git rev-parse HEAD. No scientific source changed during the full run; subsequent edits concern prose, typesetting and packaging.
 
 - Full repository pytest: **{result['full_suite']['passed']} passed, 1 strict expected failure**, {seconds:.2f} seconds. No unexpected failures or skipped tests.
+- The JUnit test identities match the complete recorded collection; subsets, duplicate replacements and inconsistent failure counters are rejected.
 - Existing expected failure: curved-EFT DAE constraint preservation. It was not added or weakened by this pass.
 - Focused gate/optical checks: **25 passed**.
 - Canonical clean LaTeX build and isolated ZIP rebuild: **PASS**, without force flags.

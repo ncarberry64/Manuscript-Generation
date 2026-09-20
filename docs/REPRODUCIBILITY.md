@@ -22,6 +22,8 @@ python -m pytest -q --junitxml=artifacts/submission_pytest.xml -o cache_dir=manu
 
 The full suite can take a long time, particularly the nested distance integrals. Do not repeatedly restart it. Exactly one existing **strict xfail** is registered: `test_dae_preserves_00_0i_constraints_from_index_consistent_seed`, for the curved-EFT compatibility defect. An XPASS is a failure under strict mode. No unexpected failure should be relabeled xfail. The JUnit record describes software checks, not a new validation of all observational artifacts.
 
+The v1 snapshot also records the complete JUnit collection count and identity hash. `scripts/record_submission_validation.py` verifies those identities and individual failure elements as well as summary counters, so a passing subset cannot be recorded as a full run. This script checks existing evidence; it does not run tests or perform visual review. It expects the canonical build log and a clean archive rebuild under `manuscript/build/package-final-check`. A changed scientific tree needs a new tested snapshot rather than reuse of old evidence.
+
 ## Figures, numerical outputs, and safe regeneration
 
 ```powershell
