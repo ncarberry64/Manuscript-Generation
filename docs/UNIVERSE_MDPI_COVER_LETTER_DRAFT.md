@@ -1,46 +1,27 @@
-# Cover Letter Draft â€” Universe (MDPI)
+# Cover letter draft — Universe
+
+**DRAFT: complete author confirmations before sending.**
 
 Dear Editors of *Universe*,
 
-Please consider the manuscript **â€œGeometry Before Fields: Constraint-Reduced
-Cosmology and Optical Predictions in the Bergerâ€“Hopf Frameworkâ€** for
-publication as an Article in the **Cosmology** section of *Universe*.
+Please consider **“Geometry Before Fields: Constraint-Reduced Cosmology and Optical Predictions in the Berger–Hopf Framework”**, by Norman P. Carberry, as an Article in the Cosmology section.
 
-The manuscript develops a geometry-first workflow in which physical degrees of
-freedom are selected only after constraints, gauge redundancy, boundary data,
-and the physical Hessian have been resolved. Cosmology is used as a concrete
-stress test of that workflow. The paper carries a reduced physical
-hyperspherical mode through metric response, growth/Weyl transfer,
-gauge-invariant luminosity-distance propagation, and Jacobi/Sachs optical
-transport, and derives falsifiable multi-observable covariance conditions.
+The manuscript develops an explicit geometry-first response chain: resolve constraints, boundary conditions and gauge redundancy before assigning independent physical coordinates, then carry a selected closed-S3 n=2 response through metric/matter kernels and photon optics. Its contribution is the integrated derivation, calibration-rank audit and prospective tests, rather than novelty of Schur reduction itself.
 
-The manuscript also reports negative results. A homogeneous state-selection
-mechanism and several frozen foreground proxies fail their designated tests
-and are retained as rejected candidates rather than retuned. This is central
-to the methodological claim of the paper.
+Two distinct gates put the proposed realizations at risk: consistency of deterministic observables with one common two-component state, and consistency of isolated stochastic covariance with one coherent texture amplitude. Both prescribe p<0.01 rejection under predeclared nuisance and finite-sample treatment. The synthetic implementation validates restricted statistical machinery; it is not a survey detection.
 
-The work does not argue that effective field theory or quantum field theory is
-generally invalid. Instead, it distinguishes an effective representation from
-the underlying constrained physical reduction and uses a specific
-curvature-dependent compatibility defect as an example of why that distinction
-can matter operationally.
+The paper retains the reported homogeneous localization failure and three foreground-transfer failures. Derived structure, conditional R1 coefficients, rejected candidates and open action-level normalization are distinguished. The curved-EFT preservation failure is specific to the audited representation; the paper does not argue against EFT or QFT generally.
 
-The manuscript identifies explicitly which results are derived, which remain
-calibrated or conditional, which candidate mechanisms have been rejected, and
-which upstream action-level quantities remain open. It also states prospective
-failure conditions for future luminosity-distance, growth, lensing, redshift,
-and covariance measurements.
+This work substantially expands and reframes **“A Hyperspherical Scalar–Topographic Framework for Late-Time Cosmological Anomalies,” Preprints.org 202601.1427, posted 20 January 2026**, [doi:10.20944/preprints202601.1427.v1](https://doi.org/10.20944/preprints202601.1427.v1). Physical harmonic selection, response propagation, optical covariance and explicit failure criteria are additions/corrections. The cited preprint is not independent validation.
 
-This manuscript is intended for *Universe* because its subject lies directly
-at the intersection of cosmology, gravitation, mathematical physics, and
-foundational questions concerning the construction of physical degrees of
-freedom.
+**TODO (author):** reconcile the supplied later Topographic Dark Energy title with the published record, identify additional overlapping versions, and confirm appropriate attribution/text overlap.
 
-The author confirms that the final submitted version must include the required
-funding, conflict-of-interest, authorship, data-availability, and AI-use
-declarations and must not be under consideration elsewhere.
+The manuscript fits Universe's cosmology remit as a conditional methodological and predictive study. It discloses material OpenAI ChatGPT/Codex use for derivation assistance, software, tests, analysis, interpretation and manuscript preparation.
+
+**TODO (author declarations):** confirm that the manuscript/content are not under consideration or published in another journal, all authors approve and agree to submission to Universe, and identify any prior MDPI submission IDs. Funding, conflicts, affiliation/contact and contribution statements also require confirmation.
 
 Sincerely,
 
 Norman P. Carberry
-Corresponding Author
+Corresponding author
+[TODO: confirmed affiliation and email]

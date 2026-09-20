@@ -295,7 +295,7 @@ def write_tex(report: dict, path: Path) -> None:
         "",
         (
             "The retained BHSM topographic flux candidate is "
-            "$F_T=\nabla T-B\nabla(\nabla^2T)$ with "
+            r"$F_T=\nabla T-B\nabla(\nabla^2T)$ with "
             r"$\nabla\cdot F_T=S$.  The existing seam-charge candidate is"
         ),
         r"\begin{equation}",

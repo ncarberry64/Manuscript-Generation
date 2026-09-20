@@ -1,0 +1,35 @@
+\section{Results: rejected and unestablished mechanisms}
+\label{sec:negative-results}
+The homogeneous two-state response fails the retained localization
+criterion: state-direction selection does not supply the required
+low-redshift confinement. The retained development report is
+\path{docs/bhsm_los_topographic_transfer.md}.
+The exact original localization statistic and threshold have not been
+archived here; this is a reported prior failure, not a newly reproduced
+quantitative rejection in this package.
+This rejects that mechanism, not every possible sourced response.
+
+Using the 2MRS release \citep{Huchra2012}, three frozen foreground proxies also fail held-out transfer.
+The existing results, without refitting, are:
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Foreground proxy & Permutation $p$ & Held-out $\Delta\chi^2$\\
+\midrule
+2MRS number density & 0.076 & $-4.107958$\\
+K-band luminosity & 0.092 & $-4.911833$\\
+BHSM seam-charge proxy & 0.091 & $-4.968593$\\
+\bottomrule
+\end{tabular}
+\caption{All primary classifications are \texttt{not\_established}.
+Here $\Delta\chi^2=\chi^2_{\rm null}-\chi^2_{\rm fixed\ foreground}$;
+negative held-out values mean worse prediction.}
+\label{tab:negative-transfer}
+\end{table}
+Each uses 277 supernovae; the number-density catalog has 38600 galaxies,
+the photometric variants 38601. The latter have 83 calibration and 194
+held-out supernovae. These are related development tests, not independent
+detections. Their permutation values test improvement, not covariance rank.
+Velocities, lensing and selection remain possible contaminants. None of
+these proxies establishes an action-normalized local source.
