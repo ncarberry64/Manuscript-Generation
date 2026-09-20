@@ -1,113 +1,40 @@
-\section{Geometry before fields: the methodological thesis}
+\section{Methods: geometry and physical reduction}
 \label{sec:geometry-before-fields}
-
-The principal claim of this work is methodological before it is
-phenomenological.  An effective field representation may be mathematically
-useful without uniquely identifying the underlying physical degrees of
-freedom.  We therefore reverse the usual order of construction.
-
-A representation-first workflow has the schematic form
+The methodological ordering is
 \begin{equation}
-\boxed{
-\text{choose fields}
-\rightarrow
-\text{write an effective action}
-\rightarrow
-\text{derive equations}
-\rightarrow
-\text{fit parameters}
-\rightarrow
-\text{compare with data}.
-}
-\label{eq:representation-first}
-\end{equation}
-The workflow pursued here is instead
-\begin{equation}
-\boxed{
-\text{geometry}
-\rightarrow
-\text{action}
-\rightarrow
-\text{constraints and boundary conditions}
-\rightarrow
-\text{gauge quotient}
-\rightarrow
-\text{physical tangent space}
-\rightarrow
-\text{physical Hessian}
-\rightarrow
-\text{reduced response}
-\rightarrow
-\text{propagation}
-\rightarrow
-\text{observables}.
-}
+\boxed{\begin{gathered}
+\text{geometry}\to\text{action}\to\text{constraints / boundary conditions}\\
+\to\text{gauge quotient}\to\text{physical tangent space}\\
+\to\text{physical Hessian}\to\text{reduced response}\\
+\to\text{metric / matter response}\to\text{optics}\to\text{observables}.
+\end{gathered}}
 \label{eq:geometry-first}
 \end{equation}
+Boundary conditions specify the operator domain before inversion.
+At a regular constrained stationary point, a gauge-fixed representative is
+$T_{\rm phys}=\ker D\mathcal C\cap\mathcal G^\perp$.
+This notation assumes a declared inner product and a valid gauge slice;
+it does not establish their global existence.
+The physical second variation is
+$P_{\rm phys}D^2\mathcal L_{\rm KKT}P_{\rm phys}$.
+Eliminating an invertible physical complement gives
+$\mathcal K_{\rm phys}=A-BK^{-1}B^\dagger$.
 
-The distinction is operational, not semantic.  In
-Eq.~\eqref{eq:geometry-first}, the physical degrees of freedom are not decided
-before the constraint problem is solved.  A scalar, vector, or other
-field-like variable that appears after reduction is therefore a coordinate on
-a surviving physical response unless an additional theorem establishes a
-more fundamental interpretation.
+On the same domain, the metric block obeys
+\begin{align}
+\mathcal A_g h+\mathcal B_{g2}X_2+J_g&=0,\\
+\mathcal R_{g2}&=-\mathcal A_g^{-1}\mathcal B_{g2},\\
+h_2&=h_{\rm src}+\mathcal R_{g2}X_2,\qquad
+h_{\rm src}=-\mathcal A_g^{-1}J_g.
+\end{align}
+The inverse requires a nonsingular retained block. The induced metric has
+no extra initial datum. The reference homogeneous response sets the
+independent source contribution to zero; target fits must subtract any
+independently specified source before applying the shared-state test.
 
-\subsection{BHSM as a reduction program}
-
-BHSM implements this logic by constructing the constrained physical tangent
-space of a common variational problem and evaluating the action Hessian only
-after gauge and constraint reduction.  If the physical variables are divided
-into a selected branch and its physical complement, the exact reduced
-response is obtained by the Schur/Feshbach map
-\begin{equation}
-\mathcal K_{\rm phys}
-=
-A-BK^{-1}B^\dagger.
-\end{equation}
-This identity is ordinary mathematics; its role here is to prevent
-nonphysical or redundant coordinates from being promoted to independent
-degrees of freedom.
-
-At the cosmological scale the surviving physical topographic carrier is
-represented by the reduced phase-space state
-\begin{equation}
-X_2=(q_2,\Pi_2)^T,
-\end{equation}
-while the metric response is induced by the same physical Hessian,
-\begin{equation}
-h_2
-=
--\mathcal A_g^{-1}\mathcal B_{g2}X_2.
-\end{equation}
-The metric perturbation therefore carries no independent initial datum beyond
-the already retained physical mode.
-
-\subsection{Why cosmology is a useful stress test}
-
-Cosmology forces the construction to cross several logically distinct layers:
-compact geometry, harmonic selection, constraint reduction, metric response,
-matter response, photon propagation, and observer-frame projection.  A
-representation that merely reproduces one layer is not automatically
-equivalent to the complete chain.
-
-For this reason, the cosmological calculation serves as a stress test of the
-geometry-first methodology.  The paper does not ask only whether an effective
-equation can be written.  It asks whether one physical reduced state can be
-carried, without adding hidden degrees of freedom, from the action to
-observable quantities such as luminosity distance, growth, lensing, redshift
-perturbations, and their joint covariance.
-
-\subsection{Effective descriptions retain an important role}
-
-Nothing in this construction implies that effective field theory or quantum
-field theory is generally invalid.  Effective descriptions are among the most
-successful tools in modern physics.  The narrower point is that a useful
-effective representation should not automatically be identified with the
-fundamental ontology of the system.
-
-Accordingly, effective scalar/Horndeski variables used in this work are
-retained as compatibility and translation languages.  The defining transport
-law is the constraint-reduced physical response.  Where an effective
-representation fails a curvature-dependent constraint-preservation audit,
-that failure is treated as evidence about the representation or its domain of
-validity rather than as permission to retune the underlying physical mode.
+BHSM supplies the proposed common action, boundary-sector interpretation
+and projection contracts. This repository implements the downstream
+cosmological bridge; complete compact-background matrix elements remain
+open. A useful effective representation need not have been proved globally
+equivalent to that bridge. The particular curved-EFT failure reported below
+is a limitation of that audited construction, not of EFT or QFT in general.

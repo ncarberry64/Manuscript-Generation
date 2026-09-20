@@ -24,7 +24,7 @@ m.
 }
 \end{equation}
 
-For one active texture channel,
+For one coherent texture amplitude with nonzero variance and response,
 \begin{equation}
 C_O^{\rm topo}
 =
@@ -61,3 +61,17 @@ A residual covariance requiring more than the action-allowed number of
 independent eigenmodes falsifies that BHSM texture-channel count even if
 individual pairwise correlations are nonzero.  This test does not require the
 absolute seam-export normalization.
+
+\subsection{Coherence assumption and counterexample}
+Here $m$ counts global random amplitudes after the response and selection
+are fixed. One local field can contain many independent spatial or temporal
+amplitudes. Independent increments of one noise type give, in general,
+\[
+C_O=\int d\chi\,g(\chi)g(\chi)^\dagger.
+\]
+Two nonparallel response vectors at two path segments already give rank two.
+The white-noise optical evolution therefore does not imply rank one.
+The minimal test requires $\xi(x)=q\,\widehat\xi(x)$ with a fixed shape,
+or equivalent rank-one global source covariance. Deriving that coherence
+from the action remains conditional. Zero signal gives rank zero and
+undefined eigenvalue ratios.

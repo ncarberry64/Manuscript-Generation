@@ -4,7 +4,7 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,mathtools,booktabs}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[bookmarks=false,hidelinks,pdfusetitle]{hyperref}
 \usepackage[numbers,sort&compress]{natbib}
 \setlength{\emergencystretch}{2em}
 
@@ -22,63 +22,68 @@
 
 \begin{abstract}
 We develop a geometry-first cosmological workflow in which physical degrees of
-freedom are identified only after action variation, constraint enforcement,
-gauge reduction, and physical-Hessian reduction, rather than assumed as
-fundamental fields. Applied to a closed hyperspherical parent geometry
-$S^3(R_H)$, the construction isolates a physical $n=2$ reduced phase-space
-state and induces its metric response through the same constrained Hessian.
-The state is propagated to observations using a gauge-invariant closed-$S^3$
-luminosity-distance kernel and Jacobi/Sachs optical transport for photon
-redshift, convergence, and shear. Unresolved local geometry is represented
-statistically, yielding the structural prediction
-$\operatorname{rank}C_{\rm topo}\le m$ for $m$ independent physical
-topographic texture channels; the one-channel limit is rank one.
-Effective-field/Horndeski variables are retained as compatibility languages
-rather than as the defining ontology. A curvature-dependent
-constraint-preservation defect in one effective representation, together with
-rejected preregistered foreground proxies, illustrates the distinction between
-representation and physical reduction. The framework produces falsifiable
-multi-observable tests while leaving the upstream action-owned source
-normalization explicitly open.
+freedom are identified after constraints, boundary conditions, gauge
+redundancies and the physical Hessian are resolved. Within a conditional
+Berger--Hopf cosmological bridge on a closed hyperspherical parent, a
+selected physical $n=2$ harmonic carries one two-component phase-space state.
+Its induced metric response supplies reference growth and Weyl kernels and
+a gauge-invariant luminosity-distance map at fixed observed redshift.
+Jacobi/Sachs equations propagate photon redshift, convergence, shear and
+their stochastic covariance. For a fixed response to $m$ coherent random
+texture amplitudes, the isolated topographic covariance has rank at most
+$m$; one local noise type alone does not imply rank one.
+We formulate two prospective rejection gates at $p<0.01$: consistency of
+deterministic observables with one shared state, and consistency of isolated
+covariance with the minimal one-amplitude realization. Survey selection,
+nuisance treatment and finite-sample calibration must be frozen before
+target inspection. Homogeneous localization and three foreground-transfer
+candidates fail their retained tests. A curvature-dependent defect in one
+effective representation is reported without generalizing it to EFT or QFT.
+Complete compact-background normalization, action-owned local couplings and
+source statistics remain open. The contribution is a reproducible,
+conditional response chain and explicit falsification criteria, rather than
+a completed microscopic cosmology.
 \end{abstract}
 \noindent\textbf{Keywords:} cosmology; hyperspherical geometry; constrained dynamics; optical scalar equations; luminosity distance; weak lensing; stochastic geometry; falsifiable cosmology
 
 
 \input{sections/01_introduction}
 \input{sections/01a_geometry_before_fields}
-\input{sections/01b_claim_status_and_falsifiability}
 \input{sections/01c_reproducibility_and_ai_workflow}
+\input{sections/01b_claim_status_and_falsifiability}
 \input{sections/02_hyperspherical_parent}
 \input{sections/03_reduced_response}
-\input{sections/04_scalar_metric_bridge}
 \input{sections/04aa_bhsm_native_n2_transport}
 \input{sections/04aj_r1_n2_reduced_propagator}
 \input{sections/04ak_r1_n2_growth_lensing_transfer}
 \input{sections/04al_r1_n2_luminosity_distance_kernel}
-\input{sections/04am_bhsm_los_topographic_transfer}
-\input{sections/04an_2mrs_foreground_transfer}
 \input{sections/04ao_bhsm_optical_transfer}
-\input{sections/04ap_bhsm_optical_constitutive}
-\input{sections/04aq_bhsm_optical_hessian_projection}
-\input{sections/04ar_bhsm_optical_current_gate}
 \input{sections/04as_bhsm_optical_low_rank_covariance}
 \input{sections/04at_effective_representation_audit}
+\input{sections/09_results_R1}
+\input{sections/09c_negative_results}
+\input{sections/07_predictions_falsification}
+\input{sections/08b_make_or_break_prediction}
+\input{sections/08a_prospective_test_matrix}
+\input{sections/10_discussion}
+\input{sections/09_geometry_first_conclusion}
+\input{sections/09b_universe_submission_back_matter}
+\clearpage
+\appendix
+\input{sections/04_scalar_metric_bridge}
 \input{sections/04a_closed_horndeski_n2}
 \input{sections/04b_matter_sourced_n2}
 \input{sections/04c_bianchi_dictionary_n2}
 \input{sections/05_harmonic_selection}
 \input{sections/06_observables}
-\input{sections/07_predictions_falsification}
-\input{sections/07a_geometry_first_implications}
+\input{sections/04am_bhsm_los_topographic_transfer}
+\input{sections/04an_2mrs_foreground_transfer}
+\input{sections/04ap_bhsm_optical_constitutive}
+\input{sections/04aq_bhsm_optical_hessian_projection}
+\input{sections/04ar_bhsm_optical_current_gate}
 \input{sections/08_numerical_protocol}
-\input{sections/08a_prospective_test_matrix}
-\input{sections/09_results_R1}
 \input{sections/09a_reference_figures}
-\input{sections/10_discussion}
-\input{sections/11_conclusions}
-
-\input{sections/09_geometry_first_conclusion}
-\input{sections/09b_universe_submission_back_matter}
+\clearpage
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 \end{document}
