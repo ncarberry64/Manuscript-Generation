@@ -1,0 +1,20 @@
+{
+  "schema": "universe-mdpi-submission-pass-v1",
+  "target_journal": "Universe",
+  "publisher": "MDPI",
+  "target_section": "Cosmology",
+  "article_type": "Article",
+  "scientific_parameters_changed": false,
+  "frozen_predictions_changed": false,
+  "submission_readiness": "PENDING_AUTHOR_DECLARATIONS_AND_PERMANENT_ARCHIVE",
+  "added": [
+    "journal-focused title",
+    "compressed abstract",
+    "keywords",
+    "AI-assisted workflow disclosure",
+    "data availability scaffold",
+    "AI acknowledgment",
+    "cover letter draft",
+    "submission checklist"
+  ]
+}
