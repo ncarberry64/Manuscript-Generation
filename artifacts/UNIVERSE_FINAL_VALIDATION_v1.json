@@ -1,0 +1,42 @@
+{
+  "schema": "universe-final-local-validation-v1",
+  "scientific_fingerprint_sha256": "ac34e2f45e3eab1e9317db88d97288cd8fcfac7595b436cd4b1438a2b50039a2",
+  "full_suite": {
+    "tests": 88,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "passed": 87,
+    "seconds": 6699.653,
+    "expected_failure": "test_dae_preserves_00_0i_constraints_from_index_consistent_seed"
+  },
+  "focused_suite": {
+    "passed": 25,
+    "scope": "make-or-break, low-rank and optical transfer"
+  },
+  "latex": {
+    "canonical_clean_build": "PASS",
+    "isolated_source_archive_build": "PASS",
+    "blocking_warnings": [],
+    "visual_review": "all pages; affected pages rechecked after edits",
+    "pages": 39
+  },
+  "abstract_word_count": 200,
+  "abstract_count_method": "whitespace-delimited source words; inline math expressions count as one",
+  "sha256": {
+    "manuscript/main.pdf": "544cfcb89a263fa0dfb809370a308ff682f85d87e198b78b7d21062ac3ab53fe",
+    "submission/universe-source.zip": "e329261d21c4d2dc6e5867031d3a628d68e3ce3a6453d4de680a35b51d7e2c8c",
+    "artifacts/submission_pytest.xml": "f1766370063b1185037685c28223aca5dd2d143fdf8574604ee2887fd690c00b"
+  },
+  "submission_ready": false,
+  "remaining": [
+    "author declarations and approval",
+    "permanent archive/DOI",
+    "historical external-input provenance",
+    "original localization statistic",
+    "upstream microscopic closure remains conditional",
+    "target-specific observational design and nuisance calibration",
+    "native MDPI template if required"
+  ],
+  "remote_ci": "not inferred from local validation; inspect PR checks"
+}
