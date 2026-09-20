@@ -1,0 +1,5 @@
+{
+  "url": "https://raw.githubusercontent.com/RickKessler/SNANA/master/src/genmag_SALT2.c",
+  "sha256": "b9cdeffd847c5cdda4d53ed78a8cd152bf0179a17b5b85d5a813eb4c96033ff9",
+  "purpose": "Verify published SALT MAG_OFFSET convention; fetched source snapshot bundled, not used as executable code"
+}

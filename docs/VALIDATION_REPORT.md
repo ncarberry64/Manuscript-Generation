@@ -1,5 +1,7 @@
 # Final local validation
 
+**Historical manuscript-pass record.** This report describes the pre-sightline snapshot and its 39-page PDF. The later 41-page manuscript and observational package are covered by [SN sightline validation V1](SN_SIGHTLINE_VALIDATION_V1.md). Canonical `code/`, `tests/` and `preregistration/` hashes remain unchanged; the earlier full-suite result is not represented as a new run.
+
 The scientific snapshot is identified by SHA-256 **ac34e2f45e3eab1e9317db88d97288cd8fcfac7595b436cd4b1438a2b50039a2** in SUBMISSION_SCIENTIFIC_SNAPSHOT_v1.json. The final intended review commit is HEAD on theory/cosmology-universe-manuscript-final; resolve with git rev-parse HEAD. No scientific source changed during the full run; subsequent edits concern prose, typesetting and packaging.
 
 - Full repository pytest: **87 passed, 1 strict expected failure**, 6699.65 seconds. No unexpected failures or skipped tests.

@@ -1,0 +1,26 @@
+{
+  "parameters": {
+    "Omega_m0": 0.31,
+    "Omega_r0": 9e-05,
+    "Omega_k0": -0.018,
+    "lam": 1,
+    "q": 3,
+    "V0": 2.3986073,
+    "axis_RA_DEC_deg": [
+      211.48,
+      -12.81
+    ],
+    "z_ref": 0.02,
+    "z_c": 0.03,
+    "global_fraction": 0.16666666666666666,
+    "local_fraction": 0.8333333333333334
+  },
+  "amplitude": -0.04321623435997208,
+  "amplitude_sigma_from_original_training": 0.014387926010359849,
+  "new_topographic_parameters_fitted": 0,
+  "secondary_diagnostic": "one scalar amplitude only; never used for predictive likelihoods",
+  "primary_selection": {
+    "Pantheon": "0.01 <= zHD < 1; original training below .03; held-out .03..1",
+    "DES": "IDSURVEY 10; .10 <= zHD < 1.20; frozen same-SN overlap exclusions"
+  }
+}

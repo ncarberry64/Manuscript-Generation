@@ -1,0 +1,119 @@
+\section{Frozen supernova sightline interpretation test}
+\label{sec:sn-sightlines}
+We test whether source structure and independently constrained foregrounds
+leave a residual following the existing local optical template. This
+retrospective interpretation test does not instantiate the prospective
+multi-observable gates. The axis $(211.48^\circ,-12.81^\circ)$, amplitude
+$A=-0.04321623436$ mag, $z_{\rm ref}=0.02$, $z_c=0.03$, local redshift
+transfer, R1 background and original sample cuts remain fixed.
+No residual-fitted bulk velocity or external velocity normalization is used.
+
+\subsection{Source and independent foreground construction}
+Individual epoch/band photometry for all 3,521 released Pantheon+ and DES
+Hubble-diagram rows is locally reconstructed with the released SALT models.
+There are 3,480 converged solutions and 41 non-converged local fits, all
+retained without changing the Hubble-diagram selection. Flux normalization,
+color, shape and peak epoch are separated; remaining chromatic and phase
+contrasts are orthogonalized. Band deletion, individual-MJD epoch deletion,
+phase-block deletion and released spectral/calibration variants provide
+stability diagnostics. These are local-linear responses, not full nonlinear
+SNANA/BBC reruns. DES nominal passband proxies and incomplete systematic
+mappings remain explicitly flagged.
+
+The common distance residual used with the released total covariance is
+the published standardized distance modulus minus the frozen R1 distance.
+The raw-fit normalization departure is separate: substituting it into
+the released distance vector would require a new propagated covariance.
+Reported epoch variances do not supply the complete model, shared
+calibration and bias-correction covariance.
+
+Independent density and velocity information comes from the galaxy-only
+2MRS neural reconstruction, trained on simulation mocks
+\citep{LilowEtAl2024Fields}. Its valid radius is
+$200\,h^{-1}\mathrm{Mpc}$; distant foregrounds remain unmeasured.
+Observed 2MRS counts \citep{Huchra2012} are archived separately from the
+reconstructed matter-density proxy, with magnitude/sky-selection limits.
+Released dust/host measurements, marginal field errors and a local
+Green-kernel lensing proxy accompany each sightline. The external spatial
+error covariance is unavailable.
+
+\subsection{Conditional held-out likelihoods}
+Source/environment nuisance coefficients are learned only on training rows;
+held-out rows profile the original redshift-bin monopoles and slopes.
+Every observation of a held-out SN is excluded from fold training.
+For training-to-test operator $T$, the prediction-error covariance is
+\begin{equation}
+ V=C_{vv}+T C_{tt}T^{\mathsf T}
+       -C_{vt}T^{\mathsf T}-T C_{tv}.
+\end{equation}
+Pantheon uses its released total covariance. The full DES precision is
+inverted before selecting rows. No difference of released covariances is
+treated as an independent PV covariance. Unreleased cross-survey systematic
+covariance is set to zero only for the explicitly conditional DES transfer;
+no combined discovery significance follows.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+Test & Rows & $\Delta\chi^2$ & Mock $p$\\
+\midrule
+Pantheon, released distances & 1208 & $+2.985$ & 0.247\\
+Pantheon, source/environment & 1208 & $-0.883$ & 0.0725\\
+Pantheon, fixed external PV sensitivity & 1208 & $-4.909$ & 0.0110\\
+DES, released distances & 1467 & $+0.240$ & 0.771\\
+DES, Pantheon nuisance transfer & 1467 & $+1.321$ & 0.590\\
+\bottomrule
+\end{tabular}
+\caption{Frozen local prediction versus null. Negative
+$\Delta\chi^2=\chi^2_{\rm frozen}-\chi^2_{\rm null}$ favors the prediction.
+One-sided score tails use 2,000 full-covariance Gaussian mocks,
+conditional on fixed measured nuisance features. The external PV mean
+enters with coefficient exactly one; missing joint error propagation
+precludes a new fully marginalized likelihood.}
+\label{tab:sn-sightline-tests}
+\end{table}
+
+The primary held-out Pantheon preference is weak and does not transfer to
+DES (Table~\ref{tab:sn-sightline-tests}). Matched same-redshift/different-sky,
+same-sky/different-redshift and shared-foreground pairs retain their full
+contrast covariance. The all-Pantheon preference is concentrated in
+high-density sightlines and varies by survey and sky sector. All-Pantheon
+cross-fitting reuses the original amplitude-training population, so it is
+descriptive rather than independent confirmation. Survey/redshift/sector
+permutations preserve duplicate blocks and the exact redshift law, but
+their nominal 0.05 tail occurs in 0.09 of the Pantheon null calibration
+mocks; permutation tails are therefore auxiliary diagnostics.
+
+\subsection{PV projection, rank and foreground localization}
+The saved original low-redshift estimator projects the released PV
+correction onto $+0.033953716$ mag, compared with $+0.009368488$ mag for
+the independent galaxy-only correction. This demonstrates overlap and
+correction sensitivity, not identification of the removed component as
+BHSM optical history. The predictive amplitude remains unchanged.
+An explicitly \emph{fitted-only} one-scalar diagnostic gives
+$A_{\rm fit}=-0.032870\pm0.012398$ mag with direction and redshift dependence
+fixed. The source/environment nuisance space retains 79.0\% of the
+bin-profiled template information, inflating its uncertainty by 1.125.
+No fitted amplitude is used to improve the predictive scores.
+
+An experimental path-length matrix $W_{ik}$ records shared
+$10\,h^{-1}\mathrm{Mpc}$ Cartesian cells within the unchanged radial shells,
+using $2\,h^{-1}\mathrm{Mpc}$ midpoint steps. The local matrix has 3,931
+sampled columns, with numerical ranks 1,268 and 238 for the Pantheon and
+DES row sets at relative singular tolerance $10^{-7}$.
+Cell-sharing covariance kernels are transformed through the same residual
+operator as the data. Aggregate shell-adjusted mock tails are no
+smaller than 0.328 (Pantheon) and 0.531 (DES). A 0.0195 tail in one of 22
+overlapping leave-subset scans is not corrected across that family.
+These tests establish neither foreground-cell localization nor a coherent
+cross-survey frozen residual. They are not a measurement of the isolated
+multi-observable topographic covariance or a test of its rank-one gate.
+
+The complete report, compact sightline/results tables, acquisition hashes
+and script snapshot are retained under
+\texttt{analyses/sn\_sightline\_tomography\_v1} in the repository.
+The full data-bearing local archive is identified there by SHA-256;
+a public permanent archive remains open. Complete source-reduction and
+external-field error propagation are required to resolve the primary
+physical interpretation.

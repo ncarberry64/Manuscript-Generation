@@ -1,0 +1,11 @@
+{
+  "label": "FITTED one scalar amplitude, not predictive",
+  "amplitude": -0.032870496682568466,
+  "sigma": 0.012397894005939962,
+  "frozen_amplitude": -0.04321623435997208,
+  "information_before": 8236.152759024932,
+  "information_after": 6505.85173657629,
+  "sigma_inflation": 1.1251491997041123,
+  "nuisance_rank": 27,
+  "remaining_template_fraction": 0.7899139230324949
+}

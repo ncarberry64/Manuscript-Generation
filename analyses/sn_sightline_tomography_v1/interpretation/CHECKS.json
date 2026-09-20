@@ -1,0 +1,142 @@
+{
+  "nuisance annihilation 357_0": {
+    "error": 3.3306690738754696e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1565_1565": {
+    "error": 2.255140518769849e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 357_4597": {
+    "error": 3.3306690738754696e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 926_6162": {
+    "error": 2.5934115965853266e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1286_7727": {
+    "error": 4.0592529337857286e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1279_9292": {
+    "error": 1.3183898417423734e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1204_10857": {
+    "error": 6.210310043996969e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1244_12422": {
+    "error": 1.3183898417423734e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1405_13987": {
+    "error": 1.9894120832442203e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1427_15552": {
+    "error": 1.3747683547116196e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1362_17055": {
+    "error": 1.2750217548429532e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1296_18620": {
+    "error": 1.731766743846687e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1554_20185": {
+    "error": 1.4581116805441384e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1534_21750": {
+    "error": 9.037909309839165e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1501_23312": {
+    "error": 2.8449465006019636e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1511_24851": {
+    "error": 2.7929047963226594e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1412_26398": {
+    "error": 3.1008182133085427e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1557_27898": {
+    "error": 2.0990154059319366e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1536_29463": {
+    "error": 3.4867941867133823e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1520_31019": {
+    "error": 2.5500435096859064e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1464_32568": {
+    "error": 5.828670879282072e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1500_34085": {
+    "error": 2.96637714392034e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1552_35621": {
+    "error": 1.190627402581602e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1560_37184": {
+    "error": 4.360482556812016e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "nuisance annihilation 1390_38749": {
+    "error": 5.759281940243e-16,
+    "tolerance": 1e-07,
+    "passed": true
+  },
+  "frozen training row identity": {
+    "error": 0.0,
+    "tolerance": 1e-08,
+    "passed": true
+  },
+  "one-amplitude injected signal recovery": {
+    "error": 1.3877787807814457e-17,
+    "tolerance": 1e-08,
+    "passed": true
+  },
+  "joint row/covariance permutation invariance": {
+    "error": 0.0,
+    "tolerance": 1e-07,
+    "passed": true
+  }
+}

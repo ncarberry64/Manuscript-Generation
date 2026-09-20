@@ -15,6 +15,7 @@ Detailed Horndeski background, constraints, Bianchi dictionary, illustrative har
 | Optical means/covariance | `bhsm_optical_transfer.py` and related modules | `BHSM_optical_*` contracts |
 | Foreground failures | `r1_2mrs_*_transfer.py` | Three `R1_2MRS_*_v1.json` results |
 | Prospective gates | `bhsm_make_or_break_prediction.py` | `BHSM_MAKE_OR_BREAK_PREDICTION_v1.json` (synthetic) |
+| Retrospective SN sightlines | `analyses/sn_sightline_tomography_v1/` script snapshot | [Final report and compact results](../analyses/sn_sightline_tomography_v1/FINAL_REPORT.md); full local archive identified by hash |
 
 Old numbered referee audits, accumulated derivation notes and unused `11_conclusions.tex` / `07a_geometry_first_implications.tex` record historical stages. They do not supersede main.tex or the current claim ledger. Generator `--tex` options also emit historical prose; regenerate numerical artifacts without overwriting editorial sections.
 

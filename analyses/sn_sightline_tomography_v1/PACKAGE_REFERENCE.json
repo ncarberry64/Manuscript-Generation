@@ -1,0 +1,8 @@
+{
+  "archive_name": "BHSM_SN_SIGHTLINE_TOMOGRAPHY_V1.zip",
+  "archive_sha256": "db704faa3bf6f164017af10ed80028f2799b9f7a1dc4854b88c7108a7dfe8988",
+  "archive_bytes": 1161985553,
+  "local_full_package": "C:\\Users\\carbe\\Downloads\\BHSM_SN_SIGHTLINE_TOMOGRAPHY_V1",
+  "git_snapshot": "scripts, report, summary/sightline tables, figures and provenance; raw photometry, field arrays, dense operators and Monte Carlo arrays remain in the complete archive",
+  "publication_status": "local complete archive; no public permanent archive or DOI assigned"
+}

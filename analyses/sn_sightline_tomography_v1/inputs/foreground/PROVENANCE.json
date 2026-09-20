@@ -1,0 +1,47 @@
+{
+  "url": "https://www.dropbox.com/scl/fo/wb8iyg113hyin4ni7srkg/h?rlkey=bfry3x0s612qtnmgb6n82rnny&dl=1",
+  "archive_sha256": "c12efc1063b6c06dda127a9c51aa97926d8666f6a615e9fba8412ba4adbabcd7",
+  "reference": "https://github.com/rlilow/2MRS-NeuralNet",
+  "files": [
+    {
+      "file": "density.npy",
+      "bytes": 8388736,
+      "sha256": "fe6afc85a42458dcc6f3a740cc575aaf0387944fad8f039045ae4eeea3b59c09"
+    },
+    {
+      "file": "xVelocity.npy",
+      "bytes": 8388736,
+      "sha256": "50edf12e9dd8a79959071eda57ccd197f2cfba2bae5233210ab6243541aa4643"
+    },
+    {
+      "file": "yVelocity.npy",
+      "bytes": 8388736,
+      "sha256": "c125f3d97aa8f9ed34110285e018df0849d955b62f0a472cebb34d196e2cb447"
+    },
+    {
+      "file": "zVelocity.npy",
+      "bytes": 8388736,
+      "sha256": "ae1e0dfadf48c27afcf7f30c53c2e978f7edeab3506c9e446ed7f73770b207d6"
+    },
+    {
+      "file": "density_error.npy",
+      "bytes": 16777344,
+      "sha256": "634639062221acff6a52db9185c7745abdecfcce5cd051bfbaff76981b9cda4d"
+    },
+    {
+      "file": "xVelocity_error.npy",
+      "bytes": 16777344,
+      "sha256": "71cb34d1639f48a6cc22ba76d0f5c56756cc89f4b9f714c719a718c531a60114"
+    },
+    {
+      "file": "yVelocity_error.npy",
+      "bytes": 16777344,
+      "sha256": "76396094a770b5874bc82779e4a95ad1ef5ad4683ba7cf321981cd377de26e26"
+    },
+    {
+      "file": "zVelocity_error.npy",
+      "bytes": 16777344,
+      "sha256": "5b53329d64107503ddf93e69f0df52c26de109e87a2bc97c6b3c8b18e6c0c846"
+    }
+  ]
+}

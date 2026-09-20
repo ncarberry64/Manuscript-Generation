@@ -68,3 +68,9 @@ python code/r1_2mrs_bhsm_seam_transfer.py --sn external/PantheonPlus_frozen.csv 
 ```
 
 These filenames are placeholders, not supplied files. The carried-forward SN amplitude/axis likelihood is not implemented as a fresh fit here. The prior homogeneous localization failure is reported in documentation; its original numerical statistic/threshold are absent. These limitations are explicitly retained in the hostile-referee audit.
+
+## New SN sightline package (separate from the historical foreground tests)
+
+The [V1 Git snapshot](../analyses/sn_sightline_tomography_v1/GIT_SNAPSHOT.md) contains the exact analysis scripts, compact tables, report and provenance. Its full, data-bearing archive is stored at `C:\Users\carbe\Downloads\BHSM_SN_SIGHTLINE_TOMOGRAPHY_V1`; `PACKAGE_REFERENCE.json` and `ARCHIVE_SHA256.txt` bind the delivered bytes. Extract the complete archive, install its pinned requirements and run `python run_all.py` there. The compact Git snapshot alone does not contain the raw inputs needed by the numerical stages.
+
+The new package pins current public release inputs and preserves all intermediate covariance operators, epoch diagnostics, tomography matrices and 2,000-draw null distributions. It does not retroactively supply the absent historical foreground tables. The predictive amplitude remains fixed; its one-scalar fitted diagnostic is separately labeled. See [validation and limitations](SN_SIGHTLINE_VALIDATION_V1.md). The canonical `code/`, `tests/` and `preregistration/` scientific snapshot is unchanged by this addition; the new package has separate observational and numerical checks.

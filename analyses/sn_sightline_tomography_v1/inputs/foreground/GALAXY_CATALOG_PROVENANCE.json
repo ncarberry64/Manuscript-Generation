@@ -1,0 +1,7 @@
+{
+  "url": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J/ApJS/199/26/table3&-out.all&-out.max=unlimited",
+  "sha256": "2b9a70e63de373f48ff5d4500677ca1020f875c7628e51b0650a62ea44afc400",
+  "rows": 44599,
+  "positive_redshift_rows": 43507,
+  "description": "descriptive galaxy counts added without changing any nuisance design, fit, threshold or likelihood"
+}

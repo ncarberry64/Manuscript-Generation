@@ -1,0 +1,16 @@
+{
+  "rows": 8,
+  "columns": 3931,
+  "rank_at_relative_singular_tolerance_1e_7": 8,
+  "singular": [
+    35.26415242844962,
+    33.68409329743949,
+    32.86894317400807,
+    28.09290865261935,
+    22.95176234590286,
+    21.325350980491944,
+    21.186665720456734,
+    19.88606994107223
+  ],
+  "note": "Gram eigenvalue floor limits rank near 1e-8; duplicates and common near-observer paths create degeneracies"
+}

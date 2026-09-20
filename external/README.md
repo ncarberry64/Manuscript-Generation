@@ -12,3 +12,7 @@ This directory documents inputs; it does not contain survey data. No unrelated B
 For each recovered table record source release/version, retrieval date, SHA-256 of raw and derived files, selection script/commit, column units, frame, masks and row counts. Preserve original inputs. A later re-download does not automatically reproduce the historically used table.
 
 No future survey targets have been selected or unblinded for the new two-gate protocol.
+
+## Retrospective SN sightline V1 inputs
+
+The new [sightline package](../analyses/sn_sightline_tomography_v1/GIT_SNAPSHOT.md) is distinct from the historical foreground tests above. It pins Pantheon+ commit `c447f0fea703fcd0fff57de5000947b5ca81286b` and DES commit `c9a4fcafc4cbd19bd750dee47fc76194a45c181f`, hashes raw photometry/models and official HD covariance inputs, and records independently downloaded 2MRS-NeuralNet fields and VizieR galaxy counts. Complete raw/derived inputs are retained in its local archive; compact provenance is committed here. A public permanent archive has not been created. These inputs do not silently replace any older frozen catalogue.

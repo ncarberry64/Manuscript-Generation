@@ -1,0 +1,44 @@
+{
+  "rows": 3521,
+  "unique_SN_blocks": 3360,
+  "full_cells": 47072,
+  "local_cells": 3868,
+  "path_sum_error": 0.0,
+  "independent_endpoint_PV_rows": 865,
+  "primary": {
+    "DES": 1467,
+    "Pantheon": 1565
+  },
+  "checks": {
+    "Pantheon text covariance asymmetry within release rounding": {
+      "error": 3.0000000000038676e-08,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    "DES full precision times covariance": {
+      "error": 8.770761894538737e-15,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    "DES marginal Schur identity": {
+      "error": 1.887379141862766e-15,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    "R1 present E matches supplied rounded V0": {
+      "error": 7.785873168408841e-09,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    "Local transfer normalized at reference": {
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    "Global transfer normalized at reference": {
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  }
+}

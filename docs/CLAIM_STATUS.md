@@ -17,6 +17,9 @@ This ledger supersedes the accumulated working ledger without changing frozen re
 | REJECTED / NOT ESTABLISHED | Particular curved-EFT global preservation calculation. | Existing strict xfail. No general EFT/QFT conclusion; the remaining defect may be representational or implementation-specific. |
 | OPEN | Full compact preimage background, local matrix elements, exact seam export, rare-event/source law, absolute amplitudes. | No ab initio full cosmology claim. |
 | OPEN | Survey-ready gates, nuisance calibration, independent target eligibility and power. | Structural protocol frozen; benchmark is synthetic under a restricted fixed null. |
+| CALIBRATED / CONDITIONAL | Frozen SN source/environment likelihoods and fixed independent-PV sensitivities. | [Sightline report](../analyses/sn_sightline_tomography_v1/FINAL_REPORT.md); original axis, amplitude, law, cosmology and cuts preserved. Features and released covariance are conditioned on; new joint error propagation remains incomplete. |
+| REJECTED / NOT ESTABLISHED | A coherent residual following the frozen topographic prediction after source/environment treatment. | Primary held-out Pantheon Δχ²=−0.883, DES transfer +1.321; no aggregate foreground-cell localization. Stronger sensitivity/subset scores are not independent discovery evidence. |
+| OPEN | Fully propagated source/calibration/BBC and independent foreground/PV likelihood. | DES nominal passband proxies, external spatial error covariance, source-feature error cross-covariance and distant environmental coverage are incomplete. |
 
 The defining bridge transport is the action-reduced physical n=2 response. Field-like coordinates are permitted; equivalence to an effective representation must be established rather than assumed.
 
