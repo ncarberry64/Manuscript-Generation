@@ -1,3 +1,7 @@
+# Current final-revision status
+
+The final revision is tracked in `submission/SUBMISSION_READINESS.md`; the historical checklist below is retained for context and is not a current readiness certification.
+
 # Universe submission checklist
 
 Target: **Universe**, **Article**, **Cosmology**. No Special Issue is selected without verified matching scope.

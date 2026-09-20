@@ -1,7 +1,8 @@
 \section{Frozen 2MRS foreground-transfer test}
 \label{sec:2mrs-foreground-transfer}
 
-The illustrative local-coherence cutoff is replaced here by a foreground
+This separate historical candidate replaces the illustrative local-coherence
+cutoff by a foreground
 field constructed from the 2MRS galaxy distribution.  For supernova \(i\),
 \[
 {\cal F}_i =
@@ -20,7 +21,7 @@ supernovae and 38600 2MRS galaxies with
 \(z<0.05\).  Relative to the fixed-axis plus nuisance-control model, adding
 the foreground score gave
 \[
-\Delta\chi^2 = 1.619359,
+\Delta\chi^2_{\rm fitted-null} = -1.619359,
 \qquad
 \beta_F = 0.015286
 \pm 0.007846\ {\rm mag},
@@ -38,10 +39,15 @@ change was
 \[
 \Delta\chi^2_{\rm heldout}
 =
--4.107958.
++4.107958.
 \]
 
 This test does not identify the physical source of the foreground signal.
 The 2MRS field is a matter-density proxy, not yet an action-normalized BHSM
 de-encapsulation map, and conventional peculiar-velocity, lensing and survey
 selection effects remain alternative explanations.
+
+Throughout this appendix, changes are model minus null: the in-sample
+fitted statistic is diagnostic, while the held-out statistic uses the frozen
+coefficient. Positive held-out change means worse prediction. These signs
+reverse the historical artifact convention without altering its numbers.

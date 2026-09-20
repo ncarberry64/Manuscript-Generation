@@ -66,3 +66,7 @@ The intended review checkpoint is final HEAD on this branch and the draft PR. Ru
 That manuscript pass was merged as PR #21 into `theory/cosmology-universe-mdpi-submission-pass`. The subsequent sightline update is documented separately in [SN sightline validation](docs/SN_SIGHTLINE_VALIDATION_V1.md); the earlier full-suite evidence remains attached to its original scientific snapshot.
 
 Related preprint: [Preprints.org 202601.1427](https://www.preprints.org/manuscript/202601.1427), under its verified published title. The supplied later Topographic Dark Energy title relationship needs author confirmation.
+
+## Final Universe revision
+
+See [submission readiness](submission/SUBMISSION_READINESS.md), [claim provenance](docs/UNIVERSE_CLAIM_PROVENANCE.md) and [reviewer risk audit](docs/REVIEWER_RISK_AUDIT.md). The final revision preserves the frozen science and adds no parameter rescue.

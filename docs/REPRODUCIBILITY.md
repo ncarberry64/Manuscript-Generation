@@ -1,6 +1,6 @@
 # Reproducing the manuscript and calculations
 
-Run commands from the repository root unless stated otherwise. The branch is `theory/cosmology-universe-manuscript-final`. The release report records the tested scientific fingerprint and checkpoint; the intended submission is the final commit on this branch, pending author approval and archive. Retrieve it with `git rev-parse HEAD` rather than inferring it from timestamps.
+Run commands from the repository root unless stated otherwise. The branch is `theory/cosmology-universe-mdpi-submission-pass`. The release report records the tested scientific fingerprint and checkpoint; the intended submission is the final commit on this branch, pending author approval and archive. Retrieve it with `git rev-parse HEAD` rather than inferring it from timestamps.
 
 ## Environment
 

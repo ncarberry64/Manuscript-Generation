@@ -38,7 +38,7 @@ def package(destination):
         "Universe generic-LaTeX source package for author/referee review.\n"
         "Build: latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex\n"
         "Use full TeX Live or MiKTeX with Latin Modern and natbib.\n"
-        "Author declarations, archive DOI and provenance decisions remain TODO.\n"
+        "Author declarations await confirmation; archive deposit instructions are supplied separately.\n"
         "Not an author-approved submission; raw survey data are not included.\n"
         "SHA256.json identifies exact included source and PDF bytes.\n"
     ).encode()

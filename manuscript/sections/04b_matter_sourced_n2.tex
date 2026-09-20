@@ -1,6 +1,6 @@
 \section{Matter-Sourced Constraint Transfer at n=2}
 
-The Round-3 kernel established the pure gravity--scalar constrained dynamics of the first physical closed-universe harmonic. The next step is to introduce minimally coupled matter sources without importing a flat-space or quasi-static approximation. We use the curvature-aware Newtonian-gauge EFT equations written by Gambino and Pace \citep{GambinoPace2024}. Their metric convention is
+The reduced kernel describes the pure gravity--scalar constrained dynamics of the first physical closed-universe harmonic. Here we introduce minimally coupled matter sources without importing a flat-space or quasi-static approximation. We use the curvature-aware Newtonian-gauge EFT equations written by Gambino and Pace \citep{GambinoPace2024}. Their metric convention is
 \[
 ds^2
 =
@@ -126,7 +126,7 @@ Its determinant is
 \boxed{-2H^2D_{\rm kin}}.
 }
 \]
-Thus the same positive-\(D_{\rm kin}\) branch used in the background and Round-3 kinetic audit guarantees that this sourced rate block is nonsingular.
+Thus the same positive-\(D_{\rm kin}\) branch used in the background and reduced kinetic audit guarantees that this sourced rate block is nonsingular.
 
 For the velocity convention above, covariant conservation gives
 \[
@@ -155,4 +155,4 @@ with
 \frac{k^2}{a^2}=8\kappa.
 \]
 
-The repository implements these equations as a local linear transfer matrix with the additional topographic response explicitly switched off. This is deliberately not yet promoted to a globally integrated observable solution. The curvature-aware EFT equations and the Round-3 ADM kernel use different perturbation variables and normalizations; the remaining evolution equations must first be matched analytically and then subjected to a Bianchi/constraint-preservation audit. Only after that compatibility gate is passed will we integrate the full matter-era \(n=2\) system and add the independent reduced topographic operator.
+The repository implements these equations as a local linear transfer matrix with the additional topographic response explicitly switched off. This is deliberately not yet promoted to a globally integrated observable solution. The curvature-aware EFT equations and the reduced ADM kernel use different perturbation variables and normalizations; the remaining evolution equations must first be matched analytically and then subjected to a Bianchi/constraint-preservation audit. Only after that compatibility gate is passed will we integrate the full matter-era \(n=2\) system and add the independent reduced topographic operator.

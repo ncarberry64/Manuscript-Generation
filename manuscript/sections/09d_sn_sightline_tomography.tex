@@ -10,7 +10,8 @@ No residual-fitted bulk velocity or external velocity normalization is used.
 
 \subsection{Source and independent foreground construction}
 Individual epoch/band photometry for all 3,521 released Pantheon+ and DES
-Hubble-diagram rows is locally reconstructed with the released SALT models.
+Hubble-diagram rows is locally reconstructed with the released SALT models
+\citep{Scolnic2022,Sanchez2024DES,Abbott2024DES}.
 There are 3,480 converged solutions and 41 non-converged local fits, all
 retained without changing the Hubble-diagram selection. Flux normalization,
 color, shape and peak epoch are separated; remaining chromatic and phase
@@ -54,27 +55,28 @@ no combined discovery significance follows.
 
 \begin{table}[ht]
 \centering\small
-\begin{tabular}{lrrr}
+\begin{tabular}{@{}p{0.37\linewidth}rrrp{0.18\linewidth}@{}}
 \toprule
-Test & Rows & $\Delta\chi^2$ & Mock $p$\\
+Test & Rows & $\Delta\chi^2$ & Mock $p$ & Status\\
 \midrule
-Pantheon, released distances & 1208 & $+2.985$ & 0.247\\
-Pantheon, source/environment & 1208 & $-0.883$ & 0.0725\\
-Pantheon, fixed external PV sensitivity & 1208 & $-4.909$ & 0.0110\\
-DES, released distances & 1467 & $+0.240$ & 0.771\\
-DES, Pantheon nuisance transfer & 1467 & $+1.321$ & 0.590\\
+Pantheon, released distances & 1208 & $+2.985$ & 0.247 & PRIMARY\\
+Pantheon, source/environment & 1208 & $-0.883$ & 0.0725 & CONDITIONAL\\
+Pantheon, fixed external PV sensitivity & 1208 & $-4.909$ & 0.0110 & SENSITIVITY ONLY\\
+DES, released distances & 1467 & $+0.240$ & 0.771 & PRIMARY\\
+DES, Pantheon nuisance transfer & 1467 & $+1.321$ & 0.590 & CONDITIONAL\\
 \bottomrule
 \end{tabular}
 \caption{Frozen local prediction versus null. Negative
 $\Delta\chi^2=\chi^2_{\rm frozen}-\chi^2_{\rm null}$ favors the prediction.
 One-sided score tails use 2,000 full-covariance Gaussian mocks,
 conditional on fixed measured nuisance features. The external PV mean
-enters with coefficient exactly one; missing joint error propagation
-precludes a new fully marginalized likelihood.}
+enters with coefficient exactly one. Sensitivity only; external PV mean
+fixed at coefficient 1; complete joint uncertainty propagation unavailable.
+All $\Delta\chi^2$ and $p$ values are dimensionless.}
 \label{tab:sn-sightline-tests}
 \end{table}
 
-The primary held-out Pantheon preference is weak and does not transfer to
+The conditional held-out Pantheon preference is weak and does not transfer to
 DES (Table~\ref{tab:sn-sightline-tests}). Matched same-redshift/different-sky,
 same-sky/different-redshift and shared-foreground pairs retain their full
 contrast covariance. The all-Pantheon preference is concentrated in
@@ -86,6 +88,11 @@ their nominal 0.05 tail occurs in 0.09 of the Pantheon null calibration
 mocks; permutation tails are therefore auxiliary diagnostics.
 
 \subsection{PV projection, rank and foreground localization}
+Correlated PV and lensing fluctuations are established conventional sources
+of distance covariance \citep{HuiGreene2006,Smith2014Lensing}.
+The released PV/redshift corrections \citep{Peterson2022PV,Carr2022Redshift}
+and the 2M++ reconstruction \citep{Carrick2015} motivate comparison with
+independent galaxy information, rather than a velocity fitted to SN residuals.
 The saved original low-redshift estimator projects the released PV
 correction onto $+0.033953716$ mag, compared with $+0.009368488$ mag for
 the independent galaxy-only correction. This demonstrates overlap and
@@ -117,3 +124,16 @@ The full data-bearing local archive is identified there by SHA-256;
 a public permanent archive remains open. Complete source-reduction and
 external-field error propagation are required to resolve the primary
 physical interpretation.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/frozen_sn_comparison.pdf}
+\caption{Five frozen comparisons on a common dimensionless scale, regenerated
+from the saved likelihood table. Negative model-minus-null changes favor the
+frozen template. The hollow diamond denotes sensitivity only: external PV
+mean fixed at coefficient 1; complete joint uncertainty propagation
+unavailable. These are likelihood changes, not significance estimates or
+measurements with error bars. Sample sizes and conditional mock tails are
+in Table~\ref{tab:sn-sightline-tests}.}
+\label{fig:frozen-sn}
+\end{figure}

@@ -1,0 +1,11 @@
+{
+  "scientific_snapshot_files_verified": 45,
+  "sightline_snapshot_files_verified": 132,
+  "fresh_tests_passed": 51,
+  "abstract_whitespace_words": 244,
+  "primary_saved_comparisons_verified": 5,
+  "pages": 45,
+  "pdf_sha256": "6db452a9cb545ba60c27789519c27027731d4bf6dd205bcc909497efa03164e0",
+  "source_checks": "references, citations, figures, labels, no PDF TODO/??/NaN/Inf, no overflow",
+  "limits": "No new full numerical or raw-observation rerun. Historical full suite is separate evidence."
+}
