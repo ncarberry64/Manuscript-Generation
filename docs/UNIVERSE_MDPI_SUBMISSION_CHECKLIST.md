@@ -1,74 +1,42 @@
-# Universe (MDPI) Submission Checklist
+# Universe submission checklist
 
-Target journal: **Universe** (MDPI)
-Recommended section: **Cosmology**
-Article type: **Article**
+Target: **Universe**, **Article**, **Cosmology**. No Special Issue is selected without verified matching scope.
 
-## Completed by this branch
+## Prepared
 
-- Geometry-first title tightened for a cosmology audience.
-- Abstract compressed to approximately MDPI research-article length.
-- Eight keywords supplied.
-- Claim-status and falsification ledger retained.
-- Prospective multi-observable test matrix retained.
-- AI-assisted computational workflow disclosed in the manuscript.
-- AI use acknowledged in the back matter.
-- Data/code reproducibility statement added.
-- Universe-specific cover-letter draft added.
-- Full repository regression tests and LaTeX build required before commit.
+- Geometry-first title, 200-word abstract, eight keywords.
+- Methods, conditional mathematical spine, results and four retained negative results, two gates, Discussion and one Conclusion.
+- Explicit n=2/profile-count, coherence and EFT/QFT claim boundaries.
+- Generic LaTeX with numbered references and detailed compatibility appendices.
+- Substantial ChatGPT/Codex research-use disclosure and preprint relationship.
+- Claim ledger, reproducibility guide, hostile-referee audit, gate code/tests and synthetic artifact.
+- Historical parameters, predictions, failures and uncommitted Universe work preserved.
 
-## Must be confirmed by the author before actual submission
+## Norman must personally confirm
 
-1. **Author affiliation and complete postal affiliation**
-   - MDPI expects full affiliation information.
-   - Do not invent an institutional affiliation.
+1. Author name and intended Independent Researcher affiliation (already used before this pass); postal affiliation and corresponding email. No institution or email was invented.
+2. Accurate funding statement; no absence of funding is inferred.
+3. Applicable conflicts or explicit confirmation of none.
+4. Applicable CRediT roles and complete authorship.
+5. Review of retained science, conditional BHSM ownership/coherence and statistical limits; approval of the final manuscript and responsibility for AI-assisted work.
+6. Exact AI model/version details where available, and accuracy of the material-use disclosure.
+7. Relationship between the supplied later title “Topographic Dark Energy: A Ghost-Free Spatially Modulated EFT on S^3(R_H) and the Geometric Resolution of the Hubble Tension” and the title actually published at Preprints.org 202601.1427: **A Hyperspherical Scalar–Topographic Framework for Late-Time Cosmological Anomalies**. Identify any additional versions and assess overlap.
+8. No publication or consideration in another journal; prior MDPI submission/manuscript IDs if any.
+9. Actual journal submission and any associated charges. This pass does not submit or purchase anything.
 
-2. **Funding statement**
-   - If none: confirm â€œThis research received no external funding.â€
-   - If any funding/support existed, disclose it accurately.
+## Scientific/provenance completion
 
-3. **Conflicts of interest**
-   - Confirm whether â€œThe author declares no conflicts of interest.â€ is correct.
+- Recover exact historical SN/2MRS derived inputs and record hashes, transformations and redistribution rights.
+- Recover original homogeneous-localization statistic/threshold/artifact, or retain its reported-prior-failure label.
+- Supply immutable upstream BHSM action exports/citations for a self-contained first-principles ownership claim, or retain conditional scope.
+- Archive the approved exact commit with a permanent URL/DOI; insert it into Data Availability.
+- Freeze survey target/nuisance design and validate coverage/power before claiming a real gate result. A prospective structural paper need not pretend this is complete.
+- Complete author reference/text-overlap review. No independent similarity certification was obtained.
 
-4. **Author Contributions / CRediT**
-   - For a single-author paper, prepare a concise contribution statement
-     covering conceptualization, methodology, software, validation, formal
-     analysis, investigation, data curation, writing, and visualization as
-     applicable.
+## Format and sources
 
-5. **Permanent code/data archive**
-   - Create a tagged release of the exact submission commit.
-   - Prefer a permanent archive/DOI (for example Zenodo) rather than only a
-     mutable Git branch.
-   - Insert the permanent URL/DOI into the Data Availability Statement.
+Checked 2026-09-19/20 against [Universe instructions](https://www.mdpi.com/journal/universe/instructions) and [MDPI LaTeX guidance](https://www.mdpi.com/authors/latex). Free-format initial submission permits consistent references and the required sections. Official guidance lists 2026 templates, but direct retrieval returned HTTP 403 and web retrieval also returned 429. An obsolete third-party class was not substituted.
 
-6. **AI product/version disclosure**
-   - Verify the exact OpenAI products/models that materially contributed to
-     study design, analysis, interpretation, and software.
-   - Update the disclosure if MDPI requests more precise version information.
+The package uses the green generic source. Native current MDPI ACS class conversion is a separate remaining step if required for revision/final submission. The source ZIP includes source, bibliography and figures. Do not upload the entire working repository as the manuscript source ZIP.
 
-7. **Prior preprint disclosure**
-   - Disclose the related Preprints.org cosmology preprint and explain the
-     relationship of this manuscript to it in the submission system/cover
-     letter if required.
-   - Ensure overlapping text is cited/reworked appropriately.
-
-8. **Reference audit**
-   - MDPI references should be numbered in order of first appearance.
-   - Verify DOIs, arXiv identifiers, and dataset citations.
-
-9. **Final template**
-   - Use the current 2026 MDPI LaTeX template at final submission.
-   - If the repository already uses the current MDPI class, retain it.
-   - Otherwise migrate only after the scientific source is frozen.
-
-## Suggested submission positioning
-
-The paper should be presented as a **methodological and predictive cosmology
-Article**, not as a general rejection of EFT/QFT and not as a claim that the
-entire BHSM program is complete.
-
-The editorial pitch is:
-
-geometry-first physical reduction -> one reduced cosmological state ->
-metric/optical propagation -> multiple observables -> explicit falsification.
+**Readiness: prepared for author/referee review as a conditional methodology paper, not ready for actual submission** until required declarations, archive/provenance choices and final approval are resolved. Microscopic closure is not certified.

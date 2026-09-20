@@ -1,4 +1,8 @@
-﻿# Build and validation
+# Historical build notes
+
+For current instructions see [REPRODUCIBILITY](REPRODUCIBILITY.md). Original notes follow for provenance.
+
+# Build and validation
 
 ## Scientific reproducibility
 
@@ -46,7 +50,7 @@ pdflatex -interaction=nonstopmode -halt-on-error main.tex
 
 See:
 
-- `docs/claim_status.md`
+- `docs/CLAIM_STATUS.md`
 - `docs/derivation_ledger.md`
 
 Reference Branch R1 is exploratory and must not be described as a unique BHSM prediction unless its currently free bridge parameters are independently derived.
