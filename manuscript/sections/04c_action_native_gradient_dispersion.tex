@@ -1,0 +1,67 @@
+% BEGIN R1_ACTION_NATIVE_GRADIENT_DISPERSION_V1
+\subsection{Action-native gradient and dispersion audit}
+\label{sec:action-native-gradient-dispersion}
+
+The remaining linear/quadratic stability question was tested directly in the
+same constraint-reduced ADM plus Schutz--Sorkin action used for the
+matter/radiation evolution. No observational amplitude, background parameter,
+local-source normalization, or Gate-7 quantity enters this audit. For scalar
+harmonic number $n\ge2$ we use the closed-$S^3$ eigenvalue
+$q_n=n(n+2)$ and continue only the harmonic factors of the already derived
+quadratic action. At $n=2$ this construction reproduces both the unreduced
+action blocks and the reduced $(M,L,V)$ blocks with zero difference to
+floating precision.
+
+Writing the reduced equations as
+\begin{equation}
+M\ddot x+\Gamma\dot x+\Omega x=0,
+\end{equation}
+the instantaneous dispersion pencil is
+\begin{equation}
+\det\!\left[s^2M+s\Gamma+\Omega\right]=0,
+\qquad
+\Gamma=3HM+\dot M+L-L^T,
+\qquad
+\Omega=3HL+\dot L-V .
+\end{equation}
+This formulation retains the time dependence of the background and the
+antisymmetric velocity mixing rather than inferring stability from the kinetic
+matrix alone.
+
+The reduced kinetic matrix remains positive throughout the explicit scan.
+The original audit through $n=320$ has minimum eigenvalue
+$1.94099322\times10^{-7}$. An additional promotion check on the extended
+principal-symbol sequence through $n=1280$ also remains
+positive, with minimum eigenvalue $1.21879873\times10^{-8}$ at
+$z=0.000$, $n=1280$.
+
+The high-$k$ diagnostic separates ordinary pressureless-matter growth from a
+gradient instability by testing the scaled quantity
+$\mathrm{Re}(s)/\sqrt{k_{\rm phys}^2}$. Extending the harmonic sequence
+from $(40,80,160,320)$ to $(80,160,320,640,1280)$ reduces the extrapolated
+positive intercept from $3.79858666\times10^{-3}$ to $3.84535287\times10^{-4}$,
+supporting convergence toward zero rather than a persistent $O(k)$
+instability. In the extended run the non-radiation propagating branch has
+\begin{equation}
+c_{\rm scalar}^2 \ge 0.910373,
+\end{equation}
+while the radiation branch recovers $c_r^2=1/3$ with maximum absolute
+extrapolation error $3.34943277\times10^{-4}$ over $0\le z\le2.1$.
+
+As an independent closed-Horndeski cross-check, the pure gravity/scalar
+Akama--Kobayashi coefficients remain positive:
+\begin{equation}
+G_{S,2}^{\rm min}=1.47147014\times10^{-3},
+\qquad
+F_{S,2}^{\rm min}=5.03726732\times10^{-1},
+\qquad
+\min(F_{S,2}/G_{S,2})
+=2.590796.
+\end{equation}
+
+We therefore find no ghost or high-$k$ scalar gradient instability in the
+audited frozen R1 domain at linear/quadratic order. This is a numerical
+principal-symbol stability result for the effective closed-FLRW realization;
+it is not a nonlinear-fluid theorem, a proof of ultraviolet completion, or a
+microscopic completion of BHSM.
+% END R1_ACTION_NATIVE_GRADIENT_DISPERSION_V1
