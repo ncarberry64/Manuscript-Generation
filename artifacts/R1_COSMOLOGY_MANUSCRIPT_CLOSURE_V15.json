@@ -1,0 +1,145 @@
+{
+  "background": {
+    "H0_km_s_Mpc": 67.4,
+    "Omega_k0": -0.018,
+    "R_H_Gpc": 33.153131317000515,
+    "status": "CLOSED"
+  },
+  "bao": {
+    "DESI_pair_window_covariance": {
+      "status": "OPEN_DOWNSTREAM_OBSERVATION_OPERATOR"
+    },
+    "historical_R_BS_700_800": {
+      "classification": "HISTORICAL_PHENOMENOLOGICAL_REPRESENTATION",
+      "manuscript_policy": "Do not present 700-800 as the modern action-native prediction. Preserve it as historical motivation/provenance and replace the final test with common canonical state propagation through observable-specific kernels.",
+      "status": "NOT_ACTION_NATIVE_CLOSED"
+    },
+    "historical_background_curvature": {
+      "chi_H0_units": 0.7215060378475321,
+      "classification": "BACKGROUND_DISTANCE_PROJECTION",
+      "delta_BAO_bg": -0.0015617128879513332,
+      "formula": "delta_BAO_bg=-K*chi(z)^2/6",
+      "status": "RETAINED_WITH_REVISED_INTERPRETATION",
+      "z_reference_diagnostic": 0.93
+    },
+    "intrinsic_150Mpc_curvature": {
+      "classification": "INTRINSIC_RULER_CURVATURE_SCALE",
+      "fractional_correction": -3.411788963830743e-06,
+      "r_BAO_Mpc": 150.0,
+      "status": "DIAGNOSTIC_NOT_PREPRINT_1E-3_OBJECT"
+    },
+    "radial": {
+      "F_H": null,
+      "identity": "F_DH_over_rd(z)=-F_H(z) on dln(rd)=0",
+      "status": "OPEN"
+    },
+    "transverse": {
+      "canonical_delta_ln_DM_over_rd_at_z0p93": 0.007849412258189657,
+      "identity": "F_DM_over_rd(z)=F_DL(z) on the retained late-time branch dln(rd)=0",
+      "status": "CLOSED_AS_DISTANCE_RESPONSE"
+    }
+  },
+  "canonical_state": {
+    "Pi2_per_zetaN_anchor": 0.0003102855689222,
+    "X2_high_z": [
+      -0.2646722099677318,
+      0.02300532232546857
+    ],
+    "basis": [
+      "q2=zeta_anchor",
+      "Pi2=2*a_anchor^3*G_S2*zeta_dot_anchor"
+    ],
+    "covariance": [
+      [
+        0.1473126726436218,
+        -0.01239675445025829
+      ],
+      [
+        -0.01239675445025829,
+        0.0010483263574582475
+      ]
+    ],
+    "status": "CLOSED"
+  },
+  "cross_observable_comoving_matter_provenance": [
+    {
+      "Delta_m_comoving": -0.33489699540122814,
+      "z": 0.02
+    },
+    {
+      "Delta_m_comoving": -0.26222226627294065,
+      "z": 0.1
+    },
+    {
+      "Delta_m_comoving": -0.13475374129326756,
+      "z": 0.3
+    },
+    {
+      "Delta_m_comoving": -0.059688850662114656,
+      "z": 0.5
+    },
+    {
+      "Delta_m_comoving": -0.0032702858744050323,
+      "z": 0.8
+    },
+    {
+      "Delta_m_comoving": 0.012995444957002,
+      "z": 1.0
+    },
+    {
+      "Delta_m_comoving": 0.01888233764258307,
+      "z": 1.5
+    },
+    {
+      "Delta_m_comoving": 4.884981308350689e-14,
+      "z": 2.1
+    }
+  ],
+  "date": "2026-09-22",
+  "global_to_local": {
+    "canonical_high_z_state_abs_DeltaH0_km_s_Mpc_at_zstar": 0.01017232949159737,
+    "canonical_high_z_state_predicted_deltaDL_over_DL_at_zstar": -0.00015092476990500548,
+    "empirical_to_global_central_ratio": 125.71363321085762,
+    "interpretation": "The present homogeneous/global canonical state is not a substitute for the empirical local low-z calibration. Local/topographic response must be modeled and tested separately rather than inferred by amplitude substitution.",
+    "status": "GLOBAL_ONLY_REALIZATION_INSUFFICIENT_FOR_LOCAL_CENTRAL_AMPLITUDE"
+  },
+  "low_z_SN": {
+    "classification": "EMPIRICAL_LOCAL_CALIBRATION",
+    "kinematic_abs_DeltaH0_km_s_Mpc": 1.2788004986066615,
+    "observed_deltaDL_over_DL": -0.01897330116627094,
+    "sigma_abs_DeltaH0_km_s_Mpc": 0.2793496234820376,
+    "sigma_deltaDL_over_DL": 0.004144653167389282,
+    "status": "CLOSED_AS_CALIBRATION",
+    "z_star": 0.02
+  },
+  "open_before_future_extension_not_before_manuscript_consolidation": [
+    "exact F_H(z) / radial BAO D_H/r_d kernel",
+    "DESI pair-window and covariance projection",
+    "explicit local/topographic-to-global decomposition sufficient to predict the empirical low-z amplitude",
+    "future independent validation on new data"
+  ],
+  "other_action_native_observables": {
+    "growth_and_Weyl": {
+      "canonical_cross_observable_artifact": "R1_PANTHEON_X2_ACTION_NATIVE_CROSS_OBSERVABLE_V1.json",
+      "status": "DERIVED_AS_CURRENT_R1_CROSS_OBSERVABLE_ROWS"
+    }
+  },
+  "policy": {
+    "historical_failures_preserved": true,
+    "no_repository_scientific_parameter_change": true,
+    "no_retuning": true,
+    "survey_projection_after_cosmic_kernel": true
+  },
+  "schema": "R1-cosmology-manuscript-closure-v15",
+  "source_git": {
+    "branch": "theory/cosmology-universe-mdpi-submission-pass",
+    "starting_head": "f6fb600662d5ab838d72a50d92a830eba5637b5c"
+  },
+  "status": "MANUSCRIPT_CONSOLIDATION_FREEZE",
+  "superseded_intermediate_interpretations": [
+    "canonical Pantheon X2 dotted into legacy/raw (zeta,zeta_N) F_DL rows",
+    "window target bands derived from that mixed-basis construction",
+    "raw dust-transfer rows dotted directly into canonical Pantheon X2",
+    "identifying gauge-invariant long-mode spatial dilation itself with the BAO peak shift"
+  ]
+}
