@@ -1,0 +1,407 @@
+{
+  "RETUNING": false,
+  "branch": "research/coupled-environment-provenance-20260923",
+  "inputs": [
+    {
+      "bytes": 3849,
+      "copy_policy": "exact bytes",
+      "destination": "docs\\research_packets\\2026-09-23\\BHSM_R1_COUPLED_ENVIRONMENTAL_STATE_AUDIT_V1.md",
+      "destination_sha256": "2daba6318dac1509960480f4b4f5d22ccea722616fe3c8ea330446df2f8e7e5a",
+      "sha256": "2daba6318dac1509960480f4b4f5d22ccea722616fe3c8ea330446df2f8e7e5a",
+      "source_path": "C:\\Users\\carbe\\Downloads\\BHSM_R1_COUPLED_ENVIRONMENTAL_STATE_AUDIT_V1.md",
+      "source_repo_HEAD": null,
+      "source_repo_branch": null
+    },
+    {
+      "bytes": 6730,
+      "copy_policy": "exact bytes",
+      "destination": "artifacts\\provenance\\BHSM_R1_COUPLED_ENVIRONMENTAL_STATE_AUDIT_V1.json",
+      "destination_sha256": "9ec2d9e27703a480dfbc062d244b2a0e4cc2343c556c2400c320064312e5977d",
+      "sha256": "9ec2d9e27703a480dfbc062d244b2a0e4cc2343c556c2400c320064312e5977d",
+      "source_path": "C:\\Users\\carbe\\Downloads\\BHSM_R1_COUPLED_ENVIRONMENTAL_STATE_AUDIT_V1.json",
+      "source_repo_HEAD": null,
+      "source_repo_branch": null
+    },
+    {
+      "bytes": 2469,
+      "copy_policy": "exact bytes",
+      "destination": "scripts\\audit_r1_coupled_environmental_state.py",
+      "destination_sha256": "e46669ce107f0f0d210e0468367baedbd0dcb114f1758ca01d64a828227d4bf5",
+      "sha256": "e46669ce107f0f0d210e0468367baedbd0dcb114f1758ca01d64a828227d4bf5",
+      "source_path": "C:\\Users\\carbe\\Downloads\\audit_r1_coupled_environmental_state.py",
+      "source_repo_HEAD": null,
+      "source_repo_branch": null
+    },
+    {
+      "bytes": 4460,
+      "copy_policy": "exact bytes",
+      "destination": "docs\\research_packets\\2026-09-23\\BHSM_R1_ENVIRONMENTAL_SPATIAL_PROVENANCE_V1.md",
+      "destination_sha256": "7be33809557b73f8d271a1927fecf843fe90c12834d97886e528f6c85a07a780",
+      "sha256": "7be33809557b73f8d271a1927fecf843fe90c12834d97886e528f6c85a07a780",
+      "source_path": "C:\\Users\\carbe\\Downloads\\BHSM_R1_ENVIRONMENTAL_SPATIAL_PROVENANCE_V1.md",
+      "source_repo_HEAD": null,
+      "source_repo_branch": null
+    },
+    {
+      "bytes": 6696,
+      "copy_policy": "exact bytes",
+      "destination": "artifacts\\provenance\\BHSM_R1_ENVIRONMENTAL_SPATIAL_PROVENANCE_V1.json",
+      "destination_sha256": "9fb39964ac1fcba523648283f48c61c194f0048c52e368449f837f6b648f7e5d",
+      "sha256": "9fb39964ac1fcba523648283f48c61c194f0048c52e368449f837f6b648f7e5d",
+      "source_path": "C:\\Users\\carbe\\Downloads\\BHSM_R1_ENVIRONMENTAL_SPATIAL_PROVENANCE_V1.json",
+      "source_repo_HEAD": null,
+      "source_repo_branch": null
+    },
+    {
+      "bytes": 7175,
+      "copy_policy": "external reference; not copied",
+      "destination": null,
+      "destination_sha256": null,
+      "sha256": "1d473f91b64430494a96d17b548275105c8647bf773084243d7741808a6bbe1d",
+      "source_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\BHSM-projector-p0\\docs\\BHSM_COUPLED_SCALE_DEPENDENT_N2_STATE_V1.md",
+      "source_repo_HEAD": "684e5a7926eca9918a2295df6379c99dbda7794d",
+      "source_repo_branch": "codex/cosmological-n2-projector-p0"
+    },
+    {
+      "bytes": 31812,
+      "copy_policy": "external reference; not copied",
+      "destination": null,
+      "destination_sha256": null,
+      "sha256": "2fa111dae038db800ae03c816031b8588f900a0d02bb2f999f452b81945866e9",
+      "source_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\BHSM-projector-p0\\artifacts\\BHSM_COUPLED_SCALE_DEPENDENT_N2_STATE_V1.json",
+      "source_repo_HEAD": "684e5a7926eca9918a2295df6379c99dbda7794d",
+      "source_repo_branch": "codex/cosmological-n2-projector-p0"
+    },
+    {
+      "bytes": 7664,
+      "copy_policy": "external reference; not copied",
+      "destination": null,
+      "destination_sha256": null,
+      "sha256": "fdd193692a5b191bb6538f4fac609d1f7435c1eff0f855f8b5cca31ae7274599",
+      "source_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\docs\\BHSM_GLOBAL_ACTION_X2_SELECTION_V1.md",
+      "source_repo_HEAD": "684e5a7926eca9918a2295df6379c99dbda7794d",
+      "source_repo_branch": "codex/g7-vector-endpoint-final-closure"
+    },
+    {
+      "bytes": 178954,
+      "copy_policy": "external reference; not copied",
+      "destination": null,
+      "destination_sha256": null,
+      "sha256": "357fe95e918c14a4112d54ea49654a50a0c0c39294ee34b25785ca9b743e193c",
+      "source_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\artifacts\\BHSM_GLOBAL_ACTION_X2_SELECTION_V1.json",
+      "source_repo_HEAD": "684e5a7926eca9918a2295df6379c99dbda7794d",
+      "source_repo_branch": "codex/g7-vector-endpoint-final-closure"
+    },
+    {
+      "bytes": 8677,
+      "copy_policy": "external reference; not copied",
+      "destination": null,
+      "destination_sha256": null,
+      "sha256": "7c8e521f485f5eb33a45f9d3ab100b5aec504be2fb510052d2bed18778ceafe7",
+      "source_path": "C:\\Users\\carbe\\Downloads\\CODEX_BHSM_R1_PROVENANCE_HANDOFF_20260923.json",
+      "source_repo_HEAD": null,
+      "source_repo_branch": null
+    },
+    {
+      "bytes": 12815,
+      "copy_policy": "exact bytes",
+      "destination": "code\\action_native_matter_n2.py",
+      "destination_sha256": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+      "sha256": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+      "source_path": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\coupled-environment-provenance-20260923\\code\\action_native_matter_n2.py",
+      "source_repo_HEAD": "083e14654d1b81b3853484b48e132bd5bc41567c",
+      "source_repo_branch": "research/coupled-environment-provenance-20260923"
+    },
+    {
+      "bytes": 3674,
+      "copy_policy": "exact bytes",
+      "destination": "code\\background.py",
+      "destination_sha256": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+      "sha256": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+      "source_path": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\coupled-environment-provenance-20260923\\code\\background.py",
+      "source_repo_HEAD": "083e14654d1b81b3853484b48e132bd5bc41567c",
+      "source_repo_branch": "research/coupled-environment-provenance-20260923"
+    },
+    {
+      "bytes": 4724,
+      "copy_policy": "exact bytes",
+      "destination": "code\\closed_horndeski_n2.py",
+      "destination_sha256": "0d7e596ae40bd01ba9331128afdda9d163e52c955096f70209f06975e197f36d",
+      "sha256": "0d7e596ae40bd01ba9331128afdda9d163e52c955096f70209f06975e197f36d",
+      "source_path": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\coupled-environment-provenance-20260923\\code\\closed_horndeski_n2.py",
+      "source_repo_HEAD": "083e14654d1b81b3853484b48e132bd5bc41567c",
+      "source_repo_branch": "research/coupled-environment-provenance-20260923"
+    },
+    {
+      "bytes": 1239,
+      "copy_policy": "exact bytes",
+      "destination": "preregistration\\prediction_manifest.json",
+      "destination_sha256": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+      "sha256": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+      "source_path": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\coupled-environment-provenance-20260923\\preregistration\\prediction_manifest.json",
+      "source_repo_HEAD": "083e14654d1b81b3853484b48e132bd5bc41567c",
+      "source_repo_branch": "research/coupled-environment-provenance-20260923"
+    }
+  ],
+  "manuscript_files_changed": false,
+  "origin_main_before_branch_creation": "083e14654d1b81b3853484b48e132bd5bc41567c",
+  "review_clarifications": [
+    "rank(E_i)<=1 is sufficient for the environmental contribution only. The total state requires X_i on the same profile (or an independently derived cancellation).",
+    "Rank one at each separate epoch is not sufficient for a fixed common profile across epochs; test the vertically stacked trajectory.",
+    "The fourth stacked temporal singular direction is numerical and unit-dependent; no error-calibrated physical detectability claim follows.",
+    "BHSM source order delta_m,v_m,delta_r,v_r is explicitly permuted to delta_m,delta_r,v_m,v_r.",
+    "Option-1 failure and global-action/P0 negative numerical audits are preserved."
+  ],
+  "schema": "BHSM-R1-coupled-state-source-manifest-v1",
+  "validation": {
+    "atol": 1e-08,
+    "independent_bhsm_comparison": [
+      {
+        "max_abs_difference": 6.4952210276914e-13,
+        "rank": 2,
+        "z": 1.5
+      },
+      {
+        "max_abs_difference": 1.0894701807373508e-11,
+        "rank": 2,
+        "z": 1.0
+      },
+      {
+        "max_abs_difference": 5.773159728050814e-14,
+        "rank": 2,
+        "z": 0.8
+      },
+      {
+        "max_abs_difference": 3.9603043067160115e-13,
+        "rank": 2,
+        "z": 0.5
+      },
+      {
+        "max_abs_difference": 2.693678613496786e-13,
+        "rank": 2,
+        "z": 0.3
+      },
+      {
+        "max_abs_difference": 8.83182416089312e-14,
+        "rank": 2,
+        "z": 0.0
+      }
+    ],
+    "rank_status_agreement": true,
+    "reproduction": {
+      "environment_inputs": [
+        "delta_m",
+        "delta_r",
+        "v_m",
+        "v_r"
+      ],
+      "output_pair": [
+        "zeta",
+        "zeta_dot"
+      ],
+      "physical_anchor_coordinates": [
+        "q2",
+        "Pi2",
+        "delta_m",
+        "delta_r",
+        "v_m",
+        "v_r"
+      ],
+      "repo": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\coupled-environment-provenance-20260923",
+      "retuning": false,
+      "rows": [
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.005726364051618557,
+              -1.6329298768731386e-05,
+              0.5713749193462629,
+              0.0006851792596026078
+            ],
+            [
+              -0.12495670638562921,
+              -0.00033186737414878624,
+              9.63550856720591,
+              0.011548220586678178
+            ]
+          ],
+          "matter_delta_v_determinant": 0.016220698154553,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            9.653251925367062,
+            0.001680339695412616
+          ],
+          "z": 1.5
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.021643081590072718,
+              -5.654815146089537e-05,
+              1.5066668821108522,
+              0.0018048245628067283
+            ],
+            [
+              -0.14866646315158555,
+              -0.0003663634170229678,
+              7.053209547795379,
+              0.008431131213741245
+            ]
+          ],
+          "matter_delta_v_determinant": 0.07133764679623199,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            7.213900252051329,
+            0.009888945701962245
+          ],
+          "z": 1.0
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.030566904657280573,
+              -7.846812398000463e-05,
+              1.8970294610219434,
+              0.002271043400285878
+            ],
+            [
+              -0.1353124526317867,
+              -0.00033205794199353577,
+              5.481179687902962,
+              0.006539865359438435
+            ]
+          ],
+          "matter_delta_v_determinant": 0.08914901215608283,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            5.801819307782455,
+            0.01536575095052594
+          ],
+          "z": 0.8
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.04542871119963199,
+              -0.00011519600405721474,
+              2.439335539414885,
+              0.002916863547046169
+            ],
+            [
+              -0.10107364155681448,
+              -0.0002528083327346914,
+              3.341551497764721,
+              0.0039699838033124425
+            ]
+          ],
+          "matter_delta_v_determinant": 0.09475014799696753,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            4.138611377375887,
+            0.022894278463350765
+          ],
+          "z": 0.5
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.055409830904979744,
+              -0.00014052173927155582,
+              2.7511592058195453,
+              0.0032865954491222015
+            ],
+            [
+              -0.07474472735810496,
+              -0.0001929534809650937,
+              2.210056004611378,
+              0.002614346764236368
+            ]
+          ],
+          "matter_delta_v_determinant": 0.08317581525167089,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            3.530062897050504,
+            0.023562242606567755
+          ],
+          "z": 0.3
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.06462024231463027,
+              -0.00016484647452593814,
+              3.011281114858877,
+              0.0035934523004552818
+            ],
+            [
+              -0.04993854202821581,
+              -0.00013547845242423186,
+              1.3486270271576708,
+              0.0015856357751582654
+            ]
+          ],
+          "matter_delta_v_determinant": 0.06323038322616442,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            3.300443436668352,
+            0.019158256820040208
+          ],
+          "z": 0.1
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.06793558819975805,
+              -0.00017395262251720448,
+              3.0994714234657694,
+              0.0036969876165786906
+            ],
+            [
+              -0.04109117219781704,
+              -0.00011436396342268531,
+              1.0767991249782747,
+              0.0012621282848244413
+            ]
+          ],
+          "matter_delta_v_determinant": 0.05420793205546118,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            3.2821129940578375,
+            0.016516272948432654
+          ],
+          "z": 0.02
+        },
+        {
+          "U_XE_zeta_zdot": [
+            [
+              -0.06872411944583712,
+              -0.00017615479994463474,
+              3.120062940196337,
+              0.0037211131074106536
+            ],
+            [
+              -0.039002614377492084,
+              -0.00010930613328820679,
+              1.0149610914881322,
+              0.0011886455010765582
+            ]
+          ],
+          "matter_delta_v_determinant": 0.05193830440567427,
+          "rank_rel_1e-8": 2,
+          "singular_values": [
+            3.2819122208707943,
+            0.015825725305254387
+          ],
+          "z": 0.0
+        }
+      ],
+      "schema": "BHSM-R1-coupled-environmental-state-audit-local-v1",
+      "seed_inverse_residual": 2.220446049250313e-16,
+      "topographic_seed_recovery_max_abs_difference": 6.010049168214747e-14
+    },
+    "reproduction_json_sha256": "5ca163e646a98c556bad8a66c0a0d2ab063acd5c0e228da8c9a0d6a69bfc394d",
+    "rtol": 2e-06,
+    "saved_audit_comparison": "PASS",
+    "two_runs_byte_identical": true
+  }
+}
