@@ -1,0 +1,220 @@
+{
+  "schema": "BHSM-R1-coupled-environmental-state-audit-v1",
+  "status": "INDEPENDENT_RECONSTRUCTION_SUPPORTS_FULL_TEMPORAL_ENVIRONMENT_TO_TOPOGRAPHIC_RANK",
+  "basis_at_anchor": {
+    "physical_coordinates": [
+      "q2=zeta",
+      "Pi2=2*a^3*G_S2*zeta_dot",
+      "delta_m_ADM",
+      "delta_r_ADM",
+      "v_m_ADM",
+      "v_r_ADM"
+    ],
+    "canonical_state": [
+      "zeta",
+      "D_m",
+      "D_r",
+      "p_zeta",
+      "p_Dm",
+      "p_Dr"
+    ],
+    "physical_to_canonical_seed_matrix_columns": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        0.0,
+        0.0,
+        0.75,
+        0.0,
+        0.0
+      ],
+      [
+        0.01848411339522044,
+        0.999999999999974,
+        -0.2960538828801201,
+        -0.0002664484945921206,
+        -0.002189547575503604,
+        -2.627457090604319e-06
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.93,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.001116
+      ]
+    ],
+    "topographic_seed_recovery_max_abs_difference": 3.1e-13,
+    "physical_coordinate_inverse_residual_max_abs": 2.3e-16
+  },
+  "independent_code_reproduction": {
+    "stored_full_propagator_z1p5_max_abs_difference": 3.1e-09,
+    "meaning": "The reconstruction reproduces the retained R1 six-state propagator to numerical integration tolerance."
+  },
+  "temporal_result": {
+    "output_pair": "(zeta,zeta_dot); rank is unchanged by nonzero rescaling to (zeta,2*a^3*G_S2*zeta_dot)",
+    "environment_inputs": [
+      "delta_m",
+      "delta_r",
+      "v_m",
+      "v_r"
+    ],
+    "rank_at_anchor_z2p1": 0,
+    "rank_for_sampled_later_epochs": 2,
+    "rows": [
+      {
+        "z": 1.5,
+        "s1": 9.653251925599601,
+        "s2": 0.0016803395672176443,
+        "cond": 5744.822126389454,
+        "matter_det": 0.016220696917445952,
+        "U_XE_zeta_zdot": [
+          [
+            -0.005726364744080737,
+            -1.63292991092795e-05,
+            0.5713749193487344,
+            0.0006851792596075587
+          ],
+          [
+            -0.1249567158985313,
+            -0.0003318673795421527,
+            9.63550856731493,
+            0.01154822058674445
+          ]
+        ]
+      },
+      {
+        "z": 1.0,
+        "s1": 7.2139002519911655,
+        "s2": 0.009888944613743924,
+        "cond": 729.4914203448051,
+        "matter_det": 0.07133763894533021,
+        "U_XE_zeta_zdot": [
+          [
+            -0.02164308250686356,
+            -5.654815196443127e-05,
+            1.506666882113331,
+            0.001804824562807904
+          ],
+          [
+            -0.1486664622316941,
+            -0.0003663634171621612,
+            7.053209547748362,
+            0.008431131213668352
+          ]
+        ]
+      },
+      {
+        "z": 0.8,
+        "s1": 5.8018193077422415,
+        "s2": 0.015365749698585512,
+        "cond": 377.581271434893,
+        "matter_det": 0.08914900489193102
+      },
+      {
+        "z": 0.5,
+        "s1": 4.13861137735797,
+        "s2": 0.02289427728480537,
+        "cond": 180.7705622620685,
+        "matter_det": 0.09475014311900931,
+        "U_XE_zeta_zdot": [
+          [
+            -0.04542871187177878,
+            -0.0001151960044708709,
+            2.439335539413606,
+            0.00291686354704213
+          ],
+          [
+            -0.101073640477799,
+            -0.0002528083321520985,
+            3.341551497758887,
+            0.00396998380330655
+          ]
+        ]
+      },
+      {
+        "z": 0.3,
+        "s1": 3.5300628970470767,
+        "s2": 0.023562241655104597,
+        "cond": 149.81863562554173,
+        "matter_det": 0.0831758118928646
+      },
+      {
+        "z": 0.1,
+        "s1": 3.3004434366720603,
+        "s2": 0.019158256184796826,
+        "cond": 172.2726434408551,
+        "matter_det": 0.06323038112964359
+      },
+      {
+        "z": 0.02,
+        "s1": 3.282112994062726,
+        "s2": 0.016516272436057335,
+        "cond": 198.71995977115355,
+        "matter_det": 0.054207930373863775
+      },
+      {
+        "z": 0.0,
+        "s1": 3.281912220875879,
+        "s2": 0.015825724821563626,
+        "cond": 207.378319658639,
+        "matter_det": 0.05193830281831708,
+        "U_XE_zeta_zdot": [
+          [
+            -0.0687241198829448,
+            -0.0001761548002226608,
+            3.120062940194157,
+            0.003721113107406022
+          ],
+          [
+            -0.03900261401095505,
+            -0.0001093061330648988,
+            1.014961091488223,
+            0.001188645501077823
+          ]
+        ]
+      }
+    ],
+    "key_fact": "The matter-only subblock [delta_m,v_m] has nonzero 2x2 determinant at every reported later epoch, so radiation is not required to span both temporal topographic directions."
+  },
+  "spatial_result": {
+    "n2_scalar_harmonic_dimension": 9,
+    "isotropic_factorization": "For an SO(4)-symmetric R1 background the same temporal transfer acts independently on each n=2 harmonic component.",
+    "full_relation": "X_A(z)=U_XX(z) X_A(z_i)+U_XE(z) E_A(z_i), separately for A=1..9.",
+    "matrix_form": "X(z) [2x9] = U_XX [2x2] X_i [2x9] + U_XE [2x4] E_i [4x9].",
+    "single_profile_condition": "The one-profile reduction X=x e^T requires rank_spatial(X)<=1.",
+    "consequence": "Because rank(U_XE)=2, generic multi-pattern environmental data can produce spatial rank 2. A single common profile/axis therefore requires aligned/factorized environmental n=2 data or an additional justified spatial reduction.",
+    "orientation_statement": "The isotropic temporal dynamics can transmit an orientation already present in the environmental n=2 coefficients; they do not create a preferred axis from an isotropic state."
+  },
+  "interpretation": {
+    "what_is_closed": "Within the frozen R1 late-time linear system, environmental density/velocity data can source both independent temporal components of the projected topographic state.",
+    "what_is_not_closed": "The physical initial/environmental conditions, their n=2 spatial coefficient tensors, and the microscopic BHSM-to-R1 normalization remain unspecified.",
+    "state_selection_reframe": "An isolated one-dimensional attractor is unnecessary. The correct prediction problem is coupled initial-state specification plus a justified spatial reduction.",
+    "important_anchor_limit": "Since the environmental basis is defined at z=2.1, this calculation does not derive the z=2.1 X2 from earlier environmental history. It shows how specified environmental data at the anchor affect later topographic evolution."
+  },
+  "retuning": false
+}
