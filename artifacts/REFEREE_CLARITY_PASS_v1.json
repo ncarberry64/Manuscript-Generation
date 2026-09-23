@@ -1,0 +1,12 @@
+{
+  "schema": "referee-clarity-pass-v1",
+  "scientific_parameters_changed": false,
+  "prediction_manifest_changed": false,
+  "additions": [
+    "claim status ledger",
+    "explicit falsification conditions",
+    "prospective multi-observable test matrix",
+    "EFT/QFT overclaim audit"
+  ],
+  "claim_classes": ["derived","calibrated_or_conditional","rejected","open"]
+}

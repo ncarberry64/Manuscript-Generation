@@ -1,0 +1,61 @@
+{
+    "schema":  "bhsm-native-r1-effective-representation-gate-v1",
+    "physical_dimension":  2,
+    "BHSM_state":  [
+                       "q2",
+                       "Pi2"
+                   ],
+    "effective_state":  [
+                            "zeta2",
+                            "Pi_zeta2"
+                        ],
+    "required_conditions":  [
+                                "invertible_state_map_U",
+                                "same_physical_n2_harmonic",
+                                "positive_mapped_kinetic_coefficient",
+                                "consistent_constraint_solution",
+                                "single_calibration_only",
+                                "no_duplicate_scalar_degree_of_freedom"
+                            ],
+    "exact_effective_n2_kernel":  {
+                                      "status":  "AVAILABLE",
+                                      "kinetic":  "G_S2=Mpl2*5*Dkin/[Dkin+10*(1-alphaB_BS/2)^2]",
+                                      "lapse_constraint":  "AVAILABLE",
+                                      "shift_constraint":  "AVAILABLE"
+                                  },
+    "curved_newtonian_DAE":  {
+                                 "status":  "COMPATIBILITY_AUDIT_ONLY",
+                                 "foundational_for_predictions":  false
+                             },
+    "provenance_track":  "SEVEN_RETAINED_ACTION_MATRIX_ELEMENTS_REMAIN_OPEN",
+    "reduced_propagator":  {
+                               "anchor_redshift":  2.1,
+                               "state":  [
+                                             "zeta",
+                                             "d_zeta_dN"
+                                         ],
+                               "artifact":  "artifacts/R1_n2_reduced_propagator.json",
+                               "exact_constraints":  true,
+                               "full_matter_radiation_response":  "OPEN",
+                               "observable_kernels":  "OPEN"
+                           },
+    "growth_lensing_transfer":  {
+                                    "artifact":  "artifacts/R1_n2_growth_lensing_transfer.json",
+                                    "dust_growth_state_kernel":  "EVALUATED",
+                                    "local_weyl_state_kernel":  "EVALUATED",
+                                    "Newtonian_curved_DAE_used":  false,
+                                    "luminosity_distance_light_cone":  "OPEN",
+                                    "calibrated_single_state":  "OPEN"
+                                },
+    "prediction_track":  "DL_GROWTH_WEYL_STATE_SPACE_KERNELS_EVALUATED_BRANCH_DIRECTION_OPEN",
+    "luminosity_distance_transfer":  {
+                                         "artifact":  "artifacts/R1_n2_luminosity_distance_kernel.json",
+                                         "gauge_invariant_DL_state_kernel":  "EVALUATED",
+                                         "closed_S3_geometry":  "EVALUATED",
+                                         "distance_duality":  "EVALUATED",
+                                         "calibration_rank":  1,
+                                         "phase_space_dimension":  2,
+                                         "normalized_mode_direction":  "OPEN"
+                                     },
+    "claim_until_both_close":  "BHSM_NATIVE_CONDITIONAL_STATE_SPACE_PREDICTIONS"
+}

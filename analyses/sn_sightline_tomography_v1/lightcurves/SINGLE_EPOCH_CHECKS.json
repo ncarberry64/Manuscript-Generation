@@ -1,0 +1,7 @@
+{
+  "direct_retained_epoch_refit_comparisons": 25,
+  "max_parameter_difference": 7.549516567451064e-15,
+  "groups": 132494,
+  "successful": 132491,
+  "method": "exact local-linear delete-MJD GLS; simultaneous bands grouped; not nonlinear refits"
+}

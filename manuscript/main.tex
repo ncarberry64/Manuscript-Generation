@@ -4,14 +4,13 @@
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb,mathtools,booktabs}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[bookmarks=false,hidelinks,pdfusetitle]{hyperref}
 \usepackage[numbers,sort&compress]{natbib}
 \setlength{\emergencystretch}{2em}
 
-\title{Boundary-Mode Topographic Cosmology:\\
-A Reduced-Response Bridge from Berger--Hopf Geometry to Late-Time Structure Growth}
+\title{Constraint-Reduced Cosmology on a Closed Hypersphere: Berger--Hopf Optical Transfer and Falsifiable Cross-Observable Predictions}
 \author{Norman P. Carberry\\Independent Researcher}
-\date{Working draft --- September 2026}
+\date{September 2026}
 
 \newcommand{\Mpl}{M_{\rm Pl}}
 \newcommand{\OmK}{\Omega_k}
@@ -22,24 +21,77 @@ A Reduced-Response Bridge from Berger--Hopf Geometry to Late-Time Structure Grow
 \maketitle
 
 \begin{abstract}
-We develop a late-time cosmological bridge between a scalar topographic effective field theory on compact spatial sections \(S^3(R_H)\) and the constraint-reduced response architecture of the Berger--Hopf program. A closed-FLRW gauge audit changes the identification of the relevant infrared carrier: the first nonconstant scalar harmonic in our convention, \(n=1\), maps to the exceptional \(N=2\) sector of standard closed-universe perturbation theory and is nondynamical or pure gauge in the regular single-field covariant scalar sector. The first propagating scalar harmonic is therefore our \(n=2\) (\(N=3\) in the alternative convention). This does not remove the sky-dipole mechanism. A general degree-two scalar harmonic on \(S^3\) contains observer-sky monopole, dipole, and quadrupole pieces, and a pure cross-term subspace produces an exact sky dipole proportional to \(\sin[2\psi(z)]\,\hat{\mathbf n}\!\cdot\!\hat{\mathbf p}\). The reduced Schur/Feshbach response can selectively soften this first physical harmonic while stiffening all propagating \(n\ge3\) modes when \(1/15<\ell^2<1/8\). Reference Branch R1 and its frozen numerical manifest are left unchanged because the background and high-\(n\) growth calculation do not depend on the identity of the curvature-scale carrier. The theoretical harmonic identification is amended prospectively before comparison with the targeted independent data. The resulting framework is falsifiable through curvature, the fixed dipole axis and radial envelope, compact-harmonic hierarchy, growth, and lensing tests.
+We develop a conditional cosmological response chain on a closed $S^3$
+parent, resolving constraints and gauge redundancy before assigning physical
+degrees of freedom. The regular one-scalar quotient removes the exceptional
+$n=1$ sector; the first ordinary physical scalar carrier is $n=2$.
+One selected normalized profile has a two-component phase-space state,
+while its observer-sky dipole is exactly proportional to
+$\sin(2\psi)\hat{\mathbf n}\cdot\hat{\mathbf p}$.
+Schur/Feshbach reduction supplies the induced metric response, shared
+by growth, Weyl/lensing and luminosity-distance kernels at fixed observed
+redshift. Jacobi/Sachs propagation provides a seven-state optical system
+and transport equations for its mean and covariance. For $m$ coherent
+global amplitudes and fixed response, the isolated topographic contribution
+satisfies $\operatorname{rank}C_{\rm topo}\le m$; a local noise field alone
+imposes no such channel count. Two prospective rejection gates test a
+shared deterministic state and the minimal coherent one-amplitude covariance,
+each at $p<0.01$ under a preregistered survey design.
+A frozen retrospective interpretation study reconstructs source diagnostics
+for 3,521 supernova rows and adds independent foreground information.
+With $\Delta\chi^2=\chi^2_{\rm frozen}-\chi^2_{\rm null}$, conditional held-out
+Pantheon+ source/environment adjustment gives $-0.883$, whereas DES transfer
+gives $+1.321$. Fixing an external peculiar-velocity mean at coefficient one
+gives $-4.909$ for Pantheon+, but incomplete joint uncertainty propagation
+makes this sensitivity only. Aggregate shell tests do not localize residual
+correlations. The current data neither establish a coherent topographic
+signal nor reject the conditional framework. Absolute source normalization,
+complete matter--radiation stability, the independently selected state
+direction and joint observational covariance remain open. No scientific
+parameter is retuned to improve these results.
 \end{abstract}
+\noindent\textbf{Keywords:} cosmology; hyperspherical geometry; constrained dynamics; optical scalar equations; luminosity distance; weak lensing; stochastic geometry; falsifiable cosmology
+
 
 \input{sections/01_introduction}
+\input{sections/01a_geometry_before_fields}
+\input{sections/01c_reproducibility_and_ai_workflow}
+\input{sections/01b_claim_status_and_falsifiability}
 \input{sections/02_hyperspherical_parent}
 \input{sections/03_reduced_response}
+\input{sections/04aa_bhsm_native_n2_transport}
+\input{sections/04aj_r1_n2_reduced_propagator}
+\input{sections/04ak_r1_n2_growth_lensing_transfer}
+\input{sections/04al_r1_n2_luminosity_distance_kernel}
+\input{sections/04ao_bhsm_optical_transfer}
+\input{sections/04as_bhsm_optical_low_rank_covariance}
+\input{sections/04at_effective_representation_audit}
+\input{sections/09_results_R1}
+\input{sections/09d_sn_sightline_tomography}
+\input{sections/09c_negative_results}
+\input{sections/07_predictions_falsification}
+\input{sections/08b_make_or_break_prediction}
+\input{sections/08a_prospective_test_matrix}
+\input{sections/10_discussion}
+\input{sections/09_geometry_first_conclusion}
+\input{sections/09b_universe_submission_back_matter}
+\clearpage
+\appendix
 \input{sections/04_scalar_metric_bridge}
 \input{sections/04a_closed_horndeski_n2}
+\input{sections/04c_action_native_gradient_dispersion}
 \input{sections/04b_matter_sourced_n2}
+\input{sections/04c_bianchi_dictionary_n2}
 \input{sections/05_harmonic_selection}
 \input{sections/06_observables}
-\input{sections/07_predictions_falsification}
+\input{sections/04am_bhsm_los_topographic_transfer}
+\input{sections/04an_2mrs_foreground_transfer}
+\input{sections/04ap_bhsm_optical_constitutive}
+\input{sections/04aq_bhsm_optical_hessian_projection}
+\input{sections/04ar_bhsm_optical_current_gate}
 \input{sections/08_numerical_protocol}
-\input{sections/09_results_R1}
 \input{sections/09a_reference_figures}
-\input{sections/10_discussion}
-\input{sections/11_conclusions}
-
+\clearpage
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 \end{document}

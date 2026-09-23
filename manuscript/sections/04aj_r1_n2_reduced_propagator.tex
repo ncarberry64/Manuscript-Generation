@@ -1,0 +1,30 @@
+\section{First numerical R1 physical-$n=2$ reduced propagator}
+\label{sec:r1-n2-reduced-propagator}
+
+The conditional reference response is evaluated at the reduced gravity--scalar level. For the physical $n=2$ harmonic, $-(\mathcal D^2+3K)=5K$.
+
+The exact reduced equation integrated here is
+\begin{equation}
+\boxed{
+\zeta_{,NN}
++\left(3+\frac{d\ln H}{dN}+\frac{d\ln\mathcal G_{S,2}}{dN}\right)\zeta_{,N}
++\frac{5K}{a^2H^2}\frac{\mathcal F_{S,2}}{\mathcal G_{S,2}}\zeta=0.
+}
+\end{equation}
+
+The fundamental matrix is normalized to the identity at $z=2.1$ in the state $(\zeta,d\zeta/dN)^T$.
+
+\begin{equation}
+U(0,2.1)=
+\begin{pmatrix}
+-0.186499277 & 0.019664322\\
+0.013019584 & -0.005651284
+\end{pmatrix}.
+\end{equation}
+
+Across $0\le z\le2.1$ the numerical scan gives $\min\mathcal G_{S,2}=1.471470\times10^{-3}$ and $\min\mathcal F_{S,2}=5.037267\times10^{-1}$.
+The maximum absolute residual of the exact lapse/shift constraints over both fundamental solutions is $2.720\times10^{-14}$, and the Liouville determinant identity is reproduced with relative residual $4.171\times10^{-14}$.
+
+\subsection{Claim boundary}
+This is the first numerical phase-space transfer kernel for the physical $n=2$ R1 mode.  It uses the exact reduced closed-Horndeski $n=2$ kinetic coefficient and constraints.
+The current $\mathcal F_{S,2}$ implementation is explicitly the gravity--scalar expression; the complete matter+radiation scalar stability/response system is not yet included.  Consequently this result is not yet the directional $f\sigma_8$, lensing, or luminosity-distance observable kernel.

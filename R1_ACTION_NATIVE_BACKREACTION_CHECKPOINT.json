@@ -1,0 +1,181 @@
+{
+  "schema": "R1-action-native-checkpoint-v1",
+  "status": "USAGE_CHECKPOINT_NOT_CERTIFIED",
+  "branch": "theory/cosmology-universe-mdpi-submission-pass",
+  "commit_at_capture": "8d0d4877a0de8a9145ed4175d25cba7111315ebe",
+  "new_files_committed": false,
+  "derivation_file": "docs/R1_ACTION_NATIVE_MATTER_BACKREACTION_V1_DERIVATION.md",
+  "module": "code/action_native_matter_n2.py",
+  "numerical_artifact": "artifacts/R1_ACTION_NATIVE_MATTER_BACKREACTION_V1.json",
+  "variables": {
+    "x": [
+      "zeta",
+      "D_m",
+      "D_r"
+    ],
+    "u": [
+      "alpha",
+      "chi",
+      "v_m",
+      "v_r"
+    ],
+    "canonical": [
+      "zeta",
+      "D_m",
+      "D_r",
+      "p_zeta",
+      "p_Dm",
+      "p_Dr"
+    ],
+    "hessian_order": "u,xdot,x"
+  },
+  "action_convention": "Schutz-Sorkin: -integral(sqrt(-g)*rho(n)+J^mu*partial_mu ell); delta ell=mu*v; D=delta rho/(rho+p)+3zeta; w=(0,1/3) exactly",
+  "equations": {
+    "L2": "0.5*u^T*A*u+u^T*(B*xdot+D*x)+0.5*xdot^T*K0*xdot+0.5*x^T*E*x",
+    "A": [
+      [
+        "2Sigma",
+        "2bTheta",
+        "0",
+        "0"
+      ],
+      [
+        "2bTheta",
+        "-2b*kappa",
+        "b*h_m",
+        "b*h_r"
+      ],
+      [
+        "0",
+        "b*h_m",
+        "-b*h_m",
+        "0"
+      ],
+      [
+        "0",
+        "b*h_r",
+        "0",
+        "-b*h_r"
+      ]
+    ],
+    "B": [
+      [
+        "6Theta",
+        "0",
+        "0"
+      ],
+      [
+        "-2b",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "h_m",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "h_r"
+      ]
+    ],
+    "D": [
+      [
+        "2s+3(h_m+h_r)",
+        "-h_m",
+        "-h_r"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "K0": "diag(-6,0,0)",
+    "E": "diag(2s,0,0)-sum(h_I*w_I*d_I*d_I^T); d_m=(-3,1,0),d_r=(-3,0,1)",
+    "b": "8K/a^2",
+    "s": "5K/a^2",
+    "J": "B*xdot+D*x",
+    "u_star": "-solve(A,J)",
+    "M": "K0-B^T solve(A,B)",
+    "L": "-B^T solve(A,D)",
+    "V": "E-D^T solve(A,D)",
+    "Lred": "a^3*(0.5*xdot^T*M*xdot+xdot^T*L*x+0.5*x^T*V*x)",
+    "xdot": "solve(M,p/a^3-L*x)",
+    "pdot": "a^3*(L^T*xdot+V*x)"
+  },
+  "quick_owner_checks": [
+    {
+      "z": 2.1,
+      "vacuum_constraint_max_abs": 6.938893903907228e-18,
+      "vacuum_M_minus_2GS": -1.5352302762394743e-16,
+      "full_hessian_asymmetry": 0.0
+    },
+    {
+      "z": 1.0,
+      "vacuum_constraint_max_abs": 4.163336342344337e-17,
+      "vacuum_M_minus_2GS": 3.8510861166685117e-16,
+      "full_hessian_asymmetry": 0.0
+    },
+    {
+      "z": 0.0,
+      "vacuum_constraint_max_abs": 2.0816681711721685e-16,
+      "vacuum_M_minus_2GS": -1.9984014443252818e-15,
+      "full_hessian_asymmetry": 0.0
+    }
+  ],
+  "numerical_summary": {
+    "kinetic_min": 0.002484990502673359,
+    "maxima": {
+      "constraint": 2.852490843577881e-11,
+      "fluid": 4.552020982373506e-10,
+      "no_slip": 9.896439223666675e-10,
+      "gp_local": 363.62409794891755,
+      "symplectic": 4.530213315590004e-09
+    },
+    "aux_abs_det_min": 5.306509559056408e-06,
+    "aux_condition_max": 102918.71085998723,
+    "metric_condition_max": 37.26259447337026
+  },
+  "gates": {
+    "A": "constraints and GS quick checks pass at three points; full vacuum evolution identity not yet automated",
+    "B": "fluid equations derived; native Euler/continuity residual small; full held-out dictionary needs audit",
+    "C": "finite Hessian symmetric by construction and sampled check; independent polynomial Hessian test pending",
+    "D": "four-auxiliary and metric blocks invertible on 401 scan points; no interval proof",
+    "E": "three kinetic eigenvalues positive on 401 points; candidate only, not certified no-ghost/gradient theorem",
+    "F": "no extra coupling inserted; all mixing from common action and Schur complement",
+    "G": "reconstructed action constraints small; no reprojection; independent symbolic Noether/Bianchi certification pending",
+    "H": "FAILED: GP 00/0i comparison max residual/state scale 363.62409794891755; scalar equation not patched"
+  },
+  "unresolved": [
+    "Identify GP comparison mismatch before any observational return; inspect dictionary, source normalization, audit derivative and background bookkeeping independently.",
+    "Verify full vacuum equation including coefficient derivatives against owner formal_fs_n2_gravity_sector.",
+    "Independently differentiate unreduced polynomial to check complete Hessian reciprocity and sequential vs simultaneous Schur.",
+    "Add focused tests; none exists yet for this module.",
+    "Two chosen seed columns are an unfitted initial prescription, not a unique primordial fluid-state derivation.",
+    "No late GP localization artifacts or newer rank-2 observational inference were located in the current checkout; preserve user-reported evidence without claiming fresh verification."
+  ],
+  "frozen_manifest_sha256": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+  "files_sha256": {
+    "code/action_native_matter_n2.py": "dac2c0d0e6f9c6aab8c51e8b5ce4dc00eced630992fe8e1bd35bed113e69625d",
+    "docs/R1_ACTION_NATIVE_MATTER_BACKREACTION_V1_DERIVATION.md": "a05e637cc67ab642d81c2cb7c34bb07b0f45527707567ced9cc38a18154de887",
+    "artifacts/R1_ACTION_NATIVE_MATTER_BACKREACTION_V1.json": "2c5ad80e18243e119fec4950b9ff483e36763181589ad2db5e12f3222d17d51c",
+    "scripts/probe_action_native_checkpoint.py": "46685a09e91e2ced9cecac84e447a5d091e4036cefb9e1478856c86542fbbce0"
+  },
+  "next_command": "python scripts/probe_action_native_checkpoint.py",
+  "next_calculation": "At z=2.1,1,0 compare every canonical basis column against the two GP constraints; print ADM auxiliaries, transformed state/rates and individual residuals. Do not patch dynamics.",
+  "no_observational_fitting": true,
+  "manuscript_modified": false,
+  "user_untracked_inputs": "Pre-existing SN row-order/input files remain untouched and untracked."
+}

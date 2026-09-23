@@ -1,0 +1,22 @@
+{
+  "input_hashes_verified": 2619,
+  "previous_packages": {
+    "BHSM_FULL_COVARIANCE_RESULTS": {
+      "status": "verified unchanged",
+      "files": 20,
+      "failures": []
+    },
+    "BHSM_PV_INTERPRETATION_TESTS": {
+      "status": "verified unchanged",
+      "files": 40,
+      "failures": []
+    }
+  },
+  "no_fitted_velocity_or_common_amplitude_nuisance": true,
+  "source_features_match_final_reconstruction": true,
+  "folds_without_same_SN_training_test_overlap": 25,
+  "null_frozen_loglikelihood_identity": true,
+  "max_mock_mean_standard_error_deviation": 1.95266196417636,
+  "crossfit_projected_covariance_idempotence_error": 3.566125172937973e-11,
+  "previous_frozen_likelihoods_reproduced": true
+}

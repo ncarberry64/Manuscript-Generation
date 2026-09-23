@@ -1,0 +1,24 @@
+# 2MRS luminosity-catalog provenance
+
+The local historical 2MRS_galaxies.csv contained only RA, DEC, and z,
+so it could not evaluate the preregistered luminosity-weighted foreground
+test frozen at commit 7323828.
+
+The recovery step therefore uses the published 2MASS Redshift Survey table:
+
+- VizieR table: J/ApJS/199/26/table3
+- sky coordinates: RAJ2000, DEJ2000
+- redshift coordinate: z = cz / 299792.458 km/s
+- photometric weight field: Kcmag, the extinction-corrected 2MASS Ks
+  magnitude
+- local analysis selection: 0 <= z < 0.05
+
+For compatibility with the already-frozen analysis code, Kcmag is renamed
+to Kmag in the temporary derived CSV. No supernova residual is used in
+this catalog construction, and the luminosity-weight law, shell edges,
+angular smoothing, foreground visibility rule, transfer kernel, controls,
+permutation scheme, and classification thresholds remain exactly those frozen
+in commit 7323828.
+
+The downloaded catalog itself is kept outside Git in the system temporary
+directory. This document records the provenance only.

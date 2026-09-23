@@ -65,4 +65,53 @@ f\sigma_8(k,z)
 D'(k,z)\sigma_{8,\rm ini}.
 \]
 
-The quasi-static limit is used only on scales inside the scalar sound horizon \citep{SawickiBellini2015}. Horizon-scale \(n=1\) observables require the full constrained long-wavelength response and must not be obtained by extrapolating quasi-static formulas into the first physical curvature-scale mode.
+The quasi-static limit is used only on scales inside the scalar sound horizon \citep{SawickiBellini2015}. Horizon-scale \(n=2\) observables require the full constrained long-wavelength response and must not be obtained by extrapolating quasi-static formulas into the first physical curvature-scale mode.
+
+% BEGIN R1_COSMOLOGY_CLOSURE_V15
+\subsection{Current action-native observable status}
+\label{sec:r1-observable-status-v15}
+
+The present R1 observable construction is evaluated on the canonical
+two-component state
+\[
+X_2=(q_2,\Pi_2),
+\qquad
+q_2=\zeta_{\rm anchor},
+\qquad
+\Pi_2=2a_{\rm anchor}^3\mathcal G_{S,2}\dot\zeta_{\rm anchor}.
+\]
+Legacy response rows expressed in $(\zeta,d\zeta/dN)$ coordinates are not
+interchangeable with these canonical rows without the explicit basis
+transformation.
+
+For standard candles the action-native fixed-observed-redshift luminosity-distance
+row is denoted $\mathcal F_{D_L}(z)$. Distance duality then closes the
+transverse late-time BAO distance response,
+\[
+\boxed{\mathcal F_{D_M/r_d}(z)=\mathcal F_{D_L}(z)},
+\qquad d\ln r_d=0.
+\]
+This statement concerns the observed distance to the standard ruler, not an
+intrinsic deformation of the sound horizon.
+
+The historical closed-background expansion
+\[
+\frac{\Delta r_{\rm BAO}}{r_{\rm BAO}}
+\simeq -\frac{K\chi^2(z)}{6}
+\]
+is therefore retained only as a background distance-projection expression. For
+the frozen R1 radius $R_H=33.153\,\mathrm{Gpc}$, curvature across a
+$150\,\mathrm{Mpc}$ ruler itself would produce only
+$-3.412e-06$ at leading order, whereas the Gpc-baseline projection
+at $z=0.93$ is $-1.562e-03$.
+
+The radial observable remains an explicit open kernel:
+\[
+\mathcal F_{D_H/r_d}(z)=-\mathcal F_H(z)
+\]
+on the same late-time branch. We do not promote a numerical derivative of the
+transverse distance kernel to $\mathcal F_H$, because the transverse light-cone
+response contains metric, velocity, and integrated optical terms that need not
+reduce to a single radial remapping. Survey window and covariance projection
+are downstream of these cosmic kernels.
+% END R1_COSMOLOGY_CLOSURE_V15

@@ -1,0 +1,23 @@
+{
+  "scope": "SN sightline manuscript integration; not a rerun of the historical full suite",
+  "focused_junit": "artifacts/sightline_v1_focused_pytest.xml",
+  "focused_passed": 25,
+  "canonical_scientific_snapshot_unchanged": true,
+  "manuscript_pages": 41,
+  "latex_warnings": 0,
+  "isolated_source_archive_rebuild": "passed",
+  "source_archive_entries": 44,
+  "git_snapshot_files_verified": 132,
+  "full_package_reference": "analyses/sn_sightline_tomography_v1/PACKAGE_REFERENCE.json",
+  "visual_review_pages": [
+    17,
+    18,
+    19,
+    20,
+    24,
+    25
+  ],
+  "manuscript/main.pdf_sha256": "fb65f37ede1fb8d967d5c9e7196822334d86ca2589b9c9e2c2210087d6a528eb",
+  "submission/universe-source.zip_sha256": "76ebe12f67da8ea5e36c510869143e66d63a1e1cf6aab55f920b1dd3b4fd117d",
+  "manuscript/sections/09d_sn_sightline_tomography.tex_sha256": "b40af4d68f14bbdcb9913b384edfa6b6293ba7bbefaf4b126dfd45f576969d2f"
+}

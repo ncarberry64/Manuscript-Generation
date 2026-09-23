@@ -1,0 +1,609 @@
+R1 / physical n=2 exact numerical API extraction
+========================================================================
+repo=C:\Users\carbe\AppData\Local\Temp\bhsm-r1-n2-api-worktree
+
+
+########################################################################
+MODULE: background
+########################################################################
+FILE: C:\Users\carbe\AppData\Local\Temp\bhsm-r1-n2-api-worktree\code\background.py
+CONST OMEGA_M0 = 0.31
+CONST OMEGA_R0 = 9e-05
+CONST OMEGA_K0 = -0.018
+CONST KCURV = 0.018
+CONST LAMBDA = 1.0
+CONST Q = 3.0
+CONST Z_INITIAL = 100.0
+CONST A_INITIAL = 0.009900990099009901
+CONST N_INITIAL = -4.61512051684126
+
+--- FUNCTION background._initial_state ---
+SIGNATURE: (v0: 'float')
+def _initial_state(v0: float):
+    phi = 0.0
+    E = math.sqrt(
+        OMEGA_M0*A_INITIAL**-3
+        + OMEGA_R0*A_INITIAL**-4
+        + OMEGA_K0*A_INITIAL**-2
+        + v0/3.0
+    )
+    for _ in range(100):
+        J = 2.0*Q/(9.0*E)
+        A = 6.0*E/LAMBDA
+        v = (-1.0 + math.sqrt(1.0 + 4.0*A*J))/(2.0*A)
+        rho_t = 0.5*v*v + v0 + 6.0*E*v**3/LAMBDA
+        E_new = math.sqrt(
+            OMEGA_M0*A_INITIAL**-3
+            + OMEGA_R0*A_INITIAL**-4
+            + rho_t/3.0
+            - KCURV*A_INITIAL**-2
+        )
+        if abs(E_new-E) < 1e-15*E:
+            E = E_new
+            break
+        E = E_new
+    return np.array([phi, v, E], dtype=float)
+
+
+--- FUNCTION background.rhs ---
+SIGNATURE: (N: 'float', y: 'np.ndarray') -> 'np.ndarray'
+def rhs(N: float, y: np.ndarray) -> np.ndarray:
+    phi, v, E = y
+    a = math.exp(N)
+    rho_m = 3.0*OMEGA_M0*a**-3
+    rho_r = 3.0*OMEGA_R0*a**-4
+    J = v + 6.0*E*v*v/LAMBDA
+
+    A11 = 1.0 + 12.0*E*v/LAMBDA
+    A12 = 6.0*v*v/LAMBDA
+    b1 = Q - 3.0*E*J
+
+    A21 = 2.0*v*v/LAMBDA
+    A22 = -2.0
+    b2 = (
+        rho_m + (4.0/3.0)*rho_r + v*v
+        + 6.0*E*v**3/LAMBDA
+        - 2.0*KCURV*a**-2
+    )
+    det = A11*A22 - A12*A21
+    if abs(det) < 1e-14:
+        raise RuntimeError("Background derivative matrix became singular.")
+
+    dot_v = (b1*A22 - A12*b2)/det
+    dot_E = (A11*b2 - b1*A21)/det
+    return np.array([v/E, dot_v/E, dot_E/E], dtype=float)
+
+
+--- FUNCTION background.integrate ---
+SIGNATURE: (v0: 'float')
+def integrate(v0: float):
+    return solve_ivp(
+        rhs, (N_INITIAL, 0.0), _initial_state(v0),
+        method="DOP853", rtol=2e-13, atol=1e-15,
+        dense_output=True, max_step=0.005,
+    )
+
+
+--- FUNCTION background.shoot_v0 ---
+SIGNATURE: () -> 'float'
+def shoot_v0() -> float:
+    def target(v0):
+        return float(integrate(v0).y[2, -1] - 1.0)
+    return brentq(target, 2.3, 2.5, xtol=1e-13)
+
+
+--- FUNCTION background.diagnostics ---
+SIGNATURE: (sol, v0: 'float', z: 'float')
+def diagnostics(sol, v0: float, z: float):
+    N = math.log(1.0/(1.0+z))
+    phi, v, E = [float(x) for x in sol.sol(N)]
+    a = math.exp(N)
+    dphi_dN, dv_dN, dE_dN = rhs(N, np.array([phi, v, E]))
+    dot_v = dv_dN*E
+    alpha_b = 2.0*v**3/(E*LAMBDA)
+    x = v/E
+    alpha_k = x*x + 6.0*alpha_b
+    dkin = alpha_k + 1.5*alpha_b**2
+    V = v0 - Q*phi
+    rho_t = 0.5*v*v + V + 6.0*E*v**3/LAMBDA
+    p_t = 0.5*v*v - V - 2.0*v*v*dot_v/LAMBDA
+    omega_t = rho_t/(3.0*E*E)
+    w_t = p_t/rho_t
+
+    rho_m = 3.0*OMEGA_M0*a**-3
+    rho_r = 3.0*OMEGA_R0*a**-4
+    friedmann = (E*E + KCURV*a**-2) - (rho_m+rho_r+rho_t)/3.0
+    residual = abs(friedmann)/(3.0*E*E)
+
+    return {
+        "z": z, "E": E, "alpha_B": alpha_b, "D_kin": dkin,
+        "Omega_T": omega_t, "w_T": w_t, "friedmann_residual": residual,
+    }
+
+
+--- DIAGNOSTICS EXECUTION background ---
+<SKIPPED: requires arguments (sol, v0: 'float', z: 'float')>
+
+########################################################################
+MODULE: closed_horndeski_n2
+########################################################################
+FILE: C:\Users\carbe\AppData\Local\Temp\bhsm-r1-n2-api-worktree\code\closed_horndeski_n2.py
+CONST MPL2 = 1.0
+
+--- FUNCTION closed_horndeski_n2.alpha_quantities ---
+SIGNATURE: (v: 'float', E: 'float') -> 'Dict[str, float]'
+def alpha_quantities(v: float, E: float) -> Dict[str, float]:
+    alpha_b = 2.0 * v**3 / (E * background.LAMBDA)
+    alpha_k = (v / E) ** 2 + 6.0 * alpha_b
+    dkin = alpha_k + 1.5 * alpha_b**2
+    return {"alpha_B": alpha_b, "alpha_K": alpha_k, "D_kin": dkin}
+
+
+--- FUNCTION closed_horndeski_n2.theta_sigma ---
+SIGNATURE: (v: 'float', E: 'float') -> 'tuple[float, float]'
+def theta_sigma(v: float, E: float) -> tuple[float, float]:
+    theta = E - v**3 / background.LAMBDA
+    sigma = (
+        0.5 * v**2
+        + 12.0 * E * v**3 / background.LAMBDA
+        - 3.0 * E**2
+    )
+    return theta, sigma
+
+
+--- FUNCTION closed_horndeski_n2.r_ratio ---
+SIGNATURE: (v: 'float', E: 'float') -> 'float'
+def r_ratio(v: float, E: float) -> float:
+    theta, sigma = theta_sigma(v, E)
+    return sigma / theta**2
+
+
+--- FUNCTION closed_horndeski_n2.akama_factor_n2 ---
+SIGNATURE: (v: 'float', E: 'float') -> 'float'
+def akama_factor_n2(v: float, E: float) -> float:
+    r = r_ratio(v, E)
+    return 5.0 / (8.0 + r)
+
+
+--- FUNCTION closed_horndeski_n2.gs_n2 ---
+SIGNATURE: (v: 'float', E: 'float') -> 'float'
+def gs_n2(v: float, E: float) -> float:
+    r = r_ratio(v, E)
+    return 5.0 * (r + 3.0) / (r + 8.0)
+
+
+--- FUNCTION closed_horndeski_n2.gs_n2_from_dkin ---
+SIGNATURE: (v: 'float', E: 'float') -> 'float'
+def gs_n2_from_dkin(v: float, E: float) -> float:
+    q = alpha_quantities(v, E)
+    u = 1.0 - 0.5 * q["alpha_B"]
+    return 5.0 * q["D_kin"] / (q["D_kin"] + 10.0 * u * u)
+
+
+--- FUNCTION closed_horndeski_n2.constraint_solution_n2 ---
+SIGNATURE: (a: 'float', v: 'float', E: 'float', zeta: 'float', zeta_dot: 'float') -> 'tuple[float, float]'
+def constraint_solution_n2(
+    a: float,
+    v: float,
+    E: float,
+    zeta: float,
+    zeta_dot: float,
+) -> tuple[float, float]:
+    theta, _ = theta_sigma(v, E)
+    r = r_ratio(v, E)
+    kappa = background.KCURV / (a * a)
+    denom = r + 8.0
+
+    delta_n = (
+        5.0 / (theta * denom)
+        * (zeta_dot - (kappa / theta) * zeta)
+    )
+    chi = (
+        -(r + 3.0) / (kappa * denom) * zeta_dot
+        - 5.0 / (theta * denom) * zeta
+    )
+    return delta_n, chi
+
+
+--- FUNCTION closed_horndeski_n2.constraint_residuals_n2 ---
+SIGNATURE: (a: 'float', v: 'float', E: 'float', zeta: 'float', zeta_dot: 'float') -> 'tuple[float, float]'
+def constraint_residuals_n2(
+    a: float,
+    v: float,
+    E: float,
+    zeta: float,
+    zeta_dot: float,
+) -> tuple[float, float]:
+    delta_n, chi = constraint_solution_n2(a, v, E, zeta, zeta_dot)
+    theta, sigma = theta_sigma(v, E)
+    kappa = background.KCURV / (a * a)
+
+    c1 = (
+        sigma * delta_n
+        + 8.0 * theta * kappa * chi
+        + 3.0 * theta * zeta_dot
+        + 5.0 * kappa * zeta
+    )
+    c2 = theta * delta_n - zeta_dot - kappa * chi
+    return c1, c2
+
+
+--- FUNCTION closed_horndeski_n2.formal_fs_n2_gravity_sector ---
+SIGNATURE: (N: 'float', y: 'np.ndarray') -> 'float'
+def formal_fs_n2_gravity_sector(N: float, y: np.ndarray) -> float:
+    # Exact pure gravity+scalar Horndeski expression evaluated on the R1
+    # background. This is not yet the complete matter+radiation stability
+    # matrix.
+    _, v, E = [float(x) for x in y]
+    a = math.exp(N)
+    _, dv_dN, dE_dN = background.rhs(N, np.asarray(y, dtype=float))
+
+    theta, sigma = theta_sigma(v, E)
+    dtheta_dN = dE_dN - 3.0 * v * v * dv_dN / background.LAMBDA
+
+    dsigma_dN = (
+        v * dv_dN
+        + 12.0 / background.LAMBDA
+        * (dE_dN * v**3 + 3.0 * E * v * v * dv_dN)
+        - 6.0 * E * dE_dN
+    )
+
+    r = sigma / theta**2
+    dr_dN = dsigma_dN / theta**2 - 2.0 * sigma * dtheta_dN / theta**3
+
+    A = 5.0 / (8.0 + r)
+    dA_dN = -5.0 * dr_dN / (8.0 + r) ** 2
+
+    derivative_term = E / theta * (
+        dA_dN + A - A * dtheta_dN / theta
+    )
+    curvature_term = A * background.KCURV / (
+        a * a * theta * theta
+    )
+    return derivative_term - 1.0 + curvature_term
+
+
+--- FUNCTION closed_horndeski_n2.diagnostics ---
+SIGNATURE: (sol, z: 'float') -> 'dict'
+def diagnostics(sol, z: float) -> dict:
+    N = math.log(1.0 / (1.0 + z))
+    y = np.asarray(sol.sol(N), dtype=float)
+    _, v, E = [float(x) for x in y]
+    a = math.exp(N)
+    alpha = alpha_quantities(v, E)
+    theta, sigma = theta_sigma(v, E)
+    r = sigma / theta**2
+
+    return {
+        "z": z,
+        "theta": theta,
+        "r": r,
+        "D_kin": alpha["D_kin"],
+        "G_S_n2": gs_n2(v, E),
+        "G_S_n2_alpha_identity": gs_n2_from_dkin(v, E),
+        "F_S_n2_gravity_sector_only": formal_fs_n2_gravity_sector(N, y),
+        "kappa": background.KCURV / (a * a),
+    }
+
+
+--- DIAGNOSTICS EXECUTION closed_horndeski_n2 ---
+<SKIPPED: requires arguments (sol, z: 'float') -> 'dict'>
+
+########################################################################
+MODULE: growth
+########################################################################
+FILE: C:\Users\carbe\AppData\Local\Temp\bhsm-r1-n2-api-worktree\code\growth.py
+CONST V0 = 2.3986073449708067
+CONST R1 =   message: The solver successfully reached the end of the integration interval.
+  success: True
+   status: 0
+        t: [-4.615e+00 -4.610e+00 ... -1.205e-04  0.000e+00]
+        y: [[ 0.000e+00  3.990e-09 ...  1.551e-01  1.552e-01]
+            [ 4.540e-04  4.575e-04 ...  2.912e-01  2.912e-01]
+            [ 5.732e+02  5.689e+02 ...  1.000e+00  1.000e+00]]
+      sol: <scipy.integrate._ivp.common.OdeSolution object at 0x000001ABE8F55EF0>
+ t_events: None
+ y_events: None
+     nfev: 13862
+     njev: 0
+      nlu: 0
+CONST OM = 0.31
+CONST OR = 9e-05
+CONST OK = -0.018
+CONST ODE = 0.7079099999999999
+CONST NI = -4.61512051684126
+CONST AI = 0.009900990099009901
+
+--- FUNCTION growth.r1_dlnH_dN ---
+SIGNATURE: (N)
+def r1_dlnH_dN(N):
+    y = R1.sol(N)
+    return float(background.rhs(N, y)[2] / y[2])
+
+
+--- FUNCTION growth.e_lcdm ---
+SIGNATURE: (N)
+def e_lcdm(N):
+    a = math.exp(N)
+    return math.sqrt(OM*a**-3 + OR*a**-4 + OK*a**-2 + ODE)
+
+
+--- FUNCTION growth.dlnE_lcdm ---
+SIGNATURE: (N)
+def dlnE_lcdm(N):
+    a = math.exp(N)
+    e2 = OM*a**-3 + OR*a**-4 + OK*a**-2 + ODE
+    de2 = -3*OM*a**-3 - 4*OR*a**-4 - 2*OK*a**-2
+    return 0.5*de2/e2
+
+
+--- FUNCTION growth.growth_rhs_r1 ---
+SIGNATURE: (N, y)
+def growth_rhs_r1(N, y):
+    D, Dp = y
+    E = float(R1.sol(N)[2])
+    om = OM*math.exp(-3*N)/E**2
+    return [Dp, -(2.0+r1_dlnH_dN(N))*Dp + 1.5*om*D]
+
+
+--- FUNCTION growth.growth_rhs_lcdm ---
+SIGNATURE: (N, y)
+def growth_rhs_lcdm(N, y):
+    D, Dp = y
+    E = e_lcdm(N)
+    om = OM*math.exp(-3*N)/E**2
+    return [Dp, -(2.0+dlnE_lcdm(N))*Dp + 1.5*om*D]
+
+
+--- FUNCTION growth.integrate_growth ---
+SIGNATURE: (fun)
+def integrate_growth(fun):
+    return solve_ivp(
+        fun, (NI, 0.0), [AI, AI],
+        method="DOP853", rtol=1e-12, atol=1e-14,
+        dense_output=True, max_step=0.01,
+    )
+
+
+--- FUNCTION growth.main ---
+SIGNATURE: ()
+def main():
+    gr1 = integrate_growth(growth_rhs_r1)
+    gl = integrate_growth(growth_rhs_lcdm)
+    zs = [2.1, 1.5, 1.0, 0.8, 0.5, 0.3, 0.0]
+    rows = []
+    for z in zs:
+        N = math.log(1.0/(1.0+z))
+        Dr, Dpr = gr1.sol(N)
+        Dl, Dpl = gl.sol(N)
+        rows.append({
+            "z": z,
+            "R_fsigma8": float(Dpr/Dpl),
+            "D_ratio": float(Dr/Dl),
+        })
+    print(json.dumps({"model":"R1","rows":rows}, indent=2, sort_keys=True))
+
+
+########################################################################
+MODULE: bianchi_dictionary_n2
+########################################################################
+IMPORT ERROR:
+Traceback (most recent call last):
+  File "C:\Users\carbe\AppData\Local\Temp\bhsm-r1-n2-api-worktree\.extract_n2_api.py", line 64, in safe_import
+    return __import__(name), None
+           ~~~~~~~~~~^^^^^^
+ModuleNotFoundError: No module named 'bianchi_dictionary_n2'
+
+
+########################################################################
+MODULE: matter_sourced_n2
+########################################################################
+FILE: C:\Users\carbe\AppData\Local\Temp\bhsm-r1-n2-api-worktree\code\matter_sourced_n2.py
+CONST OMEGA_M0 = 0.31
+CONST OMEGA_R0 = 9e-05
+CONST MPL2 = 1.0
+
+--- FUNCTION matter_sourced_n2.background_sources ---
+SIGNATURE: (a: 'float') -> 'tuple[float, float, float, float]'
+def background_sources(a: float) -> tuple[float, float, float, float]:
+    rho_m = 3.0 * OMEGA_M0 * a**-3
+    rho_r = 3.0 * OMEGA_R0 * a**-4
+    rho_plus_p = rho_m + (4.0 / 3.0) * rho_r
+    pressure = rho_r / 3.0
+    return rho_m, rho_r, rho_plus_p, pressure
+
+
+--- FUNCTION matter_sourced_n2.harmonic_scales ---
+SIGNATURE: (a: 'float') -> 'tuple[float, float]'
+def harmonic_scales(a: float) -> tuple[float, float]:
+    kappa = background.KCURV / (a * a)
+    k2_phys = 8.0 * kappa
+    shifted_laplacian = -5.0 * kappa
+    return k2_phys, shifted_laplacian
+
+
+--- FUNCTION matter_sourced_n2.hdot_from_background ---
+SIGNATURE: (N: 'float', y: 'np.ndarray') -> 'float'
+def hdot_from_background(N: float, y: np.ndarray) -> float:
+    dy_dN = background.rhs(N, np.asarray(y, dtype=float))
+    H = float(y[2])
+    return H * float(dy_dN[2])
+
+
+--- FUNCTION matter_sourced_n2.weighted_momentum_source ---
+SIGNATURE: (rho_m: 'float', rho_r: 'float', v_m: 'float', v_r: 'float') -> 'float'
+def weighted_momentum_source(
+    rho_m: float,
+    rho_r: float,
+    v_m: float,
+    v_r: float,
+) -> float:
+    return rho_m * v_m + (4.0 / 3.0) * rho_r * v_r
+
+
+--- FUNCTION matter_sourced_n2.density_source ---
+SIGNATURE: (rho_m: 'float', rho_r: 'float', delta_m: 'float', delta_r: 'float') -> 'float'
+def density_source(
+    rho_m: float,
+    rho_r: float,
+    delta_m: float,
+    delta_r: float,
+) -> float:
+    return rho_m * delta_m + rho_r * delta_r
+
+
+--- FUNCTION matter_sourced_n2.constraint_matrix ---
+SIGNATURE: (v: 'float', H: 'float') -> 'np.ndarray'
+def constraint_matrix(v: float, H: float) -> np.ndarray:
+    q = ch.alpha_quantities(v, H)
+    alpha_b = q["alpha_B"]
+    alpha_k = q["alpha_K"]
+    return np.array(
+        [
+            [
+                6.0 * (1.0 + alpha_b) * H,
+                (alpha_k - 6.0 * alpha_b) * H * H,
+            ],
+            [2.0, -2.0 * H * alpha_b],
+        ],
+        dtype=float,
+    )
+
+
+--- FUNCTION matter_sourced_n2.constraint_rhs ---
+SIGNATURE: (N: 'float', y_bg: 'np.ndarray', state: 'SourceState') -> 'np.ndarray'
+def constraint_rhs(
+    N: float,
+    y_bg: np.ndarray,
+    state: SourceState,
+) -> np.ndarray:
+    a = math.exp(N)
+    _, v, H = [float(x) for x in y_bg]
+    Hdot = hdot_from_background(N, y_bg)
+
+    rho_m, rho_r, rho_plus_p, _ = background_sources(a)
+    _, shifted = harmonic_scales(a)
+    kappa = background.KCURV / (a * a)
+
+    q = ch.alpha_quantities(v, H)
+    alpha_b = q["alpha_B"]
+    alpha_k = q["alpha_K"]
+
+    delta_rho = density_source(
+        rho_m, rho_r, state.delta_m, state.delta_r
+    )
+    momentum = weighted_momentum_source(
+        rho_m, rho_r, state.v_m, state.v_r
+    )
+
+    phi_coeff = (
+        (6.0 - alpha_k + 12.0 * alpha_b) * H * H
+        - 2.0 * shifted
+    )
+    pi_coeff = 6.0 * H * (
+        rho_plus_p / (2.0 * MPL2)
+        + Hdot * (1.0 + alpha_b)
+        + kappa * (1.0 - alpha_b)
+        + (alpha_b / 3.0) * shifted
+    )
+
+    rhs_00 = (
+        -delta_rho / MPL2
+        - phi_coeff * state.Phi
+        - pi_coeff * state.pi
+    )
+
+    rhs_0i = (
+        -momentum / MPL2
+        - 2.0 * (1.0 + alpha_b) * H * state.Phi
+        - (2.0 * Hdot + rho_plus_p / MPL2) * state.pi
+    )
+
+    return np.array([rhs_00, rhs_0i], dtype=float)
+
+
+--- FUNCTION matter_sourced_n2.solve_metric_scalar_rates ---
+SIGNATURE: (N: 'float', y_bg: 'np.ndarray', state: 'SourceState') -> 'tuple[float, float]'
+def solve_metric_scalar_rates(
+    N: float,
+    y_bg: np.ndarray,
+    state: SourceState,
+) -> tuple[float, float]:
+    _, v, H = [float(x) for x in y_bg]
+    mat = constraint_matrix(v, H)
+    rhs = constraint_rhs(N, y_bg, state)
+    Phi_dot, pi_dot = np.linalg.solve(mat, rhs)
+    return float(Phi_dot), float(pi_dot)
+
+
+--- FUNCTION matter_sourced_n2.ideal_fluid_rates ---
+SIGNATURE: (N: 'float', y_bg: 'np.ndarray', state: 'SourceState', Phi_dot: 'float') -> 'dict[str, float]'
+def ideal_fluid_rates(
+    N: float,
+    y_bg: np.ndarray,
+    state: SourceState,
+    Phi_dot: float,
+) -> dict[str, float]:
+    """Covariant conservation for ideal dust and ideal radiation.
+
+    Velocity convention:
+        delta T^0_i = (rho+p) D_i v.
+
+    With D^2 Q = -k^2 Q:
+      delta_m_dot = (k^2/a^2) v_m + 3 Phi_dot
+      v_m_dot     = -Phi
+
+      delta_r_dot = (4/3)(k^2/a^2) v_r + 4 Phi_dot
+      v_r_dot     = H v_r - Phi - delta_r/4
+    """
+    a = math.exp(N)
+    H = float(y_bg[2])
+    k2_phys, _ = harmonic_scales(a)
+
+    return {
+        "delta_m_dot": k2_phys * state.v_m + 3.0 * Phi_dot,
+        "v_m_dot": -state.Phi,
+        "delta_r_dot": (
+            (4.0 / 3.0) * k2_phys * state.v_r
+            + 4.0 * Phi_dot
+        ),
+        "v_r_dot": (
+            H * state.v_r
+            - state.Phi
+            - 0.25 * state.delta_r
+        ),
+    }
+
+
+--- FUNCTION matter_sourced_n2.local_transfer_matrix ---
+SIGNATURE: (N: 'float', y_bg: 'np.ndarray') -> 'np.ndarray'
+def local_transfer_matrix(
+    N: float,
+    y_bg: np.ndarray,
+) -> np.ndarray:
+    basis = np.eye(6, dtype=float)
+    cols = []
+
+    for j in range(6):
+        s = SourceState(*basis[:, j])
+        Phi_dot, pi_dot = solve_metric_scalar_rates(N, y_bg, s)
+        f = ideal_fluid_rates(N, y_bg, s, Phi_dot)
+        cols.append(
+            np.array(
+                [
+                    Phi_dot,
+                    pi_dot,
+                    f["delta_m_dot"],
+                    f["v_m_dot"],
+                    f["delta_r_dot"],
+                    f["v_r_dot"],
+                ],
+                dtype=float,
+            )
+        )
+
+    return np.column_stack(cols)
+
+
+--- DIAGNOSTICS EXECUTION matter_sourced_n2 ---
+<SKIPPED: requires arguments (sol, z: 'float') -> 'dict'>

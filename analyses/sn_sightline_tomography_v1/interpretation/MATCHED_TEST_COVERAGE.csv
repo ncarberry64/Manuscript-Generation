@@ -1,0 +1,7 @@
+dataset,match,pairs,delta_chi2,mock_p
+P_crossfit,same_z_different_direction,587,-10.46573991849499,0.0014992503748125
+P_crossfit,same_direction_different_z,517,-0.8518123735224776,0.1474262868565717
+P_crossfit,shared_foreground_different_z,525,-0.7933431240189748,0.1734132933533233
+DES_transfer,same_z_different_direction,0,,
+DES_transfer,same_direction_different_z,730,-0.8130431646657144,0.025487256371814
+DES_transfer,shared_foreground_different_z,730,-0.8130431646657144,0.025487256371814

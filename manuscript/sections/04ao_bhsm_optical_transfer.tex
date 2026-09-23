@@ -1,0 +1,329 @@
+\section{BHSM optical transfer through a stochastic topographic geometry}
+\label{sec:bhsm-optical-transfer}
+
+The preceding sections separate the closed hyperspherical parent
+$S^3(R_H)$, the physical BHSM $n=2$ carrier, and local line-of-sight
+topography.  A realistic photon path, however, cannot be represented
+faithfully as a finite sum over foreground objects.  In geometric optics
+the correct compression is the optical tidal matrix sampled by the null
+bundle.  This section therefore derives a first-order BHSM optical transfer
+system in which unresolved foreground complexity is represented by a
+continuous geometric source and, when appropriate, by its path covariance.
+
+\subsection{Exact null-bundle geometry}
+
+Let $k^\mu$ be the tangent to the central null geodesic,
+\begin{equation}
+k^\nu\nabla_\nu k^\mu=0,
+\qquad
+k^\mu k_\mu=0,
+\end{equation}
+and let $e_A^\mu$, $A=1,2$, be a parallel-transported Sachs screen basis.
+The Jacobi matrix $\mathcal D_{AB}$ obeys
+\begin{equation}
+\frac{d^2\mathcal D}{d\lambda^2}
+=
+\mathcal T\,\mathcal D,
+\qquad
+\mathcal T_{AB}
+=
+-
+R_{\mu\nu\alpha\beta}
+e_A^\mu k^\nu k^\alpha e_B^\beta.
+\label{eq:optical-jacobi}
+\end{equation}
+The photon frequency for an observer congruence $u^\mu$ is
+\begin{equation}
+\omega=-u_\mu k^\mu,
+\qquad
+\frac{d\omega}{d\lambda}
+=
+-k^\mu k^\nu\nabla_\mu u_\nu .
+\label{eq:optical-frequency}
+\end{equation}
+
+For the closed background define
+\begin{equation}
+S_K(\chi)=\frac{\sin(\sqrt K\,\chi)}{\sqrt K},
+\qquad
+C_K(\chi)=\cos(\sqrt K\,\chi),
+\qquad
+H_K(\chi)=\frac{C_K(\chi)}{S_K(\chi)}.
+\end{equation}
+In conformal background-distance coordinates, after removing the background scale factor, the background Jacobi map is $S_K I$. Primes below refer to $\chi$, not the physical affine parameter in Eq.~\eqref{eq:optical-jacobi}; $\delta\mathcal T$ is the correspondingly rescaled effective source. Writing
+\begin{equation}
+\mathcal D=S_K(\chi)[I+\mathcal A]
+\end{equation}
+and linearizing
+$\mathcal T=-KI+\delta\mathcal T$ gives
+\begin{equation}
+\boxed{
+\mathcal A''
++
+2H_K\mathcal A'
+=
+\delta\mathcal T .
+}
+\label{eq:optical-A}
+\end{equation}
+
+\subsection{Seven-state optical system}
+
+Decompose
+\begin{equation}
+\mathcal A
+=
+-\kappa I
+-
+\begin{pmatrix}
+\gamma_1 & \gamma_2\\
+\gamma_2 & -\gamma_1
+\end{pmatrix}
+\end{equation}
+and define
+\begin{align}
+\mathcal F
+&=
+-\frac12\,{\rm Tr}\,\delta\mathcal T,
+&
+\mathcal G_1
+&=
+-\frac12(\delta\mathcal T_{11}-\delta\mathcal T_{22}),
+&
+\mathcal G_2
+&=
+-\delta\mathcal T_{12}.
+\end{align}
+Then
+\begin{align}
+\kappa''+2H_K\kappa'&=\mathcal F,\\
+\gamma_1''+2H_K\gamma_1'&=\mathcal G_1,\\
+\gamma_2''+2H_K\gamma_2'&=\mathcal G_2.
+\end{align}
+
+Let
+\begin{equation}
+\zeta_\gamma=\delta\ln(1+z),
+\qquad
+\zeta_\gamma'=\mathcal Z(\chi),
+\end{equation}
+and define
+\begin{equation}
+Y_\gamma
+=
+(\zeta_\gamma,\kappa,p_\kappa,\gamma_1,p_1,\gamma_2,p_2)^T.
+\end{equation}
+The optical propagation law is
+\begin{equation}
+\boxed{
+\frac{dY_\gamma}{d\chi}
+=
+A_KY_\gamma
++
+B_{\rm opt}S_{\rm opt},
+}
+\label{eq:bhsm-optical-state}
+\end{equation}
+where
+\begin{equation}
+S_{\rm opt}=(\mathcal Z,\mathcal F,\mathcal G_1,\mathcal G_2)^T,
+\end{equation}
+\begin{equation}
+A_K
+=
+\begin{pmatrix}
+0&0&0&0&0&0&0\\
+0&0&1&0&0&0&0\\
+0&0&-2H_K&0&0&0&0\\
+0&0&0&0&1&0&0\\
+0&0&0&0&-2H_K&0&0\\
+0&0&0&0&0&0&1\\
+0&0&0&0&0&0&-2H_K
+\end{pmatrix},
+\end{equation}
+and
+\begin{equation}
+B_{\rm opt}
+=
+\begin{pmatrix}
+1&0&0&0\\
+0&0&0&0\\
+0&1&0&0\\
+0&0&0&0\\
+0&0&1&0\\
+0&0&0&0\\
+0&0&0&1
+\end{pmatrix}.
+\end{equation}
+
+\subsection{BHSM closure}
+
+The physical global mode is $X_2=(q_2,\Pi_2)^T$ and the existing
+metric-response identity gives
+\begin{equation}
+h_2=\mathcal R_{g2}X_2,
+\qquad
+\mathcal R_{g2}=-\mathcal A_g^{-1}\mathcal B_{g2}.
+\end{equation}
+For local topography define
+\begin{equation}
+h_{\rm topo}
+=
+\mathcal R_{g\psi}\psi,
+\qquad
+\mathcal R_{g\psi}
+=
+-\mathcal A_g^{-1}\mathcal B_{g\psi},
+\end{equation}
+with its complete cosmological normalization left open.
+
+The local field is written
+\begin{equation}
+\boxed{
+\mathcal L_\psi\psi
+=
+J_{\rm grav}
++
+\mathcal E_\Sigma[Q_\Sigma]
++
+\xi,
+}
+\label{eq:optical-psi-source}
+\end{equation}
+where the static spatial limit of $\mathcal L_\psi$ must reproduce
+$K_T=-\nabla^2+B\nabla^4$ and
+\begin{equation}
+Q_\Sigma
+=
+V_\Sigma^2
+=
+\frac{c^2}{8\pi}
+\int_{\Sigma_\star}
+H_\Sigma\Delta K_{uu}\,dA.
+\end{equation}
+The seam-export operator $\mathcal E_\Sigma$ is explicitly
+action-normalization-open.
+
+If $\mathcal O_{\rm opt}$ maps the physical metric response to
+$(\mathcal Z,\mathcal F,\mathcal G_1,\mathcal G_2)$ and
+$\mathcal G_\psi=\mathcal L_\psi^{-1}$, then
+\begin{equation}
+\boxed{
+\begin{aligned}
+\frac{dY_\gamma}{d\chi}
+={}&
+A_KY_\gamma\\
+&+
+B_{\rm opt}\mathcal O_{\rm opt}
+\left[
+\mathcal R_{g2}X_2
++
+\mathcal R_{g\psi}\mathcal G_\psi
+\left(
+J_{\rm grav}
++
+\mathcal E_\Sigma[Q_\Sigma]
++
+\xi
+\right)
+\right].
+\end{aligned}
+}
+\label{eq:bhsm-optical-transfer}
+\end{equation}
+
+\subsection{Stochastic unresolved geometry}
+
+Write
+\begin{equation}
+S_{\rm opt}
+=
+\bar S_{\rm opt}
++
+\xi_{\rm opt}
+\end{equation}
+with
+\begin{equation}
+\langle\xi_{\rm opt}\rangle=0,
+\qquad
+\langle
+\xi_{\rm opt}(\chi)
+\xi_{\rm opt}^T(\chi')
+\rangle
+=
+Q_{\rm opt}(\chi)\delta(\chi-\chi').
+\end{equation}
+The path mean and covariance obey
+\begin{align}
+\boxed{
+\bar Y_\gamma'
+=
+A_K\bar Y_\gamma
++
+B_{\rm opt}\bar S_{\rm opt}
+}
+\label{eq:bhsm-optical-mean}
+\end{align}
+and
+\begin{equation}
+\boxed{
+C_Y'
+=
+A_KC_Y
++
+C_YA_K^T
++
+B_{\rm opt}Q_{\rm opt}B_{\rm opt}^T.
+}
+\label{eq:bhsm-optical-covariance}
+\end{equation}
+This is the computational compression used here: unresolved foreground
+complexity is carried by a $7\times7$ path covariance rather than by an
+exhaustive foreground-object ledger.
+
+Rare nonlinear events may be represented separately by a compound-jump term,
+\begin{equation}
+dY_\gamma
+=
+(A_KY_\gamma+B_{\rm opt}\bar S_{\rm opt})d\chi
++
+B_{\rm opt}L\,dW_\chi
++
+B_{\rm opt}J\,dN_\chi.
+\end{equation}
+
+\subsection{Observable map and claim boundary}
+
+At a fixed physical source endpoint,
+\begin{equation}
+D_L=(1+z)^2D_A
+\end{equation}
+gives
+\begin{equation}
+\delta\ln D_L
+=
+2\zeta_\gamma-\kappa.
+\end{equation}
+For a Hubble diagram at fixed observed redshift, the accumulated optical
+state is passed through the existing closed-$S^3$ source remapping,
+\begin{equation}
+\frac{\delta D_L}{D_L}
+=
+\phi_s+\delta z
++
+\frac{C_K(\chi_s)}{S_K(\chi_s)}\delta\chi
+-\kappa.
+\end{equation}
+Thus Eq.~\eqref{eq:bhsm-optical-transfer} supplies the accumulated physical
+path state; it does not replace the gauge-invariant luminosity-distance
+kernel.
+
+The exact closed-$S^3$ optical propagator, the seven-state reduction and the
+covariance transport are derived here.  The action-normalized seam export
+$\mathcal E_\Sigma$, the complete local metric-response map
+$\mathcal R_{g\psi}$, the stochastic covariance $Q_{\rm opt}$ and any
+rare-event jump law remain open constitutive objects.  A future decisive test
+is therefore not an object-by-object mass reconstruction but a shared
+cross-observable covariance test: one optical path law must jointly predict
+luminosity-distance scatter, convergence/shear statistics, redshift
+perturbations and their cross-correlations.

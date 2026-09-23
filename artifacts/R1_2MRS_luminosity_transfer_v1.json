@@ -1,0 +1,115 @@
+{
+  "baseline": {
+    "chi2": 125.92776186490129,
+    "deltaM": -0.06475982909085705,
+    "omega_m": 0.4624999999999999
+  },
+  "claim_boundary": [
+    "K-band luminosity is a stellar-mass/gravitational-well proxy, not an SMBH/de-encapsulation measurement.",
+    "No K-band weighting exponent was fit.",
+    "A positive result still requires separation from conventional local-structure effects."
+  ],
+  "classification": "not_established",
+  "data": {
+    "n_galaxies": 38601,
+    "n_sn": 277
+  },
+  "foreground": {
+    "score_mean_raw": 0.016724756740934734,
+    "score_sd_raw": 0.5422844447562661,
+    "shells": [
+      {
+        "median_relative_luminosity_weight": 1.0,
+        "n_galaxies_with_kmag": 3175,
+        "zhi": 0.01,
+        "zlo": 0.0
+      },
+      {
+        "median_relative_luminosity_weight": 1.0,
+        "n_galaxies_with_kmag": 9516,
+        "zhi": 0.02,
+        "zlo": 0.01
+      },
+      {
+        "median_relative_luminosity_weight": 1.0,
+        "n_galaxies_with_kmag": 11380,
+        "zhi": 0.03,
+        "zlo": 0.02
+      },
+      {
+        "median_relative_luminosity_weight": 1.0,
+        "n_galaxies_with_kmag": 9469,
+        "zhi": 0.04,
+        "zlo": 0.03
+      },
+      {
+        "median_relative_luminosity_weight": 1.0,
+        "n_galaxies_with_kmag": 5061,
+        "zhi": 0.05,
+        "zlo": 0.04
+      }
+    ],
+    "weight_law": "10^(-0.4 m_K) d_L^2, normalized by shell median"
+  },
+  "k_magnitude_column": "Kmag",
+  "low_to_high_transfer": {
+    "beta_foreground_calibration": 0.04212611926769873,
+    "calibration_chi2": 27.32884076742017,
+    "n_calibration": 83,
+    "n_validation": 194,
+    "validation_chi2_fixed_foreground": 78.59554682656903,
+    "validation_chi2_null": 73.68371362582087,
+    "validation_delta_chi2": -4.911833200748163
+  },
+  "primary": {
+    "beta_foreground_err": 0.007744918616606419,
+    "beta_foreground_mag_per_score_sigma": 0.014473409529354875,
+    "blocked_permutation_p": 0.092,
+    "delta_chi2": 1.491424637216852,
+    "leave_one_shell_out": [
+      {
+        "beta_foreground": 0.01477783577851561,
+        "left_out_shell": [
+          0.0,
+          0.01
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.019827753306213267,
+        "left_out_shell": [
+          0.01,
+          0.02
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.0028292669240376957,
+        "left_out_shell": [
+          0.02,
+          0.03
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.015163742256690193,
+        "left_out_shell": [
+          0.03,
+          0.04
+        ],
+        "sign_matches_primary": true
+      },
+      {
+        "beta_foreground": 0.016158401181590707,
+        "left_out_shell": [
+          0.04,
+          0.05
+        ],
+        "sign_matches_primary": true
+      }
+    ],
+    "sign_stable_all_shell_dropouts": true,
+    "t_foreground": 1.8687619903870174
+  },
+  "schema": "r1-2mrs-luminosity-transfer-result-v1"
+}

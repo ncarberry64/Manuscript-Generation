@@ -1,0 +1,39 @@
+{
+  "coefficients": {
+    "a_AA": null,
+    "b_Apsi": null,
+    "c_phi": null,
+    "c_psipsi": null,
+    "u_Aphi": null,
+    "v_psiphi": null
+  },
+  "forbidden": [
+    "fit any coefficient to SN residuals",
+    "substitute algebra-witness coefficients",
+    "mix coefficients from different backgrounds or domains"
+  ],
+  "normalizations": {
+    "metric_basis_A": null,
+    "metric_basis_psi": null,
+    "topographic_profile": null
+  },
+  "physical_domain": {
+    "background": "closed-FLRW R1 physical background",
+    "constraint_reduction": "momentum constraint solved",
+    "endpoint_domain": "action-derived physical/KKT domain",
+    "metric_basis": [
+      "A",
+      "psi"
+    ],
+    "scalar_longitudinal_gauge": "E=0"
+  },
+  "required_diagnostics": {
+    "Delta_g": null,
+    "common_domain": null,
+    "legendre_gate": null,
+    "metric_response_residual": null,
+    "schur_curvature": null
+  },
+  "schema": "bhsm-local-optical-hessian-coefficients-v1",
+  "status": "AWAITING_ACTION_EVALUATION"
+}

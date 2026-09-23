@@ -1,0 +1,14 @@
+[
+  {
+    "correction": "released",
+    "rows": 357,
+    "available": 357,
+    "saved_estimator_projection_mag": 0.03395371560797651
+  },
+  {
+    "correction": "independent_NN",
+    "rows": 357,
+    "available": 357,
+    "saved_estimator_projection_mag": 0.009368488111368218
+  }
+]

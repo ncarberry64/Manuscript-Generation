@@ -1,0 +1,47 @@
+{
+  "schema": "bhsm-optical-transfer-equation-v1",
+  "status": "DERIVED_GEOMETRIC_PROPAGATOR_WITH_OPEN_BHSM_CONSTITUTIVE_MAPS",
+  "state": [
+    "zeta_gamma",
+    "kappa",
+    "p_kappa",
+    "gamma_1",
+    "p_gamma_1",
+    "gamma_2",
+    "p_gamma_2"
+  ],
+  "source": [
+    "Z_redshift",
+    "F_convergence",
+    "G1_shear",
+    "G2_shear"
+  ],
+  "background": {
+    "S_K": "sin(sqrt(K) chi)/sqrt(K) for K>0",
+    "H_K": "C_K/S_K",
+    "jacobi_background": "Dbar=S_K I"
+  },
+  "core_equation": "Y_gamma' = A_K Y_gamma + B_opt S_opt",
+  "covariance_equation": "C_Y' = A_K C_Y + C_Y A_K^T + B_opt Q_opt B_opt^T",
+  "bhsm_closure": {
+    "global_metric_response": "h_2=R_g2 X_2, R_g2=-A_g^-1 B_g2",
+    "local_metric_response": "h_topo=R_gpsi psi, R_gpsi=-A_g^-1 B_gpsi",
+    "topographic_source": "L_psi psi = J_grav + E_Sigma[Q_Sigma] + xi",
+    "seam_charge": "Q_Sigma=V_Sigma^2=(c^2/8pi) integral H_Sigma DeltaK_uu dA"
+  },
+  "derived_now": [
+    "closed-S3 first-order Jacobi perturbation equation",
+    "7-state redshift/convergence/shear propagator",
+    "optical-source decomposition into Z,F,G1,G2",
+    "linear path-covariance transport",
+    "composition with existing BHSM metric-response architecture",
+    "connection to the existing fixed-observed-redshift luminosity-distance kernel"
+  ],
+  "open": [
+    "action normalization and sign of E_Sigma",
+    "complete local metric-response block R_gpsi",
+    "stochastic source covariance Q_opt",
+    "rare-event jump rate and amplitude law"
+  ],
+  "important_boundary": "The optical equation propagates the accumulated path state; it does not replace the existing gauge-invariant fixed-observed-redshift luminosity-distance remapping."
+}

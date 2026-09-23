@@ -1,0 +1,80 @@
+\section{Make-or-break prediction: two prospective gates}
+\label{sec:make-or-break}
+The structural protocol is frozen in
+\path{preregistration/bhsm_geometry_first_make_or_break_v1.json}.
+No decisive target data have been evaluated under it. Target releases,
+masks, bins, covariance and nuisance treatment must be frozen in a dated,
+hashed design before unblinding. Existing Pantheon+ and 2MRS analyses are
+development/calibration evidence, not new independent validation.
+
+\subsection{Gate A: one shared deterministic state}
+For $N$ independent measured combinations and fixed two-column kernels,
+\begin{equation}
+d=FX_2+\epsilon,\qquad
+\chi^2_\perp=\min_X(d-FX)^T\Sigma^{-1}(d-FX).
+\end{equation}
+The conventional mean and source response are specified in advance.
+With rank-$2$ $F$, known positive-definite Gaussian $\Sigma$ and no fitted
+nuisances, $\chi^2_\perp\sim\chi^2_{N-2}$. Thus $N>2$ overidentifies the state.
+Cholesky whitening and least squares avoid forming $\Sigma^{-1}$.
+Reject the specific two-state deterministic realization at $p_A<0.01$.
+
+Both state coordinates vary once across the stacked observations in this
+conservative consistency test. This does not create a second calibration
+of an absolute prediction. A theory-selected direction would permit a
+separately declared one-parameter test. Fitted nuisances, estimated covariance,
+data-selected axes and nonlinear kernels invalidate the simple $N-2$
+reference law unless incorporated in the predeclared likelihood/simulation.
+
+Independent states or amplitudes per observable, increasing the state
+dimension, dropping bad bins and changing kernels after inspection are
+forbidden. The carried-forward equatorial axis is
+$(211.48^\circ,-12.81^\circ)$; its frame and selection treatment belong in
+the target design.
+
+\subsection{Gate B: one coherent stochastic texture amplitude}
+For the minimal separable response $O=m_Oq$,
+\begin{equation}
+C_{\rm topo}=\operatorname{Var}(q)m_Om_O^\dagger,\qquad
+\operatorname{rank}C_{\rm topo}\le1.
+\end{equation}
+Rank equals one only for nonzero variance and response. After independently
+specified standard and measurement-noise treatment, report all signed
+eigenvalues, $\rho_{21}=\lambda_2/\lambda_1$ when $\lambda_1>0$, and
+$C_{ii}C_{jj}-|C_{ij}|^2$.
+Observable unit scales are fixed before inspection: exact rank is invariant
+under invertible scaling, eigenvalue ratios are not.
+
+The primary statistic is the second-largest eigenvalue of the unprojected
+residual covariance in fixed dimensionless units, with an upper-tail
+finite-sample calibration. Reject the minimal one-channel stochastic
+realization at $p_B<0.01$. Ratios/minors are diagnostics, not extra
+uncorrected rejection tests. Negative residual eigenvalues remain visible;
+they may reflect subtraction uncertainty or invalid nuisance modeling.
+
+The executable benchmark uses independent Gaussian samples, an independently
+fixed total null covariance and 9999 Monte Carlo replicates:
+$p=(1+\#\{T_{\rm sim}\ge T_{\rm obs}\})/10000$.
+This validates a restricted fixed null, not the composite family of
+unknown rank-one covariances. A survey must propagate covariance/loading
+estimation, selection and sky correlations through its predeclared null
+simulations, with coverage and power checks.
+
+Increasing $m$, deleting observables, fitting conventional covariance to
+enforce low rank, or PSD clipping/projection to manufacture rank one are
+forbidden. The earlier optical protocol and clipping helper remain historical
+provenance; this decisive test does not use the helper.
+A higher-channel model needs an independent action derivation frozen before
+decisive target inspection and cannot rescue this $m=1$ realization.
+
+\subsection{Separate hypotheses and readiness}
+The gates are logically distinct; statistical independence is not assumed
+when data overlap. Each uses a $1\%$ threshold. Under both nulls, the
+probability of at least one false rejection is bounded by $2\%$, not $1\%$.
+Report both gates and shared-data covariance.
+
+Unknown absolute normalization does not prevent stating these structural
+restrictions, but applying them requires fixed kernels and a validated
+nuisance model. One local noise type does not imply one global amplitude.
+The rank-one test is conditional on the coherent finite-amplitude
+construction in Section~\ref{sec:bhsm-optical-low-rank}.

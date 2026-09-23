@@ -1,0 +1,29 @@
+{
+  "schema": "bhsm-optical-low-rank-covariance-test-v1",
+  "status": "FROZEN_PROTOCOL_NO_DATA_EVALUATION",
+  "scientific_question": "After independently modeled standard and measurement covariance are removed, is the residual cross-observable optical covariance consistent with the low rank implied by a small number of BHSM topographic texture channels?",
+  "primary_observable_vector": [
+    "Hubble-diagram residual / delta ln D_L",
+    "lensing convergence kappa",
+    "shear gamma_1",
+    "shear gamma_2",
+    "redshift/velocity residual zeta_gamma"
+  ],
+  "primary_theory_null": "rank(C_topo) <= m for m action-allowed texture channels",
+  "one_channel_identities": [
+    "R1=lambda1/sum_positive_lambda = 1 in the noiseless isolated limit",
+    "rho21=lambda2/lambda1 = 0 in the noiseless isolated limit",
+    "all 2x2 principal minors Cii*Cjj-Cij^2 vanish"
+  ],
+  "residual_covariance": "C_res=C_obs-C_std-N",
+  "psd_projection": "report unprojected eigenvalues; secondary projected result uses eigenvalue clipping at zero",
+  "redshift_policy": "use fixed narrow bins declared before examining residual covariance",
+  "channel_count_policy": "m must be fixed from theory/provenance before inspecting covariance spectrum",
+  "forbidden": [
+    "choose redshift bins to minimize rank",
+    "drop observables after inspecting covariance",
+    "increase m after seeing the eigenvalue spectrum",
+    "fit the standard covariance using the BHSM low-rank target"
+  ],
+  "interpretation": "A significant residual requiring more than m independent eigenmodes falsifies the m-channel BHSM topographic covariance model."
+}

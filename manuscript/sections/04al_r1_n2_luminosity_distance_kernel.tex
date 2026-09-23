@@ -1,0 +1,66 @@
+\section{Gauge-invariant luminosity-distance kernel and calibration-rank audit}
+\label{sec:r1-n2-DL-kernel}
+
+The remaining light-cone observable is evaluated with the gauge-invariant geometric luminosity-distance construction.\citep{YooScaccabarozzi2016}
+For positive spatial curvature the background transverse distance and lensing efficiency use $S_K(\chi)=\sin(\sqrt K\chi)/\sqrt K$, with the corresponding curved-FLRW line-of-sight kernel.\citep{PyneBirkinshaw2004}
+
+For the pure $A_{4i}$ physical $n=2$ mode, per unit $\mu=\hat{\mathbf n}\cdot\hat{\mathbf p}$,
+\begin{equation}
+Q_{2,\rm dip}(\chi)=\sin(2\sqrt K\,\chi),
+\qquad \widehat\nabla^2 Q_{2,\rm dip}=-2Q_{2,\rm dip}.
+\end{equation}
+
+The fixed-observed-redshift distance fluctuation is
+\begin{equation}
+\boxed{
+\frac{\delta D_L}{D_L}
+=\phi_s+\delta z+\frac{C_K(\chi_s)}{S_K(\chi_s)}\delta\chi-\kappa,
+}
+\end{equation}
+with $C_K(\chi)=\cos(\sqrt K\chi)$ and the redshift, radial and convergence distortions evaluated along the same R1 physical-$n=2$ metric response. Here $\delta z$ denotes the dimensionless perturbation $\delta\ln(1+z)$, not an unnormalized change in the measured redshift.
+
+\subsection{State-space calibration row}
+At the reference bin center $z_\star=0.02$, the current action-native luminosity-distance response is written on the canonical state $X_2=(q_2,\Pi_2)$ anchored at $z=2.1$, with $q_2=\zeta_{\rm anchor}$ and $\Pi_2=2a_{\rm anchor}^3\mathcal G_{S,2}\dot\zeta_{\rm anchor}$. The resulting canonical row is
+\begin{equation}
+\boxed{
+\mathcal F_{D_L}(z_\star)=(1.558779600\times10^{-1},\,1.786788240\times10^{0}).
+}
+\end{equation}
+The earlier reduced-propagator row expressed directly in the raw $(\zeta,d\zeta/dN)$ coordinates is retained only as a legacy control. Because $\Pi_2=0.000310285568922\,(d\zeta/dN)_{\rm anchor}$, raw and canonical response rows are not interchangeable without the explicit basis transformation. All current common-state inferences and cross-observable predictions use the canonical $(q_2,\Pi_2)$ row above.
+
+The carried-forward SN calibration imposes one scalar constraint on this two-dimensional state:
+\begin{equation}
+\mathcal F_{D_L}(z_\star)\cdot X_{2,\rm anchor}=-1.897330117\times10^{-2}\pm4.144653167\times10^{-3}.
+\end{equation}
+
+% BEGIN PRE_PEER_REVIEW_LOCAL_GLOBAL_V1
+\paragraph{Local calibration versus global-state prediction.}
+The empirical low-redshift supernova amplitude and the high-redshift
+action-native state are deliberately distinct objects.  The calibration
+relation above defines a local empirical hyperplane in the canonical
+$(q_2,\Pi_2)$ coordinate system; it is not imposed on the independently
+inferred high-redshift global state.  Propagation of that high-redshift state
+to low redshift underpredicts the observed local fixed-axis amplitude, so the
+present manuscript does not identify the empirical local signal with the
+homogeneous global $X_2$ trajectory.  Any physical local/topographic source
+contribution requires an independently derived action-owned normalization.
+% END PRE_PEER_REVIEW_LOCAL_GLOBAL_V1
+
+The corresponding unit null direction is
+\begin{equation}
+n_{\rm cal}=(1.910607424\times10^{-2},\,9.998174623\times10^{-1}),\qquad \mathcal F_{D_L}\cdot n_{\rm cal}=0.
+\end{equation}
+
+\subsection{Calibration-rank consequence}
+This numerical light-cone calculation exposes a logical condition implicit in the single-calibration argument: one amplitude calibration determines the model only after the normalized physical mode trajectory $\widehat X_2$ has been fixed independently.
+The luminosity-distance row has rank one on a two-dimensional phase space.  The growth and Weyl rows are not generally parallel to it, so motion along $n_{\rm cal}$ leaves the SN calibration unchanged while altering the other observables.
+
+\begin{equation}
+\boxed{\begin{gathered}
+\text{Prediction closure requires an independently selected}\\
+\text{normalized state direction }\widehat X_2.
+\end{gathered}}
+\end{equation}
+
+\subsection{Claim boundary}
+No second observational calibration is introduced.  Until the branch direction is fixed by the retained action or by an explicit preregistered theoretical branch condition, the manuscript reports the observable kernels as state-space rows rather than unique scalar amplitudes.

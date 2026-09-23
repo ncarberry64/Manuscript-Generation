@@ -1,0 +1,22 @@
+[
+  {
+    "test": "P_original_training_to_heldout",
+    "draws": 2000,
+    "movable_rows": 1135,
+    "total_rows": 1208,
+    "conditional_permutation_p": 0.1359320339830085,
+    "mock_calibration_draws": 200,
+    "fraction_null_p_below_05": 0.09,
+    "exchangeability": "not guaranteed; use Gaussian mock p for inference"
+  },
+  {
+    "test": "DES_Pantheon_transfer",
+    "draws": 2000,
+    "movable_rows": 1467,
+    "total_rows": 1467,
+    "conditional_permutation_p": 0.5872063968015993,
+    "mock_calibration_draws": 200,
+    "fraction_null_p_below_05": 0.035,
+    "exchangeability": "not guaranteed; use Gaussian mock p for inference"
+  }
+]

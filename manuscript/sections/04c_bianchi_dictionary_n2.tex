@@ -1,0 +1,81 @@
+% BHSM-native manuscript reformat:
+% This section is an EFT compatibility audit.  The defining BHSM transport
+% theorem is Sec. \ref{sec:bhsm-native-transport}; unresolved global curved
+% DAE preservation must not be promoted to a failure of the BHSM mode theorem.
+\section{ADM--EFT Dictionary and Differential-Algebraic Consistency}
+
+The two calculations use complementary perturbation languages. Akama and Kobayashi formulate the non-flat Horndeski action in unitary ADM gauge,
+\[
+N=1+\delta n,\qquad
+N_i=D_i\chi,\qquad
+g_{ij}=a^2e^{2\zeta}\gamma_{ij},
+\]
+while Gambino and Pace restore the scalar with
+\[
+t\rightarrow t+\pi
+\]
+and give the curvature-aware field equations in Newtonian gauge \citep{AkamaKobayashi2019,GambinoPace2024}.
+
+The linear time shift that removes the scalar ADM shift gives
+\[
+\boxed{\pi=-\chi},
+\]
+\[
+\boxed{\Phi=\delta n-\dot\pi=\delta n+\dot\chi},
+\]
+and
+\[
+\boxed{\Psi=-\zeta+H\pi=-\zeta-H\chi}.
+\]
+The inverse dictionary is
+\[
+\boxed{
+\chi=-\pi,\qquad
+\delta n=\Phi+\dot\pi,\qquad
+\zeta=H\pi-\Psi .
+}
+\]
+
+\subsection{Correct Bianchi audit}
+
+The first implementation attempt treated the \(00\) and \(0i\) equations as a complete local evolution system and then demanded that the spatial-trace and scalar equations vanish for an arbitrary pointwise state. That test is too strong and uses the constraint equations in the wrong role.
+
+The correct formulation is differential algebraic. The spatial-trace and scalar equations contain the second derivatives of the physical scalar sector and determine
+\[
+(\ddot\Phi,\ddot\pi),
+\]
+while the \(00\) and \(0i\) equations define constraints on the initial data. Covariant consistency requires those constraints to be preserved by the evolution.
+
+For
+\[
+\alpha_M=\alpha_T=\alpha_H=0,\qquad
+\Phi=\Psi,
+\]
+the acceleration matrix is
+\[
+\boxed{
+\mathcal A
+=
+\begin{pmatrix}
+2 & -2H\alpha_B\\
+6H\alpha_B & H^2\alpha_K
+\end{pmatrix},
+}
+\]
+where \(\alpha_B\) is in the Gambino--Pace/Gleyzes normalization. Its determinant is
+\[
+\boxed{
+\det\mathcal A
+=
+2H^2\left(\alpha_K+6\alpha_B^2\right)
+=
+2H^2D_{\rm kin}>0.
+}
+\]
+Thus the second-order scalar--metric evolution block is nonsingular on the same positive-\(D_{\rm kin}\) branch.
+
+The repository now integrates the trace/scalar equations together with ideal dust and radiation conservation, starting from data that satisfy the sourced \(00\) and \(0i\) constraints. The Bianchi audit is then the preservation of those two constraints over the interval
+\[
+2.1\ge z\ge0.
+\]
+Both raw and term-normalized constraint residuals are evaluated. The topographic reduced-response operator remains switched off throughout this certification.

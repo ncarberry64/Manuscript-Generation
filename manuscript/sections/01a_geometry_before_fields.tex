@@ -1,0 +1,50 @@
+\section{Methods: geometry and physical reduction}
+\label{sec:geometry-before-fields}
+The methodological ordering is
+\begin{equation}
+\boxed{\begin{gathered}
+\text{geometry}\to\text{action}\to\text{constraints / boundary conditions}\\
+\to\text{gauge quotient}\to\text{physical tangent space}\\
+\to\text{physical Hessian}\to\text{reduced response}\\
+\to\text{metric / matter response}\to\text{optics}\to\text{observables}.
+\end{gathered}}
+\label{eq:geometry-first}
+\end{equation}
+Boundary conditions specify the operator domain before inversion.
+At a regular constrained stationary point, a gauge-fixed representative is
+$T_{\rm phys}=\ker D\mathcal C\cap\mathcal G^\perp$.
+This notation assumes a declared inner product and a valid gauge slice;
+it does not establish their global existence.
+The physical second variation is
+$P_{\rm phys}D^2\mathcal L_{\rm KKT}P_{\rm phys}$.
+Eliminating an invertible physical complement gives
+$\mathcal K_{\rm phys}=A-BK^{-1}B^\dagger$.
+
+On the same domain, the metric block obeys
+\begin{align}
+\mathcal A_g h+\mathcal B_{g2}X_2+J_g&=0,\\
+\mathcal R_{g2}&=-\mathcal A_g^{-1}\mathcal B_{g2},\\
+h_2&=h_{\rm src}+\mathcal R_{g2}X_2,\qquad
+h_{\rm src}=-\mathcal A_g^{-1}J_g.
+\end{align}
+The inverse requires a nonsingular retained block. The induced metric has
+no extra initial datum. The reference homogeneous response sets the
+independent source contribution to zero; target fits must subtract any
+independently specified source before applying the shared-state test.
+
+BHSM supplies the proposed common action, boundary-sector interpretation
+and projection contracts. This repository implements the downstream
+cosmological bridge; complete compact-background matrix elements remain
+open. A useful effective representation need not have been proved globally
+equivalent to that bridge. The particular curved-EFT failure reported below
+is a limitation of that audited construction, not of EFT or QFT in general.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/constraint_prediction_chain.pdf}
+\caption{Constraint-to-prediction chain. Solid, dashed and dotted boxes
+identify DERIVED identities, CONDITIONAL physical choices, and OPEN inputs;
+status is also written in every box. A single selected state feeds all
+observable rows. No independent observable amplitude is introduced.}
+\label{fig:constraint-chain}
+\end{figure}

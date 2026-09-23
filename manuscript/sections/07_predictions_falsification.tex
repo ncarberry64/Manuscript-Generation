@@ -30,13 +30,18 @@ and at sufficiently low redshift,
 (+0.01895\pm0.00414)\cos\theta.
 \]
 
-These numbers are a carried-forward calibration input; the present repository does not independently rerun the Pantheon+ tomographic likelihood. They normalize only the observed \(n=1\) response,
+These numbers retain the earlier exploratory calibration; its original
+likelihood is not reconstructed here. Section~\ref{sec:sn-sightlines} instead
+uses the separately frozen later full-covariance amplitude
+$A=-0.04321623436$ mag. The two calibrations must not be conflated, and
+neither is retuned by the new interpretation test. The historical numbers
+normalize only the selected physical \(n=2\) response,
 \[
 A_\mu
 =
 \frac{\mathcal K_{\rm SN}S_2}{p_2C_2},
 \]
-and do not independently determine \(S_2\), \(\mathcal K_{\rm SN}\), or \(C_2\). Their interpretation as a metric/light-cone response is additionally conditional on resolving the exceptional closed-FLRW \(n=1\) sector.
+and do not independently determine \(S_2\), \(\mathcal K_{\rm SN}\), or \(C_2\). The physical distance row is now explicit; one scalar calibration leaves a state-space null direction.
 
 \subsection{Curvature}
 
@@ -57,7 +62,7 @@ This value is a frozen model forecast, not a current empirical best fit. DESI DR
 
 \subsection{Harmonic hierarchy}
 
-The bridge predicts selective \(n=2\) softening with no analogous \(n\ge3\) enhancement. A future source-normalized \(S^3\) \(n=2\) susceptibility comparable to or larger than the \(n=1\) susceptibility would reject the minimal harmonic-filter branch. This statement is made at the compact-space harmonic level; comparison to a measured sky quadrupole requires an explicit observer-shell projection.
+The bridge predicts selective \(n=2\) softening with no analogous \(n\ge3\) enhancement. A future source-normalized \(S^3\) \(n=3\) susceptibility comparable to or larger than the physical \(n=2\) susceptibility would reject the minimal harmonic-filter branch. This statement is made at the compact-space harmonic level; comparison to a measured sky quadrupole requires an explicit observer-shell projection.
 
 \subsection{Fixed-axis test}
 
@@ -73,17 +78,88 @@ At large \(n\),
 \[
 C_n\simeq\chi\ell^2n^2,
 \]
-so the extra scalar susceptibility falls as \(n^{-2}\). The model therefore predicts a strong separation between the first nonconstant compact-space level and conventional clustering modes.
+so the extra scalar susceptibility falls as \(n^{-2}\). The model therefore predicts a strong separation between the first physical compact-space level and conventional clustering modes.
 
 \subsection{Failure conditions}
 
 The minimal bridge is disfavored if one or more of the following are established with adequate precision:
 \begin{enumerate}
 \item independent curvature measurements exclude the frozen negative-\(\Omega_k\) forecast;
-\item the source-normalized \(S^3\) \(n=2\) response is comparable to or exceeds \(n=1\);
+\item the source-normalized \(S^3\) \(n=3\) response is comparable to or exceeds physical \(n=2\);
 \item an independent low-redshift sample excludes the frozen dipole axis while finding a stable incompatible physical axis;
 \item a coherent metric/light-cone dipole of comparable amplitude persists into a redshift regime in which the completed model predicts loss of enhanced susceptibility;
 \item ordinary RSD modes show a large scale-independent modification incompatible with the high-\(n\) suppression;
 \item lensing requires a metric response incompatible with the same completed scalar--metric propagator that controls matter clustering;
-\item no gauge-invariant physical metric response exists for the exceptional closed-FLRW harmonic corresponding to the proposed \(n=1\) topographic mode.
+\item the selected physical \(n=2\) response cannot satisfy the common-domain constraint or stability requirements.
 \end{enumerate}
+
+% BEGIN R1_COSMOLOGY_CLOSURE_V15
+
+
+% BEGIN PRE_PEER_REVIEW_LEGACY_STATUS_V1
+\subsection{Role of carried-forward phenomenology}
+The numerical low-redshift supernova calibration, fixed axis, and historical
+curvature amplitude entered this project before the present geometry-first
+physical reduction.  They are retained here as frozen calibration or
+prospective legacy forecasts against which the new constrained construction
+can be tested; they do not define the physical $n=2$ state or its observable
+kernels.  In particular, the closed $S^3$ parent fixes the sign
+$\Omega_k<0$ in the adopted FLRW convention, whereas the numerical forecast
+$\Omega_k=-0.018\pm0.004$ is a carried-forward model forecast rather than a
+new action-native determination of $|\Omega_k|$.
+
+The same distinction applies to BAO and growth.  The current action-native
+transverse distance response satisfies
+$\mathcal F_{D_M/r_d}=\mathcal F_{D_L}$ conditional on
+$\delta\ln r_d=0$.  The exact radial kernel
+$\mathcal F_{D_H/r_d}=-\mathcal F_H$ and the survey-window/covariance
+projection needed for a publishable RSD or radial-BAO comparison remain open.
+The historical direct BAO--SN amplitude proportionality is therefore retained
+only as provenance, not as the final prediction object.
+% END PRE_PEER_REVIEW_LEGACY_STATUS_V1
+
+\subsection{Status of the historical BAO--SN proportionality}
+\label{sec:r1-bao-sn-status-v15}
+
+The historical phenomenological forecast
+$\mathcal R_{\rm BS}\sim700$--$800\,
+\mathrm{km\,s^{-1}\,Mpc^{-1}}$ is retained as part of the development
+record, but it is not asserted here as a closed action-native coefficient.
+The modern R1 realization propagates a two-component canonical state through
+observable-specific kernels, so the final falsification test is a common-state
+trajectory evaluated at explicit epochs and through the appropriate standard
+candle, transverse-BAO, radial-BAO, growth, or lensing response.
+
+The low-redshift supernova calibration is kept separate from the global
+high-redshift state inference. At $z_\star=0.02$ the empirical
+calibration corresponds to
+\[
+|\Delta H_0|=1.279\pm0.279\,
+\mathrm{km\,s^{-1}\,Mpc^{-1}},
+\]
+whereas the present high-redshift canonical state propagated to the same
+low-redshift point gives a central value
+\[
+|\Delta H_0|_{\rm global}=0.01017\,
+\mathrm{km\,s^{-1}\,Mpc^{-1}}.
+\]
+Consequently the minimal homogeneous/global realization is not used as a
+substitute for the local calibration. Any local/topographic contribution
+needed to predict that amplitude must be modeled and tested separately; no
+retuning of the frozen canonical state is performed here.
+
+The currently closed prediction structure is therefore:
+\[
+X_2\longrightarrow
+\left\{
+\mathcal F_{D_L},
+\mathcal F_{D_M/r_d},
+\mathcal F_{\rm growth},
+\mathcal F_{\rm Weyl}
+\right\},
+\]
+with $\mathcal F_{D_H/r_d}=-\mathcal F_H$ and survey-specific BAO
+pair-window/covariance projection remaining open. These open objects are
+future falsification targets rather than quantities filled by surrogate
+relations.
+% END R1_COSMOLOGY_CLOSURE_V15

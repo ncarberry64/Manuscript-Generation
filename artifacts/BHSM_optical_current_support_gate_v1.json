@@ -1,0 +1,27 @@
+{
+  "schema": "bhsm-optical-current-support-gate-v1",
+  "status": "EXACT_SUPPORT_CONDITION_WITH_NUMERICAL_PROJECTIONS_OPEN",
+  "static_background": {
+    "D0_eta": 0,
+    "j0": 0,
+    "static_shift_phase_block": 0
+  },
+  "spatial_mixed_source": "S_ij=2Fpp(j.gradphi)A_ij+2Fp j_(i grad_j)phi-Fp g_ij(j.gradphi)",
+  "support_gate": "j_i=0 OR grad_i(phi)=0 => u=v=0",
+  "important_distinction": "zero ADM momentum density on a static branch does not imply zero spatial target Noether current j_i",
+  "projection": {
+    "u": "integral w e_A^{ij} S_ij",
+    "v": "integral w e_psi^{ij} S_ij"
+  },
+  "stochastic_consequence": {
+    "one_texture_channel": "C_B=sigma_q^2 b_loc b_loc^dagger; rank <= 1",
+    "m_texture_channels": "rank(C_B) <= m before independent source channels are added"
+  },
+  "next_required_inputs": [
+    "closed-FLRW physical metric basis tensors e_A and e_psi",
+    "background spatial target current j_i",
+    "normalized local texture gradient grad_i phi",
+    "background A_ij, g_ij, Fprime(X), Fdoubleprime(X)",
+    "physical quadrature measure"
+  ]
+}

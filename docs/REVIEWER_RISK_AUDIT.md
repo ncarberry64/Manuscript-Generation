@@ -1,0 +1,20 @@
+# Reviewer risk audit
+
+| ID | Objection | Response and precise location | Evidence |
+|---|---|---|---|
+| A | Why remove n=1? | Hyperspherical Parent: trace-free scalar-derived metric harmonic vanishes at k²=3; regular one-scalar constraint/gauge quotient. Additional boundary degrees are outside this result. | tests/test_closed_horndeski_n2.py |
+| B | Why is n=2 physical? | Proposition 1 assumes a nonempty action-owned sector, common domain and positive nondegenerate kinetic form; not an unconditional proof of the microscopic BHSM sector. | artifacts/R1_n2_reduced_propagator.json |
+| C | Was the dipole inserted? | eq:bhsm-n2-exact-dipole follows from A44=0 and Sij=0 in the exact 9-dimensional n=2 decomposition. Choosing that subspace and axis remains conditional. | manuscript/sections/02_hyperspherical_parent.tex |
+| D | Are q2 and Pi2 two fields? | eq:bhsm-q2-action and canonical momentum: conjugate data of one selected normalized profile. | manuscript/sections/04aa_bhsm_native_n2_transport.tex |
+| E | Is EFT being rejected? | Effective representation audit limits its conclusion to the tested representation. Covariant EFT can implement the same physical reduction. | docs/HOSTILE_REFEREE_AUDIT.md |
+| F | Does the DAE close? | No: curved constraint-preservation defect retained; flattened limit and local equations do not establish global closure. | artifacts/submission_pytest.xml, strict xfail |
+| G | Is matter/radiation stable? | Discussion: no complete backreacting matter+radiation stability theorem. Reference gravity-scalar response only. | artifacts/R1_n2_growth_lensing_transfer.json |
+| H | Is the SN amplitude independent? | Predictions distinguishes historical −.0412 from later frozen −.04321623436; original training reused by all-Pantheon crossfit, which is descriptive. | analyses/sn_sightline_tomography_v1/FROZEN_SCIENTIFIC_STATE.json |
+| I | What about the state null direction? | Distance calibration row has rank one on two-dimensional X2. No unique absolute growth/lensing amplitude until direction independently selected; no second calibration introduced. | artifacts/R1_n2_luminosity_distance_kernel.json |
+| J | Does PV absorb the same optical history? | SN PV section reports estimator overlap only: +.033953716 and +.009368488 mag do not identify a BHSM cause. | analyses/sn_sightline_tomography_v1/interpretation/FIXED_PV_CORRECTION_PROJECTIONS.json |
+| K | Was external PV freely fitted? | No. Fixed mean coefficient1; −4.909 is sensitivity only, missing complete joint uncertainty. No subtraction of released covariances to fabricate independent PV covariance. | analyses/sn_sightline_tomography_v1/interpretation/LIKELIHOODS.csv |
+| L | Did it transfer to DES? | SN table: +1.321 after Pantheon nuisance transfer versus null; no transfer success. Missing cross-survey covariance explicitly conditions the comparison. | analyses/sn_sightline_tomography_v1/interpretation/DES_Pantheon_transfer_DESIGN.json |
+| M | Is tomography significant? | No aggregate localization (.328/.531); .0195 is one of22 overlapping uncorrected scans, not detection. W rank is not isolated topographic covariance rank. | analyses/sn_sightline_tomography_v1/FINAL_REPORT.md |
+| N | Should raw covariance have rank1? | Low-rank section: only isolated M Cq M† for coherent global amplitudes. One local noise field can give many ranks. No PSD clipping or conventional-covariance fitting to enforce rank. | preregistration/bhsm_geometry_first_make_or_break_v1.json |
+| O | What actually falsifies the model? | Gate A rejects specified shared-state realization at pA<.01; Gate B specified one-amplitude realization at pB<.01. Separate gates, union bound≤.02. No post-inspection added states/channels/bins/axis changes. | artifacts/BHSM_MAKE_OR_BREAK_PREDICTION_v1.json |
+| P | Which upstream objects remain open? | Discussion lists background normalization, local matrix elements, seam export, source/rare law, full matter/radiation, state direction, joint covariance, independent prospective design. | artifacts/BHSM_local_optical_hessian_extraction_contract_v1.json |
