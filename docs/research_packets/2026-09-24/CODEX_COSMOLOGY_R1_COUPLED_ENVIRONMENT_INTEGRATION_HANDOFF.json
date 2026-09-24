@@ -1,0 +1,74 @@
+{
+  "protocol_id": "COSMOLOGY_R1_COUPLED_ENVIRONMENTAL_STATE_INTEGRATION",
+  "version": "1.0.0",
+  "priority": "COSMOLOGY_PAPER_FIRST",
+  "purpose": "Integrate the cosmology-owned coupled environmental-state result into Geometry Before Fields without waiting for BHSM bridge closure.",
+  "repo": "C:\\Users\\carbe\\Manuscript-Generation",
+  "branch_suggestion": "theory/r1-coupled-environment-state-paper-integration",
+  "source_results": {
+    "anchor_z": 2.1,
+    "physical_state": [
+      "q2",
+      "Pi2",
+      "delta_m",
+      "delta_r",
+      "v_m",
+      "v_r"
+    ],
+    "topographic_pair": "X2=(q2,Pi2)",
+    "environment_pair": "E=(delta_m,delta_r,v_m,v_r)",
+    "temporal_rank_after_anchor": 2,
+    "matter_only_temporal_rank": 2,
+    "seed_recovery_max_abs": 3.1e-13,
+    "propagator_reproduction_z1p5_max_abs": 3.1e-09,
+    "spatial_n2_dimension": 9,
+    "single_profile_condition": "rank_spatial(X)<=1",
+    "retuning": false
+  },
+  "scientific_reframe": [
+    "Do not say the temporal X2 state requires a one-dimensional isolated attractor.",
+    "Say specified environmental density/velocity data at the R1 anchor can span both temporal topographic components.",
+    "Keep temporal-state generation distinct from spatial profile/axis selection.",
+    "On isotropic R1, orientation can be transmitted from environmental n=2 coefficients but is not created from an isotropic state.",
+    "A one-profile observable model is a special spatial-rank condition, not the fundamental ontology."
+  ],
+  "manuscript_edits": [
+    "Create a new section from the supplied LaTeX insertion draft, preferably after the action-native matter/backreaction section and before observable-specific kernels.",
+    "In the Introduction, replace any implication that the two-component temporal state itself must be selected by an isolated mode with the coupled-state formulation. Preserve the statement that spatial profile/axis remains conditional.",
+    "In the claim-status table, revise the selected-state row to distinguish TEMPORAL REALIZATION from SPATIAL PROFILE/AXIS selection.",
+    "In the conclusion, add one concise sentence that the coupled R1 environment can source both temporal components, while physical environmental initial data and spatial reduction remain open.",
+    "Do not add S0/S1 low-z proxy details to the main manuscript in this pass."
+  ],
+  "must_not_change": [
+    "Frozen R1 cosmological parameters.",
+    "Existing luminosity-distance, transverse-BAO, growth, Weyl, optical kernels.",
+    "Retrospective Pantheon+/DES results.",
+    "Gate A/B p<0.01 preregistration.",
+    "Submission-ready remote main until the integration branch has passed review.",
+    "BHSM microscopic normalization claims."
+  ],
+  "validation": [
+    "Reproduce the coupled environmental-state audit from current code.",
+    "Verify rank(U_XE)=2 at every reported post-anchor epoch.",
+    "Verify the matter-only (delta_m,v_m) determinant is nonzero at every reported epoch.",
+    "Verify no observational data are used to choose E_i.",
+    "Run focused cosmology tests and full repository pytest.",
+    "Build LaTeX with zero unresolved references/citations and no overfull boxes.",
+    "git diff --check.",
+    "Require RETUNING=false in the integration receipt."
+  ],
+  "decision_rule": {
+    "accept_if": "The new section is fully supported by the frozen R1 six-state system and all validations pass.",
+    "reject_if": "Any text implies the z=2.1 environmental state is derived from earlier history, that a unique axis is selected, or that the microscopic BHSM-to-R1 normalization is closed."
+  },
+  "required_status_lines": [
+    "COUPLED_ENVIRONMENTAL_TEMPORAL_RANK = 2",
+    "MATTER_ONLY_TEMPORAL_RANK = 2",
+    "SPATIAL_SINGLE_PROFILE = CONDITIONAL_RANK_LE_1",
+    "ISOLATED_TEMPORAL_ATTRACTOR_REQUIRED = FALSE",
+    "ANCHOR_INITIAL_STATE_DERIVED_FROM_EARLY_UNIVERSE = FALSE",
+    "BHSM_R1_NORMALIZATION_BRIDGE = OPEN",
+    "RETUNING = FALSE",
+    "MANUSCRIPT_INTEGRATION = PASS | FAIL"
+  ]
+}
