@@ -415,7 +415,7 @@ LaTeX Font Info:    ... okay on input line 20.
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes:
 * h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
 * v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
@@ -488,13 +488,13 @@ LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
 (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line
 22.
 
 (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line
 22.
 
 (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
@@ -613,7 +613,7 @@ it/10.95 a[]G[]\OT1/lmr/m/n/10.95 )[]$\T1/lmr/m/n/10.95 , with a pos-i-tive sec
 25pt>
 File: figures/coupled_environment_singular_values.pdf Graphic file (type pdf)
 <use figures/coupled_environment_singular_values.pdf>
-Package pdftex.def Info: figures/coupled_environment_singular_values.pdf  used 
+Package pdftex.def Info: figures/coupled_environment_singular_values.pdf  used
 on input line 152.
 (pdftex.def)             Requested size: 385.20255pt x 240.22858pt.
 <figures/coupled_environment_matter_determinant.pdf, id=316, 430.86407pt x 265.
@@ -658,7 +658,7 @@ Package pdftex.def Info: figures/r1_highk_growth_convergence.pdf  used on input
 [22] [23 <./figures/r1_omegaT.png> <./figures/r1_growth_ratio.png>] [24 <./figu
 res/r1_principal_characteristic_speeds.pdf> <./figures/r1_highk_growth_converge
 nce.pdf>]
-LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line
 47.
  (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.fd
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -801,7 +801,7 @@ ed 20 Jan-uary 2026,
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
  ***********
- ) 
+ )
 Here is how much of TeX's memory you used:
  12525 strings out of 467871
  207281 string characters out of 5418376
@@ -838,4 +838,3 @@ PDF statistics:
  1198 PDF objects out of 1200 (max. 8388607)
  323 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
-

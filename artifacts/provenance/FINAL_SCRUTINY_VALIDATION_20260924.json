@@ -822,6 +822,10 @@
     },
     "retuning": false
   },
+  "raw_latex_log_sha256": {
+    "manuscript/main.log": "0ee1790e1a13ff7703bf0a9e0725dd2077ec362d6ed2ceeb82786ef3df058898",
+    "manuscript/build/final-source-rebuild/main.log": "8c9d9b1e96a0c05b346e99426fb8c855bdb58aa58399ac265f0ad8f4cb22728a"
+  },
   "versions": {
     "numpy": "2.4.6",
     "scipy": "1.17.1",
@@ -838,8 +842,10 @@
     "artifacts/provenance/FINAL_SCIENTIFIC_FIGURES_RECEIPT.json",
     "artifacts/provenance/FINAL_SCRUTINY_COUPLED_REPLAY.json",
     "artifacts/provenance/FINAL_SCRUTINY_INPUT_EQUIVALENCE.json",
+    "artifacts/provenance/FINAL_SCRUTINY_VALIDATION_20260924.json",
     "artifacts/provenance/FINAL_SCRUTINY_VISUAL_AUDIT.json",
     "code/final_scientific_figures.py",
+    "docs/FINAL_SCRUTINY_VALIDATION_20260924.md",
     "docs/HOSTILE_REFEREE_AUDIT.md",
     "docs/REVIEWER_RISK_AUDIT.md",
     "docs/UNIVERSE_CLAIM_PROVENANCE.md",
@@ -874,6 +880,7 @@
     "manuscript/sections/10_discussion.tex",
     "scripts/apply_final_scrutiny_revision.py",
     "scripts/record_final_scrutiny_validation.py",
+    "submission/SUBMISSION_READINESS.md",
     "submission/UNIVERSE_PLANNED_PAPER_ABSTRACT_250_WORDS.md",
     "submission/UNIVERSE_SPECIAL_ISSUE_COVER_LETTER.md",
     "submission/universe-source.zip"

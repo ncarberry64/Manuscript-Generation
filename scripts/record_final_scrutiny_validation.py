@@ -58,7 +58,8 @@ def main():
     for src, dest in [("manuscript/main.log", "artifacts/final_scrutiny_latex_build.txt"),
                       ("manuscript/build/final-source-rebuild/main.log", "artifacts/final_scrutiny_isolated_build.txt")]:
         assert not re.search(r"Overfull|undefined|Warning|! LaTeX Error", text(src))
-        shutil.copyfile(ROOT/src, ROOT/dest)
+        # Preserve the diagnostic content while keeping repository text clean.
+        write(dest, "\n".join(line.rstrip() for line in text(src).splitlines()).rstrip()+"\n")
     main_tex = text("manuscript/main.tex")
     abstract = main_tex.split(r"\begin{abstract}")[1].split(r"\end{abstract}")[0]
     title_files = ["manuscript/main.tex", "README.md", "submission/UNIVERSE_SPECIAL_ISSUE_COVER_LETTER.md",
@@ -83,6 +84,7 @@ def main():
                    page_count=len(pdf.pages), abstract_whitespace_words=len(abstract.split()),
                    references=len(re.findall(r"\\bibitem",text("manuscript/main.bbl"))),
                    scientific_input_count=eq["input_count"], coupled_replay=a,
+                   raw_latex_log_sha256={p:digest(ROOT/p) for p in ["manuscript/main.log","manuscript/build/final-source-rebuild/main.log"]},
                    versions={n:importlib.metadata.version(n) for n in ["numpy","scipy","matplotlib","pytest","pypdf"]},
                    reviewed_changed_files=outputs,
                    hashes={p:digest(ROOT/p) for p in ["manuscript/main.pdf","submission/universe-source.zip",
