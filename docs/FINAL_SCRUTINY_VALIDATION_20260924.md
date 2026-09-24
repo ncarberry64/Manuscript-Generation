@@ -26,6 +26,8 @@ The full suite is the run launched in `r1-coupled-environment-integration`, not 
 
 The environmental replay recovers both topographic seeds to 6.01005e-14, inverts the seed basis to 2.22045e-16, and reproduces the saved z=1.5 propagator with maximum difference 0. This replays committed propagators through current constraint/basis code; it is not a new independent ODE integration or reconstruction of physical environmental initial data.
 
+The original plotted singular values/determinants and the current replay are not bitwise identical: maximum absolute difference 7.8509e-09, maximum relative difference 1.10053e-07. A trial 1e-12 absolute identity check failed. Both artifacts are preserved without modifying their values, the figures use the declared original input, and both audits retain the same sampled rank-two conclusion. This is not reported as exact numerical reproduction of every archived scalar.
+
 `FINAL_SCIENTIFIC_FIGURES_RECEIPT.json` hashes the analytic/artifact inputs and all new figures. `FINAL_SCRUTINY_VISUAL_AUDIT.json` records PDF and per-page render hashes. All pages were inspected in 100-dpi contact sheets, with individual detail views for revised geometry/text. Crowded analytic longitude labels were corrected and rechecked. The isolated rebuild has identical extracted text and page count. The source ZIP verifies every internal hash.
 
 Existing Python 3.14 warnings about legacy non-raw TeX string escapes were observed during collection. No scientific owner was changed to suppress them. The LaTeX builds have zero warnings.

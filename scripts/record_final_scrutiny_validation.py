@@ -71,6 +71,13 @@ def main():
     a = load("artifacts/provenance/FINAL_SCRUTINY_COUPLED_REPLAY.json")
     assert all(r["rank_rel_1e-8"] == r["q2_Pi2_rank_rel_1e-8"] == 2 for r in a["rows"])
     assert not a["retuning"] and not a["observational_environment_selection"]
+    archived = load("artifacts/provenance/BHSM_R1_COUPLED_ENVIRONMENTAL_STATE_AUDIT_V1.json")["temporal_result"]["rows"]
+    differences = []
+    relative = []
+    for old, new in zip(archived, a["rows"], strict=True):
+        assert old["z"] == new["z"]
+        for u,v in zip([old["s1"],old["s2"],old["matter_det"]],new["singular_values"]+[new["matter_delta_v_determinant"]]):
+            differences.append(abs(u-v)); relative.append(abs(u-v)/abs(u))
     # Record the exact baseline-relative review list, without auto-staging it.
     names = subprocess.check_output(["git","diff","--name-only","850b1ab"], cwd=ROOT, text=True).splitlines()
     new = subprocess.check_output(["git","ls-files","--others","--exclude-standard"], cwd=ROOT, text=True).splitlines()
@@ -84,6 +91,7 @@ def main():
                    page_count=len(pdf.pages), abstract_whitespace_words=len(abstract.split()),
                    references=len(re.findall(r"\\bibitem",text("manuscript/main.bbl"))),
                    scientific_input_count=eq["input_count"], coupled_replay=a,
+                   archived_plot_values_vs_current_replay={"bitwise_identical":False,"max_absolute_difference":max(differences),"max_relative_difference":max(relative),"note":"The figure retains the original committed artifact; the current-code replay is separately preserved. Both give the same sampled rank conclusions. A trial 1e-12 absolute identity check failed; no frozen value or scientific gate was altered."},
                    raw_latex_log_sha256={p:digest(ROOT/p) for p in ["manuscript/main.log","manuscript/build/final-source-rebuild/main.log"]},
                    versions={n:importlib.metadata.version(n) for n in ["numpy","scipy","matplotlib","pytest","pypdf"]},
                    reviewed_changed_files=outputs,
@@ -120,6 +128,8 @@ The coupled table and figure use `(zeta,zeta_dot)` and a hatted transfer. Rank t
 The full suite is the run launched in `{other.name}`, not a second fresh run on this review branch. All 102 test identities and 188 recorded scientific inputs match exactly. Its evidence is imported only after completion and checked for unexpected failures/skips. The new plotter was run separately. The focused tests were rerun here; the gradient tests validate the committed audit artifacts, not a newly rerun principal-symbol integration. Both figure generators ran successfully; the four regenerated legacy PNGs are unchanged.
 
 The environmental replay recovers both topographic seeds to {a['topographic_seed_recovery_max_abs_difference']:.6g}, inverts the seed basis to {a['seed_inverse_residual']:.6g}, and reproduces the saved z=1.5 propagator with maximum difference {a['stored_full_propagator_z1p5_max_abs_difference']:.6g}. This replays committed propagators through current constraint/basis code; it is not a new independent ODE integration or reconstruction of physical environmental initial data.
+
+The original plotted singular values/determinants and the current replay are not bitwise identical: maximum absolute difference {max(differences):.6g}, maximum relative difference {max(relative):.6g}. A trial 1e-12 absolute identity check failed. Both artifacts are preserved without modifying their values, the figures use the declared original input, and both audits retain the same sampled rank-two conclusion. This is not reported as exact numerical reproduction of every archived scalar.
 
 `FINAL_SCIENTIFIC_FIGURES_RECEIPT.json` hashes the analytic/artifact inputs and all new figures. `FINAL_SCRUTINY_VISUAL_AUDIT.json` records PDF and per-page render hashes. All pages were inspected in 100-dpi contact sheets, with individual detail views for revised geometry/text. Crowded analytic longitude labels were corrected and rechecked. The isolated rebuild has identical extracted text and page count. The source ZIP verifies every internal hash.
 
