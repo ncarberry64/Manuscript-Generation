@@ -840,6 +840,7 @@
     "pypdf": "6.13.2"
   },
   "reviewed_changed_files": [
+    ".github/workflows/validate.yml",
     "README.md",
     "artifacts/final_scrutiny_collection.txt",
     "artifacts/final_scrutiny_focused_pytest.xml",

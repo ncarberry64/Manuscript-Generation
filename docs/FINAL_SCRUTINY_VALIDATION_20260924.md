@@ -32,6 +32,8 @@ The original plotted singular values/determinants and the current replay are not
 
 Existing Python 3.14 warnings about legacy non-raw TeX string escapes were observed during collection. No scientific owner was changed to suppress them. The LaTeX builds have zero warnings.
 
+The first GitHub numerical job failed during collection because the workflow omitted `PYTHONPATH=code` (`ModuleNotFoundError: background`). The workflow now supplies the same import path as the validated local command and runs the new figure generator as well. No test, solver, tolerance or scientific parameter was changed. Hosted CI status is separate from the local full-suite receipt; inspect the PR checks before merging.
+
 Open science remains explicit: independently reconstructed environmental anchor data, spatial profile/axis selection, microscopic and absolute local-source normalization, nonlinear-fluid/UV completion, joint observational covariance, exact radial BAO and survey-ready RSD. No observational signal or prospective gate success is claimed.
 
 Author-only CRediT, funding and conflict declarations remain unfilled. No archive DOI, journal submission, external message or merge was performed. Review and merge approval remain with the author, as explicitly required by the final scrutiny handoff.
