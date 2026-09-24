@@ -1,4 +1,4 @@
-# Geometry Before Fields: Manuscript-Generation
+# Geometry Before Fields: Constraint-Reduced Cosmology and Optical Predictions in the Berger--Hopf Framework
 
 Norman P. Carberry's conditional cosmology Article for **Universe (MDPI), Cosmology**.
 
@@ -12,6 +12,7 @@ The paper follows geometry -> action -> constraints/boundary conditions -> gauge
 |---|---|
 | DERIVED | Physical-domain Schur metric response; regular closed-FLRW harmonic exclusion; linear distance/optical identities; rank bound for a fixed finite latent-amplitude response. |
 | CALIBRATED / CONDITIONAL | One selected physical n=2 profile, R1 parameters and reduced gravity-scalar coefficients, induced dust/growth/Weyl rows, SN amplitude/axis, coherent finite-channel stochastic realization. |
+| NUMERICALLY AUDITED | Frozen R1 action-native quadratic dust/radiation backreaction; positive audited kinetic matrix and no detected high-k scalar gradient instability. Environmental transfer has temporal rank two at eight post-anchor epochs; no spatial profile/axis selection follows. |
 | REJECTED / NOT ESTABLISHED | Reported homogeneous localization failure; frozen number-density, K-band luminosity and seam-charge foreground transfer failures. The original localization statistic is not archived; foreground numerical artifacts are retained. |
 | OPEN | Normalized compact full-preimage background, local action matrix elements, seam export, source/rare-event statistics, absolute amplitudes, profile selection and survey-ready nuisance calibration. |
 
@@ -35,8 +36,10 @@ The gates have separate nulls and are not assumed statistically independent. The
 
 ```powershell
 python -m pip install -r requirements-dev.txt
+$env:PYTHONPATH='code'
 python -m pytest -q
 python code/figures.py
+python code/final_scientific_figures.py
 cd manuscript
 latexmk -C
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
@@ -57,7 +60,7 @@ The suite includes long nested integrations and one documented strict expected f
 | `external/` | [Input provenance](external/README.md); raw surveys not bundled |
 | Root `apply_*` / `populate_*` scripts | Historical editing provenance; not current build entry points |
 
-## Submission checkpoint
+## Historical submission checkpoint
 
 Upgrade branch: `theory/cosmology-universe-manuscript-final`, starting at **5dff33b**, which repaired and preserved the unfinished Universe work. Earlier lineage: **14fced6**, **22b58bd**, **129a88c**, **55e2134**, **203cd43**.
 
@@ -70,3 +73,5 @@ Related preprint: [Preprints.org 202601.1427](https://www.preprints.org/manuscri
 ## Final Universe revision
 
 See [submission readiness](submission/SUBMISSION_READINESS.md), [claim provenance](docs/UNIVERSE_CLAIM_PROVENANCE.md) and [reviewer risk audit](docs/REVIEWER_RISK_AUDIT.md). The final revision preserves the frozen science and adds no parameter rescue.
+
+Current review branch: `review/cosmology-final-scrutiny-20260924`, based on public `083e14654d1b81b3853484b48e132bd5bc41567c`. See [final scrutiny validation](docs/FINAL_SCRUTINY_VALIDATION_20260924.md). No merge or submission without author approval.

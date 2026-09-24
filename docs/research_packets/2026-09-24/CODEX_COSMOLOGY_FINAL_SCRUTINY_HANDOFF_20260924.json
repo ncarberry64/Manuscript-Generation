@@ -1,0 +1,125 @@
+{
+  "protocol_id": "COSMOLOGY_FINAL_SCRUTINY_AND_GRAPHICS_20260924",
+  "version": "1.0.0",
+  "priority": "COSMOLOGY_PAPER_FIRST",
+  "repository": "C:\\Users\\carbe\\Manuscript-Generation",
+  "public_baseline": {
+    "branch": "main",
+    "sha": "083e14654d1b81b3853484b48e132bd5bc41567c"
+  },
+  "work_branch": "review/cosmology-final-scrutiny-20260924",
+  "provenance_commit_to_reuse": "e32b13ad86d1b66889a4a0483fed9ef20ae84561",
+  "title": "Geometry Before Fields: Constraint-Reduced Cosmology and Optical Predictions in the Berger--Hopf Framework",
+  "mission": [
+    "Perform final hostile-referee scrutiny of the public manuscript, prioritizing scientific correctness and internal consistency over BHSM bridge completion.",
+    "Integrate already-derived action-native matter/radiation and coupled environmental-state results at their exact proof strength.",
+    "Add only reproducible scientific graphics derived from committed formulas/artifacts.",
+    "Produce a clean final PDF and review diff. Do not merge without author approval."
+  ],
+  "mandatory_scientific_corrections": [
+    "Align manuscript title with README and Universe cover letter.",
+    "Rewrite abstract so complete matter-radiation stability is not listed as open; state the audited linear/quadratic claim and retain nonlinear/UV limits.",
+    "Bring the coupled environmental-state provenance onto the review branch and add a concise main-text section.",
+    "Separate temporal environmental realization from spatial profile/axis selection.",
+    "Correct stale matter/radiation language in Discussion, claim ledger and current-facing audit/readiness docs.",
+    "Mark the older matter_sourced_n2 / curved effective dictionary material as historical compatibility work, not current R1 evolution ownership.",
+    "Scope high-n/harmonic-filter claims explicitly to the illustrative retained filter realization.",
+    "Keep radial F_H / radial BAO and survey-ready RSD open.",
+    "Keep microscopic BHSM-to-R1 normalization and absolute local source normalization open."
+  ],
+  "graphics": {
+    "generator_source": "Use final_scientific_figures.py from the handoff bundle as code/final_scientific_figures.py.",
+    "new": [
+      "n2_observer_shell_radial_basis",
+      "n2_observer_sky_dipole",
+      "coupled_environment_singular_values",
+      "coupled_environment_matter_determinant",
+      "r1_principal_characteristic_speeds",
+      "r1_highk_growth_convergence"
+    ],
+    "existing_to_promote": [
+      "constraint_prediction_chain",
+      "r1_omegaT",
+      "r1_growth_ratio",
+      "frozen_sn_comparison"
+    ],
+    "existing_to_keep_appendix": [
+      "r1_alphaB",
+      "harmonic_filter"
+    ],
+    "main_figure_plan": [
+      "Fig 1 existing geometry-to-prediction chain.",
+      "Fig 2 composite exact n=2 radial factors + pure A4i sky basis; axis centered only for visualization.",
+      "Fig 3 composite U_XE singular values + matter-only determinant.",
+      "Fig 4 composite R1 Omega_T + growth ratio.",
+      "Fig 5 composite principal characteristic speeds + high-k growth convergence.",
+      "Fig 6 existing frozen SN comparison."
+    ],
+    "prohibited": [
+      "stock/decorative cosmology art",
+      "artistic black holes",
+      "unphysical hypersphere renders presented as data",
+      "figures whose inputs are not public/committed",
+      "using the observational axis to make the analytic n=2 basis figure"
+    ]
+  },
+  "files_to_review_or_edit": [
+    "manuscript/main.tex",
+    "manuscript/sections/01_introduction.tex",
+    "manuscript/sections/01b_claim_status_and_falsifiability.tex",
+    "manuscript/sections/02_hyperspherical_parent.tex",
+    "manuscript/sections/04aj_r1_n2_reduced_propagator.tex",
+    "manuscript/sections/04ak_r1_n2_growth_lensing_transfer.tex",
+    "manuscript/sections/07_predictions_falsification.tex",
+    "manuscript/sections/09_results_R1.tex",
+    "manuscript/sections/10_discussion.tex",
+    "manuscript/sections/09_geometry_first_conclusion.tex",
+    "manuscript/sections/04b_matter_sourced_n2.tex",
+    "manuscript/sections/04c_bianchi_dictionary_n2.tex",
+    "manuscript/sections/09a_reference_figures.tex",
+    "docs/REVIEWER_RISK_AUDIT.md",
+    "docs/HOSTILE_REFEREE_AUDIT.md",
+    "docs/UNIVERSE_CLAIM_PROVENANCE.md",
+    "submission/SUBMISSION_READINESS.md",
+    "README.md"
+  ],
+  "author_only_do_not_invent": [
+    "Author Contributions / CRediT",
+    "Funding",
+    "Conflicts of Interest"
+  ],
+  "validation": [
+    "Verify no scientific parameter, axis, amplitude, state dimension or rejection threshold changes.",
+    "Reproduce coupled environmental-state rank results from committed provenance.",
+    "Re-run action-native matter/radiation and gradient/dispersion focused tests.",
+    "Run full pytest.",
+    "Run code/figures.py and code/final_scientific_figures.py.",
+    "Clean LaTeX build.",
+    "No unresolved citations/references.",
+    "No overfull hbox/vbox.",
+    "Render every PDF page and visually inspect.",
+    "Package generic source ZIP and rebuild from isolated extraction.",
+    "git diff --check.",
+    "Review git diff --stat and exact changed-file list.",
+    "RETUNING=false."
+  ],
+  "git_safety": [
+    "Do not use git add .",
+    "Stage exact intended files only.",
+    "Do not merge main automatically.",
+    "Do not overwrite unrelated local working-tree changes.",
+    "If the local repo is dirty, create an isolated worktree from public main."
+  ],
+  "required_final_status": [
+    "PUBLIC_BASELINE = 083e14654d1b81b3853484b48e132bd5bc41567c",
+    "TITLE_ALIGNED = TRUE | FALSE",
+    "STALE_MATTER_RADIATION_CLAIMS = CLEARED | REMAIN",
+    "COUPLED_ENVIRONMENT_SECTION = INTEGRATED | NOT_INTEGRATED",
+    "MAIN_PUBLICATION_FIGURES = 6 | OTHER",
+    "FULL_TESTS = PASS | FAIL",
+    "LATEX_BUILD = PASS | FAIL",
+    "VISUAL_PAGE_AUDIT = PASS | FAIL",
+    "RETUNING = FALSE",
+    "READY_FOR_AUTHOR_FINAL_CONFIRMATION = TRUE | FALSE"
+  ]
+}

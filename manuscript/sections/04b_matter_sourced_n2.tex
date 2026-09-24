@@ -1,5 +1,12 @@
 \section{Matter-Sourced Constraint Transfer at n=2}
 
+\paragraph{Historical compatibility audit.}
+The Gambino--Pace/curved effective equations below are retained as a
+held-out compatibility calculation with a documented constraint/identity
+defect. They do not define the current R1 dynamics. The action-native
+ADM gravity--scalar plus ideal dust--radiation reduction owns the coupled
+evolution; no failed identity is patched to obtain the results in this paper.
+
 The reduced kernel describes the pure gravity--scalar constrained dynamics of the first physical closed-universe harmonic. Here we introduce minimally coupled matter sources without importing a flat-space or quasi-static approximation. We use the curvature-aware Newtonian-gauge EFT equations written by Gambino and Pace \citep{GambinoPace2024}. Their metric convention is
 \[
 ds^2
@@ -155,4 +162,4 @@ with
 \frac{k^2}{a^2}=8\kappa.
 \]
 
-The repository implements these equations as a local linear transfer matrix with the additional topographic response explicitly switched off. This is deliberately not yet promoted to a globally integrated observable solution. The curvature-aware EFT equations and the reduced ADM kernel use different perturbation variables and normalizations; the remaining evolution equations must first be matched analytically and then subjected to a Bianchi/constraint-preservation audit. Only after that compatibility gate is passed will we integrate the full matter-era \(n=2\) system and add the independent reduced topographic operator.
+These historical equations were implemented as a local linear transfer matrix with the additional topographic response explicitly switched off. Their subsequent Bianchi/constraint-preservation audit did not establish global compatibility. They are therefore retained only as a held-out comparison, not promoted to an observable solution. The coupled matter-era evolution is instead defined independently by the action-native ADM reduction; it does not require patching this failed compatibility system.

@@ -144,3 +144,13 @@ global spatial profile or axis.  It establishes only that, once the coupled
 environmental state is specified at the anchor, the frozen R1 dynamics allow
 that environment to control both temporal components of the later
 topographic response without retuning.
+
+Figure~\ref{fig:coupled-environment} displays the sampled transfer diagnostics
+in their original output basis.
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/coupled_environment_singular_values.pdf}\\[0.5em]
+\includegraphics[width=0.82\linewidth]{figures/coupled_environment_matter_determinant.pdf}
+\caption{Environmental transfer in the $(\zeta,\dot\zeta)$ output basis: singular values of $\widehat U_{XE}$ (top) and its matter-density/velocity subblock determinant (bottom). Points are the eight audited post-anchor epochs; lines only guide the eye. Both temporal components are accessible there. Singular-value magnitudes depend on coordinate normalization; rank is unchanged by the positive conversion to $(q_2,\Pi_2)$. The block vanishes at the anchor, which is not plotted. This is not spatial profile or axis selection.}
+\label{fig:coupled-environment}
+\end{figure}

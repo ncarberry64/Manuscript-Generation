@@ -1,0 +1,26 @@
+{
+  "retuning": false,
+  "coupled_output_basis": [
+    "zeta",
+    "zeta_dot"
+  ],
+  "rank_scope": "eight sampled post-anchor epochs; anchor block is zero",
+  "analytic_axis": "visualization only; no empirical sky direction",
+  "sha256": {
+    "artifacts/provenance/BHSM_R1_COUPLED_ENVIRONMENTAL_STATE_AUDIT_V1.json": "9ec2d9e27703a480dfbc062d244b2a0e4cc2343c556c2400c320064312e5977d",
+    "artifacts/R1_ACTION_NATIVE_GRADIENT_DISPERSION_CONVERGENCE_V1.json": "a94a8527fb7e19c92af301624368747a4d332d6b74807d3a00d2ec9a89a3ed27",
+    "code/final_scientific_figures.py": "a757ee0095aab0d5c2f555ffbe9a21b08adb1c8da92a171c253bfd631eaab7b9",
+    "manuscript/figures/n2_observer_shell_radial_basis.pdf": "89f52fae8dfd586f8571de0e86eaab2752f0d77429d61c85a6012d7131475dbe",
+    "manuscript/figures/n2_observer_shell_radial_basis.png": "dfb48fbf8a714ffaa6a44fb806028870a54856f73c1c7aa6b4da5383ced301c0",
+    "manuscript/figures/n2_observer_sky_dipole.pdf": "c2fbd12dec98a05cbb666c4f16c8061ca4ea5ebbca345293bb8be86555195f96",
+    "manuscript/figures/n2_observer_sky_dipole.png": "2365dd3646f0c11df9726f942983ec25af206d56a9c28a330a1cb6e3e222c5eb",
+    "manuscript/figures/coupled_environment_singular_values.pdf": "8afd2253b8073a887a32ce955637a4b7ce2449487461186c8b589024d4884a6b",
+    "manuscript/figures/coupled_environment_singular_values.png": "502b2326acba584cebb14739d5ef51dd235a12c1046b86f4065eed196f18852d",
+    "manuscript/figures/coupled_environment_matter_determinant.pdf": "c1197d8588edaff81a10bbd45ae35b8d3f58c0978cc86ab6ec184d8d8e9009f7",
+    "manuscript/figures/coupled_environment_matter_determinant.png": "a7313b7aa9e6cb2791e06e867f17bc7c6ecbacb41427888d0568d62a1b83a69f",
+    "manuscript/figures/r1_principal_characteristic_speeds.pdf": "c546a66cb181997ef313ce9d99530bb332f53963bacad697c03ab41e40bc3e91",
+    "manuscript/figures/r1_principal_characteristic_speeds.png": "33bf4bdb0a4444cd9b924ca12fc2a446b246aac068f243929ebbfe6060dcfa0b",
+    "manuscript/figures/r1_highk_growth_convergence.pdf": "ed9f8c3fe4f7c2305b6698aa83e208c107087aa90ce3b7f4c12310eeecf018e5",
+    "manuscript/figures/r1_highk_growth_convergence.png": "0ebb16def8077bb8af28a37cb0e94daf0d17bfa2cf578c30b9e6756c827b87a9"
+  }
+}

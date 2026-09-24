@@ -1,6 +1,6 @@
 Dear Professor Stavrinos and Editors of Universe,
 
-Please consider “Constraint-Reduced Cosmology on a Closed Hypersphere: Berger–Hopf Optical Transfer and Falsifiable Cross-Observable Predictions” for the special issue “Cosmological Models of the Universe, 2nd Edition.”
+Please consider “Geometry Before Fields: Constraint-Reduced Cosmology and Optical Predictions in the Berger--Hopf Framework” for the special issue “Cosmological Models of the Universe, 2nd Edition.”
 
 The manuscript develops a conditional cosmological response chain from the closed-space constraint quotient to a selected physical n=2 mode, its induced metric and photon-bundle transport. Its exact observer-shell dipole and two prospective cross-observable rejection gates restrict realizations without introducing independent amplitudes for each observable. The mathematical identities are distinguished from calibrated assumptions and unresolved action-normalized inputs.
 
