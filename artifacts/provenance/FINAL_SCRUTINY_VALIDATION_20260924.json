@@ -5,26 +5,35 @@
     "STALE_MATTER_RADIATION_CLAIMS": "CLEARED",
     "COUPLED_ENVIRONMENT_SECTION": "INTEGRATED",
     "MAIN_PUBLICATION_FIGURES": 6,
-    "FULL_TESTS": "RUNNING_OR_PENDING",
+    "FULL_TESTS": "PASS",
     "FOCUSED_TESTS": "14 PASSED",
     "LATEX_BUILD": "PASS",
     "VISUAL_PAGE_AUDIT": "PASS",
     "ISOLATED_SOURCE_REBUILD": "PASS",
     "RETUNING": false,
-    "READY_FOR_AUTHOR_FINAL_CONFIRMATION": false
+    "READY_FOR_AUTHOR_FINAL_CONFIRMATION": true
   },
   "branch": "review/cosmology-final-scrutiny-20260924",
   "full_suite": {
-    "status": "RUNNING_OR_PENDING",
+    "status": "PASS",
     "expected_count": 102,
     "source_worktree": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\r1-coupled-environment-integration",
     "source_commit": "2749c1a13462375ca7560de735f74b1795a5accb",
-    "reuse_basis": "Identical 188 recorded scientific/test/protocol/sightline inputs and identical 102-test collection; new plotter exercised separately."
+    "reuse_basis": "Identical 191 recorded scientific/test/protocol/sightline/fixture inputs and identical 102-test collection; new plotter exercised separately.",
+    "count": 102,
+    "passed": 101,
+    "failures": [],
+    "expected_failures": [
+      "test_dae_preserves_00_0i_constraints_from_index_consistent_seed"
+    ],
+    "unexpected_skips": [],
+    "elapsed_seconds": "7242.223",
+    "source_xml_sha256": "97f35096b0d02ab94a1dbb89a0f1566bace49b5f1e32153511d5d5597bf245c4"
   },
   "page_count": 54,
   "abstract_whitespace_words": 244,
   "references": 22,
-  "scientific_input_count": 188,
+  "scientific_input_count": 191,
   "coupled_replay": {
     "schema": "BHSM-R1-coupled-environmental-state-audit-local-v2",
     "repo": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\cosmology-final-scrutiny-20260924",
@@ -844,6 +853,8 @@
     "README.md",
     "artifacts/final_scrutiny_collection.txt",
     "artifacts/final_scrutiny_focused_pytest.xml",
+    "artifacts/final_scrutiny_full_pytest.txt",
+    "artifacts/final_scrutiny_full_pytest.xml",
     "artifacts/final_scrutiny_isolated_build.txt",
     "artifacts/final_scrutiny_latex_build.txt",
     "artifacts/provenance/FINAL_SCIENTIFIC_FIGURES_RECEIPT.json",

@@ -12,19 +12,19 @@ The coupled table and figure use `(zeta,zeta_dot)` and a hatted transfer. Rank t
 | Gate | Result |
 |---|---|
 | Title alignment / stale matter-radiation claims | PASS / CLEARED |
-| Frozen scientific/test/protocol/sightline files | 188 byte-identical to the full-suite worktree |
+| Frozen scientific/test/protocol/sightline files | 191 byte-identical to the full-suite worktree |
 | Focused action-native, environment and gradient checks | 14 passed |
-| Full 102-test suite | RUNNING_OR_PENDING |
+| Full 102-test suite | 101 passed, one documented strict expected failure |
 | Main figures | Six, plus two appendix figures |
 | PDF / abstract / bibliography | 54 pages / 244 whitespace-delimited words / 22 references |
 | LaTeX / isolated ZIP rebuild | PASS; no warnings, unresolved references/citations or overfull boxes |
 | Visual page audit | PASS; every page rendered and visually checked |
 | Retuning | FALSE |
-| Ready for final author confirmation | FALSE |
+| Ready for final author confirmation | TRUE |
 
-The full suite is the run launched in `r1-coupled-environment-integration`, not a second fresh run on this review branch. All 102 test identities and 188 recorded scientific inputs match exactly. Its evidence is imported only after completion and checked for unexpected failures/skips. The new plotter was run separately. The focused tests were rerun here; the gradient tests validate the committed audit artifacts, not a newly rerun principal-symbol integration. Both figure generators ran successfully; the four regenerated legacy PNGs are unchanged.
+The full suite is the run launched in `r1-coupled-environment-integration`, not a second fresh run on this review branch. All 102 test identities and 191 recorded scientific inputs match exactly, including the three retained JSON fixtures read by the environment and gradient tests. Its evidence is imported only after completion and checked for unexpected failures/skips. The new plotter was run separately. The focused tests were rerun here; the gradient tests validate the committed audit artifacts, not a newly rerun principal-symbol integration. Both figure generators ran successfully; the four regenerated legacy PNGs are unchanged.
 
-The environmental replay recovers both topographic seeds to 6.01005e-14, inverts the seed basis to 2.22045e-16, and reproduces the saved z=1.5 propagator with maximum difference 0. This replays committed propagators through current constraint/basis code; it is not a new independent ODE integration or reconstruction of physical environmental initial data.
+The environmental replay recovers both topographic seeds to 6.01005e-14, inverts the seed basis to 2.22045e-16, and reproduces the saved z=1.5 propagator with maximum difference 0. It freshly integrates the full six-state fundamental matrix with the existing action-native DOP853 implementation and applies the constraint/basis maps. This is a repeat using the same numerical owner, not an independent integrator cross-check or reconstruction of physical environmental initial data.
 
 The original plotted singular values/determinants and the current replay are not bitwise identical: maximum absolute difference 7.8509e-09, maximum relative difference 1.10053e-07. A trial 1e-12 absolute identity check failed. Both artifacts are preserved without modifying their values, the figures use the declared original input, and both audits retain the same sampled rank-two conclusion. This is not reported as exact numerical reproduction of every archived scalar.
 
@@ -38,4 +38,4 @@ Open science remains explicit: independently reconstructed environmental anchor 
 
 Author-only CRediT, funding and conflict declarations remain unfilled. No archive DOI, journal submission, external message or merge was performed. Review and merge approval remain with the author, as explicitly required by the final scrutiny handoff.
 
-Reproduce: run `python code/figures.py`, `python code/final_scientific_figures.py`, the focused pytest files listed in the JUnit receipt, `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` in `manuscript`, and `python scripts/package_submission.py`. With the sibling suite complete, run `python scripts/record_final_scrutiny_validation.py` to refresh the checked completion receipt. Full-suite reproduction: set `PYTHONPATH=code` and run `python -m pytest -q` (long integrations).
+Reproduce: run `python code/figures.py`, `python code/final_scientific_figures.py`, the focused pytest files listed in the JUnit receipt, `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` in `manuscript`, and `python scripts/package_submission.py`. The local receipt recorder additionally requires `pypdf` (`python -m pip install pypdf`) and the recorded sibling worktree, page-review evidence and isolated rebuild. With the sibling suite complete, run `python scripts/record_final_scrutiny_validation.py` to refresh the checked completion receipt. Full-suite reproduction: set `PYTHONPATH=code` and run `python -m pytest -q` (long integrations).

@@ -1,0 +1,33 @@
+........................................................x............... [ 70%]
+..............................                                           [100%]
+============================== warnings summary ===============================
+code\r1_n2_growth_lensing_transfer.py:441
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_growth_lensing_transfer.py:441: SyntaxWarning: "\P" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\P"? A raw string is also an option.
+    "convention is $\Psi-\Phi$."
+
+code\r1_n2_growth_lensing_transfer.py:456
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_growth_lensing_transfer.py:456: SyntaxWarning: "\," is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\,"? A raw string is also an option.
+    f"&=({f8[0]:.9e},\,{f8[1]:.9e}),\\\\"
+
+code\r1_n2_growth_lensing_transfer.py:460
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_growth_lensing_transfer.py:460: SyntaxWarning: "\," is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\,"? A raw string is also an option.
+    f"&=({wk[0]:.9e},\,{wk[1]:.9e})."
+
+code\r1_n2_growth_lensing_transfer.py:483
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_growth_lensing_transfer.py:483: SyntaxWarning: "\P" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\P"? A raw string is also an option.
+    "Likewise $\Psi-\Phi$ is the local Weyl potential "
+
+code\r1_n2_luminosity_distance_kernel.py:546
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_luminosity_distance_kernel.py:546: SyntaxWarning: "\," is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\,"? A raw string is also an option.
+    f"({f[0]:.9e},\,{f[1]:.9e})."
+
+code\r1_n2_luminosity_distance_kernel.py:568
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_luminosity_distance_kernel.py:568: SyntaxWarning: "\," is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\,"? A raw string is also an option.
+    f"({n[0]:.9e},\,{n[1]:.9e}),"
+
+code\r1_n2_luminosity_distance_kernel.py:580
+  C:\Users\carbe\Manuscript-Generation\.worktrees\r1-coupled-environment-integration\code\r1_n2_luminosity_distance_kernel.py:580: SyntaxWarning: "\w" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\w"? A raw string is also an option.
+    "$\widehat X_2$ has been fixed independently."
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+101 passed, 1 xfailed, 7 warnings in 7242.25s (2:00:42)

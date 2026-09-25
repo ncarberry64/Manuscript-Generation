@@ -32,7 +32,7 @@ def main():
     assert collection == prior_collection and len(collection) == 102
     suite = {"status": "RUNNING_OR_PENDING", "expected_count": 102,
              "source_worktree": str(other), "source_commit": eq["reference_commit"],
-             "reuse_basis": "Identical 188 recorded scientific/test/protocol/sightline inputs and identical 102-test collection; new plotter exercised separately."}
+             "reuse_basis": f"Identical {eq['input_count']} recorded scientific/test/protocol/sightline/fixture inputs and identical 102-test collection; new plotter exercised separately."}
     source_xml = other/"artifacts/coupled_environment_full_pytest.xml"
     if source_xml.exists():
         tree = ET.parse(source_xml)
@@ -47,7 +47,8 @@ def main():
                      failures=failures, expected_failures=xfails, unexpected_skips=[s for s in skipped if s not in allowed],
                      elapsed_seconds=tree.find("testsuite").get("time"), source_xml_sha256=digest(source_xml))
         shutil.copyfile(source_xml, ROOT/"artifacts/final_scrutiny_full_pytest.xml")
-        shutil.copyfile(other/"artifacts/coupled_environment_full_pytest.log", ROOT/"artifacts/final_scrutiny_full_pytest.txt")
+        raw_log = (other/"artifacts/coupled_environment_full_pytest.log").read_text(encoding="utf-8",errors="replace")
+        write("artifacts/final_scrutiny_full_pytest.txt", "\n".join(line.rstrip() for line in raw_log.splitlines()).rstrip()+"\n")
     focused = ET.parse(ROOT/"artifacts/final_scrutiny_focused_pytest.xml").findall(".//testcase")
     assert len(focused) == 14 and all(len(c) == 0 for c in focused)
     visual = load("artifacts/provenance/FINAL_SCRUTINY_VISUAL_AUDIT.json")
@@ -125,9 +126,9 @@ The coupled table and figure use `(zeta,zeta_dot)` and a hatted transfer. Rank t
 | Retuning | FALSE |
 | Ready for final author confirmation | {str(statuses['READY_FOR_AUTHOR_FINAL_CONFIRMATION']).upper()} |
 
-The full suite is the run launched in `{other.name}`, not a second fresh run on this review branch. All 102 test identities and 188 recorded scientific inputs match exactly. Its evidence is imported only after completion and checked for unexpected failures/skips. The new plotter was run separately. The focused tests were rerun here; the gradient tests validate the committed audit artifacts, not a newly rerun principal-symbol integration. Both figure generators ran successfully; the four regenerated legacy PNGs are unchanged.
+The full suite is the run launched in `{other.name}`, not a second fresh run on this review branch. All 102 test identities and {eq['input_count']} recorded scientific inputs match exactly, including the three retained JSON fixtures read by the environment and gradient tests. Its evidence is imported only after completion and checked for unexpected failures/skips. The new plotter was run separately. The focused tests were rerun here; the gradient tests validate the committed audit artifacts, not a newly rerun principal-symbol integration. Both figure generators ran successfully; the four regenerated legacy PNGs are unchanged.
 
-The environmental replay recovers both topographic seeds to {a['topographic_seed_recovery_max_abs_difference']:.6g}, inverts the seed basis to {a['seed_inverse_residual']:.6g}, and reproduces the saved z=1.5 propagator with maximum difference {a['stored_full_propagator_z1p5_max_abs_difference']:.6g}. This replays committed propagators through current constraint/basis code; it is not a new independent ODE integration or reconstruction of physical environmental initial data.
+The environmental replay recovers both topographic seeds to {a['topographic_seed_recovery_max_abs_difference']:.6g}, inverts the seed basis to {a['seed_inverse_residual']:.6g}, and reproduces the saved z=1.5 propagator with maximum difference {a['stored_full_propagator_z1p5_max_abs_difference']:.6g}. It freshly integrates the full six-state fundamental matrix with the existing action-native DOP853 implementation and applies the constraint/basis maps. This is a repeat using the same numerical owner, not an independent integrator cross-check or reconstruction of physical environmental initial data.
 
 The original plotted singular values/determinants and the current replay are not bitwise identical: maximum absolute difference {max(differences):.6g}, maximum relative difference {max(relative):.6g}. A trial 1e-12 absolute identity check failed. Both artifacts are preserved without modifying their values, the figures use the declared original input, and both audits retain the same sampled rank-two conclusion. This is not reported as exact numerical reproduction of every archived scalar.
 
@@ -141,7 +142,7 @@ Open science remains explicit: independently reconstructed environmental anchor 
 
 Author-only CRediT, funding and conflict declarations remain unfilled. No archive DOI, journal submission, external message or merge was performed. Review and merge approval remain with the author, as explicitly required by the final scrutiny handoff.
 
-Reproduce: run `python code/figures.py`, `python code/final_scientific_figures.py`, the focused pytest files listed in the JUnit receipt, `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` in `manuscript`, and `python scripts/package_submission.py`. With the sibling suite complete, run `python scripts/record_final_scrutiny_validation.py` to refresh the checked completion receipt. Full-suite reproduction: set `PYTHONPATH=code` and run `python -m pytest -q` (long integrations).
+Reproduce: run `python code/figures.py`, `python code/final_scientific_figures.py`, the focused pytest files listed in the JUnit receipt, `latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex` in `manuscript`, and `python scripts/package_submission.py`. The local receipt recorder additionally requires `pypdf` (`python -m pip install pypdf`) and the recorded sibling worktree, page-review evidence and isolated rebuild. With the sibling suite complete, run `python scripts/record_final_scrutiny_validation.py` to refresh the checked completion receipt. Full-suite reproduction: set `PYTHONPATH=code` and run `python -m pytest -q` (long integrations).
 """
     write("docs/FINAL_SCRUTINY_VALIDATION_20260924.md",report)
     readiness = f"""# Submission readiness
@@ -150,7 +151,7 @@ Title: {TITLE}
 
 Current review branch: `review/cosmology-final-scrutiny-20260924`, based on public `{BASE}`. {len(pdf.pages)} pages; {len(abstract.split())} abstract words; six main and two appendix figures; {receipt['references']} references.
 
-The corrected action-native quadratic stability and coupled environmental results are integrated at their audited scope. All 188 recorded scientific/test/protocol/sightline inputs match the integration worktree. Direction, amplitude, redshift law, R1 cosmology, sample cuts and p<0.01 gates are unchanged. RETUNING=false.
+The corrected action-native quadratic stability and coupled environmental results are integrated at their audited scope. All {eq['input_count']} recorded scientific/test/protocol/sightline/fixture inputs match the integration worktree. Direction, amplitude, redshift law, R1 cosmology, sample cuts and p<0.01 gates are unchanged. RETUNING=false.
 
 Validation: 14 focused tests pass; full suite: **{result}**. The full-suite evidence is reused only for identical scientific inputs and test identities; the new plotter was executed separately. Both figure generators ran. Clean LaTeX and isolated source-ZIP builds pass with no warnings or overfull boxes; all {len(pdf.pages)} pages were rendered and visually inspected. Full scope, provenance and limitations are in [the final scrutiny report](../docs/FINAL_SCRUTINY_VALIDATION_20260924.md).
 
