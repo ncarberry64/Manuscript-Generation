@@ -1,6 +1,6 @@
 \section{Results: Reference Branch R1}
 
-R1 is an exploratory reference branch rather than a uniquely derived BHSM cosmology. Its purpose is to demonstrate that the bridge can simultaneously realize late-time scalar activation, a selected physical \(n=2\) response, and near-standard high-\(n\) structure growth.
+R1 is an exploratory reference branch rather than a uniquely derived BHSM cosmology. Its purpose is to demonstrate that the bridge can simultaneously realize late-time scalar activation, a selected physical \(n=2\) response, and near-standard high-\(n\) structure growth within the retained illustrative filter realization.
 
 For
 \[
@@ -90,3 +90,37 @@ The central phenomenological result is therefore not a large generic modificatio
 \end{gathered}
 }
 \]
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/r1_omegaT.png}\\[0.5em]
+\includegraphics[width=0.82\linewidth]{figures/r1_growth_ratio.png}
+\caption{Conditional frozen R1 background: scalar energy fraction (top) and growth ratio (bottom), relative to matched curved $\Lambda$CDM with identical early normalization. These are reference calculations, not fits or survey-window RSD likelihoods. Near-standard high-$n$ recovery is conditional on the illustrative retained filter.}
+\label{fig:r1-background-growth}
+\end{figure}
+
+\subsection{Audited action-native quadratic stability}
+Figure~\ref{fig:r1-background-growth} collects the background and reference
+growth curves; Figure~\ref{fig:r1-principal-stability} shows the separate
+coupled stability diagnostics.
+The minimally coupled ideal dust--radiation action is reduced with the
+lapse/shift Schur complement. In the retained numerical audit on
+$0\le z\le2.1$, its reduced kinetic matrix is positive; the extension
+through $n=1280$ has minimum eigenvalue $1.21879873\times10^{-8}$.
+The principal-symbol extrapolation gives positive propagating speed
+squares, with radiation approaching $1/3$ and the non-radiation branch
+bounded below by approximately $0.910373$ at the sampled epochs.
+The positive normalized growth tail decreases as the harmonic sequence is
+extended. No ghost or high-$k$ scalar gradient instability is detected in
+this audited linear/quadratic domain. These numerical checks are not a
+proof of nonlinear-fluid stability, a microscopic normalization, or an
+ultraviolet completion. The detailed dispersion audit is retained in
+the appendix; the gravity--scalar reference kernels above remain distinct.
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.82\linewidth]{figures/r1_principal_characteristic_speeds.pdf}\\[0.5em]
+\includegraphics[width=0.82\linewidth]{figures/r1_highk_growth_convergence.pdf}
+\caption{Frozen R1 coupled principal-symbol audit. Top: extrapolated characteristic speed squares at the audited redshifts, including the radiation $1/3$ reference. Bottom: the positive normalized growth tail at the two redshift endpoints decreases across the retained high-$n$ sequence. A positive finite-$n$ tail is not erased; convergence is numerical evidence within the audited quadratic domain, not an all-scale stability theorem.}
+\label{fig:r1-principal-stability}
+\end{figure}

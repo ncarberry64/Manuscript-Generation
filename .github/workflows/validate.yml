@@ -7,6 +7,8 @@ on:
 jobs:
   numerical-validation:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: code
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -16,6 +18,7 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m pytest -q --junitxml=test-results/junit.xml
       - run: python code/figures.py
+      - run: python code/final_scientific_figures.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
