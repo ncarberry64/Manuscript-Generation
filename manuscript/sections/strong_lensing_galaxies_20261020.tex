@@ -45,7 +45,13 @@ We then construct an observed-lens timing and point-geometry baseline
 for HE~0435$-$1223 and test frozen conventional and conditional R1
 predictions against reserved later light curves. This applies the same
 identifiability question to actual observations without promoting the
-synthetic profile to a complete galaxy reconstruction.
+synthetic profile to a complete galaxy reconstruction. Its coverage failure
+and extra central image motivate a distinct HST-constrained source revision,
+followed by a frozen test on unused LCO catalogue targets. This sequence tests the
+ordinary source and predictive uncertainty before any residual is assigned
+to an additional state or interface response.
+The shared LCO reduction also motivates a separately frozen Gaia
+astrometric test of the same physical predictions.
 
 BHSM determines the research question and interpretation. The R1 action
 is an effective representation with its own independent rolling scalar;
@@ -981,6 +987,7 @@ force/action residuals, tail derivation and convergence data are in
 Supplementary Note S8.
 
 \input{sections/he0435_observed_20261020}
+\input{sections/he0435_revision_20261020}
 
 \section{Computational Methods and Reproducibility}
 The calculation uses the fixed manuscript source revision
@@ -1036,6 +1043,29 @@ definitions are in Supplementary Notes S9--S10. The scoring-start record
 persists even after an aborted exposure, so these targets cannot silently
 be reclassified as unseen after model revision. A separately labeled known-outcome replay reproduces the saved predictions and scores without refitting or reopening the experiment; it is not a second independent test.
 
+The separate revision archives exact HST cutouts, all five compact-source
+candidates, their original scalar and optical applications, the six
+development windows and their calibration, and the committed LCO prediction
+freeze. The commands \path{scripts/fit_he0435_revision.py},
+\path{scripts/fit_he0435_macro_revision.py} and
+\path{scripts/test_he0435_central_image.py} perform the development
+applications; \path{scripts/run_he0435_revision_validation.py} separates
+prediction preparation from the single guarded unused-target evaluation.
+The reporting script reads completed score receipts and performs no fitting.
+Independent dense-covariance and Python-filter comparisons check the optional
+C likelihood accelerator. Focused tests cover the normalized calibrated
+mixture, growing forecast variance, total nonlinear matter source,
+nonzero HST registration rotation, overlapping nuclear-image templates,
+and the persistent exposure lock. The numerical record distinguishes
+short-chain nuisance-ensemble uncertainty from a converged physical posterior.
+The additional Gaia protocol pins the already-fitted relative image
+predictions before its numerical catalogue query. Eight pure-mathematics
+and synthetic-runner checks verify coordinate signs, the RA-error convention,
+shared-reference covariance, labels, normalized density, missing-error
+handling and the exclusive query lock. No real target row enters those tests.
+The full focused application suite contains 81 tests; the 12 exact
+continuation identities retain their separate symbolic audit.
+
 \section{Discussion: State Inference and Physical Scope}
 \label{sec:discussion}
 The calculation answers one forward and inverse modeling question.
@@ -1068,19 +1098,38 @@ Its conventional/R1 predictive tie is consistent with the effective-mass
 equivalence. Its brightness undercoverage, particularly in image A,
 shows why recovering a transfer does not establish a calibrated
 microlensing/source-variability model or unique physical state.
-The two-stage point-fit intervals exclude parameter uncertainty; the
-observed coverage is descriptive for correlated observations. No later
-residual is assigned to envelope evolution or a new interface amplitude.
+The first experiment's two-stage point-fit intervals exclude parameter
+uncertainty. The separate revision uses a finite nuisance ensemble and
+development-only long-horizon calibration, then opens unused LCO
+catalogue targets once. The sample, driver and uncertainty rule all change, so
+the two coverage fractions are not a controlled single-variable ablation.
+Interval widths and proper scores quantify the cost of broader uncertainty.
+Coverage remains descriptive for correlated observations. No later residual
+is assigned to envelope evolution or a new interface amplitude.
 
 A progressively constrained optical map needs the admitted mass,
 source, line-of-sight and calibration uncertainties and a specified
 interface law for an interface-state inference. A published cosmological
 posterior conditioned on a lens model cannot replace the light-data
-likelihood. For HE~0435, a revised variability law or spatial profile
-would need new reserved observations for an independent predictive test.
-The positive conventional representation must remain available in that
-inference. This is the same transfer-to-identifiability question tested
-first in the controlled finite-body calculation.
+likelihood. For HE~0435 the HST-conditioned compact source and unused-catalogue
+test implement that next inference stage. HST constrains excess central
+light conditional on the macro-to-observed flux relation, while the LCO
+test assesses an empirical brightness prediction. Neither selects a unique
+composition for the compact source or supplies the global environmental
+scalar Hessian. The positive conventional representation remains available.
+This is the same transfer-to-identifiability question tested first in the
+controlled finite-body calculation.
+
+The unused Gaia geometry gives a separate adequacy failure: both frozen
+point predictions have about $3.26$ mas coordinate RMS and fail the
+catalogue-error-only precision check. The predeclared 2 and 5 mas floor
+controls expose uncertainty sensitivity; they are not an empirically
+justified replacement for training, frame, photocentre and macro-parameter
+uncertainty. Source-quality flags do not justify discarding the discrepant
+images. The present restricted source/screen family therefore remains a
+conditional baseline rather than a precision reconstruction. Its failure
+does not identify which missing conventional freedom or physical-state
+dependency is responsible.
 
 The approximation controls have separate meanings. The common GR2 term
 moves absolute image coordinates by up to $1.72$ microarcsec, while its
@@ -1146,9 +1195,27 @@ later epochs. With later B as the allowed driver, conventional and R1
 predictions for 300 A/C/D targets differ by only $0.00498$ in joint log
 score. Their nominal 95\% intervals cover $85.33\%$ of these targets,
 and the separately retained all-channel forecast also undercovers.
-The experiment supplies a reproducible observed timing/point-geometry
-test and exposes its brightness and central-image limitations. It
-does not identify a unique BHSM envelope state.
+The first experiment exposes its brightness and central-image limitations.
+Actual HST F814W pixels constrain its unattenuated central/A ratio below
+$0.030$ within the tested conditional PSF/noise family, versus the original
+$0.0632$ prediction. A positive compact-source revision reduces that ratio
+to about $0.00264$; the nearly tied allowed source candidates do not measure
+a nuclear mass. A separately committed test then evaluates the revised
+predictions on 162 unused LCO A/B/D magnitudes with C as the allowed driver,
+and all 216 magnitudes without a driver. Both revised macro models cover
+160 of 162 primary targets, with approximately $0.0772$ mag RMSE and
+$0.670$ mag mean 95\% interval width. Their nominal 68.27\% intervals
+cover $94.44\%$, indicating conservative uncertainty. The primary
+R1-minus-conventional joint score is about $-3.46\times10^{-5}$.
+These applications constrain source and predictive adequacy without
+identifying a unique BHSM envelope state or establishing sharp nominal
+probability calibration.
+The separate unused Gaia test leaves a $3.26$ mas coordinate RMS and
+rejects the exact frozen point predictions under catalogue errors alone.
+Sensitivity to prespecified uncertainty floors does not establish precision
+validity. Thus the revisions address the observed brightness undercoverage
+and conditional central-light tension, while a precise measured geometry
+and unique underlying state remain unestablished.
 
 Prepared light constrains an envelope encounter transfer. Identifying
 that transfer with a particular underlying state consumes the specified
@@ -1179,13 +1246,23 @@ no human participants or animals.}
 \informedconsent{Not applicable.}
 \dataavailability{The numerical code, frozen inputs, outputs, source
 applications and derivation checks are archived in the public repository
-at calculation revision \texttt{14ad777eaf8b} in the
-\href{https://github.com/ncarberry64/Manuscript-Generation/tree/14ad777eaf8befda387b9c3cb4504cf499e76cfc}{Manuscript-Generation calculation archive}.
+at calculation revision \texttt{6b9a0f06e985} in the
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/6b9a0f06e9850e8c796762e86334f7b9e970f0fb}{Manuscript-Generation calculation archive}.
 The frozen background and prior controls are preserved from revision
 \texttt{49a1dab}. The accompanying manuscript sources, official journal
-dependencies and integration reviews are supplied with this manuscript. The observed photometry is the public COSMOGRAIL/CDS release cited above; original files, attribution, hashes and reduction caveats are retained in the data provenance.}
-\acknowledgments{The author acknowledges COSMOGRAIL and CDS for the public
-photometry, with the original data publications cited above. OpenAI ChatGPT and
+dependencies and integration reviews are supplied with this manuscript.
+The observed photometry comprises the public COSMOGRAIL and LCO/CDS
+releases cited above. Exact HST science/weight/context cutouts and original
+MAST product URLs are also retained. Original files, attribution, hashes
+and reduction caveats accompany the data. The Gaia DR3 query, raw catalogue
+rows and separate pre-query prediction freeze are preserved as well.}
+% Numerical Gaia quasar targets were queried only after their separate freeze.
+\acknowledgments{The author acknowledges COSMOGRAIL, the original LCO
+investigators and CDS/VizieR for the public photometry, and NASA/ESA HST
+investigators and MAST at STScI for the archival imaging, and ESA Gaia and
+the Gaia Data Processing and Analysis Consortium for the DR3 catalogue.
+Original data
+publications are cited above. OpenAI ChatGPT and
 OpenAI Codex materially assisted mathematical derivation, code generation
 and revision, numerical verification, analysis, and manuscript drafting.
 The supplied package records its ChatGPT assistance under the label
