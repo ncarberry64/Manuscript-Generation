@@ -1,0 +1,1165 @@
+{
+  "status": "COMPUTED_CONDITIONAL_THICKNESS_AND_PATH_CONTROL_OF_RETAINED_OPTICAL_ACTION",
+  "experiment": "Same fixed physical source, observer clock, measured-redshift distance maps, finite density, frozen R1 coefficients and three image branches. Both calculations use the same field window and separately derived FLRW exterior wavefronts.",
+  "action": "c t=(1/a_l)[S_background(left)+integral(0.5(x_prime^2-kappa x^2)-2Phi)dz+S_background(right)]",
+  "physical_boundary_geometry": {
+    "a_l": 0.7692307692307692,
+    "a_s": 0.5,
+    "curvature_per_Mpc2": 1.5375795596997213e-09,
+    "observer_length_Mpc": 945.3793478167898,
+    "source_length_Mpc": 1658.0823008477794,
+    "source_lens_scaled_Mpc": 0.0022425590267960926,
+    "D_ol_Mpc": 945.16283937304,
+    "D_os_Mpc": 1689.3122396872932,
+    "D_ls_Mpc": 1076.9943480596019
+  },
+  "wavefront_identity_checks": {
+    "observer_wavefront_curvature_per_Mpc": 0.0010572918625775208,
+    "source_wavefront_curvature_per_Mpc": 0.0006022563206977872,
+    "source_linear_term": 1.3534549833466666e-06,
+    "sum_from_wavefronts_per_Mpc": 0.001659548183275308,
+    "sum_from_saved_maps_per_Mpc": 0.0016595481832753056,
+    "linear_term_from_saved_maps": 1.3534549833466644e-06,
+    "D_ol_from_observer_propagator_Mpc": 945.16283937304,
+    "source_lens_scaled_Mpc": 0.0022425590267960926,
+    "observer_length_Mpc": 945.3793478167898,
+    "source_length_Mpc": 1658.0823008477794,
+    "local_curvature_per_Mpc2": 1.5375795596997213e-09
+  },
+  "field": {
+    "mass_length_Mpc": 4.7854158415878425e-09,
+    "radius_Mpc": 0.003,
+    "rV_Mpc": 0.21202922497712948,
+    "epsilon_infinity": 0.001507886243809552,
+    "radial_quadrature_order": 32
+  },
+  "windows": [
+    {
+      "half_window_Mpc": 0.21202922497712948,
+      "half_window_over_rV": 1.0,
+      "fixed_body": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.66867805678096,
+            8.537181261797231
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            3.3795513179146573e-12,
+            9.478175202245732e-14
+          ],
+          "images_rad": [
+            4.05021143931278e-06,
+            -3.9835676480121227e-07,
+            -3.187448216482291e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038281093440420346,
+            -0.00037651201090297206,
+            -0.0030126576066449346
+          ],
+          "relative_delays_seconds": [
+            1876062.3219231635,
+            1232974.0423415531
+          ],
+          "quadrature_error_seconds": [
+            1.4429913916284243e-06,
+            6.810832216699624e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.66821787217459,
+            8.537182818140792
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.48818943895787e-11,
+            9.478176930134188e-14
+          ],
+          "images_rad": [
+            4.0502149417102885e-06,
+            -3.983619686135138e-07,
+            -3.1874526669461887e-06
+          ],
+          "relative_delays_seconds": [
+            1876057.8476138182,
+            1232975.4036349964
+          ],
+          "quadrature_error_seconds": [
+            6.7845752134615635e-06,
+            6.811294143833227e-09
+          ],
+          "nodes": [
+            7101,
+            4825,
+            7595
+          ],
+          "max_integrated_momentum_residual_rad": 1.1452944238062208e-17,
+          "max_collocation_relative_residual": 1.9998216018417693e-11,
+          "max_scaled_boundary_residual": 2.220446049250313e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.474309345241636,
+          1.3612934432458133
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224213434986414,
+          -1.0733633361261459,
+          -0.9179740735810229
+        ]
+      },
+      "R1_response": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.668987897556253,
+            8.537289704904074
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            3.385128689810926e-12,
+            9.478295598279814e-14
+          ],
+          "images_rad": [
+            4.050240716818545e-06,
+            -3.983529774352688e-07,
+            -3.187469045733491e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038281370160525127,
+            -0.0003765084312254232,
+            -0.0030126772936791405
+          ],
+          "relative_delays_seconds": [
+            1876087.9907561394,
+            1232982.5795770364
+          ],
+          "quadrature_error_seconds": [
+            1.4456015303809251e-06,
+            6.810946715228426e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.668527699959274,
+            8.537291257830685
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.4875825298250347e-11,
+            9.478297322374689e-14
+          ],
+          "images_rad": [
+            4.050244219219909e-06,
+            -3.9835818139950907e-07,
+            -3.1874734962030228e-06
+          ],
+          "relative_delays_seconds": [
+            1876083.515986604,
+            1232983.9408720345
+          ],
+          "quadrature_error_seconds": [
+            6.781807156888289e-06,
+            6.8114085536174115e-09
+          ],
+          "nodes": [
+            7101,
+            4825,
+            7595
+          ],
+          "max_integrated_momentum_residual_rad": 1.140741621714729e-17,
+          "max_collocation_relative_residual": 1.9998080627304375e-11,
+          "max_scaled_boundary_residual": 2.220446049250313e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.474769535474479,
+          1.3612949980888516
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224221386178992,
+          -1.0733946757337838,
+          -0.9179752356851194
+        ]
+      },
+      "thin_reference_relative_delay_offsets_seconds": [
+        25.66883297590539,
+        8.537235483294353
+      ],
+      "distributed_reference_relative_delay_offsets_seconds": [
+        25.668372785672545,
+        8.537237038137391
+      ],
+      "thickness_change_of_delay_offsets_seconds": [
+        -0.00046019023284316063,
+        1.5548430383205414e-06
+      ],
+      "thin_reference_relative_image_offsets_microarcsec": [
+        6.038919054074552,
+        0.7812003025143016,
+        -4.296341463033445
+      ],
+      "distributed_reference_relative_image_offsets_microarcsec": [
+        6.03891984919381,
+        0.7811689629066635,
+        -4.296342625137542
+      ],
+      "thickness_change_of_image_offsets_microarcsec": [
+        7.951192584343403e-07,
+        -3.13396076381256e-05,
+        -1.1621040965081875e-06
+      ],
+      "extra_field_fixed_impact_Born_tail_bounds": [
+        {
+          "alpha_radians": 1.2086612922356982e-13,
+          "potential_difference_Mpc": 2.3291112449683346e-15,
+          "quadratic_potential_bound_Mpc": 2.329398689912797e-15,
+          "delay_difference_seconds": 0.31164734168921987
+        },
+        {
+          "alpha_radians": 9.669651666032437e-13,
+          "potential_difference_Mpc": 8.951872991306117e-16,
+          "quadratic_potential_bound_Mpc": 8.953644934525914e-16,
+          "delay_difference_seconds": 0.11978077161007421
+        }
+      ],
+      "linear_extra_thickness_change_seconds": [
+        -0.00046018460636787495,
+        1.5563435606935627e-06
+      ],
+      "finite_minus_linear_thickness_change_seconds": [
+        -5.626475285680499e-09,
+        -1.5005223730213402e-09
+      ],
+      "elapsed_seconds": 1.008793799992418
+    },
+    {
+      "half_window_Mpc": 0.8481168999085179,
+      "half_window_over_rV": 4.0,
+      "fixed_body": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.93945267425299,
+            8.64140152265884
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            2.879857760497109e-13,
+            9.593882935486733e-14
+          ],
+          "images_rad": [
+            4.050483941797847e-06,
+            -3.983338521343227e-07,
+            -3.1876170031193395e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038283669032645566,
+            -0.0003764903547016771,
+            -0.0030128171375020554
+          ],
+          "relative_delays_seconds": [
+            1876256.0945910595,
+            1233048.5196146069
+          ],
+          "quadrature_error_seconds": [
+            3.026793661650221e-08,
+            6.812066383476874e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.938874108643066,
+            8.641402673166608
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            2.879793526866798e-13,
+            9.593884212806948e-14
+          ],
+          "images_rad": [
+            4.0504874442035465e-06,
+            -3.9833909566522035e-07,
+            -3.1876214536349206e-06
+          ],
+          "relative_delays_seconds": [
+            1876251.537271781,
+            1233049.8809148897
+          ],
+          "quadrature_error_seconds": [
+            3.037020901110699e-08,
+            6.888522721920332e-09
+          ],
+          "nodes": [
+            6879,
+            4771,
+            8441
+          ],
+          "max_integrated_momentum_residual_rad": 1.0576265137654008e-16,
+          "max_collocation_relative_residual": 1.9999606181731413e-11,
+          "max_scaled_boundary_residual": 1.1102230246251565e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.557319278595969,
+          1.3613002828788012
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224230329741902,
+          -1.081555884656461,
+          -0.9179847340494371
+        ]
+      },
+      "R1_response": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.939770541671315,
+            8.641513458534543
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            2.8798930508902477e-13,
+            9.594007209273217e-14
+          ],
+          "images_rad": [
+            4.050513600611187e-06,
+            -3.9833003355176574e-07,
+            -3.1876380685507017e-06
+          ],
+          "plane_positions_Mpc": [
+            0.003828394935672785,
+            -0.0003764867455193452,
+            -0.0030128370477649742
+          ],
+          "relative_delays_seconds": [
+            1876282.0342026667,
+            1233057.161072098
+          ],
+          "quadrature_error_seconds": [
+            3.02684434235103e-08,
+            6.81218261894416e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.93919195888908,
+            8.641514604447355
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            2.8798288153508625e-13,
+            9.594008481492006e-14
+          ],
+          "images_rad": [
+            4.050517103019328e-06,
+            -3.983352772900217e-07,
+            -3.1876425190709665e-06
+          ],
+          "relative_delays_seconds": [
+            1876277.4763048135,
+            1233058.5223735282
+          ],
+          "quadrature_error_seconds": [
+            3.0370855860161665e-08,
+            6.88873628420274e-09
+          ],
+          "nodes": [
+            6879,
+            4769,
+            8441
+          ],
+          "max_integrated_momentum_residual_rad": 1.0589817664810076e-16,
+          "max_collocation_relative_residual": 1.9999279073351242e-11,
+          "max_scaled_boundary_residual": 2.220446049250313e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.557897853199393,
+          1.3613014302682132
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224235366720193,
+          -1.0815986553810193,
+          -0.9179857001254503
+        ]
+      },
+      "thin_reference_relative_delay_offsets_seconds": [
+        25.9396116072312,
+        8.641457491088659
+      ],
+      "distributed_reference_relative_delay_offsets_seconds": [
+        25.939033032627776,
+        8.64145863847807
+      ],
+      "thickness_change_of_delay_offsets_seconds": [
+        -0.0005785746034234762,
+        1.1473894119262695e-06
+      ],
+      "thin_reference_relative_image_offsets_microarcsec": [
+        6.117569386984565,
+        0.7876391912473379,
+        -4.345057118433753
+      ],
+      "distributed_reference_relative_image_offsets_microarcsec": [
+        6.117569890682394,
+        0.7875964205227795,
+        -4.345058084509766
+      ],
+      "thickness_change_of_image_offsets_microarcsec": [
+        5.036978292238814e-07,
+        -4.2770724558494067e-05,
+        -9.660760129648338e-07
+      ],
+      "extra_field_fixed_impact_Born_tail_bounds": [
+        {
+          "alpha_radians": 7.553715326124904e-15,
+          "potential_difference_Mpc": 1.4560624096165243e-16,
+          "quadratic_potential_bound_Mpc": 1.4560736428641917e-16,
+          "delay_difference_seconds": 0.019482881303797887
+        },
+        {
+          "alpha_radians": 6.044710223326521e-14,
+          "potential_difference_Mpc": 5.59697278824652e-17,
+          "quadratic_potential_bound_Mpc": 5.597042040415973e-17,
+          "delay_difference_seconds": 0.007489044135320567
+        }
+      ],
+      "linear_extra_thickness_change_seconds": [
+        -0.0005785656099241976,
+        1.1505077672779862e-06
+      ],
+      "finite_minus_linear_thickness_change_seconds": [
+        -8.993499278631134e-09,
+        -3.118355351716673e-09
+      ],
+      "elapsed_seconds": 1.1767346000124235
+    },
+    {
+      "half_window_Mpc": 4.24058449954259,
+      "half_window_over_rV": 20.0,
+      "fixed_body": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.958311857960965,
+            8.648660340712098
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.3385711568334474e-11,
+            9.601941842421024e-14
+          ],
+          "images_rad": [
+            4.050501388008621e-06,
+            -3.983323858147553e-07,
+            -3.18762780804502e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038283833927746677,
+            -0.00037648896879091133,
+            -0.003012827349916291
+          ],
+          "relative_delays_seconds": [
+            1876268.4984728147,
+            1233053.287560823
+          ],
+          "quadrature_error_seconds": [
+            4.139419514002177e-07,
+            6.8121454085954224e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.95769947929176,
+            8.64866137575803
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            4.6814012325406275e-12,
+            9.60194299155285e-14
+          ],
+          "images_rad": [
+            4.050504890424986e-06,
+            -3.9833764004438693e-07,
+            -3.1876322585684587e-06
+          ],
+          "relative_delays_seconds": [
+            1876263.9189654351,
+            1233054.6488582676
+          ],
+          "quadrature_error_seconds": [
+            2.079265507022347e-06,
+            7.690970661343362e-09
+          ],
+          "nodes": [
+            7765,
+            4624,
+            8779
+          ],
+          "max_integrated_momentum_residual_rad": 2.4937454648466494e-16,
+          "max_collocation_relative_residual": 1.9997076835012463e-11,
+          "max_scaled_boundary_residual": 1.1102230246251565e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.5795073795598,
+          1.361297444673255
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224252329613786,
+          -1.08376265694766,
+          -0.9179863547753864
+        ]
+      },
+      "R1_response": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.95863028848585,
+            8.648772521930438
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.300100426646972e-11,
+            9.602066388592557e-14
+          ],
+          "images_rad": [
+            4.050531073381182e-06,
+            -3.9832856505429394e-07,
+            -3.187648889925194e-06
+          ],
+          "plane_positions_Mpc": [
+            0.003828411450285685,
+            -0.00037648535755010516,
+            -0.0030128472757260157
+          ],
+          "relative_delays_seconds": [
+            1876294.4569438812,
+            1233061.9362772543
+          ],
+          "quadrature_error_seconds": [
+            4.405464791405671e-07,
+            6.81226176501173e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.958017891445596,
+            8.648773552043316
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            4.674592088556419e-12,
+            9.602067532247585e-14
+          ],
+          "images_rad": [
+            4.050534575799623e-06,
+            -3.983338195072583e-07,
+            -3.1876533404530565e-06
+          ],
+          "relative_delays_seconds": [
+            1876289.8768241168,
+            1233063.297575731
+          ],
+          "quadrature_error_seconds": [
+            2.0761863076977736e-06,
+            7.692318294489861e-09
+          ],
+          "nodes": [
+            7765,
+            4624,
+            8779
+          ],
+          "max_integrated_momentum_residual_rad": 2.497247946083546e-16,
+          "max_collocation_relative_residual": 1.9996376516104946e-11,
+          "max_scaled_boundary_residual": 4.440892098500626e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.580119764432311,
+          1.3612984768114984
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224256611831542,
+          -1.0838087226299997,
+          -0.9179872672144819
+        ]
+      },
+      "thin_reference_relative_delay_offsets_seconds": [
+        25.958471066551283,
+        8.648716431343928
+      ],
+      "distributed_reference_relative_delay_offsets_seconds": [
+        25.957858681678772,
+        8.648717463482171
+      ],
+      "thickness_change_of_delay_offsets_seconds": [
+        -0.0006123848725110292,
+        1.032138243317604e-06
+      ],
+      "thin_reference_relative_image_offsets_microarcsec": [
+        6.123047619599195,
+        0.7880884162768018,
+        -4.34844992943332
+      ],
+      "distributed_reference_relative_image_offsets_microarcsec": [
+        6.123048047820971,
+        0.7880423505944621,
+        -4.348450841872416
+      ],
+      "thickness_change_of_image_offsets_microarcsec": [
+        4.282217762607843e-07,
+        -4.606568233966879e-05,
+        -9.124390958348272e-07
+      ],
+      "extra_field_fixed_impact_Born_tail_bounds": [
+        {
+          "alpha_radians": 3.021475436654579e-16,
+          "potential_difference_Mpc": 5.824343855621539e-18,
+          "quadratic_potential_bound_Mpc": 5.824345652991671e-18,
+          "delay_difference_seconds": 0.0007793278589031379
+        },
+        {
+          "alpha_radians": 2.4179142537473093e-15,
+          "potential_difference_Mpc": 2.2388416781703184e-18,
+          "quadratic_potential_bound_Mpc": 2.2388427862415437e-18,
+          "delay_difference_seconds": 0.00029956879860167335
+        }
+      ],
+      "linear_extra_thickness_change_seconds": [
+        -0.0006123786692029398,
+        1.035045931629952e-06
+      ],
+      "finite_minus_linear_thickness_change_seconds": [
+        -6.2033080894252635e-09,
+        -2.907688312348e-09
+      ],
+      "elapsed_seconds": 1.0841899999941234
+    },
+    {
+      "half_window_Mpc": 20.0,
+      "half_window_over_rV": 94.32661937125553,
+      "fixed_body": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.959063538635583,
+            8.64894966094388
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            3.835592526365822e-11,
+            9.602263052403839e-14
+          ],
+          "images_rad": [
+            4.050502082269192e-06,
+            -3.983323274650184e-07,
+            -3.1876282380170786e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038283840489639607,
+            -0.0003764889136409084,
+            -0.0030128277563099028
+          ],
+          "relative_delays_seconds": [
+            1876268.9920723422,
+            1233053.4772975
+          ],
+          "quadrature_error_seconds": [
+            3.5001448130545077e-07,
+            6.812148553375925e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.958444504458882,
+            8.648950669848945
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.6443654075506826e-11,
+            9.602264172513469e-14
+          ],
+          "images_rad": [
+            4.050505584682723e-06,
+            -3.983375837921708e-07,
+            -3.1876326885390016e-06
+          ],
+          "relative_delays_seconds": [
+            1876264.4082004747,
+            1233054.8385920597
+          ],
+          "quadrature_error_seconds": [
+            7.373142129988712e-06,
+            1.0179109626119202e-08
+          ],
+          "nodes": [
+            7743,
+            4718,
+            8377
+          ],
+          "max_integrated_momentum_residual_rad": 3.478772784702884e-16,
+          "max_collocation_relative_residual": 1.9992444039621088e-11,
+          "max_scaled_boundary_residual": 4.440892098500626e-16
+        },
+        "thickness_delay_correction_seconds": [
+          -4.583871867507696,
+          1.3612945596687496
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224246483713904,
+          -1.0841953016615131,
+          -0.9179860421263176
+        ]
+      },
+      "R1_response": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.959381991615018,
+            8.649061851946447
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            3.875654849065444e-11,
+            9.60238760943804e-14
+          ],
+          "images_rad": [
+            4.0505317687003485e-06,
+            -3.9832850661775016e-07,
+            -3.1876493205528647e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038284121074755235,
+            -0.0003764853023180555,
+            -0.0030128476827392873
+          ],
+          "relative_delays_seconds": [
+            1876294.951295112,
+            1233062.1263032567
+          ],
+          "quadrature_error_seconds": [
+            3.375193905552501e-07,
+            6.812264914613016e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.958762938831917,
+            8.649062855852
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.644504827893218e-11,
+            9.602388723997102e-14
+          ],
+          "images_rad": [
+            4.050535271115876e-06,
+            -3.983337631713814e-07,
+            -3.1876537710791532e-06
+          ],
+          "relative_delays_seconds": [
+            1876290.3668041946,
+            1233063.487598822
+          ],
+          "quadrature_error_seconds": [
+            7.373826825240904e-06,
+            1.0183898196419298e-08
+          ],
+          "nodes": [
+            7743,
+            4717,
+            8377
+          ],
+          "max_integrated_momentum_residual_rad": 3.483749103268003e-16,
+          "max_collocation_relative_residual": 1.999233273482002e-11,
+          "max_scaled_boundary_residual": 0.0
+        },
+        "thickness_delay_correction_seconds": [
+          -4.584490917390212,
+          1.3612955652642995
+        ],
+        "thickness_image_correction_microarcsec": [
+          0.7224250601701357,
+          -1.0842420162719353,
+          -0.9179869425975667
+        ]
+      },
+      "thin_reference_relative_delay_offsets_seconds": [
+        25.959222769830376,
+        8.64900575671345
+      ],
+      "distributed_reference_relative_delay_offsets_seconds": [
+        25.95860371994786,
+        8.649006762309
+      ],
+      "thickness_change_of_delay_offsets_seconds": [
+        -0.0006190498825162649,
+        1.005595549941063e-06
+      ],
+      "thin_reference_relative_image_offsets_microarcsec": [
+        6.12326597059891,
+        0.7881063214854278,
+        -4.3485851591095965
+      ],
+      "distributed_reference_relative_image_offsets_microarcsec": [
+        6.123266382397655,
+        0.7880596068750056,
+        -4.348586059580845
+      ],
+      "thickness_change_of_image_offsets_microarcsec": [
+        4.117987453255978e-07,
+        -4.671461042216052e-05,
+        -9.004712486770927e-07
+      ],
+      "extra_field_fixed_impact_Born_tail_bounds": [
+        {
+          "alpha_radians": 1.3583461575624361e-17,
+          "potential_difference_Mpc": 2.618416554958183e-19,
+          "quadratic_potential_bound_Mpc": 2.6184165912844618e-19,
+          "delay_difference_seconds": 3.503579146554922e-05
+        },
+        {
+          "alpha_radians": 1.0870075556912285e-16,
+          "potential_difference_Mpc": 1.0065033869348004e-19,
+          "quadratic_potential_bound_Mpc": 1.0065034093298046e-19,
+          "delay_difference_seconds": 1.3467544996705016e-05
+        }
+      ],
+      "linear_extra_thickness_change_seconds": [
+        -0.00061903417670095,
+        1.0089050661576948e-06
+      ],
+      "finite_minus_linear_thickness_change_seconds": [
+        -1.5705815314959182e-08,
+        -3.3095162166318914e-09
+      ],
+      "elapsed_seconds": 1.1823902999894926
+    }
+  ],
+  "numerical_convergence": {
+    "variation": "collocation tolerance 2e-11 to8e-12; radial potential quadrature32 to64",
+    "higher_accuracy_solutions": {
+      "fixed_body": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.959063538635593,
+            8.648949660943883
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            3.835592526397503e-11,
+            9.602263052403842e-14
+          ],
+          "images_rad": [
+            4.050502082269192e-06,
+            -3.983323274650184e-07,
+            -3.1876282380170786e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038283840489639607,
+            -0.0003764889136409084,
+            -0.0030128277563099028
+          ],
+          "relative_delays_seconds": [
+            1876268.9920723422,
+            1233053.4772975
+          ],
+          "quadrature_error_seconds": [
+            3.5001448130545077e-07,
+            6.812148553375925e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.958444503811005,
+            8.648950669635045
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.6443628016118542e-11,
+            9.602264172275992e-14
+          ],
+          "images_rad": [
+            4.0505055846240595e-06,
+            -3.9833758381159867e-07,
+            -3.187632688496525e-06
+          ],
+          "relative_delays_seconds": [
+            1876264.4082004726,
+            1233054.8385920592
+          ],
+          "quadrature_error_seconds": [
+            7.373486333056944e-06,
+            1.0270298631356411e-08
+          ],
+          "nodes": [
+            9732,
+            6196,
+            11490
+          ],
+          "max_integrated_momentum_residual_rad": 1.8347623022122762e-16,
+          "max_collocation_relative_residual": 7.999644314009114e-12,
+          "max_scaled_boundary_residual": 1.1102230246251565e-16
+        }
+      },
+      "R1_response": {
+        "thin_window": {
+          "linear_extra_response_seconds": [
+            25.959381991615025,
+            8.649061851946449
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            3.875658538884791e-11,
+            9.602387609438043e-14
+          ],
+          "images_rad": [
+            4.0505317687003485e-06,
+            -3.9832850661775016e-07,
+            -3.1876493205528647e-06
+          ],
+          "plane_positions_Mpc": [
+            0.0038284121074755235,
+            -0.0003764853023180555,
+            -0.0030128476827392873
+          ],
+          "relative_delays_seconds": [
+            1876294.951295112,
+            1233062.1263032567
+          ],
+          "quadrature_error_seconds": [
+            3.375193905552501e-07,
+            6.812264914613016e-09
+          ]
+        },
+        "distributed_window": {
+          "linear_extra_response_seconds": [
+            25.958762938183167,
+            8.649062855637794
+          ],
+          "linear_extra_quadrature_error_seconds": [
+            1.6445048278607358e-11,
+            9.602388723759286e-14
+          ],
+          "images_rad": [
+            4.05053527105713e-06,
+            -3.983337631908229e-07,
+            -3.1876537710366178e-06
+          ],
+          "relative_delays_seconds": [
+            1876290.3668041928,
+            1233063.4875988213
+          ],
+          "quadrature_error_seconds": [
+            7.374176082568001e-06,
+            1.0276653186408867e-08
+          ],
+          "nodes": [
+            9732,
+            6193,
+            11491
+          ],
+          "max_integrated_momentum_residual_rad": 1.8374601021492812e-16,
+          "max_collocation_relative_residual": 7.999799912632672e-12,
+          "max_scaled_boundary_residual": 2.220446049250313e-16
+        }
+      }
+    },
+    "distributed_delay_offsets_seconds": [
+      25.95860372018069,
+      8.64900676207617
+    ],
+    "thin_delay_offsets_seconds": [
+      25.959222769830376,
+      8.64900575671345
+    ],
+    "change_of_distributed_delay_offsets_seconds": [
+      2.3283064365386963e-10,
+      -2.3283064365386963e-10
+    ],
+    "change_of_thickness_delay_correction_seconds": [
+      2.3283064365386963e-10,
+      -2.3283064365386963e-10
+    ],
+    "linear_extra_thickness_change_seconds": [
+      -0.0006190348245880273,
+      1.0086911625961648e-06
+    ],
+    "change_of_linear_extra_thickness_change_seconds": [
+      -6.478870773207746e-10,
+      -2.1390356153005996e-10
+    ]
+  },
+  "saved_infinite_thin_plane_delay_offsets_seconds": [
+    25.959258149566722,
+    8.649019375383205
+  ],
+  "unchanged_original_evidence_sha256": {
+    "artifacts\\strong_lensing_r1_screened_20261020\\results.json": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "preregistration\\prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113"
+  },
+  "qualification": [
+    "This distributes the retained leading weak-field paraxial action; it is not an exact null-ray solve of a completed higher-order scalar metric.",
+    "The FLRW exterior wavefront split is fixed by individual Jacobi boundary data, not chosen only to reproduce their sum.",
+    "Tail bounds concern the declared isolated extra field at fixed impact within Born projection, not an arbitrary environmental or global matching error.",
+    "Scalar-dependent field-equation higher orders, pressure/EOS evolution, time-dependent background and global matching remain outside this numerical control.",
+    "No state parameter, amplitude, matter profile, boundary normalization or physical guard is retuned; this is not physical admission."
+  ],
+  "physical_admission": false,
+  "source_sha256": {
+    "code/strong_lensing_encounter_accuracy.py": "2697ae7a1643319eb16b960279013dea44042607759186fe63ecc8b2cb273e1f",
+    "scripts/run_strong_lensing_encounter_accuracy.py": "3ab522b95c8cd09a8b39add3cf455d46184e1449f8329f868712f476ee780b6e",
+    "tests/test_strong_lensing_encounter_accuracy.py": "b22a95b81cd19434510e2d55eb4a369a8102ed1e392c890c04c704b6aa2b6fdd",
+    "docs/strong_lensing_r1_screened_20261020/ENCOUNTER_ACCURACY_CONTROL_20261020.md": "f9fcd04b3d10a2e4a554139195e633a350bae95f2d813da711167c9905800f74"
+  },
+  "post_execution_routing_note": "Only default output routing changed to the new acceptance checkpoint after calculation; mathematical applications and inputs unchanged; no numerical rerun for routing.",
+  "finite_response_stationary_homotopy": {
+    "definition": "Integrate stationary derivative for Phi_N+eta delta_Phi from eta0 toeta1, fixed physical endpoints/clock and fixed given delta_Phi; eta is not a fitted theory or state parameter.",
+    "orders": [
+      {
+        "Gauss_order": 3,
+        "nodes": [
+          {
+            "eta_optical_integration_coordinate": 0.1127016653792583,
+            "thin_on_shell_derivative_seconds": [
+              25.959099428579357,
+              8.648962304970597
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958480392305702,
+              8.64896331331219
+            ],
+            "max_integrated_momentum_residual_rad": 3.479353002271753e-16,
+            "weight": 0.27777777777777785
+          },
+          {
+            "eta_optical_integration_coordinate": 0.5,
+            "thin_on_shell_derivative_seconds": [
+              25.959222764531905,
+              8.649005756229828
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958603721052047,
+              8.64900676263515
+            ],
+            "max_integrated_momentum_residual_rad": 3.481254591238339e-16,
+            "weight": 0.4444444444444444
+          },
+          {
+            "eta_optical_integration_coordinate": 0.8872983346207417,
+            "thin_on_shell_derivative_seconds": [
+              25.959346101196545,
+              8.64904920774749
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.95872705051043,
+              8.649050212216492
+            ],
+            "max_integrated_momentum_residual_rad": 3.483190061522815e-16,
+            "weight": 0.27777777777777785
+          }
+        ],
+        "thin_finite_offsets_seconds": [
+          25.95922276472971,
+          8.649005756301616
+        ],
+        "distributed_finite_offsets_seconds": [
+          25.958603721249837,
+          8.649006762706925
+        ],
+        "finite_thickness_change_seconds": [
+          -0.0006190434798725164,
+          1.0064053093117309e-06
+        ]
+      },
+      {
+        "Gauss_order": 5,
+        "nodes": [
+          {
+            "eta_optical_integration_coordinate": 0.04691007703066802,
+            "thin_on_shell_derivative_seconds": [
+              25.959078477183223,
+              8.648954923793912
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958459442133734,
+              8.648955932464483
+            ],
+            "max_integrated_momentum_residual_rad": 3.479009953928115e-16,
+            "weight": 0.11846344252809464
+          },
+          {
+            "eta_optical_integration_coordinate": 0.23076534494715845,
+            "thin_on_shell_derivative_seconds": [
+              25.959137026125894,
+              8.64897555058639
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958517987655508,
+              8.648976558337749
+            ],
+            "max_integrated_momentum_residual_rad": 3.4799162791816773e-16,
+            "weight": 0.23931433524968315
+          },
+          {
+            "eta_optical_integration_coordinate": 0.5,
+            "thin_on_shell_derivative_seconds": [
+              25.959222764531905,
+              8.649005756229828
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958603721052047,
+              8.64900676263515
+            ],
+            "max_integrated_momentum_residual_rad": 3.481254591238339e-16,
+            "weight": 0.28444444444444433
+          },
+          {
+            "eta_optical_integration_coordinate": 0.7692346550528415,
+            "thin_on_shell_derivative_seconds": [
+              25.959308503282017,
+              8.649035961998147
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958689454792673,
+              8.649036967057413
+            ],
+            "max_integrated_momentum_residual_rad": 3.482609843953946e-16,
+            "weight": 0.23931433524968315
+          },
+          {
+            "eta_optical_integration_coordinate": 0.9530899229693319,
+            "thin_on_shell_derivative_seconds": [
+              25.959367052855114,
+              8.64905658901938
+            ],
+            "distributed_on_shell_derivative_seconds": [
+              25.958748000944844,
+              8.64905759315945
+            ],
+            "max_integrated_momentum_residual_rad": 3.4835076988780356e-16,
+            "weight": 0.11846344252809464
+          }
+        ],
+        "thin_finite_offsets_seconds": [
+          25.9592227647297,
+          8.649005756301605
+        ],
+        "distributed_finite_offsets_seconds": [
+          25.958603721249833,
+          8.649006762706923
+        ],
+        "finite_thickness_change_seconds": [
+          -0.000619043479865411,
+          1.006405318193515e-06
+        ]
+      }
+    ],
+    "change_between_orders_seconds": [
+      7.105427357601002e-15,
+      8.881784197001252e-15
+    ],
+    "physical_intermediate_states_claimed": false
+  },
+  "preferred_finite_response_control": {
+    "method": "Stationary derivative integrated along the fixed optical-field homotopy; eta is a numerical integration coordinate, not a physical state selection or fitted amplitude.",
+    "half_window_Mpc": 20.0,
+    "thin_finite_offsets_seconds": [
+      25.9592227647297,
+      8.649005756301605
+    ],
+    "distributed_finite_offsets_seconds": [
+      25.958603721249833,
+      8.649006762706923
+    ],
+    "thickness_change_seconds": [
+      -0.000619043479865411,
+      1.006405318193515e-06
+    ],
+    "raw_arrival_subtraction_minus_stationary_homotopy_seconds": [
+      -6.4026508539427596e-09,
+      -8.097682524521588e-10
+    ],
+    "same_endpoints_clock_and_original_source": true
+  },
+  "focused_test_validation": {
+    "command": "python -m pytest tests/test_strong_lensing_encounter_accuracy.py -q",
+    "passed": 7,
+    "failed": 0,
+    "last_execution_seconds": 0.61,
+    "qualification": "Seven new boundary/transfer/tail checks only; no broad suite or original background solve repeated."
+  },
+  "post_execution_addition_note": "The stationary optical homotopy was computed separately after the window study, reusing valid window evidence. The default runner reproduces both in one invocation. All original saved evidence remains unchanged."
+}

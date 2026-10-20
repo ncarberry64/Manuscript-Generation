@@ -1,0 +1,241 @@
+% Retained technical source supplement; not input by the focused main.
+% Complete readable derivations are Supplementary Notes S4 and S5 in docs.
+
+\subsection{Inherited surface source and the scope of its reduction}
+The inherited BHSM source organization assigns the surface and gravitational
+contributions to explicit slots:
+\begin{align}
+ \mathcal L_\psi\psi&=J_{\rm grav}+\mathcal E_\Sigma[Q_\Sigma]+\xi,\nonumber\\
+ Q_\Sigma&=\frac{c^2}{8\pi}\int_{\Sigma_\star}
+ H_\Sigma\Delta K_{uu}\,\dd A,\nonumber\\
+ h_{\rm topo}&=-\mathcal A_g^{-1}\mathcal B_{g\psi}\psi .
+ \label{eq:inherited-bhsm-source}
+\end{align}
+These are the retained source and constrained metric-response definitions,
+not a newly closed constitutive law. The surface functional uses the seam
+curvature data; its export operator, orientation and full action
+normalization remain to be matched to the local field variables. Here
+$\psi$ names that inherited topographic variable, not the independent
+rolling scalar $T$, the target field $\eta$, or the metric coordinate
+$\psi_{\rm geo}$ introduced below. The local metric Hessian in this source
+organization is also distinct from the cosmological ADM constraint block.
+No stochastic forcing or population covariance is required for the
+specified deterministic encounter. The term $\xi$ remains a source slot;
+it is not supplied with an invented realization or state law.
+
+\begin{table}[htbp]
+ \centering
+ \caption{Status of the source-to-observable construction.}
+ \begin{tabular}{>{\raggedright\arraybackslash}p{0.22\linewidth}>{\raggedright\arraybackslash}p{0.69\linewidth}}
+ \toprule
+ Status & Statement \\
+ \midrule
+ Adopted BHSM premise & Environmental light traverses an envelope event;
+ conventional and scalar descriptions represent its surface contributions.\\
+ Derived effective result & The declared R1 action fixes the local matter source,
+ regular scalar branch and metric response, hence the optical transfer.\\
+ Derived equivalence & A positive effective mass reproduces that retained
+ metric and optical field.\\
+ Derived source condition & Cap momentum and Schur forcing specify the
+ required pullback; positive same-domain lifts prove its microscopic
+ completion is not unique from the leading coefficients.\\
+ Open common-source map & Reduction of the BHSM surface and boundary data to
+ the normalized R1 source, with the same independent variables and validity range.\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+The calculation below executes the effective problem and its optical
+application. The derived common-source conditions specify the physical
+selection data consumed by a further application within the BHSM program.
+
+
+\section{Exact Bulk Continuation, Environment and Matching}
+\label{app:continuation}
+The retained action also specifies the next field problem. The field
+equations below use $c=\hbar=1$, restoring $c$ in scale comparisons. Its
+exact bulk equations can be derived without supplying the unfinished microscopic
+surface-to-R1 map. They are distinct from an evolved physical solution
+with a specified material law and global state. The full spherical
+component derivation is supplied in
+\path{docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md}.
+
+\subsection{The current balance and the rolling reference}
+Put $U_\mu=\nabla_\mu T$, $Y=U_\mu U^\mu$,
+$\Pi_{\mu\nu}=\nabla_\mu\nabla_\nu T$, $S=\Box T$,
+$\mathcal K_\Pi=\Pi_{\mu\nu}U^\mu U^\nu$ and $g_3=2/\lambda$.
+The exact metric equation and cubic stress are
+\begin{align}
+ \Mpl^2G_{\mu\nu}&=T^m_{\mu\nu}+U_\mu U_\nu
+             -g_{\mu\nu}(Y/2+V)+T^{(3)}_{\mu\nu},\nonumber\\
+ T^{(3)}_{\mu\nu}&=g_3[-S U_\mu U_\nu-g_{\mu\nu}\mathcal K_\Pi
+       +2U_{(\mu}\Pi_{\nu)\alpha}U^\alpha].
+ \label{eq:continuation-einstein}
+\end{align}
+Equation~\eqref{eq:scalar-covariant} has the exact current form
+\begin{equation}
+ J^\mu=U^\mu+g_3(\Pi^{\mu\nu}U_\nu-SU^\mu),\qquad
+ \nabla_\mu J^\mu=-\mu^3.
+ \label{eq:continuation-current}
+\end{equation}
+On the homogeneous reference $J^0=-J$ for the positive current in
+Equation~\eqref{eq:current}, reproducing its source sign.
+For a spherical patch
+$ds^2=-N^2dt^2+A^2dr^2+r^2d\Omega^2$, the actual balance is
+\begin{equation}
+ \partial_t(NAr^2J^t)+\partial_r(NAr^2J^r)=-\mu^3NAr^2.
+ \label{eq:continuation-balance}
+\end{equation}
+An exactly static metric with $T=vt+\pi(r)$ and constant $v$ would remove
+the temporal term. A regular center would then require
+\begin{equation}
+ J^r(r)=-\frac{\mu^3}{NAr^2}\int_0^rN(s)A(s)s^2\,\dd s,
+ \label{eq:continuation-static}
+\end{equation}
+which grows as $-\mu^3r/3$ in a static asymptotically flat region, rather
+than giving the decaying isolated excess. Moreover $V_0-\mu^3vt-\mu^3\pi$
+makes the stress time dependent for nonzero $\mu^3v$. The rolling
+background time-current balance must therefore be retained before its
+homogeneous contribution is subtracted. The executed quasi-static
+solution does this at its retained order; appending a static GR2 potential
+does not solve this full continuation. Small $H_lr_V/c$ supports the
+local freezing approximation but is not a physical delay-error bound.
+
+\subsection{The environmental contraction}
+At the retained quasi-static order let $\pi_T=\pi_L+\pi_E$ and
+$\delta\rho=\rho_L+\rho_E$. Subtracting the environmental equation from
+the total scalar equation gives the actual local application
+\begin{align}
+ C\Delta\pi_L
+ &-\frac2\lambda[(\Delta\pi_L)^2-\Pi_L:\Pi_L]\nonumber\\
+ &-\frac4\lambda[(\Delta\pi_E)(\Delta\pi_L)-\Pi_E:\Pi_L]
+   =-\frac{b_T\rho_L}{2\Mpl^2},
+ \label{eq:continuation-environment}
+\end{align}
+where $\Pi_{L,ij}=\partial_i\partial_j\pi_L$ and similarly for $E$.
+The environmental input is the full spatial Hessian in
+$[(\operatorname{tr}\Pi_E)\delta^{ij}-\Pi_E^{ij}]
+\partial_i\partial_j\pi_L$, not its trace alone. Constant or
+uniform-gradient scalar data have no such cross term, whereas a tidal
+Hessian generally does. A projected optical tide does not determine this
+three-dimensional contraction. Physical environmental density and
+boundary/Cauchy data must be solved with the same scalar and metric
+constraints; their total principal operator must also be checked.
+The optical nuisance tides in the main text do not perform that solve.
+
+\subsection{Material and outer-domain defining data}
+An evolved perfect fluid consumes a material relation, for example
+$\rho_m=\rho_m(n)$ and $p_m=n\,\dd\rho_m/\dd n-\rho_m$, together with
+$\nabla_\mu T_m^{\mu\nu}=0$. At static equilibrium the radial application
+is $p_m'=-(\rho_m+p_m)\nu'$ for $N=e^\nu$.
+A common fixed barotropic law with $\delta\rho_m=0$ would give
+$\delta p_m=0$, whereas Equation~\eqref{eq:pressure} gives a positive
+pressure change. The retained comparison therefore prescribes common
+density, not a common fixed material equation of state. A physical
+material continuation must allow density readjustment, specify additional
+support, or explicitly retain the prescribed-stress comparison.
+
+In an overlap worldtube $r_V\ll r_m\ll c/H_l$, the regular branch fixes
+its far-zone derivative data without a new local charge:
+\begin{align}
+ \pi_T'(r_m)&=-\frac{b_TGM}{Cr_m^2}
+       [1+O((r_V/r_m)^3)],\nonumber\\
+ \Phi'(r_m)=\Psi'(r_m)&=\frac{GM}{r_m^2}
+       [1+\epsilon_\infty+O((r_V/r_m)^3)].
+ \label{eq:continuation-overlap}
+\end{align}
+Smooth matching also requires the induced metric and extrinsic curvature,
+the scalar value and normal derivative, and the current balance in
+Equation~\eqref{eq:continuation-balance}. Scalar additive data and clock
+normalization belong to the outer state. A physical surface source would
+instead require its variational junction conditions; no moving-seam law
+is assumed here.
+
+The flat local constraint cannot be extended unchanged to the entire
+compact slice. Its formal compact integral would require
+$\int\delta\rho\,\dd V=0$, which the isolated positive excess does not
+satisfy. The actual outer problem must retain curvature, time dependence
+and the homogeneous response, or a declared compensating excess. This
+is a compatibility check of the naive extension, not a prohibition of
+positive local mass in a closed cosmology. The outer solution must match
+both the local field and the source/observer clock protocol. Thus the
+exact bulk and environmental equations are available, while their
+material and global state data must be specified before a further
+physical solution is claimed.
+
+\section{Common-Source Pullback and a Nonuniqueness Construction}
+\label{app:source-reduction}
+The original cap reduction is a constrained critical value with retained
+boundary traces and kernel coordinates. Its actual matcher variation
+defines the oriented canonical momenta by
+$\delta S_{5,\epsilon}^{\rm on\mbox{-}shell}
+=\int\Pi_\epsilon^{ab}\delta\gamma_{\epsilon ab}$ and
+$S_{\rm match}=\sum_\epsilon\int\Lambda_\epsilon^{ab}
+(h_{ab}-\gamma_{\epsilon ab})$. It gives
+\begin{equation}
+ \Pi_\epsilon^{ab}=\Lambda_\epsilon^{ab},\qquad
+ 2C_\partial G^{ab}[h]=T_m^{ab}+\tau_{\rm cap}^{ab},\qquad
+ \tau_{\rm cap}^{ab}=\frac2{\sqrt{-h}}\sum_\epsilon\Pi_\epsilon^{ab}.
+ \label{eq:cap-source-pullback}
+\end{equation}
+Thus $u_a u_b\delta\tau_{\rm cap}^{ab}$ supplies the metric energy
+source once a cap solution and observer are specified. The cap scalar
+normal momentum and the interface Euler variation supply different
+source slots; their pullback into canonical $T$ must be established.
+The cap sum cannot be replaced with the reflection-even mean without
+its factor of two. A cap response absorbed into the local action is
+accounted for once.
+
+For original coupled rows $A_P\psi+Bq=J_P$,
+$B^\dagger\psi+D_Qq=J_Q$, elimination on an invertible owned complement
+gives both the operator and its forcing:
+\begin{equation}
+ (A_P-BD_{Q,\perp}^{-1}B^\dagger)\psi
+ =J_P-BD_{Q,\perp}^{-1}J_Q-Bq_0,
+ \qquad q_0\in\ker D_Q.
+ \label{eq:source-schur}
+\end{equation}
+Kernel compatibility equations remain explicit. A reduced Hessian
+alone does not determine this source. The physical embedding of $T$,
+its kinetic normalization, cubic vertex and source pairing must agree
+under the same reduction.
+
+The leading R1 coefficients do not select a unique complement. To prove
+this, take two mathematical spectral lifts on the same ball
+$L=10\pi\ell_0$, both real fields regular at zero and Dirichlet at $L$.
+The normalized radial modes are
+$f_n=\sin(n\pi r/L)/(r\sqrt{2\pi L})$, $n\ge1$,
+with $q=p\ell_0^2=(n/10)^2$. Define
+\begin{equation}
+ H(q)=\begin{pmatrix}(C+1)q&g\sqrt q\\g\sqrt q&M_c^2+q\end{pmatrix},
+ \quad K_{\rm time}=\operatorname{diag}(D,1),
+ \quad (M_c^2,g)=(1,1)\ \hbox{or}\ (4,2).
+ \label{eq:complement-witness}
+\end{equation}
+Here $M_c,g,q$ are dimensionless; $D$ is the temporal coefficient in
+Appendix~\ref{app:principal}. The same retained source is used and the
+complement is explicitly unforced for this counterexample. Neither lift
+is selected as a microscopic galaxy state. Each complement is positive,
+and its reduced kernel is
+$Cq+g^2q^2/[M_c^2(M_c^2+q)]>0$ for every owned $q>0$.
+Both leading coefficients are exactly $C,D$, yet after normalizing by
+$C$ their fourth-order coefficients are
+$B/\ell_0^2=1/C=0.2359125661$ and
+$1/(4C)=0.05897814152$, with expansion scales
+$p\ell_0^2\ll1$ and $p\ell_0^2\ll4$, respectively.
+The common unit $\ell_0$ has not been assigned a physical galaxy scale.
+This constructive nonuniqueness result identifies missing physical
+selection data rather than inferring them from an unavailable array.
+
+A further direct identification can be excluded. The inherited
+distributed seam law
+$\nabla\cdot\mathbf F_{\rm top}=a\Theta(r-r_\star)/r^2$ with
+$F^r_{\rm top}(r_\star)=0$ integrates to
+$F^r_{\rm top}=a(1/r-r_\star/r^2)$. Its growing integrated charge
+cannot be identified by a constant normalization with the isolated R1
+flux, which decays as $r^{-2}$. A different finite-domain export or
+nonlocal source map remains possible. The full action/source trail,
+including the interface Euler relation, is supplied in
+\path{docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md}.
+It specifies the physical embedding, constitutive interface density and
+boundary prescription needed for a unique further application.

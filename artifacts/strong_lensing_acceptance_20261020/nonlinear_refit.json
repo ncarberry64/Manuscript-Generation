@@ -1,0 +1,128 @@
+{
+  "status": "PASS",
+  "experiment": "Deterministic R1 injection read from the existing receipt; finite nonlinear conventional refit, not an observational detection or likelihood.",
+  "preparation": "Truth uses unchanged physical source, spectrum, clocks, redshifts/maps and frozen R1 state. Only inverse-model nuisance coordinates are fitted.",
+  "coordinates": [
+    "delta_log_M",
+    "delta_log_R",
+    "source_shift_arcsec",
+    "lens_center_arcsec",
+    "source_plane_convergence"
+  ],
+  "original_applications": [
+    "theta-beta-G alpha=0 at all three images",
+    "relative stationary Fermat arrival times for the two image pairs"
+  ],
+  "numerical_row_scales": "0.001 arcsec lens residual; 0.1 day delay residual. Numerical conditioning only, not observational uncertainty.",
+  "fits": {
+    "fixed_center": {
+      "coordinates": [
+        3.995969557081035e-06,
+        3.9827138747925233e-07,
+        4.349533902920928e-09,
+        0.0,
+        9.94687497791408e-06
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "evaluations": 15,
+      "original_rows": [
+        -2.1584840946024324e-11,
+        -2.1208150795336306e-10,
+        -4.598885225985173e-11,
+        3.826849592769577e-08,
+        -5.823140014626915e-08
+      ],
+      "scaled_residual_norm": 7.301347959540856e-07,
+      "numerical_Jacobian_singular_values": [
+        1990.7110097680456,
+        1565.0438649269167,
+        540.1243764873501,
+        124.19473066358002
+      ],
+      "forward": {
+        "images_rad": [
+          4.050531801489428e-06,
+          -3.983285043587283e-07,
+          -3.1876493407254554e-06
+        ],
+        "relative_delays_days": [
+          21.716377058702093,
+          14.27155243306816
+        ],
+        "max_original_lens_residual_rad": 8.470329472543003e-22,
+        "max_stationarity_Mpc": 2.6020852139652106e-18
+      },
+      "image_errors_microarcsec": [
+        1.2079313391743296e-05,
+        -0.00010142848136042411,
+        2.025335251190017e-05
+      ],
+      "delay_errors_seconds": [
+        0.0033063977411984524,
+        -0.005031192819160424
+      ]
+    },
+    "free_center": {
+      "coordinates": [
+        4.020562560265101e-06,
+        4.1234000691024e-07,
+        6.814777832499368e-09,
+        1.7743086204799526e-09,
+        9.922873433676121e-06
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "`xtol` termination condition is satisfied.",
+      "evaluations": 14,
+      "original_rows": [
+        8.735654337515763e-17,
+        0.0,
+        0.0,
+        1.0658141036401503e-14,
+        -1.7763568394002505e-15
+      ],
+      "scaled_residual_norm": 1.3894713767374543e-13,
+      "numerical_Jacobian_singular_values": [
+        3641.5961275946606,
+        1875.9297611748343,
+        1564.7290103823534,
+        415.4278588004691,
+        19.36700475969639
+      ],
+      "forward": {
+        "images_rad": [
+          4.050531801430866e-06,
+          -3.983285038669889e-07,
+          -3.187649340823647e-06
+        ],
+        "relative_delays_days": [
+          21.71637702043361,
+          14.271552491299557
+        ],
+        "max_original_lens_residual_rad": 4.235164736271502e-22,
+        "max_stationarity_Mpc": 1.3010426069826053e-18
+      },
+      "image_errors_microarcsec": [
+        0.0,
+        5.4597839609473516e-11,
+        -8.735654337515763e-11
+      ],
+      "delay_errors_seconds": [
+        9.208633855450898e-10,
+        -1.5347723092418164e-10
+      ]
+    }
+  },
+  "raw_fixed_body_offsets_seconds": [
+    25.959258149566722,
+    8.649019375383205
+  ],
+  "mass_sheet_accounting": "One physical sheet is included in the conventional encounter. Propagation maps remain the original maps and contain no duplicate sheet.",
+  "qualification": "Local three-image axial inverse problem for this finite profile. A successful finite refit does not establish equivalence of every profile or higher-order metric; the separate positive-halo theorem supplies the complete retained-field equivalence.",
+  "sha256": {
+    "artifacts/strong_lensing_r1_screened_20261020/results.json": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "artifacts/strong_lensing_first_comparison_20261020/results.json": "a6df929ba8370aef2851def5422e29ec2f209e397402d60340d0f2991156a7b1",
+    "code/strong_lensing_refit.py": "ab779c993d82f0a5b8be28c774bfd682601b4d87062d90905f2bb7eaf3313b33",
+    "scripts/run_strong_lensing_refit.py": "c5abe9710679e68a3ff532c4af3098330fd5cd6bac27b7db700efa5e048b45b0"
+  }
+}
