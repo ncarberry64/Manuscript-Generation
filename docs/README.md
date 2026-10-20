@@ -9,12 +9,22 @@ Lens Modeling**, with no submission target date.
 
 Start with the [current scientific scope](STRONG_LENSING_SCOPE_20261020.md)
 and the [focused manuscript](../manuscript/strong_lensing_main.pdf). The
-[integration checkpoint](STRONG_LENSING_BHSM_INTEGRATION_20261020.md) records
-the current reproducibility, focused PDF and remote outcomes. Its
+[acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md) and
+[artifact index](../artifacts/strong_lensing_acceptance_20261020/README.md)
+record the current applications and their validation. Its
 organizing question is how BHSM surface contributions determine incoming-to-
-outgoing light transfer through an envelope event. The order is preparation,
-action/source/boundary problem, metric response, optical observables, and
-conventional representation and checks.
+outgoing light transfer through an envelope event. The order is specified
+state and source, normalized metric/optical transfer, image and delay
+observables, then what those observables identify under conventional lens
+freedoms.
+
+Science checkpoint
+[`87503ae`](https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd)
+pins the three new acceptance applications and eighteen focused tests. The
+current real-MDPI focused build has 19 pages; its
+[publication manifest](../artifacts/strong_lensing_acceptance_20261020/publication_manifest.json)
+and nineteen-page rendered audit are distinguished from the old 18-page
+integration evidence.
 
 The [R1 source derivation](strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md)
 gives the retained action, normalizations, metric constraint, regular screened
@@ -22,9 +32,21 @@ branch and approximation boundary. The
 [research review](strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md)
 records the finite-body images and delays, scoped rank results, and positive
 effective-mass construction. That conventional construction reproduces the
-same retained leading gravitational and optical response. The complete
-normalized BHSM surface-to-effective-source map is the next derivation;
-the leading equivalence does not assert that it is finished.
+same retained leading gravitational and optical response. The
+[finite nonlinear re-fit](strong_lensing_r1_screened_20261020/NONLINEAR_LENS_REFIT_20261020.md)
+executes conventional absorption for the declared axial example. The
+[profile and coefficient controls](strong_lensing_r1_screened_20261020/LENS_MODEL_ROBUSTNESS_20261020.md)
+apply a matched Plummer profile, one-input variations and state-coefficient
+partials. The latter are not independently selected physical states: they
+must be composed with an action-owned state-to-coefficient Jacobian. The
+[literature and call assessment](strong_lensing_r1_screened_20261020/LITERATURE_AND_CALL_POSITIONING_20261020.md)
+delimits the contribution and its journal fit.
+
+The [distributed-encounter control](strong_lensing_r1_screened_20261020/ENCOUNTER_ACCURACY_CONTROL_20261020.md)
+applies the same retained force and physical source between individually
+derived closed-FLRW exterior wavefronts. Its common-window width/path result
+is distinct from the common ordinary-GR2 control and from uncomputed scalar
+higher-order or environmental effects.
 
 The subsequent [common-source application](strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md)
 evaluates the nonlinear flux and metric Gauss equation and proves a remaining
@@ -33,6 +55,10 @@ physical-map nonuniqueness through two positive common-domain lifts. The
 derives exact scalar/metric/fluid/environment/matching equations and checks
 twelve component identities. It identifies the consumed EOS/support and outer
 Cauchy data; these equations are not an evolved higher-order physical solution.
+These detailed derivations and the long cap/source material are supplementary
+to the main transfer/inference argument. The separate
+[technical supplement source](../manuscript/sections/strong_lensing_technical_supplement_20261020.tex)
+retains that material without adding it to the focused main document.
 
 The [finite-body GR2 derivation](strong_lensing_r1_screened_20261020/FINITE_BODY_GR_2PM_DERIVATION_20261020.md)
 and [composition review](strong_lensing_r1_screened_20261020/COMMON_GR_2PM_COMPOSITION_REVIEW_20261020.md)
@@ -41,7 +67,8 @@ identify the common conventional correction and its limited scope. The
 and [unsent cover letter](strong_lensing_r1_screened_20261020/GALAXIES_COVER_LETTER_DRAFT.md)
 carry the current scope and retain author-only declarations.
 
-The earlier [first comparison](STRONG_LENSING_CHECKPOINT_20261020.md),
+The earlier [package integration](STRONG_LENSING_BHSM_INTEGRATION_20261020.md),
+[first comparison](STRONG_LENSING_CHECKPOINT_20261020.md),
 [constant-target family](STRONG_LENSING_LOCAL_FAMILY_20261020.md),
 [local checkpoint](STRONG_LENSING_LOCAL_CHECKPOINT_20261020.md), and
 [ADM/phase projection trail](STRONG_LENSING_ENVELOPE_DERIVATION_20261020.md)

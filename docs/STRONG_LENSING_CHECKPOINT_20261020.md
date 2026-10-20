@@ -1,5 +1,9 @@
 # First matched strong-lensing checkpoint - 20 October 2026
 
+> The [acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md) is the
+> current reader entry point. It follows the retained source-to-light transfer
+> into finite inverse modeling and controlled profile/accuracy applications.
+
 > Historical checkpoint. Its calculations and validation belong to the first
 > comparison recorded below. The [current scope](STRONG_LENSING_SCOPE_20261020.md)
 > and [R1 research review](strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md)

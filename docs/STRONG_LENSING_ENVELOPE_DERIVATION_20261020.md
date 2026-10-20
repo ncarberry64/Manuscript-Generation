@@ -1,5 +1,10 @@
 # Envelope action projection and the available static-channel result
 
+> The [acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md) follows
+> the later normalized source-to-light calculation into finite inverse and
+> profile/accuracy controls. The source trail below remains historical to
+> its own variable/domain application.
+
 > Historical projection record. Preserve its ADM/local-variable distinctions
 > and channel-specific null. The [current scope](STRONG_LENSING_SCOPE_20261020.md)
 > and [R1 source derivation](strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md)

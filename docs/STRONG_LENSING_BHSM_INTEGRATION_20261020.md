@@ -1,5 +1,12 @@
 # BHSM strong-lensing integration checkpoint
 
+> Historical integration checkpoint. Its science pin, 18-page PDF audit,
+> numerical replay and remote outcomes belong to the completed integration
+> snapshot below. The [acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md)
+> supersedes its active manuscript status with the subsequent coherent
+> transfer/inference revision, finite nonlinear re-fit and profile/accuracy
+> controls. The older receipts are preserved and do not certify a later PDF.
+
 This continues draft PR #23 on
 `codex/strong-lensing-first-comparison-20261020`, from public provenance
 anchor `49a1dabbe148f8ba9da4ac079a8d93fe97c5de76`. The existing worktree

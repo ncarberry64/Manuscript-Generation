@@ -1,5 +1,9 @@
 # Constructed local encounter and manuscript corrections, 20 October 2026
 
+> Current manuscript and validation status is recorded in the
+> [acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md). This local
+> checkpoint retains its original control and validation evidence.
+
 > Historical checkpoint for the constant-target family and endpoint/nuisance
 > corrections. Its numerical results and restricted phase null remain valid
 > within their stated boundary problem. The [current BHSM scope](STRONG_LENSING_SCOPE_20261020.md)

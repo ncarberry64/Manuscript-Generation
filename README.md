@@ -14,14 +14,16 @@ is prepared for **Galaxies**, special issue **Strong Gravitational Lens Modeling
 It asks how BHSM surface contributions determine the incoming-to-outgoing light
 transfer through an envelope event. The declared R1 effective action supplies
 the evaluated finite-body scalar/metric source and screened optical response.
-A positive conventional effective-mass representation reproduces the retained
-leading gravitational and optical response; this is a constructive result within
-the BHSM program. The coupled effective source and material flux are now
-explicitly evaluated. Positive same-domain lifts establish the remaining
-nonuniqueness of the physical surface-to-R1 map and complement data. Exact
-field/environment/matching continuation equations are derived and checked;
-they are distinguished from an evolved physical solution. The [scope record](docs/STRONG_LENSING_SCOPE_20261020.md)
-separates these premises, derivations and approximation boundaries.
+The calculation follows state-dependent coefficients into the light transfer,
+then asks what images and delays identify when conventional lens freedoms are
+allowed. A positive effective-mass representation reproduces the complete
+retained leading response. A finite nonlinear conventional re-fit absorbs the
+declared axial example, while matched compact and smooth profiles expose the
+importance of ordinary profile freedom. These applications are conditional
+forward and inverse calculations, rather than an observed-galaxy fit or a
+selected microscopic BHSM state. The [acceptance checkpoint](docs/STRONG_LENSING_ACCEPTANCE_20261020.md)
+and [scope record](docs/STRONG_LENSING_SCOPE_20261020.md) state the equations,
+executed results and approximation boundaries.
 
 The inherited matched SIS transport and constant-target phase null remain
 scientific controls. The screened example has radius `r_V = 212.0292 kpc` and
@@ -31,16 +33,24 @@ share the demonstrated leading response. Reproduce the effective calculation
 with `python scripts/run_strong_lensing_r1_screened.py` and its common finite-body
 GR2 control with `python scripts/run_strong_lensing_gr2_control.py`. See the
 [research review](docs/strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md)
-and [integration checkpoint](docs/STRONG_LENSING_BHSM_INTEGRATION_20261020.md)
+and [current acceptance records](artifacts/strong_lensing_acceptance_20261020/README.md)
 for the derivations, limitations and focused
-validation. This separate lensing work preserves the Universe manuscript.
+validation. Science checkpoint
+[`87503ae`](https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd)
+pins the new finite re-fit, profile/coefficient and distributed-encounter
+applications and eighteen focused tests. This separate lensing work
+preserves the Universe manuscript.
 
 The [source application](docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md)
 and [field continuation](docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md)
 state the original equations, computed flux/constraint residuals and precise
 remaining physical data: an action-owned embedding, material EOS/support,
 environmental state and outer Cauchy/matching prescription. No extra optical
-amplitude or selected microscopic lift is introduced.
+amplitude or selected microscopic lift is introduced. These detailed source
+and continuation records support the focused argument as supplementary
+derivations; they are not a new evolved physical solution. The earlier
+[integration checkpoint](docs/STRONG_LENSING_BHSM_INTEGRATION_20261020.md)
+retains its original science and PDF evidence.
 
 | Class | What the repository supports |
 |---|---|

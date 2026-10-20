@@ -1,0 +1,134 @@
+{
+  "review_type": "Independent AI-assisted researcher review; not external human peer review or an acceptance recommendation from a journal",
+  "status": "PASS_RETAINED_PHYSICS_AND_COHERENT_ARGUMENT",
+  "judgment": "The manuscript now presents one coherent scientific argument: a specified conditional envelope state and common light preparation determine a source and optical transfer; explicit conventional representations and finite refits identify the information retained by its observables. No concrete mathematical error was found in the reviewed source, coefficient, profile, finite-refit or finite-window encounter applications. This judgment concerns the stated effective benchmark, not completed microscopic BHSM closure, observational validation, or an external human peer review.",
+  "reviewed_claims": [
+    {
+      "claim": "Normalized source and original boundary application",
+      "result": "PASS",
+      "evidence": "J_eff=J_T-b_T(rho+rho_Sigma)/(2Mpl²), nonlinear radial flux and proper-radial shell jump preserve the reviewed signs and factors. The actual section/source values and residuals match source_application.json; a smooth material junction is not represented as a completed microscopic cap-to-T map."
+    },
+    {
+      "claim": "State coefficient derivatives",
+      "result": "PASS",
+      "evidence": "Fixed-M,lambda partials are 3/2+1/(2S) and -1/S. Their positive projection weights and the quoted three Tolman-image values agree with robustness.json. The manuscript explicitly requires the physical state-to-coefficient Jacobian and does not promote independent coefficient changes to globally matched R1 states."
+    },
+    {
+      "claim": "Matched smooth-profile control",
+      "result": "PASS",
+      "evidence": "Plummer density, enclosed mass, projected deflection and potential are mutually consistent. Matching total mass and 3D half-mass radius gives r_h=1.92941634649 kpc and a=1.47874508325 kpc. All eight table entries, image counts, cross-profile delay shifts, equivalence residuals and rank scopes agree with the saved robustness application."
+    },
+    {
+      "claim": "Finite nonlinear conventional refit",
+      "result": "PASS",
+      "evidence": "The physical sheet coefficient is kappa/(D_ol q); it produces the written kappa(theta-theta_c) lens row and the same arrival potential once. Five bounded axial coordinates fit five original observables without a free delay scale. The source of the injection remains fixed while fitted source/center coordinates are nuisance variables. Independent image roots are re-solved."
+    },
+    {
+      "claim": "Scope of inverse result",
+      "result": "PASS",
+      "evidence": "The saturated local fit, nonsingular numerical Jacobian and fixed-center remainder are described accurately. The result is not called global uniqueness, an observing likelihood or a detection. The positive effective-mass theorem remains the broader retained-field equivalence."
+    },
+    {
+      "claim": "Retained original R1 mathematics",
+      "result": "PASS_REUSED_EVIDENCE",
+      "evidence": "No conflicting sign, normalization or new identification of rolling T, target eta and metric coordinate was introduced. Detailed cap/complement and exact continuation material remains in the technical supplement instead of interrupting the central forward/inverse argument. Previously executed equation and numerical checks are reused."
+    },
+    {
+      "claim": "Finite-window distributed optical control",
+      "result": "PASS",
+      "evidence": "The closed-FLRW individual wavefront curvatures follow the fixed observer/lens/source boundary maps. The original action gives x_second+kappa*x=-2*Phi_x and the written Robin endpoint conditions. The 1/a_l clock factor, fixed lens-scaled physical source, stable radial potential differences and same-window plane comparison are consistent. The control distributes the retained frozen leading paraxial action and does not provide a complete higher-order scalar metric."
+    },
+    {
+      "claim": "Stationary finite optical response and tail bound",
+      "result": "PASS",
+      "evidence": "The exact on-shell derivative along Phi_eta=Phi_N+eta*deltaPhi is the explicit extra-potential integral on each stationary section. Scaling epsilon_infinity at fixed rV realizes that numerical optical interpolation, and division by eta recovers its derivative without changing the physical endpoint fields. Gauss orders 3/5 give the preferred 20-Mpc thickness changes -0.000619043479865411 s and +0.000001006405318193515 s. The raw ordinary-arrival subtraction differs by less than 7 ns. Isolated fixed-impact Born tail bounds 35.04/13.47 microseconds follow the unscreened 1/r^2 envelope and are correctly kept distinct from full-image, environmental or global errors."
+    },
+    {
+      "claim": "Rewritten final Discussion and Conclusions",
+      "result": "PASS",
+      "evidence": "The final sections now center the state-conditioned forward transfer, positive effective mass, finite five-coordinate refit and matched smooth-profile sensitivity. The complement/source proof and exact continuation support the scope boundary in the supplement rather than replace the main result."
+    },
+    {
+      "claim": "Final retained-action and numerical-presentation edits",
+      "result": "PASS",
+      "evidence": "Equation distributed-action is explicitly the retained paraxial arrival action. The table identifies direct arrival subtraction; text distinguishes refinement from cross-method cancellation and quotes preferred -0.61904348 ms and +1.00640532 microseconds. No full higher-order-metric accuracy or physical intermediate state is asserted."
+    },
+    {
+      "claim": "Proposed per-lens observational baseline and withheld-data prediction",
+      "result": "PASS_FUTURE_WORK_SCOPE",
+      "evidence": "The two added Discussion paragraphs propose joint archival imaging/monitoring likelihoods with mass, source, line-of-sight and calibration uncertainty retained, followed by predictions of withheld or subsequent observations before refitting. They do not substitute a previously model-conditioned cosmology posterior for raw light-data likelihoods, do not claim a current observed-lens application, retain conventional nonuniqueness, and require an appropriate spatial model and specified source law for an interface response. Millon et al. 2020 actually report 15-year COSMOGRAIL monitoring, 23 light curves, 18 measured systems and added observing seasons for two systems; this supports its use as an example of existing and subsequent-season light data."
+    }
+  ],
+  "concrete_integration_findings": [
+    {
+      "priority": "P2",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:976",
+      "status": "RESOLVED",
+      "finding": "The conclusions still summarize the earlier linearized-rank/source-complement checkpoint and omit the new finite nonlinear refit and smooth-profile result. Rewrite the ending around the current transfer-to-identifiability result; keep microscopic completion as a scoped final boundary rather than the final main milestone.",
+      "resolution": "Root rewrote Discussion and Conclusions around the state-to-transfer-to-identifiability argument, finite refit and profile control; reread and accepted."
+    },
+    {
+      "priority": "P1_REPRODUCIBILITY",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:dataavailability",
+      "status": "RESOLVED",
+      "finding": "The data-availability science pin 0a329 predates the newly added acceptance code/results. Replace it with the new science checkpoint before publication, while preserving earlier provenance pins.",
+      "resolution": "The bibliography research-record link and data-availability calculation archive now both pin immutable science commit 87503ae9d7672405e07b573fd140c784b8ce6cbd, which includes the new refit, profile/coefficient and encounter code/results/notes; prior 49a1dab provenance remains explicit."
+    },
+    {
+      "priority": "P2_NUMERICAL_PRESENTATION",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:tab:distributed-control",
+      "status": "RESOLVED",
+      "finding": "The table currently quotes the raw finite-arrival subtraction at 20 Mpc. The preferred stationary homotopy differs by less than 7 ns; distinguish the two applications or use rounded preferred final values, and do not equate raw refinement convergence below 0.3 ns with cancellation accuracy.",
+      "resolution": "The main-table caption now explicitly identifies direct arrival subtraction; the next paragraph separately gives preferred stationary-homotopy values, its numerical-only interpolation, and the less-than-7-ns cross-method difference. The less-than-0.3-ns figures are explicitly identified as refinement figures for the subtraction."
+    }
+  ],
+  "coherence_assessment": {
+    "main_argument": "state and common preparation -> action-owned source -> metric and projected light transfer -> finite observables -> what ordinary lens freedoms absorb",
+    "new_controls_role": "Plummer and one-input controls test profile sensitivity; coefficient partials state the transfer dependencies; the nonlinear fit tests finite absorption. They support the same question rather than introduce additional physical models as new discoveries.",
+    "remaining_editorial_risk": "Avoid allowing fine-grained replay history and the complement/source-provenance proof to dominate the conclusion. The main text already acknowledges that cubic screening, mass-sheet freedom and scalar effective-mass rewriting are established tools."
+  },
+  "genuine_scope_boundaries": [
+    "A normalized microscopic BHSM cap/interface-to-R1 embedding is not selected by these calculations.",
+    "The benchmark does not fit observed lenses or establish observational viability of the whole frozen background.",
+    "Leading scalar, idealized profile and thin-plane results are not a complete physical delay error budget.",
+    "The finite refit is deliberately saturated and local; the multiple-source residual is specific to the stated restricted profile family.",
+    "Full scalar stability, ultraviolet causality, nonlinear environment and evolved global state are not proved by the retained checks."
+  ],
+  "pending_accuracy_review": "Completed: final frozen code, runner, seven test definitions, derivation and saved receipt reviewed without rerunning them. Both raw-arrival subtraction and the added stationary homotopy were inspected.",
+  "tests_or_numerical_commands_repeated": false,
+  "reviewed_sha256": {
+    "manuscript/strong_lensing_main.tex": "6bb8b7f7f0b73bb584c090871fac8eb799937459d783e7568475e6991bc319ab",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "f56c46e1f4aa60ce491bed54a4c6bf98ef6de0e43fd49f347f40d3572f48f67b",
+    "manuscript/sections/strong_lensing_technical_supplement_20261020.tex": "053b77c3c9fd33c965b84c660d1bedfbb8f8bc38023e72e805816c3c7214084a",
+    "code/strong_lensing_refit.py": "ab779c993d82f0a5b8be28c774bfd682601b4d87062d90905f2bb7eaf3313b33",
+    "docs/strong_lensing_r1_screened_20261020/NONLINEAR_LENS_REFIT_20261020.md": "eb782c21130614d929f02f4aa5dd9464085c34c329bca8e75c3f240edaf90d0a",
+    "artifacts/strong_lensing_acceptance_20261020/nonlinear_refit.json": "041044e932fd2c0b89fa3523fd8d8cd7cd9abd60d69ecc3672c65c3ee07e8690",
+    "artifacts/strong_lensing_acceptance_20261020/nonlinear_refit_review.json": "315206c5edeefdf25836d7155a810f12c66fff4eaec0fab05d009785e84540bb",
+    "code/strong_lensing_robustness.py": "38c988b4bf3752c91b3b9bf4d414bbe4c125b5ca2188acd62c4178c574b5a4d0",
+    "docs/strong_lensing_r1_screened_20261020/LENS_MODEL_ROBUSTNESS_20261020.md": "e287d6054ef584e5a2805d5d3641711a78e5c3bc77946d26f0bd95fd8c3e747a",
+    "artifacts/strong_lensing_acceptance_20261020/robustness.json": "a7489d1d3c092859f60766b553c6d40781fa54e40864eab7e68515f2c130171d",
+    "code/strong_lensing_encounter_accuracy.py": "2697ae7a1643319eb16b960279013dea44042607759186fe63ecc8b2cb273e1f",
+    "scripts/run_strong_lensing_encounter_accuracy.py": "3ab522b95c8cd09a8b39add3cf455d46184e1449f8329f868712f476ee780b6e",
+    "tests/test_strong_lensing_encounter_accuracy.py": "b22a95b81cd19434510e2d55eb4a369a8102ed1e392c890c04c704b6aa2b6fdd",
+    "docs/strong_lensing_r1_screened_20261020/ENCOUNTER_ACCURACY_CONTROL_20261020.md": "f9fcd04b3d10a2e4a554139195e633a350bae95f2d813da711167c9905800f74",
+    "artifacts/strong_lensing_acceptance_20261020/encounter_accuracy.json": "af8d49609c0ceea854d97efdd36c66b082a42a9c7e2eecddc47539fbdef39093"
+  },
+  "test_evidence_reused": {
+    "refit_tests": 4,
+    "profile_and_coefficient_tests": 7,
+    "encounter_tests": 7,
+    "new_test_runs_by_reviewer": 0,
+    "qualification": "Saved focused execution evidence is reused; reviewing equations and test definitions is not another numerical execution."
+  },
+  "physical_admission": false,
+  "observational_extension_primary_source": {
+    "title": "COSMOGRAIL XIX: Time delays in 18 strongly lensed quasars from 15 years of optical monitoring",
+    "authors": "Millon et al.",
+    "year": 2020,
+    "doi": "10.1051/0004-6361/202037740",
+    "primary_preprint_url": "https://arxiv.org/abs/2002.05736",
+    "review_method": "Checked primary arXiv abstract; publisher HTML returned HTTP403. No data analysis or numerical calculation executed."
+  },
+  "final_integration_review": "All reported integration items resolved. Current retained-action wording, raw/preferred numerical provenance, observational-baseline paragraphs, revised conclusions, bibliography and data-availability archive pin reviewed and accepted. No unresolved concrete error was found in the stated retained benchmark. Genuine physical scope boundaries remain explicit and are not converted to claims of completed microscopic closure or observational validation.",
+  "science_archive_commit": "87503ae9d7672405e07b573fd140c784b8ce6cbd"
+}

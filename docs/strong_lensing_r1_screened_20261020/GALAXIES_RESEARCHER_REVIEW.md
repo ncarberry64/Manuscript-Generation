@@ -1,5 +1,13 @@
 # Researcher Review and Corrections for Galaxies
 
+> This report records the earlier package/integration review. Its concrete
+> science pin and 18-page PDF inspection below apply to that snapshot. The
+> [acceptance checkpoint](../STRONG_LENSING_ACCEPTANCE_20261020.md) and
+> [current researcher receipt](../../artifacts/strong_lensing_acceptance_20261020/researcher_review.json)
+> review the subsequent transfer/inference revision, finite nonlinear re-fit,
+> matched smooth-profile and distributed-encounter controls. Earlier
+> validation is reused within its scope; it is not reattributed to a later PDF.
+
 ## Review decision
 
 The manuscript is a **BHSM strong-lensing paper** for **Galaxies**, associated with **“Strong Gravitational Lens Modeling.”** Its working title is **Strong-Lensing Time Delays in the Berger–Hopf Framework: An R1 Effective Calculation**. It asks: **How do BHSM surface contributions determine gravitational lensing and time delays for light traversing an envelope event?** This is an internal, AI-assisted research review and an author-review revision. It is not a journal referee report, an acceptance decision, or a claim that independent human peer review has occurred.

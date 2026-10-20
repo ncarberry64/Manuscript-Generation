@@ -4,6 +4,11 @@ The governing question is: **How do BHSM surface contributions determine gravita
 
 ## Current scientific scope
 
+The [acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md) is the
+current reader entry point for executed forward/inverse, profile/coefficient
+and distributed-encounter applications. Earlier integration and PDF receipts
+retain their own snapshots.
+
 Working title: **Strong-Lensing Time Delays in the Berger–Hopf Framework: An R1 Effective Calculation**.
 
 The active order is envelope state and environmental preparation; action, normalization, source response and boundary conditions; resulting metric or optical response; image directions and observer arrival-time differences; then the conventional gravitational representation and consistency checks. Earlier invitation and checkpoint wording is historical and superseded by this scope. The separate Universe cosmology manuscript retains its own journal context.
@@ -82,7 +87,35 @@ An independent unrestricted mass-sheet scale per lens absorbs a common rescaling
 
 The familiar inverse Hubble-constant delay scaling assumes fixed dimensionless background and reduced angular galaxy/source conventions. It does not automatically apply to a variation holding the physical transverse source position fixed.
 
+For a future observed-lens application, archival light data can establish a
+baseline by jointly calibrating the conventional benchmark and conditional
+BHSM response, with explicit nuisance freedoms, independent constraints and
+priors. Freeze the parameters, uncertainty model and prediction protocol
+before testing held-out observations or new monitoring. Those observations
+can refine an optical response map for each envelope. The current study uses
+synthetic observations and does not execute that calibration or validation.
+A per-envelope optical map is conditional on the admitted model and need not
+select a unique microscopic state; the retained equivalence and finite re-fit
+make that limitation explicit.
+
 The screened calculation's rank results apply to the stated finite-profile template and nuisance columns. A surviving column under restricted profiles does not identify a unique theory: the positive effective-mass representation reproduces the complete retained leading response. Numerical covariance choices are weights for these design calculations, not measured image or delay precision.
+
+The finite nonlinear conventional re-fit is a saturated local axial example:
+five admitted coordinates fit three image and two delay rows, followed by an
+independent root solve on the same canonical optical kernel. Its numerical
+residual is not an observing uncertainty or a global degeneracy theorem.
+The matched Plummer and one-input profile controls are sensitivities, not a
+galaxy fit or posterior. Fixed-body/impact coefficient partials must be
+composed with an action-owned physical state-to-coefficient Jacobian before
+they become physical envelope-state derivatives.
+
+The distributed-encounter calculation retains the same leading weak-field
+paraxial action, source and observer clock, with each exterior wavefront
+derived from its own closed-FLRW endpoint data. Its finite-window path result
+and isolated fixed-impact Born-tail bounds have that domain only. They do
+not supply a complete scalar higher-order, environment or matching error
+budget. These provisional applications do not change the `2e-10` physical
+guard or constitute physical admission.
 
 ## Reproducibility and source continuity
 

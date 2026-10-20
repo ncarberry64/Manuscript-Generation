@@ -1,0 +1,207 @@
+{
+  "schema": "bhsm-lensing-acceptance-publication-audit-v1",
+  "status": "PASS",
+  "reviewed_at_utc": "2026-10-20T18:29:18.934364+00:00",
+  "science_commit": "87503ae9d7672405e07b573fd140c784b8ce6cbd",
+  "historical_science_commit": "0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd",
+  "baseline_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+  "journal": "Galaxies",
+  "special_issue": "Strong Gravitational Lens Modeling",
+  "central_argument": "specified state and common light preparation -> normalized source -> optical transfer -> images/delays -> conditional identifiability against conventional lens freedoms",
+  "new_applications": [
+    "finite five-coordinate conventional refit",
+    "eight matched-profile/input controls and state-coefficient derivatives",
+    "distributed retained-paraxial ray/action boundary problem and stationary finite optical response"
+  ],
+  "observational_extension": {
+    "executed": false,
+    "scope": "Archive-based joint conventional/conditional-BHSM baseline, freeze model/priors, held-out/new-data prediction test, then conditional per-lens optical map. No observed lens fitted or unique microscopic state inferred."
+  },
+  "source_and_numeric_preservation": {
+    "original_displayed_blocks": 32,
+    "original_blocks_missing_or_changed": 0,
+    "original_numeric_literals_missing": [],
+    "retained_effective_equations_changed": false,
+    "duplicate_labels": [],
+    "undefined_local_references": []
+  },
+  "original_package_archive_sha256": "5a66dae72f678baf7d5ef5a03919a8670e79edd91db03092b71ce80881458256",
+  "official_MDPI_asset_checks": {
+    "manuscript/Definitions/journalnames.tex": true,
+    "manuscript/Definitions/logo-mdpi-eps-converted-to.pdf": true,
+    "manuscript/Definitions/logo-mdpi.eps": true,
+    "manuscript/Definitions/logo-orcid.pdf": true,
+    "manuscript/Definitions/logo-updates-eps-converted-to.pdf": true,
+    "manuscript/Definitions/logo-updates.eps": true,
+    "manuscript/Definitions/mdpi.bst": true,
+    "manuscript/Definitions/mdpi.cls": true,
+    "manuscript/Definitions/mdpi_apacite.bst": true,
+    "manuscript/Definitions/mdpi_apacite.sty": true,
+    "manuscript/Definitions/mdpi_chicago.bst": true,
+    "manuscript/Definitions/unicode.tex": true
+  },
+  "original_numerical_and_figure_checks": {
+    "artifacts/strong_lensing_r1_screened_20261020/gr2_control.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/results.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/common_gr_composition_review_results.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/gr_optical_control_results.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/multisource_crossratio_results.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/portability_replay.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/r1_qs_coefficients.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/screened_projection_check_results.json": true,
+    "artifacts/strong_lensing_r1_screened_20261020/review/shared_lens_rank_results.json": true,
+    "manuscript/figures/r1_screening_prediction.pdf": true,
+    "manuscript/figures/r1_screening_prediction.png": true,
+    "manuscript/figures/r1_screening_prediction.svg": true
+  },
+  "original_numerical_modules_unchanged": {
+    "code/strong_lensing_r1_screened.py": true,
+    "code/strong_lensing_gr2.py": true
+  },
+  "baseline_preservation": {
+    "artifacts/strong_lensing_first_comparison_20261020/response_arrays.npz": {
+      "base_blob": "c467fe8f501cb7e9a01df00dde448795b483bfec",
+      "current_blob": "c467fe8f501cb7e9a01df00dde448795b483bfec",
+      "unchanged": true
+    },
+    "artifacts/strong_lensing_first_comparison_20261020/results.json": {
+      "base_blob": "994535459ce69f70e3318d0a907af131a7d58341",
+      "current_blob": "994535459ce69f70e3318d0a907af131a7d58341",
+      "unchanged": true
+    },
+    "artifacts/strong_lensing_local_family_20261020/profiles.npz": {
+      "base_blob": "27999839c3f0da878d3e542519da53a5b23ac292",
+      "current_blob": "27999839c3f0da878d3e542519da53a5b23ac292",
+      "unchanged": true
+    },
+    "artifacts/strong_lensing_local_family_20261020/results.json": {
+      "base_blob": "ee54424fccbed89f08878284fe0be8cc8b6c9f78",
+      "current_blob": "ee54424fccbed89f08878284fe0be8cc8b6c9f78",
+      "unchanged": true
+    },
+    "code/strong_lensing_comparison.py": {
+      "base_blob": "39cf10de8b72347da3a7e0556cb22666a1214123",
+      "current_blob": "39cf10de8b72347da3a7e0556cb22666a1214123",
+      "unchanged": true
+    },
+    "code/strong_lensing_local_family.py": {
+      "base_blob": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+      "current_blob": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+      "unchanged": true
+    },
+    "code/strong_lensing_local_hessian.py": {
+      "base_blob": "9a99ccbc67bfbd49b521ee1139fafd3e341abddd",
+      "current_blob": "9a99ccbc67bfbd49b521ee1139fafd3e341abddd",
+      "unchanged": true
+    },
+    "code/strong_lensing_transport.py": {
+      "base_blob": "8a7fb04614a4b7cc0065caacc79c2ef7c0ce098f",
+      "current_blob": "8a7fb04614a4b7cc0065caacc79c2ef7c0ce098f",
+      "unchanged": true
+    },
+    "manuscript/main.tex": {
+      "base_blob": "e3bec26b0471304464d058bd53f29875d3a7e044",
+      "current_blob": "e3bec26b0471304464d058bd53f29875d3a7e044",
+      "unchanged": true
+    },
+    "manuscript/references.bib": {
+      "base_blob": "4e7e9cd9ce68a7effb1c21f4f4fefb63a628c479",
+      "current_blob": "4e7e9cd9ce68a7effb1c21f4f4fefb63a628c479",
+      "unchanged": true
+    }
+  },
+  "new_receipt_source_hash_checks": {
+    "nonlinear_refit.json": {
+      "status": "PASS",
+      "recorded_source_hash_checks": {
+        "artifacts/strong_lensing_r1_screened_20261020/results.json": true,
+        "artifacts/strong_lensing_first_comparison_20261020/results.json": true,
+        "code/strong_lensing_refit.py": true,
+        "scripts/run_strong_lensing_refit.py": true
+      },
+      "all_recorded_existing_sources_match": true
+    },
+    "robustness.json": {
+      "status": "BOUNDED_PROFILE_ROBUSTNESS_STUDY_EXECUTED",
+      "recorded_source_hash_checks": {
+        "artifacts/strong_lensing_first_comparison_20261020/results.json": true,
+        "artifacts/strong_lensing_r1_screened_20261020/results.json": true,
+        "code/strong_lensing_robustness.py": true,
+        "scripts/run_strong_lensing_robustness.py": true,
+        "code/strong_lensing_r1_screened.py": true,
+        "code/strong_lensing_local_family.py": true,
+        "code/strong_lensing_comparison.py": true
+      },
+      "all_recorded_existing_sources_match": true
+    },
+    "encounter_accuracy.json": {
+      "status": "COMPUTED_CONDITIONAL_THICKNESS_AND_PATH_CONTROL_OF_RETAINED_OPTICAL_ACTION",
+      "recorded_source_hash_checks": {
+        "code/strong_lensing_encounter_accuracy.py": true,
+        "scripts/run_strong_lensing_encounter_accuracy.py": true,
+        "tests/test_strong_lensing_encounter_accuracy.py": true,
+        "docs/strong_lensing_r1_screened_20261020/ENCOUNTER_ACCURACY_CONTROL_20261020.md": true
+      },
+      "all_recorded_existing_sources_match": true
+    }
+  },
+  "validation": {
+    "new_refit_tests_passed": 4,
+    "new_profile_coefficient_tests_passed": 7,
+    "new_encounter_tests_passed": 7,
+    "previous_source_tests_passed": 7,
+    "previous_exact_symbolic_identities": 12,
+    "previous_nine_command_replay_numeric_values_compared": 1161,
+    "previous_focused_checks_passed": 16,
+    "unchanged_baseline_test_evidence_reused": 75,
+    "publication_audit_repeated_old_numerical_solves": false,
+    "focused_CI_test_set": 25
+  },
+  "PDF_audit": {
+    "pages": 19,
+    "bytes": 361639,
+    "sha256": "d0ad684149c931e515731324d8771e0ff77b844fa7e8dfb8bec1dbcfc4a99051",
+    "warnings": {
+      "overfull": [],
+      "underfull": [],
+      "undefined_reference_or_citation": [],
+      "duplicate_destination": []
+    },
+    "all_pages_rendered_and_contact_sheet_inspected": true,
+    "full_pages_inspected": [
+      1,
+      5,
+      6,
+      11,
+      12,
+      14,
+      16,
+      17,
+      19
+    ],
+    "inspection_result": "PASS: no clipping, overlap, broken tables or stray pages; new equations/tables, empirical workflow, contact/declarations and references readable.",
+    "author_email_visible": true,
+    "ORCID_link_verified": true,
+    "immutable_calculation_link_verified": true,
+    "metadata_unicode_replacement_characters": 0
+  },
+  "remaining_physical_defining_data": "Action-owned cap/interface embedding and source pullback to canonical T and its cubic vertex, complement length/spectrum; material EOS/support and constrained environmental/outer Cauchy matching for evolved continuation. Nonuniqueness is proved with explicit positive same-domain lifts; no missing input is supplied by a vacuum or adjustable lensing amplitude.",
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "guard_or_calibration_or_statistical_closure_changed": false,
+  "author_declarations": "All directly confirmed author facts included; no author-only factual declaration remains unconfirmed.",
+  "journal_submission_or_cover_transmission_or_PR_merge_performed": false,
+  "focused_publication_checks": "Final source/application and actual MDPI build workflow scheduled on publication head; results recorded separately after push.",
+  "files_sha256": {
+    "manuscript/strong_lensing_main.tex": "6bb8b7f7f0b73bb584c090871fac8eb799937459d783e7568475e6991bc319ab",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "f56c46e1f4aa60ce491bed54a4c6bf98ef6de0e43fd49f347f40d3572f48f67b",
+    "manuscript/strong_lensing_main.pdf": "d0ad684149c931e515731324d8771e0ff77b844fa7e8dfb8bec1dbcfc4a99051",
+    "artifacts/strong_lensing_acceptance_20261020/pdf_contact_sheet.png": "43f45b1ee8adf4b2d48e3492de56f3be5bc0e4a9243878a7937f2b3e838541e6",
+    ".github/workflows/strong-lensing-manuscript.yml": "cbc17aced3470b0c883d7a1fac2e4da6ea1ca33366f6be012dd16dfab0237ad7",
+    "artifacts/strong_lensing_acceptance_20261020/encounter_accuracy.json": "af8d49609c0ceea854d97efdd36c66b082a42a9c7e2eecddc47539fbdef39093",
+    "artifacts/strong_lensing_acceptance_20261020/nonlinear_refit.json": "041044e932fd2c0b89fa3523fd8d8cd7cd9abd60d69ecc3672c65c3ee07e8690",
+    "artifacts/strong_lensing_acceptance_20261020/nonlinear_refit_review.json": "315206c5edeefdf25836d7155a810f12c66fff4eaec0fab05d009785e84540bb",
+    "artifacts/strong_lensing_acceptance_20261020/researcher_review.json": "13402628beae83873e427e1d65a85615dd4e8dd2539794a087cc0a60f958448f",
+    "artifacts/strong_lensing_acceptance_20261020/robustness.json": "a7489d1d3c092859f60766b553c6d40781fa54e40864eab7e68515f2c130171d"
+  }
+}

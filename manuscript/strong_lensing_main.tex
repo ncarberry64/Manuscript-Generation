@@ -20,7 +20,7 @@
 \AuthorNames{Norman P. Carberry}
 \address[1]{Independent Researcher, Oconomowoc, Wisconsin, USA;\\
 Correspondence: \href{mailto:carberry8878130@hotmail.com}{carberry8878130@hotmail.com}}
-\abstract{In the Berger--Hopf framework, gravitational lensing is the incoming-to-outgoing transfer of environmental light through an envelope event. We investigate how its surface contributions can be represented in a conditional R1 effective calculation, keeping the microscopic common-source derivation distinct from the response already computed. A fixed closed background and cubic scalar--tensor action determine a regular finite-body metric response without a fitted local amplitude. Common incident light, measured redshifts, source coordinates and observer clocks define image directions and relative arrival times. For a \texorpdfstring{$10^{11}M_\odot$}{100 billion solar masses}, 3 kpc body at redshift 0.3 and a source at redshift 1, the screening radius is 212.0292 kpc. Relative to the specified fixed-body reference, the leading delay offsets are 25.9593 s and 8.6490 s. A positive conventional effective-mass profile reproduces the complete retained metric and optical response: the matched representations agree. A common finite-body general-relativistic second-order control changes the reference-relative offsets by less than 0.1 ms. Nuisance calculations identify interchangeable source and profile contributions. Explicit source applications and continuation equations advance the BHSM transfer calculation. Positive complement constructions show why microscopic matching needs additional physical data; material and outer-state prescriptions are required for further evolution.}
+\abstract{In the Berger--Hopf interpretation, the optical transfer of prepared environmental light depends on the envelope state. We construct a reproducible strong-lensing benchmark from a specified R1 cubic scalar--tensor action and ask which properties of that transfer ordinary lens models can identify. A common incident marker, physical source, observer clock, redshifts and distance maps define the comparison. The regular source determines the scalar and metric response without a fitted local amplitude. For the declared \texorpdfstring{$10^{11}M_\odot$}{100 billion solar masses}, 3 kpc body, its screening radius is 212.0292 kpc and its fixed-body-reference delay offsets are 25.9593 s and 8.6490 s. A positive conventional effective mass reproduces the complete retained response. A finite five-parameter conventional refit also reproduces the three injected images and two delays to numerical precision. A smooth profile matched by mass and half-mass radius changes the offsets while preserving this equivalence. State-coefficient derivatives and common-gravity and distributed-encounter controls quantify the transfer's dependencies and approximation hierarchy. The result is a conditional forward and inverse benchmark, with a microscopic BHSM source embedding and evolved outer state identified separately.}
 \keyword{Berger--Hopf framework; strong gravitational lensing; time delays; envelope response; Vainshtein screening; effective-mass representation}
 \begin{document}
 % This is an author-review artifact, not a record of a journal submission.
@@ -37,29 +37,19 @@ Correspondence: \href{mailto:carberry8878130@hotmail.com}{carberry8878130@hotmai
 \input{sections/strong_lensing_galaxies_20261020}
 \reftitle{References}
 \begin{thebibliography}{99}
+\bibitem{CarberryRepository}
+Carberry, N.P. Manuscript-Generation: R1 reference background, optical
+transport and local-lens calculations. Research software and calculation
+record, revision \texttt{87503ae9d767}, preserving reference inputs from
+\texttt{49a1dab}, 2026.
+Available online:
+\url{https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd}
+(accessed on 20 October 2026). This source is an unreviewed research record.
 \bibitem{Fleury2021arbitrary}
 Fleury, P.; Larena, J.; Uzan, J.-P.
 Gravitational lenses in arbitrary space-times.
 \emph{Class. Quantum Grav.} \textbf{2021}, \emph{38}, 085002.
 \href{https://doi.org/10.1088/1361-6382/abea2d}{https://doi.org/10.1088/1361-6382/abea2d}.
-\bibitem{Fleury2021los}
-Fleury, P.; Larena, J.; Uzan, J.-P.
-Line-of-sight effects in strong gravitational lensing.
-\emph{J. Cosmol. Astropart. Phys.} \textbf{2021}, \emph{08}, 024.
-\href{https://doi.org/10.1088/1475-7516/2021/08/024}{https://doi.org/10.1088/1475-7516/2021/08/024}.
-\bibitem{Teodori2022}
-Teodori, L.; Blum, K.; Castorina, E.; Simonovi\'c, M.; Soreq, Y.
-Comments on the mass sheet degeneracy in cosmography analyses.
-\emph{J. Cosmol. Astropart. Phys.} \textbf{2022}, \emph{07}, 027.
-\href{https://doi.org/10.1088/1475-7516/2022/07/027}{https://doi.org/10.1088/1475-7516/2022/07/027}.
-\bibitem{CarberryRepository}
-Carberry, N.P. Manuscript-Generation: R1 reference background, optical
-transport and local-lens calculations. Research software and calculation
-record, revision \texttt{0a329fa13f6c}, preserving reference inputs from
-\texttt{49a1dab}, 2026.
-Available online:
-\url{https://github.com/ncarberry64/Manuscript-Generation/tree/0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd}
-(accessed on 20 October 2026). This source is an unreviewed research record.
 \bibitem{Deffayet2010}
 Deffayet, C.; Pujol\`as, O.; Sawicki, I.; Vikman, A.
 Imperfect dark energy from kinetic gravity braiding.
@@ -75,14 +65,52 @@ Barreira, A.; Li, B.; Jennings, E.; Merten, J.; King, L.; Baugh, C.M.; Pascoli, 
 Galaxy cluster lensing masses in modified lensing potentials.
 \emph{Mon. Not. R. Astron. Soc.} \textbf{2015}, \emph{454}, 4085--4102.
 \href{https://doi.org/10.1093/mnras/stv2211}{https://doi.org/10.1093/mnras/stv2211}.
+\bibitem{SchneiderSluse2013}
+Schneider, P.; Sluse, D.
+Mass-sheet degeneracy, power-law models and external convergence:
+Impact on the determination of the Hubble constant from gravitational lensing.
+\emph{Astron. Astrophys.} \textbf{2013}, \emph{559}, A37.
+\href{https://doi.org/10.1051/0004-6361/201321882}{https://doi.org/10.1051/0004-6361/201321882}.
+\bibitem{Fleury2021los}
+Fleury, P.; Larena, J.; Uzan, J.-P.
+Line-of-sight effects in strong gravitational lensing.
+\emph{J. Cosmol. Astropart. Phys.} \textbf{2021}, \emph{08}, 024.
+\href{https://doi.org/10.1088/1475-7516/2021/08/024}{https://doi.org/10.1088/1475-7516/2021/08/024}.
+\bibitem{Teodori2022}
+Teodori, L.; Blum, K.; Castorina, E.; Simonovi\'c, M.; Soreq, Y.
+Comments on the mass sheet degeneracy in cosmography analyses.
+\emph{J. Cosmol. Astropart. Phys.} \textbf{2022}, \emph{07}, 027.
+\href{https://doi.org/10.1088/1475-7516/2022/07/027}{https://doi.org/10.1088/1475-7516/2022/07/027}.
+\bibitem{Saha2024}
+Saha, P.; Sluse, D.; Wagner, J.; Williams, L.L.R.
+Essentials of Strong Gravitational Lensing.
+\emph{Space Sci. Rev.} \textbf{2024}, \emph{220}, 12.
+\href{https://doi.org/10.1007/s11214-024-01041-w}{https://doi.org/10.1007/s11214-024-01041-w}.
+\bibitem{Schechter2026}
+Schechter, P.L.
+A Forward, Analytic, Differentiable, Geometric (but Inflexible) Lens Model.
+\emph{Galaxies} \textbf{2026}, \emph{14}, 20.
+\href{https://doi.org/10.3390/galaxies14020020}{https://doi.org/10.3390/galaxies14020020}.
 \bibitem{Tolman1939}
 Tolman, R.C. Static solutions of Einstein's field equations for spheres of fluid.
 \emph{Phys. Rev.} \textbf{1939}, \emph{55}, 364--373.
 \href{https://doi.org/10.1103/PhysRev.55.364}{https://doi.org/10.1103/PhysRev.55.364}.
+\bibitem{Plummer1911}
+Plummer, H.C.
+On the Problem of Distribution in Globular Star Clusters: (Plate 8.).
+\emph{Mon. Not. R. Astron. Soc.} \textbf{1911}, \emph{71}, 460--470.
+\href{https://doi.org/10.1093/mnras/71.5.460}{https://doi.org/10.1093/mnras/71.5.460}.
 \bibitem{IyerPetters2007}
 Iyer, S.V.; Petters, A.O. Light's bending angle due to black holes:
 From the photon sphere to infinity.
 \emph{Gen. Relativ. Gravit.} \textbf{2007}, \emph{39}, 1563--1582.
 \href{https://doi.org/10.1007/s10714-007-0481-8}{https://doi.org/10.1007/s10714-007-0481-8}.
+\bibitem{Millon2020COSMOGRAIL}
+Millon, M.; Courbin, F.; Bonvin, V.; Paic, E.; Meylan, G.; Tewes, M.;
+Sluse, D.; Magain, P.; Chan, J.H.H.; Galan, A.; et al.
+COSMOGRAIL XIX. Time delays in 18 strongly lensed quasars from 15 years
+of optical monitoring.
+\emph{Astron. Astrophys.} \textbf{2020}, \emph{640}, A105.
+\href{https://doi.org/10.1051/0004-6361/202037740}{https://doi.org/10.1051/0004-6361/202037740}.
 \end{thebibliography}
 \end{document}
