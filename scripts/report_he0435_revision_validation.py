@@ -82,7 +82,7 @@ def plot_predictions(scores,design):
         time=design['time_days'][selected]-58000.
         ax.errorbar(time,design['magnitude'][selected],yerr=design['error_mag'][selected],
                     fmt='o',ms=3.,color='black',ecolor='.45',elinewidth=.6,
-                    alpha=.8,label='Unused LCO R observations',zorder=4)
+                    alpha=.8,label='Unused LCO R catalogue values',zorder=4)
         for model,color,style,name in (
             ('revised_conventional_macro','#2468a0','-','Conventional'),
             ('revised_conditional_R1_macro','#ce6c18','--','Conditional R1')):
@@ -128,8 +128,9 @@ def build_section(scores,conventional,r1,selection):
     nconv=conventional['global_image_census']['image_count']
     nr1=r1['global_image_census']['image_count']
     covered=int(round(convs['coverage_95']*convs['count']))
+    zero=primary['zero_delay_control']['overall']
     lines=[
-        r'\subsection{Revised source and frozen predictions on unused observations}',
+        r'\subsection{Revised source and frozen diagnostics on unused catalogue values}',
         r'\label{sec:he0435-revised-results}',
         rf'The development selection retains candidate {selection["selected_candidate_index"]} with a regular compact matter component of {scientific(mass)}\,$M_\odot$ and scale {r1["compact_scale_kpc"]:.3g}\,kpc.',
         rf'The conventional and conditional R1 applications have {nconv} and {nr1} verified stationary images, respectively; all additional images enter the summed central-light constraint.',
@@ -147,14 +148,15 @@ def build_section(scores,conventional,r1,selection):
         r'Table~\ref{tab:he0435-revised-primary} reports the normalized joint conditional density and marginal predictive diagnostics. The joint log density is a density in the declared magnitude units; epochs are correlated, and its value is not a chi-square significance or an independent-event count.',
         r'\begin{table}[t]',
         r'\caption{Frozen revised models on unused LCO R A/B/D observations, with image C as the allowed driver. Coverage is the empirical fraction within marginal 95\% mixture intervals; width and the proper 95\% interval score are in magnitudes. Larger joint log density and smaller interval score are preferred.}\label{tab:he0435-revised-primary}',
-        r'\centering\small',
+        r'\centering\footnotesize',
         r'\begin{tabular}{lrrrrr}\toprule',
-        r'Model & Joint $\log p$ & RMSE & Coverage (\%) & Width & Interval score\\\midrule',
+        r'Model & Joint $\log p$ & RMSE & \shortstack{95\%\\coverage} & Width & \shortstack{95\%\\interval score}\\\midrule',
     ]
     for model in MODEL_ORDER:
         result=primary[model];s=result['overall']
         lines.append(f'{LABELS[model]} & {result["joint_conditional_log_density"]:.3f} & {s["rmse_mag"]:.4f} & {100*s["coverage_95"]:.2f} & {s["mean_95_interval_width_mag"]:.4f} & {s["mean_95_interval_score_mag"]:.4f}'+r'\\')
     lines += [r'\bottomrule\end{tabular}',r'\end{table}',r'',
+        rf'The old undercoverage is not reproduced in this unused-catalogue batch, but the revised uncertainty is conservative rather than sharply calibrated: nominal 68.27\% intervals contain {100*convs["coverage_68_27"]:.2f}\% of primary targets, and image B has mean 95\% width {conv["by_image"]["1"]["mean_95_interval_width_mag"]:.4f}\,mag. The no-driver secondary forecast retains mean signed residual {secs["mean_residual_mag"]:+.4f}\,mag. Moreover, the zero-delay control has mean 95\% interval score {zero["mean_95_interval_score_mag"]:.4f}\,mag, compared with {convs["mean_95_interval_score_mag"]:.4f}\,mag for conventional, while conventional has the larger joint log density. Coverage, width, bias and the different proper scores must therefore be considered together; no uniformly superior model or precise delay recovery is established by this batch.',
         rf'The conventional intervals contain {covered} of {convs["count"]} primary targets ({100*convs["coverage_95"]:.2f}\%). The conditional R1-minus-conventional joint log-score difference is {scientific(delta)}; this is a finite-model predictive comparison, not a Bayes factor from a completed physical-state posterior.',
         rf'The fixed-body R1 activation has a primary log-score difference of {scientific(fixed_delta)} relative to conventional, with the same optical nuisance parameters. It isolates the original scalar response; the separately refitted R1 comparison also includes development nuisance and optimizer movement and cannot be attributed entirely to that activation.',
         r'The matched conventional effective-mass representation has the same retained optical transfer as conditional R1 and therefore the same score by construction; it is not an independent confirmation.',
@@ -173,7 +175,7 @@ def build_section(scores,conventional,r1,selection):
         r'\centering\includegraphics[width=\textwidth]{figures/he0435_revision_unused_prediction.pdf}',
         r'\caption{Unused LCO R observations and the frozen C-driven conventional and conditional R1 predictions. Shading shows marginal 95\% mixture intervals, including the development-only image calibration. The curves and bands can nearly coincide. Straight segments join predictions only at observed epochs and are not an additional fitted variability curve.}\label{fig:he0435-revised-unused}',
         r'\end{figure}',r'',
-        r'The experiment tests a fixed, calibrated finite nuisance ensemble. Its short chains have maximum basic $\widehat R=5.19$, so the mixture is not a demonstrated converged posterior and supplies no complete physical-state marginalization. The independent LCO exposures share a retrospectively constructed difference-imaging reference; common reduction errors and prior qualitative publication awareness limit blinding. The central-image HST result is conditional on the empirical PSFs, adopted marginal noise and macro-to-observed flux relation. These qualifications, and any remaining undercoverage in the actual test, remain part of the result. Neither the statistical ensemble nor a close conventional/R1 score establishes a unique envelope state or a BHSM detection; the physical guard remains $2\times10^{-10}$ and no physical admission is asserted.',
+        r'The experiment tests a fixed, calibrated finite nuisance ensemble. Its short chains have maximum basic $\widehat R=5.19$, so the mixture is not a demonstrated converged posterior and supplies no complete physical-state marginalization. These LCO catalogue values were unused in model selection and arise from a separate monitoring campaign. Their retrospective difference-imaging reference includes 2022 data, however, so photon-disjoint calibration and validation are not established. Common reduction errors and prior qualitative publication awareness limit blinding. The central-image HST result is conditional on the empirical PSFs, adopted marginal noise and macro-to-observed flux relation. These qualifications, and any remaining undercoverage in the actual test, remain part of the result. Neither the statistical ensemble nor a close conventional/R1 score establishes a unique envelope state or a BHSM detection; the physical guard remains $2\times10^{-10}$ and no physical admission is asserted.',
         '',
     ]
     return '\n'.join(lines),row

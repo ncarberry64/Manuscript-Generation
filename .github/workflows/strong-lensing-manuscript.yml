@@ -14,6 +14,8 @@ on:
       - "tests/test_strong_lensing_observed_*.py"
       - "tests/test_strong_lensing_*revision.py"
       - "tests/test_strong_lensing_hst_central.py"
+      - "tests/test_strong_lensing_gaia_validation.py"
+      - "tests/test_strong_lensing_gaia_runner.py"
       - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
       - "data/strong_lensing_revision_20261020/**"
@@ -35,6 +37,8 @@ on:
       - "tests/test_strong_lensing_observed_*.py"
       - "tests/test_strong_lensing_*revision.py"
       - "tests/test_strong_lensing_hst_central.py"
+      - "tests/test_strong_lensing_gaia_validation.py"
+      - "tests/test_strong_lensing_gaia_runner.py"
       - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
       - "data/strong_lensing_revision_20261020/**"
@@ -79,8 +83,10 @@ jobs:
           tests/test_strong_lensing_lightcurve_revision.py
           tests/test_strong_lensing_macro_revision.py
           tests/test_strong_lensing_hst_central.py
+          tests/test_strong_lensing_gaia_validation.py
           tests/test_he0435_unused_metadata.py
           tests/test_he0435_revision_validation.py
+          tests/test_strong_lensing_gaia_runner.py
 
       - name: Check the exact continuation component identities
         run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json

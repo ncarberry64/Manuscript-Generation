@@ -1,0 +1,104 @@
+{
+  "status": "INDEPENDENT_POST_FREEZE_SOURCE_AND_DOMAIN_AUDIT_PASS",
+  "audit_scope": "Postscore source/chronology review by a collaborating research agent, not external human peer review. No frozen numerical source, input, calibration or model artifact modified; only this audit is newly written.",
+  "freeze_integrity": {
+    "commit": "b4cf9a04a7962c03441356ee8f7e18e3da157165",
+    "freeze_sha256": "44ba7a298f9c29b1fe3fe5d20b1432ceebcd58032727eca08c4780fe94d013a9",
+    "committed_freeze_sha256": "44ba7a298f9c29b1fe3fe5d20b1432ceebcd58032727eca08c4780fe94d013a9",
+    "dependency_count": 79,
+    "changed_worktree_dependencies": [],
+    "changed_committed_dependency_blobs": [],
+    "commit_utc": "2026-10-20T22:11:26+00:00",
+    "marker_created_utc": "2026-10-20T22:11:31.530004+00:00",
+    "freeze_written_utc": "2026-10-20T22:11:02.127793+00:00",
+    "marker_freeze_and_commit_match": true,
+    "chronology_seconds_commit_before_marker": 5.530003547668457,
+    "scope": "Operational evidence: Git-fixed prediction and all79 dependency bytes predate exclusive-create scoring marker. Code checks committed hashes before marker, and target parser requires marker. Public retrospective reduction and qualitative publication awareness are explicitly retained; this is not external/prospective blinding."
+  },
+  "once_only_source": {
+    "matter": "Positive finite-total-mass outer and regular nuclear Plummer densities add as rho_total and Menc_total. Plummer has no hard material edge.",
+    "scalar": "One ProfileR1Lens(total_body, fixed_coefficients). The original nonlinear scalar branch consumes total Menc; independently solved component scalar fields are never summed.",
+    "original_equations_natural_units": [
+      "C*x^2*p-4*x*p^2/lambda=-b*m_enc",
+      "2*x^2*Phi_prime+b*x^2*p=2*m_enc",
+      "J_eff=-b*rho_total/(2*Mpl^2)"
+    ],
+    "boundary": "Regular center p(0)=0, isolated decaying scalar-gradient branch, prescribed rolling R1 reference coefficients; common observer clock and rear-plane map normalization.",
+    "screen": "One remote quadratic optical screen is eliminated into compatible propagation maps. It is not inserted a second time as a local sheet.",
+    "effective_mass": "DirectEffectiveHaloLens is evaluated as a separate alternative representation of body plus the same scalar-induced effective mass. It is never overlaid on the scalar field. Identical test-score control is explicitly structural.",
+    "original_source_max_relative_residual": 3.4185461425296606e-16,
+    "original_Gauss_max_relative_residual": 2.1676635489901674e-16,
+    "independent_extra_deflection_max_relative_difference": 3.379811010448348e-16,
+    "fixed_body_R1_delay_offsets_seconds": [
+      20.602836784053125,
+      1.0042207041351503,
+      31.2160687075675
+    ],
+    "separately_refitted_delay_offsets_seconds": [
+      -6.029185827355832,
+      -1.0652002999336219,
+      -14.18105859024763
+    ],
+    "refit_interpretation": "Refitted differences include nuisance reallocation and optimizer stopping; only same-body/source/maps activation isolates this retained scalar response."
+  },
+  "manuscript_claims_review": {
+    "total_mass_not_added_scalar_statement_present": true,
+    "unresolved_matter_not_black_hole_statement_present": true,
+    "classical_process_not_statistical_state_statement_present": true,
+    "retrospective_shared_reference_limitation_present": true,
+    "finite_chain_nonconvergence_present": true,
+    "findings": []
+  },
+  "remaining_physical_domain_dependencies": [
+    {
+      "name": "Optical screen versus environmental scalar Hessian",
+      "consumed_relation": "C*Delta pi_L -2/lambda*((Delta pi_L)^2-Pi_L:Pi_L) -4/lambda*((tr Pi_E)*(tr Pi_L)-Pi_E:Pi_L) = -b_T*rho_L/(2*Mpl^2). Z_E^ij=C delta^ij-4/lambda*((tr Pi_E)delta^ij-Pi_E^ij).",
+      "required_input": "Three-dimensional physical environmental density plus Cauchy/boundary data on the same rolling background, jointly solving total scalar and metric constraints. A fitted 2D convergence/shear U does not determine Pi_E.",
+      "current_scope": "Isolated spherical local scalar branch and conditional total rear optical boundary. No global scalar environment solved.",
+      "source": "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md, equations17-19"
+    },
+    {
+      "name": "Compact matter support/EOS",
+      "consumed_relation": "rho_m=rho_m(n), p_m=n*d rho_m/dn-rho_m, together with baryon continuity and radial Euler equations; alternatively an explicit collisionless distribution or prescribed stress/support law.",
+      "required_input": "Physical material constitutive/support prescription and readjusted matter solution if evolving or demanding equilibrium in the modified field. Density alone does not fix it.",
+      "current_scope": "Positive regular prescribed-density surrogate, fixed30pc scale and discrete development candidate. HST limits unattenuated excess light, not nuclear composition or a black-hole mass. All four HST-admissible candidate objectives span less than0.021.",
+      "source": "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md, equation14"
+    },
+    {
+      "name": "Global rolling-background matching and higher field orders",
+      "consumed_relation": "Full Einstein/scalar current balance, induced-metric/extrinsic-curvature and scalar value/normal-current matching on an overlap worldtube; constrained closed-background outer Cauchy evolution.",
+      "required_input": "Time-dependent matter/scalar/metric initial data and outer homogeneous/compensation state satisfying the actual closed-domain constraints.",
+      "current_scope": "Retained quasi-static weak-field local source and conditional FLRW/screen optics; neither a flat isolated Plummer export to a closed slice nor a common-GR2 insertion solves the coupled higher-order scalar/material continuation.",
+      "source": "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md, equations6-19"
+    },
+    {
+      "name": "Microscopic BHSM source embedding",
+      "consumed_relation": "(A-B*D_perp^-1*Bdagger)psi = J_P-B*D_perp^-1*J_Q-B*q0, q0 in kerD with compatibility; physical e_T embedding/kinetic pairing/cubic vertex and action-derived cap/interface Euler pullback.",
+      "required_input": "Action-owned cap/interface constitutive density, physical observer/source pairing, same-domain boundary/state prescription, canonical T embedding and complement spectrum.",
+      "current_scope": "The R1 action supplies the retained deterministic effective source above. The mathematical source reduction and explicit nonunique same-domain lifts do not select its microscopic realization. No new fitted optical amplitude closes it.",
+      "source": "docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md, equations5-8"
+    },
+    {
+      "name": "Preparation/statistical-state and downstream pair distinction",
+      "consumed_relation": "A physical packet-source application would require computed sections in j_c=mu/2 sum_s[U_s^dagger(iG_c)U_s-V_s^dagger(iG_c)V_s] and an action/state-prescribed relation mapping that source into the retained fields. It is not the OU/Brownian brightness covariance.",
+      "required_input": "When that separate microscopic preparation/pair application is reached, same-domain Cauchy maps, prepared density/state functional and its actual consumed contractions. No missing numerical array establishes absence of their defining source relation.",
+      "current_scope": "This lens test consumes a declared deterministic density-source law and a classical empirical brightness likelihood. It executes neither microscopic U/V preparation nor exclusive pair two-point, inclusive contour four-point or complete matched-occupation statistics. Those distinctions remain separate; the inclusive four-point is not derived as a prerequisite of this declared effective lens baseline. No retarded/native-heat-to-statistical-kernel or Wick replacement is introduced.",
+      "source": "Inherited original source prescription plus the common-source embedding relation; classical likelihood modules contain no quantum-state-kernel identification."
+    }
+  ],
+  "predictive_limitations": [
+    "Measured95% coverage160/162 is descriptive for correlated targets, not proof of calibrated95% conditional coverage. Report68% coverage and interval width/sharpness; current revised intervals are conservative.",
+    "The driver, exposure instrument, model uncertainty and target set differ from the first test, so the old and revised coverage fractions are not a controlled same-target improvement comparison.",
+    "Finite correlated nuisance ensemble has weak mixing; the empirical normalization/affine calibration defines a valid predictive algorithm but does not establish a converged physical posterior.",
+    "HST exclusions assume the achromatic unattenuated macro flux relation and the retained PSF/centroid/sky/error family; no derived differential extinction/microlensing correction or full Einstein-ring reconstruction is supplied."
+  ],
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "read_only_inputs_sha256": {
+    "artifacts/strong_lensing_revision_20261020/frozen_revision_predictions.json": "44ba7a298f9c29b1fe3fe5d20b1432ceebcd58032727eca08c4780fe94d013a9",
+    "artifacts/strong_lensing_revision_20261020/revision_scoring_started.json": "ffcf364f76ab778b393fb2777c6c80af225d7991ad96eb3400b276b956167418",
+    "artifacts/strong_lensing_revision_20261020/revised_conventional_training.json": "c73fe7a750010ff05a0d68462bdbae4d56d940c780deee6867ca211988b17a50",
+    "artifacts/strong_lensing_revision_20261020/revised_r1_training.json": "dede3c04555da6fcc93b06990544f7c3bb4f115f929b1dd9baf28e17ea28286e",
+    "manuscript/sections/he0435_revision_20261020.tex": "5fd59146d3e1f1d61016cad49fdf2ab396c14ca7ecd7fb8287294ba9f93e53a4"
+  }
+}

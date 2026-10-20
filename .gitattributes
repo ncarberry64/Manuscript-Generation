@@ -32,3 +32,5 @@ data/strong_lensing_revision_20261020/**/ReadMe -text whitespace=-blank-at-eol,-
 data/strong_lensing_revision_20261020/**/*.fits binary
 data/strong_lensing_revision_20261020/**/*.json -text whitespace=cr-at-eol
 artifacts/strong_lensing_revision_20261020/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_revision_20261020/gaia/*.json -text whitespace=cr-at-eol
+data/strong_lensing_revision_20261020/gaia/*.csv -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
