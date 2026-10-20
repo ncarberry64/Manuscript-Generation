@@ -1,0 +1,128 @@
+{
+  "status": "ANALYSIS_PROTOCOL_FIXED_BEFORE_WITHHELD_PHOTOMETRIC_SCORING",
+  "created_utc": "2026-10-20T19:07:55.786636+00:00",
+  "lens": "HE0435-1223",
+  "selection": "Public long monitoring and resolved images, chosen before model fitting or withheld magnitude inspection; selection does not depend on prediction success.",
+  "data": "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_all_Millon2020.dat",
+  "data_sha256": "880ed1cbc23d884ffec9a0d59411c946f3cb4256d962fc506464b080fb172ce3",
+  "split": {
+    "cut_native_time_day": 57447.03918,
+    "boundary_source": "Last epoch of the independent earlier Bonvin13year release",
+    "train_rule": "native_time<=cut; all four images",
+    "test_rule": "native_time>cut",
+    "training_epochs": 902,
+    "later_epochs": 100,
+    "reduction_caveat": "Retrospective chronological test within one2020common reduction; not a prospectively blinded acquisition. Older release is re-reduced and not concatenated."
+  },
+  "primary_test": {
+    "conditioning": "all training points plus later image B as an explicitly allowed observed driver",
+    "withheld_targets": "later image A,C,D (300magnitudes)",
+    "estimand": "frozen cross-image conditional predictive density and marginal calibration, conditional on fitted parameters"
+  },
+  "secondary_test": {
+    "conditioning": "all training points only",
+    "withheld_targets": "all four later images (400magnitudes)",
+    "estimand": "joint future-light covariance/brightness forecast, not deterministic prediction of unknown quasar fluctuations"
+  },
+  "likelihood": {
+    "formula": "m_i(t)=m0+b_i+q(t-d_i)+e_i(t)+noise_i; q shared stationary OU, e_i independent slow OU, b_i proper Gaussian offset; quoted error plus fitted jitter",
+    "interpretation": "Classical empirical optical-brightness likelihood; not the BHSM quantum statistical state, Wick closure or a preparation kernel.",
+    "reference_image": "A",
+    "positive_delay": "image arrives later than A",
+    "magnitude_zero": "pooled median of training magnitudes only",
+    "delay_starts_days": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        14.795079937685301,
+        -14.640668815827329,
+        14.417217117335326
+      ],
+      [
+        0.0,
+        -5.093248498372791,
+        8.543221179066762,
+        15.851470888544213
+      ],
+      [
+        0.0,
+        -16.37703907302333,
+        16.618527552443048,
+        -10.840437142708709
+      ]
+    ],
+    "delay_bounds_days": [
+      -30,
+      30
+    ],
+    "ordered_hyperparameters": [
+      "sigma_source_mag",
+      "tau_source_days",
+      "sigma_micro_mag",
+      "tau_micro_days",
+      "jitter_mag"
+    ],
+    "initial_hyperparameters": [
+      0.15,
+      200,
+      0.05,
+      1500,
+      0.005
+    ],
+    "hyperparameter_bounds": [
+      [
+        0.02,
+        0.5
+      ],
+      [
+        10,
+        1500
+      ],
+      [
+        0.005,
+        0.5
+      ],
+      [
+        200,
+        10000
+      ],
+      [
+        0.0001,
+        0.03
+      ]
+    ],
+    "offset_sigma_mag": 3,
+    "optimizer": "boundedL-BFGS-B, maximum200iterations per start; highest training likelihood selected",
+    "uncertainty": "Point-fit conditional predictive intervals; no claim of fully marginalized physical state or calibrated parameter confidence."
+  },
+  "macro_models": {
+    "data": "Published HST relative point-image/galaxy astrometry only, not a pixel-level Einstein-ring reconstruction; train-only delays from the above likelihood.",
+    "density": "Positive finite spherical Plummer body, regular localR1source; no arbitrary spherical scalar added to an elliptical density.",
+    "propagation": "One remote symmetric quadratic optical screen at fixed z_p=0.8, with its two-plane Jacobi maps and same source/clock; total optical tide is a conditional propagation input, not a reconstructed same-domain scalar environmental Hessian.",
+    "background": "Same declared frozenR1 FLRW H0=67.4 for both; recompute distances and local coefficients at z_l=.4546,z_s=1.693. This is a conditional reference geometry, not a fit proving cosmological viability.",
+    "parameters": "log10M in[10,13]; log10Plummera_kpc in[-.7,1.3]; source_angle x,y in[-.8,.8]arcsec; screen reduced convergence/shears each[-.4,.4]; mass center offset x,y Gaussian sigma.003arcsec bounded+/-.03arcsec.",
+    "astrometry_errors": "Published internal error plus explicitly prescribed2mas systematic in quadrature; diagonal relative-position covariance approximation because full covariance unavailable. A fixes observed coordinate origin.",
+    "models": [
+      "conventional finite body",
+      "fixed-stateR1 finitebodyresponse with training-only nuisance refit",
+      "complete matched conventional effective mass representation of theR1field (structural equality control)"
+    ],
+    "iteration": "Any macro initialization/repair uses only training observations; no model-family selection from withheld score. Failed training fits are reported, not replaced by another lens."
+  },
+  "scores": [
+    "joint conditional log predictive density",
+    "RMSE magnitude",
+    "68.27/95percent marginal coverage",
+    "original lens/field/source and stationarity residuals",
+    "training-only macro fit adequacy",
+    "matched effective-mass equality"
+  ],
+  "controls": "A zero-delay brightness-transfer control with the same frozen hyperparameters, reported as a control rather than selected by test performance.",
+  "freeze_rule": "Freeze all fitted nuisance parameters and physical macro predictions, serialize hashes before any target scoring. Later-B conditioning is inference of the new driver realization without parameter refitting. No post-score tuning or retraining.",
+  "physical_scope": "Conditional local quasi-static source and remote optical propagation model; no completed microscopicBHSMembedding or globalenvironmentalstate. Provisionaliteration is not physicaladmission;2e-10guard and originalcalibrationunchanged."
+}
