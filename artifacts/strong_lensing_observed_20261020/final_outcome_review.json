@@ -1,0 +1,309 @@
+{
+  "status": "COMPLETED_FROZEN_EXPERIMENT_WITH_MATERIAL_PREDICTIVE_LIMITATIONS",
+  "reviewer": "heldout_design independent scientific review of saved results",
+  "execution_scope": "Read saved outcomes, likelihood/macro source, preregistered freeze, committed freeze and forward audit. No fitting, parameter changes, score execution or target-based tuning was performed by this review.",
+  "freeze_commit": "e6e62bddd793a6b5545040b2fc37b775876384da",
+  "freeze_checks": {
+    "frozen_input_hashes_unchanged": true,
+    "saved_freeze_matches_score_hash": true,
+    "committed_prediction_freeze_matches_score_hash": true
+  },
+  "numerical_claims": {
+    "primary": {
+      "count": 300,
+      "conventional_joint_conditional_log_density": 791.6238454191334,
+      "R1_joint_conditional_log_density": 791.6288281092675,
+      "R1_minus_conventional_log_density": 0.004982690134056611,
+      "conventional_minus_zero_delay_log_density": 35.64831676711037,
+      "empirical_minus_conventional_log_density": 3.5746202245118184,
+      "conventional_summary": {
+        "count": 300,
+        "rmse_mag": 0.10133299439906604,
+        "mean_residual_mag": 0.0747456597271889,
+        "mean_marginal_negative_log_density": -0.9923244757533822,
+        "coverage_68_27_percent": 0.47333333333333333,
+        "coverage_95_percent": 0.8533333333333334,
+        "mean_predictive_sigma_mag": 0.0670109912305645
+      },
+      "R1_summary": {
+        "count": 300,
+        "rmse_mag": 0.10133301263454857,
+        "mean_residual_mag": 0.074746064649307,
+        "mean_marginal_negative_log_density": -0.992325008536423,
+        "coverage_68_27_percent": 0.47333333333333333,
+        "coverage_95_percent": 0.8533333333333334,
+        "mean_predictive_sigma_mag": 0.06701104573704733
+      },
+      "conventional_by_image": {
+        "0": {
+          "count": 100,
+          "rmse_mag": 0.13351776542093488,
+          "mean_residual_mag": 0.11238021583003677,
+          "mean_marginal_negative_log_density": -0.3664214357136973,
+          "coverage_68_27_percent": 0.23,
+          "coverage_95_percent": 0.62,
+          "mean_predictive_sigma_mag": 0.06685035146518334
+        },
+        "2": {
+          "count": 100,
+          "rmse_mag": 0.07407232844895369,
+          "mean_residual_mag": 0.048091581258708924,
+          "mean_marginal_negative_log_density": -1.3851520206631378,
+          "coverage_68_27_percent": 0.64,
+          "coverage_95_percent": 0.99,
+          "mean_predictive_sigma_mag": 0.0669269546247673
+        },
+        "3": {
+          "count": 100,
+          "rmse_mag": 0.0865530111364936,
+          "mean_residual_mag": 0.06376518209282098,
+          "mean_marginal_negative_log_density": -1.2253999708833119,
+          "coverage_68_27_percent": 0.55,
+          "coverage_95_percent": 0.95,
+          "mean_predictive_sigma_mag": 0.06725566760174283
+        }
+      },
+      "R1_by_image": {
+        "0": {
+          "count": 100,
+          "rmse_mag": 0.13351872683485216,
+          "mean_residual_mag": 0.11238230597741224,
+          "mean_marginal_negative_log_density": -0.3663963987356,
+          "coverage_68_27_percent": 0.23,
+          "coverage_95_percent": 0.62,
+          "mean_predictive_sigma_mag": 0.06685048384620942
+        },
+        "2": {
+          "count": 100,
+          "rmse_mag": 0.07407310162513832,
+          "mean_residual_mag": 0.04809441201845887,
+          "mean_marginal_negative_log_density": -1.3851513309350292,
+          "coverage_68_27_percent": 0.64,
+          "coverage_95_percent": 0.99,
+          "mean_predictive_sigma_mag": 0.06692718190104496
+        },
+        "3": {
+          "count": 100,
+          "rmse_mag": 0.08655093037520042,
+          "mean_residual_mag": 0.06376147595204991,
+          "mean_marginal_negative_log_density": -1.22542729593864,
+          "coverage_68_27_percent": 0.55,
+          "coverage_95_percent": 0.95,
+          "mean_predictive_sigma_mag": 0.06725547146388765
+        }
+      },
+      "matched_mass_score_is_exact_R1_identity": true
+    },
+    "secondary": {
+      "count": 400,
+      "conventional_joint_conditional_log_density": 1029.2914875550305,
+      "R1_joint_conditional_log_density": 1029.2965019115018,
+      "R1_minus_conventional_log_density": 0.005014356471292558,
+      "conventional_minus_zero_delay_log_density": 35.90054464325658,
+      "empirical_minus_conventional_log_density": 3.583709566590187,
+      "conventional_summary": {
+        "count": 400,
+        "rmse_mag": 0.1949449284646148,
+        "mean_residual_mag": -0.16077482774377355,
+        "mean_marginal_negative_log_density": -0.09581349680017025,
+        "coverage_68_27_percent": 0.4075,
+        "coverage_95_percent": 0.755,
+        "mean_predictive_sigma_mag": 0.12618984896812624
+      },
+      "R1_summary": {
+        "count": 400,
+        "rmse_mag": 0.19494512493699204,
+        "mean_residual_mag": -0.16077508498119225,
+        "mean_marginal_negative_log_density": -0.09580951226178172,
+        "coverage_68_27_percent": 0.4075,
+        "coverage_95_percent": 0.755,
+        "mean_predictive_sigma_mag": 0.12618962378759202
+      },
+      "conventional_by_image": {
+        "0": {
+          "count": 100,
+          "rmse_mag": 0.11964115130159989,
+          "mean_residual_mag": -0.09860538087531005,
+          "mean_marginal_negative_log_density": -0.7240860760201205,
+          "coverage_68_27_percent": 0.76,
+          "coverage_95_percent": 0.99,
+          "mean_predictive_sigma_mag": 0.12662398082971835
+        },
+        "1": {
+          "count": 100,
+          "rmse_mag": 0.276789203964895,
+          "mean_residual_mag": -0.24618964693601839,
+          "mean_marginal_negative_log_density": 0.8524423588331271,
+          "coverage_68_27_percent": 0.11,
+          "coverage_95_percent": 0.34,
+          "mean_predictive_sigma_mag": 0.12600089758354815
+        },
+        "2": {
+          "count": 100,
+          "rmse_mag": 0.1838830300661393,
+          "mean_residual_mag": -0.16241000642807635,
+          "mean_marginal_negative_log_density": -0.16933084097654785,
+          "coverage_68_27_percent": 0.33,
+          "coverage_95_percent": 0.83,
+          "mean_predictive_sigma_mag": 0.12662543377804755
+        },
+        "3": {
+          "count": 100,
+          "rmse_mag": 0.16515103170642903,
+          "mean_residual_mag": -0.13589427673568938,
+          "mean_marginal_negative_log_density": -0.34227942903713965,
+          "coverage_68_27_percent": 0.43,
+          "coverage_95_percent": 0.86,
+          "mean_predictive_sigma_mag": 0.1255090836811909
+        }
+      },
+      "R1_by_image": {
+        "0": {
+          "count": 100,
+          "rmse_mag": 0.11964102752493164,
+          "mean_residual_mag": -0.09860525585443204,
+          "mean_marginal_negative_log_density": -0.7240865862310369,
+          "coverage_68_27_percent": 0.76,
+          "coverage_95_percent": 0.99,
+          "mean_predictive_sigma_mag": 0.12662398161404118
+        },
+        "1": {
+          "count": 100,
+          "rmse_mag": 0.27678958816418187,
+          "mean_residual_mag": -0.24619009962451194,
+          "mean_marginal_negative_log_density": 0.8524535366538921,
+          "coverage_68_27_percent": 0.11,
+          "coverage_95_percent": 0.34,
+          "mean_predictive_sigma_mag": 0.12600061687034342
+        },
+        "2": {
+          "count": 100,
+          "rmse_mag": 0.18388219994041993,
+          "mean_residual_mag": -0.16240910442850037,
+          "mean_marginal_negative_log_density": -0.1693397700084341,
+          "coverage_68_27_percent": 0.33,
+          "coverage_95_percent": 0.83,
+          "mean_predictive_sigma_mag": 0.1266254274950055
+        },
+        "3": {
+          "count": 100,
+          "rmse_mag": 0.16515232940697602,
+          "mean_residual_mag": -0.13589588001732456,
+          "mean_marginal_negative_log_density": -0.34226522946154825,
+          "coverage_68_27_percent": 0.43,
+          "coverage_95_percent": 0.86,
+          "mean_predictive_sigma_mag": 0.1255084691709781
+        }
+      },
+      "matched_mass_score_is_exact_R1_identity": true
+    }
+  },
+  "saved_density_factorization_checks": {
+    "empirical_training_transfer": {
+      "saved_driver_conditional_log_density": 237.6767314779754,
+      "all_later_minus_driver_minus_primary_log_density": 0.0
+    },
+    "conventional_macro": {
+      "saved_driver_conditional_log_density": 237.66764213589704,
+      "all_later_minus_driver_minus_primary_log_density": 0.0
+    },
+    "conditional_R1_macro": {
+      "saved_driver_conditional_log_density": 237.66767380223428,
+      "all_later_minus_driver_minus_primary_log_density": 0.0
+    },
+    "matched_conventional_effective_mass": {
+      "saved_driver_conditional_log_density": 237.66767380223428,
+      "all_later_minus_driver_minus_primary_log_density": 0.0
+    },
+    "zero_delay_control": {
+      "saved_driver_conditional_log_density": 237.41541425975447,
+      "all_later_minus_driver_minus_primary_log_density": -3.637978807091713e-12
+    }
+  },
+  "interpretation_findings": [
+    {
+      "topic": "R1 versus conventional prediction",
+      "finding": "The primary R1-minus-conventional plug-in conditional log density is 0.004982690134056611. This is practically negligible here and is not Bayesian model evidence, a Bayes factor, a calibrated significance, or detection of envelope-state response. The tiny change includes separately fitted macro parameters and finite optimizer termination; it is not the fixed-body R1 response."
+    },
+    {
+      "topic": "Timing negative control",
+      "finding": "The conventional primary conditional score exceeds the prescribed zero-delay control by 35.64831676711037 log-density units. This supports timing information in the frozen configured transfer model. The zero-delay control shares the hyperparameters estimated with free delays and is not separately optimized under a null, so this is not a calibrated nested-hypothesis test."
+    },
+    {
+      "topic": "Joint versus marginal scores",
+      "finding": "The reported joint score retains temporal/inter-image latent correlations and is correctly the difference of normalized marginalized likelihoods. The sum of marginal predictive log densities is a separate diagnostic. Continuous probability densities in magnitude units can exceed one, so positive log densities are not an error. Scores must be compared in the same units."
+    },
+    {
+      "topic": "Primary versus secondary dependence",
+      "finding": "These are overlapping factorizations of the same 400 later measurements, not independent replications. The secondary conditional log density equals the driver conditional density plus the primary A/C/D conditional density, as verified from saved likelihood values."
+    },
+    {
+      "topic": "Conditioning-field label",
+      "finding": "Within each primary score object, the field training_log_likelihood actually denotes the likelihood of the entire conditioning set, historical training plus allowed later B. It is not the historical fitting likelihood and does not imply that later B was used for fitting. The actual conditional-score subtraction is correct."
+    },
+    {
+      "topic": "Coverage and point uncertainty",
+      "finding": "Conventional primary nominal95% marginal coverage is256/300=85.3333%, with A 62/100, C 99/100 and D 95/100. The observations and intervals are correlated, so these descriptive fractions do not justify an independent-binomial p-value. Intervals are conditional on fitted hyperparameters and macro parameters and omit their uncertainty."
+    },
+    {
+      "topic": "Identifiability",
+      "finding": "Light-curve offsets absorb constant magnification, extinction and calibration differences, and the model predicts time-delay transfer rather than independently fitting resolved arcs, kinematics, a measured line-of-sight mass distribution or full flux constraints. Mass-profile, optical-screen, source/extrinsic and mass-sheet freedoms remain. The source-derived positive effective-mass representation has exactly the same transfer and score as R1 by construction. These measurements do not select a unique microscopic envelope state."
+    }
+  ],
+  "material_failures_or_unvalidated_requirements": [
+    {
+      "severity": "MATERIAL_PREDICTIVE_MISCALIBRATION",
+      "finding": "The shared primary brightness prediction has positive mean residual about 0.07475mag and RMSE about 0.10133mag; imageA alone has bias about +0.11238mag and nominal95% coverage 62%. The free-delay empirical reference also has imageA coverage 63%. Thus most failure is shared by the declared source/extrinsic variability and uncertainty layer rather than evidence for a BHSM-specific response. Do not repair or recenter these targets and call the same experiment held out."
+    },
+    {
+      "severity": "MATERIAL_FUTURE_FORECAST_FAILURE",
+      "finding": "The secondary training-only conventional forecast has RMSE 0.1949449284646148mag and nominal95% coverage 75.5%. Its imageB coverage is 34%, bias about -0.24619mag. This is a weaker, poorly calibrated all-future extrapolation; the current model is not a validated precision forecasting or state-mapping instrument."
+    },
+    {
+      "severity": "UNVALIDATED_GLOBAL_LENS_OBSERVATIONAL_CONSTRAINT",
+      "finding": "A separate forward census finds a fifth central image in both macro models, with predicted macro flux about 6.3% of A. This must be confronted with pixel data, galaxy contamination, extinction, finite-source/microlensing effects and an actual central-image detection limit before full observational admission. Four fitted point-image positions do not supply such a limit. The finite search is not itself proof of a complete R1 image census."
+    },
+    {
+      "severity": "CONDITIONAL_PHYSICAL_SCOPE",
+      "finding": "The fitted spherical prescribed Plummer source plus total remote quadratic optical screen is a declared tractable model, not an inferred unique global envelope state. Its screen convergence cannot be identified with an independently measured environmental mass sheet, and no microscopic state-to-geometry closure or complete physical preparation has been established."
+    }
+  ],
+  "forward_audit_review": {
+    "fixed_body_R1_delay_change_seconds": [
+      19.29034419868003,
+      0.9385605818295062,
+      29.036694449393963
+    ],
+    "separately_refitted_delay_difference_seconds": [
+      228.50609664764647,
+      7.234333963060635,
+      438.4355631427354
+    ],
+    "conclusion": "Physical fixed-body response is separately applied with the same ordinary source, body, screen, clock and maps. Refit differences retain nuisance reallocation and finite optimizer effects. Actual source magnification uses (D_os_eff/D_s) times the normalized lens Jacobian. The positive finite effective mass is counted once in the outer-radius bound. These formulas and saved residuals are consistent within the retained approximation.",
+    "central_macro_flux_ratios_relative_A": {
+      "conventional_census": 0.06319717558937626,
+      "conditional_R1_census": 0.06313147684181039
+    }
+  },
+  "required_reporting": "Publish this as one frozen retrospective observed-lens pilot with a useful transfer comparison and explicit predictive failures. Do not report a unique envelope map, BHSM detection, validated 95% intervals, independent replication, physical admission or acceptance-ready empirical closure. Future changes require a new declared validation target or nested training validation; preserve these outcomes.",
+  "physical_admission": false,
+  "reviewed_sha256": {
+    "artifacts/strong_lensing_observed_20261020/withheld_scores.json": "7eb1827710b190cf1eeb125dd05f65ef18dc4490fcf3c24dbc2d5e33f67fb44a",
+    "artifacts/strong_lensing_observed_20261020/frozen_predictions.json": "215903a27eaa53d2feab239d6d2cea3c43a8291b0fd76abb9230edd68aa6c2cb",
+    "artifacts/strong_lensing_observed_20261020/macro_forward_audit.json": "447bc0c210b120c068e4e43042f614c14edf87eeac7ba4dce1a964d86a69920f",
+    "scripts/run_he0435_withheld.py": "2f5c63d18a6e2f98d8f18d482c85cc616dccf14cd6ef2221fc8aa3c1367c9f78",
+    "code/strong_lensing_observed_lightcurve.py": "214150eee754ec3ca88517dd44767be496e322bc4459f1808278fed0f0e897cc",
+    "code/strong_lensing_observed_macro.py": "5705e8715fd9c8c1bd8bc4d5d97ae1d84f4b731dbccb7c4ca60dcb9d66bd1785"
+  },
+  "local_state_coefficient_map": {
+    "source_relations": [
+      "b=2v^2/lambda",
+      "C=1+4(d+2Hv)/lambda-2v^4/lambda^2"
+    ],
+    "algebraic_inverse_before_state_equations": [
+      "v=+/-sqrt(b lambda/2)",
+      "d=lambda(C-1)/4+v^4/(2lambda)-2Hv"
+    ],
+    "scope": "At fixed lambda the reduced coefficient map alone is not injective in (H,v,d): H remains algebraically free and the sign of v is not selected. These algebraic alternatives are not asserted to solve the complete background or envelope equations. The experiment fixes one adopted background and does not fit b,C or recover a physical state."
+  }
+}
