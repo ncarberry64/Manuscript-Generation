@@ -69,7 +69,7 @@ jobs:
             ghostscript latexmk \
             texlive-latex-base texlive-latex-recommended texlive-latex-extra \
             texlive-fonts-recommended texlive-fonts-extra \
-            texlive-science texlive-pictures texlive-humanities
+            texlive-science texlive-pictures texlive-humanities texlive-plain-generic
 
       - name: Convert official logos and build the strong-lensing manuscript
         run: python3 scripts/build_strong_lensing_manuscript.py
