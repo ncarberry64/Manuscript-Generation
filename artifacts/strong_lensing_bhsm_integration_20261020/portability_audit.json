@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "scripts/run_strong_lensing_r1_screened.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "53e3cfdd7dfd673e245b9cdeaa914dedb80e6dbdb8834130e4a58a192409671b"
+    },
+    {
+      "path": "scripts/run_strong_lensing_gr2_control.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "83a626139e1d75ddd4abf494ba5100fc4ddac1e9d2a1987760ecd7c82a5f24fe"
+    },
+    {
+      "path": "scripts/plot_strong_lensing_r1_screened.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "cc5d2d9918f661bb66beac0e7cc7d0fa3461a54d1af3bf2cc5beda8f8177fa4f"
+    },
+    {
+      "path": "scripts/r1_screened_review/check_common_gr_composition.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "8aea3fa0a4d79d360037ed2eaec839bf7450ff63d33434930bc94e27ea2b8bf9"
+    },
+    {
+      "path": "scripts/r1_screened_review/check_gr_optical_control.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "2d4e1f9997cc4edcbc0fe780f642da84df771a0fefae219611b2d1437ff39729"
+    },
+    {
+      "path": "scripts/r1_screened_review/check_screened_projection.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "7c0bd42544578c7bcf4cfdf24a46a12a3f090c7b7b5d0d10608f51f55ecb59df"
+    },
+    {
+      "path": "scripts/r1_screened_review/multisource_crossratio.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "e20d999d007ebac02f5cf1c1c88057c744eb3ee6ec7c8b6a2e2480a46c8d974a"
+    },
+    {
+      "path": "scripts/r1_screened_review/r1_qs_coefficients.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "aab0da7634a1b60d590a2401575750ca33d5ae0144280b2533fdb0631ad58971"
+    },
+    {
+      "path": "scripts/r1_screened_review/shared_lens_rank.py",
+      "scientific_ast_unchanged": true,
+      "final_sha256": "fadf9030ca12d16f21e6e899ac7513b074933194f2ec565c6b9c8b75722c7f5f"
+    },
+    {
+      "path": "code/strong_lensing_r1_screened.py",
+      "byte_identical_to_package": true,
+      "final_sha256": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c"
+    },
+    {
+      "path": "code/strong_lensing_gr2.py",
+      "byte_identical_to_package": true,
+      "final_sha256": "5edd7987ec568fde047b3e033cdf86ed1ac53cf2587f30f8244c9fa024b9ff11"
+    }
+  ],
+  "scope": "AST comparison excludes only output-path assignments, write/mkdir calls, CLI entry points and declared output-format loop; all retained scientific computations remain unchanged. Both numerical modules are byte-identical to package.",
+  "serialization": "New replay JSON/log text normalized to UTF-8 and LF. Original supplied evidence unchanged.",
+  "figure_review": "Replay PNG inspected; axes, legend, data, screening annotation and both delay labels legible.",
+  "focused_workflow": "Dedicated strong-lensing workflow builds focused MDPI manuscript only; does not run the nine numerical reproduction commands."
+}

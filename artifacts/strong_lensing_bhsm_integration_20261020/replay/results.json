@@ -1,0 +1,514 @@
+{
+  "status": "CONDITIONAL_R1_CUBIC_EFT_LOCAL_QUASISTATIC_PREDICTION",
+  "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+  "experiment": {
+    "H0_km_s_Mpc": 67.4,
+    "light": "common narrowband transient point source in geometric optics; same emission phase and observer proper-clock protocol",
+    "observer_wavelength_nm": 550.0,
+    "source_rest_wavelength_nm": 275.0,
+    "source_transverse_Mpc": [
+      0.0014576633674174603,
+      0.0
+    ],
+    "reference_beta_arcsec": [
+      0.17798050886644154,
+      0.0
+    ],
+    "z_l": 0.3,
+    "z_s": 1.0,
+    "fixed": "same prescribed finite density excess, physical source displacement, observed redshifts, observer clock and compatible background distance maps",
+    "varied": "activate the independently specified frozen-R1 cubic scalar response of the same body; re-solve the same image branches",
+    "envelope_role": "conditional R1 metric response sourced by the finite body; distinct from the previously null constant target-phase family",
+    "double_counting": "smooth R1 background enters the distance maps once; body potential plus its derived scalar response enters the encounter once",
+    "incoming_light_distinct_from": "cosmological delta_r/v_r and muon/reference covariance"
+  },
+  "physical_maps_Mpc": {
+    "D_ls": [
+      [
+        1076.9943480596019,
+        0.0
+      ],
+      [
+        0.0,
+        1076.9943480596019
+      ]
+    ],
+    "D_ol": [
+      [
+        945.16283937304,
+        0.0
+      ],
+      [
+        0.0,
+        945.16283937304
+      ]
+    ],
+    "D_os": [
+      [
+        1689.3122396872932,
+        0.0
+      ],
+      [
+        0.0,
+        1689.3122396872932
+      ]
+    ]
+  },
+  "coefficients": {
+    "z_l": 0.3,
+    "H0_km_s_Mpc": 67.4,
+    "H_over_H0": 1.1836105771853052,
+    "Tdot_over_MplH0": 0.2377644263710765,
+    "Tddot_over_MplH02": 0.2484715891238288,
+    "lambda_over_MplH02": 1.0,
+    "b": 0.11306384489513412,
+    "C": 4.238858559433703
+  },
+  "body": {
+    "mass_Msun": 100000000000.0,
+    "radius_Mpc": 0.003,
+    "density": "15 M/(8 pi R^3) (1-r^2/R^2) inside R; prescribed excess over smooth background"
+  },
+  "screening": {
+    "rV_Mpc": 0.21202922497717772,
+    "unscreened_extra_fraction": 0.0015078862438121512,
+    "H_l_rV_over_c": 5.642138685207786e-05,
+    "effective_extra_mass_infinity_Msun": 150788624.38121513,
+    "mass_scaling_at_fixed_z": "rV proportional to M^(1/3)",
+    "effective_halo_degeneracy": "delta M_eff(r)=M_enclosed(r)*extra_force(r), with nonnegative density; flexible ordinary halos reproduce this retained Phi=Psi field"
+  },
+  "conventional": {
+    "images_rad": [
+      [
+        4.050502114949878e-06,
+        0.0
+      ],
+      [
+        -3.9833232471834377e-07,
+        0.0
+      ],
+      [
+        -3.1876282582569995e-06,
+        2.894599020946575e-22
+      ]
+    ],
+    "images_arcsec": [
+      [
+        0.8354760339435907,
+        0.0
+      ],
+      [
+        -0.08216193977998465,
+        0.0
+      ],
+      [
+        -0.6574955250771493,
+        5.970539062185801e-17
+      ]
+    ],
+    "arrival_days": [
+      4.436398158878797,
+      26.152474724935665,
+      18.707850545787437
+    ],
+    "relative_delays_days": [
+      21.71607656605687,
+      14.27145238690864
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22,
+    "max_stationarity_Mpc": 1.734723475976807e-18,
+    "inverse_magnification_determinants": [
+      0.380676428194549,
+      4.529393477171768,
+      -0.6146648464950275
+    ],
+    "minimum_image_Jacobian_singular_value": 0.2130288621522064
+  },
+  "screened": {
+    "images_rad": [
+      [
+        4.050531801430867e-06,
+        0.0
+      ],
+      [
+        -3.9832850386698917e-07,
+        0.0
+      ],
+      [
+        -3.1876493408236464e-06,
+        0.0
+      ]
+    ],
+    "images_arcsec": [
+      [
+        0.83548215721984,
+        0.0
+      ],
+      [
+        -0.08216115167282029,
+        0.0
+      ],
+      [
+        -0.6574998736686738,
+        0.0
+      ]
+    ],
+    "arrival_days": [
+      4.436296562989014,
+      26.15267358342261,
+      18.70784905428857
+    ],
+    "relative_delays_days": [
+      21.716377020433598,
+      14.271552491299555
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22
+  },
+  "changes": {
+    "images_microarcsec": [
+      [
+        6.123276249270226,
+        0.0
+      ],
+      [
+        0.7881071643622839,
+        0.0
+      ],
+      [
+        -4.348591524538925,
+        -5.9705390621858e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959258149259767,
+      8.64901937507625
+    ],
+    "relative_delays_fractional": [
+      1.3835573650311517e-05,
+      7.014309980624134e-06
+    ],
+    "linear_relative_delays_seconds": [
+      25.959098922721797,
+      8.648963280201446
+    ],
+    "linear_images_microarcsec": [
+      [
+        6.123237474376573,
+        0.0
+      ],
+      [
+        0.7881150659656737,
+        -0.0
+      ],
+      [
+        -4.348562965596671,
+        3.948812434491166e-16
+      ]
+    ]
+  },
+  "delay_ratio": {
+    "conventional": 1.5216444673828198,
+    "screened": 1.5216548468481388,
+    "change": 1.037946531901035e-05,
+    "fractional_change": 6.821215823737958e-06,
+    "qualification": "common MST scale cancels; source/profile/centering freedoms remain"
+  },
+  "image_impact_radii_Mpc": [
+    0.0038283840798525306,
+    0.00037648891104485356,
+    0.0030128277754399237
+  ],
+  "radial_profile": [
+    {
+      "radius_kpc": 0.1,
+      "local_force_extra_fraction": 3.207740633284846e-06,
+      "projected_deflection_extra_fraction": 6.2902015661338095e-06
+    },
+    {
+      "radius_kpc": 0.3,
+      "local_force_extra_fraction": 3.216325554030426e-06,
+      "projected_deflection_extra_fraction": 6.317060440493756e-06
+    },
+    {
+      "radius_kpc": 1.0,
+      "local_force_extra_fraction": 3.319097216451925e-06,
+      "projected_deflection_extra_fraction": 6.640654604993293e-06
+    },
+    {
+      "radius_kpc": 3.0,
+      "local_force_extra_fraction": 5.067058797829515e-06,
+      "projected_deflection_extra_fraction": 1.1746655503432549e-05
+    },
+    {
+      "radius_kpc": 10.0,
+      "local_force_extra_fraction": 3.057431939414754e-05,
+      "projected_deflection_extra_fraction": 6.364944089127301e-05
+    },
+    {
+      "radius_kpc": 30.0,
+      "local_force_extra_fraction": 0.00015218922286950383,
+      "projected_deflection_extra_fraction": 0.00026550903398586207
+    },
+    {
+      "radius_kpc": 100.0,
+      "local_force_extra_fraction": 0.0007103766236908971,
+      "projected_deflection_extra_fraction": 0.0009115385320117652
+    },
+    {
+      "radius_kpc": 212.0292249771296,
+      "local_force_extra_fraction": 0.0012491738654055084,
+      "projected_deflection_extra_fraction": 0.001343404866135957
+    },
+    {
+      "radius_kpc": 300.0,
+      "local_force_extra_fraction": 0.001394124112380265,
+      "projected_deflection_extra_fraction": 0.0014385810318393324
+    },
+    {
+      "radius_kpc": 1000.0,
+      "local_force_extra_fraction": 0.0015043099494098664,
+      "projected_deflection_extra_fraction": 0.0015057773940097905
+    }
+  ],
+  "frozen_redshift_law": [
+    {
+      "z": 0.0,
+      "unscreened_extra_fraction": 0.0035113163502206216,
+      "rV_kpc": 248.2996659293891
+    },
+    {
+      "z": 0.1,
+      "unscreened_extra_fraction": 0.0026520124766250194,
+      "rV_kpc": 235.5825925537916
+    },
+    {
+      "z": 0.3,
+      "unscreened_extra_fraction": 0.0015078862438121512,
+      "rV_kpc": 212.0292249771777
+    },
+    {
+      "z": 0.5,
+      "unscreened_extra_fraction": 0.000860519612681624,
+      "rV_kpc": 191.23010722678112
+    },
+    {
+      "z": 0.8,
+      "unscreened_extra_fraction": 0.00038165474278918735,
+      "rV_kpc": 165.14313694150223
+    },
+    {
+      "z": 1.0,
+      "unscreened_extra_fraction": 0.00022831772398873365,
+      "rV_kpc": 150.77757362192477
+    },
+    {
+      "z": 1.5,
+      "unscreened_extra_fraction": 7.084503440348655e-05,
+      "rV_kpc": 123.01109812765677
+    }
+  ],
+  "leading_hydrostatic_response": {
+    "pbar_units": "p=(G M^2/R^4)*pbar",
+    "values": [
+      {
+        "r_over_R": 0.0,
+        "newtonian_pbar": 0.2984155182973038,
+        "extra_pbar": 1.0652200022713245e-06,
+        "extra_fraction": 3.5695864891653287e-06
+      },
+      {
+        "r_over_R": 0.25,
+        "newtonian_pbar": 0.25408303712447433,
+        "extra_pbar": 9.217268355922893e-07,
+        "extra_fraction": 3.627659862790206e-06
+      },
+      {
+        "r_over_R": 0.5,
+        "newtonian_pbar": 0.1468763879119542,
+        "extra_pbar": 5.610970610156615e-07,
+        "extra_fraction": 3.820199209637521e-06
+      },
+      {
+        "r_over_R": 0.75,
+        "newtonian_pbar": 0.04105399037122331,
+        "extra_pbar": 1.732899702601931e-07,
+        "extra_fraction": 4.221026231390658e-06
+      },
+      {
+        "r_over_R": 1.0,
+        "newtonian_pbar": 0.0,
+        "extra_pbar": 0.0,
+        "extra_fraction": null
+      }
+    ],
+    "equation": "delta p(r)=integral_r^R rho(s) GM_enc(s)/s^2 F(s) ds",
+    "qualification": "leading weak-field pressure correction; not an exact modified TOV solution"
+  },
+  "checks": {
+    "max_integrated_scalar_equation_relative_residual": 8.300949590885229e-16,
+    "max_independent_alpha_derivative_relative_error": 3.19013099127063e-12,
+    "max_independent_potential_derivative_relative_error": 1.920585267590459e-09,
+    "finite_matching_tail": [
+      {
+        "impact_Mpc": 0.0038283840798525306,
+        "fraction_extra_alpha_beyond_20_Mpc": 1.6599832586283725e-06
+      },
+      {
+        "impact_Mpc": 0.00037648891104485356,
+        "fraction_extra_alpha_beyond_20_Mpc": 1.0839546484842089e-06
+      },
+      {
+        "impact_Mpc": 0.0030128277754399237,
+        "fraction_extra_alpha_beyond_20_Mpc": 1.4476269385443885e-06
+      }
+    ]
+  },
+  "identifiability": {
+    "illustrative_image_sigma_arcsec": 0.001,
+    "illustrative_delay_sigma_days": 0.1,
+    "fixed_center_nuisance_names": [
+      "source_0_per_arcsec",
+      "source_1_per_arcsec",
+      "log_mass",
+      "log_radius",
+      "compensated_mass_sheet_log_scale"
+    ],
+    "fixed_center": {
+      "nuisance_rank": 5,
+      "signal_rank": 1,
+      "raw_signal_singular_values": [
+        0.008188675766480098
+      ],
+      "projected_signal_singular_values": [
+        6.390779263527678e-07
+      ],
+      "relative_rank_tolerance": 1e-08,
+      "absolute_rank_threshold": 8.188675766480098e-11,
+      "Fisher": [
+        [
+          4.0842059595135367e-13
+        ]
+      ],
+      "projected_response": [
+        [
+          -2.9576043922979744e-08
+        ],
+        [
+          -3.5773158642828777e-19
+        ],
+        [
+          3.400429091644352e-07
+        ],
+        [
+          -3.2332421295168663e-20
+        ],
+        [
+          -8.007455396148722e-08
+        ],
+        [
+          7.766269142415357e-19
+        ],
+        [
+          -2.9345301160192336e-07
+        ],
+        [
+          4.4653115153798356e-07
+        ]
+      ],
+      "null_directions": [],
+      "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+      "nuisance_whitened_column_norms": [
+        1276.787581983726,
+        5991.304282219153,
+        625.1794275164248,
+        376.3308851828753,
+        259.8581025588089
+      ]
+    },
+    "free_center_nuisance_names": [
+      "source_0_per_arcsec",
+      "source_1_per_arcsec",
+      "log_mass",
+      "log_radius",
+      "compensated_mass_sheet_log_scale",
+      "lens_center_x_per_arcsec",
+      "lens_center_y_per_arcsec"
+    ],
+    "free_center": {
+      "nuisance_rank": 7,
+      "signal_rank": 0,
+      "raw_signal_singular_values": [
+        0.008188675766480098
+      ],
+      "projected_signal_singular_values": [
+        3.745551420648743e-18
+      ],
+      "relative_rank_tolerance": 1e-08,
+      "absolute_rank_threshold": 8.188675766480098e-11,
+      "Fisher": [
+        [
+          1.4029155444723814e-35
+        ]
+      ],
+      "projected_response": [
+        [
+          0.0
+        ],
+        [
+          -7.617345922968396e-19
+        ],
+        [
+          -2.2768245622195593e-18
+        ],
+        [
+          2.5555447917346233e-19
+        ],
+        [
+          -2.6020852139652106e-18
+        ],
+        [
+          -6.988810594629593e-19
+        ],
+        [
+          -4.336808689942018e-19
+        ],
+        [
+          -8.673617379884035e-19
+        ]
+      ],
+      "null_directions": [
+        [
+          1.0
+        ]
+      ],
+      "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+      "nuisance_whitened_column_norms": [
+        1276.787581983726,
+        5991.304282219153,
+        625.1794275164248,
+        376.3308851828753,
+        259.8581025588089,
+        1893.8588561260892,
+        6149.714222818738
+      ]
+    },
+    "qualification": "rank concerns this finite spherical profile only; covariance is a numerical scaling, not observed precision"
+  },
+  "assumptions": [
+    "Pure cubic R1 compatibility EFT with the previously frozen background; no retuned parameters.",
+    "The independent rolling scalar T is not the S6 target phase and not a duplicate metric scalar.",
+    "Leading weak-field, local quasi-static approximation with nonlinear second spatial derivatives retained.",
+    "Regular scalar branch, pi prime(0)=0, decaying isolated excess at large radius; no extra interface charge.",
+    "Same prescribed density, physical source, measured redshifts and three compatible background maps.",
+    "No optional high-spatial-derivative topographic kernel is included in this named EFT specialization.",
+    "Line projection treats the local coefficients at lens time; global closed-cosmology matching is not completed.",
+    "Numerical precision is not a bound on omitted post-Newtonian, time-dependent, or additional-sector physics.",
+    "The existing zero additional constant-eta response is preserved; this is a separate previously specified scalar sector."
+  ],
+  "provenance_sha256": {
+    "preregistration\\prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+    "code\\background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+    "manuscript\\sections\\04_scalar_metric_bridge.tex": "4c8ad4bc882783dc061858cfed54d8cd9c13800a7edac6405fe9682fb9bd7bae",
+    "artifacts\\strong_lensing_first_comparison_20261020\\results.json": "a6df929ba8370aef2851def5422e29ec2f209e397402d60340d0f2991156a7b1"
+  }
+}

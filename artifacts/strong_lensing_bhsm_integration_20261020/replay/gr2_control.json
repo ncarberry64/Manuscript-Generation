@@ -1,0 +1,350 @@
+{
+  "status": "COMMON_FINITE_BODY_GR_2PM_ROBUSTNESS_CONTROL",
+  "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+  "preparation": "Same prescribed density, incident light, physical source, measured redshifts, clock, compatible maps, frozen R1 coefficients and leading scalar profile.",
+  "coefficients": {
+    "z_l": 0.3,
+    "H0_km_s_Mpc": 67.4,
+    "H_over_H0": 1.1836105771853052,
+    "Tdot_over_MplH0": 0.2377644263710765,
+    "Tddot_over_MplH02": 0.2484715891238288,
+    "lambda_over_MplH02": 1.0,
+    "b": 0.11306384489513412,
+    "C": 4.238858559433703
+  },
+  "body": {
+    "mass_Msun": 100000000000.0,
+    "radius_Mpc": 0.003,
+    "compactness": 1.595138613862614e-06
+  },
+  "conventional_1pm": {
+    "images_rad": [
+      [
+        4.050502114949878e-06,
+        0.0
+      ],
+      [
+        -3.9833232471834377e-07,
+        0.0
+      ],
+      [
+        -3.1876282582569995e-06,
+        2.894599020946575e-22
+      ]
+    ],
+    "images_arcsec": [
+      [
+        0.8354760339435907,
+        0.0
+      ],
+      [
+        -0.08216193977998465,
+        0.0
+      ],
+      [
+        -0.6574955250771493,
+        5.970539062185801e-17
+      ]
+    ],
+    "arrival_days": [
+      4.436398158878797,
+      26.152474724935665,
+      18.707850545787437
+    ],
+    "relative_delays_days": [
+      21.71607656605687,
+      14.27145238690864
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22,
+    "max_stationarity_Mpc": 1.734723475976807e-18,
+    "inverse_magnification_determinants": [
+      0.380676428194549,
+      4.529393477171768,
+      -0.6146648464950275
+    ],
+    "minimum_image_Jacobian_singular_value": 0.2130288621522064
+  },
+  "scalar_on_1pm": {
+    "images_rad": [
+      [
+        4.050531801430867e-06,
+        0.0
+      ],
+      [
+        -3.9832850386698917e-07,
+        0.0
+      ],
+      [
+        -3.1876493408236464e-06,
+        0.0
+      ]
+    ],
+    "images_arcsec": [
+      [
+        0.83548215721984,
+        0.0
+      ],
+      [
+        -0.08216115167282029,
+        0.0
+      ],
+      [
+        -0.6574998736686738,
+        0.0
+      ]
+    ],
+    "arrival_days": [
+      4.436296562989014,
+      26.15267358342261,
+      18.70784905428857
+    ],
+    "relative_delays_days": [
+      21.716377020433598,
+      14.271552491299555
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22
+  },
+  "conventional_1pm_plus_2pm": {
+    "images_rad": [
+      [
+        4.050508682060961e-06,
+        0.0
+      ],
+      [
+        -3.9833239838023125e-07,
+        0.0
+      ],
+      [
+        -3.1876366030394303e-06,
+        1.748440614045248e-31
+      ]
+    ],
+    "images_arcsec": [
+      [
+        0.8354773885074859,
+        0.0
+      ],
+      [
+        -0.0821619549738396,
+        0.0
+      ],
+      [
+        -0.6574972463120805,
+        3.606417644905973e-26
+      ]
+    ],
+    "arrival_days": [
+      4.436368023530104,
+      26.152540477639917,
+      18.707849952631783
+    ],
+    "relative_delays_days": [
+      21.716172454109813,
+      14.271481929101679
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22,
+    "max_stationarity_Mpc": 2.6020852139652106e-18,
+    "inverse_magnification_determinants": [
+      0.38067650176992357,
+      4.529393791155147,
+      -0.614664654663831
+    ],
+    "minimum_image_Jacobian_singular_value": 0.21302851676738932
+  },
+  "scalar_on_common_gr2": {
+    "images_rad": [
+      [
+        4.0505383685084695e-06,
+        0.0
+      ],
+      [
+        -3.9832857752914727e-07,
+        0.0
+      ],
+      [
+        -3.187657685581384e-06,
+        0.0
+      ]
+    ],
+    "images_arcsec": [
+      [
+        0.8354835117768292,
+        0.0
+      ],
+      [
+        -0.08216116686673107,
+        0.0
+      ],
+      [
+        -0.6575015948985118,
+        0.0
+      ]
+    ],
+    "arrival_days": [
+      4.436266426840465,
+      26.152739336125506,
+      18.707848460215732
+    ],
+    "relative_delays_days": [
+      21.71647290928504,
+      14.271582033375267
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22
+  },
+  "scalar_difference_before": {
+    "images_microarcsec": [
+      [
+        6.123276249270226,
+        0.0
+      ],
+      [
+        0.7881071643622839,
+        0.0
+      ],
+      [
+        -4.348591524538925,
+        -5.9705390621858e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959258149259767,
+      8.64901937507625
+    ],
+    "conventional_delay_ratio": 1.5216444673828198,
+    "scalar_delay_ratio": 1.5216548468481388,
+    "delay_ratio_fractional_change_ppm": 6.821215823737958
+  },
+  "scalar_difference_after": {
+    "images_microarcsec": [
+      [
+        6.123269343349946,
+        0.0
+      ],
+      [
+        0.7881071085319435,
+        0.0
+      ],
+      [
+        -4.348586431279777,
+        -3.6064176449059726e-20
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959327139730703,
+      8.649009238058625
+    ],
+    "conventional_delay_ratio": 1.5216480364122034,
+    "scalar_delay_ratio": 1.5216584158994626,
+    "delay_ratio_fractional_change_ppm": 6.8212142432244605
+  },
+  "change_in_scalar_difference": {
+    "images_microarcsec": [
+      [
+        -6.905920280075861e-06,
+        0.0
+      ],
+      [
+        -5.583034035083756e-08,
+        0.0
+      ],
+      [
+        5.093259147770368e-06,
+        5.970539058579382e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      6.899047093611443e-05,
+      -1.0137017625311273e-05
+    ],
+    "delay_ratio_fractional_change_ppm": -1.5805134978563729e-06
+  },
+  "conventional_common_correction": {
+    "images_microarcsec": [
+      [
+        1.3545638951617534,
+        0.0
+      ],
+      [
+        -0.015193854951967012,
+        0.0
+      ],
+      [
+        -1.7212349312512032,
+        -5.970539058579382e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      8.284727774287148,
+      2.552445478528398
+    ],
+    "conventional_delay_ratio": 1.5216444673828198,
+    "scalar_delay_ratio": 1.5216480364122034,
+    "delay_ratio_fractional_change_ppm": 2.345508073764435
+  },
+  "scalar_on_common_correction": {
+    "images_microarcsec": [
+      [
+        1.3545569892414733,
+        0.0
+      ],
+      [
+        -0.015193910782307363,
+        0.0
+      ],
+      [
+        -1.7212298379920554,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      8.284796764758084,
+      2.5524353415107726
+    ],
+    "conventional_delay_ratio": 1.5216548468481388,
+    "scalar_delay_ratio": 1.5216584158994626,
+    "delay_ratio_fractional_change_ppm": 2.3455064932509373
+  },
+  "correction_at_original_images": {
+    "impact_Mpc": [
+      0.0038283840798525306,
+      0.00037648891104485356,
+      0.0030128277754399237
+    ],
+    "radial_alpha_rad": [
+      1.8407275108114026e-11,
+      -2.415893317054628e-13,
+      2.972158003683467e-11
+    ],
+    "potential_Mpc": [
+      1.9458774888722195e-14,
+      -4.245747541374026e-14,
+      3.8289200115545194e-16
+    ]
+  },
+  "checks": {
+    "max_lens_residual_rad": 8.470329472543003e-22,
+    "stationary_conventional_delay_change_seconds": [
+      8.284720129110502,
+      2.5524535185376602
+    ],
+    "finite_minus_stationary_conventional_delay_seconds": [
+      7.645176646420282e-06,
+      -8.040009262355596e-06
+    ],
+    "scalar_profile_identical": true
+  },
+  "scope": [
+    "The ordinary-GR second post-Minkowskian scattering deflection is derived from the same static Tolman-VII body, including its leading TOV pressure and impact-coordinate conversion.",
+    "The impact coordinate is the invariant asymptotic scattering impact, identified with the physical thin-plane impact in this control.",
+    "The thin-plane potential is the radial primitive of the deflection, and the same consistent gradient/Hessian and arrival functional are used for both models.",
+    "The scalar spatial profile is held at its declared leading quasi-static order. Scalar-GR second-order cross terms and scalar corrections to the 2PM fluid geometry are not calculated.",
+    "This control is not a complete finite-distance 2PM cosmological arrival calculation or a bound on all physical errors.",
+    "The positive effective-halo equivalence and nuisance-rank results in the manuscript are leading-order results; this common control does not claim to break them."
+  ],
+  "provenance_sha256": {
+    "scripts\\run_strong_lensing_gr2_control.py": "7f6c750cca67983b4a0d38f9b01adac192fbeae4d5876ef0d743f7a82e7e8560",
+    "code\\strong_lensing_gr2.py": "5edd7987ec568fde047b3e033cdf86ed1ac53cf2587f30f8244c9fa024b9ff11",
+    "code\\strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "artifacts\\strong_lensing_first_comparison_20261020\\results.json": "a6df929ba8370aef2851def5422e29ec2f209e397402d60340d0f2991156a7b1"
+  }
+}

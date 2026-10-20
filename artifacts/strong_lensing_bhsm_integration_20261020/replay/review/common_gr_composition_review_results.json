@@ -1,0 +1,427 @@
+{
+  "scope": "Shared ordinary-GR 2PM robustness test inside the same isolated-scattering thin-plane convention; no scalar PN completion.",
+  "compactness": 1.595138613862614e-06,
+  "checks": {
+    "primitive": [
+      {
+        "y": 0.0,
+        "analytic": -2.7761804411858044,
+        "integrated": -2.776180441185804,
+        "absolute_difference": 4.440892098500626e-16
+      },
+      {
+        "y": 1e-05,
+        "analytic": -2.7761804412286626,
+        "integrated": -2.776180441228662,
+        "absolute_difference": 4.440892098500626e-16
+      },
+      {
+        "y": 0.12549630368161785,
+        "analytic": -2.7810324728972278,
+        "integrated": -2.7810324728972255,
+        "absolute_difference": 2.220446049250313e-15
+      },
+      {
+        "y": 0.5,
+        "analytic": -2.4903495252549215,
+        "integrated": -2.49034952525492,
+        "absolute_difference": 1.3322676295501878e-15
+      },
+      {
+        "y": 0.8,
+        "analytic": -1.2225355214731248,
+        "integrated": -1.2225355214731235,
+        "absolute_difference": 1.3322676295501878e-15
+      },
+      {
+        "y": 0.97,
+        "analytic": -0.1803600080788766,
+        "integrated": -0.1803600080788766,
+        "absolute_difference": 0.0
+      },
+      {
+        "y": 1.0,
+        "analytic": 0.0,
+        "integrated": 0.0,
+        "absolute_difference": 0.0
+      },
+      {
+        "y": 1.004275925146641,
+        "analytic": 0.025080037813112844,
+        "integrated": 0.02508003781311285,
+        "absolute_difference": 6.938893903907228e-18
+      },
+      {
+        "y": 1.2761280266175101,
+        "analytic": 1.2745808440324855,
+        "integrated": 1.2745808440324855,
+        "absolute_difference": 0.0
+      },
+      {
+        "y": 3.0,
+        "analytic": 3.926990816987241,
+        "integrated": 3.926990816987241,
+        "absolute_difference": 0.0
+      }
+    ],
+    "derivative": [
+      {
+        "y": 0.0001,
+        "analytic": -0.8571419271428553,
+        "finite_difference": -0.8571419271429211,
+        "relative_difference": 7.680901292475703e-14
+      },
+      {
+        "y": 0.12549630368161785,
+        "analytic": 0.5608096514956529,
+        "finite_difference": 0.56080965190608,
+        "relative_difference": 7.318474910803791e-10
+      },
+      {
+        "y": 0.5,
+        "analytic": 12.19463844038987,
+        "finite_difference": 12.194638440369644,
+        "relative_difference": 1.6585648744169059e-12
+      },
+      {
+        "y": 0.97,
+        "analytic": -5.000882108066525,
+        "finite_difference": -5.000882108093426,
+        "relative_difference": 5.379102969438597e-12
+      },
+      {
+        "y": 1.004275925146641,
+        "analytic": -11.631132017362285,
+        "finite_difference": -11.631132017497768,
+        "relative_difference": 1.1648284615567781e-11
+      },
+      {
+        "y": 1.2761280266175101,
+        "analytic": -5.668894828565085,
+        "finite_difference": -5.668894828640228,
+        "relative_difference": 1.3255396208917446e-11
+      }
+    ],
+    "small_y_I_over_y": -0.8571428571425473,
+    "expected_small_y_limit": -0.8571428571428571,
+    "surface_I": 5.890486225480862,
+    "expected_surface_I": 5.890486225480862,
+    "surface_I_prime": -11.780972450961723,
+    "expected_surface_I_prime": -11.780972450961723,
+    "central_correction": [
+      -4.238340040055646e-14,
+      [
+        0.0,
+        0.0
+      ],
+      [
+        [
+          -1.4539812556774523e-09,
+          -0.0
+        ],
+        [
+          -0.0,
+          -1.4539812556774523e-09
+        ]
+      ]
+    ],
+    "exterior_coefficients": [
+      {
+        "impact_Mpc": 0.0038283840798525306,
+        "computed": 1.8407275108114026e-11,
+        "expected": 1.8407275108114026e-11
+      },
+      {
+        "impact_Mpc": 0.0030128277754399237,
+        "computed": 2.972158003683467e-11,
+        "expected": 2.972158003683467e-11
+      }
+    ]
+  },
+  "old_image_impact_Mpc": [
+    0.0038283840798525306,
+    0.00037648891104485356,
+    0.0030128277754399237
+  ],
+  "gr_extra_alpha_rad": [
+    1.8407275108114026e-11,
+    -2.415893317054628e-13,
+    2.972158003683467e-11
+  ],
+  "gr_extra_potential_Mpc": [
+    1.9458774888722195e-14,
+    -4.245747541374026e-14,
+    3.8289200115545194e-16
+  ],
+  "solutions": {
+    "one_pm": {
+      "images_rad": [
+        [
+          4.050502114949879e-06,
+          0.0
+        ],
+        [
+          -3.983323247183437e-07,
+          0.0
+        ],
+        [
+          -3.1876282582569995e-06,
+          0.0
+        ]
+      ],
+      "images_arcsec": [
+        [
+          0.8354760339435908,
+          0.0
+        ],
+        [
+          -0.08216193977998464,
+          0.0
+        ],
+        [
+          -0.6574955250771493,
+          0.0
+        ]
+      ],
+      "arrival_days": [
+        4.436398158878794,
+        26.152474724935665,
+        18.707850545787437
+      ],
+      "relative_delays_days": [
+        21.71607656605687,
+        14.271452386908642
+      ],
+      "max_lens_residual_rad": 8.470329472543003e-22
+    },
+    "one_pm_plus_r1": {
+      "images_rad": [
+        [
+          4.050531801430866e-06,
+          0.0
+        ],
+        [
+          -3.9832850386698917e-07,
+          0.0
+        ],
+        [
+          -3.1876493408236464e-06,
+          0.0
+        ]
+      ],
+      "images_arcsec": [
+        [
+          0.8354821572198398,
+          0.0
+        ],
+        [
+          -0.08216115167282029,
+          0.0
+        ],
+        [
+          -0.6574998736686738,
+          0.0
+        ]
+      ],
+      "arrival_days": [
+        4.436296562989011,
+        26.15267358342261,
+        18.70784905428857
+      ],
+      "relative_delays_days": [
+        21.7163770204336,
+        14.271552491299559
+      ],
+      "max_lens_residual_rad": 8.470329472543003e-22
+    },
+    "two_pm": {
+      "images_rad": [
+        [
+          4.050508682060961e-06,
+          0.0
+        ],
+        [
+          -3.9833239838023146e-07,
+          0.0
+        ],
+        [
+          -3.1876366030394307e-06,
+          0.0
+        ]
+      ],
+      "images_arcsec": [
+        [
+          0.8354773885074859,
+          0.0
+        ],
+        [
+          -0.08216195497383964,
+          0.0
+        ],
+        [
+          -0.6574972463120806,
+          0.0
+        ]
+      ],
+      "arrival_days": [
+        4.436368023530104,
+        26.152540477639917,
+        18.707849952631783
+      ],
+      "relative_delays_days": [
+        21.716172454109813,
+        14.271481929101679
+      ],
+      "max_lens_residual_rad": 8.470329472543003e-22
+    },
+    "two_pm_plus_r1": {
+      "images_rad": [
+        [
+          4.0505383685084695e-06,
+          0.0
+        ],
+        [
+          -3.9832857752914743e-07,
+          0.0
+        ],
+        [
+          -3.187657685581384e-06,
+          0.0
+        ]
+      ],
+      "images_arcsec": [
+        [
+          0.8354835117768292,
+          0.0
+        ],
+        [
+          -0.0821611668667311,
+          0.0
+        ],
+        [
+          -0.6575015948985118,
+          0.0
+        ]
+      ],
+      "arrival_days": [
+        4.436266426840466,
+        26.152739336125506,
+        18.707848460215732
+      ],
+      "relative_delays_days": [
+        21.71647290928504,
+        14.271582033375267
+      ],
+      "max_lens_residual_rad": 8.470329472543003e-22
+    }
+  },
+  "common_gr_changes": {
+    "images_microarcsec": [
+      [
+        1.354563895050731,
+        0.0
+      ],
+      [
+        -0.015193855007478163,
+        0.0
+      ],
+      [
+        -1.7212349313622255,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      8.284727774287148,
+      2.5524454783749206
+    ]
+  },
+  "original_screened_difference": {
+    "images_microarcsec": [
+      [
+        6.1232762489371595,
+        0.0
+      ],
+      [
+        0.7881071643484061,
+        0.0
+      ],
+      [
+        -4.348591524538925,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959258149566722,
+      8.649019375229727
+    ]
+  },
+  "corrected_screened_difference": {
+    "images_microarcsec": [
+      [
+        6.123269343349946,
+        0.0
+      ],
+      [
+        0.7881071085458213,
+        0.0
+      ],
+      [
+        -4.348586431168755,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959327139730703,
+      8.649009238058625
+    ]
+  },
+  "screened_difference_drift": {
+    "images_microarcsec": [
+      [
+        -6.905587213168474e-06,
+        0.0
+      ],
+      [
+        -5.580258477522193e-08,
+        0.0
+      ],
+      [
+        5.093370170072831e-06,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      6.899016398165259e-05,
+      -1.0137171102542197e-05
+    ]
+  },
+  "screened_delay_difference_fractional_drift": [
+    2.657632340036808e-06,
+    -1.1720601680665032e-06
+  ],
+  "mixed_stationary_prediction_of_delay_drift_seconds": [
+    6.899077896814695e-05,
+    -1.0137569105787359e-05
+  ],
+  "four_case_minus_mixed_stationary_prediction_seconds": [
+    -6.149864943601766e-10,
+    3.980032451614962e-10
+  ],
+  "first_order_common_gr_delays_seconds": [
+    8.284720129110504,
+    2.5524535185376633
+  ],
+  "first_order_screened_delays_on_corrected_base_seconds": [
+    25.959167913313518,
+    8.648953142723094
+  ],
+  "common_gr_finite_minus_first_order_seconds": [
+    7.645176644643925e-06,
+    -8.040162742695145e-06
+  ],
+  "screened_finite_minus_first_order_seconds": [
+    0.00015922641718546515,
+    5.6095335530415014e-05
+  ],
+  "qualification": "Tiny numerical drift is conditional on this shared GR correction; it is not a bound on omitted scalar-GR cross terms, local time evolution, finite-distance matching, or profile degeneracies."
+}

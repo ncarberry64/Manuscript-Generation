@@ -1,0 +1,293 @@
+{
+  "status": "conditional identifiability design and fixed R1 local response; no data detection or forecast",
+  "source_redshifts": [
+    0.8,
+    1.2,
+    1.8
+  ],
+  "source_offset": "0.1 theta_E at angles (0.15,1.1,2.2) rad relative to shared center",
+  "image_counts": [
+    3,
+    3,
+    3
+  ],
+  "images_arcsec": [
+    [
+      [
+        0.7589609716592836,
+        0.12265779761766399
+      ],
+      [
+        -0.016607830293156906,
+        -0.015470408563177915
+      ],
+      [
+        -0.6537193013221524,
+        -0.08640589099039524
+      ]
+    ],
+    [
+      [
+        0.481579159686885,
+        0.6675070669534088
+      ],
+      [
+        0.00595409043368576,
+        -0.03793999559001294
+      ],
+      [
+        -0.2378749373301836,
+        -0.702550606033879
+      ]
+    ],
+    [
+      [
+        -0.5586510744945119,
+        0.6247250540850718
+      ],
+      [
+        0.036812108766725214,
+        -0.03323710325770126
+      ],
+      [
+        0.4350003079003879,
+        -0.6650193902437178
+      ]
+    ]
+  ],
+  "impact_over_R": [
+    [
+      1.146751722979612,
+      0.05653661770704126,
+      1.0356530718199102
+    ],
+    [
+      1.2521832084169089,
+      0.047765501440038605,
+      1.1287729863169762
+    ],
+    [
+      1.31190974195104,
+      0.04380838413086521,
+      1.1843963524112875
+    ]
+  ],
+  "nuisance_names": [
+    "source_0_x",
+    "source_0_y",
+    "source_1_x",
+    "source_1_y",
+    "source_2_x",
+    "source_2_y",
+    "shared_log_M",
+    "shared_log_R",
+    "shared_center_x",
+    "shared_center_y",
+    "shared_physical_convergence",
+    "shared_physical_shear1",
+    "shared_physical_shear2",
+    "free_delay_scale_0",
+    "free_delay_scale_1",
+    "free_delay_scale_2"
+  ],
+  "signal_names": [
+    "log_q_0",
+    "log_q_1",
+    "log_q_2"
+  ],
+  "fixed_nuisance": {
+    "nuisance_rank": 0,
+    "signal_rank": 3,
+    "raw_signal_singular_values": [
+      635.3629963219068,
+      616.4389643188333,
+      546.0102335268714
+    ],
+    "projected_signal_singular_values": [
+      635.3629963219068,
+      616.4389643188333,
+      546.0102335268714
+    ]
+  },
+  "shared_lens_and_tides_free_delay_scales": {
+    "nuisance_rank": 16,
+    "signal_rank": 1,
+    "raw_signal_singular_values": [
+      635.3629963219068,
+      616.4389643188333,
+      546.0102335268714
+    ],
+    "projected_signal_singular_values": [
+      567.9104155465983,
+      4.638392607336401e-12,
+      4.824219720386073e-13
+    ]
+  },
+  "additionally_independent_source_convergence": {
+    "nuisance_rank": 17,
+    "signal_rank": 0,
+    "raw_signal_singular_values": [
+      635.3629963219068,
+      616.4389643188333,
+      546.0102335268714
+    ],
+    "projected_signal_singular_values": [
+      1.0589088240445942e-12,
+      6.499662178065121e-13,
+      4.3199776451555355e-13
+    ]
+  },
+  "local_screened_signal": {
+    "source": "same R1ScreenedLens intrinsic_extra; no geometry or nuisance changes",
+    "fixed_nuisance": {
+      "nuisance_rank": 0,
+      "signal_rank": 1,
+      "raw_signal_singular_values": [
+        0.015152799890087887
+      ],
+      "projected_signal_singular_values": [
+        0.015152799890087887
+      ]
+    },
+    "shared_lens_and_tides_free_delay_scales": {
+      "nuisance_rank": 16,
+      "signal_rank": 1,
+      "raw_signal_singular_values": [
+        0.015152799890087887
+      ],
+      "projected_signal_singular_values": [
+        2.022645429599313e-05
+      ]
+    },
+    "additionally_independent_source_convergence": {
+      "nuisance_rank": 17,
+      "signal_rank": 1,
+      "raw_signal_singular_values": [
+        0.015152799890087887
+      ],
+      "projected_signal_singular_values": [
+        1.8216887025957134e-05
+      ]
+    },
+    "shared_retained_norm_fraction": 0.0013348327993973007,
+    "independent_source_convergence_retained_norm_fraction": 0.0012022126048053731,
+    "projected_response_units": "whitened by 0.001 arcsec / 0.1 day; not original physical coordinates",
+    "nuisance_orthogonal_statistic": {
+      "definition": "S = weights dot (observables - conventional baseline); weights annihilate every admitted nuisance column to first order",
+      "observable_order": "for each source in increasing redshift: image0_x,image0_y,image1_x,image1_y,image2_x,image2_y,delay1,delay2; angles arcsec, delays days",
+      "weights": [
+        222.9442302632734,
+        132.08070701331027,
+        116.4689350677766,
+        206.46512066469708,
+        328.1058050767647,
+        96.40870295311875,
+        0.9641191932158144,
+        -2.5232613397440677,
+        -155.61722042851238,
+        -100.43415594444649,
+        -271.3025362721746,
+        237.86303531851024,
+        -141.5814508168307,
+        -196.7167478710367,
+        -0.417529289631326,
+        1.265040316117917,
+        65.36955602354655,
+        -151.44448293012806,
+        -204.98005257171627,
+        -7.618031573103241,
+        40.592733657959094,
+        -216.60414763142887,
+        -1.6697208999505104,
+        5.477596558234474
+      ],
+      "expected_screened_response": 1.821688702595713e-05,
+      "units": "dimensionless numerical normalization; illustrative covariance is not a measured likelihood"
+    },
+    "response_vector": [
+      4.990955599357775e-06,
+      1.0139580368710666e-06,
+      3.506112514052371e-07,
+      5.1790014384947934e-08,
+      -4.39411208931465e-06,
+      -2.972847485138314e-07,
+      0.00025445342988263516,
+      4.016785300057904e-05,
+      4.181652621150328e-06,
+      4.786904247184863e-06,
+      1.227628698921421e-07,
+      2.4725714723971136e-07,
+      -1.3394908276020299e-06,
+      -5.282923858501116e-06,
+      0.0002943624238820173,
+      4.631471554952069e-05,
+      -5.46975163204377e-06,
+      4.574454619733222e-06,
+      -1.4255480870242617e-07,
+      1.9822366860835984e-07,
+      2.989815195517487e-06,
+      -5.3183581572448394e-06,
+      0.0003175811682404959,
+      4.8828073438849824e-05
+    ],
+    "projected_shared_response": [
+      1.5578940051573509e-06,
+      1.3570945784028426e-06,
+      1.6439383760264705e-06,
+      4.036412774441282e-06,
+      7.495088395016725e-06,
+      1.4579339766485804e-06,
+      1.68014921155717e-06,
+      -4.3972317742259565e-06,
+      1.4140091859817655e-07,
+      2.550429337462752e-06,
+      -5.110998144710721e-06,
+      4.8400552345763675e-06,
+      -4.057895223816537e-06,
+      -7.96541886794594e-06,
+      -6.086559180100426e-07,
+      1.8441203863854084e-06,
+      3.07845287470139e-06,
+      -4.8785054543067086e-06,
+      -3.893496257269068e-06,
+      2.3987112060367983e-09,
+      -8.543849437016998e-07,
+      -1.400400290478207e-06,
+      -3.120045725333795e-06,
+      1.023545415706589e-05
+    ],
+    "projected_independent_source_convergence_response": [
+      4.061349855795024e-06,
+      2.4060993179700167e-06,
+      2.121701432163223e-06,
+      3.761151777949394e-06,
+      5.9770663836441335e-06,
+      1.7562664500160238e-06,
+      1.7563250422369427e-06,
+      -4.596596676308292e-06,
+      -2.8348613238396783e-06,
+      -1.8295976723873425e-06,
+      -4.942287653125841e-06,
+      4.333124042048552e-06,
+      -2.579173294501311e-06,
+      -3.5835667720803682e-06,
+      -7.606083899242e-07,
+      2.3045096522001187e-06,
+      1.190829817017923e-06,
+      -2.7588470362426357e-06,
+      -3.734098460273709e-06,
+      -1.387768205273962e-07,
+      7.394732431218083e-07,
+      -3.94585328675548e-06,
+      -3.041711699927792e-06,
+      9.978475767512902e-06
+    ]
+  },
+  "covariance": "illustrative 1 mas coordinate and 0.1 day delay; not forecast",
+  "effective_halo_degeneracy": {
+    "mass_profile": "delta M_eff(r) = M mu(r) F(r); delta rho_eff = M/(4 pi r^2) d[mu F]/dr >= 0",
+    "total_extra_effective_mass_Msun": 150788624.38121513,
+    "scope": "because Phi=Psi at this order, a sufficiently flexible conventional spherical halo reproduces the complete optical modification; the retained rank is only relative to the stated finite profile family"
+  },
+  "qualification": "same finite spherical radial profile, common physical sheet/shear/center; source-dependent convergence removes the cosmographic q response but does not remove the computed local radial-shape response"
+}

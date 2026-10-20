@@ -1,0 +1,417 @@
+# A sourced local lens from the frozen R1 cubic action
+
+> Scope reconciliation: the [current BHSM scope](../STRONG_LENSING_SCOPE_20261020.md)
+> supersedes earlier project framing in this retained technical record. The
+> governing question is surface contributions to envelope light transfer;
+> conventional effective-mass equivalence is a constructive result at the
+> retained order. Reference-body offsets are not discrepancies between fully
+> matched representations. The full surface-to-R1 common-source derivation
+> remains unfinished. Equations, numerical evidence and review chronology
+> below keep their original scope.
+
+**Status:** new conditional prediction of the declared classical R1 compatibility action. This is not a completed microscopic BHSM derivation, a calibrated local fourth-order topographic response, or an exact modified-gravity Tolman–Oppenheimer–Volkoff solution.
+
+**Source revisions:** `ncarberry64/Manuscript-Generation@49a1dabbe148f8ba9da4ac079a8d93fe97c5de76`; original BHSM inspection at `ncarberry64/Berger-Hopf-Standard-Model@524ed90689bd5923c249bba2e699abf627e703cd`. Immutable source URLs and Git blob identities are recorded in `source_manifest.json`. Numerical input SHA256 hashes are recorded in `r1_qs_coefficients.json`.
+
+## 1. Which field is being varied?
+
+The manuscript defines its local geometric deformation through
+
+\[
+\gamma_{ij}=a^2e^{2\psi_{\rm geo}}\bar\gamma^{S^3}_{ij}.
+\]
+
+Consequently, at linear order in the conventional Newtonian metric
+
+\[
+ds^2=-(1+2\Phi)dt^2+a^2(1-2\Psi)d\mathbf x^2,
+\]
+
+that geometric coordinate is \(\psi_{\rm geo}=-\Psi\). It is part of the metric rather than an additional independent scalar to be appended to \((\Phi,\Psi)\). The same manuscript section separately names a topographic flux candidate \(F_T=\nabla T-B\nabla\Delta T\), and explicitly leaves its boundary-charge export into the dynamical geometric deformation unnormalized. These statements appear in [04am, lines 4–21](https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04am_bhsm_los_topographic_transfer.tex#L4-L21).
+
+The R1 compatibility action, however, already specifies an **independent scalar \(T\)** and its covariant coupling to gravity. That action supplies the local response below without identifying \(T\) with the geometric deformation or with a physical target-space \(\eta\) phase. A vanishing source in the earlier restricted \(\eta\) family does not remove the matter-curvature source in this different, explicitly declared action.
+
+**Scalar perturbation notation:** below, \(\pi\equiv\pi_T\equiv\delta T\) has the units of the scalar field. The existing cosmological provider exports a different quantity, \(\pi_{\rm time}=-\chi_{\rm ADM}\), with the units of a time displacement; see [action_native_matter_n2.py, the Newtonian-gauge reconstruction](https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/code/action_native_matter_n2.py#L142-L154). Its rows \(\Phi=\alpha+\dot\chi_{\rm ADM}\) and \(\Psi=-\zeta-H\chi_{\rm ADM}\) correspond to \(\xi^0=-\chi_{\rm ADM}\). With the ordinary scalar transformation \(\delta T\mapsto\delta T-v\xi^0\) from unitary gauge, \(\pi_T=v\chi_{\rm ADM}=-v\pi_{\rm time}\). The local field profile must not be inserted as an unconverted time-displacement column.
+
+The inspected original BHSM source still labels its topographic action terms as symbolic scaffolds: [topographic_action.py, lines 25–60](https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/524ed90689bd5923c249bba2e699abf627e703cd/src/topographic_action.py#L25-L60). Its boundary-action bridge is explicitly a candidate: [topographic_attractor_boundary_action_bridge.md, lines 3–23](https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/524ed90689bd5923c249bba2e699abf627e703cd/theory/topographic_attractor_boundary_action_bridge.md#L3-L23). Those inspected files do not provide an additional numerical galaxy-source normalization. This is a finding about the inspected sources; it does not assert that no relevant derivation exists in other records or local Downloads.
+
+## 2. Common action, conventions, and the scalar source
+
+Use signature \((-+++)\), \(c=\hbar=1\), \(M_{\rm Pl}^{-2}=8\pi G\), and write \(\lambda\equiv\Lambda^3\). The supplied action is
+
+\[
+S=\int d^4x\sqrt{-g}\left[
+\frac{M_{\rm Pl}^2}{2}R-\frac12(\nabla T)^2
++\frac{(\nabla T)^2\Box T}{\lambda}-V(T)+\mathcal L_m
+\right],\qquad V(T)=V_0-\mu^3T.
+\tag{1}
+\]
+
+This is exactly the compatibility action in [04_scalar_metric_bridge.tex, lines 4–27 and 59–83](https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04_scalar_metric_bridge.tex). In the convention \(\mathcal L_3=-G_3\Box T\), it has \(G_3=2X/\lambda\), \(X=-(\nabla T)^2/2\), constant \(G_4=M_{\rm Pl}^2/2\), and \(G_5=0\).
+
+Varying (1), including the curvature term generated by commuting covariant derivatives, gives
+
+\[
+\Box T+\frac{2}{\lambda}
+\left[(\nabla_\mu\nabla_\nu T)^2-(\Box T)^2
++R_{\mu\nu}\nabla^\mu T\nabla^\nu T\right]-V_T=0.
+\tag{2}
+\]
+
+For a homogeneous field with \(v=\dot{\bar T}\), this yields the already implemented current equation
+
+\[
+J=v+\frac{6Hv^2}{\lambda},\qquad \dot J+3HJ=\mu^3.
+\tag{3}
+\]
+
+Thus the signs can be checked against the existing background rather than selected to obtain an attractive local force. The current and coupled background derivative equations are in [code/background.py, lines 59–83](https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/code/background.py#L59-L83).
+
+Let \(g_3=2/\lambda\), \(U_\mu=\nabla_\mu T\), and \(\Pi_{\mu\nu}=\nabla_\mu\nabla_\nu T\). The cubic stress tensor is
+
+\[
+T^{(3)}_{\mu\nu}=-g_3(\Box T)U_\mu U_\nu
++2g_3U_{(\mu}\Pi_{\nu)\alpha}U^\alpha
+-g_3g_{\mu\nu}\Pi_{\alpha\beta}U^\alpha U^\beta.
+\tag{4}
+\]
+
+On the homogeneous background it reproduces \(\rho_3=6Hv^3/\lambda\) and \(p_3=-2v^2\dot v/\lambda\), as in the source action section. The nonzero matter coupling used below is the Ricci/braiding term in (2), with Ricci curvature constrained by (4) and the Einstein equation. No independent phenomenological scalar-matter coupling is introduced.
+
+## 3. A local, frozen, weak-metric problem
+
+At the chosen lens epoch set
+
+\[
+T=\bar T(t)+\pi(r),\qquad
+v=\dot{\bar T},\qquad d=\ddot{\bar T}.
+\]
+
+Here \(r\) is physical radius in the local lens frame. Subtract the homogeneous R1 equations first. The local source is the finite matter excess \(\delta\rho\); it is not the total cosmic density inserted a second time. Freeze \(v,d,H\) during the encounter. Work to leading weak-metric and quasi-static order while retaining the quadratic scalar Hessian that produces screening. The linear potential has \(V_{TT}=0\), so there is no added Yukawa mass in this local problem.
+
+Define
+
+\[
+b=\frac{2v^2}{\lambda},\qquad
+A=1+\frac{4(d+2Hv)}{\lambda}.
+\tag{5}
+\]
+
+The leading scalar and metric constraints are
+
+\[
+A\Delta\pi-\frac{2}{\lambda}
+\left[(\Delta\pi)^2-(\partial_i\partial_j\pi)^2\right]
++b\Delta\Phi=0,
+\tag{6}
+\]
+
+\[
+2M_{\rm Pl}^2\Delta\Phi=\delta\rho-b\Delta\pi,
+\qquad \Phi=\Psi.
+\tag{7}
+\]
+
+The equality of the two potentials is a leading-order result of this cubic action with constant \(G_4\). Terms quadratic in local spatial gradients and higher weak-field orders can carry anisotropic stress; (7) is not an exact slip theorem for the full nonlinear spacetime.
+
+Eliminating the common metric constraint, rather than attaching an independent source by hand, gives
+
+\[
+C\Delta\pi-\frac{2}{\lambda}
+\left[(\Delta\pi)^2-(\partial_i\partial_j\pi)^2\right]
+=-\frac{b\,\delta\rho}{2M_{\rm Pl}^2},
+\tag{8}
+\]
+
+\[
+C=A-\frac{b^2}{2M_{\rm Pl}^2}
+=1+\frac{4(d+2Hv)}{\lambda}
+-\frac{2v^4}{M_{\rm Pl}^2\lambda^2}.
+\tag{9}
+\]
+
+The subtraction in (9) is the constrained scalar-metric mixing contribution. Neglecting it would not reproduce the common action.
+
+## 4. Finite-body solution and screening
+
+For a spherical profile,
+
+\[
+(\Delta\pi)^2-(\partial_i\partial_j\pi)^2
+=\frac{2}{r^2}\frac{d}{dr}(r\pi'^2).
+\]
+
+Regularity at the origin integrates (8) once:
+
+\[
+Cr^2\pi'-\frac4\lambda r\pi'^2=-bGM(<r).
+\tag{10}
+\]
+
+For \(C>0\), \(\lambda>0\), and nonnegative enclosed excess mass, choose the branch connected to \(\pi'=-bGM/(Cr^2)\) in the linear regime. A stable numerical expression for it is
+
+\[
+\pi'(r)=-\frac{2bGM(<r)}{
+r^2\left[C+\sqrt{C^2+16bGM(<r)/(\lambda r^3)}\right]}.
+\tag{11}
+\]
+
+The other quadratic root does not match the decaying weak-source response. The retained branch is regular for the prescribed body and has \(\pi'\le0\).
+
+The local metric follows directly from the same constraint:
+
+\[
+\Phi'(r)=\Psi'(r)=\frac{GM(<r)}{r^2}
+-\frac{b}{2M_{\rm Pl}^2}\pi'(r),
+\tag{12}
+\]
+
+\[
+\epsilon_F(r)\equiv\frac{\delta\Phi'}{\Phi_N'}
+=\frac{b^2}{M_{\rm Pl}^2
+\left[C+\sqrt{C^2+16bGM(<r)/(\lambda r^3)}\right]}.
+\tag{13}
+\]
+
+Both dynamics and Weyl lensing receive the same positive fractional force correction at this order. There is no leading cancellation in \(\Phi+\Psi\).
+
+For the total exterior mass define
+
+\[
+r_V^3=\frac{16bGM}{\lambda C^2},\qquad
+\epsilon_\infty\equiv\mu_\infty-1=\Sigma_\infty-1
+=\frac{b^2}{2M_{\rm Pl}^2C}.
+\tag{14}
+\]
+
+Then
+
+\[
+\epsilon_F(r)=\frac{2\epsilon_\infty}
+{1+\sqrt{1+(r_V/r)^3}},\qquad r\ge R.
+\tag{15}
+\]
+
+Deep in the exterior screened region this becomes
+\(2\epsilon_\infty(r/r_V)^{3/2}\). At large radius it approaches \(\epsilon_\infty\), while the actual potential and force still decay. The vanishing-source, \(b\to0\), and \(\lambda\to\infty\) limits recover the appropriate GR local branch.
+
+Use the same prescribed finite density as the earlier local control:
+
+\[
+\delta\rho(r)=\frac{15M}{8\pi R^3}\left(1-\frac{r^2}{R^2}\right),
+\qquad 0\le r\le R,
+\tag{16}
+\]
+
+with zero excess outside. It gives
+
+\[
+\frac{M(<r)}M=\frac{x^3(5-3x^2)}2\quad(x=r/R\le1),
+\qquad M(<r)=M\quad(r\ge R).
+\tag{17}
+\]
+
+Thus \(\pi'\propto r\) at the center, and no point-source singularity is inserted through the body. The vanishing surface density also avoids an artificial density shell.
+
+The minimally consistent pressure at this approximation order is obtained from
+
+\[
+p(r)=\int_r^R \delta\rho(s)\Phi'(s)\,ds,
+\qquad p(R)=0,
+\tag{18}
+\]
+
+so \(\delta p=\int_r^R\delta\rho\,\delta\Phi'\,ds>0\). This is a leading hydrostatic response for a prescribed density. The exact GR pressure profile cannot simply be relabeled an exact modified-gravity equilibrium, and (18) does not construct a full relativistic stellar sequence, equation of state, or radial stability calculation.
+
+## 5. Frozen numerical evaluation and physical units
+
+The original background is loaded by `action_native_matter_n2.frozen_background()`, which checks the manifest parameters and reuses the frozen shooting result without a new fit: [code/action_native_matter_n2.py, lines 28–39](https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/code/action_native_matter_n2.py#L28-L39).
+
+The dimensionless numerical convention is
+
+\[
+\widehat T=T/M_{\rm Pl},\quad
+\widehat v=v/(M_{\rm Pl}H_0),\quad
+\widehat d=d/(M_{\rm Pl}H_0^2),\quad
+\widehat\lambda=\lambda/(M_{\rm Pl}H_0^2),\quad
+\widehat b=b/M_{\rm Pl}.
+\]
+
+Thus \(C,D,A\) are dimensionless, physical \(b\) has mass dimension one, and physical \(\lambda\) has mass dimension three. The code name `LAMBDA=1` denotes \(\widehat\lambda=1\), not a second fitted local scale. Dimensionless radius is \(r/(c/H_0)\). The mass length is \(GM/c^2\), divided by \(c/H_0\) when used in the numerical equation.
+
+At \(z_l=0.3\), the frozen inputs give:
+
+| Quantity | Value |
+|---|---:|
+| \(\widehat T\) | 0.09074930116446112 |
+| \(\widehat v\) | 0.23776442637096692 |
+| \(H/H_0\) | 1.1836105771859786 |
+| \(\widehat d\) | 0.24847158912363834 |
+| \(\widehat b\) | 0.11306384489502991 |
+| \(A\) | 4.24525027594442 |
+| \(C\) | 4.238858559433196 |
+| \(D\), defined below | 4.396221028708471 |
+| \(C/D\) | 0.9642050596983963 |
+| \(\epsilon_\infty\) | 0.001507886243809552 |
+
+For \(M=10^{11}M_\odot\), \(R=3\) kpc, and the unchanged \(H_0=67.4\) km s\(^{-1}\) Mpc\(^{-1}\):
+
+| Quantity | Value |
+|---|---:|
+| \(c/H_0\) | 4447.959317507418 Mpc |
+| \(GM/c^2\) | \(4.7854158415878425\times10^{-9}\) Mpc |
+| \(GM/(Rc^2)\) | \(1.595138613862614\times10^{-6}\) |
+| \(r_V\) | 212.0292249771296 kpc |
+| \(H_l r_V/c\) | \(5.642138685209716\times10^{-5}\) |
+| \(K r_V^2/a_l^2\), in the code convention | \(6.912402979283595\times10^{-11}\) |
+
+Selected **finite-body** force corrections are:
+
+| Physical radius | \(\epsilon_F\) |
+|---|---:|
+| 1 kpc, inside the body | \(3.319097216447335\times10^{-6}\) |
+| 3 kpc, the surface | \(5.067058797822507\times10^{-6}\) |
+| 10 kpc | \(3.057431939410517\times10^{-5}\) |
+| 100 kpc | \(7.103766236898401\times10^{-4}\) |
+| 1000 kpc | \(1.5043099494072756\times10^{-3}\) |
+
+These are local force ratios. They must not be substituted directly for a projected photon deflection ratio. The many printed digits identify a reproducible numerical benchmark of the specified approximation, not a comparable physical accuracy claim.
+
+## 6. Lensing and matching to the existing cosmological propagation
+
+For impact parameter \(s\), the scalar contribution to the weak local deflection is
+
+\[
+\delta\hat\alpha(s)
+=4s\int_0^\infty
+\frac{\delta\Phi'(\sqrt{s^2+z^2})}{\sqrt{s^2+z^2}}\,dz.
+\tag{19}
+\]
+
+This expression already uses the equal-potential result; there is no additional free lensing coefficient. The lens potential must be obtained from this deflection, with its additive constant discarded in time-delay differences. In the exterior deep-screening asymptotic approximation, projection introduces the factor
+
+\[
+\int_0^\infty(1+u^2)^{-3/4}\,du
+=\frac{\sqrt\pi\,\Gamma(1/4)}{2\Gamma(3/4)}\simeq2.62206
+\]
+
+relative to the force ratio at the impact parameter. The actual computation should use (19) with the full transition and finite body, because convergence to that asymptotic form is slow.
+
+The reference distance/transport maps describe the smooth cosmological geometry and the separately selected global harmonic state. They exclude the main galaxy encounter. Replace that galaxy encounter with the sourced local response (12); count its GR matter potential only once. Do not re-add the same smooth harmonic as an independent local geometric \(\psi\). This construction uses the same local matter mass, radius, background, and endpoint distance conventions in the matched comparison.
+
+The local solution matches to the decaying linear perturbation in an overlap domain
+\(r_V\ll r\ll H_l^{-1},R_{\rm curvature}\). The rolling background and its constant density have already been removed from the source. A formal integral to infinity is the usual thin-lens extension of that matched local profile, not a claim that the static patch is valid on cosmological scales. For a matching cutoff \(L\gg\max(s,r_V)\), its scalar deflection tail is bounded at leading order by
+
+\[
+\frac{\delta\hat\alpha_{z>L}}{4GM/s}
+\lesssim\frac{\epsilon_\infty s^2}{2L^2}.
+\tag{20}
+\]
+
+Time variation during the principal screening region is controlled by \(H_l r_V/c\), and local curvature corrections by \(K r_V^2/a_l^2\). These are small here. Matter environment, nonsphericity, external convergence, and a different global matching prescription are additional model choices rather than fitted ingredients of this benchmark.
+
+## 7. Static ellipticity and the leading scalar time principal coefficient
+
+The same action permits a more informative check than merely evaluating the radial discriminant. Trace-reversing the Einstein equation and substituting it into the Ricci term of (2) gives
+
+\[
+\left(T^{(3)}_{\mu\nu}-\tfrac12g_{\mu\nu}T^{(3)}\right)U^\mu U^\nu
+=-\frac{g_3}{2}(U^2)^2\Box T
++2g_3U^2\Pi_{\mu\nu}U^\mu U^\nu.
+\tag{21}
+\]
+
+At fixed first derivatives, the scalar second-derivative principal tensor after this metric elimination is
+
+\[
+Z^{\mu\nu}=g^{\mu\nu}
++2g_3\left(\Pi^{\mu\nu}-(\Box T)g^{\mu\nu}\right)
++\frac{g_3^2}{M_{\rm Pl}^2}
+\left[-\frac12(U^2)^2g^{\mu\nu}+2U^2U^\mu U^\nu\right].
+\tag{22}
+\]
+
+Its homogeneous high-frequency diagonal coefficients are \(C\) spatially and
+
+\[
+D=1+\frac{12Hv}{\lambda}+\frac{6v^4}{M_{\rm Pl}^2\lambda^2}
+\tag{23}
+\]
+
+temporally, with \(Z^{00}=-D\). At leading local quasi-static order, adding the spherical spatial Hessian yields
+
+\[
+K_r=C-\frac{8\pi'}{\lambda r},\qquad
+K_\Omega=C-\frac4\lambda(\pi''+\pi'/r),\qquad
+K_t=D-\frac4\lambda(\pi''+2\pi'/r).
+\tag{24}
+\]
+
+Set
+
+\[
+S=\sqrt{C^2+\frac{16bGM(<r)}{\lambda r^3}},\qquad
+\eta_M=\frac{d\ln M(<r)}{d\ln r},\qquad
+rS'=\frac{S^2-C^2}{2S}(\eta_M-3).
+\]
+
+Using (11), (24) simplifies to
+
+\[
+K_r=S,\qquad K_\Omega=S+\tfrac12rS',\qquad
+K_t=D+\tfrac32(S-C)+\tfrac12rS'.
+\tag{25}
+\]
+
+For nonnegative density, \(\eta_M\ge0\), so
+
+\[
+K_\Omega\ge\frac{S^2+3C^2}{4S}>0,\qquad
+K_t\ge D+\frac{3(S-C)^2}{4S}\ge D>0.
+\tag{26}
+\]
+
+Together with \(K_r=S>0\), this proves static ellipticity and a positive leading time coefficient on this branch. It is a statement about the retained local scalar principal problem; it is not a proof for all closed-FLRW harmonics, all coupled matter modes, or a microscopic ultraviolet completion.
+
+The corresponding leading squared scalar characteristic speeds are
+\(c_r^2=K_r/K_t\) and \(c_\Omega^2=K_\Omega/K_t\). The result is not everywhere subluminal. For the specified body, \(c_r^2\simeq1.33472\) at the surface and reaches approximately **1.47** near **100.1 kpc**. The angular value there is about 0.474. In the exterior, writing \(s_S=S/C\) and \(d_D=D/C\), the extremum follows from
+
+\[
+c_r^2=\frac{s_S}{d_D+\tfrac34(s_S+s_S^{-1}-2)},
+\qquad s_{S,\max}=\frac{1.5}{1.5-d_D}
+\]
+
+when the resulting radius lies outside the body. The stored leading-order values are \(r_{\max}=100.10700485063006\) kpc and \(c_{r,\max}^2=1.4736615357683804\).
+
+These are scalar characteristics, not a modification of the metric null condition for photons. Terms involving small local spatial gradients in the debraiding tensor, time-radial connection pieces, slowly varying local coefficients, and higher weak-metric orders were omitted from the diagonal approximation (24). Thus the significant scalar superluminality is an actual diagnostic of the declared classical cubic model; the printed speed digits do not certify exact local cones or acceptable ultraviolet causality.
+
+## 8. What is, and is not, assumed about the reduced fourth-order kernel?
+
+The source [03_reduced_response.tex, lines 30–56](https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/03_reduced_response.tex#L30-L56) supplies the illustrative constrained reduction
+
+\[
+K_{\rm red}(p)=Z_0p-\frac{g^2p}{M_c^2+c_cp}
+=\left(Z_0-\frac{g^2}{M_c^2}\right)p
++\frac{g^2c_c}{M_c^4}p^2+\cdots,
+\tag{27}
+\]
+
+**only for \(c_cp\ll M_c^2\)**. Here \(p\) is a Laplacian eigenvalue, hence physical dimension length\(^{-2}\). After normalizing the leading spatial term, the coefficient \(B\) in \(-\nabla^2+B\nabla^4\) has dimension length\(^2\). Lines 58–73 describe the corresponding reduced stiffness schematically and require separate temporal and gradient checks. Neither that section nor the inspected original topographic scaffold provides a numerically owned local \(B\), \(M_c\), or validity cutoff that can be attached to (1).
+
+The R1 scalar-metric source section acknowledges an additional reduced spatial response in the broader interpretation; it does not prove that response negligible on galaxy scales. Conversely, a low-energy \(p^2\) expansion cannot be extrapolated to arbitrary high momentum and imposed on the cubic action without deriving the common coefficients and constrained source map.
+
+The consistent scope here is therefore precise: **solve the explicitly declared pure cubic R1 compatibility action, which itself contains no such \(B\) term**. This is not an inference that a microscopic \(B\) is zero, not a proof of the cutoff of the full topographic theory, and not a claim that the broader combined model has now been solved. The result advances the stated R1 effective theory with an action-owned local source and makes its approximation boundary explicit.
+
+If the larger reduced response is to be incorporated next, the missing input is a common-action reduced operator and source map for the same physical scalar/metric variables, together with the complement spectrum or cutoff needed to decide which momenta admit the derivative expansion. A new free \(B\) or an independent geometric-\(\psi\) oscillator would not supply that derivation.
+
+## 9. Reproduction and deliverables
+
+Run from the repository root:
+
+```bash
+python scripts/r1_screened_review/r1_qs_coefficients.py
+```
+
+The script reads the pinned repository inputs and writes `artifacts/strong_lensing_r1_screened_20261020/review/r1_qs_coefficients.json`. It computes the coefficients, finite-body radial branch, screening scale, principal eigenvalues, and analytic exterior maximum without parameter fitting or mutation of the source repository. The result records all frozen input hashes.
+
+The optical implementation and its image/time-delay comparison are supplied in the companion code and results. Equations (11)–(19) are the contract they must use. This note deliberately does not turn an illustrative image shift into an observational detection or a claim that astrophysical nuisance parameters have been eliminated.

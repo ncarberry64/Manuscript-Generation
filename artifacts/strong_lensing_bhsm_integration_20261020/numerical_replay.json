@@ -1,0 +1,3911 @@
+{
+  "status": "PASS",
+  "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+  "environment": {
+    "python": "3.14.3",
+    "executable": "C:\\Python314\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.0"
+  },
+  "equations_changed": false,
+  "routing_changes_only": true,
+  "historical_files_checked": 12,
+  "historical_files_modified": [],
+  "commands": [
+    {
+      "name": "r1_screened",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/run_strong_lensing_r1_screened.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\results.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.9654037000000244,
+      "script_sha256": "67878e17efde231954e300975f4b496a28949862a91359923850e913b5a3884e",
+      "comparison": {
+        "numeric_values_compared": 225,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/coefficients/H_over_H0",
+            "supplied": 1.1836105771859786,
+            "replay": 1.1836105771853052,
+            "absolute_difference": 6.7346128673762e-13,
+            "relative_difference": 5.689889054039775e-13
+          },
+          {
+            "path": "/coefficients/Tdot_over_MplH0",
+            "supplied": 0.23776442637096692,
+            "replay": 0.2377644263710765,
+            "absolute_difference": 1.0957901253050295e-13,
+            "relative_difference": 4.608721927120191e-13
+          },
+          {
+            "path": "/coefficients/Tddot_over_MplH02",
+            "supplied": 0.24847158912363834,
+            "replay": 0.2484715891238288,
+            "absolute_difference": 1.904587598744456e-13,
+            "relative_difference": 7.665212773266975e-13
+          },
+          {
+            "path": "/coefficients/b",
+            "supplied": 0.11306384489502991,
+            "replay": 0.11306384489513412,
+            "absolute_difference": 1.0420830864887876e-13,
+            "relative_difference": 9.216766752061831e-13
+          },
+          {
+            "path": "/coefficients/C",
+            "supplied": 4.238858559433196,
+            "replay": 4.238858559433703,
+            "absolute_difference": 5.071498776487715e-13,
+            "relative_difference": 1.19643029022555e-13
+          },
+          {
+            "path": "/screening/rV_Mpc",
+            "supplied": 0.21202922497712948,
+            "replay": 0.21202922497717772,
+            "absolute_difference": 4.823919041996305e-14,
+            "relative_difference": 2.2751198767606855e-13
+          },
+          {
+            "path": "/screening/unscreened_extra_fraction",
+            "supplied": 0.001507886243809552,
+            "replay": 0.0015078862438121512,
+            "absolute_difference": 2.5992662883167483e-15,
+            "relative_difference": 1.723781418517297e-12
+          },
+          {
+            "path": "/screening/H_l_rV_over_c",
+            "supplied": 5.642138685209713e-05,
+            "replay": 5.642138685207786e-05,
+            "absolute_difference": 1.927169361592984e-17,
+            "relative_difference": 3.4156717321480607e-13
+          },
+          {
+            "path": "/screening/effective_extra_mass_infinity_Msun",
+            "supplied": 150788624.3809552,
+            "replay": 150788624.38121513,
+            "absolute_difference": 0.0002599358558654785,
+            "relative_difference": 1.7238426103601271e-12
+          },
+          {
+            "path": "/conventional/images_rad/2/1",
+            "supplied": 2.8945990205563673e-22,
+            "replay": 2.894599020946575e-22,
+            "absolute_difference": 3.9020770074416e-32,
+            "relative_difference": 1.3480544212619771e-10
+          },
+          {
+            "path": "/conventional/images_arcsec/2/1",
+            "supplied": 5.97053906138094e-17,
+            "replay": 5.970539062185801e-17,
+            "absolute_difference": 8.048612230501899e-27,
+            "relative_difference": 1.3480545303794255e-10
+          },
+          {
+            "path": "/screened/images_rad/0/0",
+            "supplied": 4.050531801430866e-06,
+            "replay": 4.050531801430867e-06,
+            "absolute_difference": 8.470329472543003e-22,
+            "relative_difference": 2.0911647871893823e-16
+          },
+          {
+            "path": "/screened/images_arcsec/0/0",
+            "supplied": 0.8354821572198398,
+            "replay": 0.83548215721984,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 2.6576821899334096e-16
+          },
+          {
+            "path": "/screened/arrival_days/0",
+            "supplied": 4.436296562989011,
+            "replay": 4.436296562989014,
+            "absolute_difference": 2.6645352591003757e-15,
+            "relative_difference": 6.006215367407969e-16
+          },
+          {
+            "path": "/screened/relative_delays_days/0",
+            "supplied": 21.7163770204336,
+            "replay": 21.716377020433598,
+            "absolute_difference": 3.552713678800501e-15,
+            "relative_difference": 1.63596058194129e-16
+          },
+          {
+            "path": "/screened/relative_delays_days/1",
+            "supplied": 14.271552491299559,
+            "replay": 14.271552491299555,
+            "absolute_difference": 3.552713678800501e-15,
+            "relative_difference": 2.489367348763465e-16
+          },
+          {
+            "path": "/changes/images_microarcsec/0/0",
+            "supplied": 6.123276249048182,
+            "replay": 6.123276249270226,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 3.6262385672955146e-11
+          },
+          {
+            "path": "/changes/images_microarcsec/2/1",
+            "supplied": -5.97053906138094e-11,
+            "replay": -5.9705390621858e-11,
+            "absolute_difference": 8.048609531808742e-21,
+            "relative_difference": 1.3480540783778343e-10
+          },
+          {
+            "path": "/changes/relative_delays_seconds/0",
+            "supplied": 25.959258149566722,
+            "replay": 25.959258149259767,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 1.1824469716346134e-11
+          },
+          {
+            "path": "/changes/relative_delays_seconds/1",
+            "supplied": 8.649019375383205,
+            "replay": 8.64901937507625,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 3.549008835868902e-11
+          },
+          {
+            "path": "/changes/relative_delays_fractional/0",
+            "supplied": 1.3835573650533561e-05,
+            "replay": 1.3835573650311517e-05,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 1.6048818107116815e-11
+          },
+          {
+            "path": "/changes/relative_delays_fractional/1",
+            "supplied": 7.014309980846178e-06,
+            "replay": 7.014309980624134e-06,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 3.165594413867702e-11
+          },
+          {
+            "path": "/changes/linear_relative_delays_seconds/0",
+            "supplied": 25.959098922685534,
+            "replay": 25.959098922721797,
+            "absolute_difference": 3.626254851951671e-11,
+            "relative_difference": 1.3969109107954068e-12
+          },
+          {
+            "path": "/changes/linear_relative_delays_seconds/1",
+            "supplied": 8.648963280189347,
+            "replay": 8.648963280201446,
+            "absolute_difference": 1.2098766433155106e-11,
+            "relative_difference": 1.398868978998629e-12
+          },
+          {
+            "path": "/changes/linear_images_microarcsec/0/0",
+            "supplied": 6.1232374743680005,
+            "replay": 6.123237474376573,
+            "absolute_difference": 8.572698106945609e-12,
+            "relative_difference": 1.4000270515117374e-12
+          },
+          {
+            "path": "/changes/linear_images_microarcsec/1/0",
+            "supplied": 0.7881150659645764,
+            "replay": 0.7881150659656737,
+            "absolute_difference": 1.0973444375395047e-12,
+            "relative_difference": 1.3923657660274031e-12
+          },
+          {
+            "path": "/changes/linear_images_microarcsec/2/0",
+            "supplied": -4.3485629655905935,
+            "replay": -4.348562965596671,
+            "absolute_difference": 6.077804926007957e-12,
+            "relative_difference": 1.3976582549454953e-12
+          },
+          {
+            "path": "/changes/linear_images_microarcsec/2/1",
+            "supplied": 3.9488124339533276e-16,
+            "replay": 3.948812434491166e-16,
+            "absolute_difference": 5.378384626467652e-26,
+            "relative_difference": 1.3620258537028352e-10
+          },
+          {
+            "path": "/delay_ratio/screened",
+            "supplied": 1.5216548468481386,
+            "replay": 1.5216548468481388,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 1.4592310824295058e-16
+          },
+          {
+            "path": "/delay_ratio/change",
+            "supplied": 1.0379465318788306e-05,
+            "replay": 1.037946531901035e-05,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 2.1392682388282474e-11
+          },
+          {
+            "path": "/delay_ratio/fractional_change",
+            "supplied": 6.821215823515914e-06,
+            "replay": 6.821215823737958e-06,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 3.255205679895657e-11
+          },
+          {
+            "path": "/radial_profile/0/local_force_extra_fraction",
+            "supplied": 3.2077406332804095e-06,
+            "replay": 3.207740633284846e-06,
+            "absolute_difference": 4.436335061244398e-18,
+            "relative_difference": 1.3830092792469823e-12
+          },
+          {
+            "path": "/radial_profile/0/projected_deflection_extra_fraction",
+            "supplied": 6.290201566125068e-06,
+            "replay": 6.2902015661338095e-06,
+            "absolute_difference": 8.74138001566438e-18,
+            "relative_difference": 1.3896820195301472e-12
+          },
+          {
+            "path": "/radial_profile/1/local_force_extra_fraction",
+            "supplied": 3.216325554025978e-06,
+            "replay": 3.216325554030426e-06,
+            "absolute_difference": 4.448193522505958e-18,
+            "relative_difference": 1.3830047511633304e-12
+          },
+          {
+            "path": "/radial_profile/1/projected_deflection_extra_fraction",
+            "supplied": 6.317060440484944e-06,
+            "replay": 6.317060440493756e-06,
+            "absolute_difference": 8.81253078323374e-18,
+            "relative_difference": 1.3950366418462234e-12
+          },
+          {
+            "path": "/radial_profile/2/local_force_extra_fraction",
+            "supplied": 3.3190972164473344e-06,
+            "replay": 3.319097216451925e-06,
+            "absolute_difference": 4.590495057644681e-18,
+            "relative_difference": 1.3830553184453613e-12
+          },
+          {
+            "path": "/radial_profile/2/projected_deflection_extra_fraction",
+            "supplied": 6.640654604984037e-06,
+            "replay": 6.640654604993293e-06,
+            "absolute_difference": 9.256376047594994e-18,
+            "relative_difference": 1.3938951200153926e-12
+          },
+          {
+            "path": "/radial_profile/3/local_force_extra_fraction",
+            "supplied": 5.067058797822506e-06,
+            "replay": 5.067058797829515e-06,
+            "absolute_difference": 7.009197638529335e-18,
+            "relative_difference": 1.3832872122070963e-12
+          },
+          {
+            "path": "/radial_profile/3/projected_deflection_extra_fraction",
+            "supplied": 1.174665550341613e-05,
+            "replay": 1.1746655503432549e-05,
+            "absolute_difference": 1.6418886649577358e-17,
+            "relative_difference": 1.3977499080314786e-12
+          },
+          {
+            "path": "/radial_profile/4/local_force_extra_fraction",
+            "supplied": 3.057431939410516e-05,
+            "replay": 3.057431939414754e-05,
+            "absolute_difference": 4.2378752417027155e-17,
+            "relative_difference": 1.386089805328518e-12
+          },
+          {
+            "path": "/radial_profile/4/projected_deflection_extra_fraction",
+            "supplied": 6.364944089118305e-05,
+            "replay": 6.364944089127301e-05,
+            "absolute_difference": 8.996167526198473e-17,
+            "relative_difference": 1.413393016535461e-12
+          },
+          {
+            "path": "/radial_profile/5/local_force_extra_fraction",
+            "supplied": 0.00015218922286929065,
+            "replay": 0.00015218922286950383,
+            "absolute_difference": 2.131812521649623e-16,
+            "relative_difference": 1.4007644440635282e-12
+          },
+          {
+            "path": "/radial_profile/5/projected_deflection_extra_fraction",
+            "supplied": 0.00026550903398547766,
+            "replay": 0.00026550903398586207,
+            "absolute_difference": 3.844038802547356e-16,
+            "relative_difference": 1.4477996265684919e-12
+          },
+          {
+            "path": "/radial_profile/6/local_force_extra_fraction",
+            "supplied": 0.0007103766236898402,
+            "replay": 0.0007103766236908971,
+            "absolute_difference": 1.0568802777388697e-15,
+            "relative_difference": 1.4877745726614979e-12
+          },
+          {
+            "path": "/radial_profile/6/projected_deflection_extra_fraction",
+            "supplied": 0.000911538532010351,
+            "replay": 0.0009115385320117652,
+            "absolute_difference": 1.414233313790092e-15,
+            "relative_difference": 1.5514794648022984e-12
+          },
+          {
+            "path": "/radial_profile/7/local_force_extra_fraction",
+            "supplied": 0.00124917386540348,
+            "replay": 0.0012491738654055084,
+            "absolute_difference": 2.0285422647203788e-15,
+            "relative_difference": 1.6239070644222652e-12
+          },
+          {
+            "path": "/radial_profile/7/projected_deflection_extra_fraction",
+            "supplied": 0.0013434048661337265,
+            "replay": 0.001343404866135957,
+            "absolute_difference": 2.230637549671677e-15,
+            "relative_difference": 1.6604358119465325e-12
+          },
+          {
+            "path": "/radial_profile/8/local_force_extra_fraction",
+            "supplied": 0.0013941241123779289,
+            "replay": 0.001394124112380265,
+            "absolute_difference": 2.336238841271765e-15,
+            "relative_difference": 1.6757753635627824e-12
+          },
+          {
+            "path": "/radial_profile/8/projected_deflection_extra_fraction",
+            "supplied": 0.0014385810318368944,
+            "replay": 0.0014385810318393324,
+            "absolute_difference": 2.4379370050509053e-15,
+            "relative_difference": 1.6946817392260161e-12
+          },
+          {
+            "path": "/radial_profile/9/local_force_extra_fraction",
+            "supplied": 0.0015043099494072754,
+            "replay": 0.0015043099494098664,
+            "absolute_difference": 2.5910263518058585e-15,
+            "relative_difference": 1.7224019244350331e-12
+          },
+          {
+            "path": "/radial_profile/9/projected_deflection_extra_fraction",
+            "supplied": 0.0015057773940071965,
+            "replay": 0.0015057773940097905,
+            "absolute_difference": 2.594062117888818e-15,
+            "relative_difference": 1.722739448880596e-12
+          },
+          {
+            "path": "/frozen_redshift_law/0/unscreened_extra_fraction",
+            "supplied": 0.0035113163502115763,
+            "replay": 0.0035113163502206216,
+            "absolute_difference": 9.045281884612066e-15,
+            "relative_difference": 2.5760372983958105e-12
+          },
+          {
+            "path": "/frozen_redshift_law/0/rV_kpc",
+            "supplied": 248.29966592930023,
+            "replay": 248.2996659293891,
+            "absolute_difference": 8.887468538887333e-11,
+            "relative_difference": 3.579331653800095e-13
+          },
+          {
+            "path": "/frozen_redshift_law/1/unscreened_extra_fraction",
+            "supplied": 0.0026520124766190516,
+            "replay": 0.0026520124766250194,
+            "absolute_difference": 5.967882438229211e-15,
+            "relative_difference": 2.2503221575478535e-12
+          },
+          {
+            "path": "/frozen_redshift_law/1/rV_kpc",
+            "supplied": 235.58259255371914,
+            "replay": 235.5825925537916,
+            "absolute_difference": 7.247535904753022e-11,
+            "relative_difference": 3.0764309986530054e-13
+          },
+          {
+            "path": "/frozen_redshift_law/2/unscreened_extra_fraction",
+            "supplied": 0.001507886243809552,
+            "replay": 0.0015078862438121512,
+            "absolute_difference": 2.5992662883167483e-15,
+            "relative_difference": 1.723781418517297e-12
+          },
+          {
+            "path": "/frozen_redshift_law/2/rV_kpc",
+            "supplied": 212.02922497712947,
+            "replay": 212.0292249771777,
+            "absolute_difference": 4.82316409033956e-11,
+            "relative_difference": 2.2747638165728385e-13
+          },
+          {
+            "path": "/frozen_redshift_law/3/unscreened_extra_fraction",
+            "supplied": 0.0008605196126804847,
+            "replay": 0.000860519612681624,
+            "absolute_difference": 1.139279642847768e-15,
+            "relative_difference": 1.3239438428357919e-12
+          },
+          {
+            "path": "/frozen_redshift_law/3/rV_kpc",
+            "supplied": 191.2301072267488,
+            "replay": 191.23010722678112,
+            "absolute_difference": 3.2315483622369356e-11,
+            "relative_difference": 1.689874261486015e-13
+          },
+          {
+            "path": "/frozen_redshift_law/4/unscreened_extra_fraction",
+            "supplied": 0.00038165474278884583,
+            "replay": 0.00038165474278918735,
+            "absolute_difference": 3.415236843329339e-16,
+            "relative_difference": 8.948498368901056e-13
+          },
+          {
+            "path": "/frozen_redshift_law/4/rV_kpc",
+            "supplied": 165.14313694148422,
+            "replay": 165.14313694150223,
+            "absolute_difference": 1.801936377887614e-11,
+            "relative_difference": 1.0911360963950327e-13
+          },
+          {
+            "path": "/frozen_redshift_law/5/unscreened_extra_fraction",
+            "supplied": 0.00022831772398857465,
+            "replay": 0.00022831772398873365,
+            "absolute_difference": 1.5899824859499923e-16,
+            "relative_difference": 6.963903012757596e-13
+          },
+          {
+            "path": "/frozen_redshift_law/5/rV_kpc",
+            "supplied": 150.77757362191227,
+            "replay": 150.77757362192477,
+            "absolute_difference": 1.2505552149377763e-11,
+            "relative_difference": 8.29403992183646e-14
+          },
+          {
+            "path": "/frozen_redshift_law/6/unscreened_extra_fraction",
+            "supplied": 7.08450344034587e-05,
+            "replay": 7.084503440348655e-05,
+            "absolute_difference": 2.7850443305721395e-17,
+            "relative_difference": 3.9311778927390456e-13
+          },
+          {
+            "path": "/frozen_redshift_law/6/rV_kpc",
+            "supplied": 123.01109812765122,
+            "replay": 123.01109812765677,
+            "absolute_difference": 5.5422333389287814e-12,
+            "relative_difference": 4.50547424036284e-14
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/0/extra_pbar",
+            "supplied": 1.0652200022698515e-06,
+            "replay": 1.0652200022713245e-06,
+            "absolute_difference": 1.4729902952752283e-18,
+            "relative_difference": 1.3828038265677222e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/0/extra_fraction",
+            "supplied": 3.5695864891603926e-06,
+            "replay": 3.5695864891653287e-06,
+            "absolute_difference": 4.936084500124435e-18,
+            "relative_difference": 1.3828168935291601e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/1/extra_pbar",
+            "supplied": 9.217268355910145e-07,
+            "replay": 9.217268355922893e-07,
+            "absolute_difference": 1.274784585617722e-18,
+            "relative_difference": 1.3830394607099897e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/1/extra_fraction",
+            "supplied": 3.6276598627851884e-06,
+            "replay": 3.627659862790206e-06,
+            "absolute_difference": 5.017399663060848e-18,
+            "relative_difference": 1.383095398367549e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/2/extra_pbar",
+            "supplied": 5.610970610148855e-07,
+            "replay": 5.610970610156615e-07,
+            "absolute_difference": 7.759880588033459e-19,
+            "relative_difference": 1.3829836452890625e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/2/extra_fraction",
+            "supplied": 3.820199209632238e-06,
+            "replay": 3.820199209637521e-06,
+            "absolute_difference": 5.282944492025071e-18,
+            "relative_difference": 1.3828976454172e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/3/extra_pbar",
+            "supplied": 1.732899702599534e-07,
+            "replay": 1.732899702601931e-07,
+            "absolute_difference": 2.39710324072967e-19,
+            "relative_difference": 1.383290237244406e-12
+          },
+          {
+            "path": "/leading_hydrostatic_response/values/3/extra_fraction",
+            "supplied": 4.22102623138482e-06,
+            "replay": 4.221026231390658e-06,
+            "absolute_difference": 5.838598105423892e-18,
+            "relative_difference": 1.3832176786800931e-12
+          },
+          {
+            "path": "/checks/max_integrated_scalar_equation_relative_residual",
+            "supplied": 7.883875800826668e-16,
+            "replay": 8.300949590885229e-16,
+            "absolute_difference": 4.170737900585611e-17,
+            "relative_difference": 0.05290212588265642
+          },
+          {
+            "path": "/checks/max_independent_alpha_derivative_relative_error",
+            "supplied": 2.3877179486829967e-12,
+            "replay": 3.19013099127063e-12,
+            "absolute_difference": 8.024130425876335e-13,
+            "relative_difference": 0.33605855458356115
+          },
+          {
+            "path": "/checks/max_independent_potential_derivative_relative_error",
+            "supplied": 1.920472965291313e-09,
+            "replay": 1.920585267590459e-09,
+            "absolute_difference": 1.1230229914584671e-13,
+            "relative_difference": 5.847637596336159e-05
+          },
+          {
+            "path": "/checks/finite_matching_tail/0/fraction_extra_alpha_beyond_20_Mpc",
+            "supplied": 1.6599832589614394e-06,
+            "replay": 1.6599832586283725e-06,
+            "absolute_difference": 3.3306690738754696e-16,
+            "relative_difference": 2.0064473878846747e-10
+          },
+          {
+            "path": "/checks/finite_matching_tail/1/fraction_extra_alpha_beyond_20_Mpc",
+            "supplied": 1.0839546505936326e-06,
+            "replay": 1.0839546484842089e-06,
+            "absolute_difference": 2.1094237467877974e-15,
+            "relative_difference": 1.9460442792810217e-09
+          },
+          {
+            "path": "/checks/finite_matching_tail/2/fraction_extra_alpha_beyond_20_Mpc",
+            "supplied": 1.4476269389884777e-06,
+            "replay": 1.4476269385443885e-06,
+            "absolute_difference": 4.440892098500626e-16,
+            "relative_difference": 3.067704792509373e-10
+          },
+          {
+            "path": "/identifiability/fixed_center/raw_signal_singular_values/0",
+            "supplied": 0.008188675766468641,
+            "replay": 0.008188675766480098,
+            "absolute_difference": 1.1456113835350834e-14,
+            "relative_difference": 1.399019104195314e-12
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_signal_singular_values/0",
+            "supplied": 6.390779263524989e-07,
+            "replay": 6.390779263527678e-07,
+            "absolute_difference": 2.6882708163483357e-19,
+            "relative_difference": 4.2064836000384007e-13
+          },
+          {
+            "path": "/identifiability/fixed_center/absolute_rank_threshold",
+            "supplied": 8.188675766468642e-11,
+            "replay": 8.188675766480098e-11,
+            "absolute_difference": 1.1456451483859433e-22,
+            "relative_difference": 1.3990603377864619e-12
+          },
+          {
+            "path": "/identifiability/fixed_center/Fisher/0/0",
+            "supplied": 4.0842059595101e-13,
+            "replay": 4.0842059595135367e-13,
+            "absolute_difference": 3.4366567563772335e-25,
+            "relative_difference": 8.41450404423155e-13
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/0/0",
+            "supplied": -2.957604392124502e-08,
+            "replay": -2.9576043922979744e-08,
+            "absolute_difference": 1.734723475976807e-18,
+            "relative_difference": 5.86529922864607e-11
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/1/0",
+            "supplied": 1.1273145328167904e-19,
+            "replay": -3.5773158642828777e-19,
+            "absolute_difference": 4.704630397099668e-19,
+            "relative_difference": 4.173307679573983
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/2/0",
+            "supplied": 3.4004290916421834e-07,
+            "replay": 3.400429091644352e-07,
+            "absolute_difference": 2.168404344971009e-19,
+            "relative_difference": 6.376855057206361e-13
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/3/0",
+            "supplied": -8.546374677896922e-21,
+            "replay": -3.2332421295168663e-20,
+            "absolute_difference": 2.3786046617271742e-20,
+            "relative_difference": 2.7831738618701625
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/4/0",
+            "supplied": -8.007455396235458e-08,
+            "replay": -8.007455396148722e-08,
+            "absolute_difference": 8.673617379884035e-19,
+            "relative_difference": 1.0831927186209192e-11
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/5/0",
+            "supplied": 1.5710634849534954e-19,
+            "replay": 7.766269142415357e-19,
+            "absolute_difference": 6.1952056574618625e-19,
+            "relative_difference": 3.9433197428334634
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/6/0",
+            "supplied": -2.934530115988876e-07,
+            "replay": -2.9345301160192336e-07,
+            "absolute_difference": 3.0357660829594124e-18,
+            "relative_difference": 1.0344981864111564e-11
+          },
+          {
+            "path": "/identifiability/fixed_center/projected_response/7/0",
+            "supplied": 4.465311515397183e-07,
+            "replay": 4.4653115153798356e-07,
+            "absolute_difference": 1.734723475976807e-18,
+            "relative_difference": 3.884887918782764e-12
+          },
+          {
+            "path": "/identifiability/free_center/raw_signal_singular_values/0",
+            "supplied": 0.008188675766468641,
+            "replay": 0.008188675766480098,
+            "absolute_difference": 1.1456113835350834e-14,
+            "relative_difference": 1.399019104195314e-12
+          },
+          {
+            "path": "/identifiability/free_center/projected_signal_singular_values/0",
+            "supplied": 7.521872590634626e-18,
+            "replay": 3.745551420648743e-18,
+            "absolute_difference": 3.776321169985883e-18,
+            "relative_difference": 0.5020453516705037
+          },
+          {
+            "path": "/identifiability/free_center/absolute_rank_threshold",
+            "supplied": 8.188675766468642e-11,
+            "replay": 8.188675766480098e-11,
+            "absolute_difference": 1.1456451483859433e-22,
+            "relative_difference": 1.3990603377864619e-12
+          },
+          {
+            "path": "/identifiability/free_center/Fisher/0/0",
+            "supplied": 5.657856726974046e-35,
+            "replay": 1.4029155444723814e-35,
+            "absolute_difference": 4.254941182501664e-35,
+            "relative_difference": 0.7520411682070476
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/0/0",
+            "supplied": -3.469446951953614e-18,
+            "replay": 0.0,
+            "absolute_difference": 3.469446951953614e-18,
+            "relative_difference": 1.0
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/1/0",
+            "supplied": -4.626776783500352e-19,
+            "replay": -7.617345922968396e-19,
+            "absolute_difference": 2.9905691394680445e-19,
+            "relative_difference": 0.6463612314587506
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/3/0",
+            "supplied": 7.593197115166455e-19,
+            "replay": 2.5555447917346233e-19,
+            "absolute_difference": 5.037652323431832e-19,
+            "relative_difference": 0.6634428485163062
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/4/0",
+            "supplied": 6.071532165918825e-18,
+            "replay": -2.6020852139652106e-18,
+            "absolute_difference": 8.673617379884035e-18,
+            "relative_difference": 1.4285714285714286
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/5/0",
+            "supplied": 1.03553198317665e-19,
+            "replay": -6.988810594629593e-19,
+            "absolute_difference": 8.024342577806243e-19,
+            "relative_difference": 7.749005060365557
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/6/0",
+            "supplied": -1.3010426069826053e-18,
+            "replay": -4.336808689942018e-19,
+            "absolute_difference": 8.673617379884035e-19,
+            "relative_difference": 0.6666666666666666
+          },
+          {
+            "path": "/identifiability/free_center/projected_response/7/0",
+            "supplied": 0.0,
+            "replay": -8.673617379884035e-19,
+            "absolute_difference": 8.673617379884035e-19,
+            "relative_difference": 8.673617379884035e+281
+          },
+          {
+            "path": "/identifiability/free_center/nuisance_whitened_column_norms/5",
+            "supplied": 1893.8588561264144,
+            "replay": 1893.8588561260892,
+            "absolute_difference": 3.2514435588382185e-10,
+            "relative_difference": 1.7168352057072123e-13
+          }
+        ]
+      },
+      "final_script_sha256": "53e3cfdd7dfd673e245b9cdeaa914dedb80e6dbdb8834130e4a58a192409671b",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "gr2_control",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/run_strong_lensing_gr2_control.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\gr2_control.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.8103680000058375,
+      "script_sha256": "7f6c750cca67983b4a0d38f9b01adac192fbeae4d5876ef0d743f7a82e7e8560",
+      "comparison": {
+        "numeric_values_compared": 160,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/coefficients/H_over_H0",
+            "supplied": 1.1836105771859786,
+            "replay": 1.1836105771853052,
+            "absolute_difference": 6.7346128673762e-13,
+            "relative_difference": 5.689889054039775e-13
+          },
+          {
+            "path": "/coefficients/Tdot_over_MplH0",
+            "supplied": 0.23776442637096692,
+            "replay": 0.2377644263710765,
+            "absolute_difference": 1.0957901253050295e-13,
+            "relative_difference": 4.608721927120191e-13
+          },
+          {
+            "path": "/coefficients/Tddot_over_MplH02",
+            "supplied": 0.24847158912363834,
+            "replay": 0.2484715891238288,
+            "absolute_difference": 1.904587598744456e-13,
+            "relative_difference": 7.665212773266975e-13
+          },
+          {
+            "path": "/coefficients/b",
+            "supplied": 0.11306384489502991,
+            "replay": 0.11306384489513412,
+            "absolute_difference": 1.0420830864887876e-13,
+            "relative_difference": 9.216766752061831e-13
+          },
+          {
+            "path": "/coefficients/C",
+            "supplied": 4.238858559433196,
+            "replay": 4.238858559433703,
+            "absolute_difference": 5.071498776487715e-13,
+            "relative_difference": 1.19643029022555e-13
+          },
+          {
+            "path": "/conventional_1pm/images_rad/2/1",
+            "supplied": 2.8945990205563673e-22,
+            "replay": 2.894599020946575e-22,
+            "absolute_difference": 3.9020770074416e-32,
+            "relative_difference": 1.3480544212619771e-10
+          },
+          {
+            "path": "/conventional_1pm/images_arcsec/2/1",
+            "supplied": 5.97053906138094e-17,
+            "replay": 5.970539062185801e-17,
+            "absolute_difference": 8.048612230501899e-27,
+            "relative_difference": 1.3480545303794255e-10
+          },
+          {
+            "path": "/scalar_on_1pm/images_rad/0/0",
+            "supplied": 4.050531801430866e-06,
+            "replay": 4.050531801430867e-06,
+            "absolute_difference": 8.470329472543003e-22,
+            "relative_difference": 2.0911647871893823e-16
+          },
+          {
+            "path": "/scalar_on_1pm/images_arcsec/0/0",
+            "supplied": 0.8354821572198398,
+            "replay": 0.83548215721984,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 2.6576821899334096e-16
+          },
+          {
+            "path": "/scalar_on_1pm/arrival_days/0",
+            "supplied": 4.436296562989011,
+            "replay": 4.436296562989014,
+            "absolute_difference": 2.6645352591003757e-15,
+            "relative_difference": 6.006215367407969e-16
+          },
+          {
+            "path": "/scalar_on_1pm/relative_delays_days/0",
+            "supplied": 21.7163770204336,
+            "replay": 21.716377020433598,
+            "absolute_difference": 3.552713678800501e-15,
+            "relative_difference": 1.63596058194129e-16
+          },
+          {
+            "path": "/scalar_on_1pm/relative_delays_days/1",
+            "supplied": 14.271552491299559,
+            "replay": 14.271552491299555,
+            "absolute_difference": 3.552713678800501e-15,
+            "relative_difference": 2.489367348763465e-16
+          },
+          {
+            "path": "/conventional_1pm_plus_2pm/images_rad/2/1",
+            "supplied": 1.7484406137851234e-31,
+            "replay": 1.748440614045248e-31,
+            "absolute_difference": 2.6012456660281115e-41,
+            "relative_difference": 1.4877517975270475e-10
+          },
+          {
+            "path": "/conventional_1pm_plus_2pm/images_arcsec/2/1",
+            "supplied": 3.6064176443694274e-26,
+            "replay": 3.606417644905973e-26,
+            "absolute_difference": 5.365454424719577e-36,
+            "relative_difference": 1.4877518229472042e-10
+          },
+          {
+            "path": "/scalar_on_common_gr2/arrival_days/0",
+            "supplied": 4.436266426840466,
+            "replay": 4.436266426840465,
+            "absolute_difference": 8.881784197001252e-16,
+            "relative_difference": 2.0020853894762378e-16
+          },
+          {
+            "path": "/scalar_difference_before/images_microarcsec/0/0",
+            "supplied": 6.123276249048182,
+            "replay": 6.123276249270226,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 3.6262385672955146e-11
+          },
+          {
+            "path": "/scalar_difference_before/images_microarcsec/2/1",
+            "supplied": -5.97053906138094e-11,
+            "replay": -5.9705390621858e-11,
+            "absolute_difference": 8.048609531808742e-21,
+            "relative_difference": 1.3480540783778343e-10
+          },
+          {
+            "path": "/scalar_difference_before/relative_delays_seconds/0",
+            "supplied": 25.959258149566722,
+            "replay": 25.959258149259767,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 1.1824469716346134e-11
+          },
+          {
+            "path": "/scalar_difference_before/relative_delays_seconds/1",
+            "supplied": 8.649019375383205,
+            "replay": 8.64901937507625,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 3.549008835868902e-11
+          },
+          {
+            "path": "/scalar_difference_before/scalar_delay_ratio",
+            "supplied": 1.5216548468481386,
+            "replay": 1.5216548468481388,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 1.4592310824295058e-16
+          },
+          {
+            "path": "/scalar_difference_before/delay_ratio_fractional_change_ppm",
+            "supplied": 6.821215823515914,
+            "replay": 6.821215823737958,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 3.255205679895657e-11
+          },
+          {
+            "path": "/scalar_difference_after/images_microarcsec/2/1",
+            "supplied": -3.606417644369427e-20,
+            "replay": -3.6064176449059726e-20,
+            "absolute_difference": 5.3654542505994766e-30,
+            "relative_difference": 1.4877517746665785e-10
+          },
+          {
+            "path": "/change_in_scalar_difference/images_microarcsec/0/0",
+            "supplied": -6.905698235470936e-06,
+            "replay": -6.905920280075861e-06,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 3.2153823893506535e-05
+          },
+          {
+            "path": "/change_in_scalar_difference/images_microarcsec/2/1",
+            "supplied": 5.970539057774521e-11,
+            "replay": 5.970539058579382e-11,
+            "absolute_difference": 8.048609531808742e-21,
+            "relative_difference": 1.348054079192107e-10
+          },
+          {
+            "path": "/change_in_scalar_difference/relative_delays_seconds/0",
+            "supplied": 6.899016398165259e-05,
+            "replay": 6.899047093611443e-05,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 4.449249634049218e-06
+          },
+          {
+            "path": "/change_in_scalar_difference/relative_delays_seconds/1",
+            "supplied": -1.0137324579773122e-05,
+            "replay": -1.0137017625311273e-05,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 3.02796324052626e-05
+          },
+          {
+            "path": "/change_in_scalar_difference/delay_ratio_fractional_change_ppm",
+            "supplied": -1.5802914532514478e-06,
+            "replay": -1.5805134978563729e-06,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 0.0001405086412814388
+          },
+          {
+            "path": "/conventional_common_correction/images_microarcsec/2/1",
+            "supplied": -5.970539057774521e-11,
+            "replay": -5.970539058579382e-11,
+            "absolute_difference": 8.048609531808742e-21,
+            "relative_difference": 1.348054079192107e-10
+          },
+          {
+            "path": "/scalar_on_common_correction/images_microarcsec/0/0",
+            "supplied": 1.3545569894635179,
+            "replay": 1.3545569892414733,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 1.6392415132933882e-10
+          },
+          {
+            "path": "/scalar_on_common_correction/relative_delays_seconds/0",
+            "supplied": 8.28479676445113,
+            "replay": 8.284796764758084,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 3.7050330934545154e-11
+          },
+          {
+            "path": "/scalar_on_common_correction/relative_delays_seconds/1",
+            "supplied": 2.552435341203818,
+            "replay": 2.5524353415107726,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 1.2025944669125008e-10
+          },
+          {
+            "path": "/scalar_on_common_correction/conventional_delay_ratio",
+            "supplied": 1.5216548468481386,
+            "replay": 1.5216548468481388,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 1.4592310824295058e-16
+          },
+          {
+            "path": "/scalar_on_common_correction/delay_ratio_fractional_change_ppm",
+            "supplied": 2.345506493472982,
+            "replay": 2.3455064932509373,
+            "absolute_difference": 2.220446049250313e-10,
+            "relative_difference": 9.466808364970705e-11
+          }
+        ]
+      },
+      "final_script_sha256": "83a626139e1d75ddd4abf494ba5100fc4ddac1e9d2a1987760ecd7c82a5f24fe",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "r1_qs_coefficients",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/r1_screened_review/r1_qs_coefficients.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\review\\r1_qs_coefficients.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6749022000003606,
+      "script_sha256": "8d08350a749357d345f97d71a57aacba3a42d6e26e09654f592f791531f2b4aa",
+      "comparison": {
+        "numeric_values_compared": 206,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/background/H",
+            "supplied": 1.1836105771859786,
+            "replay": 1.1836105771853052,
+            "absolute_difference": 6.7346128673762e-13,
+            "relative_difference": 5.689889054039775e-13
+          },
+          {
+            "path": "/background/N",
+            "supplied": -0.26236426446749106,
+            "replay": -0.262364264467491,
+            "absolute_difference": 5.551115123125783e-17,
+            "relative_difference": 2.1158045797100574e-16
+          },
+          {
+            "path": "/background/T",
+            "supplied": 0.09074930116446112,
+            "replay": 0.09074930116451298,
+            "absolute_difference": 5.1861293037802625e-14,
+            "relative_difference": 5.71478704214114e-13
+          },
+          {
+            "path": "/background/ddotT",
+            "supplied": 0.24847158912363834,
+            "replay": 0.2484715891238288,
+            "absolute_difference": 1.904587598744456e-13,
+            "relative_difference": 7.665212773266975e-13
+          },
+          {
+            "path": "/background/v",
+            "supplied": 0.23776442637096692,
+            "replay": 0.2377644263710765,
+            "absolute_difference": 1.0957901253050295e-13,
+            "relative_difference": 4.608721927120191e-13
+          },
+          {
+            "path": "/coefficients/A",
+            "supplied": 4.24525027594442,
+            "replay": 4.245250275944938,
+            "absolute_difference": 5.186961971048731e-13,
+            "relative_difference": 1.221827132416784e-13
+          },
+          {
+            "path": "/coefficients/C",
+            "supplied": 4.238858559433196,
+            "replay": 4.238858559433703,
+            "absolute_difference": 5.071498776487715e-13,
+            "relative_difference": 1.19643029022555e-13
+          },
+          {
+            "path": "/coefficients/D",
+            "supplied": 4.396221028708471,
+            "replay": 4.39622102870814,
+            "absolute_difference": 3.312905505481467e-13,
+            "relative_difference": 7.535802872165274e-14
+          },
+          {
+            "path": "/coefficients/b",
+            "supplied": 0.11306384489502991,
+            "replay": 0.11306384489513412,
+            "absolute_difference": 1.0420830864887876e-13,
+            "relative_difference": 9.216766752061831e-13
+          },
+          {
+            "path": "/coefficients/background_scalar_speed_squared",
+            "supplied": 0.9642050596983963,
+            "replay": 0.9642050596985843,
+            "absolute_difference": 1.87960758069039e-13,
+            "relative_difference": 1.9493857263913673e-13
+          },
+          {
+            "path": "/coefficients/beta1_Barreira_c3_equals_1",
+            "supplied": -0.7064764265721993,
+            "replay": -0.7064764265722839,
+            "absolute_difference": 8.459899447643693e-14,
+            "relative_difference": 1.1974779524761853e-13
+          },
+          {
+            "path": "/coefficients/beta2_Barreira_M3_equals_lambda",
+            "supplied": -24.993893573249775,
+            "replay": -24.99389357322973,
+            "absolute_difference": 2.0044410575792426e-11,
+            "relative_difference": 8.019723104384731e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/Kangular",
+            "supplied": 4.415152300521921,
+            "replay": 4.415152300521376,
+            "absolute_difference": 5.453415496958769e-13,
+            "relative_difference": 1.2351590898266665e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/Kr",
+            "supplied": 13.736475581205035,
+            "replay": 13.736475581200677,
+            "absolute_difference": 4.357403327048814e-12,
+            "relative_difference": 3.172140700348816e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/Ktime",
+            "supplied": 9.321323280683114,
+            "replay": 9.321323280679298,
+            "absolute_difference": 3.815614491031738e-12,
+            "relative_difference": 4.0934257681406264e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/Phi_force_fractional_enhancement",
+            "supplied": 0.0007111652513622477,
+            "replay": 0.000711165251363711,
+            "absolute_difference": 1.4633476722036853e-15,
+            "relative_difference": 2.057676003433268e-12
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/Weyl_force_fractional_enhancement",
+            "supplied": 0.0007111652513622477,
+            "replay": 0.000711165251363711,
+            "absolute_difference": 1.4633476722036853e-15,
+            "relative_difference": 2.057676003433268e-12
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/gradient_ratio_squared_to_rolling_background",
+            "supplied": 1.2628823705890231e-08,
+            "replay": 1.2628823705879529e-08,
+            "absolute_difference": 1.0702062765211072e-20,
+            "relative_difference": 8.474314801163551e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/pi_prime_in_MplH0",
+            "supplied": -2.671950003919843e-05,
+            "replay": -2.6719500039199425e-05,
+            "absolute_difference": 9.961107459710572e-19,
+            "relative_difference": 3.7280291341893684e-14
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/radius_kpc",
+            "supplied": 100.10700485063006,
+            "replay": 100.10700485068504,
+            "absolute_difference": 5.498179689311655e-11,
+            "relative_difference": 5.492302659055183e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.4736615357683803,
+            "replay": 0.4736615357685157,
+            "absolute_difference": 1.3539169785303784e-13,
+            "relative_difference": 2.85840600574424e-13
+          },
+          {
+            "path": "/exterior_scalar_radial_speed_maximum/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.4736615357683804,
+            "replay": 1.473661535768516,
+            "absolute_difference": 1.3566925360919413e-13,
+            "relative_difference": 9.20626957522203e-14
+          },
+          {
+            "path": "/prediction/H_times_rV_over_c",
+            "supplied": 5.642138685209716e-05,
+            "replay": 5.642138685207788e-05,
+            "absolute_difference": 1.9278469879507876e-17,
+            "relative_difference": 3.4168727418991656e-13
+          },
+          {
+            "path": "/prediction/rV_Mpc",
+            "supplied": 0.2120292249771296,
+            "replay": 0.2120292249771778,
+            "absolute_difference": 4.821143484434742e-14,
+            "relative_difference": 2.273810831952422e-13
+          },
+          {
+            "path": "/prediction/rV_background_curvature_parameter",
+            "supplied": 6.912402979283595e-11,
+            "replay": 6.912402979286736e-11,
+            "absolute_difference": 3.140701388287277e-23,
+            "relative_difference": 4.5435739173481764e-13
+          },
+          {
+            "path": "/prediction/rV_kpc",
+            "supplied": 212.0292249771296,
+            "replay": 212.0292249771778,
+            "absolute_difference": 4.8203219193965197e-11,
+            "relative_difference": 2.2734233546891759e-13
+          },
+          {
+            "path": "/prediction/unscreened_Sigma_minus_one",
+            "supplied": 0.001507886243809552,
+            "replay": 0.0015078862438121512,
+            "absolute_difference": 2.5992662883167483e-15,
+            "relative_difference": 1.723781418517297e-12
+          },
+          {
+            "path": "/prediction/unscreened_mu_minus_one",
+            "supplied": 0.001507886243809552,
+            "replay": 0.0015078862438121512,
+            "absolute_difference": 2.5992662883167483e-15,
+            "relative_difference": 1.723781418517297e-12
+          },
+          {
+            "path": "/radius_samples/0/Kangular",
+            "supplied": 3982.269265551635,
+            "replay": 3982.26926555347,
+            "absolute_difference": 1.8353603081777692e-09,
+            "relative_difference": 4.608830256794627e-13
+          },
+          {
+            "path": "/radius_samples/0/Kr",
+            "supplied": 3982.2704602321364,
+            "replay": 3982.270460233972,
+            "absolute_difference": 1.8353603081777692e-09,
+            "relative_difference": 4.608828874146286e-13
+          },
+          {
+            "path": "/radius_samples/0/Ktime",
+            "supplied": 5971.442428857262,
+            "replay": 5971.442428860014,
+            "absolute_difference": 2.752130967564881e-09,
+            "relative_difference": 4.608821068532931e-13
+          },
+          {
+            "path": "/radius_samples/0/Phi_force_fractional_enhancement",
+            "supplied": 3.206673307444424e-06,
+            "replay": 3.206673307448859e-06,
+            "absolute_difference": 4.4346409953498894e-18,
+            "relative_difference": 1.3829413133713022e-12
+          },
+          {
+            "path": "/radius_samples/0/Weyl_force_fractional_enhancement",
+            "supplied": 3.206673307444424e-06,
+            "replay": 3.206673307448859e-06,
+            "absolute_difference": 4.4346409953498894e-18,
+            "relative_difference": 1.3829413133713022e-12
+          },
+          {
+            "path": "/radius_samples/0/gradient_ratio_squared_to_rolling_background",
+            "supplied": 1.989681793096339e-12,
+            "replay": 1.9896817930963412e-12,
+            "absolute_difference": 2.0194839173657902e-27,
+            "relative_difference": 1.0149783369244552e-15
+          },
+          {
+            "path": "/radius_samples/0/pi_prime_in_MplH0",
+            "supplied": -3.3538118137807726e-07,
+            "replay": -3.3538118137823195e-07,
+            "absolute_difference": 1.546893919923166e-19,
+            "relative_difference": 4.612345610946319e-13
+          },
+          {
+            "path": "/radius_samples/1/Kangular",
+            "supplied": 3958.3240754542803,
+            "replay": 3958.3240754561048,
+            "absolute_difference": 1.824446371756494e-09,
+            "relative_difference": 4.609138456019698e-13
+          },
+          {
+            "path": "/radius_samples/1/Kr",
+            "supplied": 3970.3068793388793,
+            "replay": 3970.306879340709,
+            "absolute_difference": 1.8299033399671316e-09,
+            "relative_difference": 4.608972040649513e-13
+          },
+          {
+            "path": "/radius_samples/1/Ktime",
+            "supplied": 5941.515448313278,
+            "replay": 5941.515448316017,
+            "absolute_difference": 2.738488547038287e-09,
+            "relative_difference": 4.609074184626936e-13
+          },
+          {
+            "path": "/radius_samples/1/Phi_force_fractional_enhancement",
+            "supplied": 3.2163255540259787e-06,
+            "replay": 3.216325554030426e-06,
+            "absolute_difference": 4.447346489558704e-18,
+            "relative_difference": 1.3827413969309843e-12
+          },
+          {
+            "path": "/radius_samples/1/Weyl_force_fractional_enhancement",
+            "supplied": 3.2163255540259787e-06,
+            "replay": 3.216325554030426e-06,
+            "absolute_difference": 4.447346489558704e-18,
+            "relative_difference": 1.3827413969309843e-12
+          },
+          {
+            "path": "/radius_samples/1/gradient_ratio_squared_to_rolling_background",
+            "supplied": 1.9777322021098812e-08,
+            "replay": 1.9777322021098835e-08,
+            "absolute_difference": 2.3161057151484775e-23,
+            "relative_difference": 1.171091673927144e-15
+          },
+          {
+            "path": "/radius_samples/1/pi_prime_in_MplH0",
+            "supplied": -3.343725519112309e-05,
+            "replay": -3.343725519113852e-05,
+            "absolute_difference": 1.5429552167184335e-17,
+            "relative_difference": 4.614479292331557e-13
+          },
+          {
+            "path": "/radius_samples/2/Kangular",
+            "supplied": 3709.838814866476,
+            "replay": 3709.838814868185,
+            "absolute_difference": 1.7093952919822186e-09,
+            "relative_difference": 4.607734667964929e-13
+          },
+          {
+            "path": "/radius_samples/2/Kr",
+            "supplied": 3847.240079478542,
+            "replay": 3847.240079480315,
+            "absolute_difference": 1.7730599211063236e-09,
+            "relative_difference": 4.60865421569076e-13
+          },
+          {
+            "path": "/radius_samples/2/Ktime",
+            "supplied": 5631.496787795306,
+            "replay": 5631.496787797901,
+            "absolute_difference": 2.5947883841581643e-09,
+            "relative_difference": 4.60763537996087e-13
+          },
+          {
+            "path": "/radius_samples/2/Phi_force_fractional_enhancement",
+            "supplied": 3.319097216447335e-06,
+            "replay": 3.319097216451925e-06,
+            "absolute_difference": 4.5900715411710535e-18,
+            "relative_difference": 1.382927718545145e-12
+          },
+          {
+            "path": "/radius_samples/2/Weyl_force_fractional_enhancement",
+            "supplied": 3.319097216447335e-06,
+            "replay": 3.319097216451925e-06,
+            "absolute_difference": 4.5900715411710535e-18,
+            "relative_difference": 1.382927718545145e-12
+          },
+          {
+            "path": "/radius_samples/2/gradient_ratio_squared_to_rolling_background",
+            "supplied": 2.0632207818908735e-07,
+            "replay": 2.063220781890875e-07,
+            "absolute_difference": 1.5881867761018131e-22,
+            "relative_difference": 7.697609436864496e-16
+          },
+          {
+            "path": "/radius_samples/2/pi_prime_in_MplH0",
+            "supplied": -0.00010799899871478255,
+            "replay": -0.00010799899871483236,
+            "absolute_difference": 4.980553729855286e-17,
+            "relative_difference": 4.611666579436134e-13
+          },
+          {
+            "path": "/radius_samples/2/scalar_radial_characteristic_speed_squared",
+            "supplied": 0.6831647472154044,
+            "replay": 0.6831647472154045,
+            "absolute_difference": 1.1102230246251565e-16,
+            "relative_difference": 1.6251175564173234e-16
+          },
+          {
+            "path": "/radius_samples/3/Kangular",
+            "supplied": 3347.5203178516713,
+            "replay": 3347.5203178532142,
+            "absolute_difference": 1.5429577615577728e-09,
+            "relative_difference": 4.609255852248247e-13
+          },
+          {
+            "path": "/radius_samples/3/Kr",
+            "supplied": 3671.4734233927957,
+            "replay": 3671.473423394488,
+            "absolute_difference": 1.692114892648533e-09,
+            "relative_difference": 4.608816944900708e-13
+          },
+          {
+            "path": "/radius_samples/3/Ktime",
+            "supplied": 5181.294962737627,
+            "replay": 5181.294962740016,
+            "absolute_difference": 2.3883330868557096e-09,
+            "relative_difference": 4.609529285693846e-13
+          },
+          {
+            "path": "/radius_samples/3/Phi_force_fractional_enhancement",
+            "supplied": 3.4778111130226708e-06,
+            "replay": 3.47781111302748e-06,
+            "absolute_difference": 4.80902955803629e-18,
+            "relative_difference": 1.382774797638914e-12
+          },
+          {
+            "path": "/radius_samples/3/Weyl_force_fractional_enhancement",
+            "supplied": 3.4778111130226708e-06,
+            "replay": 3.47781111302748e-06,
+            "absolute_difference": 4.80902955803629e-18,
+            "relative_difference": 1.382774797638914e-12
+          },
+          {
+            "path": "/radius_samples/3/gradient_ratio_squared_to_rolling_background",
+            "supplied": 4.227314463140507e-07,
+            "replay": 4.22731446314051e-07,
+            "absolute_difference": 3.1763735522036263e-22,
+            "relative_difference": 7.513927766433236e-16
+          },
+          {
+            "path": "/radius_samples/3/pi_prime_in_MplH0",
+            "supplied": -0.0001545892018840635,
+            "replay": -0.0001545892018841348,
+            "absolute_difference": 7.128629284092192e-17,
+            "relative_difference": 4.61133714205887e-13
+          },
+          {
+            "path": "/radius_samples/3/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.6460779287660842,
+            "replay": 0.646077928766084,
+            "absolute_difference": 1.1102230246251565e-16,
+            "relative_difference": 1.7184041973783608e-16
+          },
+          {
+            "path": "/radius_samples/4/Kangular",
+            "supplied": 1505.2883656057427,
+            "replay": 1505.2883656064364,
+            "absolute_difference": 6.93717083777301e-10,
+            "relative_difference": 4.608532820873444e-13
+          },
+          {
+            "path": "/radius_samples/4/Kr",
+            "supplied": 2855.0431388402726,
+            "replay": 2855.043138841588,
+            "absolute_difference": 1.3155840861145407e-09,
+            "relative_difference": 4.607930676133094e-13
+          },
+          {
+            "path": "/radius_samples/4/Ktime",
+            "supplied": 2930.8478682154373,
+            "replay": 2930.8478682167884,
+            "absolute_difference": 1.351054379483685e-09,
+            "relative_difference": 4.60977314495115e-13
+          },
+          {
+            "path": "/radius_samples/4/Phi_force_fractional_enhancement",
+            "supplied": 4.470854233361004e-06,
+            "replay": 4.470854233367187e-06,
+            "absolute_difference": 6.1833405149563925e-18,
+            "relative_difference": 1.3830333516170156e-12
+          },
+          {
+            "path": "/radius_samples/4/Weyl_force_fractional_enhancement",
+            "supplied": 4.470854233361004e-06,
+            "replay": 4.470854233367187e-06,
+            "absolute_difference": 6.1833405149563925e-18,
+            "relative_difference": 1.3830333516170156e-12
+          },
+          {
+            "path": "/radius_samples/4/gradient_ratio_squared_to_rolling_background",
+            "supplied": 8.27688634009643e-07,
+            "replay": 8.276886340096438e-07,
+            "absolute_difference": 7.411538288475128e-22,
+            "relative_difference": 8.954500501681143e-16
+          },
+          {
+            "path": "/radius_samples/4/pi_prime_in_MplH0",
+            "supplied": -0.00021631188055334067,
+            "replay": -0.00021631188055344048,
+            "absolute_difference": 9.980080997729068e-17,
+            "relative_difference": 4.613746120739802e-13
+          },
+          {
+            "path": "/radius_samples/4/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.5136016720384389,
+            "replay": 0.5136016720384388,
+            "absolute_difference": 1.1102230246251565e-16,
+            "relative_difference": 2.1616421539649222e-16
+          },
+          {
+            "path": "/radius_samples/4/scalar_radial_characteristic_speed_squared",
+            "supplied": 0.9741355632282199,
+            "replay": 0.9741355632282197,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 2.2794014848322586e-16
+          },
+          {
+            "path": "/radius_samples/5/Kangular",
+            "supplied": 629.6583201502119,
+            "replay": 629.6583201505023,
+            "absolute_difference": 2.9035618354100734e-10,
+            "relative_difference": 4.611329259839522e-13
+          },
+          {
+            "path": "/radius_samples/5/Kr",
+            "supplied": 2518.6118784284367,
+            "replay": 2518.6118784295973,
+            "absolute_difference": 1.1605152394622564e-09,
+            "relative_difference": 4.607757349998661e-13
+          },
+          {
+            "path": "/radius_samples/5/Ktime",
+            "supplied": 1887.0021925539893,
+            "replay": 1887.002192554859,
+            "absolute_difference": 8.697043085703626e-10,
+            "relative_difference": 4.608920498355379e-13
+          },
+          {
+            "path": "/radius_samples/5/Phi_force_fractional_enhancement",
+            "supplied": 5.067058797822507e-06,
+            "replay": 5.067058797829515e-06,
+            "absolute_difference": 7.008350605582081e-18,
+            "relative_difference": 1.3831200475893068e-12
+          },
+          {
+            "path": "/radius_samples/5/Weyl_force_fractional_enhancement",
+            "supplied": 5.067058797822507e-06,
+            "replay": 5.067058797829515e-06,
+            "absolute_difference": 7.008350605582081e-18,
+            "relative_difference": 1.3831200475893068e-12
+          },
+          {
+            "path": "/radius_samples/5/gradient_ratio_squared_to_rolling_background",
+            "supplied": 7.948891773193084e-07,
+            "replay": 7.948891773193093e-07,
+            "absolute_difference": 9.529120656610879e-22,
+            "relative_difference": 1.1987986411825324e-15
+          },
+          {
+            "path": "/radius_samples/5/pi_prime_in_MplH0",
+            "supplied": -0.00021198257788456132,
+            "replay": -0.00021198257788465914,
+            "absolute_difference": 9.782214101250464e-17,
+            "relative_difference": 4.614631163971189e-13
+          },
+          {
+            "path": "/radius_samples/5/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.33368181692358934,
+            "replay": 0.3336818169235894,
+            "absolute_difference": 5.551115123125783e-17,
+            "relative_difference": 1.663595329917826e-16
+          },
+          {
+            "path": "/radius_samples/6/Kangular",
+            "supplied": 222.63328274842252,
+            "replay": 222.6332827485254,
+            "absolute_difference": 1.0288658813806251e-10,
+            "relative_difference": 4.621348024334943e-13
+          },
+          {
+            "path": "/radius_samples/6/Kr",
+            "supplied": 890.4725971088349,
+            "replay": 890.4725971092453,
+            "absolute_difference": 4.1040948417503387e-10,
+            "relative_difference": 4.608895158678005e-13
+          },
+          {
+            "path": "/radius_samples/6/Ktime",
+            "supplied": 665.9075144923986,
+            "replay": 665.9075144927057,
+            "absolute_difference": 3.070681486860849e-10,
+            "relative_difference": 4.611273217425002e-13
+          },
+          {
+            "path": "/radius_samples/6/Phi_force_fractional_enhancement",
+            "supplied": 1.4287771707247584e-05,
+            "replay": 1.428777170726736e-05,
+            "absolute_difference": 1.9776525252493404e-17,
+            "relative_difference": 1.3841574220045528e-12
+          },
+          {
+            "path": "/radius_samples/6/Weyl_force_fractional_enhancement",
+            "supplied": 1.4287771707247584e-05,
+            "replay": 1.428777170726736e-05,
+            "absolute_difference": 1.9776525252493404e-17,
+            "relative_difference": 1.3841574220045528e-12
+          },
+          {
+            "path": "/radius_samples/6/gradient_ratio_squared_to_rolling_background",
+            "supplied": 3.950060235375257e-07,
+            "replay": 3.950060235375268e-07,
+            "absolute_difference": 1.1117307432712692e-21,
+            "relative_difference": 2.814465291731569e-15
+          },
+          {
+            "path": "/radius_samples/6/pi_prime_in_MplH0",
+            "supplied": -0.00014943376421988662,
+            "replay": -0.00014943376421995571,
+            "absolute_difference": 6.909078344163877e-17,
+            "relative_difference": 4.623505524492716e-13
+          },
+          {
+            "path": "/radius_samples/6/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.3343306358663473,
+            "replay": 0.33433063586634765,
+            "absolute_difference": 3.3306690738754696e-16,
+            "relative_difference": 9.9622012360451e-16
+          },
+          {
+            "path": "/radius_samples/6/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.3372316391227623,
+            "replay": 1.337231639122762,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 1.6604797435894865e-16
+          },
+          {
+            "path": "/radius_samples/7/Kangular",
+            "supplied": 103.50038155873301,
+            "replay": 103.50038155878065,
+            "absolute_difference": 4.7634785005357116e-11,
+            "relative_difference": 4.602377719576421e-13
+          },
+          {
+            "path": "/radius_samples/7/Kr",
+            "supplied": 413.87128340866803,
+            "replay": 413.87128340885874,
+            "absolute_difference": 1.907096702780109e-10,
+            "relative_difference": 4.607946429800949e-13
+          },
+          {
+            "path": "/radius_samples/7/Ktime",
+            "supplied": 308.4739564526257,
+            "replay": 308.47395645276765,
+            "absolute_difference": 1.4193801689543761e-10,
+            "relative_difference": 4.601296606290195e-13
+          },
+          {
+            "path": "/radius_samples/7/Phi_force_fractional_enhancement",
+            "supplied": 3.057431939410517e-05,
+            "replay": 3.057431939414754e-05,
+            "absolute_difference": 4.237197615344912e-17,
+            "relative_difference": 1.3858681728044805e-12
+          },
+          {
+            "path": "/radius_samples/7/Weyl_force_fractional_enhancement",
+            "supplied": 3.057431939410517e-05,
+            "replay": 3.057431939414754e-05,
+            "absolute_difference": 4.237197615344912e-17,
+            "relative_difference": 1.3858681728044805e-12
+          },
+          {
+            "path": "/radius_samples/7/gradient_ratio_squared_to_rolling_background",
+            "supplied": 2.3441927118466354e-07,
+            "replay": 2.3441927118466507e-07,
+            "absolute_difference": 1.5352472168984194e-21,
+            "relative_difference": 6.549151053750312e-15
+          },
+          {
+            "path": "/radius_samples/7/pi_prime_in_MplH0",
+            "supplied": -0.00011511807876617111,
+            "replay": -0.00011511807876622455,
+            "absolute_difference": 5.34376145763793e-17,
+            "relative_difference": 4.641982836155759e-13
+          },
+          {
+            "path": "/radius_samples/7/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.33552388911194264,
+            "replay": 0.3355238891119427,
+            "absolute_difference": 5.551115123125783e-17,
+            "relative_difference": 1.6544619632951782e-16
+          },
+          {
+            "path": "/radius_samples/7/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.3416733398439387,
+            "replay": 1.3416733398439395,
+            "absolute_difference": 8.881784197001252e-16,
+            "relative_difference": 6.619930450458505e-16
+          },
+          {
+            "path": "/radius_samples/8/Kangular",
+            "supplied": 20.10848707625488,
+            "replay": 20.108487076264005,
+            "absolute_difference": 9.123368727159686e-12,
+            "relative_difference": 4.5370736707153976e-13
+          },
+          {
+            "path": "/radius_samples/8/Kr",
+            "supplied": 79.75810772658673,
+            "replay": 79.75810772662341,
+            "absolute_difference": 3.667821601993637e-11,
+            "relative_difference": 4.598681822501411e-13
+          },
+          {
+            "path": "/radius_samples/8/Ktime",
+            "supplied": 58.02547412910692,
+            "replay": 58.02547412913329,
+            "absolute_difference": 2.637534635141492e-11,
+            "relative_difference": 4.5454770938587533e-13
+          },
+          {
+            "path": "/radius_samples/8/Phi_force_fractional_enhancement",
+            "supplied": 0.00015218922286929068,
+            "replay": 0.00015218922286950383,
+            "absolute_difference": 2.1315414711065017e-16,
+            "relative_difference": 1.4005863430534753e-12
+          },
+          {
+            "path": "/radius_samples/8/Weyl_force_fractional_enhancement",
+            "supplied": 0.00015218922286929068,
+            "replay": 0.00015218922286950383,
+            "absolute_difference": 2.1315414711065017e-16,
+            "relative_difference": 1.4005863430534753e-12
+          },
+          {
+            "path": "/radius_samples/8/gradient_ratio_squared_to_rolling_background",
+            "supplied": 7.170715548597622e-08,
+            "replay": 7.170715548597878e-08,
+            "absolute_difference": 2.5543337315637495e-21,
+            "relative_difference": 3.562174115334e-14
+          },
+          {
+            "path": "/radius_samples/8/pi_prime_in_MplH0",
+            "supplied": -6.366901407172176e-05,
+            "replay": -6.366901407175224e-05,
+            "absolute_difference": 3.0479633573998743e-17,
+            "relative_difference": 4.787200495937333e-13
+          },
+          {
+            "path": "/radius_samples/8/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.3465458469415246,
+            "replay": 0.3465458469415243,
+            "absolute_difference": 3.3306690738754696e-16,
+            "relative_difference": 9.611048879305945e-16
+          },
+          {
+            "path": "/radius_samples/8/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.3745360796040134,
+            "replay": 1.3745360796040207,
+            "absolute_difference": 7.327471962526033e-15,
+            "relative_difference": 5.330869135597362e-15
+          },
+          {
+            "path": "/radius_samples/9/Kangular",
+            "supplied": 4.418718039612365,
+            "replay": 4.418718039613651,
+            "absolute_difference": 1.2860823517257813e-12,
+            "relative_difference": 2.910532738673237e-13
+          },
+          {
+            "path": "/radius_samples/9/Kr",
+            "supplied": 13.756430975922907,
+            "replay": 13.756430975928799,
+            "absolute_difference": 5.892175636290631e-12,
+            "relative_difference": 4.2832153533161097e-13
+          },
+          {
+            "path": "/radius_samples/9/Ktime",
+            "supplied": 9.334866717132495,
+            "replay": 9.334866717135634,
+            "absolute_difference": 3.1388225352202426e-12,
+            "relative_difference": 3.362471720629379e-13
+          },
+          {
+            "path": "/radius_samples/9/Phi_force_fractional_enhancement",
+            "supplied": 0.0007103766236898401,
+            "replay": 0.000710376623690897,
+            "absolute_difference": 1.0568802777388697e-15,
+            "relative_difference": 1.487774572661498e-12
+          },
+          {
+            "path": "/radius_samples/9/Weyl_force_fractional_enhancement",
+            "supplied": 0.0007103766236898401,
+            "replay": 0.000710376623690897,
+            "absolute_difference": 1.0568802777388697e-15,
+            "relative_difference": 1.487774572661498e-12
+          },
+          {
+            "path": "/radius_samples/9/gradient_ratio_squared_to_rolling_background",
+            "supplied": 1.2654851072510974e-08,
+            "replay": 1.2654851072513636e-08,
+            "absolute_difference": 2.661867211195643e-21,
+            "relative_difference": 2.1034362205793037e-13
+          },
+          {
+            "path": "/radius_samples/9/pi_prime_in_MplH0",
+            "supplied": -2.6747019636139682e-05,
+            "replay": -2.6747019636154824e-05,
+            "absolute_difference": 1.5141560965117873e-17,
+            "relative_difference": 5.661027348504691e-13
+          },
+          {
+            "path": "/radius_samples/9/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.47335630743421225,
+            "replay": 0.4733563074341908,
+            "absolute_difference": 2.142730437526552e-14,
+            "relative_difference": 4.526675580053091e-14
+          },
+          {
+            "path": "/radius_samples/9/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.4736612093963177,
+            "replay": 1.4736612093964534,
+            "absolute_difference": 1.3566925360919413e-13,
+            "relative_difference": 9.206271614136519e-14
+          },
+          {
+            "path": "/radius_samples/10/Kangular",
+            "supplied": 3.746657039832317,
+            "replay": 3.746657039832765,
+            "absolute_difference": 4.480860127387132e-13,
+            "relative_difference": 1.195962181686017e-13
+          },
+          {
+            "path": "/radius_samples/10/Kr",
+            "supplied": 5.994651263731703,
+            "replay": 5.994651263732422,
+            "absolute_difference": 7.185363415374013e-13,
+            "relative_difference": 1.1986290943805603e-13
+          },
+          {
+            "path": "/radius_samples/10/Ktime",
+            "supplied": 4.781915861256845,
+            "replay": 4.781915861256561,
+            "absolute_difference": 2.8421709430404007e-13,
+            "relative_difference": 5.943582081959478e-14
+          },
+          {
+            "path": "/radius_samples/10/Phi_force_fractional_enhancement",
+            "supplied": 0.0012491738654034801,
+            "replay": 0.0012491738654056331,
+            "absolute_difference": 2.1530086741217147e-15,
+            "relative_difference": 1.723546044109959e-12
+          },
+          {
+            "path": "/radius_samples/10/Weyl_force_fractional_enhancement",
+            "supplied": 0.0012491738654034801,
+            "replay": 0.0012491738654056331,
+            "absolute_difference": 2.1530086741217147e-15,
+            "relative_difference": 1.723546044109959e-12
+          },
+          {
+            "path": "/radius_samples/10/gradient_ratio_squared_to_rolling_background",
+            "supplied": 1.9361660056884077e-09,
+            "replay": 1.936166005687968e-09,
+            "absolute_difference": 4.396464955719342e-22,
+            "relative_difference": 2.270706614413556e-13
+          },
+          {
+            "path": "/radius_samples/10/pi_prime_in_MplH0",
+            "supplied": -1.0462083276245313e-05,
+            "replay": -1.0462083276248946e-05,
+            "absolute_difference": 3.6337713437209485e-18,
+            "relative_difference": 3.4732770211948223e-13
+          },
+          {
+            "path": "/radius_samples/10/radius_kpc",
+            "supplied": 212.0292249771296,
+            "replay": 212.0292249771778,
+            "absolute_difference": 4.8203219193965197e-11,
+            "relative_difference": 2.2734233546891759e-13
+          },
+          {
+            "path": "/radius_samples/10/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.7835054293171047,
+            "replay": 0.783505429317245,
+            "absolute_difference": 1.4033219031261979e-13,
+            "relative_difference": 1.7910812747645143e-13
+          },
+          {
+            "path": "/radius_samples/10/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.2536086869073668,
+            "replay": 1.2536086869075915,
+            "absolute_difference": 2.2470914018413168e-13,
+            "relative_difference": 1.7924982694439175e-13
+          },
+          {
+            "path": "/radius_samples/11/Kangular",
+            "supplied": 3.9657588201487193,
+            "replay": 3.96575882014906,
+            "absolute_difference": 3.4061642395499803e-13,
+            "relative_difference": 8.588934410848127e-14
+          },
+          {
+            "path": "/radius_samples/11/Kr",
+            "supplied": 4.930650029470658,
+            "replay": 4.930650029471687,
+            "absolute_difference": 1.0293987884324451e-12,
+            "relative_difference": 2.0877547225613148e-13
+          },
+          {
+            "path": "/radius_samples/11/Ktime",
+            "supplied": 4.469017024442724,
+            "replay": 4.469017024442488,
+            "absolute_difference": 2.362554596402333e-13,
+            "relative_difference": 5.2865195712628505e-14
+          },
+          {
+            "path": "/radius_samples/11/Phi_force_fractional_enhancement",
+            "supplied": 0.0013941241123779289,
+            "replay": 0.001394124112380265,
+            "absolute_difference": 2.336238841271765e-15,
+            "relative_difference": 1.6757753635627824e-12
+          },
+          {
+            "path": "/radius_samples/11/Weyl_force_fractional_enhancement",
+            "supplied": 0.0013941241123779289,
+            "replay": 0.001394124112380265,
+            "absolute_difference": 2.336238841271765e-15,
+            "relative_difference": 1.6757753635627824e-12
+          },
+          {
+            "path": "/radius_samples/11/gradient_ratio_squared_to_rolling_background",
+            "supplied": 6.017243322793231e-10,
+            "replay": 6.01724332279676e-10,
+            "absolute_difference": 3.5289592883043543e-22,
+            "relative_difference": 5.864744200947812e-13
+          },
+          {
+            "path": "/radius_samples/11/pi_prime_in_MplH0",
+            "supplied": -5.832378013057574e-06,
+            "replay": -5.8323780130619715e-06,
+            "absolute_difference": 4.397795062144327e-18,
+            "relative_difference": 7.54031212019953e-13
+          },
+          {
+            "path": "/radius_samples/11/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.8873895083546341,
+            "replay": 0.8873895083547573,
+            "absolute_difference": 1.2312373343092986e-13,
+            "relative_difference": 1.3874824107310158e-13
+          },
+          {
+            "path": "/radius_samples/11/scalar_radial_characteristic_speed_squared",
+            "supplied": 1.1032963182961912,
+            "replay": 1.1032963182964801,
+            "absolute_difference": 2.8888003100746573e-13,
+            "relative_difference": 2.61833585607881e-13
+          },
+          {
+            "path": "/radius_samples/12/Kangular",
+            "supplied": 4.22885277608866,
+            "replay": 4.228852776089159,
+            "absolute_difference": 4.991562718714704e-13,
+            "relative_difference": 1.1803585944014555e-13
+          },
+          {
+            "path": "/radius_samples/12/Kr",
+            "supplied": 4.2590131906567885,
+            "replay": 4.2590131906573125,
+            "absolute_difference": 5.240252676230739e-13,
+            "relative_difference": 1.2303912764878363e-13
+          },
+          {
+            "path": "/radius_samples/12/Ktime",
+            "supplied": 4.396292560975731,
+            "replay": 4.396292560975399,
+            "absolute_difference": 3.312905505481467e-13,
+            "relative_difference": 7.535680256789343e-14
+          },
+          {
+            "path": "/radius_samples/12/Phi_force_fractional_enhancement",
+            "supplied": 0.0015043099494072756,
+            "replay": 0.0015043099494098662,
+            "absolute_difference": 2.5905926709368643e-15,
+            "relative_difference": 1.7221136322056522e-12
+          },
+          {
+            "path": "/radius_samples/12/Weyl_force_fractional_enhancement",
+            "supplied": 0.0015043099494072756,
+            "replay": 0.0015043099494098662,
+            "absolute_difference": 2.5905926709368643e-15,
+            "relative_difference": 1.7221136322056522e-12
+          },
+          {
+            "path": "/radius_samples/12/gradient_ratio_squared_to_rolling_background",
+            "supplied": 5.674849796228148e-12,
+            "replay": 5.6748497962320005e-12,
+            "absolute_difference": 3.8523675207669814e-24,
+            "relative_difference": 6.788492487197635e-13
+          },
+          {
+            "path": "/radius_samples/12/pi_prime_in_MplH0",
+            "supplied": -5.664010668966521e-07,
+            "replay": -5.664010668971053e-07,
+            "absolute_difference": 4.532685058994575e-19,
+            "relative_difference": 8.002606852118849e-13
+          },
+          {
+            "path": "/radius_samples/12/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.9619134116838874,
+            "replay": 0.9619134116840735,
+            "absolute_difference": 1.8607337892717624e-13,
+            "relative_difference": 1.9344088216988635e-13
+          },
+          {
+            "path": "/radius_samples/12/scalar_radial_characteristic_speed_squared",
+            "supplied": 0.9687738319470546,
+            "replay": 0.9687738319472468,
+            "absolute_difference": 1.921796055626146e-13,
+            "relative_difference": 1.9837406753273821e-13
+          },
+          {
+            "path": "/radius_samples/13/Kangular",
+            "supplied": 4.238484570247083,
+            "replay": 4.238484570247591,
+            "absolute_difference": 5.080380560684716e-13,
+            "relative_difference": 1.1986313684724716e-13
+          },
+          {
+            "path": "/radius_samples/13/Kr",
+            "supplied": 4.239606735854908,
+            "replay": 4.239606735855416,
+            "absolute_difference": 5.080380560684716e-13,
+            "relative_difference": 1.1983141072305773e-13
+          },
+          {
+            "path": "/radius_samples/13/Ktime",
+            "supplied": 4.396221127733213,
+            "replay": 4.3962211277328835,
+            "absolute_difference": 3.2951419370874646e-13,
+            "relative_difference": 7.495396253615003e-14
+          },
+          {
+            "path": "/radius_samples/13/Phi_force_fractional_enhancement",
+            "supplied": 0.0015077531814102912,
+            "replay": 0.0015077531814128898,
+            "absolute_difference": 2.598615767013257e-15,
+            "relative_difference": 1.7235020950727606e-12
+          },
+          {
+            "path": "/radius_samples/13/Weyl_force_fractional_enhancement",
+            "supplied": 0.0015077531814102912,
+            "replay": 0.0015077531814128898,
+            "absolute_difference": 2.598615767013257e-15,
+            "relative_difference": 1.7235020950727606e-12
+          },
+          {
+            "path": "/radius_samples/13/gradient_ratio_squared_to_rolling_background",
+            "supplied": 7.038096275028666e-14,
+            "replay": 7.038096275033463e-14,
+            "absolute_difference": 4.7975364811921054e-26,
+            "relative_difference": 6.816525795780714e-13
+          },
+          {
+            "path": "/radius_samples/13/pi_prime_in_MplH0",
+            "supplied": -6.30775009649292e-08,
+            "replay": -6.307750096497977e-08,
+            "absolute_difference": 5.05705139290419e-20,
+            "relative_difference": 8.017203147784639e-13
+          },
+          {
+            "path": "/radius_samples/13/scalar_angular_characteristic_speed_squared",
+            "supplied": 0.9641199673758307,
+            "replay": 0.9641199673760186,
+            "absolute_difference": 1.8784973576657649e-13,
+            "relative_difference": 1.948406237014998e-13
+          },
+          {
+            "path": "/radius_samples/13/scalar_radial_characteristic_speed_squared",
+            "supplied": 0.9643752242373989,
+            "replay": 0.9643752242375867,
+            "absolute_difference": 1.8784973576657649e-13,
+            "relative_difference": 1.9478905206749049e-13
+          }
+        ]
+      },
+      "final_script_sha256": "aab0da7634a1b60d590a2401575750ca33d5ae0144280b2533fdb0631ad58971",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "screened_projection",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/r1_screened_review/check_screened_projection.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\review\\screened_projection_check_results.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.1093573000107426,
+      "script_sha256": "3285bda63135cd2b18d6a3d387b94c702ca9974153db637d1f2e9e3befcf564f",
+      "comparison": {
+        "numeric_values_compared": 37,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/scalar_coefficients/b",
+            "supplied": 0.11306384489502991,
+            "replay": 0.11306384489513412,
+            "absolute_difference": 1.0420830864887876e-13,
+            "relative_difference": 9.216766752061831e-13
+          },
+          {
+            "path": "/scalar_coefficients/C",
+            "supplied": 4.238858559433196,
+            "replay": 4.238858559433703,
+            "absolute_difference": 5.071498776487715e-13,
+            "relative_difference": 1.19643029022555e-13
+          },
+          {
+            "path": "/scalar_coefficients/F_infinity",
+            "supplied": 0.001507886243809552,
+            "replay": 0.0015078862438121512,
+            "absolute_difference": 2.5992662883167483e-15,
+            "relative_difference": 1.723781418517297e-12
+          },
+          {
+            "path": "/scalar_coefficients/rV_Mpc",
+            "supplied": 0.21202922497712948,
+            "replay": 0.21202922497717772,
+            "absolute_difference": 4.823919041996305e-14,
+            "relative_difference": 2.2751198767606855e-13
+          },
+          {
+            "path": "/direct_z_extra_alpha_rad/0",
+            "supplied": 8.320894433853424e-11,
+            "replay": 8.320894433865074e-11,
+            "absolute_difference": 1.165032193992655e-22,
+            "relative_difference": 1.4001285598009036e-12
+          },
+          {
+            "path": "/direct_z_extra_alpha_rad/1",
+            "supplied": 1.2531391301704208e-11,
+            "replay": 1.2531391301721676e-11,
+            "absolute_difference": 1.746772809164714e-23,
+            "relative_difference": 1.393917696055953e-12
+          },
+          {
+            "path": "/direct_z_extra_alpha_rad/2",
+            "supplied": 7.50889216350912e-11,
+            "replay": 7.508892163519615e-11,
+            "absolute_difference": 1.0494854021766539e-22,
+            "relative_difference": 1.3976567772231786e-12
+          },
+          {
+            "path": "/module_extra_alpha_rad/0",
+            "supplied": 8.320894433853424e-11,
+            "replay": 8.320894433865073e-11,
+            "absolute_difference": 1.1649029470219435e-22,
+            "relative_difference": 1.3999732315825987e-12
+          },
+          {
+            "path": "/module_extra_alpha_rad/1",
+            "supplied": 1.2531391301709761e-11,
+            "replay": 1.2531391301727208e-11,
+            "absolute_difference": 1.7446725458906535e-23,
+            "relative_difference": 1.3922416943860123e-12
+          },
+          {
+            "path": "/module_extra_alpha_rad/2",
+            "supplied": 7.508892163509118e-11,
+            "replay": 7.508892163519613e-11,
+            "absolute_difference": 1.0494854021766539e-22,
+            "relative_difference": 1.397656777223179e-12
+          },
+          {
+            "path": "/max_relative_alpha_discrepancy",
+            "supplied": 4.431090567281086e-13,
+            "replay": 4.414330550581696e-13,
+            "absolute_difference": 1.676001669938981e-15,
+            "relative_difference": 0.00378236834587512
+          },
+          {
+            "path": "/direct_z_extra_potential_Mpc/0",
+            "supplied": 6.560077316651421e-14,
+            "replay": 6.560077316660597e-14,
+            "absolute_difference": 9.176030049530809e-26,
+            "relative_difference": 1.39876858253474e-12
+          },
+          {
+            "path": "/direct_z_extra_potential_Mpc/1",
+            "supplied": -1.2840578848856774e-13,
+            "replay": -1.2840578848874697e-13,
+            "absolute_difference": 1.7922919766621388e-25,
+            "relative_difference": 1.3958031002797904e-12
+          },
+          {
+            "path": "/direct_z_extra_potential_Mpc/2",
+            "supplied": 9.623343336376475e-16,
+            "replay": 9.623343336389925e-16,
+            "absolute_difference": 1.3450078434018251e-27,
+            "relative_difference": 1.3976513113874493e-12
+          },
+          {
+            "path": "/module_extra_potential_Mpc/0",
+            "supplied": 6.560077316651421e-14,
+            "replay": 6.560077316660597e-14,
+            "absolute_difference": 9.176030049530809e-26,
+            "relative_difference": 1.39876858253474e-12
+          },
+          {
+            "path": "/module_extra_potential_Mpc/1",
+            "supplied": -1.2840578848856847e-13,
+            "replay": -1.284057884887477e-13,
+            "absolute_difference": 1.7922919766621388e-25,
+            "relative_difference": 1.3958031002797825e-12
+          },
+          {
+            "path": "/module_extra_potential_Mpc/2",
+            "supplied": 9.623343336376475e-16,
+            "replay": 9.623343336389925e-16,
+            "absolute_difference": 1.3450078434018251e-27,
+            "relative_difference": 1.3976513113874493e-12
+          },
+          {
+            "path": "/new_images_arcsec/0",
+            "supplied": 0.8354821572198398,
+            "replay": 0.83548215721984,
+            "absolute_difference": 2.220446049250313e-16,
+            "relative_difference": 2.6576821899334096e-16
+          },
+          {
+            "path": "/image_changes_arcsec/0",
+            "supplied": 6.1232762491445165e-06,
+            "replay": 6.123276249319229e-06,
+            "absolute_difference": 1.74712403832461e-16,
+            "relative_difference": 2.853250396090983e-11
+          },
+          {
+            "path": "/first_order_image_changes_arcsec/0",
+            "supplied": 6.1232374743680005e-06,
+            "replay": 6.123237474376574e-06,
+            "absolute_difference": 8.573667492108028e-18,
+            "relative_difference": 1.4001853640329285e-12
+          },
+          {
+            "path": "/first_order_image_changes_arcsec/1",
+            "supplied": 7.881150659642271e-07,
+            "replay": 7.881150659653258e-07,
+            "absolute_difference": 1.0987076117072343e-18,
+            "relative_difference": 1.3940954299141708e-12
+          },
+          {
+            "path": "/first_order_image_changes_arcsec/2",
+            "supplied": -4.348562965590595e-06,
+            "replay": -4.3485629655966724e-06,
+            "absolute_difference": 6.077461396549605e-18,
+            "relative_difference": 1.3975792565588853e-12
+          },
+          {
+            "path": "/new_relative_delays_days/0",
+            "supplied": 21.7163770204336,
+            "replay": 21.716377020433598,
+            "absolute_difference": 3.552713678800501e-15,
+            "relative_difference": 1.63596058194129e-16
+          },
+          {
+            "path": "/new_relative_delays_days/1",
+            "supplied": 14.271552491299555,
+            "replay": 14.271552491299554,
+            "absolute_difference": 1.7763568394002505e-15,
+            "relative_difference": 1.244683674381733e-16
+          },
+          {
+            "path": "/exact_model_delay_changes_seconds/0",
+            "supplied": 25.959258149566722,
+            "replay": 25.959258149259767,
+            "absolute_difference": 3.069544618483633e-10,
+            "relative_difference": 1.1824469716346134e-11
+          },
+          {
+            "path": "/exact_model_delay_changes_seconds/1",
+            "supplied": 8.64901937507625,
+            "replay": 8.649019374922773,
+            "absolute_difference": 1.5347723092418164e-10,
+            "relative_difference": 1.7745044179974286e-11
+          },
+          {
+            "path": "/first_order_delay_changes_seconds/0",
+            "supplied": 25.95909892268544,
+            "replay": 25.959098922721697,
+            "absolute_difference": 3.625899580583791e-11,
+            "relative_difference": 1.3967740526675785e-12
+          },
+          {
+            "path": "/first_order_delay_changes_seconds/1",
+            "supplied": 8.648963280189347,
+            "replay": 8.648963280201446,
+            "absolute_difference": 1.2098766433155106e-11,
+            "relative_difference": 1.398868978998629e-12
+          }
+        ]
+      },
+      "final_script_sha256": "7c0bd42544578c7bcf4cfdf24a46a12a3f090c7b7b5d0d10608f51f55ecb59df",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "multisource_crossratio",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/r1_screened_review/multisource_crossratio.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\review\\multisource_crossratio_results.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6623795999912545,
+      "script_sha256": "8a00099426dc87bbffbaa79877af3ef86ed1e7a4f079d9f0e1f8f491a1145328",
+      "comparison": {
+        "numeric_values_compared": 99,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/frozen_R1/D_ol_Mpc",
+            "supplied": 945.1628393723903,
+            "replay": 945.16283937304,
+            "absolute_difference": 6.497202775790356e-10,
+            "relative_difference": 6.874162319060965e-13
+          },
+          {
+            "path": "/frozen_R1/sources/0/D_os_Mpc",
+            "supplied": 1585.0596047737938,
+            "replay": 1585.059604774653,
+            "absolute_difference": 8.59245119499974e-10,
+            "relative_difference": 5.420900999004375e-13
+          },
+          {
+            "path": "/frozen_R1/sources/0/D_ls_Mpc",
+            "supplied": 903.8854794502174,
+            "replay": 903.8854794506095,
+            "absolute_difference": 3.921059033018537e-10,
+            "relative_difference": 4.3380042296989837e-13
+          },
+          {
+            "path": "/frozen_R1/sources/0/q",
+            "supplied": 0.5702533057608343,
+            "replay": 0.5702533057607726,
+            "absolute_difference": 6.17284001691587e-14,
+            "relative_difference": 1.0824733420317558e-13
+          },
+          {
+            "path": "/frozen_R1/sources/1/D_os_Mpc",
+            "supplied": 1748.3443785780253,
+            "replay": 1748.3443785788393,
+            "absolute_difference": 8.139977580867708e-10,
+            "relative_difference": 4.655820489718488e-13
+          },
+          {
+            "path": "/frozen_R1/sources/1/D_ls_Mpc",
+            "supplied": 1192.4094345992012,
+            "replay": 1192.4094345996348,
+            "absolute_difference": 4.3360159907024354e-10,
+            "relative_difference": 3.6363482750871384e-13
+          },
+          {
+            "path": "/frozen_R1/sources/1/q",
+            "supplied": 0.6820220599611041,
+            "replay": 0.6820220599610345,
+            "absolute_difference": 6.961098364399732e-14,
+            "relative_difference": 1.0206558956167378e-13
+          },
+          {
+            "path": "/frozen_R1/sources/2/D_os_Mpc",
+            "supplied": 1777.8913502728653,
+            "replay": 1777.8913502735613,
+            "absolute_difference": 6.959908205317333e-10,
+            "relative_difference": 3.9146982768374165e-13
+          },
+          {
+            "path": "/frozen_R1/sources/2/D_ls_Mpc",
+            "supplied": 1342.8194711885342,
+            "replay": 1342.8194711889341,
+            "absolute_difference": 3.999502951046452e-10,
+            "relative_difference": 2.9784368166083247e-13
+          },
+          {
+            "path": "/frozen_R1/sources/2/q",
+            "supplied": 0.7552877013448782,
+            "replay": 0.7552877013448075,
+            "absolute_difference": 7.072120666862247e-14,
+            "relative_difference": 9.363479180542074e-14
+          },
+          {
+            "path": "/frozen_R1/crossratio",
+            "supplied": 0.6689319433880664,
+            "replay": 0.6689319433880573,
+            "absolute_difference": 9.103828801926284e-15,
+            "relative_difference": 1.3609499280026001e-14
+          },
+          {
+            "path": "/difference",
+            "supplied": -0.00020119797880913115,
+            "replay": -0.00020119797881823498,
+            "absolute_difference": 9.103828801926284e-15,
+            "relative_difference": 4.52481126093356e-11
+          },
+          {
+            "path": "/fractional_difference",
+            "supplied": -0.00030068452206410967,
+            "replay": -0.0003006845220776544,
+            "absolute_difference": 1.354472090042691e-14,
+            "relative_difference": 4.504628574642431e-11
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/images_arcsec/0/0",
+            "supplied": 0.7368875913830261,
+            "replay": 0.7368875913827327,
+            "absolute_difference": 2.9332092310596636e-13,
+            "relative_difference": 3.9805382331848953e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/images_arcsec/0/1",
+            "supplied": -0.6667912167502092,
+            "replay": -0.666791216749944,
+            "absolute_difference": 2.652322805829499e-13,
+            "relative_difference": 3.977741066770983e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/images_arcsec/1/0",
+            "supplied": 0.8058728947485753,
+            "replay": 0.805872894748257,
+            "absolute_difference": 3.183009411600324e-13,
+            "relative_difference": 3.9497660640309693e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/images_arcsec/1/1",
+            "supplied": -0.7292142985158612,
+            "replay": -0.7292142985155732,
+            "absolute_difference": 2.879918525877656e-13,
+            "relative_difference": 3.9493445640589215e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/images_arcsec/2/0",
+            "supplied": 0.8480540726015513,
+            "replay": 0.8480540726012199,
+            "absolute_difference": 3.3140157285060923e-13,
+            "relative_difference": 3.9077882361201103e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/images_arcsec/2/1",
+            "supplied": -0.7673829951168645,
+            "replay": -0.7673829951165647,
+            "absolute_difference": 2.9976021664879227e-13,
+            "relative_difference": 3.906266082989523e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/impact_over_R/0/0",
+            "supplied": 1.1255414513702207,
+            "replay": 1.1255414513705466,
+            "absolute_difference": 3.2596148002994596e-13,
+            "relative_difference": 2.8960415419007836e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/impact_over_R/0/1",
+            "supplied": 1.0184744086318096,
+            "replay": 1.0184744086321045,
+            "absolute_difference": 2.948752353404416e-13,
+            "relative_difference": 2.8952640620255624e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/impact_over_R/1/0",
+            "supplied": 1.2309114146878903,
+            "replay": 1.2309114146882503,
+            "absolute_difference": 3.5993430458347575e-13,
+            "relative_difference": 2.924128416460746e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/impact_over_R/1/1",
+            "supplied": 1.1138210624106402,
+            "replay": 1.113821062410966,
+            "absolute_difference": 3.2573943542502093e-13,
+            "relative_difference": 2.9245221375148347e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/impact_over_R/2/0",
+            "supplied": 1.2953400530532582,
+            "replay": 1.2953400530536423,
+            "absolute_difference": 3.8413716652030416e-13,
+            "relative_difference": 2.9655314495591395e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/impact_over_R/2/1",
+            "supplied": 1.1721209315787078,
+            "replay": 1.1721209315790555,
+            "absolute_difference": 3.4772185131259903e-13,
+            "relative_difference": 2.966603888254593e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/P_arcsec_squared/0",
+            "supplied": 0.491350173666419,
+            "replay": 0.4913501736660279,
+            "absolute_difference": 3.910760604242114e-13,
+            "relative_difference": 7.959212825875903e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/P_arcsec_squared/1",
+            "supplied": 0.5876540376370287,
+            "replay": 0.5876540376365645,
+            "absolute_difference": 4.64184246595778e-13,
+            "relative_difference": 7.898937416686086e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/P_arcsec_squared/2",
+            "supplied": 0.6507822742540332,
+            "replay": 0.6507822742535246,
+            "absolute_difference": 5.085931675807842e-13,
+            "relative_difference": 7.815104800814759e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/0/angular_invariant",
+            "supplied": 0.6689319433880668,
+            "replay": 0.6689319433880575,
+            "absolute_difference": 9.325873406851315e-15,
+            "relative_difference": 1.3941438286855895e-14
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/images_arcsec/0/0",
+            "supplied": 0.7641851696337809,
+            "replay": 0.7641851696334767,
+            "absolute_difference": 3.042011087472929e-13,
+            "relative_difference": 3.9807251021774556e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/images_arcsec/0/1",
+            "supplied": -0.689063958221578,
+            "replay": -0.6890639582213036,
+            "absolute_difference": 2.743361093848762e-13,
+            "relative_difference": 3.981286586123543e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/images_arcsec/1/0",
+            "supplied": 0.8419685559068065,
+            "replay": 0.8419685559064742,
+            "absolute_difference": 3.3228975127030935e-13,
+            "relative_difference": 3.9465814838231195e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/images_arcsec/1/1",
+            "supplied": -0.7586439947842913,
+            "replay": -0.7586439947839917,
+            "absolute_difference": 2.9964919434632975e-13,
+            "relative_difference": 3.949799858780011e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/images_arcsec/2/0",
+            "supplied": 0.8904246296496157,
+            "replay": 0.8904246296492683,
+            "absolute_difference": 3.473887844052115e-13,
+            "relative_difference": 3.9013833719077363e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/images_arcsec/2/1",
+            "supplied": -0.8019118576474216,
+            "replay": -0.8019118576471088,
+            "absolute_difference": 3.127498260369066e-13,
+            "relative_difference": 3.900052394217296e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/impact_over_R/0/0",
+            "supplied": 1.1672364889886198,
+            "replay": 1.1672364889889575,
+            "absolute_difference": 3.377298440909726e-13,
+            "relative_difference": 2.8934140362901675e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/impact_over_R/0/1",
+            "supplied": 1.0524943786446406,
+            "replay": 1.0524943786449452,
+            "absolute_difference": 3.0464519795714295e-13,
+            "relative_difference": 2.8945066514222397e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/impact_over_R/1/0",
+            "supplied": 1.2860448751006952,
+            "replay": 1.2860448751010716,
+            "absolute_difference": 3.7636560534792807e-13,
+            "relative_difference": 2.9265355559109804e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/impact_over_R/1/1",
+            "supplied": 1.1587727530602063,
+            "replay": 1.1587727530605452,
+            "absolute_difference": 3.388400671155978e-13,
+            "relative_difference": 2.924128706174304e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/impact_over_R/2/0",
+            "supplied": 1.360057954172663,
+            "replay": 1.3600579541730673,
+            "absolute_difference": 4.04343225568482e-13,
+            "relative_difference": 2.972985263811409e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/impact_over_R/2/1",
+            "supplied": 1.224861222637029,
+            "replay": 1.2248612226373934,
+            "absolute_difference": 3.643751966819764e-13,
+            "relative_difference": 2.974828412785454e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/P_arcsec_squared/0",
+            "supplied": 0.5265724578020811,
+            "replay": 0.5265724578016617,
+            "absolute_difference": 4.1933123640092163e-13,
+            "relative_difference": 7.963409976876014e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/P_arcsec_squared/1",
+            "supplied": 0.6387543887359006,
+            "replay": 0.6387543887353963,
+            "absolute_difference": 5.043743200872086e-13,
+            "relative_difference": 7.896216902483737e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/P_arcsec_squared/2",
+            "supplied": 0.7140420688573407,
+            "replay": 0.7140420688567837,
+            "absolute_difference": 5.56998891454441e-13,
+            "relative_difference": 7.800645308557086e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/angular_invariant",
+            "supplied": 0.6689319433880666,
+            "replay": 0.6689319433880572,
+            "absolute_difference": 9.43689570931383e-15,
+            "relative_difference": 1.4107407790270851e-14
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/1/sheet_per_Mpc",
+            "supplied": 0.00012410375627570368,
+            "replay": 0.00012410375627563104,
+            "absolute_difference": 7.26415455565288e-17,
+            "relative_difference": 5.853291450353154e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/images_arcsec/0/0",
+            "supplied": 0.8569742648909193,
+            "replay": 0.8569742648905783,
+            "absolute_difference": 3.410605131648481e-13,
+            "relative_difference": 3.9798221152914114e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/images_arcsec/0/1",
+            "supplied": -0.7767192341809193,
+            "replay": -0.7767192341806104,
+            "absolute_difference": 3.0886404545071855e-13,
+            "relative_difference": 3.9765211399255193e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/images_arcsec/1/0",
+            "supplied": 0.9340986137908946,
+            "replay": 0.9340986137905258,
+            "absolute_difference": 3.68816088780477e-13,
+            "relative_difference": 3.9483635168207135e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/images_arcsec/1/1",
+            "supplied": -0.84688354237298,
+            "replay": -0.8468835423726457,
+            "absolute_difference": 3.3428815271463463e-13,
+            "relative_difference": 3.9472741644967423e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/images_arcsec/2/0",
+            "supplied": 0.9808680415339878,
+            "replay": 0.9808680415336046,
+            "absolute_difference": 3.831379657981415e-13,
+            "relative_difference": 3.9061112155203755e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/images_arcsec/2/1",
+            "supplied": -0.8894655868508294,
+            "replay": -0.8894655868504822,
+            "absolute_difference": 3.4727776210274897e-13,
+            "relative_difference": 3.904341744488314e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/impact_over_R/0/0",
+            "supplied": 1.308964988923101,
+            "replay": 1.30896498892348,
+            "absolute_difference": 3.7903014060702844e-13,
+            "relative_difference": 2.895647659139153e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/impact_over_R/0/1",
+            "supplied": 1.1863813482139955,
+            "replay": 1.1863813482143393,
+            "absolute_difference": 3.4372504842394846e-13,
+            "relative_difference": 2.897256004078281e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/impact_over_R/1/0",
+            "supplied": 1.4267667440509606,
+            "replay": 1.426766744051378,
+            "absolute_difference": 4.1744385725905886e-13,
+            "relative_difference": 2.9258031069173055e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/impact_over_R/1/1",
+            "supplied": 1.2935521544541433,
+            "replay": 1.2935521544545219,
+            "absolute_difference": 3.785860513971784e-13,
+            "relative_difference": 2.9267165617835886e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/impact_over_R/2/0",
+            "supplied": 1.498203595746233,
+            "replay": 1.4982035957466777,
+            "absolute_difference": 4.447553436648377e-13,
+            "relative_difference": 2.9685908172134087e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/impact_over_R/2/1",
+            "supplied": 1.3585930870256318,
+            "replay": 1.3585930870260354,
+            "absolute_difference": 4.036770917537069e-13,
+            "relative_difference": 2.9712876917214213e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/P_arcsec_squared/0",
+            "supplied": 0.6656283947388312,
+            "replay": 0.6656283947383015,
+            "absolute_difference": 5.296874050486622e-13,
+            "relative_difference": 7.957704467467808e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/P_arcsec_squared/1",
+            "supplied": 0.7910727429729231,
+            "replay": 0.7910727429722986,
+            "absolute_difference": 6.245004513516506e-13,
+            "relative_difference": 7.894349247892441e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/P_arcsec_squared/2",
+            "supplied": 0.8724483681862523,
+            "replay": 0.8724483681855708,
+            "absolute_difference": 6.814548925149211e-13,
+            "relative_difference": 7.810833481545839e-13
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/angular_invariant",
+            "supplied": 0.6689319433880658,
+            "replay": 0.6689319433880565,
+            "absolute_difference": 9.325873406851315e-15,
+            "relative_difference": 1.3941438286855916e-14
+          },
+          {
+            "path": "/common_mass_and_sheet_controls/2/sheet_per_Mpc",
+            "supplied": -6.205187813785184e-05,
+            "replay": -6.205187813781552e-05,
+            "absolute_difference": 3.63207727782644e-17,
+            "relative_difference": 5.853291450353154e-13
+          }
+        ]
+      },
+      "final_script_sha256": "e20d999d007ebac02f5cf1c1c88057c744eb3ee6ec7c8b6a2e2480a46c8d974a",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "shared_lens_rank",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/r1_screened_review/shared_lens_rank.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\review\\shared_lens_rank_results.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 1.0889588999998523,
+      "script_sha256": "86c224c89aa1bf6653813d2d450e3022f577d5d99113eec6cb1c81b3232139aa",
+      "comparison": {
+        "numeric_values_compared": 169,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/images_arcsec/0/1/0",
+            "supplied": -0.01660783029315693,
+            "replay": -0.016607830293156906,
+            "absolute_difference": 2.42861286636753e-17,
+            "relative_difference": 1.4623300115056044e-15
+          },
+          {
+            "path": "/images_arcsec/0/1/1",
+            "supplied": -0.015470408563177919,
+            "replay": -0.015470408563177915,
+            "absolute_difference": 3.469446951953614e-18,
+            "relative_difference": 2.2426343414171104e-16
+          },
+          {
+            "path": "/images_arcsec/0/2/1",
+            "supplied": -0.08640589099039567,
+            "replay": -0.08640589099039524,
+            "absolute_difference": 4.3021142204224816e-16,
+            "relative_difference": 4.978959387040726e-15
+          },
+          {
+            "path": "/images_arcsec/1/1/0",
+            "supplied": 0.005954090433685756,
+            "replay": 0.00595409043368576,
+            "absolute_difference": 3.469446951953614e-18,
+            "relative_difference": 5.826997407236096e-16
+          },
+          {
+            "path": "/images_arcsec/1/1/1",
+            "supplied": -0.037939995590012925,
+            "replay": -0.03793999559001294,
+            "absolute_difference": 1.3877787807814457e-17,
+            "relative_difference": 3.6578253613365084e-16
+          },
+          {
+            "path": "/images_arcsec/2/1/0",
+            "supplied": 0.03681210876672522,
+            "replay": 0.036812108766725214,
+            "absolute_difference": 6.938893903907228e-18,
+            "relative_difference": 1.8849487672326324e-16
+          },
+          {
+            "path": "/images_arcsec/2/1/1",
+            "supplied": -0.03323710325770127,
+            "replay": -0.03323710325770126,
+            "absolute_difference": 6.938893903907228e-18,
+            "relative_difference": 2.0876951430174465e-16
+          },
+          {
+            "path": "/impact_over_R/0/1",
+            "supplied": 0.056536617707041305,
+            "replay": 0.05653661770704126,
+            "absolute_difference": 4.163336342344337e-17,
+            "relative_difference": 7.363964296410002e-16
+          },
+          {
+            "path": "/impact_over_R/1/1",
+            "supplied": 0.04776550144003859,
+            "replay": 0.047765501440038605,
+            "absolute_difference": 1.3877787807814457e-17,
+            "relative_difference": 2.9053997947107585e-16
+          },
+          {
+            "path": "/impact_over_R/2/1",
+            "supplied": 0.04380838413086524,
+            "replay": 0.04380838413086521,
+            "absolute_difference": 2.7755575615628914e-17,
+            "relative_difference": 6.335676644159467e-16
+          },
+          {
+            "path": "/fixed_nuisance/raw_signal_singular_values/2",
+            "supplied": 546.0102335268713,
+            "replay": 546.0102335268714,
+            "absolute_difference": 1.1368683772161603e-13,
+            "relative_difference": 2.0821374901212554e-16
+          },
+          {
+            "path": "/fixed_nuisance/projected_signal_singular_values/2",
+            "supplied": 546.0102335268713,
+            "replay": 546.0102335268714,
+            "absolute_difference": 1.1368683772161603e-13,
+            "relative_difference": 2.0821374901212554e-16
+          },
+          {
+            "path": "/shared_lens_and_tides_free_delay_scales/raw_signal_singular_values/2",
+            "supplied": 546.0102335268713,
+            "replay": 546.0102335268714,
+            "absolute_difference": 1.1368683772161603e-13,
+            "relative_difference": 2.0821374901212554e-16
+          },
+          {
+            "path": "/shared_lens_and_tides_free_delay_scales/projected_signal_singular_values/1",
+            "supplied": 5.403465174317328e-12,
+            "replay": 4.638392607336401e-12,
+            "absolute_difference": 7.650725669809266e-13,
+            "relative_difference": 0.1415892473254601
+          },
+          {
+            "path": "/shared_lens_and_tides_free_delay_scales/projected_signal_singular_values/2",
+            "supplied": 6.649337092494316e-13,
+            "replay": 4.824219720386073e-13,
+            "absolute_difference": 1.8251173721082433e-13,
+            "relative_difference": 0.274481101908401
+          },
+          {
+            "path": "/additionally_independent_source_convergence/raw_signal_singular_values/2",
+            "supplied": 546.0102335268713,
+            "replay": 546.0102335268714,
+            "absolute_difference": 1.1368683772161603e-13,
+            "relative_difference": 2.0821374901212554e-16
+          },
+          {
+            "path": "/additionally_independent_source_convergence/projected_signal_singular_values/0",
+            "supplied": 7.926884557751606e-13,
+            "replay": 1.0589088240445942e-12,
+            "absolute_difference": 2.6622036826943357e-13,
+            "relative_difference": 0.33584489130613093
+          },
+          {
+            "path": "/additionally_independent_source_convergence/projected_signal_singular_values/1",
+            "supplied": 6.99300364507554e-13,
+            "replay": 6.499662178065121e-13,
+            "absolute_difference": 4.933414670104188e-14,
+            "relative_difference": 0.07054786355757571
+          },
+          {
+            "path": "/additionally_independent_source_convergence/projected_signal_singular_values/2",
+            "supplied": 4.1348947772625986e-13,
+            "replay": 4.3199776451555355e-13,
+            "absolute_difference": 1.8508286789293688e-14,
+            "relative_difference": 0.04476120381845999
+          },
+          {
+            "path": "/local_screened_signal/fixed_nuisance/raw_signal_singular_values/0",
+            "supplied": 0.015152799890066687,
+            "replay": 0.015152799890087887,
+            "absolute_difference": 2.120005559991256e-14,
+            "relative_difference": 1.3990850373342626e-12
+          },
+          {
+            "path": "/local_screened_signal/fixed_nuisance/projected_signal_singular_values/0",
+            "supplied": 0.015152799890066687,
+            "replay": 0.015152799890087887,
+            "absolute_difference": 2.120005559991256e-14,
+            "relative_difference": 1.3990850373342626e-12
+          },
+          {
+            "path": "/local_screened_signal/shared_lens_and_tides_free_delay_scales/raw_signal_singular_values/0",
+            "supplied": 0.015152799890066687,
+            "replay": 0.015152799890087887,
+            "absolute_difference": 2.120005559991256e-14,
+            "relative_difference": 1.3990850373342626e-12
+          },
+          {
+            "path": "/local_screened_signal/shared_lens_and_tides_free_delay_scales/projected_signal_singular_values/0",
+            "supplied": 2.0226454295965622e-05,
+            "replay": 2.022645429599313e-05,
+            "absolute_difference": 2.7508241995030658e-17,
+            "relative_difference": 1.3600130597540006e-12
+          },
+          {
+            "path": "/local_screened_signal/additionally_independent_source_convergence/raw_signal_singular_values/0",
+            "supplied": 0.015152799890066687,
+            "replay": 0.015152799890087887,
+            "absolute_difference": 2.120005559991256e-14,
+            "relative_difference": 1.3990850373342626e-12
+          },
+          {
+            "path": "/local_screened_signal/additionally_independent_source_convergence/projected_signal_singular_values/0",
+            "supplied": 1.82168870259324e-05,
+            "replay": 1.8216887025957134e-05,
+            "absolute_difference": 2.473336205982557e-17,
+            "relative_difference": 1.3577161687733327e-12
+          },
+          {
+            "path": "/local_screened_signal/shared_retained_norm_fraction",
+            "supplied": 0.001334832799397353,
+            "replay": 0.0013348327993973007,
+            "absolute_difference": 5.2258544713801314e-17,
+            "relative_difference": 3.9149880597326404e-14
+          },
+          {
+            "path": "/local_screened_signal/independent_source_convergence_retained_norm_fraction",
+            "supplied": 0.0012022126048054232,
+            "replay": 0.0012022126048053731,
+            "absolute_difference": 5.0090140368830305e-17,
+            "relative_difference": 4.1664960231337234e-14
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/0",
+            "supplied": 222.94423026295706,
+            "replay": 222.9442302632734,
+            "absolute_difference": 3.163336259603966e-10,
+            "relative_difference": 1.4188912876879079e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/1",
+            "supplied": 132.08070701334674,
+            "replay": 132.08070701331027,
+            "absolute_difference": 3.646505319920834e-11,
+            "relative_difference": 2.7608160210350443e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/2",
+            "supplied": 116.46893506753,
+            "replay": 116.4689350677766,
+            "absolute_difference": 2.4660096187290037e-10,
+            "relative_difference": 2.117311038603713e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/3",
+            "supplied": 206.46512066469057,
+            "replay": 206.46512066469708,
+            "absolute_difference": 6.508571459562518e-12,
+            "relative_difference": 3.152383045915419e-14
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/4",
+            "supplied": 328.10580507706726,
+            "replay": 328.1058050767647,
+            "absolute_difference": 3.0257751859608106e-10,
+            "relative_difference": 9.221949563647923e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/5",
+            "supplied": 96.40870295315737,
+            "replay": 96.40870295311875,
+            "absolute_difference": 3.8625103115919046e-11,
+            "relative_difference": 4.0063917398293426e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/6",
+            "supplied": 0.9641191932154567,
+            "replay": 0.9641191932158144,
+            "absolute_difference": 3.5771385853422544e-13,
+            "relative_difference": 3.7102659199347075e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/7",
+            "supplied": -2.523261339742791,
+            "replay": -2.5232613397440677,
+            "absolute_difference": 1.27675647831893e-12,
+            "relative_difference": 5.059945469021755e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/8",
+            "supplied": -155.61722042834273,
+            "replay": -155.61722042851238,
+            "absolute_difference": 1.6964918359008152e-10,
+            "relative_difference": 1.090169732649865e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/9",
+            "supplied": -100.43415594458283,
+            "replay": -100.43415594444649,
+            "absolute_difference": 1.3633894013764802e-10,
+            "relative_difference": 1.3574957528679446e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/10",
+            "supplied": -271.3025362722379,
+            "replay": -271.3025362721746,
+            "absolute_difference": 6.326672519207932e-11,
+            "relative_difference": 2.3319621726128825e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/11",
+            "supplied": 237.86303531856979,
+            "replay": 237.86303531851024,
+            "absolute_difference": 5.95434812566964e-11,
+            "relative_difference": 2.503267528598963e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/12",
+            "supplied": -141.58145081701102,
+            "replay": -141.5814508168307,
+            "absolute_difference": 1.8030732462648302e-10,
+            "relative_difference": 1.273523640180265e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/13",
+            "supplied": -196.71674787097044,
+            "replay": -196.7167478710367,
+            "absolute_difference": 6.625100468227174e-11,
+            "relative_difference": 3.3678375328635873e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/14",
+            "supplied": -0.41752928962927405,
+            "replay": -0.417529289631326,
+            "absolute_difference": 2.0519697052634456e-12,
+            "relative_difference": 4.9145527181707365e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/15",
+            "supplied": 1.2650403161188306,
+            "replay": 1.265040316117917,
+            "absolute_difference": 9.137135492665038e-13,
+            "relative_difference": 7.222801816070144e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/16",
+            "supplied": 65.36955602396858,
+            "replay": 65.36955602354655,
+            "absolute_difference": 4.220339633320691e-10,
+            "relative_difference": 6.456124058381625e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/17",
+            "supplied": -151.44448293004794,
+            "replay": -151.44448293012806,
+            "absolute_difference": 8.01207988843089e-11,
+            "relative_difference": 5.290440254685053e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/18",
+            "supplied": -204.98005257174606,
+            "replay": -204.98005257171627,
+            "absolute_difference": 2.97859514830634e-11,
+            "relative_difference": 1.4531146377103145e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/19",
+            "supplied": -7.618031573094239,
+            "replay": -7.618031573103241,
+            "absolute_difference": 9.00168828366077e-12,
+            "relative_difference": 1.181629164606432e-12
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/20",
+            "supplied": 40.59273365791897,
+            "replay": 40.592733657959094,
+            "absolute_difference": 4.012434828837286e-11,
+            "relative_difference": 9.884613494254104e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/21",
+            "supplied": -216.60414763138962,
+            "replay": -216.60414763142887,
+            "absolute_difference": 3.9250380723387934e-11,
+            "relative_difference": 1.8120789076570705e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/22",
+            "supplied": -1.6697208999513486,
+            "replay": -1.6697208999505104,
+            "absolute_difference": 8.382183835919932e-13,
+            "relative_difference": 5.020110747948455e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/weights/23",
+            "supplied": 5.477596558233905,
+            "replay": 5.477596558234474,
+            "absolute_difference": 5.693223670277803e-13,
+            "relative_difference": 1.0393652781382316e-13
+          },
+          {
+            "path": "/local_screened_signal/nuisance_orthogonal_statistic/expected_screened_response",
+            "supplied": 1.82168870259324e-05,
+            "replay": 1.821688702595713e-05,
+            "absolute_difference": 2.4729973928036553e-17,
+            "relative_difference": 1.3575301802570622e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/0",
+            "supplied": 4.990955599350795e-06,
+            "replay": 4.990955599357775e-06,
+            "absolute_difference": 6.980398518322689e-18,
+            "relative_difference": 1.3986096208170381e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/1",
+            "supplied": 1.013958036869645e-06,
+            "replay": 1.0139580368710666e-06,
+            "absolute_difference": 1.4215330437295295e-18,
+            "relative_difference": 1.401964373316844e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/2",
+            "supplied": 3.5061125140474794e-07,
+            "replay": 3.506112514052371e-07,
+            "absolute_difference": 4.891615270393584e-19,
+            "relative_difference": 1.3951677964683089e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/3",
+            "supplied": 5.179001438487568e-08,
+            "replay": 5.1790014384947934e-08,
+            "absolute_difference": 7.225588086773207e-20,
+            "relative_difference": 1.3951701254756376e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/4",
+            "supplied": -4.3941120893085065e-06,
+            "replay": -4.39411208931465e-06,
+            "absolute_difference": 6.14352996643544e-18,
+            "relative_difference": 1.3981277312846692e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/5",
+            "supplied": -2.972847485134231e-07,
+            "replay": -2.972847485138314e-07,
+            "absolute_difference": 4.0832282013577616e-19,
+            "relative_difference": 1.3735074610372737e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/6",
+            "supplied": 0.0002544534298822799,
+            "replay": 0.00025445342988263516,
+            "absolute_difference": 3.5523884181487553e-16,
+            "relative_difference": 1.3960858848679024e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/7",
+            "supplied": 4.016785300052286e-05,
+            "replay": 4.016785300057904e-05,
+            "absolute_difference": 5.618200132548323e-17,
+            "relative_difference": 1.3986807142704869e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/8",
+            "supplied": 4.181652621144474e-06,
+            "replay": 4.181652621150328e-06,
+            "absolute_difference": 5.85384469847447e-18,
+            "relative_difference": 1.3998878502902362e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/9",
+            "supplied": 4.786904247178162e-06,
+            "replay": 4.786904247184863e-06,
+            "absolute_difference": 6.70087764572877e-18,
+            "relative_difference": 1.3998353214771068e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/10",
+            "supplied": 1.227628698919712e-07,
+            "replay": 1.227628698921421e-07,
+            "absolute_difference": 1.709153668881568e-19,
+            "relative_difference": 1.3922399096612745e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/11",
+            "supplied": 2.4725714723936704e-07,
+            "replay": 2.4725714723971136e-07,
+            "absolute_difference": 3.443188930588731e-19,
+            "relative_difference": 1.3925538529551245e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/12",
+            "supplied": -1.3394908276001528e-06,
+            "replay": -1.3394908276020299e-06,
+            "absolute_difference": 1.8770250111155296e-18,
+            "relative_difference": 1.4012973978167727e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/13",
+            "supplied": -5.282923858493727e-06,
+            "replay": -5.282923858501116e-06,
+            "absolute_difference": 7.389515431846516e-18,
+            "relative_difference": 1.3987548618490638e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/14",
+            "supplied": 0.00029436242388160625,
+            "replay": 0.0002943624238820173,
+            "absolute_difference": 4.11075253697879e-16,
+            "relative_difference": 1.3964936430310655e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/15",
+            "supplied": 4.631471554945587e-05,
+            "replay": 4.631471554952069e-05,
+            "absolute_difference": 6.481496112389906e-17,
+            "relative_difference": 1.3994463823207166e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/16",
+            "supplied": -5.469751632036114e-06,
+            "replay": -5.46975163204377e-06,
+            "absolute_difference": 7.65633081023162e-18,
+            "relative_difference": 1.3997584031766272e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/17",
+            "supplied": 4.5744546197268125e-06,
+            "replay": 4.574454619733222e-06,
+            "absolute_difference": 6.409498311873291e-18,
+            "relative_difference": 1.4011502670139217e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/18",
+            "supplied": -1.4255480870222754e-07,
+            "replay": -1.4255480870242617e-07,
+            "absolute_difference": 1.9862922613113343e-19,
+            "relative_difference": 1.393353391158033e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/19",
+            "supplied": 1.9822366860808366e-07,
+            "replay": 1.9822366860835984e-07,
+            "absolute_difference": 2.761856803641053e-19,
+            "relative_difference": 1.3933032432679047e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/20",
+            "supplied": 2.9898151955133027e-06,
+            "replay": 2.989815195517487e-06,
+            "absolute_difference": 4.184342759436244e-18,
+            "relative_difference": 1.3995322405597246e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/21",
+            "supplied": -5.318358157237397e-06,
+            "replay": -5.3183581572448394e-06,
+            "absolute_difference": 7.442031474576283e-18,
+            "relative_difference": 1.399309947647832e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/22",
+            "supplied": 0.00031758116824005225,
+            "replay": 0.0003175811682404959,
+            "absolute_difference": 4.436555289810684e-16,
+            "relative_difference": 1.3969831128202144e-12
+          },
+          {
+            "path": "/local_screened_signal/response_vector/23",
+            "supplied": 4.8828073438781424e-05,
+            "replay": 4.8828073438849824e-05,
+            "absolute_difference": 6.839960455667926e-17,
+            "relative_difference": 1.4008253805556305e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/0",
+            "supplied": 1.5578940051521467e-06,
+            "replay": 1.5578940051573509e-06,
+            "absolute_difference": 5.204170427930421e-18,
+            "relative_difference": 3.3405163706385613e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/1",
+            "supplied": 1.3570945783998069e-06,
+            "replay": 1.3570945784028426e-06,
+            "absolute_difference": 3.0357660829594124e-18,
+            "relative_difference": 2.23695984884044e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/2",
+            "supplied": 1.6439383760246274e-06,
+            "replay": 1.6439383760264705e-06,
+            "absolute_difference": 1.8431436932253575e-18,
+            "relative_difference": 1.121175659687712e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/3",
+            "supplied": 4.036412774437765e-06,
+            "replay": 4.036412774441282e-06,
+            "absolute_difference": 3.516880796999855e-18,
+            "relative_difference": 8.712886896186488e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/4",
+            "supplied": 7.495088395006316e-06,
+            "replay": 7.495088395016725e-06,
+            "absolute_difference": 1.0408340855860843e-17,
+            "relative_difference": 1.3886882058383076e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/5",
+            "supplied": 1.45793397663969e-06,
+            "replay": 1.4579339766485804e-06,
+            "absolute_difference": 8.890457814381136e-18,
+            "relative_difference": 6.097983829742587e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/6",
+            "supplied": 1.6801492115628078e-06,
+            "replay": 1.68014921155717e-06,
+            "absolute_difference": 5.637851296924623e-18,
+            "relative_difference": 3.355565837917764e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/7",
+            "supplied": -4.397231774217662e-06,
+            "replay": -4.3972317742259565e-06,
+            "absolute_difference": 8.294146619514109e-18,
+            "relative_difference": 1.8862200232758414e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/8",
+            "supplied": 1.414009185947071e-07,
+            "replay": 1.4140091859817655e-07,
+            "absolute_difference": 3.469446951953614e-18,
+            "relative_difference": 2.4536240545211577e-11
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/9",
+            "supplied": 2.5504293374636194e-06,
+            "replay": 2.550429337462752e-06,
+            "absolute_difference": 8.673617379884035e-19,
+            "relative_difference": 3.400845987958198e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/10",
+            "supplied": -5.110998144702887e-06,
+            "replay": -5.110998144710721e-06,
+            "absolute_difference": 7.83336069620777e-18,
+            "relative_difference": 1.532647924031508e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/11",
+            "supplied": 4.840055234569754e-06,
+            "replay": 4.8400552345763675e-06,
+            "absolute_difference": 6.613633252161577e-18,
+            "relative_difference": 1.3664375573493804e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/12",
+            "supplied": -4.057895223812851e-06,
+            "replay": -4.057895223816537e-06,
+            "absolute_difference": 3.686287386450715e-18,
+            "relative_difference": 9.084235011339282e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/13",
+            "supplied": -7.965418867936398e-06,
+            "replay": -7.96541886794594e-06,
+            "absolute_difference": 9.540979117872439e-18,
+            "relative_difference": 1.1978000499481857e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/14",
+            "supplied": -6.086559180152468e-07,
+            "replay": -6.086559180100426e-07,
+            "absolute_difference": 5.204170427930421e-18,
+            "relative_difference": 8.55026670060252e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/15",
+            "supplied": 1.8441203863816679e-06,
+            "replay": 1.8441203863854084e-06,
+            "absolute_difference": 3.74049749507499e-18,
+            "relative_difference": 2.028336936513232e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/16",
+            "supplied": 3.0784528746970533e-06,
+            "replay": 3.07845287470139e-06,
+            "absolute_difference": 4.336808689942018e-18,
+            "relative_difference": 1.4087624097116633e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/17",
+            "supplied": -4.878505454300637e-06,
+            "replay": -4.8785054543067086e-06,
+            "absolute_difference": 6.071532165918825e-18,
+            "relative_difference": 1.2445475817940261e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/18",
+            "supplied": -3.893496257263701e-06,
+            "replay": -3.893496257269068e-06,
+            "absolute_difference": 5.366800753803247e-18,
+            "relative_difference": 1.3784014158973316e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/19",
+            "supplied": 2.3987112060639033e-09,
+            "replay": 2.3987112060367983e-09,
+            "absolute_difference": 2.710505431213761e-20,
+            "relative_difference": 1.129984061591761e-11
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/20",
+            "supplied": -8.543849436951946e-07,
+            "replay": -8.543849437016998e-07,
+            "absolute_difference": 6.5052130349130266e-18,
+            "relative_difference": 7.613913474151516e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/21",
+            "supplied": -1.4004002904764723e-06,
+            "replay": -1.400400290478207e-06,
+            "absolute_difference": 1.734723475976807e-18,
+            "relative_difference": 1.2387340161051984e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/22",
+            "supplied": -3.1200457253285907e-06,
+            "replay": -3.120045725333795e-06,
+            "absolute_difference": 5.204170427930421e-18,
+            "relative_difference": 1.6679788971305346e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_shared_response/23",
+            "supplied": 1.0235454157050657e-05,
+            "replay": 1.023545415706589e-05,
+            "absolute_difference": 1.5233040523421337e-17,
+            "relative_difference": 1.4882622978608244e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/0",
+            "supplied": 4.061349855783748e-06,
+            "replay": 4.061349855795024e-06,
+            "absolute_difference": 1.1275702593849246e-17,
+            "relative_difference": 2.7763435789191057e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/1",
+            "supplied": 2.4060993179674146e-06,
+            "replay": 2.4060993179700167e-06,
+            "absolute_difference": 2.6020852139652106e-18,
+            "relative_difference": 1.0814537847769965e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/2",
+            "supplied": 2.1217014321558503e-06,
+            "replay": 2.121701432163223e-06,
+            "absolute_difference": 7.37257477290143e-18,
+            "relative_difference": 3.4748408334768353e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/3",
+            "supplied": 3.7611517779441694e-06,
+            "replay": 3.761151777949394e-06,
+            "absolute_difference": 5.2244992186645245e-18,
+            "relative_difference": 1.3890689679958129e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/4",
+            "supplied": 5.977066383641531e-06,
+            "replay": 5.9770663836441335e-06,
+            "absolute_difference": 2.6020852139652106e-18,
+            "relative_difference": 4.3534487438298933e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/5",
+            "supplied": 1.7562664500143433e-06,
+            "replay": 1.7562664500160238e-06,
+            "absolute_difference": 1.6805133673525319e-18,
+            "relative_difference": 9.568669761577506e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/6",
+            "supplied": 1.756325042233907e-06,
+            "replay": 1.7563250422369427e-06,
+            "absolute_difference": 3.0357660829594124e-18,
+            "relative_difference": 1.7284762273264392e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/7",
+            "supplied": -4.596596676299726e-06,
+            "replay": -4.596596676308292e-06,
+            "absolute_difference": 8.565197162635485e-18,
+            "relative_difference": 1.8633780089512863e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/8",
+            "supplied": -2.8348613238327394e-06,
+            "replay": -2.8348613238396783e-06,
+            "absolute_difference": 6.938893903907228e-18,
+            "relative_difference": 2.4477013551145516e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/10",
+            "supplied": -4.942287653120285e-06,
+            "replay": -4.942287653125841e-06,
+            "absolute_difference": 5.55653613398821e-18,
+            "relative_difference": 1.1242842432451546e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/11",
+            "supplied": 4.333124042043754e-06,
+            "replay": 4.333124042048552e-06,
+            "absolute_difference": 4.797594613248357e-18,
+            "relative_difference": 1.107190693526865e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/12",
+            "supplied": -2.5791732945010942e-06,
+            "replay": -2.579173294501311e-06,
+            "absolute_difference": 2.168404344971009e-19,
+            "relative_difference": 8.407361962044729e-14
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/13",
+            "supplied": -3.5835667720742967e-06,
+            "replay": -3.5835667720803682e-06,
+            "absolute_difference": 6.071532165918825e-18,
+            "relative_difference": 1.6942706951165319e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/14",
+            "supplied": -7.606083899194295e-07,
+            "replay": -7.606083899242e-07,
+            "absolute_difference": 4.7704895589362195e-18,
+            "relative_difference": 6.27193917679708e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/15",
+            "supplied": 2.304509652198655e-06,
+            "replay": 2.3045096522001187e-06,
+            "absolute_difference": 1.463672932855431e-18,
+            "relative_difference": 6.351342167124317e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/16",
+            "supplied": 1.1908298170239945e-06,
+            "replay": 1.190829817017923e-06,
+            "absolute_difference": 6.071532165918825e-18,
+            "relative_difference": 5.0985725072724536e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/17",
+            "supplied": -2.7588470362374315e-06,
+            "replay": -2.7588470362426357e-06,
+            "absolute_difference": 5.204170427930421e-18,
+            "relative_difference": 1.886357003332801e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/18",
+            "supplied": -3.7340984602691823e-06,
+            "replay": -3.734098460273709e-06,
+            "absolute_difference": 4.526544070126981e-18,
+            "relative_difference": 1.2122187238203337e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/19",
+            "supplied": -1.3877682052704384e-07,
+            "replay": -1.387768205273962e-07,
+            "absolute_difference": 3.5236570605778894e-19,
+            "relative_difference": 2.539081848968592e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/20",
+            "supplied": 7.394732431200736e-07,
+            "replay": 7.394732431218083e-07,
+            "absolute_difference": 1.734723475976807e-18,
+            "relative_difference": 2.345890797424198e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/21",
+            "supplied": -3.945853286749408e-06,
+            "replay": -3.94585328675548e-06,
+            "absolute_difference": 6.071532165918825e-18,
+            "relative_difference": 1.5387120920860567e-12
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/22",
+            "supplied": -3.0417116999251897e-06,
+            "replay": -3.041711699927792e-06,
+            "absolute_difference": 2.6020852139652106e-18,
+            "relative_difference": 8.55467404760684e-13
+          },
+          {
+            "path": "/local_screened_signal/projected_independent_source_convergence_response/23",
+            "supplied": 9.97847576749832e-06,
+            "replay": 9.978475767512902e-06,
+            "absolute_difference": 1.4582519219930035e-17,
+            "relative_difference": 1.4613974678806063e-12
+          },
+          {
+            "path": "/effective_halo_degeneracy/total_extra_effective_mass_Msun",
+            "supplied": 150788624.3809552,
+            "replay": 150788624.38121513,
+            "absolute_difference": 0.0002599358558654785,
+            "relative_difference": 1.7238426103601271e-12
+          }
+        ]
+      },
+      "final_script_sha256": "fadf9030ca12d16f21e6e899ac7513b074933194f2ec565c6b9c8b75722c7f5f",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "gr_optical_control",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/r1_screened_review/check_gr_optical_control.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\review\\gr_optical_control_results.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.6511845000059111,
+      "script_sha256": "a86534309db1db4c16f7650466aec1dea1c6d614daa0fcc8f64e622bed4d9742",
+      "comparison": {
+        "numeric_values_compared": 54,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/image_rows/1/static_quadrature_error_rad",
+            "supplied": 2.1964325424362105e-20,
+            "replay": 2.196453227000157e-20,
+            "absolute_difference": 2.068456394658191e-25,
+            "relative_difference": 9.41734542124352e-06
+          },
+          {
+            "path": "/image_rows/2/alpha_static_exact_rad",
+            "supplied": 6.353417566350379e-06,
+            "replay": 6.35341756635038e-06,
+            "absolute_difference": 8.470329472543003e-22,
+            "relative_difference": 1.333192629649345e-16
+          },
+          {
+            "path": "/image_rows/2/static_quadrature_error_rad",
+            "supplied": 7.053710467220119e-20,
+            "replay": 7.05371046722012e-20,
+            "absolute_difference": 1.2037062152420224e-35,
+            "relative_difference": 1.7064865659511614e-16
+          },
+          {
+            "path": "/image_rows/2/static_exact_minus_1PM_rad",
+            "supplied": 2.972175100961438e-11,
+            "replay": 2.9721751010461416e-11,
+            "absolute_difference": 8.470329472543003e-22,
+            "relative_difference": 2.849875658336221e-11
+          },
+          {
+            "path": "/image_rows/2/static_exact_minus_1PM_minus_2PM_rad",
+            "supplied": 1.709727797108659e-16,
+            "replay": 1.7097362674381315e-16,
+            "absolute_difference": 8.470329472543003e-22,
+            "relative_difference": 4.954197672206815e-06
+          },
+          {
+            "path": "/central_exact_compactness_sequence/0/quadrature_error_in_coefficient",
+            "supplied": 2.752110841637189e-11,
+            "replay": 2.7521425993059368e-11,
+            "absolute_difference": 3.1757668747748604e-16,
+            "relative_difference": 1.153938579336305e-05
+          },
+          {
+            "path": "/central_exact_compactness_sequence/1/coefficient",
+            "supplied": -0.09507752210275583,
+            "replay": -0.09507752210362319,
+            "absolute_difference": 8.673617379884035e-13,
+            "relative_difference": 9.122679249581148e-12
+          },
+          {
+            "path": "/central_exact_compactness_sequence/1/quadrature_error_in_coefficient",
+            "supplied": 5.506771375257735e-11,
+            "replay": 5.5067713855965465e-11,
+            "absolute_difference": 1.0338811569087238e-19,
+            "relative_difference": 1.8774724542842216e-09
+          },
+          {
+            "path": "/central_exact_compactness_sequence/2/coefficient",
+            "supplied": -0.0950122143409532,
+            "replay": -0.09501221434442264,
+            "absolute_difference": 3.469446951953614e-12,
+            "relative_difference": 3.651579932137394e-11
+          },
+          {
+            "path": "/central_exact_compactness_sequence/2/quadrature_error_in_coefficient",
+            "supplied": 1.1009768437953998e-10,
+            "replay": 1.1009693176593822e-10,
+            "absolute_difference": 7.526136017587997e-16,
+            "relative_difference": 6.835871308285769e-06
+          },
+          {
+            "path": "/central_coefficient/extrapolated_exact",
+            "supplied": -0.09494692325461365,
+            "replay": -0.0949469232621308,
+            "absolute_difference": 7.517153566283241e-12,
+            "relative_difference": 7.917216597029613e-11
+          },
+          {
+            "path": "/central_coefficient/absolute_difference",
+            "supplied": -5.239392253386654e-12,
+            "replay": -1.2756545819669896e-11,
+            "absolute_difference": 7.517153566283241e-12,
+            "relative_difference": 1.4347376952783562
+          },
+          {
+            "path": "/central_coefficient/relative_difference",
+            "supplied": 5.518232791625698e-11,
+            "replay": 1.3435449389092202e-10,
+            "absolute_difference": 7.917216597466504e-11,
+            "relative_difference": 1.4347376952783562
+          }
+        ]
+      },
+      "final_script_sha256": "2d4e1f9997cc4edcbc0fe780f642da84df771a0fefae219611b2d1437ff39729",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "common_gr_composition",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/r1_screened_review/check_common_gr_composition.py",
+        "--output",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\review\\common_gr_composition_review_results.json"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.8320719000039389,
+      "script_sha256": "969102d3af42e24f3010ddd641bf6c6e64d9a39b2b1c3b7ea6599955e0a67910",
+      "comparison": {
+        "numeric_values_compared": 211,
+        "structure_discrepancies": [],
+        "numerical_differences": [
+          {
+            "path": "/checks/primitive/0/integrated",
+            "supplied": -2.7761804411858044,
+            "replay": -2.776180441185804,
+            "absolute_difference": 4.440892098500626e-16,
+            "relative_difference": 1.5996410149059924e-16
+          },
+          {
+            "path": "/checks/primitive/0/absolute_difference",
+            "supplied": 0.0,
+            "replay": 4.440892098500626e-16,
+            "absolute_difference": 4.440892098500626e-16,
+            "relative_difference": 4.440892098500626e+284
+          },
+          {
+            "path": "/checks/primitive/2/integrated",
+            "supplied": -2.7810324728972264,
+            "replay": -2.7810324728972255,
+            "absolute_difference": 8.881784197001252e-16,
+            "relative_difference": 3.1937002834592503e-16
+          },
+          {
+            "path": "/checks/primitive/2/absolute_difference",
+            "supplied": 1.3322676295501878e-15,
+            "replay": 2.220446049250313e-15,
+            "absolute_difference": 8.881784197001252e-16,
+            "relative_difference": 0.6666666666666666
+          },
+          {
+            "path": "/checks/primitive/3/integrated",
+            "supplied": -2.4903495252549206,
+            "replay": -2.49034952525492,
+            "absolute_difference": 4.440892098500626e-16,
+            "relative_difference": 1.7832404863112704e-16
+          },
+          {
+            "path": "/checks/primitive/3/absolute_difference",
+            "supplied": 8.881784197001252e-16,
+            "replay": 1.3322676295501878e-15,
+            "absolute_difference": 4.440892098500626e-16,
+            "relative_difference": 0.5
+          },
+          {
+            "path": "/solutions/one_pm/images_rad/1/0",
+            "supplied": -3.983323247183435e-07,
+            "replay": -3.983323247183437e-07,
+            "absolute_difference": 2.117582368135751e-22,
+            "relative_difference": 5.31611982440308e-16
+          },
+          {
+            "path": "/solutions/one_pm/images_arcsec/1/0",
+            "supplied": -0.0821619397799846,
+            "replay": -0.08216193977998464,
+            "absolute_difference": 4.163336342344337e-17,
+            "relative_difference": 5.067232289662377e-16
+          },
+          {
+            "path": "/solutions/two_pm/images_rad/1/0",
+            "supplied": -3.983323983802314e-07,
+            "replay": -3.9833239838023146e-07,
+            "absolute_difference": 5.293955920339377e-23,
+            "relative_difference": 1.3290297103290073e-16
+          },
+          {
+            "path": "/solutions/two_pm/images_arcsec/1/0",
+            "supplied": -0.08216195497383963,
+            "replay": -0.08216195497383964,
+            "absolute_difference": 1.3877787807814457e-17,
+            "relative_difference": 1.6890771175336742e-16
+          },
+          {
+            "path": "/solutions/two_pm_plus_r1/images_rad/1/0",
+            "supplied": -3.983285775291474e-07,
+            "replay": -3.9832857752914743e-07,
+            "absolute_difference": 5.293955920339377e-23,
+            "relative_difference": 1.3290424586601488e-16
+          },
+          {
+            "path": "/solutions/two_pm_plus_r1/images_arcsec/1/0",
+            "supplied": -0.08216116686673108,
+            "replay": -0.0821611668667311,
+            "absolute_difference": 1.3877787807814457e-17,
+            "relative_difference": 1.6890933195149019e-16
+          },
+          {
+            "path": "/common_gr_changes/images_microarcsec/1/0",
+            "supplied": -0.015193855035233739,
+            "replay": -0.015193855007478163,
+            "absolute_difference": 2.7755575615628914e-11,
+            "relative_difference": 1.8267632244262706e-09
+          },
+          {
+            "path": "/original_screened_difference/images_microarcsec/1/0",
+            "supplied": 0.7881071643067727,
+            "replay": 0.7881071643484061,
+            "absolute_difference": 4.163336342344337e-11,
+            "relative_difference": 5.2827033313501866e-11
+          },
+          {
+            "path": "/screened_difference_drift/images_microarcsec/1/0",
+            "supplied": -5.576095141179849e-08,
+            "replay": -5.580258477522193e-08,
+            "absolute_difference": 4.163336342344337e-11,
+            "relative_difference": 0.0007466401194624191
+          },
+          {
+            "path": "/mixed_stationary_prediction_of_delay_drift_seconds/0",
+            "supplied": 6.899077896814696e-05,
+            "replay": 6.899077896814695e-05,
+            "absolute_difference": 1.3552527156068805e-20,
+            "relative_difference": 1.9643968887966909e-16
+          },
+          {
+            "path": "/four_case_minus_mixed_stationary_prediction_seconds/0",
+            "supplied": -6.149864943737291e-10,
+            "replay": -6.149864943601766e-10,
+            "absolute_difference": 1.3552527156068805e-20,
+            "relative_difference": 2.2037113465182692e-11
+          },
+          {
+            "path": "/first_order_common_gr_delays_seconds/0",
+            "supplied": 8.284720129110505,
+            "replay": 8.284720129110504,
+            "absolute_difference": 1.7763568394002505e-15,
+            "relative_difference": 2.1441362070380164e-16
+          },
+          {
+            "path": "/common_gr_finite_minus_first_order_seconds/0",
+            "supplied": 7.645176642867568e-06,
+            "replay": 7.645176644643925e-06,
+            "absolute_difference": 1.7763568394002505e-15,
+            "relative_difference": 2.3235000607310637e-10
+          }
+        ]
+      },
+      "final_script_sha256": "8aea3fa0a4d79d360037ed2eaec839bf7450ff63d33434930bc94e27ea2b8bf9",
+      "post_execution_change": "Receipt serialization made explicit UTF-8/LF only; scientific AST audit in portability_audit.json."
+    },
+    {
+      "name": "figure",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/plot_strong_lensing_r1_screened.py",
+        "--output-dir",
+        "artifacts\\strong_lensing_bhsm_integration_20261020\\replay\\figures",
+        "--formats",
+        "png",
+        "svg"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 3.6270638999994844,
+      "script_sha256": "cc5d2d9918f661bb66beac0e7cc7d0fa3461a54d1af3bf2cc5beda8f8177fa4f"
+    }
+  ],
+  "qualification": "Reproduces retained equations; numerical agreement does not bound omitted physics or establish a microscopic common-source derivation."
+}

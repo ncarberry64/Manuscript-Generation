@@ -1,0 +1,107 @@
+{
+  "gr_extra_alpha_rad": [
+    1.8407275108114026e-11,
+    -2.415893317054628e-13,
+    2.972158003683467e-11
+  ],
+  "gr_extra_potential_Mpc": [
+    1.9458774888722195e-14,
+    -4.245747541374026e-14,
+    3.8289200115545194e-16
+  ],
+  "common_gr_changes": {
+    "images_microarcsec": [
+      [
+        1.354563895050731,
+        0.0
+      ],
+      [
+        -0.015193855007478163,
+        0.0
+      ],
+      [
+        -1.7212349313622255,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      8.284727774287148,
+      2.5524454783749206
+    ]
+  },
+  "original_screened_difference": {
+    "images_microarcsec": [
+      [
+        6.1232762489371595,
+        0.0
+      ],
+      [
+        0.7881071643484061,
+        0.0
+      ],
+      [
+        -4.348591524538925,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959258149566722,
+      8.649019375229727
+    ]
+  },
+  "corrected_screened_difference": {
+    "images_microarcsec": [
+      [
+        6.123269343349946,
+        0.0
+      ],
+      [
+        0.7881071085458213,
+        0.0
+      ],
+      [
+        -4.348586431168755,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959327139730703,
+      8.649009238058625
+    ]
+  },
+  "screened_difference_drift": {
+    "images_microarcsec": [
+      [
+        -6.905587213168474e-06,
+        0.0
+      ],
+      [
+        -5.580258477522193e-08,
+        0.0
+      ],
+      [
+        5.093370170072831e-06,
+        0.0
+      ]
+    ],
+    "relative_delays_seconds": [
+      6.899016398165259e-05,
+      -1.0137171102542197e-05
+    ]
+  },
+  "screened_delay_difference_fractional_drift": [
+    2.657632340036808e-06,
+    -1.1720601680665032e-06
+  ],
+  "common_gr_finite_minus_first_order_seconds": [
+    7.645176644643925e-06,
+    -8.040162742695145e-06
+  ],
+  "screened_finite_minus_first_order_seconds": [
+    0.00015922641718546515,
+    5.6095335530415014e-05
+  ]
+}
+max primitive discrepancy 2.220446049250313e-15
+max derivative relative discrepancy 7.318474910803791e-10
+output artifacts\strong_lensing_bhsm_integration_20261020\replay\review\common_gr_composition_review_results.json

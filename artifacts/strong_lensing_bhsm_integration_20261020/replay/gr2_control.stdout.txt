@@ -1,0 +1,83 @@
+{
+  "status": "COMMON_FINITE_BODY_GR_2PM_ROBUSTNESS_CONTROL",
+  "scalar_difference_after": {
+    "images_microarcsec": [
+      [
+        6.123269343349946,
+        0.0
+      ],
+      [
+        0.7881071085319435,
+        0.0
+      ],
+      [
+        -4.348586431279777,
+        -3.6064176449059726e-20
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959327139730703,
+      8.649009238058625
+    ],
+    "conventional_delay_ratio": 1.5216480364122034,
+    "scalar_delay_ratio": 1.5216584158994626,
+    "delay_ratio_fractional_change_ppm": 6.8212142432244605
+  },
+  "change_in_scalar_difference": {
+    "images_microarcsec": [
+      [
+        -6.905920280075861e-06,
+        0.0
+      ],
+      [
+        -5.583034035083756e-08,
+        0.0
+      ],
+      [
+        5.093259147770368e-06,
+        5.970539058579382e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      6.899047093611443e-05,
+      -1.0137017625311273e-05
+    ],
+    "delay_ratio_fractional_change_ppm": -1.5805134978563729e-06
+  },
+  "conventional_common_correction": {
+    "images_microarcsec": [
+      [
+        1.3545638951617534,
+        0.0
+      ],
+      [
+        -0.015193854951967012,
+        0.0
+      ],
+      [
+        -1.7212349312512032,
+        -5.970539058579382e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      8.284727774287148,
+      2.552445478528398
+    ],
+    "conventional_delay_ratio": 1.5216444673828198,
+    "scalar_delay_ratio": 1.5216480364122034,
+    "delay_ratio_fractional_change_ppm": 2.345508073764435
+  },
+  "checks": {
+    "max_lens_residual_rad": 8.470329472543003e-22,
+    "stationary_conventional_delay_change_seconds": [
+      8.284720129110502,
+      2.5524535185376602
+    ],
+    "finite_minus_stationary_conventional_delay_seconds": [
+      7.645176646420282e-06,
+      -8.040009262355596e-06
+    ],
+    "scalar_profile_identical": true
+  }
+}
+output artifacts\strong_lensing_bhsm_integration_20261020\replay\gr2_control.json
