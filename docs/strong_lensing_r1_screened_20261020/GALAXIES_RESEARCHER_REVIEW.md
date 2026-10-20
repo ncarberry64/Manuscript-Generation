@@ -1,5 +1,7 @@
 # Researcher Review and Corrections for Galaxies
 
+> **Later observed-data revision:** the [HE 0435-1223 study](../STRONG_LENSING_OBSERVED_20261020.md) and [observed release records](../../artifacts/strong_lensing_observed_20261020/README.md), science `14ad777`, now provide the active empirical checkpoint. This review and its subsequent 19-page control links remain historical. They do not establish the later observed-test result or review of the 24-page manuscript.
+
 > This report records the earlier package/integration review. Its concrete
 > science pin and 18-page PDF inspection below apply to that snapshot. The
 > [acceptance checkpoint](../STRONG_LENSING_ACCEPTANCE_20261020.md) and

@@ -10,6 +10,9 @@ on:
       - "tests/test_strong_lensing_refit.py"
       - "tests/test_strong_lensing_robustness.py"
       - "tests/test_strong_lensing_encounter_accuracy.py"
+      - "tests/test_strong_lensing_observed_*.py"
+      - "data/strong_lensing_observed_20261020/**"
+      - "scripts/*he0435*.py"
       - "scripts/r1_screened_review/check_remaining_field_algebra.py"
       - "scripts/run_strong_lensing_*.py"
       - "requirements-strong-lensing-review.txt"
@@ -23,6 +26,9 @@ on:
       - "tests/test_strong_lensing_refit.py"
       - "tests/test_strong_lensing_robustness.py"
       - "tests/test_strong_lensing_encounter_accuracy.py"
+      - "tests/test_strong_lensing_observed_*.py"
+      - "data/strong_lensing_observed_20261020/**"
+      - "scripts/*he0435*.py"
       - "scripts/r1_screened_review/check_remaining_field_algebra.py"
       - "scripts/run_strong_lensing_*.py"
       - "requirements-strong-lensing-review.txt"
@@ -58,6 +64,8 @@ jobs:
           tests/test_strong_lensing_refit.py
           tests/test_strong_lensing_robustness.py
           tests/test_strong_lensing_encounter_accuracy.py
+          tests/test_strong_lensing_observed_lightcurve.py
+          tests/test_strong_lensing_observed_macro.py
 
       - name: Check the exact continuation component identities
         run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json

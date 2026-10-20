@@ -1,5 +1,7 @@
 # Strong-lensing acceptance applications and reviews
 
+> **Historical 19-page synthetic/control release.** The [observed study](../../docs/STRONG_LENSING_OBSERVED_20261020.md) and [observed release artifacts](../strong_lensing_observed_20261020/README.md), science `14ad777`, are now current. The 19-page build, hashes, rendered audit and numerical applications below remain attached to their historical snapshot and do not validate the later 24-page observed-light manuscript.
+
 These records support the focused BHSM light-transfer/inference revision.
 The [current checkpoint](../../docs/STRONG_LENSING_ACCEPTANCE_20261020.md)
 states the contribution, executed values, physical scope and release evidence.

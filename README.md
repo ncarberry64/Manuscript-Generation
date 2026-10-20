@@ -8,22 +8,13 @@ The paper follows geometry -> action -> constraints/boundary conditions -> gauge
 
 ## Scientific status
 
-The separate **BHSM strong-lensing paper**, [*Strong-Lensing Time Delays in the
-Berger–Hopf Framework: An R1 Effective Calculation*](manuscript/strong_lensing_main.pdf),
-is prepared for **Galaxies**, special issue **Strong Gravitational Lens Modeling**.
-It asks how BHSM surface contributions determine the incoming-to-outgoing light
-transfer through an envelope event. The declared R1 effective action supplies
-the evaluated finite-body scalar/metric source and screened optical response.
-The calculation follows state-dependent coefficients into the light transfer,
-then asks what images and delays identify when conventional lens freedoms are
-allowed. A positive effective-mass representation reproduces the complete
-retained leading response. A finite nonlinear conventional re-fit absorbs the
-declared axial example, while matched compact and smooth profiles expose the
-importance of ordinary profile freedom. These applications are conditional
-forward and inverse calculations, rather than an observed-galaxy fit or a
-selected microscopic BHSM state. The [acceptance checkpoint](docs/STRONG_LENSING_ACCEPTANCE_20261020.md)
-and [scope record](docs/STRONG_LENSING_SCOPE_20261020.md) state the equations,
-executed results and approximation boundaries.
+The separate **BHSM strong-lensing paper**, [focused manuscript](manuscript/strong_lensing_main.pdf), is prepared for **Galaxies**, special issue **Strong Gravitational Lens Modeling**. Its current empirical application is the [HE 0435-1223 observed-light baseline and withheld comparison](docs/STRONG_LENSING_OBSERVED_20261020.md): 902 historical COSMOGRAIL epochs train conventional and conditional R1 models; 100 later epochs test their frozen predictions. The primary test explicitly uses later image B as an observed driver to predict withheld A/C/D, so it is retrospective batch cross-image prediction.
+
+The conventional/R1 primary joint-score difference is only **+0.00498** for R1, with **85.33% coverage of nominal 95% intervals** for both. This does not establish a BHSM preference, adequate predictive calibration or a unique envelope state. A source/optical forward audit also finds a fifth central image at about 6.3% of A's macro flux, without a fitted non-detection limit. The [current artifact index](artifacts/strong_lensing_observed_20261020/README.md) preserves the training, pre-exposure committed freeze, original residuals, reviews and one held-out application. These targets are consumed and cannot be retuned into a new untouched test.
+
+The current manuscript is *Strong-Lensing Time Delays in the Berger–Hopf Framework: An R1 Calculation and an Observed-Light Test*. Science checkpoint [`14ad777`](https://github.com/ncarberry64/Manuscript-Generation/tree/14ad777eaf8befda387b9c3cb4504cf499e76cfc) pins the observed code/data, source ancestors, scores and figure. The [publication manifest](artifacts/strong_lensing_observed_20261020/publication_manifest.json) distinguishes the 24-page real-MDPI build and rendered review from the historical 19-page control audit. The original pre-exposure freeze `e6e62bd` remains unchanged; the separate known-outcome replay is reproduction, not a second test.
+
+The study connects the declared state/source through normalized metric and optical transfer to images and delays, then asks what observations identify under conventional lens freedoms. Source-derived positive effective mass reproduces the retained R1 response; it is counted once. The earlier [acceptance checkpoint](docs/STRONG_LENSING_ACCEPTANCE_20261020.md) records synthetic finite-refit, profile/coefficient and distributed-encounter controls. It remains historical evidence alongside the [scope record](docs/STRONG_LENSING_SCOPE_20261020.md). This observed pilot is conditional on a prescribed local source, remote optical screen and background, with physical admission false; it is not a selected microscopic BHSM state or complete galaxy reconstruction.
 
 The inherited matched SIS transport and constant-target phase null remain
 scientific controls. The screened example has radius `r_V = 212.0292 kpc` and
@@ -33,11 +24,11 @@ share the demonstrated leading response. Reproduce the effective calculation
 with `python scripts/run_strong_lensing_r1_screened.py` and its common finite-body
 GR2 control with `python scripts/run_strong_lensing_gr2_control.py`. See the
 [research review](docs/strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md)
-and [current acceptance records](artifacts/strong_lensing_acceptance_20261020/README.md)
+and [historical acceptance records](artifacts/strong_lensing_acceptance_20261020/README.md)
 for the derivations, limitations and focused
-validation. Science checkpoint
+validation. Synthetic-control science checkpoint
 [`87503ae`](https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd)
-pins the new finite re-fit, profile/coefficient and distributed-encounter
+pins the finite re-fit, profile/coefficient and distributed-encounter
 applications and eighteen focused tests. This separate lensing work
 preserves the Universe manuscript.
 
@@ -94,7 +85,8 @@ The suite includes long nested integrations and one documented strict expected f
 |---|---|
 | `code/` | Canonical numerical, transfer and statistical implementations |
 | `tests/` | Numerical, algebraic, frozen-manifest and synthetic checks |
-| `artifacts/` | Retained results and validation evidence; not raw observations |
+| `artifacts/` | Retained results and validation evidence; original public lens observations are in `data/` |
+| `data/strong_lensing_observed_20261020/` | Original COSMOGRAIL bytes, provenance and published point astrometry for the observed-lens pilot |
 | `preregistration/` | Historical freezes and new structural two-gate protocol |
 | `manuscript/` | LaTeX, figures and PDF; detailed audits in appendices |
 | `docs/` | [Reader map](docs/README.md), [claim ledger](docs/CLAIM_STATUS.md), reproducibility and journal documents |

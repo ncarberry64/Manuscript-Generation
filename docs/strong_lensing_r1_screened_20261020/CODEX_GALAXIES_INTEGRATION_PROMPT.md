@@ -1,5 +1,7 @@
 # Author handoff: BHSM light transfer and lens-model identifiability
 
+> **Superseded handoff for the historical synthetic/control revision.** Continue from the [observed HE 0435-1223 checkpoint](../STRONG_LENSING_OBSERVED_20261020.md) and [observed release records](../../artifacts/strong_lensing_observed_20261020/README.md), science `14ad777`. The current title is *Strong-Lensing Time Delays in the Berger–Hopf Framework: An R1 Calculation and an Observed-Light Test*. The 19-page/current-build wording below describes its original snapshot; preserved historical values and instructions are not a later PDF audit. The observed targets are consumed and must not be repaired/rescored as a new held-out test.
+
 The active manuscript is **Strong-Lensing Time Delays in the Berger–Hopf
 Framework: An R1 Effective Calculation**, for **Galaxies**, special issue
 **Strong Gravitational Lens Modeling**. No submission target date is set.

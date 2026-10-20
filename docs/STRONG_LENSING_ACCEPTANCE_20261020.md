@@ -1,5 +1,7 @@
 # BHSM strong-lensing transfer and identifiability checkpoint
 
+> **Historical 19-page synthetic/control checkpoint.** The observed HE 0435-1223 application and new manuscript title now supersede this document as the active checkpoint. See the [observed study](STRONG_LENSING_OBSERVED_20261020.md) and [current release artifacts](../artifacts/strong_lensing_observed_20261020/README.md), science `14ad777`. All values, source pin and PDF evidence below retain their original historical scope; they are not evidence for the later 24-page observed-light revision.
+
 This checkpoint continues draft PR
 [#23](https://github.com/ncarberry64/Manuscript-Generation/pull/23) in the
 existing `codex/strong-lensing-first-comparison-20261020` worktree. The active

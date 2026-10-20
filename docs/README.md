@@ -7,24 +7,15 @@ Lens Modeling**, with no submission target date.
 
 ## BHSM strong lensing
 
-Start with the [current scientific scope](STRONG_LENSING_SCOPE_20261020.md)
-and the [focused manuscript](../manuscript/strong_lensing_main.pdf). The
-[acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md) and
-[artifact index](../artifacts/strong_lensing_acceptance_20261020/README.md)
-record the current applications and their validation. Its
-organizing question is how BHSM surface contributions determine incoming-to-
-outgoing light transfer through an envelope event. The order is specified
-state and source, normalized metric/optical transfer, image and delay
-observables, then what those observables identify under conventional lens
-freedoms.
+Start with the [current observed-data checkpoint](STRONG_LENSING_OBSERVED_20261020.md), [observed artifact index](../artifacts/strong_lensing_observed_20261020/README.md), [data provenance](../data/strong_lensing_observed_20261020/README.md) and [focused manuscript](../manuscript/strong_lensing_main.pdf). The HE 0435-1223 pilot fits conventional and conditional R1 models to 902 historical epochs and tests 100 later epochs after a committed prediction freeze. The primary test conditions on all later B observations and withholds A/C/D; the secondary forecasts all four later images from historical training only.
 
-Science checkpoint
-[`87503ae`](https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd)
-pins the three new acceptance applications and eighteen focused tests. The
-current real-MDPI focused build has 19 pages; its
-[publication manifest](../artifacts/strong_lensing_acceptance_20261020/publication_manifest.json)
-and nineteen-page rendered audit are distinguished from the old 18-page
-integration evidence.
+The primary R1-minus-conventional score difference is **+0.00498**, with **85.33% nominal-95% marginal coverage** for both. The future-only test has **75.50%** coverage. The result provides no BHSM discrimination and exposes inadequate conditional predictive calibration. Both fitted models also predict a fifth central image, without an imposed detection limit. The frozen source/optical applications, original residuals and one score remain available; repairing and rescoring the same consumed targets cannot create a fresh held-out test.
+
+The manuscript is **Strong-Lensing Time Delays in the Berger–Hopf Framework: An R1 Calculation and an Observed-Light Test**. Science checkpoint [`14ad777`](https://github.com/ncarberry64/Manuscript-Generation/tree/14ad777eaf8befda387b9c3cb4504cf499e76cfc) pins the observed application. The current real-MDPI build has 24 pages; [publication manifest](../artifacts/strong_lensing_observed_20261020/publication_manifest.json) and [contact sheet](../artifacts/strong_lensing_observed_20261020/pdf_contact_sheet.png) record the release/PDF review separately from the unchanged pre-exposure freeze `e6e62bd` and known-outcome numerical replay.
+
+The argument remains specified state/source, normalized optical transfer, image/delay observables, then what those observables identify under conventional freedoms. [Scientific scope](STRONG_LENSING_SCOPE_20261020.md) and detailed derivations delimit the conditional physical assumptions. Physical admission remains false with the unchanged 2e-10 guard.
+
+The earlier [acceptance checkpoint](STRONG_LENSING_ACCEPTANCE_20261020.md) and [artifact index](../artifacts/strong_lensing_acceptance_20261020/README.md) record the synthetic/control applications at science checkpoint [`87503ae`](https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd). Their 19-page [publication manifest](../artifacts/strong_lensing_acceptance_20261020/publication_manifest.json) and rendered audit remain historical, distinct from both the older 18-page integration record and the new observed pilot.
 
 The [R1 source derivation](strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md)
 gives the retained action, normalizations, metric constraint, regular screened

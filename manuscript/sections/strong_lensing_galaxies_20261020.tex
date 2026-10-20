@@ -41,6 +41,11 @@ response. The reference-relative seconds therefore quantify a
 conditional transfer; they do not by themselves identify a unique
 underlying state. The finite refit makes this distinction concrete
 without changing the injected preparation.
+We then construct an observed-lens timing and point-geometry baseline
+for HE~0435$-$1223 and test frozen conventional and conditional R1
+predictions against reserved later light curves. This applies the same
+identifiability question to actual observations without promoting the
+synthetic profile to a complete galaxy reconstruction.
 
 BHSM determines the research question and interpretation. The R1 action
 is an effective representation with its own independent rolling scalar;
@@ -49,7 +54,8 @@ requires additional constitutive and embedding data. Those source
 conditions are derived separately in Supplementary Note S4. The present
 paper establishes the forward response and its information limits at
 the level actually specified. Its profiles are controlled examples;
-no observed lens is fitted and no empirical detection is claimed.
+the observed-lens application is a restricted retrospective test and
+does not claim an empirical BHSM detection.
 
 \section{Envelope State and Environmental Preparation}
 \label{sec:models}
@@ -59,6 +65,10 @@ the finite local density excess and the regular local boundary branch
 specified below. The earlier source-free target state is retained as a
 separate null control in Appendix~\ref{app:target}. Homogeneous geometry,
 local matter and the local scalar response are accounted for once.
+This section specifies the synthetic preparation. The distinct observed
+R-band channel and its measured redshifts are introduced in
+Section~\ref{sec:observed-lens}; its two hypotheses share that same
+observational preparation and variability likelihood.
 
 \subsection{Incident light, finite body and environment}
 The lens and source redshifts are $z_l=0.3$ and $z_s=1$.
@@ -970,6 +980,8 @@ higher-order metric prediction. The complete boundary construction,
 force/action residuals, tail derivation and convergence data are in
 Supplementary Note S8.
 
+\input{sections/he0435_observed_20261020}
+
 \section{Computational Methods and Reproducibility}
 The calculation uses the fixed manuscript source revision
 \texttt{49a1dab} and records full input hashes.
@@ -1011,6 +1023,19 @@ implemented integration variable and root calculation. Its agreement is a
 reproducibility check, not independent empirical evidence or external
 human peer review.
 
+The observed application archives original COSMOGRAIL/CDS files and
+row-level provenance, the pre-fit protocol, all four training starts,
+the committed pre-scoring predictions and the single reserved-target
+application. Eight light-curve and seven macro tests check exact
+likelihood normalization, dense conditioning, target-label invariance,
+delay sign/recovery, compatible maps, two-plane action reduction and
+consistent radial projection. The executed application and forward-audit
+receipts verify original scalar-source and metric-Gauss residuals.
+The full source and conditional-statistics
+definitions are in Supplementary Notes S9--S10. The scoring-start record
+persists even after an aborted exposure, so these targets cannot silently
+be reclassified as unseen after model revision. A separately labeled known-outcome replay reproduces the saved predictions and scores without refitting or reopening the experiment; it is not a second independent test.
+
 \section{Discussion: State Inference and Physical Scope}
 \label{sec:discussion}
 The calculation answers one forward and inverse modeling question.
@@ -1031,34 +1056,31 @@ The imposed profile changes alter ordinary delays much more than the
 state-conditioned offsets. They do not define an empirical prior; they
 show why a model-conditioned transfer is insufficient on its own for
 state identification. The finite refit is likewise a saturated local
-example rather than a forecast. Applying the benchmark to an observed
-system would require its imaging, time-delay likelihood and independently
-justified source, mass and environment information. Neither prescribed
-spherical profile is presented as a measured galaxy, and central-image
-detectability is not assumed.
+example rather than a forecast. The HE~0435 application supplies an
+actual but restricted test using point imaging and original brightness
+likelihoods. Its additional central-image prediction and conditional
+optical screen prevent interpreting that point fit as a complete measured
+galaxy or independently reconstructed environment.
 
-An observational extension can use existing light data to establish a
-baseline for each individual lens. Archival resolved imaging and
-monitoring light curves would constrain the conventional potential,
-source variability and time-delay likelihood jointly with the permitted
-conditional BHSM response. COSMOGRAIL's long monitoring record provides
-an example of existing light curves and subsequent observing seasons
-with which to organize this test~\cite{Millon2020COSMOGRAIL}.
-The baseline must retain its mass, source, line-of-sight and calibration
-uncertainties; a published cosmological posterior already conditioned
-on a lens model is not a substitute for those light-data likelihoods.
+The executed chronological test illustrates how existing light can
+establish a per-lens baseline, and how reserved observations can test it.
+Its conventional/R1 predictive tie is consistent with the effective-mass
+equivalence. Its brightness undercoverage, particularly in image A,
+shows why recovering a transfer does not establish a calibrated
+microlensing/source-variability model or unique physical state.
+The two-stage point-fit intervals exclude parameter uncertainty; the
+observed coverage is descriptive for correlated observations. No later
+residual is assigned to envelope evolution or a new interface amplitude.
 
-The model family, calibration data and priors would then be fixed before
-predicting withheld image information or subsequent monitoring data.
-New observations would test the predictive distribution before entering
-an updated fit. This procedure could build a progressively constrained
-optical-response map for each lens, including effective geometry or an
-interface response when its source law is specified. It does not make
-the underlying microscopic state unique: the conventional equivalences
-demonstrated here must remain in the inference. An observed asymmetric
-lens also requires an appropriate spatial model and matching propagation
-maps, rather than an imposed spherical three-image fixture. No observed
-lens has been fitted in the present synthetic benchmark.
+A progressively constrained optical map needs the admitted mass,
+source, line-of-sight and calibration uncertainties and a specified
+interface law for an interface-state inference. A published cosmological
+posterior conditioned on a lens model cannot replace the light-data
+likelihood. For HE~0435, a revised variability law or spatial profile
+would need new reserved observations for an independent predictive test.
+The positive conventional representation must remain available in that
+inference. This is the same transfer-to-identifiability question tested
+first in the controlled finite-body calculation.
 
 The approximation controls have separate meanings. The common GR2 term
 moves absolute image coordinates by up to $1.72$ microarcsec, while its
@@ -1119,6 +1141,15 @@ and distributed optical encounter make the benchmark's model and
 approximation dependencies explicit. The common GR2 changes of the
 original offsets remain $+69$ and $-10$ microseconds.
 
+The observed HE~0435 baseline trains on 902 epochs and reserves 100
+later epochs. With later B as the allowed driver, conventional and R1
+predictions for 300 A/C/D targets differ by only $0.00498$ in joint log
+score. Their nominal 95\% intervals cover $85.33\%$ of these targets,
+and the separately retained all-channel forecast also undercovers.
+The experiment supplies a reproducible observed timing/point-geometry
+test and exposes its brightness and central-image limitations. It
+does not identify a unique BHSM envelope state.
+
 Prepared light constrains an envelope encounter transfer. Identifying
 that transfer with a particular underlying state consumes the specified
 action/source map and independently justified mass/environment data.
@@ -1126,10 +1157,12 @@ The calculation provides a coherent forward and inverse test problem
 for that inference, with its physical source conditions and technical
 continuation derived separately.
 
-\supplementary{The repository supplies Notes S1--S8: local action/source
+\supplementary{The repository supplies Notes S1--S10: local action/source
 reduction; finite-body GR2; nuisance optics; cap/interface source
 pullback; exact field/environmental continuation; profile robustness;
-finite nonlinear refit; and distributed-encounter accuracy control.
+finite nonlinear refit; distributed-encounter accuracy control;
+observed-lens source/two-plane derivation; and classical light-curve
+likelihood and reserved-target protocol.
 Their source paths, executable commands, input hashes, numerical outputs
 and focused checks are mapped in the acceptance checkpoint. The long
 cap and continuation TeX derivations are retained as technical
@@ -1141,17 +1174,18 @@ curation, writing---original draft preparation, writing---review and
 editing, and visualization. The author accepts responsibility for the
 scientific content. AI assistance is disclosed below.}
 \funding{This research received no external funding.}
-\institutionalreview{Not applicable. This theoretical study involves
+\institutionalreview{Not applicable. This theoretical analysis and use of public astronomical observations involve
 no human participants or animals.}
 \informedconsent{Not applicable.}
 \dataavailability{The numerical code, frozen inputs, outputs, source
 applications and derivation checks are archived in the public repository
-at calculation revision \texttt{87503ae9d767} in the
-\href{https://github.com/ncarberry64/Manuscript-Generation/tree/87503ae9d7672405e07b573fd140c784b8ce6cbd}{Manuscript-Generation calculation archive}.
+at calculation revision \texttt{14ad777eaf8b} in the
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/14ad777eaf8befda387b9c3cb4504cf499e76cfc}{Manuscript-Generation calculation archive}.
 The frozen background and prior controls are preserved from revision
 \texttt{49a1dab}. The accompanying manuscript sources, official journal
-dependencies and integration reviews are supplied with this manuscript.}
-\acknowledgments{OpenAI ChatGPT and
+dependencies and integration reviews are supplied with this manuscript. The observed photometry is the public COSMOGRAIL/CDS release cited above; original files, attribution, hashes and reduction caveats are retained in the data provenance.}
+\acknowledgments{The author acknowledges COSMOGRAIL and CDS for the public
+photometry, with the original data publications cited above. OpenAI ChatGPT and
 OpenAI Codex materially assisted mathematical derivation, code generation
 and revision, numerical verification, analysis, and manuscript drafting.
 The supplied package records its ChatGPT assistance under the label
