@@ -1,0 +1,22 @@
+{
+  "action_location": "C:/Users/carbe/Downloads/BHSM_muon_parent_maxwell_worktree_20261001/docs",
+  "action_provenance": [
+    "BHSM_PATH_B_FOUNDATIONAL_ACTION_V14_31.md",
+    "BHSM_PATH_B_PHYSICAL_TOPOLOGY_AND_FR_GATE_V14_32.md",
+    "BHSM_STATIC_ETA_METRIC_SPIN4_SOURCE_V14_39.md"
+  ],
+  "baseline_reused_without_rerun": true,
+  "checkpoint_is_reset_target": false,
+  "command": "python scripts/run_strong_lensing_local_family.py",
+  "input_sha256": {
+    "artifacts/strong_lensing_first_comparison_20261020/response_arrays.npz": "e1802cc73a0e7f490ddbf307952127d091de5aa4b0fa1d42534650b5cc7286d3",
+    "artifacts/strong_lensing_first_comparison_20261020/results.json": "a6df929ba8370aef2851def5422e29ec2f209e397402d60340d0f2991156a7b1",
+    "artifacts/strong_lensing_local_family_source_receipt_20261020.json": "87490303d568a449a1c885a54f6f45a03797459878765c9e6152e24dc5445bca",
+    "code/strong_lensing_comparison.py": "aaea9e5fee682dca9871012e5518017ca8603ff726125f95130770069e014a9a",
+    "code/strong_lensing_local_family.py": "14dc83bae0e2d1f2289209c4f11fcacf7f24d91610ddbdd33122cd52b237fdbe",
+    "code/strong_lensing_local_hessian.py": "0d50cadf1391f49a89bf12227b5a5295b3a757f1301612e74ad72334f663d215",
+    "scripts/run_strong_lensing_local_family.py": "441d06997d085157c33ba4cad3334c725773db8af5461eb2efef9f45ddaa6323"
+  },
+  "reviewed_checkpoint": "97bf5571335cf60e15e2e486e1197ca226198ed2",
+  "source_versions": "source hashes and revision pinned in the separate local action recovery receipt"
+}

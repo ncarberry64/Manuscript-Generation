@@ -1,5 +1,11 @@
 # Envelope action projection and the available static-channel result
 
+The original ADM/control derivation below is retained. An evaluated
+physical metric/phase Hessian, target source problem and finite encounter
+now follow in [the local-family derivation](STRONG_LENSING_LOCAL_FAMILY_20261020.md).
+Its restricted effective sector and remaining exported-scalar dependency
+are explicit there.
+
 This calculation extends the current action and optical construction. It does
 not infer an unspecified state from a missing numerical array. The executed
 projection is the lapse/shift block of the current R1 action, followed by its

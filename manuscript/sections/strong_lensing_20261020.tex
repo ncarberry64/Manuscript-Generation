@@ -13,16 +13,16 @@ We retain two explicit realizations: a conventional galaxy-potential
 benchmark, and a response constructed from the existing Berger--Hopf metric
 and optical equations. The first executable comparison holds the galaxy
 encounter fixed and applies the available smooth geometric correction.
-An action-derived replacement for the local galaxy encounter remains a
-separate unresolved calculation. A restricted zero response and an exact
-degeneracy are valid outcomes of the declared comparison.
+We then construct a source-free local target family and a finite gravitating
+body in a declared effective action sector. Its complete encounter is
+compared with the same conventional body. A restricted zero response and
+an exact degeneracy are valid outcomes of the declared comparison.
 
 This focused draft develops the accepted contribution to ``Strong
 Gravitational Lens Modeling,'' with submission intended by 25 February 2027.
 It uses the inherited frozen R1 background within its supported domain
-$0\leq z\leq2.1$. It does not admit the current muon preparation as a lensing
-calibration. No equation evaluated below requires restarting that
-preparation or an inclusive pair-production four-point calculation.
+$0\leq z\leq2.1$. The incident light is a probe of the specified local
+state; it does not select that state.
 
 \section{Matched optical experiment}
 \label{sec:sl-experiment}
@@ -276,25 +276,50 @@ incompatible propagation input. Only differences $t_A-t_B$ are used, so
 $f(\beta)$ cancels.
 
 \subsection{Measured redshifts and moving initialization}
-The accumulated photon redshift response is
-$Z_a=\delta\ln(1+z_a)|_{\lambda_a}$. Holding the measured redshift fixed
-moves the coordinate endpoint by
+Distinguish the fixed-affine and fixed-radial-coordinate frequency
+variations,
 \begin{equation}
- \delta\lambda_a=-\frac{Z_a}{(\ln\overline\omega)'_a},
+ Z_{\lambda,a}=\delta\ln\omega_a|_\lambda,
+ \qquad Z_{\chi,a}=\delta\ln\omega_a|_\chi,
  \qquad
- \delta\chi_a=-\frac{Z_a}{\mathcal H_a}
- \quad\hbox{in background conformal distance}.
- \label{eq:sl-endpoint}
+ Z_{\chi,a}=Z_{\lambda,a}
+ -\mathcal H_a\delta\chi_{{\rm ray},a}|_\lambda,
+ \label{eq:sl-frequency-chain}
 \end{equation}
+where $\delta\chi_{{\rm ray},a}|_\lambda$ is the ray-coordinate
+displacement at fixed affine parameter and
+$d\ln\overline\omega/d\chi=\mathcal H$. Holding the measured redshift
+fixed moves the event by
+\begin{align}
+ \delta\lambda_a&=-\frac{Z_{\lambda,a}}{(\ln\overline\omega)'_a},
+ \nonumber\\
+ \delta\chi_a&=\delta\chi_{{\rm ray},a}|_\lambda
+ +\overline\chi'_{\lambda,a}\delta\lambda_a
+ \nonumber\\
+ &=\delta\chi_{{\rm ray},a}|_\lambda-\frac{Z_{\lambda,a}}{\mathcal H_a}
+ =-\frac{Z_{\chi,a}}{\mathcal H_a}.
+ \label{eq:sl-endpoint}
+\end{align}
+Thus $\overline\chi'_{\lambda,a}\delta\lambda_a$ alone is a converted
+affine shift, not the actual radial event displacement. For example, the
+saved unit-$\zeta_i$ source responses are
+$\partial_{\zeta_i}\chi_s=-0.005611965495588844$ and
+$\partial_{\zeta_i}\lambda_s=0.00002815169979075716$ in the declared
+$c/H_0$ normalization. At $z_s=1$, $\overline\chi'_\lambda=4$,
+so the converted affine shift is $+0.00011260679916302863$.
 Observer tetrad, source/lens velocity and gravitational frequency terms
-belong in $Z_a$ for the chosen state. The map variation obeys
+belong in the frequency variation for the chosen state. The map variation obeys
 \begin{equation}
  (\delta J_a)''=\mathcal T_0\delta J_a+\delta\mathcal T\,J_{a0},
  \quad
  \delta J_a|_a=-\omega_a I\delta\lambda_a,
- \quad (\delta J_a)'|_a=\delta\omega_a I.
+ \quad (\delta J_a)'|_a=\Delta\omega_a I.
  \label{eq:sl-moving-init}
 \end{equation}
+Here $\Delta\omega_a=\delta\omega_a|_\lambda
++\overline\omega'_a\delta\lambda_a$ is the total frequency variation
+at the moving vertex, and vanishes at fixed measured redshift with the
+observer normalization held fixed.
 At its output one also adds $J_{a0}'(\lambda_b)\delta\lambda_b$ and the
 required screen/frame conversion. The zero of $J_{a0}$ at its initial
 point removes the apparent $J_{a0}''\delta\lambda_a$ term there.
@@ -452,9 +477,10 @@ gives $\mathcal R_{g\psi}^{\rm loc}=0$ and
 $k_{\rm loc}=c_\varphi$. This is a channel-specific null result; it does
 not determine a nonzero-current state or prove that all lensing vanishes.
 No new channel is introduced to manufacture a signal.
-For a constant texture admitted by the domain, the phase-invariant
-$F(X)$ sector also has zero self entry; other action and boundary terms
-must be included before identifying the complete $c_\varphi$.
+For a spatially constant \emph{phase variation}, this derivative sector
+has zero self entry. A constant reference texture does not imply zero
+self entry for a nonconstant phase variation: the construction below
+evaluates its positive Dirichlet stiffness.
 
 The smooth coupled cosmological metric response is separately available
 from Eqs.~\eqref{eq:sl-action}--\eqref{eq:sl-metric}. Its transfer per anchor
@@ -517,9 +543,83 @@ coordinate fixed instead changes $\beta$, and therefore requires the full
 variation in Eq.~\eqref{eq:sl-complete-variation}. The two conventions are
 not interchangeable.
 In the scale-free SIS control, the fixed physical transverse source gives
-an exact first-order cancellation of the delay response to $\ln H_0$.
+the exact identity
+\begin{equation}
+ \Delta t_{-+}=\frac{2(1+z_l)b_{\rm phys}s}{c}
+ \frac{D_{ol}}{D_{os}},\qquad s=|X_s|.
+ \label{eq:sl-fixed-source-delay}
+\end{equation}
+It is independent of a common $H_0^{-1}$ distance rescaling when the
+dimensionless expansion/curvature history, measured redshifts,
+$b_{\rm phys}$ and $s$ are fixed and the two-image branch is retained.
+This cancellation does not apply to arbitrary changes of geometry or to
+a family with another fixed dimensional lens scale.
 The independently checked fixed angular-source convention instead gives
 $\partial\Delta t/\partial\ln H_0=-\Delta t$.
+
+\subsection{Analytic scalar-map nuisance degeneracy}
+For the centered softened-isothermal family used below, put
+\begin{equation}
+ \beta=\frac{s}{D_{os}},\quad
+ \theta_E=b\frac{D_{ls}}{D_{os}},\quad
+ \theta_c=\frac{r_c}{D_{ol}},\quad
+ T=(1+z_l)\frac{D_{ol}D_{os}}{D_{ls}}.
+ \label{eq:sl-reduced-family}
+\end{equation}
+Here $b=b_{\rm phys}$ and $r_c$ is a physical core radius; the SIS is
+$r_c=0$. The reduced potential is
+$\psi_{\rm red}(\theta)=\theta_E\sqrt{|\theta|^2+\theta_c^2}$.
+Images depend only on $(\beta,\theta_E,\theta_c)$, and relative delays
+are $T/c$ times differences of its reduced Fermat potential.
+
+\noindent\textbf{Proposition (scalar-map controls).}
+At fixed measured lens redshift and fixed physical $(s,b,r_c)$, let
+$f_{ab,a}=\partial_a\ln D_{ab}$. For noncaustic images on fixed branches,
+the state-response matrix of image coordinates and relative delays obeys
+\begin{equation}
+ \begin{gathered}
+ B=N_{\min}R,\qquad
+ N_{\min}=[N_{{\rm source}\,x}\ N_{\ln b}\ N_{\ln r_c}\ N_{\rm MST}],\\
+ R=\begin{pmatrix}
+ -\beta_{\rm as}f_{os}\\
+ f_{ls}-f_{os}\\
+ -f_{ol}\\
+ f_{ol}+f_{os}-f_{ls}
+ \end{pmatrix}.
+ \end{gathered}
+ \label{eq:sl-factorization}
+\end{equation}
+Each entry of $R$ is a row over state coordinates; $\beta_{\rm as}$
+is in arcseconds because the implemented source nuisance is per arcsecond.
+Delete the core-radius column and its row for the SIS. The implemented
+compensated mass-sheet column leaves images fixed and rescales all
+relative delays. It therefore supplies the $\delta\ln T$ response.
+
+To prove the identity, differentiate Eq.~\eqref{eq:sl-reduced-family}:
+$\delta\beta_{\rm as}=-\beta_{\rm as}f_{os}\delta Y$,
+$\delta\ln\theta_E=(f_{ls}-f_{os})\delta Y$,
+$\delta\ln\theta_c=-f_{ol}\delta Y$, and
+$\delta\ln T=(f_{ol}+f_{os}-f_{ls})\delta Y$.
+At fixed maps the first three nuisance columns generate precisely the
+first three variations; the delay-scale column generates the last.
+The chain rule establishes Eq.~\eqref{eq:sl-factorization}.
+For any positive-definite observational covariance $C$, set
+$W=C^{-1/2}$ and let $P$ project orthogonally off the range of
+$WN_{\min}$. Then $PWB=0$ when these nuisance directions are unrestricted.
+No additional line-of-sight or $H_0$ nuisance is needed for this result.
+The compensating nuisance transformation changes source and galaxy
+parameters: this is an observable degeneracy, not physical identity of
+the underlying preparations.
+
+The saved response arrays give relative whitened Frobenius discrepancies
+\begin{equation}
+ \frac{\|W(B-N_{\min}R)\|_F}{\|WB\|_F}
+\end{equation}
+of
+$2.45294\times10^{-12}$ (SIS) and $6.37772\times10^{-12}$ (smooth core).
+These finite-difference residuals support the analytic identity for the
+specified scalar-map experiment. An intrinsic local encounter or
+nonscalar propagation requires its own response and nuisance analysis.
 
 A pure sky dipole has zero trace-free angular Hessian at Born order,
 $(\nabla_a\nabla_bQ)^{\rm TF}=0$; its shear null does not remove its
@@ -626,6 +726,9 @@ vanishes, as required, while its source, strength and core derivatives
 remain nonzero. Allowing the declared smooth-galaxy and source nuisances
 still leaves state rank zero. Thus a mass-sheet-invariant ratio does not
 by itself identify the conditional state in this realization.
+The central-to-positive-outer magnification ratio is
+$2.79565\times10^{-5}$; equal assumed coordinate precision for this faint
+central image is an idealized control, not an observational forecast.
 \IfFileExists{figures/strong_lensing_comparison.pdf}{%
  \begin{figure}[htbp]
  \centering
@@ -646,46 +749,39 @@ integrating its derived metric through the entrance/exit surfaces before
 justifying any thin-plane reduction. This calculation does not supply that
 reduction by assumption.
 
-\section{Dependencies and next calculation}
+\input{sections/strong_lensing_local_family_20261020}
+
+\section{Scope of the derived and conditional results}
 \label{sec:sl-limitations}
-The current result separates four kinds of input. The frozen background,
-coupled action evolution, conventional encounter solution, compatible
-Jacobi/arrival equations and static phase-channel null are derived or
-directly evaluated within their stated domain. The incident pulse, selected
-spatial profile/axis, source coordinate, galaxy parameters and illustrative
-covariance are specified physical or measurement inputs. Unit responses
-to physical anchor amplitudes and any independently declared optical
-forcing remain conditional sensitivities. The local envelope's
-common-domain projected Hessian, nonzero spatial-current reference state,
-topographic boundary/source profile, normalized seam export and any
-stochastic source covariance remain unresolved.
+The action-derived results are the target regularity/zero-flux theorem,
+the exact reference target equations, the solved finite-body Einstein and
+conservation equations, the matched exterior, the common-domain physical
+Hessian and the positive phase source problem. The weak-field optical
+integral then gives a nonzero conventional-equivalent encounter and
+evaluated intrinsic derivatives. The previous scalar-map nuisance null
+now has an analytic explanation, independently checked on its saved arrays.
 
-The next local envelope calculation must evaluate
-Eq.~\eqref{eq:sl-static-current} on a specified current state and profile,
-project the constrained Hessian in Eq.~\eqref{eq:sl-local-hessian}, and
-solve Eq.~\eqref{eq:sl-envelope-chain} with the corresponding boundary
-conditions. It can then provide $\delta\hat\psi|_x$ or an extended metric
-encounter for Eq.~\eqref{eq:sl-complete-variation}. Smooth cosmological
-propagation already included in $D_{ab}$ must remain excluded from that
-local encounter. This is the specific dependency needed for testing
-an additional interface response or a galaxy-replacement interpretation.
+Specified data are the target boundary value, positive target coupling,
+finite matter mass/radius and density law, source position, incoming light,
+axial cosmological harmonic and illustrative measurement covariance. The
+choice of retained effective gravity sector and absent extra cap reactions
+is conditional. The constant target state is admissible in that sector;
+no unique full-framework galaxy selector or nonzero BHSM correction is
+claimed. Its zero optical state derivative is a computed result.
 
-The benchmark and conditional transfer therefore support a controlled
-state-dependence experiment: a $17.094532$-day conventional benchmark,
-six computed state-response columns, a restricted static phase null and
-an explicit failure of identification under the admitted nuisance freedoms.
-The rank-zero result is the distinguishability conclusion for this
-illustrative configuration. An independently normalized envelope response
-requires the local action/state/source closure above and independent
-information that removes the relevant degeneracy directions.
+The unresolved dependency is a general common-action map from exported
+topographic forcing to the physical target phase, including a nonzero
+interface/cap reaction if such data are prescribed. Equation
+\eqref{eq:sl-actual-phase-source} supplies a normalized target-phase
+operator; it does not replace the separate operator and source in
+Eq.~\eqref{eq:sl-envelope-chain}. A stochastic covariance is unnecessary
+for the deterministic problem evaluated here. Additional independent
+physical information would be needed to identify state directions that
+remain degenerate with galaxy and source changes.
 
-The reproducible entry point is
-\texttt{python scripts/run\_strong\_lensing\_comparison.py} from the
-repository root. The machine-readable result, input hashes and response
-arrays are saved under
-\texttt{artifacts/strong\_lensing\_first\_comparison\_20261020/}.
-The focused tests cover the action projections, six-coordinate transport,
-redshift/reciprocity conventions, analytic lens control, complete arrival
-derivatives, mass-sheet transformation and correct treatment of unconstrained
-directions; 51 focused tests pass. The original broader manuscript remains
-a separate source.
+The reproducible commands are the original comparison script, the
+saved-array degeneracy check and the new local-family script; their exact
+arguments, pinned inputs, residuals and test receipts accompany the
+checkpoint. Baseline arrays remain unchanged. The numerical equivalence
+and rank-zero conclusions are limited to the declared families and
+approximations; they do not supply an observational detection forecast.

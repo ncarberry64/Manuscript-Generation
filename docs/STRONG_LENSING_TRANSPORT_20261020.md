@@ -142,6 +142,70 @@ Lens and source events are roots \(\omega_l=1.3\), \(\omega_s=2\). Their
 background emission times or affine coordinates fixed while claiming fixed
 measured redshifts.
 
+### Fixed-affine frequency, fixed-radial frequency and the moving event
+
+The original numerical event-root application above is retained. Its
+coordinate endpoints require two distinct first variations:
+
+\[
+Z_\lambda=\delta\ln\omega|_\lambda,\qquad
+Z_\chi=\delta\ln\omega|_\chi,\qquad
+\delta\chi_{\rm ray}|_\lambda=\delta\chi|_\lambda.
+\]
+
+Since \(d\ln\bar\omega/d\chi=\mathcal H\), the chain rule is
+
+\[
+Z_\chi=Z_\lambda-\mathcal H\delta\chi_{\rm ray}|_\lambda.
+\]
+
+At a fixed measured-redshift event, observer normalization fixed,
+
+\[
+\delta\lambda_{\rm event}
+=-\frac{Z_\lambda}{d\ln\bar\omega/d\lambda},
+\]
+\[
+\delta\chi_{\rm event}
+=\delta\chi_{\rm ray}|_\lambda
+ +\bar\chi'_\lambda\delta\lambda_{\rm event}
+=\delta\chi_{\rm ray}|_\lambda-\frac{Z_\lambda}{\mathcal H}
+=-\frac{Z_\chi}{\mathcal H}.
+\]
+
+The converted background-affine shift
+\(\delta\chi_{\rm affine}\equiv\bar\chi'_\lambda\delta\lambda_{\rm event}\)
+has its own symbol and is not the actual radial-coordinate event shift.
+For the saved unit-\(\zeta_i\) source application,
+\(\partial_{\zeta_i}\chi_s=-0.005611965495588844\) whereas
+\(\partial_{\zeta_i}\lambda_s=0.00002815169979075716\).
+At \(z_s=1\), \(\bar\chi'_\lambda=a_s^{-2}=4\), giving
+\(\partial_{\zeta_i}\chi_{{\rm affine},s}=+0.00011260679916302863\).
+The chain rule consequently infers the fixed-affine ray displacement
+\(-0.005724572294751873\) per unit \(\zeta_i\). The last number is
+inferred from the saved moving-event responses, not a newly integrated
+fixed-affine sample.
+
+For Jacobi initialization at a moving vertex, the original conditions are
+\(J_a(\lambda_a)=0\), \(J'_a(\lambda_a)=\omega_a I\). Their variation is
+
+\[
+\delta J_a|_a=-\omega_a I\delta\lambda_a,\qquad
+(\delta J_a)'|_a=\Delta\omega_a I,
+\quad
+\Delta\omega_a=\delta\omega_a|_\lambda
++\bar\omega'_a\delta\lambda_a.
+\]
+
+The frequency on this right-hand side is the **total** variation at the
+moving vertex, so \(\Delta\omega_a=0\) at fixed measured redshift.
+The term \(\bar J_a''\delta\lambda_a\) vanishes because the initial
+Jacobi separation vanishes. The propagation variation remains
+\((\delta J_a)''=\mathcal T_0\delta J_a+\delta\mathcal T J_{a0}\),
+and the output includes \(J'_{a0}(\lambda_b)\delta\lambda_b\) and
+screen/frame conversion. The event-root implementation already includes
+these moving redshift events and is unchanged by this notation correction.
+
 ## Angular Jacobi equation and compatible three-segment initialization
 
 For a small screen deviation from the axial ray, let \(\vartheta\) denote
@@ -269,6 +333,92 @@ displacement \(X_s\). It allows radial event locations, inferred angular
 means this transverse screen displacement; it does not additionally freeze a
 three-dimensional coordinate position or a particular cosmological worldline.
 The source term \(f(\beta)\) cancels between images of the same source.
+
+### Exact nuisance factorization for the existing scalar-map controls
+
+For the centered softened-isothermal family, write
+
+\[
+\beta=s/D_{os},\qquad\theta_E=bD_{ls}/D_{os},\qquad
+\theta_c=r_c/D_{ol},\qquad
+T=(1+z_l)D_{ol}D_{os}/D_{ls}.
+\]
+
+Its reduced potential is
+\(\psi_{\rm red}(\theta)=\theta_E\sqrt{|\theta|^2+\theta_c^2}\).
+Image coordinates depend on \((\beta,\theta_E,\theta_c)\), and relative
+delays are \(T/c\) times the corresponding reduced Fermat differences.
+The SIS sets \(r_c=0\). The source lies on the positive screen axis.
+For a state coordinate \(a\), let
+\(f_{ol,a}=\partial_a\ln D_{ol}\),
+\(f_{os,a}=\partial_a\ln D_{os}\), and
+\(f_{ls,a}=\partial_a\ln D_{ls}\).
+
+**Proposition.** With fixed measured \(z_l\), dimensional transverse source
+\(s\), physical \(b,r_c\), scalar propagation maps, and fixed noncaustic
+image branches, the existing response satisfies
+
+\[
+B=N_{\min}R,\qquad
+N_{\min}=[N_{{\rm source}\,x}\ N_{\ln b}\ N_{\ln r_c}\ N_{\rm MST}],
+\]
+\[
+R=\begin{pmatrix}
+-\beta_{\rm as}f_{os}\\
+f_{ls}-f_{os}\\
+-f_{ol}\\
+f_{ol}+f_{os}-f_{ls}
+\end{pmatrix}.
+\]
+
+Rows run across state coordinates. Delete the core-radius column and third
+row for the SIS. The arcsecond normalization matches the saved source
+nuisance; the other selected nuisance coordinates are dimensionless.
+Differentiating the four reduced parameters gives these four rows.
+At fixed maps, varying the source, physical strength and core reproduces
+the first three variations. The implemented compensated mass-sheet column
+has zero image response and multiplies every relative delay, reproducing
+\(\delta\ln T\). Their chain rule gives the factorization.
+
+If \(W^TW=C^{-1}\) for any positive-definite observational covariance,
+and \(P\) is the orthogonal complement projector of
+\(\operatorname{range}(WN_{\min})\), then \(PWB=0\) exactly for this
+model family when those nuisances are unrestricted. Further line-of-sight
+and \(H_0\) columns are unnecessary for this identity. These compensating
+changes alter physical source/galaxy parameters; the proposition asserts
+observable degeneracy, not physical equivalence of preparations.
+
+`code/strong_lensing_degeneracy.py` applies this identity to the saved
+`response_arrays.npz` and `results.json` without rerunning propagation.
+The relative whitened Frobenius errors are \(2.452944603865752\times10^{-12}\)
+(SIS) and \(6.377724303772925\times10^{-12}\) (smooth core), consistent
+with the finite-differenced nuisance columns. The receipt is
+`artifacts/strong_lensing_first_comparison_20261020/nuisance_factorization.json`.
+The smooth-core covariance reconstructs the original runner's equal
+\(0.001\) arcsec coordinate errors and \(0.1\) day delay errors. Its central
+image has only \(2.7956547901766042\times10^{-5}\) of the positive outer
+image's magnification, so this remains an idealized precision control.
+
+The fixed-physical-source SIS identity is
+
+\[
+\Delta t=\frac{2(1+z_l)bs}{c}\frac{D_{ol}}{D_{os}}.
+\]
+
+It cancels a common \(H_0^{-1}\) distance rescaling exactly when the
+dimensionless expansion/curvature history, measured redshifts, \(b,s\)
+and two-image branch are fixed. It does not cancel arbitrary distance
+responses or the response of a core with a fixed dimensional radius.
+Holding the angular source instead gives the usual \(H_0^{-1}\) delay
+scaling. A new intrinsic encounter or nonscalar map needs a separate
+response and nuisance analysis; the proposition does not classify it.
+
+Reproduce this focused saved-array check with
+
+```powershell
+python code/strong_lensing_degeneracy.py
+python -m pytest tests/test_strong_lensing_degeneracy.py -q
+```
 
 Paraxial propagation about the axial central ray and an instantaneous weak
 thin-plane galaxy encounter are the approximation regime. Across day-scale

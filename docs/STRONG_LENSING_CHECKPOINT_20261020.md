@@ -1,5 +1,10 @@
 # First matched strong-lensing checkpoint - 20 October 2026
 
+Historical baseline receipt. The subsequent constructed local encounter,
+corrected endpoint derivation and analytic nuisance result are recorded in
+[the local checkpoint](STRONG_LENSING_LOCAL_CHECKPOINT_20261020.md).
+The original numerical baseline below remains unchanged.
+
 The existing checkout was inspected at revision
 `3427c5297fac71faa501685bd38e5d420619c761`. Work is isolated on
 `codex/strong-lensing-first-comparison-20261020`; the original checkout's

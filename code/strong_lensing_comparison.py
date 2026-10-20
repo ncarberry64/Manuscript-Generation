@@ -140,12 +140,15 @@ def solve_images(geometry,galaxy,source_Mpc,*,seeds=None,angle_scale=None):
         minimum_image_Jacobian_singular_value=min(np.linalg.svd(a['jacobian'],compute_uv=False)[-1] for a in applications))
 
 
-def complete_map_response(images,geometry,galaxy,source_Mpc,d_maps,*,d_source_Mpc=None):
+def complete_map_response(images,geometry,galaxy,source_Mpc,d_maps,*,d_source_Mpc=None,
+                          intrinsic_encounter=None):
     """Original off-shell lens equation and stationary arrival derivative.
 
     d_maps=(dDol,dDos,dDls), with measured redshifts fixed. The intrinsic
-    galaxy potential is held fixed here. A derived extra encounter can be
-    supplied separately; it must not duplicate metric propagation.
+    intrinsic_encounter(x), if supplied, returns (dpsi_hat, dalpha_hat) at
+    fixed physical impact x, in Mpc and radians per parameter unit. Its
+    alpha must be the spatial gradient of its potential. This term must
+    not duplicate metric propagation. None retains the fixed galaxy.
     """
     dDol,dDos,dDls = np.asarray(d_maps,float)
     beta = source_angle(geometry,source_Mpc)
@@ -162,11 +165,16 @@ def complete_map_response(images,geometry,galaxy,source_Mpc,d_maps,*,d_source_Mp
     for theta in images:
         a=lens_application(theta,geometry,galaxy,source_Mpc)
         impact=dDol@theta
+        dpsi,dalpha=(0.,np.zeros(2)) if intrinsic_encounter is None else intrinsic_encounter(
+            geometry.D_ol@theta)
+        dalpha=np.asarray(dalpha,float)
+        if np.shape(dpsi)!=() or dalpha.shape!=(2,) or not np.isfinite(dpsi) or not np.isfinite(dalpha).all():
+            raise ValueError('intrinsic encounter requires finite scalar potential and two-vector deflection')
         dtheta=np.linalg.solve(a['jacobian'],dbeta+dG@a['alpha']+
-            geometry.G@a['hessian']@impact)
+            geometry.G@(a['hessian']@impact+dalpha))
         u=theta-beta
         terms=np.array([.5*u@dT@u,-u@geometry.T@dbeta,
-            -(1+geometry.z_l)*a['alpha']@impact,0.])*MPC_OVER_C_DAYS
+            -(1+geometry.z_l)*a['alpha']@impact,-(1+geometry.z_l)*dpsi])*MPC_OVER_C_DAYS
         positions.append(dtheta/ARCSEC);time.append(terms.sum());pieces.append(terms)
     time=np.array(time)
     return dict(images_arcsec=np.array(positions),arrival_days=time,

@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-20",
+  "evaluated_evidence": {
+    "compactness_GM_over_Rc2": 1.595138613862614e-06,
+    "cosmological_fixed_nuisance_rank": 3,
+    "cosmological_free_nuisance_rank": 0,
+    "images_x_arcsec": [
+      0.8354760339435907,
+      -0.08216193977998465,
+      -0.6574955250771493
+    ],
+    "intrinsic_response_relative_whitened_errors": {
+      "log_mass": 1.0794895991606342e-10,
+      "log_radius": 1.030234492369365e-09
+    },
+    "metric_determinant_over_KR_squared": -389.63760718527425,
+    "new_finite_profile_factorization_relative_whitened_error": 1.3152013272058473e-16,
+    "original_annulus_metric_Euler_residual_max": 3.2676110083127284e-21,
+    "phase_schur_over_k_eta_R": 9.869620144479654,
+    "q_only_rank": 0,
+    "relative_delays_days": [
+      21.71607656605687,
+      14.27145238690864
+    ]
+  },
+  "independent_focused_verification": {
+    "command": "python -m pytest tests/test_strong_lensing_degeneracy.py tests/test_strong_lensing_intrinsic_encounter.py tests/test_strong_lensing_local_hessian.py tests/test_strong_lensing_local_family.py -q",
+    "diff_whitespace_check": "git diff --check passed",
+    "elapsed_seconds_reported": 1.03,
+    "failed": 0,
+    "passed": 24,
+    "pdf_visual_review": "not performed by this reviewer; final combined PDF belongs to publication verification",
+    "portable_writer_review": "Inspected code/strong_lensing_degeneracy.py and code/strong_lensing_local_hessian.py diffs: explicit output newline only; no numerical application change."
+  },
+  "limitations_required_with_publication": [
+    "Effective four-dimensional Einstein coefficient and absent extra cap/vacuum reaction are conditional assumptions; complete cap/sigma equations and global closed-cosmology matching are not solved.",
+    "Projected gravitational inverse does not prove full functional invertibility or propagating stability.",
+    "Optical numbers retain leading weak-field/thin-plane accuracy; exact TOV background does not make them all-orders optical predictions.",
+    "General nonzero export-to-phase/interface response and physical q0 selection remain unresolved.",
+    "Illustrative image/delay covariance is not an observational forecast; faint smooth-core baseline central-image precision remains idealized."
+  ],
+  "portable_LF_receipts_verified": {
+    "artifacts/strong_lensing_first_comparison_20261020/nuisance_factorization.json": {
+      "LF_only": true,
+      "sha256": "2b29d70698e73d7895f8f219e7491cfac8f83891f11df5ab53b088e4876282ec",
+      "working_equals_index_bytes": true
+    },
+    "artifacts/strong_lensing_local_family_source_receipt_20261020.json": {
+      "LF_only": true,
+      "sha256": "87490303d568a449a1c885a54f6f45a03797459878765c9e6152e24dc5445bca",
+      "working_equals_index_bytes": true
+    },
+    "artifacts/strong_lensing_local_hessian_20261020.json": {
+      "LF_only": true,
+      "sha256": "d687413a25e0ae42a7ff512f82a341b72eb58c9da968a5a2fc5593feaa846e7f",
+      "working_equals_index_bytes": true
+    }
+  },
+  "publication_scope": "Substantive local target/Einstein-fluid/Hessian/optical application. This is not a full BHSM cap/sigma admissibility certificate, a selected physical galaxy state or an extra BHSM deflection prediction.",
+  "review_corrections_resolved": [
+    "Qualified local orthonormal phase kinetic matrix and added integrated coordinate-time profile norm.",
+    "Removed claim that changing to local TOV leaves independent inherited sigma/cap equations on shell.",
+    "Removed implication that vanishing phase flux solves the separate exported-topographic source chain.",
+    "Qualified static gravitational inverse and determinant to their retained projected normalization.",
+    "Added effective Einstein coefficient, absent cap/vacuum reaction and remaining local/global matching assumptions to machine-readable results.",
+    "Normalized publication receipts to portable LF and made both affected CLI writers explicitly preserve LF; all input hashes revalidated."
+  ],
+  "reviewed_sha256": {
+    "artifacts/strong_lensing_first_comparison_20261020/nuisance_factorization.json": "2b29d70698e73d7895f8f219e7491cfac8f83891f11df5ab53b088e4876282ec",
+    "artifacts/strong_lensing_local_family_20261020/input_manifest.json": "54ca218a3afe4cc2f3124a6fa505326dde644995d20bb9037d6d1ed907855d42",
+    "artifacts/strong_lensing_local_family_20261020/profiles.npz": "80ecac07de187048f36d71dae363b786bd6c93e0073af58dcb3db4c174fdc420",
+    "artifacts/strong_lensing_local_family_20261020/results.json": "cbd36a1c68ece63809a752e30548c92455587a4505feeef7ac6f6442399ba9a9",
+    "artifacts/strong_lensing_local_family_source_receipt_20261020.json": "87490303d568a449a1c885a54f6f45a03797459878765c9e6152e24dc5445bca",
+    "artifacts/strong_lensing_local_hessian_20261020.json": "d687413a25e0ae42a7ff512f82a341b72eb58c9da968a5a2fc5593feaa846e7f",
+    "code/strong_lensing_comparison.py": "aaea9e5fee682dca9871012e5518017ca8603ff726125f95130770069e014a9a",
+    "code/strong_lensing_degeneracy.py": "ccc2ab066d82e93823f4cc304e6bcb07077f8b9a09dc682bc6d12b5c0192944c",
+    "code/strong_lensing_local_family.py": "14dc83bae0e2d1f2289209c4f11fcacf7f24d91610ddbdd33122cd52b237fdbe",
+    "code/strong_lensing_local_hessian.py": "0d50cadf1391f49a89bf12227b5a5295b3a757f1301612e74ad72334f663d215",
+    "docs/STRONG_LENSING_LOCAL_FAMILY_20261020.md": "53b3f6db0ba458f1be6c86fb221f2dbdd3a46c085d26f48cc2bf21c3d5bff81d",
+    "docs/STRONG_LENSING_TRANSPORT_20261020.md": "b5c3503d8eee217cccf13ba28490d95b46f9bae8dc88fa020b0879561af3a559",
+    "manuscript/sections/strong_lensing_20261020.tex": "a3abe13e4296d1102f5c3443f9bddd8aae32f8cefdf816343223362febf80638",
+    "manuscript/sections/strong_lensing_local_family_20261020.tex": "019d8eb4a2c9acb6022e782da90a382239bdc6198c317a477728c174e01d3d47",
+    "scripts/run_strong_lensing_local_family.py": "441d06997d085157c33ba4cad3334c725773db8af5461eb2efef9f45ddaa6323"
+  },
+  "reviewer": "independent endpoint/factorization agent; no author edits to local family, local Hessian or intrinsic optical interface",
+  "runner_manifest_hash_checks": {
+    "artifacts/strong_lensing_first_comparison_20261020/response_arrays.npz": true,
+    "artifacts/strong_lensing_first_comparison_20261020/results.json": true,
+    "artifacts/strong_lensing_local_family_source_receipt_20261020.json": true,
+    "code/strong_lensing_comparison.py": true,
+    "code/strong_lensing_local_family.py": true,
+    "code/strong_lensing_local_hessian.py": true,
+    "scripts/run_strong_lensing_local_family.py": true
+  },
+  "schema": "strong-lensing-independent-scientific-review-v1",
+  "scientific_decisions": [
+    {
+      "basis": "Z_chi=Z_lambda-Hcal delta_chi_ray|lambda; actual radial event response includes ray displacement; moving-vertex frequency is total Delta omega. Numerical event-root code unchanged.",
+      "decision": "PASS",
+      "topic": "Endpoint notation"
+    },
+    {
+      "basis": "Independent saved-array application verifies B=N_min R with source-x, strength, optional core and compensated MST columns; covariance-independent null is an observable degeneracy, not equality of preparations.",
+      "decision": "PASS_RESTRICTED_FAMILY",
+      "topic": "Saved scalar-map nuisance theorem"
+    },
+    {
+      "basis": "Original v14.31 F(X)=kappa1 X/2+X^4/8 checked. Constant real S6 meridian has unit target norm, Deta=X=F=current=stress=0. Source-free regular radial flux with positive kappa1 forces constant meridian angle.",
+      "decision": "PASS_CONDITIONAL_SECTOR",
+      "topic": "Original target action and family"
+    },
+    {
+      "basis": "Inverse-metric variation signs and all three second derivatives agree with exact static EH+Dirichlet energy. Static energy signs are consistent across metric and target blocks. The inverse is restricted to the retained two-dimensional annular Dirichlet projection.",
+      "decision": "PASS_PROJECTED_DOMAIN",
+      "topic": "Physical metric Hessian"
+    },
+    {
+      "basis": "Mixed rows vanish pointwise but nonconstant Dirichlet phase curvature remains positive; Schur=c_phi. Positive Lorentzian profile kinetic norm is recorded separately from the indefinite constrained static gravity block.",
+      "decision": "PASS",
+      "topic": "Phase Schur and kinetic domain"
+    },
+    {
+      "basis": "Independent scaling derivation verifies Tolman-VII mass/density normalization, TOV pressure/lapse rows, radial/angular Einstein rows and continuous induced metric/extrinsic curvature at zero surface pressure; no Israel layer is required.",
+      "decision": "PASS_EFFECTIVE_EINSTEIN_PROBLEM",
+      "topic": "Finite matter and matching"
+    },
+    {
+      "basis": "Finite-density potential differentiates to alpha and Hessian. Fixed-impact logM/logR derivatives have correct signs. Complete image derivative includes +G delta alpha and arrival derivative includes -(1+z_l)delta psi/c. Combined propagation/source/intrinsic and gauge tests pass.",
+      "decision": "PASS_WEAK_FIELD_THIN_PLANE",
+      "topic": "Intrinsic optical encounter"
+    },
+    {
+      "basis": "New finite-profile response, intrinsic derivatives and nuisance factorization are evaluated on the matching finite lens; old SIS rank theorem is not imported as its proof. The constant-q response is identically zero even with fixed nuisances.",
+      "decision": "PASS_NEW_FAMILY_ONLY",
+      "topic": "Matched nuisance application"
+    },
+    {
+      "basis": "Only normalized target-phase source problem is solved. General exported-topography psi operator, gravitational source and export-to-phase coupling remain unresolved. Zero geometric seam charge applies to the smooth material surface only. No cap/sigma on-shell result is inferred from zero eta forcing.",
+      "decision": "PASS_WITH_EXPLICIT_UNRESOLVED_DEPENDENCY",
+      "topic": "Source ownership and cap boundary"
+    },
+    {
+      "basis": "Finite encounter replaces SIS in its own matched control; saved smooth maps are used once and no extra duplicate mass/sheet is added. Optical pulse, cosmological radiation variables and muon state kernels stay distinct.",
+      "decision": "PASS",
+      "topic": "Once-only accounting"
+    },
+    {
+      "basis": "Three publication receipts are LF-only and byte-identical to their Git index versions. The two CLI writer diffs only add explicit newline=LF; local numerical results remain byte-identical to the prior review. Refreshed all reviewed and runner input hashes.",
+      "decision": "PASS",
+      "topic": "Portable LF receipts verified"
+    }
+  ],
+  "source_head": "524ed90689bd5923c249bba2e699abf627e703cd",
+  "status": "PASS_FOR_EXPLICIT_CONDITIONAL_EFFECTIVE_SECTOR",
+  "worktree_head_before_publication": "97bf5571335cf60e15e2e486e1197ca226198ed2"
+}
