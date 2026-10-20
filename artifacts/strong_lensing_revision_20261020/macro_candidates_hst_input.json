@@ -1,0 +1,59 @@
+{
+  "models": {
+    "compact_candidate_0": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            0.004639428106628003,
+            -0.03229682064534079
+          ],
+          "absolute_macro_flux_relative_A": 0.08514558143484564
+        }
+      ]
+    },
+    "compact_candidate_1": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            -0.0005438759990471802,
+            -0.0025370313762018747
+          ],
+          "absolute_macro_flux_relative_A": 0.0026441415090262613
+        }
+      ]
+    },
+    "compact_candidate_2": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            -0.0010468482575237766,
+            0.00035992154435094087
+          ],
+          "absolute_macro_flux_relative_A": 6.322920179545873e-05
+        }
+      ]
+    },
+    "compact_candidate_3": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            -0.0010870845588501832,
+            0.0007418703420363853
+          ],
+          "absolute_macro_flux_relative_A": 5.8660745885489055e-06
+        }
+      ]
+    },
+    "compact_candidate_4": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            -0.0011151609186245478,
+            0.0009209751734497486
+          ],
+          "absolute_macro_flux_relative_A": 5.89947178541846e-07
+        }
+      ]
+    }
+  }
+}

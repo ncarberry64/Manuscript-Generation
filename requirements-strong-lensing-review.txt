@@ -4,3 +4,5 @@ scipy==1.17.0
 matplotlib==3.10.8
 # Exact component identities in the new continuation derivation.
 sympy==1.14.0
+# Exact retained HST science/weight/context cutouts (no network in tests).
+astropy==7.2.0

@@ -1,0 +1,22 @@
+{
+  "status": "PRETARGET_DEVELOPMENT_SOURCE_EVOLUTION_AUDIT",
+  "initial_protocol_path": "preregistration/he0435_macro_revision_development_initial_20261020.json",
+  "initial_protocol_sha256": "72b0e7a9d8c6d1fdffb3356acc07d5ccfa47e797aaaad64592c94c5fbcb3a53a",
+  "final_protocol_sha256": "c1ec4b2410b084d8dc10dbb99d57656377be15d028fd25a423ce591c46cdca29",
+  "declared_initial_source_sha256": {
+    "scripts/fit_he0435_macro_revision.py": "c1409a1822a0ca518b0a0c19aabe2d1e65bd2171f8211169c0553c3f586329c7",
+    "code/strong_lensing_macro_revision.py": "24f70e20babea8621a818ca2f4c186fe321931ee977f911f3d10bf544ea334c9"
+  },
+  "final_source_sha256": {
+    "code/strong_lensing_macro_revision.py": "3ffc45db4252527a23af190277cceeb99f78019d4128ca1f779ffaabb370637f",
+    "scripts/fit_he0435_macro_revision.py": "6d91d2cce2a41be2e3778b7a22abf24a99fe5add4366b019c451701d210567f6"
+  },
+  "numerical_changes": [
+    "Scaled optimizer coordinates and common objective normalization; same original objective and physical bounds.",
+    "Exact-only R1 warm start from selected conventional body, comparing all endpoints in original R1 projection.",
+    "Additional source/Gauss/direct-effective-mass and central-image reporting, with no change to conventional matter/field equations."
+  ],
+  "result_scope": "Conventional candidates used the final scaled objective/optimizer. Subsequent code additions affect R1 warm-start/reporting branches; conventional application/optimizer paths remain identical. Final R1 fit uses final macro/runner source hashes. Earlier drift audit retains its original historical hashes.",
+  "target_photometry_consumed": false,
+  "physical_admission": false
+}

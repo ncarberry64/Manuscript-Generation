@@ -1,0 +1,69 @@
+{
+  "status": "PRESPECIFIED_CONSUMED_DATA_MACRO_COMPARISON",
+  "local_source": "rho(r)=sum_j 3 M_j a_j^2/[4 pi (r^2+a_j^2)^(5/2)]; Menc(r)=sum_j M_j r^3/(r^2+a_j^2)^(3/2)",
+  "scalar_equation": "C x^2 p -4 x p^2/lambda = -b Menc_natural(x), regular decaying branch; TOTAL enclosed mass consumed once, no addition of independent nonlinear scalar fields",
+  "metric_equation": "2 x^2 Phi_prime + b x^2 p = 2 Menc_natural(x)",
+  "compact_mass_candidates_Msun": [
+    0.0,
+    100000000.0,
+    316227766.01683795,
+    1000000000.0,
+    3162277660.1683793
+  ],
+  "compact_scale_kpc": 0.03,
+  "compact_source_scope": "finite positive regular prescribed nuclear matter surrogate, not an inferred SMBH or a solved material EOS",
+  "continuous_parameters": [
+    "log10_mass_Msun",
+    "log10_plummer_a_kpc",
+    "source_x_arcsec",
+    "source_y_arcsec",
+    "screen_kappa",
+    "screen_gamma1",
+    "screen_gamma2",
+    "mass_center_x_arcsec",
+    "mass_center_y_arcsec"
+  ],
+  "lower_bounds": [
+    10.0,
+    -0.7,
+    -0.8,
+    -0.8,
+    -0.4,
+    -0.4,
+    -0.4,
+    -0.03,
+    -0.03
+  ],
+  "upper_bounds": [
+    13.0,
+    1.3,
+    0.8,
+    0.8,
+    0.4,
+    0.4,
+    0.4,
+    0.03,
+    0.03
+  ],
+  "conventional_selection": "Among candidates passing conservative HST summed-positive-PSF admissibility, minimize the consumed-data astrometry plus 3mas centroid-prior chi2 minus twice exact conditional MAP-nuisance development light log likelihood. All candidates remain visible.",
+  "likelihood_scope": "Two-stage empirical Bayes: revised brightness model MAP hyperparameters fixed during macro optimization; each evaluated objective is its original exact state-space development likelihood, not a quadratic delay fit. Weighted posterior delay covariance only initializes the optimizer.",
+  "predictive_scope": "After selection, finite nuisance-mixture particles transported to each macro delay vector with development-only likelihood-ratio reweighting. No complete macro/posterior integral or unique physical-state inference is claimed.",
+  "paired_comparison": "Select common compact mass using conventional development plus HST; R1 refits nuisance parameters at that same compact mass, fixed state/screen-plane geometry. Separately report scalar activation on the fixed conventional body and maps.",
+  "image_census": "Conventional degree-nine radial polynomial plus logarithmic-seed audit and original 2D residual verification; R1 continuation of all conventional roots plus logarithmic seeds, each verified in original total-source projection. Sum every additional-image PSF before HST comparison.",
+  "target_photometry_consumed": false,
+  "development_sha256": "7a679827295d9745b4bc1512f4687dba3e69641b0738d63ddf3ce8d72a21a910",
+  "source_sha256": {
+    "code/strong_lensing_macro_revision.py": "3ffc45db4252527a23af190277cceeb99f78019d4128ca1f779ffaabb370637f",
+    "scripts/fit_he0435_macro_revision.py": "6d91d2cce2a41be2e3778b7a22abf24a99fe5add4366b019c451701d210567f6"
+  },
+  "physical_admission": false,
+  "initial_declaration_snapshot": {
+    "path": "preregistration/he0435_macro_revision_development_initial_20261020.json",
+    "sha256": "72b0e7a9d8c6d1fdffb3356acc07d5ccfa47e797aaaad64592c94c5fbcb3a53a",
+    "source_sha256": {
+      "scripts/fit_he0435_macro_revision.py": "c1409a1822a0ca518b0a0c19aabe2d1e65bd2171f8211169c0553c3f586329c7",
+      "code/strong_lensing_macro_revision.py": "24f70e20babea8621a818ca2f4c186fe321931ee977f911f3d10bf544ea334c9"
+    }
+  },
+  "development_numerical_followup": "Before unused-target exposure: scaled numerical optimizer coordinates and objective cured rejected-branch line-search plateaus; same matter grid, bounds, likelihood, source equations and HST rule. R1 warm start skips quadratic reinitialization and retains the best original-projection likelihood endpoint; the earlier drift fit is preserved separately."
+}

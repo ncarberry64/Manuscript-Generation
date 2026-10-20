@@ -6,12 +6,17 @@ on:
       - "manuscript/**"
       - "scripts/build_strong_lensing_manuscript.py"
       - "code/strong_lensing*.py"
+      - "code/strong_lensing_revision_filter.c"
       - "tests/test_strong_lensing_surface_source.py"
       - "tests/test_strong_lensing_refit.py"
       - "tests/test_strong_lensing_robustness.py"
       - "tests/test_strong_lensing_encounter_accuracy.py"
       - "tests/test_strong_lensing_observed_*.py"
+      - "tests/test_strong_lensing_*revision.py"
+      - "tests/test_strong_lensing_hst_central.py"
+      - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
+      - "data/strong_lensing_revision_20261020/**"
       - "scripts/*he0435*.py"
       - "scripts/r1_screened_review/check_remaining_field_algebra.py"
       - "scripts/run_strong_lensing_*.py"
@@ -22,12 +27,17 @@ on:
       - "manuscript/**"
       - "scripts/build_strong_lensing_manuscript.py"
       - "code/strong_lensing*.py"
+      - "code/strong_lensing_revision_filter.c"
       - "tests/test_strong_lensing_surface_source.py"
       - "tests/test_strong_lensing_refit.py"
       - "tests/test_strong_lensing_robustness.py"
       - "tests/test_strong_lensing_encounter_accuracy.py"
       - "tests/test_strong_lensing_observed_*.py"
+      - "tests/test_strong_lensing_*revision.py"
+      - "tests/test_strong_lensing_hst_central.py"
+      - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
+      - "data/strong_lensing_revision_20261020/**"
       - "scripts/*he0435*.py"
       - "scripts/r1_screened_review/check_remaining_field_algebra.py"
       - "scripts/run_strong_lensing_*.py"
@@ -66,6 +76,11 @@ jobs:
           tests/test_strong_lensing_encounter_accuracy.py
           tests/test_strong_lensing_observed_lightcurve.py
           tests/test_strong_lensing_observed_macro.py
+          tests/test_strong_lensing_lightcurve_revision.py
+          tests/test_strong_lensing_macro_revision.py
+          tests/test_strong_lensing_hst_central.py
+          tests/test_he0435_unused_metadata.py
+          tests/test_he0435_revision_validation.py
 
       - name: Check the exact continuation component identities
         run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json

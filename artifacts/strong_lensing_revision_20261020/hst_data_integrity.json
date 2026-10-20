@@ -1,0 +1,34 @@
+{
+  "status": "PASS_EXACT_NATIVE_CUTOUT_AND_CHECKSUM_AUDIT",
+  "n_cutouts": 8,
+  "n_native_array_comparisons": 24,
+  "extensions": [
+    "SCI",
+    "WHT",
+    "CTX"
+  ],
+  "comparison": "numpy.array_equal with equal_nan=True; source full mosaic exact zero-based native slices",
+  "full_product_sha256s": {
+    "hst_9744_12_acs_wfc_f814w_j8oi12_drc.fits": "7d675fde547fb78cb95eb8b79044afe19282c25e4eb65e16cac6859e4192421f",
+    "hst_12889_01_wfc3_ir_f160w_ibyg01_drz.fits": "a7a987af2627180759482aa47f97dd014fb436248d69078b9117187e1f0bef7c"
+  },
+  "cutout_sha256s": {
+    "F814W_lens_cutout.fits": "12fe51cbb4fa126bcd2a9d147983f8055e135ff9b139d60e64b65d3ad3053fa1",
+    "F814W_star1_cutout.fits": "72da3361b341a75dadd14023600ea0930502676488e71e65614c10c11455fa59",
+    "F814W_star2_cutout.fits": "477cd5788c7bc54205164fdaac4558f1101af209be2980b67de611302e27a484",
+    "F814W_star3_cutout.fits": "789eb405002170cb2d3e7785df44851579c0805836c347a7fa413652bf5680ef",
+    "F160W_lens_cutout.fits": "23b297fff9bf84bc0f2acd6ca7fdcd178594b4d4981adcfc7173638f0e139bfb",
+    "F160W_star1_cutout.fits": "db0d473fedb54d90f9c6094f1cdbfa22f96dcc9b480b5f7aa08c613664dfc018",
+    "F160W_star2_cutout.fits": "0b3fed4600a6b3ee21ffa59d60bb4997254a8458769b23b535c114773a9f99be",
+    "F160W_star3_cutout.fits": "86ba552361584638f9298b5ff28b3f4ee445f33d9881c4d37409639b2ac36830"
+  },
+  "provenance_sha256": "55f634346c4a2736babbaa613bb3cbebb309e75e73ef41e2f9dd16e85d35ff20",
+  "HST_application_receipt_sha256": "c53d34fcef8832ba16345606271c36b378e9c0e0553638022b6f0c54ac413b60",
+  "focused_tests": {
+    "command": "python -m pytest tests/test_strong_lensing_hst_central.py -q",
+    "passed": 9
+  },
+  "independent_review": "coverage_revision agent separately reviewed derivation/code/docs and reran all9tests; PASS communicated to root",
+  "physical_admission": false,
+  "display_only_refresh": "Updated reproducibility script SHA and display metadata after nonnumerical figure regeneration; all scientific fit/limit values unchanged."
+}

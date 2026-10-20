@@ -1,0 +1,15 @@
+{
+  "models": {
+    "compact_candidate_0": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            0.004639428106628003,
+            -0.03229682064534079
+          ],
+          "absolute_macro_flux_relative_A": 0.08514558143484564
+        }
+      ]
+    }
+  }
+}
