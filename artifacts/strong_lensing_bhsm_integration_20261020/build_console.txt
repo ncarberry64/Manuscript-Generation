@@ -1,0 +1,738 @@
+Using supplied converted official asset: logo-mdpi-eps-converted-to.pdf
+Using supplied converted official asset: logo-updates-eps-converted-to.pdf
+Building manuscript/strong_lensing_main.tex
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LC_ALL = "C.UTF-8",
+	LC_CTYPE = "C.UTF-8",
+	LC_NUMERIC = (unset),
+	LC_COLLATE = (unset),
+	LC_TIME = (unset),
+	LC_MONETARY = (unset),
+	LANG = "C.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the system default locale ("English_United States.1252").
+Initial Win CP for (console input, console output, system): (CP437, CP65001, CP1252)
+I changed them all to CP1252
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+Force everything to be remade.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'go_mode'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex -enable-installer  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "strong_lensing_main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(strong_lensing_main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+(Definitions/mdpi.cls
+Document Class: Definitions/mdpi 2026-09-11\ v6.5a\ MDPI paper class for pdflat
+ex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty)
+)) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tabto-ltx\tabto.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/frankenstein\attrib.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/frankenstein\moredefs.s
+ty)) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/was\upgreek.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pbox\pbox.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/marginnote\marginnote.s
+ty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/marginfix\marginfix.sty
+)
+==> First Aid for marginfix.sty applied!
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/enotez\enotez.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xt
+emplate.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex))
+ (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty)))
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/alphalph\alphalph.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty))
+ (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/mathcomp\mathcomp.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/verse\verse.sty)
+(Definitions/journalnames.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrextend.s
+ty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+))))))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/newfloat\newfloat.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/seqsplit\seqsplit.sty))
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd)
+(strong_lensing_main.aux)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ppl.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(strong_lensing_main.out) (strong_lensing_main.out)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(sections/strong_lensing_galaxies_20261020.tex [1{C:/Users/carbe/AppData/Local/
+MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/carbe/AppData/Local/Programs/MiKTe
+X/fonts/enc/dvips/base/8r.enc} <./Definitions/logo-mdpi-eps-converted-to.pdf> <
+./Definitions/logo-orcid.pdf>] [2] [3] [4] [5] [6] [7] [8 <./figures/r1_screeni
+ng_prediction.pdf>] [9] [10] [11] [12] [13] [14] [15] [16]) [17] [18]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(strong_lensing_main.aux) ) <C:\Users\carbe\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\carbe\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\carbe\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/public/wasy/dpi600\wasy10.pk> <C:\Users\carbe\AppData\Local\MiKTe
+X\fonts/pk/ljfour/jknappen/ec/dpi375\ecss0800.pk><C:/Users/carbe/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/carbe/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ca
+rbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10
+.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+mathpazo/fplmr.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/mathpazo/fplmri.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb><C:/Users/carbe/AppData/Local/Programs/M
+iKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/carbe/AppData/Local/Program
+s/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/carbe/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on strong_lensing_main.pdf (18 pages, 364213 bytes).
+Transcript written on strong_lensing_main.log.
+Latexmk: Getting log file 'strong_lensing_main.log'
+Latexmk: Examining 'strong_lensing_main.fls'
+Latexmk: Examining 'strong_lensing_main.log'
+Latexmk: Log file says output to 'strong_lensing_main.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  strong_lensing_main.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex -enable-installer  -interaction=nonstopmode -halt-on-error -file-line-error -recorder  "strong_lensing_main.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(strong_lensing_main.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-29>
+(Definitions/mdpi.cls
+Document Class: Definitions/mdpi 2026-09-11\ v6.5a\ MDPI paper class for pdflat
+ex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern
+.sty)
+)) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty))
+ (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tabto-ltx\tabto.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdf
+tex.def)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
+))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/frankenstein\attrib.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/frankenstein\moredefs.s
+ty)) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/was\upgreek.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/pbox\pbox.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/marginnote\marginnote.s
+ty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/marginfix\marginfix.sty
+)
+==> First Aid for marginfix.sty applied!
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/enotez\enotez.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xparse\xpars
+e.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xt
+emplate.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex))
+ (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty)))
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/alphalph\alphalph.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty))
+ (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\wasysym.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/mathcomp\mathcomp.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\pifont.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upzd.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\upsy.fd))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/bbm\bbm.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/verse\verse.sty)
+(Definitions/journalnames.tex)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrextend.s
+ty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrkbase.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrbase.sty
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile.st
+y
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlfile-ho
+ok.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlogo.sty
+))))))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/newfloat\newfloat.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/seqsplit\seqsplit.sty))
+
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
+keys.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.s
+ty) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettit
+lestring.sty))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.s
+ty) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+) (C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc
+.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfil
+echeck.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquec
+ounter.sty)))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleveref.sty)
+==> First Aid for cleveref.sty applied!
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd)
+(strong_lensing_main.aux)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg))
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ppl.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(strong_lensing_main.out) (strong_lensing_main.out)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/wasysym\uwasy.fd)
+(C:\Users\carbe\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg)
+(sections/strong_lensing_galaxies_20261020.tex [1{C:/Users/carbe/AppData/Local/
+MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/carbe/AppData/Local/Programs/MiKTe
+X/fonts/enc/dvips/base/8r.enc} <./Definitions/logo-mdpi-eps-converted-to.pdf> <
+./Definitions/logo-orcid.pdf>] [2] [3] [4] [5] [6] [7] [8 <./figures/r1_screeni
+ng_prediction.pdf>] [9] [10] [11] [12] [13] [14] [15] [16]) [17] [18]
+
+enddocument/afterlastpage (AED): lastpage setting LastPage.
+(strong_lensing_main.aux) ) <C:\Users\carbe\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\carbe\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\carbe\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/public/wasy/dpi600\wasy10.pk> <C:\Users\carbe\AppData\Local\MiKTe
+X\fonts/pk/ljfour/jknappen/ec/dpi375\ecss0800.pk><C:/Users/carbe/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/carbe/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ca
+rbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10
+.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+mathpazo/fplmr.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/mathpazo/fplmri.pfb><C:/Users/carbe/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb><C:/Users/carbe/AppData/Local/Programs/M
+iKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/carbe/AppData/Local/Program
+s/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/carbe/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on strong_lensing_main.pdf (18 pages, 364213 bytes).
+Transcript written on strong_lensing_main.log.
+Latexmk: Getting log file 'strong_lensing_main.log'
+Latexmk: Examining 'strong_lensing_main.fls'
+Latexmk: Examining 'strong_lensing_main.log'
+Latexmk: Log file says output to 'strong_lensing_main.pdf'
+Latexmk: All targets (strong_lensing_main.pdf) are up-to-date
+
+Reverting Windows console CPs to (in,out) = (437,65001)

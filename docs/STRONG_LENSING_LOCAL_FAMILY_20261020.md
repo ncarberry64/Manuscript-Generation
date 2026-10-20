@@ -314,8 +314,9 @@ phase equation vanishes because its mixed action block is exactly zero; this
 is derived, rather than filled in from a missing array.  The ordinary stellar
 matching has \(\Delta K_{uu}=0\), so the specified seam charge
 \((c^2/8\pi)\int H_\Sigma\Delta K_{uu}dA\) is zero for that surface.
-The static exported source is therefore zero, independently of its otherwise
-unresolved orientation.  The declared encounter is deterministic and has no
+The specified static material-surface seam contribution is therefore zero,
+independently of its otherwise unresolved orientation. This does not set the
+separate exported scalar's gravitational source to zero. The declared encounter is deterministic and has no
 stochastic source sector; no covariance assumption is needed to solve it.
 
 This solves the target-phase source restriction and its zero metric response.

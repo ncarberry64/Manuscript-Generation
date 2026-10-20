@@ -9,5 +9,12 @@
 *.ps1 text eol=crlf
 *.pdf binary
 
+# Keep the verified official MDPI dependency assets byte-for-byte intact.
+manuscript/Definitions/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+# Preserve delivered/generated evidence whose native formatting includes spaces.
+artifacts/strong_lensing_bhsm_integration_20261020/package_existing_text_changes.patch -text whitespace=-blank-at-eol,-blank-at-eof
+manuscript/figures/r1_screening_prediction.svg -text whitespace=-blank-at-eol,-blank-at-eof
+artifacts/strong_lensing_bhsm_integration_20261020/replay/figures/r1_screening_prediction.svg -text whitespace=-blank-at-eol,-blank-at-eof
+
 # Preserve the delivered scientific snapshot's exact SHA-256 provenance.
 analyses/sn_sightline_tomography_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

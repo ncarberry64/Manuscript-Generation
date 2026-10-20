@@ -1,0 +1,93 @@
+name: Strong-lensing manuscript
+
+on:
+  push:
+    paths:
+      - "manuscript/**"
+      - "scripts/build_strong_lensing_manuscript.py"
+      - "code/strong_lensing*.py"
+      - "tests/test_strong_lensing_surface_source.py"
+      - "scripts/r1_screened_review/check_remaining_field_algebra.py"
+      - "scripts/run_strong_lensing_surface_source.py"
+      - "requirements-strong-lensing-review.txt"
+      - ".github/workflows/strong-lensing-manuscript.yml"
+  pull_request:
+    paths:
+      - "manuscript/**"
+      - "scripts/build_strong_lensing_manuscript.py"
+      - "code/strong_lensing*.py"
+      - "tests/test_strong_lensing_surface_source.py"
+      - "scripts/r1_screened_review/check_remaining_field_algebra.py"
+      - "scripts/run_strong_lensing_surface_source.py"
+      - "requirements-strong-lensing-review.txt"
+      - ".github/workflows/strong-lensing-manuscript.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  source-checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out source applications
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install focused scientific dependencies
+        run: |
+          python3 -m venv .venv-lensing
+          .venv-lensing/bin/pip install -r requirements-strong-lensing-review.txt pytest
+
+      - name: Check the consumed source, junction and complement applications
+        run: .venv-lensing/bin/python -m pytest -q tests/test_strong_lensing_surface_source.py
+
+      - name: Check the exact continuation component identities
+        run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json
+
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      DEBIAN_FRONTEND: noninteractive
+    steps:
+      - name: Check out manuscript sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install the MDPI class and manuscript dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y \
+            ghostscript latexmk \
+            texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-fonts-extra \
+            texlive-science texlive-pictures texlive-humanities
+
+      - name: Convert official logos and build the strong-lensing manuscript
+        run: python3 scripts/build_strong_lensing_manuscript.py
+
+      - name: Upload manuscript PDF
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: strong-lensing-manuscript
+          path: manuscript/strong_lensing_main.pdf
+          if-no-files-found: error
+
+      - name: Upload LaTeX diagnostics
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: strong-lensing-latex-logs
+          path: |
+            manuscript/strong_lensing_main.log
+            manuscript/strong_lensing_main.fls
+            manuscript/strong_lensing_main.blg
+          if-no-files-found: warn

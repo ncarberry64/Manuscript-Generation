@@ -1,5 +1,13 @@
 # Constructed local encounter and manuscript corrections, 20 October 2026
 
+> Historical checkpoint for the constant-target family and endpoint/nuisance
+> corrections. Its numerical results and restricted phase null remain valid
+> within their stated boundary problem. The [current BHSM scope](STRONG_LENSING_SCOPE_20261020.md)
+> and [R1 review](strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md)
+> continue the same project with a separate rolling-scalar source and a
+> constructive conventional effective-mass representation. This checkpoint
+> does not establish a universal phase null or preclude that later response.
+
 This continues draft PR #23 from reviewed commit
 `97bf5571335cf60e15e2e486e1197ca226198ed2` in the existing worktree and branch.
 That commit is a provenance anchor. No reset, broad cosmology rerun, source

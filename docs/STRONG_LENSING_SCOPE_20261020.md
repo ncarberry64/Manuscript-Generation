@@ -1,18 +1,24 @@
 # Strong lensing scope and assumptions
 
-The first comparison retains a conventional galaxy-potential encounter and evaluates the available Berger–Hopf geometric response with the same incoming optical preparation. It tests image positions and relative arrival times, including degeneracies. A local envelope replacement of the galaxy encounter is not yet derived. The submission target is **25 February 2027**.
+The governing question is: **How do BHSM surface contributions determine gravitational lensing and time delays for light traversing an envelope event?** The incoming-to-outgoing light transfer is the central object. BHSM supplies the research question and physical interpretation; the retained R1 effective action supplies the explicitly evaluated response problem. The journal is **Galaxies**, special issue **Strong Gravitational Lens Modeling**. No submission target date is set in the active lensing materials.
 
-## Accepted invitation scope
+## Current scientific scope
 
-> Thank you for the invitation to contribute to “Strong Gravitational Lens Modeling.” I am pleased to accept and am preparing a theoretical and computational study of strong-lensing time delays in a spatially modulated closed cosmology within the Berger–Hopf framework. The planned manuscript will compare a conventional galaxy-potential benchmark with a proposed geometric envelope response, using the same incident-light preparation to examine observable differences. Particular attention will be given to time-delay predictions, mass-sheet and line-of-sight degeneracies, and reproducible numerical calculations, with assumptions and derived results clearly distinguished. I aim to submit the manuscript by 25 February 2027.
+Working title: **Strong-Lensing Time Delays in the Berger–Hopf Framework: An R1 Effective Calculation**.
+
+The active order is envelope state and environmental preparation; action, normalization, source response and boundary conditions; resulting metric or optical response; image directions and observer arrival-time differences; then the conventional gravitational representation and consistency checks. Earlier invitation and checkpoint wording is historical and superseded by this scope. The separate Universe cosmology manuscript retains its own journal context.
 
 ## Governing physical comparison
 
-For a common incident optical preparation and a specified measurement protocol, determine which image-position and relative-arrival-time differences follow from the conventional galaxy encounter and the available envelope equations, then test which survive source, galaxy-model, mass-sheet, line-of-sight and cosmological nuisance freedoms.
+For one incident optical preparation and a specified measurement protocol, determine the envelope's metric response and the image directions and relative arrival times it produces. Express the retained response in conventional gravitating-matter variables, and establish which source, galaxy-model, mass-sheet, line-of-sight and cosmological freedoms remain observationally interchangeable. Recovery of the conventional gravitational response is a constructive result. A distinguishable departure from conventional gravity is not a condition for success.
 
 In the BHSM interpretation, gravitational lensing is the optical response of an envelope event traversed by environmental variables, with light providing the probe here. The calculation relates prepared incoming light to outgoing observables, conditional on the envelope state and surrounding geometry. Light probes state dependence, effective geometry and any response actually derived from the equations. Traversal alone establishes no encapsulation, de-encapsulation, reflection, absorption or new photon interaction law.
 
-The executed first realization treats the conventional galaxy potential as the main local thin encounter. Available smooth BHSM metric perturbations modify reference propagation. A local envelope contribution enters separately only after its action projection and source normalization are supplied. No gravitational or line-of-sight mean contribution is counted twice.
+The first retained realization uses the conventional galaxy potential as the local thin encounter, with smooth conditional BHSM metric perturbations in reference propagation. The constructed constant-target family then supplies an action-derived local phase null and a nonzero finite-body gravitational encounter. The R1 calculation extends the project with a regular matter-sourced rolling-scalar response derived from its declared effective action. These calculations occupy distinct variable and boundary problems.
+
+In the BHSM program, conventional matter and scalar descriptions represent the same underlying surface contributions. The demonstrated effective-mass construction establishes this equivalence for the retained leading gravitational and optical response. The coupled R1 source, nonlinear flux and material matching are now derived and applied to the computed section. Two positive same-domain lifts show that the leading coefficients do not select a unique physical surface embedding, complement spectrum or length normalization. That remaining action-owned map is distinct from the source application already executed; it is not a claim that the full BHSM surface reduction is complete.
+
+The scalar contribution may be included in the metric constraint or represented by its positive effective mass. Those are alternative descriptions of the same retained response and are never added together. The smooth cosmological contribution and local encounter are each counted once.
 
 ## Matched preparation and conventions
 
@@ -36,20 +42,37 @@ For a normalized observer-dipole profile on the reference three-sphere, `Q = sqr
 
 ## Claim boundaries and dependencies
 
-| Object | Status at the first comparison |
+| Object | Current status and scope |
 | --- | --- |
 | Conventional galaxy model and physical source coordinate | Declared illustrative inputs, not an observational fit |
 | Frozen R1 background and coupled action evolution | Existing numerical owner reused |
 | Three compatible Jacobi maps, relative arrival functional and complete first variation | Mathematical transport construction and executed controls |
 | Selected coherent cosmological anchor amplitudes | Conditional state inputs; unit sensitivities are not fitted physical amplitudes |
-| Static spatial phase mixed source with zero spatial current or constant local texture | Exactly zero in this channel |
-| Local physical metric/topographic Hessian entries | Require the normalized common-domain action projection; lapse/shift auxiliary blocks are not substitutes |
-| Static seam export | Inherited radial profile; common-action normalization/orientation remains unresolved |
+| Static spatial phase mixed source with zero spatial current or constant local texture | Exactly zero in this channel; preserved by the constructed regular constant-target boundary problem |
+| Constructed local physical metric/target-phase Hessian | Evaluated on the same Dirichlet annulus, with normalization, original residuals, invertibility, phase stiffness and kinetic gate; distinct from the cosmological lapse/shift block |
+| Rolling scalar, target phase and metric deformation | Independent variables with their retained normalizations; no silent identification |
+| R1 finite-body response | Regular screened branch derived from the declared pure cubic effective action and the common Einstein constraint; conditional quasi-static, weak-metric calculation |
+| Conventional effective-mass representation | Positive construction reproduces the retained leading scalar gravitational and optical response; a constructive equivalence result |
+| Static seam export | Specified smooth material-surface seam contribution vanishes in the constant-target control; its general common-action normalization/orientation and gravitational export remain separate dependencies |
 | Moving seam time-derivative source | Proposed kinematic continuation, not used as an action-selected law |
-| Local galaxy replacement by an envelope | Uncomputed until the encounter metric/source is derived |
+| Coupled effective source and material junction | Executed nonlinear scalar flux and original metric Gauss application; zero smooth material seam charge coexists with a nonzero volume gravitational source |
+| Physical BHSM surface-to-R1 map | Action-owned physical embedding/source pullback and complement domain remain unselected; two positive lifts explicitly prove that the frozen leading coefficients do not uniquely fix them |
+| Higher-order/environmental field continuation | Exact component, environmental cross-Hessian and matching equations derived and algebraically checked; an evolved solution consumes material EOS/support and environmental/outer Cauchy data |
 | Stochastic optical covariance | Requires source statistics, including correlations; no Gaussian/Wick closure inferred |
 
 The local inverse response requires `a,b,c,u,v,c_phi`, basis/profile norms, the determinant or constrained invertibility condition, response residual, Schur curvature and common boundary/domain status. These are action projections, not fitted parameters. Preserve the explicit mixed source and do not infer its absence from an unavailable numerical array.
+
+The [source application](strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md)
+and [field continuation](strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md)
+record this progress. The continuation retains the exact rolling-current balance:
+an exactly static frozen extrapolation does not solve it. Its nonlinear
+environment consumes a three-dimensional scalar Hessian, and its evolving body
+consumes an EOS or declared support relation. The outer closed-geometry Cauchy
+and matching state remains a physical prescription, rather than an unavailable
+array or an already evolved solution. A new optical amplitude does not provide
+any of those relations.
+
+For the declared R1 example, the screening radius is approximately `212.0292 kpc`. Its leading delay offsets `25.95925815 s` and `8.64901938 s` compare the sourced response with the specified fixed-body reference. The common finite-body GR2 control gives `25.95932714 s` and `8.64900924 s`. These seconds are reference-model differences. Fully matched scalar and conventional effective-mass descriptions have the same leading optical response where the equivalence has been established. The GR2 drift tests one omitted conventional term and does not bound scalar higher-order, environmental or global-matching corrections.
 
 ## Observable information and nuisance assumptions
 
@@ -59,10 +82,14 @@ An independent unrestricted mass-sheet scale per lens absorbs a common rescaling
 
 The familiar inverse Hubble-constant delay scaling assumes fixed dimensionless background and reduced angular galaxy/source conventions. It does not automatically apply to a variation holding the physical transverse source position fixed.
 
+The screened calculation's rank results apply to the stated finite-profile template and nuisance columns. A surviving column under restricted profiles does not identify a unique theory: the positive effective-mass representation reproduces the complete retained leading response. Numerical covariance choices are weights for these design calculations, not measured image or delay precision.
+
 ## Reproducibility and source continuity
 
-The focused manuscript is `manuscript/strong_lensing_main.tex`, with `manuscript/sections/strong_lensing_20261020.tex`. The existing Universe manuscript and bibliography remain intact. The inspected source revision is `3427c5297fac71faa501685bd38e5d420619c761`, on `codex/strong-lensing-first-comparison-20261020`; the older `5fd65ea18a6055dbc6028839c2918415e3c00f71` is provenance only. No reset is implied.
+The focused manuscript is `manuscript/strong_lensing_main.tex`, now compiling `manuscript/sections/strong_lensing_galaxies_20261020.tex`. The earlier first-comparison and constant-target sections remain historical scientific controls. The existing Universe manuscript and bibliography remain intact. Public commit `49a1dabbe148f8ba9da4ac079a8d93fe97c5de76` anchors the pre-integration work; the supplied research package adds the screened calculation and reviews. These are provenance anchors, not reset instructions.
 
-The supplied request identifies `04ajb_coupled_environmental_state.tex`; that path is absent at the inspected revision. The existing action-native implementation and the explicitly supplied six-anchor contract provide the corresponding state convention; no missing file is fabricated.
+Current derivations, review and author handoff are under `docs/strong_lensing_r1_screened_20261020/`; saved numerical evidence is under `artifacts/strong_lensing_r1_screened_20261020/`. The governing scope here supersedes earlier package prose that treated a distinguishable BHSM departure as the central objective. The package's numerical and methodological evidence keeps its original meaning.
+
+The earlier first-comparison request identified `04ajb_coupled_environmental_state.tex`; that path was absent at its inspected revision. The existing action-native implementation and the supplied six-anchor contract provide the corresponding state convention; no missing file is fabricated.
 
 Primary external checks: [Fleury, Larena and Uzan, arbitrary-spacetime lensing, equations 2–3 and 11–14](https://arxiv.org/html/2011.04440v4), [their dominant-lens treatment of line-of-sight effects](https://arxiv.org/abs/2104.08883v5), and [Teodori et al., mass-sheet and differential line-of-sight degeneracies](https://arxiv.org/abs/2201.05111v3). These references support the conventional optical/degeneracy framework; they do not derive BHSM envelope coefficients.

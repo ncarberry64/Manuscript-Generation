@@ -1,5 +1,13 @@
 # Envelope action projection and the available static-channel result
 
+> Historical projection record. Preserve its ADM/local-variable distinctions
+> and channel-specific null. The [current scope](STRONG_LENSING_SCOPE_20261020.md)
+> and [R1 source derivation](strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md)
+> add a separate rolling-scalar calculation with an action-owned matter source.
+> The unfinished full surface-to-effective-source reduction is distinct from
+> the local R1 source already derived. Its leading conventional effective-mass
+> equivalence is a constructive result, not an absence of envelope response.
+
 The original ADM/control derivation below is retained. An evaluated
 physical metric/phase Hessian, target source problem and finite encounter
 now follow in [the local-family derivation](STRONG_LENSING_LOCAL_FAMILY_20261020.md).

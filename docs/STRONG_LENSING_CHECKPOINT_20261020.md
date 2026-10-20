@@ -1,5 +1,24 @@
 # First matched strong-lensing checkpoint - 20 October 2026
 
+> Historical checkpoint. Its calculations and validation belong to the first
+> comparison recorded below. The [current scope](STRONG_LENSING_SCOPE_20261020.md)
+> and [R1 research review](strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md)
+> supersede its project framing and earlier submission schedule. The active
+> BHSM paper is for Galaxies; it treats leading conventional effective-mass
+> equivalence as a constructive representation of the retained envelope response.
+> The old local-source inventory is followed by the evaluated constant-target
+> family and the separate R1 sourced branch. No historical absence statement
+> overrides those later calculations.
+
+> The [current integration checkpoint](STRONG_LENSING_BHSM_INTEGRATION_20261020.md)
+> additionally records the evaluated coupled R1 source/flux application,
+> positive-lift nonuniqueness proof and exact field-continuation derivation.
+> Those later equations and source residuals supersede this receipt's old
+> unworked-source inventory. They do not claim an evolved higher-order body or
+> global matching solution; their consumed material/environment/outer-state
+> prescriptions are explicit in the continuation record. Author declarations
+> and contact have since been confirmed in the active lensing materials.
+
 Historical baseline receipt. The subsequent constructed local encounter,
 corrected endpoint derivation and analytic nuisance result are recorded in
 [the local checkpoint](STRONG_LENSING_LOCAL_CHECKPOINT_20261020.md).
