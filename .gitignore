@@ -15,3 +15,7 @@ venv/
 *.synctex.gz
 *.toc
 manuscript/build/
+
+# Original large HST mosaics are reproducibly fetched; exact local cutouts tracked.
+data/strong_lensing_revision_20261020/hst/*_drz.fits
+data/strong_lensing_revision_20261020/hst/*_drc.fits

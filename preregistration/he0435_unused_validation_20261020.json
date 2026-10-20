@@ -1,0 +1,40 @@
+{
+  "status": "DECLARED_BEFORE_UNUSED_TARGET_PHOTOMETRY_OPENED",
+  "purpose": "One revised retrospective independent-exposure test after the first COSMOGRAIL undercoverage result; old outcomes remain development data and are never reclassified as unused.",
+  "target_catalogue": "CDS J/A+A/703/A250, independent LCO CTIO 1m R observations, Sorgenfrei et al. 2025, doi:10.1051/0004-6361/202555933",
+  "target_path": "data/strong_lensing_revision_20261020/sealed/he0435r_2019onward.dat",
+  "target_sha256": "c3e6112b2b670a0cf34c9bd7cb59bb9559a79fdb5cf788b559ffb1fe541d6e60",
+  "split_native_MJD": 58484.0,
+  "development": "All 1002 consumed Millon2020 epochs plus 25 independent LCO R epochs before 2019; original first test is explicitly consumed. HST images may select the revised physical source.",
+  "primary": {
+    "allowed_driver": "All 54 later C magnitudes, batch conditioning only",
+    "targets": "162 later A/B/D magnitudes",
+    "driver_choice": "C was selected because its consumed first-experiment behavior was substantially better calibrated than A/B. No new numerical LCO target values informed this choice."
+  },
+  "secondary": "All 216 later magnitudes without later driver; overlaps primary, not an independent replication.",
+  "V_release": "All 80 epochs remain unparsed, unscored and available for a later explicitly new protocol.",
+  "blinding_limit": "Catalogue acquisition parsed timestamps only. Published abstract/methods revealed qualitative microlensing findings during source identification; this is not complete analyst blinding. No numerical confirmatory photometry, plots, model predictions or scores were inspected before freezing.",
+  "reduction_limit": "Independent exposure photons and later dates, but retrospective common DIA reduction with reference image mostly from 2022. Exact reference exposure list unavailable. Shared reference/zero-point uncertainty may correlate calibration and targets; this is not independent blinded reduction or prospective prediction.",
+  "clock_map": "Marginalize old COSMOGRAIL offsets [-.5,0,+.5]day with development-only weights. LCO native MJD retained, undeclared subday time-scale/heliocentric convention remains a limitation.",
+  "brightness_model": "The separate he0435_revision_development_20261020.json specifies the classical OU+Brownian+random-slope model, development rolling folds and proper normalized diagonal predictive calibration. Retain all finite nuisance components and their development-only clock weights. No BHSM quantum-state or Wick meaning.",
+  "macro_revision": {
+    "body": "Positive outer Plummer plus compact Plummer, common total enclosed mass for original nonlinear R1 scalar equation",
+    "compact_scale_kpc": 0.03,
+    "candidate_compact_masses_Msun": [0.0, 100000000.0, 316227766.01683795, 1000000000.0, 3162277660.1683793],
+    "purpose": "Regular unresolved matter surrogate; no SMBH inference from this parameterization",
+    "fitting": "Original 9 optical nuisance parameters and bounds, original astrometry plus exact development brightness likelihood at MAP variability hyperparameters; declared two-stage conditional empirical Bayes.",
+    "selection": "Fit the five conventional candidates on development only; select minimum development objective among candidates satisfying the conservative HST F814W nonnegative-pixel bound for the sum of every extra-image PSF template. Report all candidates. If none satisfies it, retain best development candidate and explicitly report failure, with no target-driven profile change.",
+    "paired_R1": "Use selected compact mass and scale for both families; nuisance-refit R1 using the same development data; also report fixed-body activation. Compute scalar from total density/enclosed mass rather than adding nonlinear scalar solutions.",
+    "HST_condition": "Macro flux comparison assumes no differential extinction/microlensing. Test original prediction before revision. Include all unresolved nuclear images; do not turn conditional HST tension into unconditional mass-profile exclusion.",
+    "nuisance_mixture": "For a fixed macro delay vector, transport retained empirical nuisance draws by replacing delays and reweighting each using exp(LL_dev(new delays)-LL_dev(empirical delays)). This finite conditional approximation is not a converged macro posterior or marginal evidence. No physical posterior integration is claimed."
+  },
+  "models": ["empirical_development_delays", "revised_conventional_macro", "revised_conditional_R1_macro", "matched_conventional_effective_mass", "zero_delay_control"],
+  "matched_control": "Positive source-derived effective conventional mass has identical retained optical metric; reuse score only after original source/projection check and label structural identity.",
+  "uncertainty": "Finite correlated nuisance-draw mixture, development-frozen per-image affine scales with normalization Jacobian, driver-only posterior weight/state update. Short chains and fixed macro parameters limit interpretation; no future target offset, curve or hyperparameter fitting.",
+  "metrics": ["joint conditional log density", "per-image and pooled 68.27/95 percent marginal coverage", "RMSE and signed bias", "mean predictive sigma and 95 percent interval width", "95 percent interval score and marginal log density"],
+  "interpretation": "Report measured coverage and sharpness regardless of success. Correlated epochs do not justify independent-binomial significance. Conditional score differences are not Bayes factors or uniquely BHSM detections.",
+  "lock": "Freeze data/source/model hashes and exact predictive artifact, commit freeze before any target parse; persistent exclusive-create exposure marker prevents silent retuning or second independent score. All HST and profile selection precedes exposure.",
+  "unchanged_physical_guard": 2e-10,
+  "physical_admission": false,
+  "remaining_physical_domain": "Remote quadratic screen remains conditional optical boundary, not derived global scalar environment. Local nonlinear environmental Hessian and microscopic preparation/statistical-state closures are not supplied by the empirical brightness model."
+}

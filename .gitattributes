@@ -25,3 +25,9 @@ data/strong_lensing_observed_20261020/candidates/**/*.dat -text whitespace=-blan
 data/strong_lensing_observed_20261020/candidates/**/*.txt -text whitespace=-blank-at-eol,-blank-at-eof
 data/strong_lensing_observed_20261020/candidates/**/*.json -text whitespace=cr-at-eol
 artifacts/strong_lensing_observed_20261020/*.json -text whitespace=cr-at-eol
+
+# Preserve the independent validation catalogue and frozen revision receipts.
+data/strong_lensing_revision_20261020/**/*.dat -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+data/strong_lensing_revision_20261020/**/ReadMe -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+data/strong_lensing_revision_20261020/**/*.fits binary
+artifacts/strong_lensing_revision_20261020/*.json -text whitespace=cr-at-eol

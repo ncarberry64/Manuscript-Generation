@@ -1,0 +1,56 @@
+{
+  "status": "DECLARED_BEFORE_REVISED_NUMERICAL_SELECTION",
+  "data_domain": "All 1002 formerly consumed COSMOGRAIL epochs plus 25 LCO R pre-2019 calibration epochs; NONE is a confirmatory target",
+  "source_sha256": {
+    "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_all_Millon2020.dat": "880ed1cbc23d884ffec9a0d59411c946f3cb4256d962fc506464b080fb172ce3",
+    "data/strong_lensing_revision_20261020/calibration/he0435r_pre2019.dat": "c3394b7378647dce829908e8d7a05025b93989c61b33b59cd568764d5fa08d19"
+  },
+  "mean_model": "m_i,k(t)=m0+b_i,k+q(t-d_i)+e_i(t-d_i)+a_i*(t-d_i-t0)/365.25+w_i(t-d_i)+epsilon_i",
+  "state_model": "Shared stationary source OU; independent per-image stationary extrinsic OU; per-image Gaussian random slopes; independent Brownian extrinsic increments starting at t0; independent Gaussian proper per-image/instrument offsets; per-image independent jitter plus quoted marginal photometric errors.",
+  "fixed_prior_scales": {
+    "offset_sigma_mag": 30.0,
+    "slope_sigma_mag_per_year": 0.03
+  },
+  "priors": "Uniform delays [-30,30] days relative to A; independent uniform LOG scales: source sigma [.02,.8]mag, tau[30,30000]day; each extrinsic sigma[.002,.8]mag, shared tau[200,30000]day; each jitter[.0003,.08]mag; each Brownian diffusion amplitude[.001,.2]mag/sqrt(year).",
+  "bounds_are_prior_support_not_physical_constraints": true,
+  "source_time_reference_rule": "floor(earliest native training epoch-31days); references are transformed consistently within each fit",
+  "clock_origin_nuisance": {
+    "old_COSMOGRAIL_offset_days": [
+      -0.5,
+      0.0,
+      0.5
+    ],
+    "prior_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "LCO_offset_days": 0.0,
+    "rule": "Apply old-release common offsets to source times. Update discrete weights using development likelihood only. Offset candidates are metadata uncertainty, not a fitted future-target shift.",
+    "unresolved_subday_correction": "LCO MJD timescale/heliocentric correction unspecified; heliocentric-vs-topocentric difference up to approximately .006day is retained as a timing limitation."
+  },
+  "initialization": "Deterministic A-referenced delays [0,6,-1,13] days copied from consumed first-experiment neighborhood only as numerical initializer; every fold likelihood re-estimates all delays.",
+  "rolling_origin_folds": [
+    {
+      "train_inclusive": 56000.0,
+      "test_exclusive_upper": 56500.0
+    },
+    {
+      "train_inclusive": 56800.0,
+      "test_exclusive_upper": 57300.0
+    },
+    {
+      "train_inclusive": 57600.0,
+      "test_exclusive_upper": 58100.0
+    }
+  ],
+  "fold_eligibility": "Only instruments with at least 12 earlier epochs (48 image measurements) may supply validation targets; prevents treating wholly uncalibrated new-instrument zero points as microlensing extrapolation errors.",
+  "primary_fold_mode": "All later C measurements in the fold are allowed shared-source driver; A/B/D withheld. This is batch cross-image prediction, not real-time forecasting.",
+  "secondary_fold_mode": "No later driver; all four images withheld.",
+  "mixture": "Final finite equal-weight random-walk MCMC posterior approximation. Two seeds, adaptation only during burn-in. Time-origin candidates update by development likelihood. Parameter draws, between-component spread and driver posterior weight changes are propagated. Short-chain limitations reported.",
+  "calibration_rule": "For each mode and each target image, pool standardized absolute rolling-origin residuals; scale=max(1, empirical higher 97.5th percentile/1.95996398454). This conservative design targets 97.5% development marginal absolute-residual coverage to allow moderate domain shift; no exchangeability guarantee. Primary C is driver, hence identity scale. Per-image scales are frozen before unused targets.",
+  "calibration_scoring_rule": "Apply diagonal affine scale to the entire mixture about its mean; normalize joint density with log Jacobian. Report actual unused-target 68.27% and 95% coverage and proper log scores, never assume calibration establishes validity.",
+  "model_family_selection": "No post-target model selection. Retain OU+Brownian+random-slope family regardless of development result; remaining undercoverage or excessive width is reported.",
+  "not_a_BHSM_state_kernel": true,
+  "physical_admission": false
+}
