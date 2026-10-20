@@ -1,13 +1,13 @@
 {
   "status": "REVIEWED_REGENERATED_SUBSTANTIVE_CONDITIONAL_RESULTS",
-  "science_archive_commit": "6b9a0f06e9850e8c796762e86334f7b9e970f0fb",
+  "science_archive_commit": "64046bf8e15c5122345eae7e86ee0ade387338bb",
   "light_prediction_freeze_commit": "b4cf9a04a7962c03441356ee8f7e18e3da157165",
   "gaia_prediction_freeze_commit": "3032a852fdb497fcb7711991d236897637d55caf",
   "PDF": {
     "path": "manuscript/strong_lensing_main.pdf",
     "pages": 32,
-    "bytes": 559415,
-    "sha256": "fafe605fa9cd9b74c87d2fc760aeb1ed6585c3609fd63ff747390542963675c6",
+    "bytes": 559420,
+    "sha256": "2a69f011a1d8f5a126a73aafc36cdf8fd5cc14c5523070d24c19c3416c2a02ae",
     "build_command": "python scripts/build_strong_lensing_manuscript.py",
     "class": "unmodified official MDPI Galaxies 6.5a",
     "LaTeX_warnings": [],
@@ -68,5 +68,11 @@
     "artifacts/strong_lensing_revision_20261020/final_scientific_review.json": "8f2c118af2dba3f8d376cf40fc0828e8f03419499cc6ad2ee86186da30a7b3b7",
     "artifacts/strong_lensing_revision_20261020/postscore_source_audit.json": "40e6618cf4c16f3bdb33b9d1b22d25b34066575faddda85ad5d60fbbee244ded",
     "artifacts/strong_lensing_revision_20261020/gaia/post_exposure_review.json": "992af12f890f116aa9e139ec7480277db99bbbe49f7c85ed784cd51dbf44895b"
+  },
+  "numerical_application_archive_commit": "6b9a0f06e9850e8c796762e86334f7b9e970f0fb",
+  "dependency_declaration_audit": {
+    "initial_CI_failure": "New metadata parser test imported requests, omitted from focused requirements.",
+    "correction": "Pin the already used requests2.33.0 dependency; PyPI Python>=3.10 distribution verified.",
+    "numerical_inputs_or_results_changed": false
   }
 }

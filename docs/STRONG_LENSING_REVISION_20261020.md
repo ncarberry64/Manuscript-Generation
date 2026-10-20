@@ -2,7 +2,7 @@
 
 This continues the original [observed-light checkpoint](STRONG_LENSING_OBSERVED_20261020.md). Its source, predictions, 85.33% coverage failure and all numerical artifacts remain unchanged. The old 1002 COSMOGRAIL epochs are now consumed development data. They are never called a new validation sample.
 
-The regenerated real-MDPI Galaxies draft has **32 pages**, **559415 bytes**, PDF SHA256 `fafe605fa9cd9b74c87d2fc760aeb1ed6585c3609fd63ff747390542963675c6`. All pages were rendered and reviewed; the final LaTeX log has no warnings, undefined references or box warnings. The [publication manifest](../artifacts/strong_lensing_revision_20261020/revision_publication_manifest.json) separates these release checks from the physical-model failures. The immutable science archive is revision **6b9a0f06e9850e8c796762e86334f7b9e970f0fb**. The final internal scientific/coherence review passes; this is not external human peer review or physical admission.
+The regenerated real-MDPI Galaxies draft has **32 pages**, **559420 bytes**, PDF SHA256 `2a69f011a1d8f5a126a73aafc36cdf8fd5cc14c5523070d24c19c3416c2a02ae`. All pages were rendered and reviewed; the final LaTeX log has no warnings, undefined references or box warnings. The [publication manifest](../artifacts/strong_lensing_revision_20261020/revision_publication_manifest.json) separates these release checks from the physical-model failures. The immutable science archive is revision **64046bf8e15c5122345eae7e86ee0ade387338bb**. The final internal scientific/coherence review passes; this is not external human peer review or physical admission.
 
 ## Actual HST application and source revision
 
