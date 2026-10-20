@@ -39,7 +39,13 @@
     "CI_workflow": ".github/workflows/strong-lensing-manuscript.yml",
     "CI_record": "Authoritative run and job status are provided by PR #23 checks; this manifest records local executed checks.",
     "internal_scientific_review": "PASS; final_scientific_review.json",
-    "external_human_peer_review_claimed": false
+    "external_human_peer_review_claimed": false,
+    "verified_focused_CI": {
+      "head": "be2a7dfdb40f479411d653a37f2ab123cfaae263",
+      "pull_request_run": "https://github.com/ncarberry64/Manuscript-Generation/actions/runs/39510525928",
+      "push_run": "https://github.com/ncarberry64/Manuscript-Generation/actions/runs/39510520267",
+      "conclusion": "success: source-checks (81 application tests, 12 identities) and real MDPI build"
+    }
   },
   "preservation": {
     "all_79_light_prediction_inputs_unchanged_after_exposure": true,
@@ -73,6 +79,17 @@
   "dependency_declaration_audit": {
     "initial_CI_failure": "New metadata parser test imported requests, omitted from focused requirements.",
     "correction": "Pin the already used requests2.33.0 dependency; PyPI Python>=3.10 distribution verified.",
-    "numerical_inputs_or_results_changed": false
+    "numerical_inputs_or_results_changed": false,
+    "repository_wide_correction": "Declare the same astropy7.2.0 and requests2.33.0 imports in requirements-dev.txt for repository-wide pytest collection; no scientific source, target or result changed.",
+    "unrelated_inherited_failure": "Repository-wide validate-manuscript also fails tests/test_action_native_matter_n2.py importing background; this existing unrelated path issue is not repaired in the lensing revision.",
+    "independent_read_only_scope_audit": {
+      "result": "PASS",
+      "frozen_light_inputs_verified": 79,
+      "frozen_Gaia_sources_verified": 2,
+      "original_observed_modules_and_artifacts_unchanged": true,
+      "inherited_failure_run": "https://github.com/ncarberry64/Manuscript-Generation/actions/runs/39484157792",
+      "inherited_failure_head": "379b897",
+      "numerical_execution": false
+    }
   }
 }

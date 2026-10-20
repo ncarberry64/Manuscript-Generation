@@ -80,3 +80,7 @@ The remote optical screen does not determine the same-domain scalar environmenta
 The empirical Gaussian brightness law does not execute a U/V preparation current, factorize a dressed quantum state, or replace the exclusive two-point, inclusive four-point or complete matched-occupation statistics. No later four-point calculation is imposed as a prerequisite for these classical source/optical applications.
 
 The **2e-10 physical guard is unchanged**; `physical_admission=false`. The inherited main manuscript equation blocks, original observed modules/results, calibration and old source controls remain intact. **73 original/revision application tests, eight Gaia tests and 12 symbolic identities pass.** Reviews are internal agent/source checks, not external human peer review. The journal submission and cover letter remain unsent.
+
+## Publication CI audit
+
+The focused PR and push workflows passed at `be2a7dfdb40f479411d653a37f2ab123cfaae263`, including 81 application tests, 12 symbolic identities and the official MDPI build. The same HST/catalogue utility dependencies are also declared in `requirements-dev.txt` for repository-wide test collection. This changes no frozen source, target, prediction or score. The repository-wide workflow has an inherited `tests/test_action_native_matter_n2.py` import failure for `background`; that unrelated issue is left untouched. Final-head run status remains available in PR #23 checks.
