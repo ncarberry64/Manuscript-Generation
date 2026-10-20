@@ -1,0 +1,53 @@
+{
+  "status": "PASS_WITH_DECLARED_CONDITIONAL_SCOPE",
+  "reviewer": "heldout_design independent mathematics/code review",
+  "review_scope": "Original spherical source, optical screen/Jacobi maps, arrival action, input astrometry and exact training-likelihood interface; no heldout magnitude outcomes consumed.",
+  "reviewed_sha256": {
+    "code/strong_lensing_observed_macro.py": "5705e8715fd9c8c1bd8bc4d5d97ae1d84f4b731dbccb7c4ca60dcb9d66bd1785",
+    "tests/test_strong_lensing_observed_macro.py": "b0134b3c35e4f3f9757bc9eb66365242502fdaad8203b031973132cf46ba51e2",
+    "code/strong_lensing_comparison.py": "aaea9e5fee682dca9871012e5518017ca8603ff726125f95130770069e014a9a",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_robustness.py": "38c988b4bf3752c91b3b9bf4d414bbe4c125b5ca2188acd62c4178c574b5a4d0",
+    "data/strong_lensing_observed_20261020/candidates/HE0435-1223/astrometry_redshifts.json": "0dbccb7985266880b80b5819e742ba2eb96c15ea154b920fa3e5f70dc65ca3d6"
+  },
+  "findings": [
+    {
+      "application": "Remote screen ray and Jacobi maps",
+      "conclusion": "The physical source application D_os theta-D_ls alpha equals the original two-plane propagation D_os_bare theta-D_ls_bare alpha-D_ps U(D_op theta-D_lp alpha). Screen appears once in these maps; the local body is inserted separately once."
+    },
+    {
+      "application": "Independent arrival action and observer clocks",
+      "conclusion": "The full stationary two-plane action has the separate (1+z_l) and (1+z_p) factors and the closed-background distance identity. Eliminating the quadratic rear-plane angle yields the reduced arrival differences with source-only constants cancelled. Source parameter uses bare D_os times beta and remaps through the actual screen geometry."
+    },
+    {
+      "application": "Original R1 section/source and metric equations",
+      "conclusion": "The fitted prescribed Plummer body is applied to the original regular R1 source. Density normalization rho/(Mpl^2 H0^2)=8pi G rho L_H^2/c^2 makes integrated scalar source -b m_natural and metric source 2m_natural. Their recorded applications agree with the original scalar flux and metric Gauss normalization. This is the declared reduced field, not a completed microscopic state."
+    },
+    {
+      "application": "Astrometry origin, center and uncertainty",
+      "conclusion": "Published positions relative to A are preserved. Subtracting observed G centers the body coordinate once. Predicted G-minus-A is minus predicted A in this light-centered frame. Published internal errors and required2mas systematic are combined; a diagonal covariance approximation and separate3mas mass-light center prior remain explicit assumptions."
+    },
+    {
+      "application": "Exact training likelihood interface",
+      "conclusion": "The curvature-derived covariance is an initializer only. Final exact objective evaluates the same frozen-hyperparameter historical light-curve log likelihood at each model delay vector, plus historical astrometry and center prior. No withheld target labels enter fitting."
+    },
+    {
+      "application": "Numerical differentiation and continuation",
+      "conclusion": "Identified and reported that finite_diff_rel_step is ignored with jac=None in the original macro optimizer call. The authoring agent replaced it with explicit three-point differentiation before freeze. Temporary radial interpolation is checked against original R1 at the final body; any body-refresh drift is retained individually."
+    },
+    {
+      "application": "Focused tests examined",
+      "conclusion": "Read seven focused tests: explicit two-plane ray, independent Schur action difference, conjugate-branch rejection, potential-gradient-Hessian consistency, injected-observable recovery, invalid covariance rejection and exact training-likelihood callback consumption/reported original application. These were executed successfully by the authoring agent; this independent reviewer did not duplicate the numerical test replay."
+    }
+  ],
+  "retained_qualifications": [
+    "Spherical prescribed-density local source plus a total quadratic optical screen at fixed redshift0.8; not a solved global scalar environmental state.",
+    "Four requested noncritical image branches only, not a global faint central-image census.",
+    "Gaussian point-parameter light-curve intervals omit macro and hyperparameter posterior uncertainty; the shared empirical source/microlensing likelihood does not define a BHSM quantum statistical contraction.",
+    "Observed astrometry covariance is approximated diagonal; the mass-light center prior is a declared modeling choice.",
+    "Original final R1 projection and matched positive effective-mass control share the same background/channel. Equality of their transfer is structural, not an independent empirical detection.",
+    "No claim of unique envelope state, complete physical preparation or physical admission; physical_admission remains false."
+  ],
+  "conclusion": "No additional original-equation or normalization error identified in the reviewed code. Approval is limited to this declared conditional experiment and requires retaining final residual/optimizer/projection diagnostics.",
+  "source_application_review": "Independently checked final source block at the four image impacts: x=r/L_H, enclosed m_natural=(GM/c^2)/L_H times mu, pi prime solves C x^2 pi_prime-4 x pi_prime^2/lambda=-b m_natural, rho_natural=8pi G rho L_H^2/c^2, J_eff=-b rho_natural/2, and metric LHS 2x^2 Phi_prime+b x^2 pi_prime=2m_natural. The original final projection is applied after interpolation continuation and its individual difference is retained."
+}

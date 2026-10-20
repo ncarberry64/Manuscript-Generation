@@ -18,3 +18,9 @@ artifacts/strong_lensing_bhsm_integration_20261020/replay/figures/r1_screening_p
 
 # Preserve the delivered scientific snapshot's exact SHA-256 provenance.
 analyses/sn_sightline_tomography_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve original COSMOGRAIL/CDS observations and catalogue metadata bytes.
+data/strong_lensing_observed_20261020/candidates/**/*.dat -text whitespace=-blank-at-eol,-blank-at-eof
+data/strong_lensing_observed_20261020/candidates/**/*.txt -text whitespace=-blank-at-eol,-blank-at-eof
+data/strong_lensing_observed_20261020/candidates/**/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_observed_20261020/*.json -text whitespace=cr-at-eol

@@ -1,0 +1,121 @@
+{
+  "status": "FROZEN_BEFORE_TARGET_SCORING",
+  "protocol_commit": "e55725d19135c3a434b9e12621845eae122e1b8f",
+  "training_epoch_count": 902,
+  "training_observation_count": 3608,
+  "target_values_consumed": false,
+  "empirical_nuisance_fit": "Two-stage conditional empirical Bayes: fit common variability/delays on training, then hold variability hyperparameters fixed while each macro model fits astrometry plus the exact training light-curve likelihood.",
+  "macro_delay_curvature": "0.1day fixed-hyperparameter curvature is a numerical initializer only; final macro objective uses original training light-curve log density, not a claimed observed Gaussian delay posterior.",
+  "parameter_uncertainty": "All predictive intervals/scores condition on fitted nuisance and macro parameters; no full hyperparameter or physical posterior marginalization.",
+  "models": {
+    "empirical_training_transfer": {
+      "delays_days": [
+        0.0,
+        6.419840617785979,
+        -0.9747304186323459,
+        12.487994831847848
+      ],
+      "source_sigma_mag": 0.17385702623679347,
+      "source_tau_days": 1500.0,
+      "extrinsic_sigma_mag": 0.1605004908096214,
+      "extrinsic_tau_days": 10000.00000000001,
+      "jitter_mag": 0.01003829730923635,
+      "offset_sigma_mag": 3.0,
+      "magnitude_zero": -10.3459
+    },
+    "conventional_macro": {
+      "delays_days": [
+        0.0,
+        6.020014396917285,
+        0.6726961286860522,
+        13.611423407287903
+      ],
+      "source_sigma_mag": 0.17385702623679347,
+      "source_tau_days": 1500.0,
+      "extrinsic_sigma_mag": 0.1605004908096214,
+      "extrinsic_tau_days": 10000.00000000001,
+      "jitter_mag": 0.01003829730923635,
+      "offset_sigma_mag": 3.0,
+      "magnitude_zero": -10.3459
+    },
+    "conditional_R1_macro": {
+      "delays_days": [
+        0.0,
+        6.022659143406262,
+        0.6727798594032173,
+        13.616497892972426
+      ],
+      "source_sigma_mag": 0.17385702623679347,
+      "source_tau_days": 1500.0,
+      "extrinsic_sigma_mag": 0.1605004908096214,
+      "extrinsic_tau_days": 10000.00000000001,
+      "jitter_mag": 0.01003829730923635,
+      "offset_sigma_mag": 3.0,
+      "magnitude_zero": -10.3459
+    },
+    "matched_conventional_effective_mass": {
+      "delays_days": [
+        0.0,
+        6.022659143406262,
+        0.6727798594032173,
+        13.616497892972426
+      ],
+      "source_sigma_mag": 0.17385702623679347,
+      "source_tau_days": 1500.0,
+      "extrinsic_sigma_mag": 0.1605004908096214,
+      "extrinsic_tau_days": 10000.00000000001,
+      "jitter_mag": 0.01003829730923635,
+      "offset_sigma_mag": 3.0,
+      "magnitude_zero": -10.3459
+    },
+    "zero_delay_control": {
+      "delays_days": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "source_sigma_mag": 0.17385702623679347,
+      "source_tau_days": 1500.0,
+      "extrinsic_sigma_mag": 0.1605004908096214,
+      "extrinsic_tau_days": 10000.00000000001,
+      "jitter_mag": 0.01003829730923635,
+      "offset_sigma_mag": 3.0,
+      "magnitude_zero": -10.3459
+    }
+  },
+  "training_log_likelihood_by_model": {
+    "empirical_training_transfer": 8791.55342889895,
+    "conventional_macro": 8781.977758331497,
+    "conditional_R1_macro": 8781.98178611675,
+    "matched_conventional_effective_mass": 8781.98178611675,
+    "zero_delay_control": 8484.462726364358
+  },
+  "source_sha256": {
+    "preregistration/he0435_heldout_20261020.json": "fe191151cf72d6112d4bfb55b0a3c8e790348b536b8e566819551b56cae12fdf",
+    "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_all_Millon2020.dat": "880ed1cbc23d884ffec9a0d59411c946f3cb4256d962fc506464b080fb172ce3",
+    "artifacts/strong_lensing_observed_20261020/lightcurve_training.json": "6219ef5533dc5fa297a3c1b864e95141d7728025af3af242e40049fbc4c1e65d",
+    "artifacts/strong_lensing_observed_20261020/training_curvature.json": "0663863488c8a694f2c163a807d195d94f1fbe64128a5f87647273ab9b19bf68",
+    "artifacts/strong_lensing_observed_20261020/conventional_training.json": "01d439ca5817ded7628743f8fe8cbf7f6944c024642c9641bc937da903089ef0",
+    "artifacts/strong_lensing_observed_20261020/r1_training.json": "d42ca071675b9fccf8f59edcfee0e5af4d3646db8ee157bca9e382db5e63937d",
+    "scripts/run_he0435_withheld.py": "2f5c63d18a6e2f98d8f18d482c85cc616dccf14cd6ef2221fc8aa3c1367c9f78",
+    "code/strong_lensing_observed_lightcurve.py": "214150eee754ec3ca88517dd44767be496e322bc4459f1808278fed0f0e897cc",
+    "code/strong_lensing_observed_macro.py": "5705e8715fd9c8c1bd8bc4d5d97ae1d84f4b731dbccb7c4ca60dcb9d66bd1785",
+    "scripts/fit_he0435_lightcurves.py": "7c46d5b5d8224a8c75e89694a4482d24366747d9ae1832886d4dc955c9d41d85",
+    "code/strong_lensing_comparison.py": "aaea9e5fee682dca9871012e5518017ca8603ff726125f95130770069e014a9a",
+    "code/strong_lensing_robustness.py": "38c988b4bf3752c91b3b9bf4d414bbe4c125b5ca2188acd62c4178c574b5a4d0",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_local_family.py": "14dc83bae0e2d1f2289209c4f11fcacf7f24d91610ddbdd33122cd52b237fdbe",
+    "code/background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+    "code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+    "preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+    "data/strong_lensing_observed_20261020/candidates/HE0435-1223/astrometry_redshifts.json": "0dbccb7985266880b80b5819e742ba2eb96c15ea154b920fa3e5f70dc65ca3d6"
+  },
+  "structural_control": "The matched conventional effective-mass field has the same transfer as conditional R1. Its shared score is a structural identity, not a separate fitted confirmation.",
+  "physical_admission": false,
+  "pre_scoring_operational_guard_audit": {
+    "executed_preparation_runner_sha256": "d44b6b31b8e903c6ec3b4d3d0d430c9122cb9a990f0e7ca60363438e0a7218eb",
+    "current_guarded_runner_sha256": "2f5c63d18a6e2f98d8f18d482c85cc616dccf14cd6ef2221fc8aa3c1367c9f78",
+    "change": "Persistent exclusive-create scoring-start marker added before any target parse; prepare and score refuse a second run even after an aborted exposure. No prepared numerical model, parameter, density, prediction or score changed; no target has been opened."
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "lens": "HE0435-1223",
+  "selection": "Well-observed four-image COSMOGRAIL lens selected from primary public 13-year monitoring coverage before fitting or inspection of withheld magnitudes.",
+  "retrieved_utc": "2026-10-20T19:05:11.158304+00:00",
+  "files": [
+    {
+      "path": "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_Bonvin2016.rdb.txt",
+      "source_url": "https://www.epfl.ch/labs/lastro/wp-content/uploads/2019/08/HE0435_Bonvin2016.rdb_.txt",
+      "sha256": "00308d9e79fb514cb5b021f80044a2307ef8b0a6eeb5e195cd67c10ca494c79e",
+      "bytes": 74051
+    },
+    {
+      "path": "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_all_Millon2020.dat",
+      "source_url": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/640/A105/lcabcd/HE0435_all.dat",
+      "sha256": "880ed1cbc23d884ffec9a0d59411c946f3cb4256d962fc506464b080fb172ce3",
+      "bytes": 96192
+    },
+    {
+      "path": "data/strong_lensing_observed_20261020/candidates/HE0435-1223/ReadMe_Millon2020.txt",
+      "source_url": "https://cdsarc.cds.unistra.fr/ftp/J/A+A/640/A105/ReadMe",
+      "sha256": "47e659fbd6aeb3d46ae8143811cf9590620abd7b1027b3d91fb412084a0f366d",
+      "bytes": 10559
+    },
+    {
+      "path": "data/strong_lensing_observed_20261020/candidates/HE0435-1223/ReadMe_Bonvin2017.txt",
+      "source_url": "https://cdsarc.cds.unistra.fr/ftp/J/MNRAS/465/4914/ReadMe",
+      "sha256": "afdc6e10e25d6d603921aff1f190b44e9f77753af1567acbb1993e8ce1be072d",
+      "bytes": 5122
+    }
+  ],
+  "public_release_page": "https://www.epfl.ch/labs/lastro/scientific-activities/cosmograil/data/",
+  "public_release_description": "Official COSMOGRAIL page describes RDB and CDS light curves as identical except possible magnitude zero point.",
+  "publication_baseline": {
+    "title": "H0LiCOW V. New COSMOGRAIL time delays of HE0435-1223",
+    "doi": "10.1093/mnras/stw3006",
+    "arxiv": "1607.01790"
+  },
+  "publication_extension": {
+    "title": "COSMOGRAIL XIX: Time delays in 18 strongly lensed quasars from 15 years of optical monitoring",
+    "doi": "10.1051/0004-6361/202037740",
+    "arxiv": "2002.05736",
+    "catalogue": "J/A+A/640/A105"
+  },
+  "column_layout": {
+    "baseline": [
+      "mhjd",
+      "mag_A",
+      "magerr_A",
+      "mag_B",
+      "magerr_B",
+      "mag_C",
+      "magerr_C",
+      "mag_D",
+      "magerr_D"
+    ],
+    "extension": [
+      "native_HJD_offset_day",
+      "mag_A",
+      "magerr_A",
+      "mag_B",
+      "magerr_B",
+      "mag_C",
+      "magerr_C",
+      "mag_D",
+      "magerr_D",
+      "telescope"
+    ]
+  },
+  "time_origin_note": "Official RDB site calls dates MHJD=HJD-2400000.5; CDS2020 ReadMe labels HJD-2400000. Numerical epochs match across files. Use native numerical epochs for splitting and time differences; do not infer absolute calendar conversion pending resolution of metadata discrepancy.",
+  "split_metadata_only": {
+    "historical_rows": 884,
+    "historical_first": 52863.883,
+    "historical_last": 57447.03918,
+    "extended_rows": 1002,
+    "extended_first": 52863.883,
+    "extended_last": 58354.41787,
+    "extended_train_time_rows": 902,
+    "extended_later_time_rows": 100,
+    "extended_first_later_epoch": 57452.03514,
+    "original_epoch_set_equal_to_extended_train": false,
+    "adopted_training_source": "HE0435_all_Millon2020.dat",
+    "cut_rule": "Native numerical epoch <=57447.03918 trains; all larger epochs are withheld. Boundary fixed by endpoint of the13-year public release, independent of later measured magnitudes."
+  },
+  "withheld_values_inspected": false,
+  "licensing": {
+    "status": "CDS rules explicitly permit scientific use of VizieR data with citation of original authors, publication and publisher; A&A-origin data are free for scientific usage. No blanket CC licence is asserted for this dataset.",
+    "policy_url": "https://cds.unistra.fr/vizier-org/licences_vizier.html",
+    "policy_sha256_retrieved_html": "f6bab16f7060f41c98958f0044fa3a526eeeeacdd23cb2fa7a529016d2b29e9f",
+    "attribution": "Bonvin et al. (2017, MNRAS465,4914; Oxford University Press), Millon et al. (2020, A&A640,A105; EDP Sciences), COSMOGRAIL and CDS/VizieR.",
+    "required_action": "Retain original third-party data attribution; do not relabel raw observations as repository-owned.",
+    "recommended_acknowledgment": "This research has made use of the VizieR catalogue access tool, CDS, Strasbourg, France (DOI:10.26093/cds/vizier)."
+  },
+  "notes": [
+    "No published delays or cosmological posteriors are used as fit observations.",
+    "Only time-column metadata inspected in the extension; no withheld photometric values examined or fitted.",
+    "Proposed historical split trains on native epoch <= endpoint of the original13-year release and withholds all later extension epochs.",
+    "The extension has a net18 more pre-cut rows:49 original epochs removed and67 added. It also re-reduces some historical photometry. Fit extended-release pre-cut rows and freeze before withholding extended-release later rows, retaining the original release endpoint as an independently selected chronological boundary. This is retrospective chronological validation within a common photometric reduction, not a prospectively blinded acquisition.",
+    "No absolute-Julian-date conversion is used: native numerical day differences avoid the half-day discrepancy in release metadata."
+  ],
+  "historical_calibration_comparison": {
+    "matched_epoch_rows": 835,
+    "baseline_epoch_rows_not_in_extension": 49,
+    "additional_extension_rows_before_cut": 67,
+    "train_common_magnitude_change_by_image": {
+      "A": {
+        "median": 0.0,
+        "min": -0.0664599999999993,
+        "max": 0.0,
+        "max_deviation_from_median": 0.0664599999999993
+      },
+      "B": {
+        "median": 0.1999999999999993,
+        "min": 0.16629999999999967,
+        "max": 0.23804999999999943,
+        "max_deviation_from_median": 0.03805000000000014
+      },
+      "C": {
+        "median": -0.3000000000000007,
+        "min": -0.36370000000000147,
+        "max": -0.29999999999999893,
+        "max_deviation_from_median": 0.06370000000000076
+      },
+      "D": {
+        "median": -0.5999999999999996,
+        "min": -0.6714800000000007,
+        "max": -0.5999999999999996,
+        "max_deviation_from_median": 0.0714800000000011
+      }
+    },
+    "train_common_uncertainty_max_abs_change_by_image": {
+      "A": 0.00678,
+      "B": 0.012119999999999999,
+      "C": 0.011869999999999999,
+      "D": 0.01046
+    }
+  }
+}
