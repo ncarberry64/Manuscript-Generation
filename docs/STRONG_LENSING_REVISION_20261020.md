@@ -53,10 +53,28 @@ The primary R1-minus-conventional joint score is **-0.0000345961**; fixed-body a
 
 Without C conditioning, conventional/R1 coverage is **100%**, RMSE **0.21697 mag**, mean 95% width **1.25336 mag**, with a conventional signed bias **+0.17612 mag**. The all-image R1-minus-conventional score is only **+0.0000024967**. These are overlapping primary/secondary observations, not independent confirmations. Correlated epochs preclude an independent-binomial coverage significance claim.
 
+## Separate previously unused Gaia geometry
+
+The same physical predictions were frozen again for Gaia before any numerical quasar position row was queried, at commit **3032a85**. This protocol was added after the LCO outcome was known; no overarching prospective registration is claimed. A preceding metadata-only query found four entries. All 24 assignments were tested against the fixed conventional pattern, with no continuous frame/rotation/scale fit, and the same labels were retained for R1. The runner-up squared-pattern residual is 4.6197 arcsec squared versus 0.000063594 for the chosen match.
+
+The first numerical ESA Gaia DR3 query and six-coordinate application were executed once. The four sources have RUWE 1.00–1.11, no duplicate flags and 0–1% multi-peak fractions. All remain in the result. Source RA uncertainties already include the declination cosine; the relative covariance includes common-A off-diagonal blocks. Unpublished between-source covariance is not manufactured.
+
+**Both frozen point predictions fail Gaia's catalogue-error-only precision test.** Conventional relative-coordinate residuals in east/north mas are B=(+0.623,+1.701), C=(+1.915,-5.026), D=(-5.572,+0.580). Coordinate RMS is **3.25560 mas** (R1 **3.25557 mas**), with maximum absolute coordinate residual about 5.572 mas.
+
+| Added relative-coordinate floor | Conventional formal Q | R1 formal Q | Conventional log density | R1 log density |
+|---|---:|---:|---:|---:|
+| 0 mas | 3465.9053 | 3465.6671 | -1727.1767 | -1727.0576 |
+| 2 mas | 15.7966 | 15.7963 | -17.5910 | -17.5908 |
+| 5 mas | 2.54112 | 2.54107 | -16.4441 | -16.4440 |
+
+The 0/2/5 mas controls were specified before position exposure. Floors add independent variance per relative coordinate after propagating Gaia's shared-A covariance. Their better formal scores are sensitivity results, not a data-fitted cure, a derived physical posterior or proof of precision validity. No uniformly successful precise physical model is established. R1-minus-conventional log differences are only +0.1191, +0.0001531 and +0.0000243 under the three assumptions; a small difference between inadequate point predictions is not a state detection.
+
+Gaia collected different photons in 2014–2017 from HST 2003/2012. The NIC2 astrometry used for the point fit was published in 2011. New HST central mosaics nevertheless have a Gaia-EDR3 field calibration; complete independence of every calibration cannot be certified without its match list. The **numerical Gaia quasar positions were unused by all model fits and selection**. The new test diagnoses the fixed geometry while exposing source/frame/photocentre and macro-uncertainty limitations. Gaia values are now consumed and cannot be reused after a refit as a second confirmation.
+
 ## Physical scope and preservation
 
 The remote optical screen does not determine the same-domain scalar environmental Hessian. The total scalar equation contains its explicit cross-Hessian contraction; the projected two-dimensional optical tide does not close it. Prescribed density alone does not supply the material EOS/support. Global rolling-background Cauchy/matching conditions and the microscopic cap/source embedding/complement-state relation remain separately derived physical dependencies. The exact source trail is recorded in [postscore_source_audit.json](../artifacts/strong_lensing_revision_20261020/postscore_source_audit.json).
 
 The empirical Gaussian brightness law does not execute a U/V preparation current, factorize a dressed quantum state, or replace the exclusive two-point, inclusive four-point or complete matched-occupation statistics. No later four-point calculation is imposed as a prerequisite for these classical source/optical applications.
 
-The **2e-10 physical guard is unchanged**; `physical_admission=false`. The inherited main manuscript equation blocks, original observed modules/results, calibration and old source controls remain intact. **73 focused application tests and 12 symbolic identities pass.** Reviews are internal agent/source checks, not external human peer review. The journal submission and cover letter remain unsent.
+The **2e-10 physical guard is unchanged**; `physical_admission=false`. The inherited main manuscript equation blocks, original observed modules/results, calibration and old source controls remain intact. **73 original/revision application tests, eight Gaia tests and 12 symbolic identities pass.** Reviews are internal agent/source checks, not external human peer review. The journal submission and cover letter remain unsent.
