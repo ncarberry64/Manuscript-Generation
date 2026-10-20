@@ -8,6 +8,15 @@ The paper follows geometry -> action -> constraints/boundary conditions -> gauge
 
 ## Scientific status
 
+The separate [strong-lensing research checkpoint](docs/STRONG_LENSING_CHECKPOINT_20261020.md)
+adds a matched SIS benchmark, measured-redshift three-segment Jacobi transport,
+six action-native conditional state responses, and explicit nuisance-projected
+null results. Its [focused manuscript](manuscript/strong_lensing_main.pdf)
+preserves the Universe manuscript. Reproduce it with
+`python scripts/run_strong_lensing_comparison.py`; the local phase-channel
+null and unit cosmological responses are not a calibrated galaxy-replacement
+prediction or an observational detection.
+
 | Class | What the repository supports |
 |---|---|
 | DERIVED | Physical-domain Schur metric response; regular closed-FLRW harmonic exclusion; linear distance/optical identities; rank bound for a fixed finite latent-amplitude response. |

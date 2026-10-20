@@ -1,0 +1,27 @@
+{
+  "base_revision": "3427c5297fac71faa501685bd38e5d420619c761",
+  "command": "python scripts/run_strong_lensing_comparison.py",
+  "current_provider": "action-native six-coordinate ADM+Schutz-Sorkin; standard Phi+Psi",
+  "historical_recovery_is_reset_target": false,
+  "historical_recovery_revision": "5fd65ea18a6055dbc6028839c2918415e3c00f71",
+  "input_sha256": {
+    "code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+    "code/background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+    "code/bhsm_optical_transfer.py": "63e660f0e97e42c5363740bcafe6407a9bd5e4eb2bcd7f9d36c059de64dd9c5d",
+    "code/closed_horndeski_n2.py": "0d7e596ae40bd01ba9331128afdda9d163e52c955096f70209f06975e197f36d",
+    "code/strong_lensing_comparison.py": "6b13c24acee4e373a0d2978c8447f288d825aeaffb0052309778863e0aeeab1e",
+    "code/strong_lensing_envelope.py": "47d6623ad3fef96a4c1e4556ec49022175af3230c2853832f0b92246b6966143",
+    "code/strong_lensing_transport.py": "eb67bf7c112257df80f2b9d2185c5ede3ae20f2f3a13c6bd348699d39cf419ed",
+    "preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+    "scripts/run_strong_lensing_comparison.py": "28603a99245479f1b77e04fffc1a59eef91e290f8c169c94865e025532bb69e6"
+  },
+  "normalized_profile": "sqrt(3)/(pi R^(3/2)) sin(2 chi/R) mu; integral Q\u00b2 dV_gamma=1; mu=1 conditional axis",
+  "numerical_steps": [
+    0.002,
+    0.00010051336085094368,
+    0.00033695365089585124,
+    0.002,
+    3.6510157953321004e-05,
+    0.002
+  ]
+}
