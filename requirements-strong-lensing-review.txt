@@ -6,3 +6,5 @@ matplotlib==3.10.8
 sympy==1.14.0
 # Exact retained HST science/weight/context cutouts (no network in tests).
 astropy==7.2.0
+# Original CDS catalogue acquisition utility and metadata-only parser tests.
+requests==2.33.0
