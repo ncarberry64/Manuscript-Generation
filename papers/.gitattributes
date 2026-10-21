@@ -1,0 +1,4 @@
+# Preserve archived provider/output bytes and their recorded SHA256 hashes.
+** -text whitespace=cr-at-eol
+# Archived trailing blank lines are retained rather than changing frozen bytes.
+bhsm_angular_lensing_20261021/** whitespace=cr-at-eol,-blank-at-eof
