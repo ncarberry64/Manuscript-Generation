@@ -1,0 +1,36 @@
+"""Build a complete portable source release without caches or TeX scratch."""
+from pathlib import Path
+import hashlib
+import json
+import shutil
+import sys
+import zipfile
+ROOT=Path(__file__).resolve().parents[1]
+PAPERS=ROOT.parent
+OUTPUT=Path(sys.argv[1]).resolve()
+OUTPUT.mkdir(parents=True,exist_ok=True)
+directories=[PAPERS/'bhsm_angular_lensing_20261021',PAPERS/'bhsm_state_rotation_20261021',ROOT]
+excluded={'.aux','.log','.out','.fls','.fdb_latexmk','.synctex.gz','.blg','.pyc'}
+files=[]
+for directory in directories:
+    for path in sorted(directory.rglob('*')):
+        if not path.is_file() or '__pycache__' in path.parts or '.pytest_cache' in path.parts:continue
+        if path.suffix in excluded or path.name.endswith('.synctex.gz'):continue
+        if path==ROOT/'provenance/RELEASE_MANIFEST.json':continue
+        files.append(path)
+manifest={'scope':'three paper directories; tracker central, earlier research preserved',
+          'manifest_excludes_its_own_hash':True,
+          'files':[{'path':p.relative_to(PAPERS).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),
+                    'bytes':p.stat().st_size} for p in files]}
+mf=ROOT/'provenance/RELEASE_MANIFEST.json'
+mf.write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf8')
+files.append(mf)
+zip_path=OUTPUT/'BHSM_Blackhole_Tracker_Source.zip'
+with zipfile.ZipFile(zip_path,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+    for path in files:z.write(path,path.relative_to(PAPERS).as_posix())
+shutil.copy2(ROOT/'manuscript/main.pdf',OUTPUT/'BHSM_Blackhole_Tracker_Manuscript.pdf')
+for name in ['LAY_REPORT.md','RESULT_STATEMENT.md','VALIDATION.md','CHAIN_AND_FREEDOMS.md','GIT_HANDOFF.md']:
+    shutil.copy2(ROOT/name,OUTPUT/name)
+shutil.copy2(ROOT/'provenance/RECOVERY_MAP.md',OUTPUT/'RECOVERY_MAP.md')
+print(json.dumps({'source_archive':str(zip_path),'members':len(files),
+                 'sha256':hashlib.sha256(zip_path.read_bytes()).hexdigest()},indent=2))
