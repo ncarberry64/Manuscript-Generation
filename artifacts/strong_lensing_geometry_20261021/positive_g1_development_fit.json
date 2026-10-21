@@ -1,0 +1,525 @@
+{
+  "scope": "Consumed Gaia development fit; no unused data consumed. kappa fixed to inherited value to remove mass-sheet degree; local parameters, G1 positive mass fitted.",
+  "rear_galaxy_observed_arcsec": [
+    -2.585,
+    -3.637
+  ],
+  "rear_redshift": 0.7821,
+  "compact_mass_Msun": 100000000.0,
+  "compact_scale_kpc": 0.03,
+  "perturber_scale_kpc": 0.2,
+  "Gaia_development_geometry_map": "Exact gnomonic tangent at uncertain A; independent catalogue-source approximation with each own alpha-star basis; all shared-origin covariance retained",
+  "Gaia_development_relative_arcsec": [
+    -1.4762808949271111,
+    0.5527883762383312,
+    -2.466398902823387,
+    -0.6030590716927706,
+    -0.938147512683447,
+    -1.6141098053606697
+  ],
+  "Gaia_development_covariance_arcsec2": [
+    [
+      2.5488603516356393e-08,
+      6.546609699645975e-10,
+      9.64705788369443e-09,
+      2.73729144827764e-10,
+      9.647047583219684e-09,
+      2.737135769726054e-10
+    ],
+    [
+      6.546609699645974e-10,
+      1.701597229605467e-08,
+      2.7371872455406545e-10,
+      6.62446671991352e-09,
+      2.7371843229994e-10,
+      6.6244662785509545e-09
+    ],
+    [
+      9.64705788369443e-09,
+      2.7371872455406545e-10,
+      2.755390949264115e-08,
+      -6.916540622343009e-10,
+      9.64703580984724e-09,
+      2.737132432875142e-10
+    ],
+    [
+      2.7372914482776405e-10,
+      6.624466719913519e-09,
+      -6.916540622343008e-10,
+      1.7751734968450472e-08,
+      2.737285188587784e-10,
+      6.6244665647437244e-09
+    ],
+    [
+      9.647047583219684e-09,
+      2.7371843229994e-10,
+      9.64703580984724e-09,
+      2.737285188587784e-10,
+      4.543721887798482e-08,
+      3.5831123979399224e-09
+    ],
+    [
+      2.737135769726054e-10,
+      6.624466278550954e-09,
+      2.737132432875142e-10,
+      6.624466564743724e-09,
+      3.5831123979399224e-09,
+      2.8684671119645458e-08
+    ]
+  ],
+  "Gaia_gnomonic_minus_previous_smallfield_map_mas": [
+    -0.0008617279734224326,
+    -0.0011506571495623064,
+    0.0015704800850890877,
+    -0.0032117621360239212,
+    0.0015989776804836708,
+    -0.00046473593329210416
+  ],
+  "fixed_screen_kappa_scope": "Inherited numerical value fixes the quadratic REMAINDER mass-sheet degree; it is not asserted to remain the old total environmental convergence after adding the explicit perturber.",
+  "Gaia_error_inflation": false,
+  "initializer_trials": [
+    {
+      "logM_initial": 10.0,
+      "chi2": 20.179701952016007,
+      "Gaia_chi2": 0.011971411070969344,
+      "parameters": [
+        11.652997088028359,
+        0.7085499558909161,
+        -0.08041311399985832,
+        -0.058072220566796895,
+        0.25625719126715585,
+        0.11748661272781237,
+        0.09338081782158852,
+        -0.00042350720135760187,
+        0.006622144663039793
+      ],
+      "G1mass": 245539194832.77902,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 203,
+      "optimality": 0.00022674681216327047,
+      "original_bright_branches_valid": true
+    },
+    {
+      "logM_initial": 11.0,
+      "chi2": 20.17970195215268,
+      "Gaia_chi2": 0.011971453010860163,
+      "parameters": [
+        11.652997083103942,
+        0.7085499488156517,
+        -0.08041311285353392,
+        -0.05807221843908618,
+        0.25625719126715585,
+        0.11748661426636842,
+        0.09338081809126517,
+        -0.0004235071355493409,
+        0.00662214455219921
+      ],
+      "G1mass": 245539190924.71204,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 94,
+      "optimality": 0.0003560447541387426,
+      "original_bright_branches_valid": true
+    },
+    {
+      "logM_initial": 12.0,
+      "chi2": 1.3e+17,
+      "Gaia_chi2": 6e+16,
+      "parameters": [
+        11.689817182237041,
+        0.7541853768397996,
+        -0.007952211194155661,
+        0.04112658412493257,
+        0.25625719126715585,
+        0.12482978852293553,
+        0.06540984613892988,
+        -0.0011291968484621834,
+        0.0010014758182217533
+      ],
+      "G1mass": 1000000000000.0,
+      "success": true,
+      "message": "`gtol` termination condition is satisfied.",
+      "nfev": 1,
+      "optimality": 0.0,
+      "original_bright_branches_valid": false
+    }
+  ],
+  "conventional": {
+    "model": "conventional",
+    "parameter_vector": [
+      11.6707876884678,
+      0.733131182839563,
+      -0.07718623912700052,
+      -0.05566349648219425,
+      0.25625719126715585,
+      0.11313029929930034,
+      0.08988670474372182,
+      -0.00045199552371968314,
+      0.0064374659093008905
+    ],
+    "parameter_names": [
+      "log10_mass_Msun",
+      "log10_plummer_a_kpc",
+      "source_x_arcsec",
+      "source_y_arcsec",
+      "screen_kappa",
+      "screen_gamma1",
+      "screen_gamma2",
+      "mass_center_x_arcsec",
+      "mass_center_y_arcsec"
+    ],
+    "perturber_mass_Msun": 235148467073.52893,
+    "predicted_relative_astrometry_arcsec": [
+      -1.4762865036165214,
+      0.5527795554457751,
+      -2.4664059097222064,
+      -0.6030551113650298,
+      -0.9381256408018054,
+      -1.61411374798497,
+      -1.1710806988550886,
+      -0.5635522955639285
+    ],
+    "predicted_images_light_centered_arcsec": [
+      [
+        1.1710806988550886,
+        0.5635522955639285
+      ],
+      [
+        -0.3052058047614328,
+        1.1163318510097036
+      ],
+      [
+        -1.2953252108671178,
+        -0.039502815801101245
+      ],
+      [
+        0.23295505805328318,
+        -1.0505614524210416
+      ]
+    ],
+    "predicted_delays_days": [
+      6.423926074988515,
+      0.4954612293732339,
+      13.491351395601782
+    ],
+    "magnifications": [
+      8.355114028937578,
+      -9.117402805565275,
+      8.247667565786458,
+      -6.4560272055323376
+    ],
+    "Gaia_residual_mas": [
+      0.0056086894102413964,
+      0.008820792556152313,
+      0.007006898819383878,
+      -0.003960327740859526,
+      -0.0218718816415997,
+      0.0039426243003681805
+    ],
+    "Gaia_chi2": 0.026511601826968118,
+    "rms_coordinate_residual_mas": 0.010551209235733208,
+    "NIC2_lenslight_chi2": 2.1064673766842144,
+    "masscenter_prior_chi2": 4.627251920763752,
+    "development_light_log_likelihood": 9603.976093139829,
+    "exact_training_objective": -19201.191955380382,
+    "max_lens_residual_rad": 7.411538288475128e-22,
+    "max_arrival_stationarity_Mpc": 1.0408340855860843e-17,
+    "Gaia_jacobian_singular_values_scaled_coordinates": [
+      6338.185515038561,
+      3777.478317049447,
+      1576.7982850826677,
+      977.7953934527603,
+      295.930720388474,
+      3.7749123136809284
+    ],
+    "optimization_trace": [
+      {
+        "iteration": 0,
+        "objective": -19201.191955380382,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 5263,
+        "parameter_vector": [
+          11.6707876884678,
+          0.733131182839563,
+          -0.07718623912700052,
+          -0.05566349648219425,
+          0.25625719126715585,
+          0.11313029929930034,
+          0.08988670474372182,
+          -0.00045199552371968314,
+          0.0064374659093008905
+        ],
+        "perturber_mass_Msun": 235148467073.52893
+      }
+    ],
+    "active_bounds": {},
+    "rear_center_Mpc": [
+      -0.018635695713206123,
+      -0.026216794618959247
+    ],
+    "physical_admission": false
+  },
+  "r1": {
+    "model": "r1",
+    "parameter_vector": [
+      11.670781912814304,
+      0.7331345153440547,
+      -0.07718570188174453,
+      -0.05566372069405284,
+      0.25625719126715585,
+      0.1131279398267895,
+      0.08988537970674937,
+      -0.0004520322871494417,
+      0.0064375020291465345
+    ],
+    "parameter_names": [
+      "log10_mass_Msun",
+      "log10_plummer_a_kpc",
+      "source_x_arcsec",
+      "source_y_arcsec",
+      "screen_kappa",
+      "screen_gamma1",
+      "screen_gamma2",
+      "mass_center_x_arcsec",
+      "mass_center_y_arcsec"
+    ],
+    "perturber_mass_Msun": 235146069816.55292,
+    "predicted_relative_astrometry_arcsec": [
+      -1.4762862202595943,
+      0.5527797095431173,
+      -2.4664058755465685,
+      -0.603054969327354,
+      -0.9381257016032596,
+      -1.6141140008581212,
+      -1.171080566065426,
+      -0.5635523389402617
+    ],
+    "predicted_images_light_centered_arcsec": [
+      [
+        1.171080566065426,
+        0.5635523389402617
+      ],
+      [
+        -0.3052056541941684,
+        1.116332048483379
+      ],
+      [
+        -1.2953253094811426,
+        -0.03950263038709239
+      ],
+      [
+        0.23295486446216643,
+        -1.0505616619178595
+      ]
+    ],
+    "predicted_delays_days": [
+      6.423799409901505,
+      0.4954429756751324,
+      13.491078161096539
+    ],
+    "magnifications": [
+      8.355422308593901,
+      -9.11775095656746,
+      8.24796000056788,
+      -6.4562938518818145
+    ],
+    "Gaia_residual_mas": [
+      0.005325332483208101,
+      0.008666695213932485,
+      0.0069727231815086554,
+      -0.004102365416591702,
+      -0.02181108018739497,
+      0.004195497451453534
+    ],
+    "Gaia_chi2": 0.026279970748485534,
+    "rms_coordinate_residual_mas": 0.01050590675422826,
+    "NIC2_lenslight_chi2": 2.1063960867629974,
+    "masscenter_prior_chi2": 4.627307284876811,
+    "development_light_log_likelihood": 9603.9759115365,
+    "exact_training_objective": -19201.19183973061,
+    "max_lens_residual_rad": 1.5352472168984194e-21,
+    "max_arrival_stationarity_Mpc": 1.431146867680866e-17,
+    "Gaia_jacobian_singular_values_scaled_coordinates": [
+      6338.261803904644,
+      3777.5494739454048,
+      1576.80994702404,
+      977.808575430326,
+      295.9363710477013,
+      3.7750238367059996
+    ],
+    "optimization_trace": [
+      {
+        "iteration": 0,
+        "objective": -19201.191839724866,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 494,
+        "parameter_vector": [
+          11.670781912814304,
+          0.7331345153440547,
+          -0.07718570188174456,
+          -0.05566372069405286,
+          0.25625719126715585,
+          0.11312793982678934,
+          0.08988537970674937,
+          -0.0004520322871494561,
+          0.0064375020291465345
+        ],
+        "perturber_mass_Msun": 235146069816.55194
+      },
+      {
+        "iteration": 1,
+        "objective": -19201.1918397306,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 285,
+        "parameter_vector": [
+          11.670781912814304,
+          0.7331345153440547,
+          -0.07718570188174453,
+          -0.05566372069405284,
+          0.25625719126715585,
+          0.1131279398267895,
+          0.08988537970674937,
+          -0.00045203228714944235,
+          0.0064375020291465345
+        ],
+        "perturber_mass_Msun": 235146069816.55292
+      },
+      {
+        "iteration": 2,
+        "objective": -19201.1918397306,
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "nfev": 323,
+        "parameter_vector": [
+          11.670781912814304,
+          0.7331345153440547,
+          -0.07718570188174453,
+          -0.05566372069405284,
+          0.25625719126715585,
+          0.1131279398267895,
+          0.08988537970674937,
+          -0.0004520322871494417,
+          0.0064375020291465345
+        ],
+        "perturber_mass_Msun": 235146069816.55292
+      }
+    ],
+    "active_bounds": {},
+    "rear_center_Mpc": [
+      -0.018635616700113565,
+      -0.026216683197587454
+    ],
+    "physical_admission": false,
+    "original_source_checks": {
+      "max_integrated_scalar_equation_relative_residual": 7.174316178907552e-16,
+      "max_independent_alpha_derivative_relative_error": 1.868219187632096e-12,
+      "max_independent_potential_derivative_relative_error": 3.5715397081250243e-09,
+      "finite_matching_tail": [
+        {
+          "impact_Mpc": 0.007712154554126865,
+          "fraction_extra_alpha_beyond_20_Mpc": 5.207113145111464e-06
+        },
+        {
+          "impact_Mpc": 0.006842525856145785,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.972870769948123e-06
+        },
+        {
+          "impact_Mpc": 0.007702849918162241,
+          "fraction_extra_alpha_beyond_20_Mpc": 5.204585003415474e-06
+        },
+        {
+          "impact_Mpc": 0.006435229611917048,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.864982399821471e-06
+        }
+      ]
+    },
+    "original_section_source_applications": [
+      {
+        "radius_kpc": 0.030000000000000002,
+        "density_over_Mpl2H02": 3736053052.348633,
+        "consumed_reduced_source_J_eff": -171279915.11312822,
+        "scalar_gradient_over_MplH0": -3.5991919806817106e-05,
+        "scalar_integrated_lhs": -3.495570286398091e-17,
+        "scalar_integrated_source": -3.495570286398091e-17,
+        "metric_Gauss_lhs": 7.624732899692909e-16,
+        "metric_Gauss_source": 7.624732899692909e-16,
+        "scalar_relative_residual": 0.0,
+        "metric_relative_residual": 0.0
+      },
+      {
+        "radius_kpc": 0.2,
+        "density_over_Mpl2H02": 18271743.011113375,
+        "consumed_reduced_source_J_eff": -837670.811431602,
+        "scalar_gradient_over_MplH0": -2.566831453951925e-05,
+        "scalar_integrated_lhs": -1.1872490700906853e-16,
+        "scalar_integrated_source": -1.1872490700906848e-16,
+        "metric_Gauss_lhs": 2.589693899182927e-15,
+        "metric_Gauss_source": 2.5896938991829276e-15,
+        "scalar_relative_residual": 4.1527770219729295e-16,
+        "metric_relative_residual": 3.0461550126441765e-16
+      },
+      {
+        "radius_kpc": 1.0,
+        "density_over_Mpl2H02": 15463161.718113845,
+        "consumed_reduced_source_J_eff": -708910.9788722463,
+        "scalar_gradient_over_MplH0": -5.642550208266809e-05,
+        "scalar_integrated_lhs": -2.875466285356208e-15,
+        "scalar_integrated_source": -2.875466285356208e-15,
+        "metric_Gauss_lhs": 6.272127461783887e-14,
+        "metric_Gauss_source": 6.272127461783887e-14,
+        "scalar_relative_residual": 0.0,
+        "metric_relative_residual": 0.0
+      },
+      {
+        "radius_kpc": 6.0,
+        "density_over_Mpl2H02": 2263767.1806671335,
+        "consumed_reduced_source_J_eff": -103782.74748984216,
+        "scalar_gradient_over_MplH0": -0.00018667285305774565,
+        "scalar_integrated_lhs": -1.894859613889067e-13,
+        "scalar_integrated_source": -1.8948596138890683e-13,
+        "metric_Gauss_lhs": 4.133173489469925e-12,
+        "metric_Gauss_source": 4.133173489469924e-12,
+        "scalar_relative_residual": 6.661060476998013e-16,
+        "metric_relative_residual": 1.9544148558107463e-16
+      }
+    ]
+  },
+  "fixed_local_body_reconditioned_rear_center_R1_activation": {
+    "image_offsets_microarcsec": [
+      [
+        19.675829003418244,
+        6.467982925251192
+      ],
+      [
+        -7.386044049484397,
+        15.892926094052129
+      ],
+      [
+        -19.7430071215976,
+        0.2207976479984275
+      ],
+      [
+        -0.21752962631182982,
+        -17.034935039239585
+      ]
+    ],
+    "delay_offsets_seconds": [
+      22.434560039073403,
+      9.473537712074176,
+      37.91366852565261
+    ],
+    "scope": "Same local body, source coordinate, quadratic remainder, observed G1 direction, G1 mass and scale. Recompute the rear physical center through each matching local field; this is an observed-direction-conditioned response, not a fixed complete two-plane material configuration."
+  },
+  "seconds": 68.02110010000001,
+  "consumed_input_sha256": {
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "scripts/fit_he0435_geometry_revision.py": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+    "data/strong_lensing_geometry_20261021/development/G1_source_prescription.json": "99f76ee7c079c0000938f858ef79e20f78d1a26b5173b45edf85b684ed55946b",
+    "artifacts/strong_lensing_revision_20261020/gaia/gaia_astrometry_score.json": "ca366d713090649c76a8638da5826bc95ecbd44115b636d4b0b7616afb35a08b",
+    "artifacts/strong_lensing_revision_20261020/revision_development_fit.json": "bba68bf36d1c8e27a3ebb4795a2b057c4030db889df7a1648286dde46b8bdd14"
+  }
+}

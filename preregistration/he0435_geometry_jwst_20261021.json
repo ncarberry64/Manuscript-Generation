@@ -1,0 +1,161 @@
+{
+  "status": "PRESPECIFIED_NEW_GEOMETRY_AND_FIELD_CALIBRATION_BEFORE_JWST_TARGET_PIXELS",
+  "created_utc": "2026-10-21T12:54:46.070648+00:00",
+  "chronology": "Added after the old Gaia and LCO outcomes. Gaia now development. No whole-program prospective preregistration claim.",
+  "primary_observation": {
+    "telescope": "JWST",
+    "instrument": "NIRCam",
+    "filter": "F115W",
+    "program": 1198,
+    "observation": 7,
+    "date": "2022-10-12",
+    "detector": "NRCB3",
+    "products": [
+      "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "jw01198007001_02101_00004_nrcb3_cal.fits"
+    ],
+    "exposure_time_total_s": 1803.776,
+    "calibration_level": "native stage2 CAL, SCI/ERR/DQ and embedded official nonlinear GWCS",
+    "download_uri_prefix": "mast:JWST/product/"
+  },
+  "reserved_unopened": [
+    "JWSTF150W",
+    "JWSTF277W",
+    "JWSTF356W",
+    "HSTF555W",
+    "HSTF275W",
+    "LCO V photometry"
+  ],
+  "used_for_development": [
+    "GaiaDR3quasarrows",
+    "Courbin2011NIC2andcomparisonastrometry",
+    "oldCOSMOGRAIL R plus25pre2019LCO R developmentlikelihood",
+    "consumedHSTF814W/F160Wcentralpixels",
+    "historicalG1G22positionandredshift"
+  ],
+  "not_fresh_targets": [
+    "oldLCO R primary/secondary",
+    "GaiaDR2orEDR3copiesofsharedphotons",
+    "alternativeprocessedoldHSTpixels",
+    "publishedFadelyKeetonquasarastrometryandfluxes"
+  ],
+  "new_geometry": "Exact full two-plane arrival/ray equations; original spherical localtwoPlummer totalmassR1field; positive rearPlummerG1 plus quadraticremainder atz=.7821. G1center follows foregrounddeflected observedray. No added empiricalBHSMresponseamplitude.",
+  "physical_inputs": "Fixed G1direction(-2.585,-3.637)arcsec east/north; G1regularizationa=.2kpc; localnuclearM=1e8Msun/a=.03kpc. Quadraticremainderkappa anchored to old.25625719126715585 to remove mass-sheet coordinate, not measuredenvironmental convergence. Exact olddevelopmentlightlikelihood, Gaiafullcommon-Acovariance, NIC2lenslight/3masmasscenterprior in objective.",
+  "comparators": [
+    "old_frozen_conventional",
+    "old_frozen_R1",
+    "revised_G1_conventional",
+    "revised_G1_R1"
+  ],
+  "source_constraints": [
+    "localTOTALmassconsumedonce",
+    "matchlocalR1projectioncoefficientsanddistances",
+    "noWickorGaussianquantumstateclosure",
+    "exclusive2pt/inclusive4pt/matchedoccupationdistinctionsunchanged",
+    "physicalguard2e-10unchanged",
+    "physical_admission=false"
+  ],
+  "field_psf_calibration": {
+    "sequestration": "Targetguardcircle10arcsec aroundknownfieldcenter; no targetstamp, preview, numericalcentroidorflux used for fieldselection/PSF. Fullnativefilesmaybedownloadedafterphysicalpredictionfreeze; calibrationreadaccesslimitedtofieldregion. Freeze ePSFgrids/starlist/hash and heldoutfieldchecks beforetargetstampmeasurement.",
+    "field_ra_dec_deg": [
+      69.562083333,
+      -12.287333333
+    ],
+    "target_guard_radius_arcsec": 10.0,
+    "selection": "DAOStarFinder FWHM1.5px threshold8sigma sharpness[.1,1] roundness[-.5,.5]; peakSNR>=20; apertureSNR>=100; >=95%25x25stampvalid, central5x5fullyvalid, isolation>=31px,edge>=13px,everycutoutpixeloutsideguard",
+    "DQ": "maskDO_NOT_USEorSATURATED andnonfiniteSCI/nonpositiveERR; reportallotherflags",
+    "split": "physicalskyobjectcrossmatch.12arcsec across4exposures; fixedskyordereveryfourthobjectheldout; at least3trainingphysicalstars+1heldout",
+    "EPSF": "photutils3.1.1 EPSFBuilder oversampling4,25x25cutouts,quarticsmoothing,maxiters12,refinement5,fit_shape17x17,constrain_fluxes,fixed3sigmacalibrationstackclip; no targetclippingorERRrescale",
+    "per_exposure_or_pool": "Per-exposure PSFs only. Common pooling explicitly forbidden for this visit with metadata-known~270pixel dithers.",
+    "gate": "Everydeclaredheldoutfield17x17PSFfit optimizerinteriorandknownERRchi2p>=.001. Failurespreserved; no lensvalidationpass iffieldmeasurementmodelinadequate.",
+    "uncertainty_scope": "ConditionaloncalibratedePSFandofficialdistortion. No target-derivedcovarianceinflation. UnavailablePSF/distortioncovarianceisnotmanufactured.",
+    "algorithm_file": "preregistration/he0435_field_psf_algorithm_20261021.json",
+    "algorithm_sha256": "8e53d5560d22715326f118dd942ad82b4f16bb8c4f3a63457e1c46d35957ba74",
+    "native_products": [
+      "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "jw01198007001_02101_00004_nrcb3_cal.fits"
+    ],
+    "source_sha256": {
+      "scripts/calibrate_he0435_jwst_psf.py": "15bcda06ff71addb5f8303c85dd6c9f73d3ae1ce565996d2c6debd27c53824a7",
+      "code/strong_lensing_field_psf.py": "0deda8cad111e92e27e204f89951416844ab92263f0f09d8db168842b3e08983",
+      "code/strong_lensing_pixel_geometry.py": "596253591bae93e8a4ad16c0b8e289c180386f66ca6a25c1446dd6e7d74b1434"
+    },
+    "known_dither": "Header-only WCS metadata gives~270pxsteps. CommonPSFpool fallback is prohibited for this visit; perexposurePSFs require declaredstarcounts."
+  },
+  "target_measurement": {
+    "method": "Freecentroids/fluxesandaffinebackground, pixelintegratedcalibratedePSF; fixed17x17nativefitstamps; centersinitializedfromknownfieldNIC2quadpattern only. No modelconstrainedcentroids, no fittedscale/shear, no disagreementbasedimageexclusion.",
+    "DQ": "samefixedmaskasfieldcalibration; allqualitydiagnosticsretained",
+    "pixel_gate": "KnownERRchi2p>=.001 for everypoint/exposurefit andoptimizerinterior; formalJTWJcovariancewithoutchi2rescaling. Failureblocksconditionalgeometryvalidation.",
+    "exposure_gate": "InverseformalCovweighted5DmeanandfixedsamepointconfigurationconsistencyQ with5*(nexposure-1)degrees; p>=.001. No scatterrescaling.",
+    "intrinsic_q": "u=(B-A)/|B-A|,v=J*u; q=(|B-A|,(C-A).u,(C-A).v,(D-A).u,(D-A).v). Retainscalibratedangularscaleandchirality; quotients only translation/rotation.",
+    "covariance": "Full8centroidpixelcov->officialGWCSexactlocalJacobian->5DintrinsicJacobian; commonA/commonABoffdiagonals retained. Formal conditionalGaussianmeasurementstatistic; no completeastrophysicalposterior claimed.",
+    "primary_geometry_statistic": "Q=(qobs-qpred)^T Cov(qobs)^-1(qobs-qpred) for eachfrozenpointprediction,5coordinates,0physicaltargetparametersfit. Reportrawqresidualvector/RMSandnormalizeddensity. Primary conditionalpointtest alpha=.05, Q<=chi2.ppf(.95,5).",
+    "improvement_requirement": "A conditionalgeometrysuccessalso requires revisedrawqRMS at least25percentbelowmatchingoldfrozenmodel on sameobservations andsamecovariance; uncertaintywidth cannotestablishimprovement.",
+    "prohibited": [
+      "residualtunederrorfloor",
+      "chi2ERRrescale",
+      "targetfittedscale/shear/affinemap",
+      "switchprimaryafterfailure",
+      "targetrefitreportedfreshsuccess",
+      "excludingdisagreeingimages",
+      "claimingBHSMdetectionfromequalgeometry"
+    ]
+  },
+  "independence": "Different2022telescope/photonsfromdevelopmentHST/Gaia. Stage2calGWCSmustretaininstrumentdistortionandinspecttweakreg/calibrationrefs; completeindependenceofallsharedastrometricreferencecalibrationnotassumed. Ifquasaralignmentleakagenotexcludedlabelthatlimitation.",
+  "exposure_lock": "Persistentmarkerbeforetargetnetworkretrieval; sourcepredictionfreezecommittedandhashverified. Separatefieldcalibrationstageandtargetopeningmarker. Firstoutcomeincludingfailureretained; no repeatfreshclaim.",
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "target_pixels_opened": false,
+  "source_gaia_coordinate_map": "Exact gnomonic about A with analytic6x8alpha-star/decJac including movingAorigin; fixed originalGaiarowcov propagated. The3microasmapcorrectionisnotdominantcause.",
+  "psf_model": "field_empirical",
+  "primary_filter": "F115W",
+  "expected_target_exposures": 4,
+  "planned_point_fits": 16,
+  "pixel_familywise_alpha": 0.016,
+  "exposure_consistency_alpha": 0.001,
+  "geometry_alpha": 0.05,
+  "required_raw_q_rms_reduction_fraction": 0.25,
+  "stamp_radius_pixels": 8,
+  "centroid_bound_pixels": 5.0,
+  "quadrature_order": 7,
+  "anchor_radec_deg": [
+    69.56230463465737,
+    -12.28731414961521
+  ],
+  "tangent_origin_radec_deg": [
+    69.56230463465737,
+    -12.28731414961521
+  ],
+  "association_reference_relative_arcsec": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      -1.4743,
+      0.5518
+    ],
+    [
+      -2.4664,
+      -0.6022
+    ],
+    [
+      -0.9378,
+      -1.616
+    ]
+  ],
+  "prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "psf_calibration_binding_status": "Field-only calibration not yet executed. The resulting empiricalPSF grids and fieldstar diagnostics must be committed and bound before any quasar centroid fitting; physicalpredictions remain unchanged.",
+  "source_sha256": {
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "scripts/fit_he0435_geometry_revision.py": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+    "code/strong_lensing_pixel_geometry.py": "596253591bae93e8a4ad16c0b8e289c180386f66ca6a25c1446dd6e7d74b1434",
+    "scripts/run_he0435_pixel_geometry.py": "013185bdb185f642fa7e285280555698c222ea6d181fa58f791383611ce85e66",
+    "tests/test_strong_lensing_pixel_geometry.py": "7934bd54febbe291aab4e9e0e64e9ce34e7cf48b76062f4ae7e0d772cb49cf44",
+    "scripts/acquire_he0435_jwst_geometry.py": "275ebe6752c91ef7c2e64e8576a851935407b1324513d281c357c1cae78d5cfe"
+  }
+}

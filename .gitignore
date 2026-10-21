@@ -19,3 +19,8 @@ manuscript/build/
 # Original large HST mosaics are reproducibly fetched; exact local cutouts tracked.
 data/strong_lensing_revision_20261020/hst/*_drz.fits
 data/strong_lensing_revision_20261020/hst/*_drc.fits
+
+# Isolated geometry-test runtime and reproducibly fetched native JWST exposures.
+.venv-geometry/
+data/strong_lensing_geometry_20261021/native/
+data/strong_lensing_geometry_20261021/development/*_primary.pdf

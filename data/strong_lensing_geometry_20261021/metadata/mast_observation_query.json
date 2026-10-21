@@ -1,0 +1,23 @@
+{
+  "acquired_utc": "2026-10-21T12:41:25.808734+00:00",
+  "request": {
+    "service": "Mast.Caom.Filtered.Position",
+    "format": "json",
+    "params": {
+      "columns": "obsid,obs_id,obs_collection,instrument_name,filters,proposal_id,t_min,t_max,t_exptime,dataRights,dataURL",
+      "filters": [
+        {
+          "paramName": "obs_collection",
+          "values": [
+            "HST",
+            "JWST"
+          ]
+        }
+      ],
+      "position": "69.562083333, -12.287333333, 0.015"
+    },
+    "pagesize": 2000,
+    "page": 1
+  },
+  "note": "Observation metadata only: no target pixel, numerical image centroid or flux product requested. Earlier incorrect 70.3438deg field centre query returned no observations; no targets were exposed."
+}

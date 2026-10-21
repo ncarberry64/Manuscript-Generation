@@ -1,0 +1,89 @@
+{
+  "status": "FROZEN_POINT_PREDICTIONS_BEFORE_JWST_SCIENCE_ARRAY_ACQUISITION",
+  "models": {
+    "old_frozen_conventional": {
+      "relative_B_C_D_to_A_east_north_arcsec": [
+        -1.4769029890280063,
+        0.5510881649196846,
+        -2.4683151703150763,
+        -0.5980293736508187,
+        -0.9325774776595358,
+        -1.614689166670694
+      ],
+      "role": "preserved previously failed baseline; all parameters frozen before old Gaia exposure"
+    },
+    "old_frozen_R1": {
+      "relative_B_C_D_to_A_east_north_arcsec": [
+        -1.4769029540217278,
+        0.5510883492748136,
+        -2.4683152394836414,
+        -0.598029672004739,
+        -0.9325772835203037,
+        -1.6146891907560996
+      ],
+      "role": "preserved previously failed baseline; all parameters frozen before old Gaia exposure"
+    },
+    "revised_G1_conventional": {
+      "relative_B_C_D_to_A_east_north_arcsec": [
+        -1.4762865036165214,
+        0.5527795554457751,
+        -2.4664059097222064,
+        -0.6030551113650298,
+        -0.9381256408018054,
+        -1.61411374798497
+      ],
+      "baseline_model": "old_frozen_conventional",
+      "role": "new consumed-Gaia development fit; independently test JWST point geometry",
+      "parameter_vector": [
+        11.6707876884678,
+        0.733131182839563,
+        -0.07718623912700052,
+        -0.05566349648219425,
+        0.25625719126715585,
+        0.11313029929930034,
+        0.08988670474372182,
+        -0.00045199552371968314,
+        0.0064374659093008905
+      ],
+      "perturber_mass_Msun": 235148467073.52893,
+      "predicted_delays_days": [
+        6.423926074988515,
+        0.4954612293732339,
+        13.491351395601782
+      ]
+    },
+    "revised_G1_R1": {
+      "relative_B_C_D_to_A_east_north_arcsec": [
+        -1.4762862202595943,
+        0.5527797095431173,
+        -2.4664058755465685,
+        -0.603054969327354,
+        -0.9381257016032596,
+        -1.6141140008581212
+      ],
+      "baseline_model": "old_frozen_R1",
+      "role": "new consumed-Gaia development fit; independently test JWST point geometry",
+      "parameter_vector": [
+        11.670781912814304,
+        0.7331345153440547,
+        -0.07718570188174453,
+        -0.05566372069405284,
+        0.25625719126715585,
+        0.1131279398267895,
+        0.08988537970674937,
+        -0.0004520322871494417,
+        0.0064375020291465345
+      ],
+      "perturber_mass_Msun": 235146069816.55292,
+      "predicted_delays_days": [
+        6.423799409901505,
+        0.4954429756751324,
+        13.491078161096539
+      ]
+    }
+  },
+  "development_fit_sha256": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+  "point_prediction_scope": "Conditional prescribed positive G1 optical response and original local R1 field; no full posterior, unique state or physical admission. Finite error hypotheses cannot establish success by inflation.",
+  "physical_guard": 2e-10,
+  "physical_admission": false
+}

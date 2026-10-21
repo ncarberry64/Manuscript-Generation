@@ -23,6 +23,7 @@ on:
       - "scripts/r1_screened_review/check_remaining_field_algebra.py"
       - "scripts/run_strong_lensing_*.py"
       - "requirements-strong-lensing-review.txt"
+      - "requirements-strong-lensing-geometry.txt"
       - ".github/workflows/strong-lensing-manuscript.yml"
   pull_request:
     paths:
@@ -46,6 +47,7 @@ on:
       - "scripts/r1_screened_review/check_remaining_field_algebra.py"
       - "scripts/run_strong_lensing_*.py"
       - "requirements-strong-lensing-review.txt"
+      - "requirements-strong-lensing-geometry.txt"
       - ".github/workflows/strong-lensing-manuscript.yml"
   workflow_dispatch:
 
@@ -69,7 +71,7 @@ jobs:
       - name: Install focused scientific dependencies
         run: |
           python3 -m venv .venv-lensing
-          .venv-lensing/bin/pip install -r requirements-strong-lensing-review.txt pytest
+          .venv-lensing/bin/pip install -r requirements-strong-lensing-geometry.txt pytest
 
       - name: Check source, inverse-fit, profile and distributed-encounter applications
         run: >-
@@ -87,6 +89,9 @@ jobs:
           tests/test_he0435_unused_metadata.py
           tests/test_he0435_revision_validation.py
           tests/test_strong_lensing_gaia_runner.py
+          tests/test_strong_lensing_geometry_revision.py
+          tests/test_strong_lensing_pixel_geometry.py
+          tests/test_strong_lensing_field_psf.py
 
       - name: Check the exact continuation component identities
         run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json

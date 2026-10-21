@@ -1,0 +1,54 @@
+{
+  "models": {
+    "conventional": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            2.1604310777802773e-05,
+            0.003493821185053561
+          ],
+          "absolute_macro_flux_relative_A": 0.0016505405890480925
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.5863084851996256,
+            -3.640365887866161
+          ],
+          "absolute_macro_flux_relative_A": 2.387365093271706e-07
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.64413518426954,
+            -3.7925271558175964
+          ],
+          "absolute_macro_flux_relative_A": 0.0004569559363325601
+        }
+      ]
+    },
+    "r1": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            2.1553348416501635e-05,
+            0.0034939538699713707
+          ],
+          "absolute_macro_flux_relative_A": 0.001650377396334806
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.58630849922716,
+            -3.640365893698264
+          ],
+          "absolute_macro_flux_relative_A": 2.387341447071914e-07
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.644135740109032,
+            -3.792527158182935
+          ],
+          "absolute_macro_flux_relative_A": 0.0004569496439617718
+        }
+      ]
+    }
+  }
+}

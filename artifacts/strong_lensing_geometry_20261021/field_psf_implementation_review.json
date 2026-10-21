@@ -1,0 +1,26 @@
+{
+  "status": "IMPLEMENTED_AND_SYNTHETICALLY_TESTED_BEFORE_NATIVE_SCI_EXPOSURE",
+  "source_sha256": {
+    "code/strong_lensing_field_psf.py": "0deda8cad111e92e27e204f89951416844ab92263f0f09d8db168842b3e08983",
+    "scripts/calibrate_he0435_jwst_psf.py": "15bcda06ff71addb5f8303c85dd6c9f73d3ae1ce565996d2c6debd27c53824a7",
+    "code/strong_lensing_pixel_geometry.py": "596253591bae93e8a4ad16c0b8e289c180386f66ca6a25c1446dd6e7d74b1434",
+    "tests/test_strong_lensing_field_psf.py": "7e89cd382539552115cac544f31e94edba7de5f2593e5613263feaf777859cb1",
+    "preregistration/he0435_field_psf_algorithm_20261021.json": "8e53d5560d22715326f118dd942ad82b4f16bb8c4f3a63457e1c46d35957ba74"
+  },
+  "tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_field_psf.py -q",
+    "passed": 10,
+    "failed": 0,
+    "seconds": 2.08
+  },
+  "independent_review_correction": "Fresh-data reviewer identified that singleton sky groups cannot establish a small dither. Fixed fallback now requires matched training stars across all six exposure pairs, with a regression test. Metadata270pixel dither will not meet the64pixel common-pool limit. Root also explicitly prohibited common pooling for this frozen visit in both algorithm JSON and executable runner; insufficient per-exposure stars fail without fallback. Transitive pixel-geometry source is hash-verified; regression test rejects a mismatched imported helper before native data access. Before freeze, enforce the existing three-training-star minimum after EPSFBuilder internal exclusions; regression test blocks a converged builder with too few retained stars.",
+  "native_pixels_opened": false,
+  "target_pixel_values_inspected": false,
+  "automatic_failure_behavior": "Insufficient stars, failed convergence, any heldout p<.001, absent heldout star in any exposure, invalid grid or unmet common-pool conditions block target measurement. No quasar calibration fallback.",
+  "uncertainty_scope": "Finite ePSF, calibration background, color/spatial PSF and GWCS uncertainty are not marginalized; retained known-ERR tests conditional, without rescaling/floors.",
+  "primary_software_documentation": [
+    "https://photutils.readthedocs.io/en/stable/api/photutils.psf.EPSFBuilder.html",
+    "https://photutils.readthedocs.io/en/stable/api/photutils.psf.ImagePSF.html"
+  ],
+  "EPSF_API": "Photutils3.1.1 EPSFBuildResults metadata; EPSFStar weights=1/ERR; oversampling4 and sum(grid)=16; ImagePSF cubic-spline evaluation without second integration."
+}
