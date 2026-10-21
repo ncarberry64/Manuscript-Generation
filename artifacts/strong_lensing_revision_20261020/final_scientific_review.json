@@ -1,0 +1,69 @@
+{
+  "status": "PASS_FINAL_READ_ONLY_SCIENTIFIC_AND_COHERENCE_REVIEW",
+  "review_activity": "Read final manuscript source and existing scored/provenance receipts only; no network/query, fitting, filtering, scoring replay or source/existingreceipt mutation. New review receipt is the sole output.",
+  "reviewed_sha256": {
+    "manuscript/strong_lensing_main.tex": "b02b75cda64d3d8ce8764706853da09394244168226b0a1929f24b55eb5c4965",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "249dad8ae5ef71bc75df5c52f7cd4a25cbd1966b23e3ef58f4dbe16c2818fa31",
+    "manuscript/sections/he0435_observed_20261020.tex": "4bcfdb28c1893f9826b9e17d632cb149171444e1018fb3d541795ad52d34a07e",
+    "manuscript/sections/he0435_revision_20261020.tex": "a3b5c34a90beb77e34b7afb10101369936733d87916b04b359708376a198ed44",
+    "manuscript/sections/he0435_revision_results_20261020.tex": "032a6020cfd3f9159ce650f1d040be28d174adee6b062fcf6da3b3cdc7f8772c",
+    "manuscript/sections/he0435_gaia_20261020.tex": "8cf7d416483aa2c1c33bc60dcc1fcd8466314a4748cc7c4aa9c56c391760e797",
+    "manuscript/sections/he0435_gaia_results_20261020.tex": "09e6c228bdd4ac095a68a23c14de9660556606cd7fd695de4947ad1c38b4da38",
+    "artifacts/strong_lensing_revision_20261020/gaia/gaia_astrometry_score.json": "ca366d713090649c76a8638da5826bc95ecbd44115b636d4b0b7616afb35a08b",
+    "artifacts/strong_lensing_revision_20261020/gaia/post_exposure_review.json": "992af12f890f116aa9e139ec7480277db99bbbe49f7c85ed784cd51dbf44895b",
+    "artifacts/strong_lensing_revision_20261020/gaia/gaia_protocol.json": "748b3b40369b220588de22c61d18448f8a94c99885a16f09d2c257ea18c1da6e",
+    "artifacts/strong_lensing_revision_20261020/gaia/query_started.json": "56dbaf8870a7772c4e6300d5e32980fab9b8ff00880ce33a1edc18f2b1f0e64e",
+    "artifacts/strong_lensing_revision_20261020/revision_unused_scores.json": "e95cee4b8ae08ac2772466c2aebfadf9b71f9a5590c3ec3de4a7477ccc5f9b50",
+    "artifacts/strong_lensing_revision_20261020/hst_central_image.json": "c53d34fcef8832ba16345606271c36b378e9c0e0553638022b6f0c54ac413b60",
+    "artifacts/strong_lensing_revision_20261020/hst_revised_r1.json": "5e71b29e3a78835004271b46dd95736ba199c6136cc9f67278b821cc70183aa9",
+    "artifacts/strong_lensing_revision_20261020/macro_selection.json": "5034ac0d63d2d2b4f41384807d43a0cd58167443f82c4661ad7a03c4b0128510"
+  },
+  "actionable_issues": [],
+  "checks": {
+    "abstract_matches_archived_HST_LCO_Gaia_results": true,
+    "Gaia_both_frozen_point_predictions_fail_catalogue_error_only": true,
+    "Gaia_floor_controls_are_sensitivity_not_validated_cure": true,
+    "Gaia_all_source_quality_rows_retained_and_B64_D69_odd_windows_visible": true,
+    "Gaia_shared_A_covariance_and_RA_error_no_second_cosine_explicit": true,
+    "Gaia_no_post_target_mass_frame_rotation_scale_or_source_fit_claimed": true,
+    "Gaia_freeze3032a85_before_single_numerical_query_disclosed": true,
+    "LCO_unused_catalogue_values_not_strict_photon_disjoint_validation": true,
+    "LCO_95coverage_and68overdispersion_width_bias_proper_score_tradeoffs_visible": true,
+    "LCO_sample_driver_model_changes_not_false_single_variable_ablation": true,
+    "HST_bound_conditional_PSF_noise_flux_relation_and_numerical_centroid_search": true,
+    "compact_mass_near_degenerate_candidates_not_physical_mass_measurement": true,
+    "total_positive_source_enters_nonlinear_scalar_once": true,
+    "fixed_body_activation_and_separately_refitted_R1_distinct": true,
+    "finite_ensemble_Rhat5_19_not_claimed_converged_posterior": true,
+    "no_unique_BHSM_state_detection_or_full_macro_posterior_claim": true,
+    "same_transfer_positive_conventional_effective_mass_identity_preserved": true,
+    "coherent_forward_source_optics_identifiability_validation_thread": true,
+    "physical_guard2e_10_and_no_physical_admission_preserved": true
+  },
+  "verified_result_summary": {
+    "Gaia_conventional_RMS_mas": 3.2556013063665485,
+    "Gaia_R1_RMS_mas": 3.2555702328248532,
+    "Gaia_conventional_Q_floor0_2_5": [
+      3465.9052654742304,
+      15.796644795297848,
+      2.5411209005451405
+    ],
+    "Gaia_R1_Q_floor0_2_5": [
+      3465.6670605913105,
+      15.796338584595318,
+      2.5410722717354934
+    ],
+    "LCO_primary_95_covered": 160,
+    "LCO_primary_targets": 162,
+    "LCO_primary_RMSE_mag": 0.0772441769235791,
+    "LCO_primary_mean95width_mag": 0.6699446421305165,
+    "LCO_primary_nominal68coverage": 0.9444444444444444,
+    "LCO_secondary_bias_mag": 0.17611989317786877,
+    "HST_original_nominal_F814_upper": 0.029349159857471028,
+    "HST_original_stress_F814_upper": 0.041231210761397095
+  },
+  "precision_note": "Paper HST nominal0.02935 and stress0.04124 are conservative displayed roundings; headline bounds0.030 and0.042 preserve the archived inequality. No material result discrepancy identified.",
+  "interpretation": "Repository execution integrity and scientific reporting pass this review. Empirical point-model adequacy fails at the Gaia formal-catalogue scale; conservative LCO coverage and conditional HST admissibility do not erase that failure or establish an identified BHSM state.",
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

@@ -1,0 +1,23 @@
+{
+  "status": "DECLARED_BEFORE_UNUSED_TARGET_PHOTOMETRY",
+  "original_protocol_sha256": "6b9b668c4570a35cc4520e8d3227d3ed3707a3f99d1d901c755ae9a76eff5feb",
+  "reason": "Known target timestamp metadata extends to about five years beyond calibration; original500day development windows do not probe a comparable horizon. This extension uses no target photometry.",
+  "additional_folds": [
+    {
+      "train_inclusive": 54800.0,
+      "window_days": 2000
+    },
+    {
+      "train_inclusive": 55600.0,
+      "window_days": 2000
+    },
+    {
+      "train_inclusive": 56400.0,
+      "window_days": 2000
+    }
+  ],
+  "unchanged_model_priors_calibration_rule": true,
+  "rule": "Pool all six overlapping development folds, same perimage higher97.5percentile absolute standardized residual calibration; original shortfold results retained.",
+  "independent_validation": false,
+  "target_values_consumed": false
+}

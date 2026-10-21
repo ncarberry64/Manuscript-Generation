@@ -1,0 +1,9 @@
+{
+  "previous_executed_code_sha256": "35970ae906e9312a8af2088b1ab2530c26cd2dd01a84b4e4cc13286879937149",
+  "final_code_sha256": "214150eee754ec3ca88517dd44767be496e322bc4459f1808278fed0f0e897cc",
+  "byte_comparison_after_removing_only_declared_addition": true,
+  "added_source": "        # JSON callers provide lists; copy to a tuple so a frozen prediction\n        # cannot be changed through an external mutable delay list.\n        object.__setattr__(self, 'delays_days', tuple(float(x) for x in self.delays_days))\n",
+  "explanation": "Only input delay-list copying to an immutable float tuple was added. Every executed initializer and optimizer decode already supplied a tuple; likelihood, optimizer, smoother and score functions are byte-identical. No numerical fit replay is required.",
+  "new_test": "test_json_delay_list_cannot_mutate_a_frozen_model",
+  "training_parameters_unchanged": true
+}

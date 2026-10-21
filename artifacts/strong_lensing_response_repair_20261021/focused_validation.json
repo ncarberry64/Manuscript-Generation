@@ -1,0 +1,37 @@
+{
+  "scope": "Executed repair application checks, distinct from physical calibration and admission",
+  "focused_suite": {
+    "file_list": ".github/workflows/strong-lensing-manuscript.yml source-checks pytest step (21 files)",
+    "command_prefix": ".venv-geometry/Scripts/python.exe -X utf8 -m pytest -q",
+    "passed": 146,
+    "seconds": 26.79,
+    "exit_code": 0
+  },
+  "after_collection_boundary_change": {
+    "command": ".venv-geometry/Scripts/python.exe -X utf8 -m pytest -q tests/test_strong_lensing_jwst_rate_mask.py tests/test_strong_lensing_rate_mask_integration.py",
+    "passed": 10,
+    "seconds": 0.87,
+    "exit_code": 0
+  },
+  "field_algebra": {
+    "command": ".venv-geometry/Scripts/python.exe -X utf8 scripts/r1_screened_review/check_remaining_field_algebra.py --output artifacts/strong_lensing_response_repair_20261021/remaining_field_algebra_check.json",
+    "identities_passed": 12,
+    "exit_code": 0
+  },
+  "repository_collection_diagnostic": {
+    "command": ".venv-geometry/Scripts/python.exe -X utf8 -m pytest --collect-only -q",
+    "new_delivery_import_collision_resolved": true,
+    "collected": 281,
+    "exit_code": 1,
+    "remaining_errors": "Three unrelated R1 2MRS test imports require pandas, absent from the geometry-only local venv. No whole-repository pass or installation of unrelated dependencies is claimed.",
+    "collected_tests_executed": false
+  },
+  "independent_operator_tests": "13 new history/joint-scene focused tests also passed in the independent review; these are implementation checks, not extra observations.",
+  "delivered_native_processing_repeated": false,
+  "original_science_refit": false,
+  "reserved_observations_opened": false,
+  "ERR_rescaled": false,
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

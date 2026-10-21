@@ -1,0 +1,129 @@
+{
+  "scope": "First already-consumed F115W exposure and isolated field star only",
+  "repository": "ncarberry64/Manuscript-Generation",
+  "repository_head": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "CRDS_context": "jwst_1535.pmap",
+  "initial_preprocessing_environment": "environment.txt: jwst2.0.1/stcal1.19.1",
+  "final_ramp_fit_environment": "environment_stcal118.txt: jwst2.0.1/stcal1.18.0",
+  "archived_stcal_version_directly_recorded": false,
+  "inputs": [
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/jwst_nircam_linearity_0054.fits",
+      "role": "original downloaded raw exposure or recorded detector reference",
+      "bytes": 151015680,
+      "sha256": "e21ec1577441b7c581903dcc6b3630c9f02d1085b280245076b5271b73ff69c0",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_linearity_0054.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/jwst_nircam_superbias_0180.fits",
+      "role": "original downloaded raw exposure or recorded detector reference",
+      "bytes": 50359680,
+      "sha256": "ecd533f8ae007d38b1e6c58adbd5c5317eebf231e1d5b69baf57da0945773a6e",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_superbias_0180.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/jwst_nircam_saturation_0100.fits",
+      "role": "original downloaded raw exposure or recorded detector reference",
+      "bytes": 33580800,
+      "sha256": "1734f8b4ba30d44b6e8473e614ba9f831fd0ad2a6b484bbf9eb4a5d3c893a849",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_saturation_0100.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/jw01198007001_02101_00001_nrcb3_uncal.fits",
+      "role": "original downloaded raw exposure or recorded detector reference",
+      "bytes": 83946240,
+      "sha256": "2ce9fa2e9d10a1d0dc802c2cfcc68ca7cff5b5b62f707b94d6f7aa8d068302c8",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01198007001_02101_00001_nrcb3_uncal.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/jwst_nircam_sirskernel_0002.asdf",
+      "role": "additional recorded detector/flat reference",
+      "bytes": 661021,
+      "sha256": "89081d1c79862bff543fb1f4d706d4dd7d6e2a8b5da21042667651daa75a6541",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_sirskernel_0002.asdf"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/jwst_nircam_mask_0075.fits",
+      "role": "additional recorded detector/flat reference",
+      "bytes": 16801920,
+      "sha256": "afea238fcbeac24bf223761fff2bd1c7644bbfaed88e34cb23fb712feb9535b6",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_mask_0075.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/jwst_nircam_gain_0094.fits",
+      "role": "additional recorded detector/flat reference",
+      "bytes": 16787520,
+      "sha256": "6fdf5a66751d5eab49d771c6e5be7ff63b9e759cdcb9422f65c53f26dfcdffc0",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_gain_0094.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/jwst_nircam_readnoise_0282.fits",
+      "role": "additional recorded detector/flat reference",
+      "bytes": 16787520,
+      "sha256": "30ab5afceb3eb95ba8f076a3bcc5776abd4750f6107273ba0a9f5288314557db",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_readnoise_0282.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/jwst_nircam_flat_0667.fits",
+      "role": "additional recorded detector/flat reference",
+      "bytes": 50359680,
+      "sha256": "e5169ecacf29a9bd8365d3cc7302e6b85dc2ade4e6eebd7cdab8798d2c4f70e2",
+      "hash_provenance": "rechecked during final manifest",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_flat_0667.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/jwst_nircam_dark_0337.fits",
+      "role": "complete official dark reference",
+      "bytes": 6291483840,
+      "sha256": "dbffa4953c5596cbd1fc839731d962a6bfd515d82dc3f79059052274d9a391f2",
+      "hash_provenance": "previous complete-file verification receipt; not rehashed during packaging",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_dark_0337.fits"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/derived_jwst_nircam_dark_0337_first42.fits",
+      "role": "exact retained-frame derived reference",
+      "bytes": 1426095360,
+      "sha256": "eaf0cc16ac52ca9fcd73c81a15aefc1c41d03c18e18000d65a6b62f3a1014589",
+      "hash_provenance": "previous complete-file verification receipt; not rehashed during packaging",
+      "hash_receipt": "dark_subset_receipt.json"
+    },
+    {
+      "path_relative_to_REPAIR": "ramp_diagnostic/native_pipeline/refs/derived_jwst_nircam_dark_0337_first2.fits",
+      "role": "exact retained-frame derived reference",
+      "bytes": 83917440,
+      "sha256": "5255f032791d90b4782de549abc5a699bc3f4215aa2629c76c7f9dcb889f5fcc",
+      "hash_provenance": "previous complete-file verification receipt; not rehashed during packaging",
+      "hash_receipt": "dark_subset_receipt.json"
+    },
+    {
+      "path_relative_to_REPAIR": "repo/data/strong_lensing_geometry_20261021/native/jw01198007001_02101_00001_nrcb3_cal.fits",
+      "role": "archived comparison CAL",
+      "bytes": 117573120,
+      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+      "hash_provenance": "rechecked during final manifest"
+    },
+    {
+      "path_relative_to_REPAIR": "stpsf_equal_sampling/jw01198007001_02101_00001_nrcb3_FIELD_stpsf_epsf.fits",
+      "role": "fixed field PSF used by both images",
+      "bytes": 129600,
+      "sha256": "f384b7c36b69f61f30cafa5f3ad21cd5c8295b8e307ae2df4d2c2428a73fbc01",
+      "hash_provenance": "rechecked during final manifest"
+    },
+    {
+      "path_relative_to_REPAIR": "repo/code/strong_lensing_pixel_geometry.py",
+      "role": "unchanged baseline field fitter",
+      "bytes": 16562,
+      "sha256": "e7333e454051bfb68f769421a8f740b52481c39e0b3743ffd60a46ca52be1f76",
+      "hash_provenance": "rechecked during final manifest"
+    }
+  ],
+  "physical_validation": false
+}

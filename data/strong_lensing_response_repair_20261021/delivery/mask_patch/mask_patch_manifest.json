@@ -1,0 +1,21 @@
+{
+  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "files": {
+    "code/strong_lensing_jwst_rate_mask.py": "bd3d4192cebf42dd236009bcd302438e990557b1be21ad51a28cffcb9ebfc6ea",
+    "scripts/replay_he0435_rate_mask.py": "e0e1936ea3962530632cbf432a4bda9a6b6f6de05fc5defe6a06b7f4b3425259",
+    "tests/test_strong_lensing_jwst_rate_mask.py": "d680098b15e558dd5538abfa6fdc4675230d4a089f1be890576c1c17ab1dab9c",
+    "docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md": "829197a90fa016962e245dc9de20447ac809040c773d214bee51c423fce1f022",
+    "docs/CODEX_HANDOFF.md": "0259f4bb29b6053bad3f56a94d32ca85595866b32754c726b17b0bbab74216a9",
+    "artifacts/strong_lensing_geometry_20261021/mask_repair_native_replay.json": "e69b801c51c001caa3cde3519c96a2cfdbd938f7148c4096eede2cd9eca92847",
+    "artifacts/strong_lensing_geometry_20261021/mask_repair_replay.json": "3c1c6d29618e99d7d9a1c1bb8670654c37b406b86beaddb852002a4829ac372c",
+    "artifacts/strong_lensing_geometry_20261021/mask_pipeline_provenance.json": "26a50cc216ca7a617257c950a212a9779ee48de6fe558183bfdadec139cbe9a7",
+    "artifacts/strong_lensing_geometry_20261021/mask_baseline_manifest.json": "08ff73d45de3e27746648e58c83cbfe620d39d9d7e0b36c8428242255a9b32d3",
+    "artifacts/strong_lensing_geometry_20261021/mask_repair_environment.json": "b7fe07f2515e42a09213774888394c8f5f9b784197896c0da0c80bcaf469baa2"
+  },
+  "patch_sha256": "02b27522a786507231a096c488d303b3086b2d6c7201ce010b43978d1092d2d8",
+  "tests": "4 regression groups; 2 integrity guards; all16 canonical and portable replays passed",
+  "original_science_code_changed": false,
+  "remote_git_changed": false,
+  "inherited_123_test_suite_rerun": false,
+  "journal_build_rerun": false
+}

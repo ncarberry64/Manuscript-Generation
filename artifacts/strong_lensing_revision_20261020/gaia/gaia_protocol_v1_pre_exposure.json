@@ -1,0 +1,46 @@
+{
+  "status": "FIXED_PRIOR_TO_GAIA_NUMERICAL_TARGET_EXPOSURE",
+  "chronology": "Added after LCO primary outcome was known; no Gaia numerical position/error/quality rows inspected before this freeze",
+  "metadata_count_only_sources": 4,
+  "tap_endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "adql": "SELECT source_id,ra,dec,ra_error,dec_error,ra_dec_corr,ref_epoch,astrometric_params_solved,astrometric_excess_noise,astrometric_excess_noise_sig,ruwe,duplicated_source,ipd_frac_multi_peak,ipd_frac_odd_win,ipd_gof_harmonic_amplitude,visibility_periods_used,astrometric_n_good_obs_al,phot_g_mean_mag,pmra,pmdec,pmra_error,pmdec_error FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',69.562083333,-12.287333333,0.001)) ORDER BY source_id",
+  "format": "csv",
+  "labels": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "association": "All24 permutations; minimum unweighted sum squared six conventional relative-coordinate residuals; same association used for R1. Report runner-up gap. No frame/scale/rotation fit.",
+  "position_observable": "Fixed ICRS east/north B/C/D offsets at catalogue A, in mas, using the frozen helper tangent-plane convention; quasar macro geometry assumed stationary at Gaia epochJ2016.0; no target-derived proper-motion correction",
+  "primary_covariance": "Published source ra_error (already cosdelta),dec_error,ra_dec_corr; common-A full6x6blocks; source-independent small-angle approximation, no unavailable between-source covariance invented",
+  "coordinate_floor_controls_mas": [
+    0.0,
+    2.0,
+    5.0
+  ],
+  "floor_definition": "After propagating published per-source errors and the common-A crossblocks, add floor^2 I6 independently to the six relative-coordinate variances; apply exactly once.",
+  "statistics": [
+    "all six raw residuals in mas",
+    "coordinate RMS",
+    "maximum image vector residual",
+    "joint Gaussian conditional logdensity in mas^-6",
+    "conditional chi2"
+  ],
+  "quality_policy": "Retain and report all four sources regardless of quality; missing mandatory astrometric errors make formal density/chi2 undefined but raw relative-position residuals are still reported. No reopening or filtering.",
+  "limitations": [
+    "No full macro posterior is supplied; point-prediction scores are conditional.",
+    "Gaia measurements are different2014-2017photons from2003/2012HST; source NIC2pointastrometry2011predatesGaia.",
+    "2026HSTcentralpixelmosaicsuseGaiaEDR3fieldframealignment; independence of every calibration is not certified.",
+    "Gaia close-image blending/chromatic photocentres may differ from HSTNIC2 astrometry; report diagnostics without post-target filtering.",
+    "No new mass/screen/state/clock fit, added optical amplitude, complete-ring reconstruction or unique BHSM claim."
+  ],
+  "source_sha256": {
+    "code/strong_lensing_gaia_validation.py": "115bf57c6e49a3fd82ae211968a5c926a4be0a9b87a2a8780d9680e550211b9b",
+    "scripts/run_he0435_gaia_validation.py": "cd9c344879da6049845492da630d3cdb0dcc204884f4dda4e431ea700690b844",
+    "tests/test_strong_lensing_gaia_validation.py": "699a999b95298791f303d6c27b835f4f63d0268b64d02f2a37a38997d9fdc2d2"
+  },
+  "prediction_sha256": "70f61abfa8068d48cccb56f3b7990c3c203621d8116788132898e0cf3a68d0e6",
+  "single_exposure_lock": "query_started.json created exclusively before request; never removed or silently retried",
+  "pre_exposure_implementation_amendment": "v0 preserved; standardized independent helper API, relative-coordinate floors, stdlibHTTP and raw-residual reporting for null errors before any target query"
+}

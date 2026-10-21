@@ -1,0 +1,408 @@
+{
+  "schema": "bhsm-galaxies-researcher-publication-review-v1",
+  "review_type": "fresh AI-assisted researcher publication/provenance review; not external human peer review",
+  "date": "2026-10-20",
+  "status": "CURRENT_SOURCE_PUBLICATION_REVIEW_AND_FINAL_PDF_PASS",
+  "scope": [
+    "Active focused Galaxies main/body, supporting research review, cover-letter draft and author handoff",
+    "Existing author declarations and prior manuscript/submission records",
+    "Saved package and current replay diagnostics; no numerical rerun performed",
+    "Primary bibliography metadata and current PDF metadata"
+  ],
+  "blockers": [],
+  "optional_clarifications": [
+    {
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "lines": [
+        598,
+        599
+      ],
+      "finding": "The statement that the common control does not change quoted precision can be read as covering every digit of the GR2 table, although those differences visibly change.",
+      "recommendation": "Say it preserves the rounded headline values while the table reports the resolved drift."
+    },
+    {
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "lines": [
+        688,
+        705
+      ],
+      "finding": "The baseline revision is pinned and the additions are distinguished, but final public immutable integration identity is not yet known.",
+      "recommendation": "After commit/push, record the exact new SHA in the integration checkpoint/PR. A release DOI remains an explicitly declared submission task.",
+      "disposition": "Resolved: final paper cites concrete science commit 0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd. Parent verifies remote publication outcome after push."
+    }
+  ],
+  "author_items": [
+    {
+      "item": "Author name and current usable affiliation",
+      "classification": "Confirmed reusable author identification",
+      "value": "Norman P. Carberry; Independent Researcher, Oconomowoc, Wisconsin, USA; ORCID 0009-0000-6650-3485",
+      "evidence": [
+        {
+          "file": "manuscript/main.tex",
+          "line": 12,
+          "quote": "\\author{Norman P. Carberry\\\\Independent Researcher}"
+        },
+        {
+          "file": "submission/UNIVERSE_SPECIAL_ISSUE_COVER_LETTER.md",
+          "lines": [
+            14,
+            15
+          ],
+          "quote": "Norman P. Carberry / Independent Researcher"
+        }
+      ],
+      "applicability": "Same listed author; can populate the active lensing affiliation without inventing a new institution."
+    },
+    {
+      "item": "Correspondence email, location and ORCID",
+      "classification": "Resolved by direct author reply plus recovered prior manuscript header",
+      "evidence": "BHSM_final_paper.tex:12 gives Oconomowoc, Wisconsin, USA and ORCID0009-0000-6650-3485. Public ORCID /person and /email return HTTP200 with email:[]. Relevant manuscript/PDF scans find no email. Use same prior-paper identification in review draft. The author subsequently supplied the exact email directly; public-record absence is no longer a missing fact.",
+      "draft_PR_blocker": false,
+      "journal_submission_blocker": false,
+      "value": "carberry8878130@hotmail.com; Oconomowoc, Wisconsin, USA; ORCID 0009-0000-6650-3485"
+    },
+    {
+      "item": "Funding and conflicts",
+      "classification": "Confirmed same-as-other-manuscripts declarations, written in active manuscript and unsent cover letter",
+      "evidence": "submission/AUTHOR_CONFIRMATION_REQUIRED.md:4-5 labels 'no external funding' and 'no conflicts' as proposed confirm-or-replace; manuscript/sections/09b_universe_submission_back_matter.tex:3-6 reserves both.",
+      "permissible_action": "Write no external funding and no conflicts, citing recovered source and the current author instruction.",
+      "draft_PR_blocker": false,
+      "journal_submission_blocker": false
+    },
+    {
+      "item": "Applicable CRediT roles and final scientific approval",
+      "classification": "Existing sole-author role list confirmed for reuse; author requested review/correction/regeneration of this manuscript",
+      "evidence": "submission/AUTHOR_CONFIRMATION_REQUIRED.md:6 explicitly makes the complete role list proposed and subject to actual contributions. The earlier Universe AI responsibility statement concerns that retained manuscript, not automatic approval of this new lensing revision. Current user reply Same as all my others authorizes reuse of those existing roles.",
+      "draft_PR_blocker": false,
+      "journal_submission_blocker": false,
+      "qualification": "No actual journal submission or letter transmission is authorized/performed by these repository updates."
+    },
+    {
+      "item": "Originality, overlap, prior publication and concurrent journal consideration",
+      "classification": "Resolved by direct author confirmation of no publication or current consideration elsewhere",
+      "evidence": "The author directly supplied that the manuscript is not published or under consideration elsewhere; active cover letter includes the declaration. Earlier missing-attestation review was superseded.",
+      "draft_PR_blocker": false,
+      "journal_submission_blocker": false
+    },
+    {
+      "item": "Exact AI model/version history",
+      "classification": "Historical labels attributed to source records; no unsupported exact current model assertion retained",
+      "evidence": "Generic substantial use is documented; specific current-revision model label is not supported by reviewed records.",
+      "draft_PR_blocker": false,
+      "journal_submission_blocker": false
+    },
+    {
+      "item": "Final immutable release/archive identity",
+      "classification": "Resolved by concrete science commit pinned in final manuscript",
+      "evidence": "Verified local commit subject: Derive and evaluate R1 lens sources and continuation equations. Final PDF contains 0a329fa citation; bibliography/data availability identify exact calculation revision. No archive DOI fabricated.",
+      "draft_PR_blocker": false,
+      "journal_submission_blocker": false,
+      "value": "0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd"
+    }
+  ],
+  "ready": [
+    "Governing BHSM transfer question and conditional effective/common-source distinction are explicit in title, abstract, introduction, discussion and supporting documents.",
+    "The conventional positive effective-mass representation is constructive at retained leading order; offsets are labeled relative to the specified fixed-body reference.",
+    "The constant-target null remains restricted to its original boundary problem; rolling T, target phase and metric coordinate stay distinct.",
+    "Scalar higher-order, common GR2, finite-distance, environment, modified-fluid and global-matching limitations are explicitly declared.",
+    "Original package evidence and current replay are separated in checkpoint/supporting review. No retuned amplitude or changed scientific implementation is asserted.",
+    "The cover letter remains explicitly unsent; originality/exclusivity brackets remain unresolved rather than fabricated.",
+    "Affiliation, funding, conflicts and CRediT items are accurately marked pending except for the exact-model assertion caught above.",
+    "Eight published scientific bibliography entries checked against primary author/publisher records; no author/title/year/DOI mismatch found.",
+    "Abstract contains about 180 whitespace-delimited TeX words; no active submission target date identified.",
+    "Printed headline rV and delay values agree with preserved supplied outputs to their stated rounding; current replay differences are below quoted headline digits."
+  ],
+  "primary_reference_checks": [
+    {
+      "key": "Fleury2021arbitrary",
+      "url": "https://arxiv.org/abs/2011.04440",
+      "result": "authors, title, CQG 38 085002 (2021), DOI agree"
+    },
+    {
+      "key": "Fleury2021los",
+      "url": "https://arxiv.org/abs/2104.08883",
+      "result": "authors, title, JCAP08(2021)024, DOI agree"
+    },
+    {
+      "key": "Teodori2022",
+      "url": "https://cds.cern.ch/record/2800632/files/document.pdf",
+      "result": "title and JCAP07(2022)027 DOI agree; author metadata also agrees with author's institution record"
+    },
+    {
+      "key": "Deffayet2010",
+      "url": "https://arxiv.org/abs/1008.0048",
+      "result": "authors, title, JCAP1010:026(2010), DOI agree"
+    },
+    {
+      "key": "Barreira2013",
+      "url": "https://arxiv.org/abs/1306.3219",
+      "result": "authors, title, JCAP10(2013)027, DOI agree"
+    },
+    {
+      "key": "Barreira2015",
+      "url": "https://doi.org/10.1093/mnras/stv2211",
+      "result": "authors, title, MNRAS454(2015)4085-4102 agree"
+    },
+    {
+      "key": "Tolman1939",
+      "url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.55.364",
+      "result": "author, title, PhysRev55(1939)364, DOI agree"
+    },
+    {
+      "key": "IyerPetters2007",
+      "url": "https://arxiv.org/abs/gr-qc/0611086",
+      "result": "authors, title, GRG39(2007)1563-1582, DOI agree"
+    }
+  ],
+  "no_submission_or_transmission_performed": true,
+  "numerical_reruns": 0,
+  "report_note": "Author declarations are confirmed; fresh publication source findings are resolved or identified as the metadata-console false positive. Current final 18-page PDF, correspondence, concrete science citation and current source hashes verified without rebuild/rerun. Source/continuation progress and remaining physical-map/state prescriptions remain precisely distinguished from an evolved higher-order physical solution. No journal submission or cover-letter transmission was performed.",
+  "user_steering_after_initial_review": {
+    "reply": "Same as all my others",
+    "meaning": "Direct author instruction authorizes reuse of actual prior manuscript facts and declarations; replaces an instruction to keep every proposal indefinitely pending. It does not establish absent correspondence metadata or a new manuscript exclusivity fact."
+  },
+  "author_recovery": {
+    "instruction_read": "C:/Users/carbe/OneDrive/Documents/CODEX/Berger-Hopf-Standard-Model/AGENTS.md",
+    "reusable": [
+      {
+        "item": "name, affiliation, location, ORCID",
+        "source": "C:/Users/carbe/OneDrive/Documents/CODEX/Berger-Hopf-Standard-Model/manuscript/BHSM_final_paper.tex",
+        "line": 12,
+        "quote": "\\author{Norman P. Carberry\\\\Independent Researcher\\\\Oconomowoc, Wisconsin, USA\\\\\\href{https://orcid.org/0009-0000-6650-3485}{ORCID: 0009-0000-6650-3485}}",
+        "corroboration": "Same header in Downloads/BHSM_final_paper.pdf page 1 and flagship/BHSM_flagship.tex lines 11-12."
+      },
+      {
+        "item": "funding",
+        "source": "C:/Users/carbe/OneDrive/Documents/CODEX/Berger-Hopf-Standard-Model/manuscript/BHSM_v1_technical_note.tex",
+        "lines": [
+          364,
+          365
+        ],
+        "quote": "No external funding is declared unless otherwise specified by the author.",
+        "reuse": "With the current same-as-others instruction, use no external funding; no need to request the same generic confirmation again."
+      },
+      {
+        "item": "conflicts",
+        "source": "C:/Users/carbe/OneDrive/Documents/CODEX/Berger-Hopf-Standard-Model/manuscript/BHSM_v1_technical_note.tex",
+        "lines": [
+          367,
+          368
+        ],
+        "quote": "None declared unless otherwise specified by the author.",
+        "reuse": "With the current same-as-others instruction, use no conflicts."
+      },
+      {
+        "item": "sole-author CRediT proposal",
+        "source": "submission/AUTHOR_CONFIRMATION_REQUIRED.md",
+        "line": 6,
+        "quote": "Norman P. Carberry: conceptualization, methodology, software, validation, formal analysis, investigation, resources, data curation, writing—original draft preparation, writing—review and editing, visualization.",
+        "reuse": "Current direct author reuse instruction supports these existing roles, with substantive AI assistance disclosed separately."
+      }
+    ],
+    "focused_search_no_email": [
+      "BHSM manuscript TeX/Markdown and CITATION.cff",
+      "Manuscript-Generation manuscript/submission records",
+      "Downloads/UNIVERSE_COSMOLOGY_SUBMISSION_FINAL source package",
+      "A_Hyperspherical_Scalar_Topographic_Framework (3).pdf",
+      "topographic_dark_energy_arxiv_ready.tex and PDF",
+      "UNIVERSE_COSMOLOGY_FINAL.pdf",
+      "R1_Geometry_to_Prediction_SUBMISSION_READY_9b658bf.pdf",
+      "R1_Geometry_to_Prediction_FINAL_af24530.pdf",
+      "BHSM_final_paper.pdf and BHSM_final_paper (1).pdf",
+      "Hyperspherical_Gravity_and_the_Infinite_Spheroid_Hypothesis Article.pdf",
+      "Galaxies_Strong_Lensing_Revised.pdf"
+    ],
+    "actual_remaining_facts": "The author subsequently supplied carberry8878130@hotmail.com and explicitly confirmed no publication or consideration elsewhere. Prior absent-public-email findings are historical recovery evidence, not a current missing-author-fact claim.",
+    "public_ORCID_check": {
+      "person_url": "https://pub.orcid.org/v3.0/0009-0000-6650-3485/person",
+      "email_url": "https://pub.orcid.org/v3.0/0009-0000-6650-3485/email",
+      "http_status": [
+        200,
+        200
+      ],
+      "public_given_names": "Norman",
+      "public_family_name": "Carberry",
+      "public_email_count": 0,
+      "method": "requests GET with Accept application/json; primary public ORCID API; no authenticated account or secret used",
+      "finding": "Public ORCID confirms author identity and offers no public email. Existing paper header and ORCID can be reused in the author-review draft; do not invent journal correspondence email."
+    },
+    "external_manuscript_source_sha256": {
+      "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\manuscript\\BHSM_final_paper.tex": "7586d51cb7b204fa2106f1f0990ec84d6409ab1ed7dd4c71df2359da5f5da778",
+      "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\manuscript\\BHSM_v1_technical_note.tex": "eab74355a22cc98d3f82935bfabdd3cba4f83350ccd03448fe2662009e5987da"
+    }
+  },
+  "corrected_source_sha256": {
+    "manuscript/strong_lensing_main.tex": "b26e34e436c76d90b5433bdb7ce17ff8841d8655aaea2e89bb1945a99b453d28",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "1ad0a1d6260daa504e75672799f88df935d203940f3c6b59c1fa724b4e54cc7a"
+  },
+  "confirmed_author_facts": {
+    "name": "Norman P. Carberry",
+    "affiliation": "Independent Researcher, Oconomowoc, Wisconsin, USA",
+    "orcid": "0009-0000-6650-3485",
+    "correspondence_email": "carberry8878130@hotmail.com",
+    "funding": "No external funding",
+    "conflicts": "No conflicts of interest",
+    "contribution_roles": "Existing sole-author CRediT role list reused at direct author instruction",
+    "publication_status": "Author explicitly confirmed manuscript is not published or under consideration at another journal",
+    "authorization": "Author requested review, correction, regeneration and existing draft-PR publication; no journal submission or cover-letter transmission"
+  },
+  "new_scientific_progress": {
+    "source_application": {
+      "derivation": "docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md",
+      "receipt": "artifacts/strong_lensing_bhsm_integration_20261020/source_application.json",
+      "consumed_source": "J_eff = J_T - b_T (rho + rho_Sigma)/(2 Mpl^2)",
+      "computed_pi_prime_at_R_in_MplH0": -0.0002119825778845613,
+      "radial_integrated_source_natural": -1.216417408185084e-13,
+      "max_scalar_flux_relative_residual": 4.15047479544644e-16,
+      "original_metric_Gauss_relative_residual": 0.0,
+      "material_flux_jump_relative_residual": 6.225712193169661e-16,
+      "new_focused_tests_reported_passed": 7,
+      "classification": "Executed effective source and matching application on existing computed finite-body section; no physical microscopic closure claimed",
+      "remaining_physical_map": "Action-owned physical embedding/source pullback into canonical T and cubic vertex, complement spectrum, physical length normalization and common domain",
+      "nonuniqueness": "Two explicit positive normalized same-domain quadratic lifts preserve leading C,D while changing B and cutoff. They are mathematical witnesses, not selected galaxy states or new fitted parameters.",
+      "direct_map_obstruction": "Inherited nonzero Theta/r^2 source produces 1/r flux, excluding a constant-rescaling identification with isolated R1 1/r^2 flux; other action-owned exports or nonlocal maps remain possible.",
+      "material_matching_qualification": "Exact-GR reference K_uu and retained leading R1 K_uu are separately evaluated and have zero jumps. They are not identified with each other or claimed to solve exact modified-TOV matching."
+    },
+    "continuation": {
+      "derivation": "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md",
+      "receipt": "artifacts/strong_lensing_bhsm_integration_20261020/remaining_field_algebra_check.json",
+      "derived": "Exact cubic stress/current, spherical Einstein/scalar, fluid continuity/Euler, environmental cross-Hessian, overlap/matching and null Hamiltonian applications",
+      "algebraic_identities_checked_zero": 12,
+      "worked_obstructions": [
+        "Exactly static isolated freezing discards required rolling time-current balance",
+        "A prescribed density does not specify the material EOS/support relation",
+        "Projected optical tides do not specify the consumed three-dimensional environmental scalar Hessian",
+        "Naive flat Poisson extension to compact slice has an integral compatibility obstruction"
+      ],
+      "classification": "Derived equations and algebra checks; not an evolved higher-order physical solution",
+      "physical_application_consumes": "Material EOS/support, environmental density and Cauchy state, outer homogeneous/compensation and matching prescription"
+    }
+  },
+  "supporting_documents_reconciled": [
+    "README.md",
+    "docs/README.md",
+    "docs/STRONG_LENSING_SCOPE_20261020.md",
+    "docs/STRONG_LENSING_BHSM_INTEGRATION_20261020.md",
+    "docs/STRONG_LENSING_CHECKPOINT_20261020.md",
+    "docs/strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md",
+    "docs/strong_lensing_r1_screened_20261020/GALAXIES_COVER_LETTER_DRAFT.md",
+    "docs/strong_lensing_r1_screened_20261020/CODEX_GALAXIES_INTEGRATION_PROMPT.md"
+  ],
+  "supporting_link_audit": {
+    "active_markdown_files": 8,
+    "missing_relative_links": 0,
+    "publication_review_json_parse": "PASS",
+    "numerical_reruns_performed_by_this_supporting_pass": 0
+  },
+  "science_commit": "0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd",
+  "science_commit_scope": "68 new integrated calculation, derivation, input, output and check files; concrete commit verified locally and cited by final manuscript bibliography/data availability",
+  "final_publication_commit": "Follows the pinned science commit on the existing draft-PR branch; parent records actual resulting SHA after commit/push.",
+  "unresolved_publication_blockers": [],
+  "final_pdf": {
+    "path": "manuscript/strong_lensing_main.pdf",
+    "sha256": "cfcbb605fd6331f7165f29e0bb2594c4c9659c849ac198db829eea1908f2160a",
+    "pages": 18,
+    "correspondence_email_visible": true,
+    "science_commit_citation_visible": true,
+    "replacement_characters_in_metadata": {
+      "Title": 0,
+      "Subject": 0,
+      "Keywords": 0
+    },
+    "build": "Real Galaxies MDPI class and dependencies; root final log audit reports zero overfull/underfull boxes, undefined references/citations or duplicate destinations",
+    "visual_audit_reported_by_root": {
+      "all_contact_sheet_pages": 18,
+      "full_pages": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "result": "Clean equations/tables/figures/references/journal metadata/declarations/new appendices and visible correspondence"
+    },
+    "reviewer_read_only_verification": "Read current PDF text/metadata and hashes; no build or numerical rerun performed in this final document reconciliation"
+  },
+  "resolved_findings": [
+    {
+      "id": "PUB-01",
+      "severity": "medium",
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "lines": [
+        455,
+        462
+      ],
+      "finding": "Unqualified numerical-check prose carries package-era diagnostic maxima that do not bound the current replay.",
+      "evidence": {
+        "saved_package_flux": 7.883875800826668e-16,
+        "current_replay_flux": 8.300949590885229e-16,
+        "current_replay_alpha_derivative_relative_error": 3.19013099127063e-12,
+        "manuscript_flux_text": "7.9e-16",
+        "manuscript_alpha_derivative_upper_bound": "2.4e-12",
+        "source": "artifacts/strong_lensing_bhsm_integration_20261020/validation.json focused_checks",
+        "saved_package_alpha_derivative_relative_error": 2.3877179486829967e-12
+      },
+      "correction": "Attribute retained old values explicitly to the supplied package snapshot and add current replay bounds of 8.4e-16 and 3.2e-12, or revise the diagnostics with a provenance note. Do not alter historical numerical evidence.",
+      "physical_values_affected": false,
+      "initial_finding_status": "fresh-review finding before root correction",
+      "disposition": "Resolved in source: original diagnostic values explicitly attributed to supplied reference run; current replay values 8.30e-16 and 3.19e-12 added separately."
+    },
+    {
+      "id": "PUB-02",
+      "severity": "medium",
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "lines": [
+        829,
+        833
+      ],
+      "finding": "The exact model label 'GPT-6 Astra Pro, this revision' is asserted without execution-record evidence. The surrounding clause reserves only historical Codex details.",
+      "correction": "Retain the substantive ChatGPT/Codex assistance disclosure, remove the unsupported current-revision model label, and reserve exact model/version attribution for author execution-record confirmation for both services.",
+      "source": "Manuscript text; existing 09b_universe_submission_back_matter.tex uses generic ChatGPT/Codex; docs/UNIVERSE_MDPI_SUBMISSION_CHECKLIST.md item 6 reserves exact model/version confirmation.",
+      "initial_finding_status": "fresh-review finding before root correction",
+      "disposition": "Resolved in source: generic ChatGPT/Codex assistance retained; package model label attributed to package; historical details explicitly require confirmation."
+    },
+    {
+      "id": "PUB-03",
+      "severity": "none",
+      "file": "manuscript/strong_lensing_main.pdf",
+      "lines": [],
+      "finding": "Initial console-rendering suspicion was a false positive: codepoint audit confirms actual PDF metadata has zero U+FFFD and valid U+2013 dashes.",
+      "evidence": {
+        "reader": "pypdf PdfReader(...).metadata",
+        "replacement_characters": {
+          "Title": 0,
+          "Subject": 0,
+          "Keywords": 0
+        },
+        "non_ascii_codepoints": [
+          "U+2013"
+        ],
+        "cause": "CP1252 subprocess output rendered through UTF-8 tool transport"
+      },
+      "correction": "No change required; preserve valid metadata.",
+      "initial_finding_status": "fresh-review finding before root correction",
+      "disposition": "False positive resolved; no PDF metadata correction required."
+    },
+    {
+      "id": "PUB-04",
+      "severity": "low",
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "lines": [
+        861,
+        864
+      ],
+      "finding": "The displayed positive w0*kappa_eta integral is the phase Hessian/self-curvature, whereas the prose calls it quadratic gradient energy. The energy obtained from F(X)=kappa_eta*X/2+... has a factor one half.",
+      "correction": "Preserve the integral and call it 'positive phase self-curvature', or put the factor one half into the energy expression. The first option preserves the retained equation literals and clarifies what is evaluated.",
+      "physical_null_affected": false,
+      "initial_finding_status": "fresh-review finding before root correction",
+      "disposition": "Resolved in source: displayed quantity now explicitly called positive second variation (phase self-curvature)."
+    }
+  ]
+}

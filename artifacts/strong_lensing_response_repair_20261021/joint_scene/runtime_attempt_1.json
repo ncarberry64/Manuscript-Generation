@@ -1,0 +1,5 @@
+{
+  "status": "FAILED_BEFORE_FIRST_FIT",
+  "reason": "Native unsigned DQ BZERO scaling cannot use Astropy memmap=True; changed only file access to memmap=False. No response/scene parameters executed or changed.",
+  "resumed_utc": "2026-10-21T16:06:23.839634+00:00"
+}

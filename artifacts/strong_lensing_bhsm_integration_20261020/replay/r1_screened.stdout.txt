@@ -1,0 +1,91 @@
+{
+  "status": "CONDITIONAL_R1_CUBIC_EFT_LOCAL_QUASISTATIC_PREDICTION",
+  "coefficients": {
+    "z_l": 0.3,
+    "H0_km_s_Mpc": 67.4,
+    "H_over_H0": 1.1836105771853052,
+    "Tdot_over_MplH0": 0.2377644263710765,
+    "Tddot_over_MplH02": 0.2484715891238288,
+    "lambda_over_MplH02": 1.0,
+    "b": 0.11306384489513412,
+    "C": 4.238858559433703
+  },
+  "screening": {
+    "rV_Mpc": 0.21202922497717772,
+    "unscreened_extra_fraction": 0.0015078862438121512,
+    "H_l_rV_over_c": 5.642138685207786e-05,
+    "effective_extra_mass_infinity_Msun": 150788624.38121513,
+    "mass_scaling_at_fixed_z": "rV proportional to M^(1/3)",
+    "effective_halo_degeneracy": "delta M_eff(r)=M_enclosed(r)*extra_force(r), with nonnegative density; flexible ordinary halos reproduce this retained Phi=Psi field"
+  },
+  "changes": {
+    "images_microarcsec": [
+      [
+        6.123276249270226,
+        0.0
+      ],
+      [
+        0.7881071643622839,
+        0.0
+      ],
+      [
+        -4.348591524538925,
+        -5.9705390621858e-11
+      ]
+    ],
+    "relative_delays_seconds": [
+      25.959258149259767,
+      8.64901937507625
+    ],
+    "relative_delays_fractional": [
+      1.3835573650311517e-05,
+      7.014309980624134e-06
+    ],
+    "linear_relative_delays_seconds": [
+      25.959098922721797,
+      8.648963280201446
+    ],
+    "linear_images_microarcsec": [
+      [
+        6.123237474376573,
+        0.0
+      ],
+      [
+        0.7881150659656737,
+        -0.0
+      ],
+      [
+        -4.348562965596671,
+        3.948812434491166e-16
+      ]
+    ]
+  },
+  "delay_ratio": {
+    "conventional": 1.5216444673828198,
+    "screened": 1.5216548468481388,
+    "change": 1.037946531901035e-05,
+    "fractional_change": 6.821215823737958e-06,
+    "qualification": "common MST scale cancels; source/profile/centering freedoms remain"
+  },
+  "checks": {
+    "max_integrated_scalar_equation_relative_residual": 8.300949590885229e-16,
+    "max_independent_alpha_derivative_relative_error": 3.19013099127063e-12,
+    "max_independent_potential_derivative_relative_error": 1.920585267590459e-09,
+    "finite_matching_tail": [
+      {
+        "impact_Mpc": 0.0038283840798525306,
+        "fraction_extra_alpha_beyond_20_Mpc": 1.6599832586283725e-06
+      },
+      {
+        "impact_Mpc": 0.00037648891104485356,
+        "fraction_extra_alpha_beyond_20_Mpc": 1.0839546484842089e-06
+      },
+      {
+        "impact_Mpc": 0.0030128277754399237,
+        "fraction_extra_alpha_beyond_20_Mpc": 1.4476269385443885e-06
+      }
+    ]
+  }
+}
+fixed-center projected rank 1 free-center projected rank 0
+output artifacts\strong_lensing_bhsm_integration_20261020\replay\results.json

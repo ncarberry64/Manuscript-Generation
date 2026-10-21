@@ -1,0 +1,137 @@
+{
+  "schema": "bhsm-nonlinear-refit-independent-review-v1",
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "review_type": "Independent AI-assisted read-only code/equation and saved-receipt review; not external human peer review",
+  "reviewed_date": "2026-10-20",
+  "files": [
+    "code/strong_lensing_refit.py",
+    "scripts/run_strong_lensing_refit.py",
+    "tests/test_strong_lensing_refit.py",
+    "docs/strong_lensing_r1_screened_20261020/NONLINEAR_LENS_REFIT_20261020.md",
+    "artifacts/strong_lensing_acceptance_20261020/nonlinear_refit.json"
+  ],
+  "concrete_errors": [],
+  "mathematical_checks": [
+    {
+      "name": "Physical sheet normalization",
+      "result": "PASS",
+      "derivation": "With q=D_ls/D_os and physical sheet s=kappa/(D_ol q), alpha_sheet=s(x-D_ol theta_c) gives q alpha_sheet=kappa(theta-theta_c). kappa is dimensionless convergence for this source plane; s has units Mpc^-1."
+    },
+    {
+      "name": "Potential-gradient-Hessian consistency",
+      "result": "PASS",
+      "derivation": "The added potential is one half s |x-D_ol theta_c|^2. Its physical gradient is s(x-D_ol theta_c) and Hessian is s I, exactly as returned by ConventionalSheetLens.application. Body and sheet use the same center."
+    },
+    {
+      "name": "Canonical Fermat and observer-clock normalization",
+      "result": "PASS",
+      "derivation": "For scalar maps the retained time-delay matrix is (1+z_l)D_ol/q. The code uses this through lens_application for both geometric and encounter contributions. Relative times cancel the arbitrary common potential/source constant. No independent H0 or delay scale is fitted."
+    },
+    {
+      "name": "Fixed physical injection versus fitted inverse source",
+      "result": "PASS",
+      "derivation": "The injection is read without changing the physical source, spectrum, redshifts, clock or maps. The inverse source coordinate changes by D_os ARCSEC delta_beta_arcsec, so delta_beta is exactly the stated angular nuisance. A compensating fitted source describes a different inverse-model preparation, not a retuned injected state."
+    },
+    {
+      "name": "Finite mass-sheet identity",
+      "result": "PASS",
+      "derivation": "At zero center, M -> lambda M, R fixed, beta -> lambda beta and kappa -> 1-lambda give the exact angular potential transformation lambda psi + (1-lambda)|theta|^2/2. Images are invariant and relative Fermat times scale by lambda, as the first test checks. This is not a second independent clock-rescaling parameter."
+    },
+    {
+      "name": "Five original rows",
+      "result": "PASS",
+      "derivation": "The optimizer evaluates theta-beta-G alpha=0 at the three injected axial positions and two relative arrival-time equations. The row units are arcsec for the lens residuals and days for delays. Numerical divisors 0.001 arcsec and 0.1 day condition the solve; they are not measurement covariance or a forecast."
+    },
+    {
+      "name": "Independent forward root application",
+      "result": "PASS_WITH_LOCAL_BRANCH_SCOPE",
+      "derivation": "After the inverse solve, brentq independently re-solves each of the three provided branches in a plus/minus 0.01 arcsec interval about its injected position. The output does not simply copy fitted observed positions. It uses the same canonical lens kernel; it is not an independently implemented optical theory or a global search for every possible root."
+    },
+    {
+      "name": "Bounded nonlinear domain",
+      "result": "PASS",
+      "domain": {
+        "delta_log_M": [
+          -0.2,
+          0.2
+        ],
+        "delta_log_R": [
+          -0.2,
+          0.2
+        ],
+        "source_shift_arcsec": [
+          -0.02,
+          0.02
+        ],
+        "lens_center_arcsec": [
+          -0.02,
+          0.02
+        ],
+        "source_plane_convergence": [
+          -0.2,
+          0.2
+        ]
+      },
+      "qualification": "The evaluated solution is far inside these bounds. All transverse coordinates are zero by the declared axial, scalar-map domain; this is not a nonaxisymmetric population fit."
+    }
+  ],
+  "interpretation_checks": {
+    "free_center": "Five adjustable coordinates fitting five independent axial scalar observables is a saturated local inverse example. The full-rank finite Jacobian supports a local finite solution here; it is not evidence of a general all-lens degeneracy or a measured posterior.",
+    "fixed_center": "Removing the center gives four coordinates for five rows. The remaining millisecond mismatch belongs to this restricted numerical row weighting and profile family; it is not a detectable or irreducible BHSM signal.",
+    "stronger_equivalence": "The separately derived positive effective-mass construction, not this saturated fit alone, supports complete retained-field equivalence for all incident rays.",
+    "order": "This inverse application uses the saved leading screened injection. It does not execute scalar higher-order fields or a new GR2 inverse comparison.",
+    "double_counting": "The one physical sheet is added only to the encounter. The original propagation maps are not modified by an additional duplicate sheet."
+  },
+  "saved_receipt_application": {
+    "free_center_scaled_original_row_norm": 1.3894713767374543e-13,
+    "free_center_max_original_lens_residual_rad": 4.235164736271502e-22,
+    "free_center_max_stationarity_Mpc": 1.3010426069826053e-18,
+    "free_center_image_errors_microarcsec": [
+      0,
+      5.4597839609473516e-11,
+      -8.735654337515763e-11
+    ],
+    "free_center_delay_errors_seconds": [
+      9.208633855450898e-10,
+      -1.5347723092418164e-10
+    ],
+    "fixed_center_delay_errors_seconds": [
+      0.0033063977411984524,
+      -0.005031192819160424
+    ],
+    "fixed_center_max_image_error_microarcsec": 0.00010142848136042411,
+    "original_fixed_body_offsets_seconds": [
+      25.959258149566722,
+      8.649019375383205
+    ],
+    "all_four_recorded_source_hashes_match_current_files": true,
+    "raw_offset_values_match_unchanged_injection_receipt": true
+  },
+  "focused_tests": {
+    "previously_reported_passed": 4,
+    "rerun_by_this_review": 0,
+    "assessed_purposes": [
+      "Exact finite mass-sheet image/time symmetry",
+      "Recovery of a finite independently generated conventional injection",
+      "Finite R1 inverse fit followed by original-row/forward-root checks",
+      "Remaining restricted-profile residual with the center fixed"
+    ]
+  },
+  "limitations_not_errors": [
+    "Independent root application means a separately solved root problem on the same physical kernel, not independently developed lens physics.",
+    "Only the three declared noncritical axial branches are verified; the implementation is not a global root-census theorem.",
+    "Near machine-precision fit residuals are reproducibility diagnostics, not astrophysical accuracy or observational information.",
+    "The recovered nuisance parameters are one local representation under the declared bounds and row scales; no uncertainty estimate or unique physical source/galaxy is inferred."
+  ],
+  "recommendation": "Retain the result as a concrete finite identifiability application, with the existing saturated-example and positive-halo qualifications. No scientific correction is required from this review.",
+  "no_science_edited": true,
+  "no_numerical_rerun": true,
+  "no_external_communication": true,
+  "reviewed_sha256": {
+    "code/strong_lensing_refit.py": "ab779c993d82f0a5b8be28c774bfd682601b4d87062d90905f2bb7eaf3313b33",
+    "scripts/run_strong_lensing_refit.py": "c5abe9710679e68a3ff532c4af3098330fd5cd6bac27b7db700efa5e048b45b0",
+    "tests/test_strong_lensing_refit.py": "7d7fdda5b1d12be1bc70064c785f2a13b4cdaf23e19f5bcd31b48c2ace02c7d4",
+    "docs/strong_lensing_r1_screened_20261020/NONLINEAR_LENS_REFIT_20261020.md": "eb782c21130614d929f02f4aa5dd9464085c34c329bca8e75c3f240edaf90d0a",
+    "artifacts/strong_lensing_acceptance_20261020/nonlinear_refit.json": "041044e932fd2c0b89fa3523fd8d8cd7cd9abd60d69ecc3672c65c3ee07e8690"
+  }
+}

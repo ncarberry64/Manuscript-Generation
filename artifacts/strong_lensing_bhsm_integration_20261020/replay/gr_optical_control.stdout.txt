@@ -1,0 +1,60 @@
+{
+  "image_rows": [
+    {
+      "impact_Mpc": 0.0038283840798525306,
+      "impact_over_R": 1.2761280266175101,
+      "alpha_1PM_rad": 4.999932861252705e-06,
+      "alpha_2PM_rad": 1.8407275108114026e-11,
+      "alpha_static_exact_rad": 4.999951268611145e-06,
+      "static_quadrature_error_rad": 5.551061020415853e-20,
+      "static_exact_minus_1PM_rad": 1.840735843931736e-11,
+      "static_exact_minus_1PM_minus_2PM_rad": 8.333120333320031e-17,
+      "extra_potential_Mpc": 1.9458774888722195e-14,
+      "extra_alpha_prime_per_Mpc": -9.61621129133056e-09,
+      "correction_over_1PM": 3.6815044559422716e-06
+    },
+    {
+      "impact_Mpc": 0.00037648891104485356,
+      "impact_over_R": 0.12549630368161785,
+      "alpha_1PM_rad": 1.9782564716944492e-06,
+      "alpha_2PM_rad": -2.415893317054628e-13,
+      "alpha_static_exact_rad": 1.978256230102998e-06,
+      "static_quadrature_error_rad": 2.196453227000157e-20,
+      "static_exact_minus_1PM_rad": -2.415914512646461e-13,
+      "static_exact_minus_1PM_minus_2PM_rad": -2.1195591832861944e-18,
+      "extra_potential_Mpc": -4.245747541374026e-14,
+      "extra_alpha_prime_per_Mpc": 9.513078414906312e-10,
+      "correction_over_1PM": -1.221223512533401e-07
+    },
+    {
+      "impact_Mpc": 0.0030128277754399237,
+      "impact_over_R": 1.004275925146641,
+      "alpha_1PM_rad": 6.353387844599369e-06,
+      "alpha_2PM_rad": 2.972158003683467e-11,
+      "alpha_static_exact_rad": 6.35341756635038e-06,
+      "static_quadrature_error_rad": 7.05371046722012e-20,
+      "static_exact_minus_1PM_rad": 2.9721751010461416e-11,
+      "static_exact_minus_1PM_minus_2PM_rad": 1.7097362674381315e-16,
+      "extra_potential_Mpc": 3.8289200115545194e-16,
+      "extra_alpha_prime_per_Mpc": -1.973002259148041e-08,
+      "correction_over_1PM": 4.678067947968766e-06
+    }
+  ],
+  "central_coefficient": {
+    "analytic": -0.09494692324937426,
+    "extrapolated_exact": -0.0949469232621308,
+    "absolute_difference": -1.2756545819669896e-11,
+    "relative_difference": 1.3435449389092202e-10
+  },
+  "exterior_coefficient_checks": [
+    {
+      "image_index": 0,
+      "relative_error": 0.0
+    },
+    {
+      "image_index": 2,
+      "relative_error": 0.0
+    }
+  ]
+}
+artifacts\strong_lensing_bhsm_integration_20261020\replay\review\gr_optical_control_results.json

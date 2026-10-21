@@ -1,0 +1,47 @@
+{
+  "status": "same previously fixed500DN/DQ calibration screen applied to held dark; no spectrum adjustment",
+  "records": [
+    {
+      "exposure": 1,
+      "original_native_outputs": 1444,
+      "same_fixed_calibration_screen_retained": 1433,
+      "excluded_dark_particle_or_DQ": 11,
+      "conditional_calibration_held_Q": 961.5335514798006,
+      "Q_per_observation": 0.6709934064757855,
+      "projected_covariance_sha256": "12793e938bf6ce7d2424890af8e78b6ee65955382e3610010e48bd8f6f70470a"
+    },
+    {
+      "exposure": 2,
+      "original_native_outputs": 1444,
+      "same_fixed_calibration_screen_retained": 1430,
+      "excluded_dark_particle_or_DQ": 14,
+      "conditional_calibration_held_Q": 1941.3695770796019,
+      "Q_per_observation": 1.3576011028528685,
+      "projected_covariance_sha256": "bbc08e95c8928c082d83086b4b800897dbb8eecfd886ca454c2332c97e3bc45d"
+    },
+    {
+      "exposure": 3,
+      "original_native_outputs": 1443,
+      "same_fixed_calibration_screen_retained": 1424,
+      "excluded_dark_particle_or_DQ": 19,
+      "conditional_calibration_held_Q": 1235.9232281066365,
+      "Q_per_observation": 0.8679236152434245,
+      "projected_covariance_sha256": "18f0619fa7dd4c78423b7f2bec46b17aa65e1eec90dbcc1fb350ca8fedef2023"
+    },
+    {
+      "exposure": 4,
+      "original_native_outputs": 1445,
+      "same_fixed_calibration_screen_retained": 1433,
+      "excluded_dark_particle_or_DQ": 12,
+      "conditional_calibration_held_Q": 1049.0335743375906,
+      "Q_per_observation": 0.7320541342202307,
+      "projected_covariance_sha256": "d7c36be1693f619a3a535fa24f201f10b82964e0e332f75a950fc73f95aa8e1f"
+    }
+  ],
+  "allnative_unfiltered_held_scores_preserved": "fixed_spectral_projection.json",
+  "native_derivative_map": "analytic",
+  "interpretation": "Unscreened dark particle events are outside the calibration bulk-noise conditioning; same-screen transfer still varies by detector location/epoch and is not assumed universally calibrated.",
+  "mask_not_selected_by_PSFor_lens_agreement": true,
+  "physical_validation": false,
+  "source_sha256": "343b82f6e0b2a61c3396d54fd669ccc1e06b2ffedd2bb085807cbfb7183363ca"
+}

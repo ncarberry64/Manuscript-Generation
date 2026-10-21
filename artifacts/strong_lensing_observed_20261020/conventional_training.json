@@ -1,0 +1,196 @@
+{
+  "model": "conventional",
+  "status": "CONDITIONAL_OBSERVED_MACRO_FIT",
+  "parameters": {
+    "log10_mass_Msun": 11.613944935269394,
+    "log10_plummer_a_kpc": 0.7062594274802957,
+    "source_x_arcsec": -0.007034046784994176,
+    "source_y_arcsec": 0.03668224930292636,
+    "screen_kappa": 0.3844016821168951,
+    "screen_gamma1": 0.10198233611746468,
+    "screen_gamma2": 0.05344865964141931,
+    "mass_center_x_arcsec": -0.0012083943208419372,
+    "mass_center_y_arcsec": 0.0014603043350662097
+  },
+  "parameter_vector": [
+    11.613944935269394,
+    0.7062594274802957,
+    -0.007034046784994176,
+    0.03668224930292636,
+    0.3844016821168951,
+    0.10198233611746468,
+    0.05344865964141931,
+    -0.0012083943208419372,
+    0.0014603043350662097
+  ],
+  "distances": {
+    "ol": 1226.2418809199537,
+    "op": 1585.059604774653,
+    "os": 1782.8518136648986,
+    "lp": 595.5004848408822,
+    "ls": 1124.9083321598744,
+    "ps": 727.953118679284,
+    "z_l": 0.4546,
+    "z_p": 0.8,
+    "z_s": 1.693,
+    "H0_km_s_Mpc": 67.4,
+    "curvature_per_Mpc2": 9.098103903548646e-10,
+    "distance_sum_relative_residual": -1.4508913703196285e-16
+  },
+  "predicted_relative_astrometry_arcsec": [
+    -1.4767185396775102,
+    0.5511866266253025,
+    -2.4684643962473243,
+    -0.598312730284903,
+    -0.9324539199574171,
+    -1.614628828909211,
+    -1.172376340290222,
+    -0.5657795071070206
+  ],
+  "observed_relative_astrometry_arcsec": [
+    -1.4743,
+    0.5518,
+    -2.4664,
+    -0.6022,
+    -0.9378,
+    -1.616,
+    -1.1706,
+    -0.5665
+  ],
+  "predicted_images_light_centered_arcsec": [
+    [
+      1.172376340290222,
+      0.5657795071070206
+    ],
+    [
+      -0.304342199387288,
+      1.1169661337323231
+    ],
+    [
+      -1.2960880559571022,
+      -0.032533223177882334
+    ],
+    [
+      0.23992242033280495,
+      -1.0488493218021904
+    ]
+  ],
+  "predicted_delays_days": [
+    6.020014396917285,
+    0.6726961286860522,
+    13.611423407287903
+  ],
+  "training_delays_days": [
+    6.419840617785979,
+    -0.9747304186323459,
+    12.487994831847848
+  ],
+  "training_delay_covariance_days2": [
+    [
+      0.04985718478767874,
+      0.0109459239684386,
+      0.027547248761000558
+    ],
+    [
+      0.010945923968438602,
+      0.024249815748612583,
+      0.010111929674663197
+    ],
+    [
+      0.027547248761000554,
+      0.010111929674663197,
+      0.06031767398357518
+    ]
+  ],
+  "standardized_astrometry_residuals": [
+    -1.185786635579159,
+    -0.2937525704700185,
+    -1.0207782478518623,
+    1.6296282387309415,
+    2.593229729244198,
+    0.6566718561465802,
+    -0.492668153774462,
+    0.3532507039141103
+  ],
+  "whitened_training_delay_residuals": [
+    -1.7906363479207983,
+    11.73973805234042,
+    4.851268457008492
+  ],
+  "mass_center_prior_residuals": [
+    -0.4027981069473124,
+    0.48676811168873657
+  ],
+  "chi2_astrometry": 12.713623270382996,
+  "chi2_delays": 164.56263371003033,
+  "chi2_center_prior": 0.3991895095173568,
+  "chi2_total": 177.67544648993066,
+  "optimizer_trace": [
+    {
+      "iteration": 0,
+      "chi2": 163.8922632278216,
+      "optimizer_success": true,
+      "function_evaluations": 121,
+      "optimizer_status": 2,
+      "message": "`ftol` termination condition is satisfied.",
+      "parameters": [
+        11.622067577428437,
+        0.725499512909354,
+        -0.007177411716388612,
+        0.03477556735176731,
+        0.39999999999999997,
+        0.095825468377803,
+        0.05025100810089274,
+        -0.00157722880002884,
+        0.0018780060126576447
+      ]
+    }
+  ],
+  "optimizer_success": true,
+  "quadratic_initializer_parameters": [
+    11.622067577428437,
+    0.725499512909354,
+    -0.007177411716388612,
+    0.03477556735176731,
+    0.39999999999999997,
+    0.095825468377803,
+    0.05025100810089274,
+    -0.00157722880002884,
+    0.0018780060126576447
+  ],
+  "exact_training_refinement": [
+    {
+      "iteration": 0,
+      "objective": -17550.842703883092,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "evaluations": 1444,
+      "parameters": [
+        11.613944935269394,
+        0.7062594274802957,
+        -0.007034046784994176,
+        0.03668224930292636,
+        0.3844016821168951,
+        0.10198233611746468,
+        0.05344865964141931,
+        -0.0012083943208419372,
+        0.0014603043350662097
+      ]
+    }
+  ],
+  "max_lens_residual_rad": 3.0450834453792097e-18,
+  "max_arrival_stationarity_Mpc": 6.1825544683813405e-15,
+  "minimum_image_separation_arcsec": 1.5181925489081978,
+  "numerical_branch_scope": "four requested noncritical branches; not a global faint central-image census",
+  "astrometry_covariance": "Published internal errors plus required2mas systematic in quadrature; diagonal relative-position covariance approximation; imageA fixes origin.",
+  "physical_scope": "spherical prescribed local source plus fixed-location total rear optical screen; no solved global scalar environment",
+  "physical_admission": false,
+  "active_parameter_bounds": {},
+  "exact_training_log_likelihood": 8781.977758331497,
+  "exact_training_objective": -17550.842703883092,
+  "two_plane_minus_effective_delay_days": [
+    -1.5987211554602254e-14,
+    -2.4202861936828413e-14,
+    3.552713678800501e-15
+  ]
+}

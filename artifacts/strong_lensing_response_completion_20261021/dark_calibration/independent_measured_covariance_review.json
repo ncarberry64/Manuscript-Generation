@@ -1,0 +1,132 @@
+{
+  "review": "independent read-only calibration-channel and saved-array review",
+  "source_report_sha256": "a74cedfa2b5d6b1d8b2409f7527126f7e2a284a98cb684106b2a0b5dfbae59e1",
+  "reviewed_source": "scripts/measure_he0435_raw_dark_covariance.py",
+  "reviewed_source_sha256": "659ef6d7144daf470a4aebc0ce285abab2b941b9c9e0816b8eac7298fa35daba",
+  "checks": [
+    {
+      "calibration_source": "jw01453022001_02301_00001_nrcb3_uncal.fits",
+      "array_sha256": "70460da874d325474a94d8c0fecc481ecfeff08ba10dd87b1c8bb8dd38824130",
+      "amplifiers": [
+        {
+          "amp": 0,
+          "same_realization_cross_identity_max_abs_DN2": 5.6843418860808015e-11,
+          "post_covariance_min_eigenvalue_DN2": 42.345049163617716,
+          "contrast_covariance_min_eigenvalue_DN2": 42.4104732816856,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 13.361810720138942
+        },
+        {
+          "amp": 1,
+          "same_realization_cross_identity_max_abs_DN2": 1.8189894035458565e-11,
+          "post_covariance_min_eigenvalue_DN2": 47.240566392817165,
+          "contrast_covariance_min_eigenvalue_DN2": 47.46387131519358,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 13.350039987059672
+        },
+        {
+          "amp": 2,
+          "same_realization_cross_identity_max_abs_DN2": 8.003553375601768e-11,
+          "post_covariance_min_eigenvalue_DN2": 42.832648654451404,
+          "contrast_covariance_min_eigenvalue_DN2": 43.005855392695715,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 13.164747898548725
+        },
+        {
+          "amp": 3,
+          "same_realization_cross_identity_max_abs_DN2": 1.6825651982799172e-11,
+          "post_covariance_min_eigenvalue_DN2": 42.38185399957511,
+          "contrast_covariance_min_eigenvalue_DN2": 42.41617359916618,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 13.13657599938094
+        }
+      ]
+    },
+    {
+      "calibration_source": "jw01453020001_02201_00001_nrcb3_uncal.fits",
+      "array_sha256": "326f8816dbb77c3aba66a172c946eed369a7b273f8a62327f066d63abc0644f1",
+      "amplifiers": [
+        {
+          "amp": 0,
+          "same_realization_cross_identity_max_abs_DN2": 2.4101609596982598e-11,
+          "post_covariance_min_eigenvalue_DN2": 36.77686182594162,
+          "contrast_covariance_min_eigenvalue_DN2": 37.11320120279936,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 11.164673448669788
+        },
+        {
+          "amp": 1,
+          "same_realization_cross_identity_max_abs_DN2": 8.185452315956354e-12,
+          "post_covariance_min_eigenvalue_DN2": 40.56736094371555,
+          "contrast_covariance_min_eigenvalue_DN2": 40.7722227428945,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 11.892900468107214
+        },
+        {
+          "amp": 2,
+          "same_realization_cross_identity_max_abs_DN2": 1.0822986951097846e-10,
+          "post_covariance_min_eigenvalue_DN2": 36.83103709004587,
+          "contrast_covariance_min_eigenvalue_DN2": 36.86442852062254,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 11.911863378025119
+        },
+        {
+          "amp": 3,
+          "same_realization_cross_identity_max_abs_DN2": 2.000888343900442e-11,
+          "post_covariance_min_eigenvalue_DN2": 39.29086355128111,
+          "contrast_covariance_min_eigenvalue_DN2": 39.35916025735635,
+          "contrast_replay_max_abs_DN2": 0.0,
+          "reported_early_contrast_RMS_DN": 11.694364151170932
+        }
+      ]
+    }
+  ],
+  "held_epoch_diagnostic": [
+    {
+      "amp_zero_based": 0,
+      "earliest_training_latest_held": true,
+      "held_expected_Q_per_8group_contrast_pixel": 6.429454852652999,
+      "expected_if_same_stationary_covariance": 8.0,
+      "held_to_train_early_contrast_variance_ratio": 0.6981703793295136,
+      "not_a_physical_or_formal_independent_pixel_chi2_p_value": true
+    },
+    {
+      "amp_zero_based": 1,
+      "earliest_training_latest_held": true,
+      "held_expected_Q_per_8group_contrast_pixel": 6.370506083470747,
+      "expected_if_same_stationary_covariance": 8.0,
+      "held_to_train_early_contrast_variance_ratio": 0.7936160374549069,
+      "not_a_physical_or_formal_independent_pixel_chi2_p_value": true
+    },
+    {
+      "amp_zero_based": 2,
+      "earliest_training_latest_held": true,
+      "held_expected_Q_per_8group_contrast_pixel": 6.515266962492937,
+      "expected_if_same_stationary_covariance": 8.0,
+      "held_to_train_early_contrast_variance_ratio": 0.8187179525651928,
+      "not_a_physical_or_formal_independent_pixel_chi2_p_value": true
+    },
+    {
+      "amp_zero_based": 3,
+      "earliest_training_latest_held": true,
+      "held_expected_Q_per_8group_contrast_pixel": 6.942527678483573,
+      "expected_if_same_stationary_covariance": 8.0,
+      "held_to_train_early_contrast_variance_ratio": 0.7924810043491979,
+      "not_a_physical_or_formal_independent_pixel_chi2_p_value": true
+    }
+  ],
+  "scientific_scope": [
+    "RAPID pairs averaged BEFORE same-current-reference SIRS reproduces requested group channel; not average of separately corrected RAPID reads",
+    "integration1-integration0/sqrt2 measures common covariance only conditional on independent equal-state integrations; fixed bias/dark mean and shared calibration uncertainty cancel",
+    "raw READ+DARK covariance includes actual electronic/IPC response and dark shot noise; no second independent CDS or Jref noise is added",
+    "one difference realization per epoch, per-amplifier stationarity/pixel ensemble is additional; counts of spatial samples are not independent realizations",
+    "500DN screen is fixed and conditional; unscreened diagnostic retained; no lens residual or covariance inflation criterion used",
+    "same contemporary SIRS on historical calibration darks is a new matched-channel experiment, not exact recreation of original ncdhas READNOISE reference production"
+  ],
+  "actionable_source_errors_found": [],
+  "numerical_array_replay_pass": true,
+  "source_complete_instrument_covariance": false,
+  "physical_validation": false,
+  "physical_guard": 2e-10,
+  "no_new_fits_or_native_pipeline_execution": true
+}

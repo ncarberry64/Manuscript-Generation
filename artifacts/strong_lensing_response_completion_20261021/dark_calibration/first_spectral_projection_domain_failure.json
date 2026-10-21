@@ -1,0 +1,7 @@
+{
+  "status": "source spectrum constructed; native-output coordinate guard stopped before any residual scoring",
+  "exception": "ValueError Output is outside declared calibrated read-clock interior",
+  "cause": "504column per-amplifier crop incorrectly excludes valid internal amplifier boundary science pixels crossed by native17x17 patches",
+  "resolution": "2040x512 clock cell, preserve internal boundary science columns; only actual outer detector4column reference windows masked; no native mask or physicalprediction change",
+  "original_504_spectrum_and_protocol_preserved": true
+}

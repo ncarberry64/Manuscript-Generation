@@ -1,0 +1,156 @@
+{
+  "products": [
+    {
+      "filter": "F814W",
+      "full_product": "hst_9744_12_acs_wfc_f814w_j8oi12_drc.fits",
+      "full_product_sha256": "7d675fde547fb78cb95eb8b79044afe19282c25e4eb65e16cac6859e4192421f",
+      "full_product_bytes": 326724480,
+      "download_url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_9744_12_acs_wfc_f814w_j8oi12_drc.fits",
+      "header": {
+        "PROPOSID": 9744,
+        "INSTRUME": "ACS",
+        "DETECTOR": "WFC",
+        "FILTER": "F814W",
+        "FILTER1": "CLEAR1L",
+        "FILTER2": "F814W",
+        "EXPSTART": 52869.95150954,
+        "EXPEND": 52869.98285278,
+        "EXPTIME": 1445.0,
+        "NDRIZIM": 10,
+        "DATE": "2026-06-18",
+        "D001KERN": "square",
+        "D001PIXF": 1.0,
+        "D001SCAL": 0.049999999999999996,
+        "D001ISCL": 0.05,
+        "D001WTSC": 1
+      },
+      "cutouts": [
+        {
+          "file": "F814W_lens_cutout.fits",
+          "center_original_pixel_zero_based": [
+            3640,
+            2289
+          ],
+          "shape": [
+            161,
+            161
+          ],
+          "sha256": "12fe51cbb4fa126bcd2a9d147983f8055e135ff9b139d60e64b65d3ad3053fa1"
+        },
+        {
+          "file": "F814W_star1_cutout.fits",
+          "center_original_pixel_zero_based": [
+            2202,
+            1588
+          ],
+          "shape": [
+            49,
+            49
+          ],
+          "sha256": "72da3361b341a75dadd14023600ea0930502676488e71e65614c10c11455fa59"
+        },
+        {
+          "file": "F814W_star2_cutout.fits",
+          "center_original_pixel_zero_based": [
+            3428,
+            2157
+          ],
+          "shape": [
+            49,
+            49
+          ],
+          "sha256": "477cd5788c7bc54205164fdaac4558f1101af209be2980b67de611302e27a484"
+        },
+        {
+          "file": "F814W_star3_cutout.fits",
+          "center_original_pixel_zero_based": [
+            4164,
+            3437
+          ],
+          "shape": [
+            49,
+            49
+          ],
+          "sha256": "789eb405002170cb2d3e7785df44851579c0805836c347a7fa413652bf5680ef"
+        }
+      ]
+    },
+    {
+      "filter": "F160W",
+      "full_product": "hst_12889_01_wfc3_ir_f160w_ibyg01_drz.fits",
+      "full_product_sha256": "a7a987af2627180759482aa47f97dd014fb436248d69078b9117187e1f0bef7c",
+      "full_product_bytes": 21389760,
+      "download_url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:HST/product/hst_12889_01_wfc3_ir_f160w_ibyg01_drz.fits",
+      "header": {
+        "PROPOSID": 12889,
+        "INSTRUME": "WFC3",
+        "DETECTOR": "IR",
+        "FILTER": "F160W",
+        "FILTER1": null,
+        "FILTER2": null,
+        "EXPSTART": 56228.55191434,
+        "EXPEND": 56228.77801657,
+        "EXPTIME": 9939.589728000003,
+        "NDRIZIM": 24,
+        "DATE": "2026-07-01",
+        "D001KERN": "square",
+        "D001PIXF": 1.0,
+        "D001SCAL": 0.1282500028610229,
+        "D001ISCL": 0.1282500028610229,
+        "D001WTSC": 1
+      },
+      "cutouts": [
+        {
+          "file": "F160W_lens_cutout.fits",
+          "center_original_pixel_zero_based": [
+            684,
+            592
+          ],
+          "shape": [
+            81,
+            81
+          ],
+          "sha256": "23b297fff9bf84bc0f2acd6ca7fdcd178594b4d4981adcfc7173638f0e139bfb"
+        },
+        {
+          "file": "F160W_star1_cutout.fits",
+          "center_original_pixel_zero_based": [
+            123,
+            319
+          ],
+          "shape": [
+            25,
+            25
+          ],
+          "sha256": "db0d473fedb54d90f9c6094f1cdbfa22f96dcc9b480b5f7aa08c613664dfc018"
+        },
+        {
+          "file": "F160W_star2_cutout.fits",
+          "center_original_pixel_zero_based": [
+            601,
+            541
+          ],
+          "shape": [
+            25,
+            25
+          ],
+          "sha256": "0b3fed4600a6b3ee21ffa59d60bb4997254a8458769b23b535c114773a9f99be"
+        },
+        {
+          "file": "F160W_star3_cutout.fits",
+          "center_original_pixel_zero_based": [
+            888,
+            1040
+          ],
+          "shape": [
+            25,
+            25
+          ],
+          "sha256": "86ba552361584638f9298b5ff28b3f4ee445f33d9881c4d37409639b2ac36830"
+        }
+      ]
+    }
+  ],
+  "weight_semantics": "Output WHT is exposure-like (DnnnWTSC=1); it is NOT treated as an inverse-variance map. SCI is electrons/sec.",
+  "cutout_policy": "Exact native pixel copies, SCI/WHT/CTX; WCS shifted only. Full products retained locally; recover via URLs and hashes."
+}

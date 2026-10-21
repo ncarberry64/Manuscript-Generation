@@ -1,0 +1,79 @@
+{
+  "cut_mjd": 58484.0,
+  "cut_utc": "2019-01-01T00:00:00",
+  "selection_basis": "Parent instruction; timestamp-only conservative cut beyond all consumed COSMOGRAIL observations",
+  "primary_test": "Condition on new image C as the declared driver; predict held-out images A, B and D",
+  "secondary_test": "Forecast all four images without conditioning on new observations",
+  "driver_selection_basis": "Old consumed development-set cross-validation, before LCO target inspection",
+  "development": {
+    "relative_path": "data/strong_lensing_revision_20261020/calibration/he0435r_pre2019.dat",
+    "rows": 25,
+    "sha256": "c3394b7378647dce829908e8d7a05025b93989c61b33b59cd568764d5fa08d19",
+    "photometric_use": "Authorized for instrument calibration and model development"
+  },
+  "confirmatory": {
+    "relative_path": "data/strong_lensing_revision_20261020/sealed/he0435r_2019onward.dat",
+    "rows": 54,
+    "sha256": "c3e6112b2b670a0cf34c9bd7cb59bb9559a79fdb5cf788b559ffb1fe541d6e60",
+    "photometric_use": "Sealed; no photometric fields parsed or inspected during acquisition/splitting"
+  },
+  "whitespace_split_columns": [
+    "MJD",
+    "mag_A",
+    "sigma_mag_A",
+    "mag_B",
+    "sigma_mag_B",
+    "mag_C",
+    "sigma_mag_C",
+    "mag_D",
+    "sigma_mag_D",
+    "Band"
+  ],
+  "fixed_width_one_based_columns": {
+    "MJD": [
+      1,
+      10
+    ],
+    "mag_A": [
+      12,
+      18
+    ],
+    "sigma_mag_A": [
+      20,
+      25
+    ],
+    "mag_B": [
+      27,
+      33
+    ],
+    "sigma_mag_B": [
+      35,
+      40
+    ],
+    "mag_C": [
+      42,
+      48
+    ],
+    "sigma_mag_C": [
+      50,
+      55
+    ],
+    "mag_D": [
+      57,
+      63
+    ],
+    "sigma_mag_D": [
+      65,
+      70
+    ],
+    "Band": [
+      72,
+      72
+    ]
+  },
+  "photometric_convention": "Apparent magnitudes, Gaia-star transformed R zero point; quoted marginal 1-sigma magnitude errors. Relative to arbitrary COSMOGRAIL magnitudes a per-image instrument/reduction offset is needed, not an assumed common numeric zero point.",
+  "time_convention": "MJD as declared by CDS; no time scale or heliocentric convention declared. Do not silently identify with COSMOGRAIL MHJD; common half-day-origin ambiguity retained in time-map nuisance/model scope.",
+  "v_status": "Original V file retained sealed, all 80 rows; unopened and unscored",
+  "published_summary_awareness": "Primary paper abstract/method text exposed qualitative variability findings and aggregate published modeling results, but no catalogue targets, plots or confirmatory scores were inspected. The study is retrospective withholding with publication-level awareness.",
+  "shared_reference": "Common LCO DIA reference image includes substantial 2022 contribution. Common reference/reduction errors may correlate calibration and test rows. Independent photons/new post-2018 epochs are established; an independently blinded reduction is not."
+}

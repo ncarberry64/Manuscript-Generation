@@ -1,0 +1,92 @@
+{
+  "scope": "Consumed E4 groups after independently measured E4 point nuisances and frozen E1--3-trained sky/eta/kappa. Temporal curvature is an internal development diagnostic, not unused validation. Same fitted body kappa0 counterfactual included.",
+  "kappa_e_inverse": 1.6540033671374484e-07,
+  "rows": [
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "near_wing_3_to_6_pixel": {
+        "observed": {
+          "pixels": 74,
+          "curvature_raw_RMS_DN_s2": 0.0004114153300576955,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 673.2640065038773
+        },
+        "frozen_body_kappa0_residual": {
+          "pixels": 74,
+          "curvature_raw_RMS_DN_s2": 0.0004117084040314754,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 673.566421721167
+        },
+        "fitted_history_residual": {
+          "pixels": 74,
+          "curvature_raw_RMS_DN_s2": 0.00040395077158233777,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 666.2912145118488
+        }
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "near_wing_3_to_6_pixel": {
+        "observed": {
+          "pixels": 82,
+          "curvature_raw_RMS_DN_s2": 0.0007906353312574212,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 1264.036646823696
+        },
+        "frozen_body_kappa0_residual": {
+          "pixels": 82,
+          "curvature_raw_RMS_DN_s2": 0.0007912929904816027,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 1265.1652677233617
+        },
+        "fitted_history_residual": {
+          "pixels": 82,
+          "curvature_raw_RMS_DN_s2": 0.0007763702877523026,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 1239.7262938005495
+        }
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "near_wing_3_to_6_pixel": {
+        "observed": {
+          "pixels": 79,
+          "curvature_raw_RMS_DN_s2": 0.0003305393131218123,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 642.9128068828495
+        },
+        "frozen_body_kappa0_residual": {
+          "pixels": 79,
+          "curvature_raw_RMS_DN_s2": 0.0003308521875818786,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 643.1666860296224
+        },
+        "fitted_history_residual": {
+          "pixels": 79,
+          "curvature_raw_RMS_DN_s2": 0.00032092695377628356,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 635.7342396124437
+        }
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "near_wing_3_to_6_pixel": {
+        "observed": {
+          "pixels": 79,
+          "curvature_raw_RMS_DN_s2": 0.0001970660339583134,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 600.1363583004081
+        },
+        "frozen_body_kappa0_residual": {
+          "pixels": 79,
+          "curvature_raw_RMS_DN_s2": 0.00019710667401227083,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 600.1701519678244
+        },
+        "fitted_history_residual": {
+          "pixels": 79,
+          "curvature_raw_RMS_DN_s2": 0.0001960116851854072,
+          "temporal_shape_Q_after_fitted_static_intercept_and_rate": 599.3356131393452
+        }
+      }
+    }
+  ],
+  "noise_scope": "Conditional old Poisson/CDS-marginal comparator only; raw curvature RMS remains separate from formal Q. No error scaling, SIRS addition or claim of complete anchored group likelihood.",
+  "fit_solution_sha256": "94a84b8f3a1ae2cac0ac5dba9cc9feeee7738677943091c9d4ba7044b2fba440",
+  "source_sha256": "9cbe4645aa620f78b706e2dd6c3ffe7a80173dcbb09fd05e40688034d69fe693",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

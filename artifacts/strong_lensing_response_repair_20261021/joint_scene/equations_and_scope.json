@@ -1,0 +1,41 @@
+{
+  "scope": "Actual consumed-data conditional optical preparation/readout application. Independent measured point positions are fitted without conventional or BHSM lens predictions. This does not solve a microscopic envelope-state preparation or establish a physical validation.",
+  "unknowns": {
+    "all_data": "32 detector point coordinates q_ei,16 positive point fluxes f_ei=exp(l_ei),36 nonnegative shared observed-sky coefficients a_ik,12 detector-plane coefficients b_e,318 shared log-response coefficients eta. Total414 for the joint linearization, with24 additional field-point nuisance parameters profiled from the4actualfieldstamps.",
+    "baseline": "The96 target/scene parameters are fitted with eta fixed at its supplied field-only mean.",
+    "held_training": "E1-E3 have24 point coordinates,12 fluxes,36 shared sky coefficients,9 detector-plane coefficients plus318 eta:399joint columns. E4 target pixels do not enter training, but all4 separate field-star stamps constrain eta."
+  },
+  "original_applications_executed": [
+    "phi_ik(s)=exp(-|s-s_i-(.18a,.18b)arcsec|^2/[2(.10arcsec)^2]) 1[|s-s_i|<=.55arcsec], a,b in{-1,0,1};36nonnegative shared coefficients. s_i is fixed by exposure1 prior measured point coordinates, with no lens prediction.",
+    "P_ei(u;eta)=Spline[positive_base_ei](u) exp(B(u)eta)/Z_ei(eta); positive_base=signed_library+max(0,-min(signed_library))*1.1+1e-8; B=Gaussian_RBF(nodes,width.65pixel) times supplied gauge null matrix; Z=sum_finegrid positive_base exp(B eta)/16.",
+    "S_ei(x;eta,a)=sum_k a_ik [P_ei(.;eta) star (phi_ik composed with exact archived GWCS_e)](x). The integration is implemented by1/4nativepixel sky sampling and one FFT convolution with the pixel-integrated ePSF, divided by16. No second pixel integral, PAM, or detector-area multiplier is added to native SCI surface brightness.",
+    "m_ei(x)=exp(l_ei) P_ei(x-q_ei;eta)+S_ei(x;eta,a)+b_e0+b_ex(x-x_e)/100+b_ey(y-y_e)/100.",
+    "r_ei(x)=[m_ei(x)-SCI_e(x)]/ERR_e(x), retaining SAT alone but rejecting DNU/nonfinite/nonpositiveERR using the verified native-rate mask. No ERR rescaling.",
+    "Field model m_eF(x)=exp(l_eF) P_eF(x-q_eF;eta)+affine_eF(x), evaluated on the4actual17x17 field-star stamps with independent6parameter field nuisances; derivative columns are locally profiled against inactive-bound field nuisance columns.",
+    "Original objective=sum_target r^2+sum_field r_F^2+||eta/.2||^2+||a/10||^2. Finite coefficient priors regularize a conditional trial family; they are not new physical measurements.",
+    "At the supplied eta0, target/scene parameters p are fitted. Then one joint bound-clamped Gauss-Newton step for(p,eta) is computed using target rows, field-profile rows, and both declared prior rows, with the common1e-10relative singular-value cutoff on dimensionless columns. The positive PSF, scene, target residuals and re-fitted field nuisance residuals are actually re-evaluated at the accepted alpha=1iterate. RAW nonlinear field likelihood, not projected residual norm, controls line search."
+  ],
+  "covariance_estimands": {
+    "field_only_cut": "H_p=A^T A+P_a^T P_a; V_p|eta=H_p^-1; T=-H_p^-1 A^T B; V_p,cut=V_p|eta+T V_eta,field T^T. V_eta,field includes4actualfieldstamps+eta/.2prior with fieldpointnuisance profiling. Target pixels do not condition eta in this cut baseline.",
+    "joint_provisional": "V_joint=(J_joint^T J_joint)^-1 on the specified dimensionless SVD measured subspace, at the actual one-step updated mean. It is UNCONSTRAINED local curvature, not a converged nonlinear posterior, positive-bound/truncated posterior, or coverage guarantee. Rank414/414 means this particular linearization has no SVD-null columns; supplied priors contribute rank.",
+    "moment": "Three conventions are saved: raw fitted q; q+FULL finite-grid moment(P); q+moment(P)-moment(positive_base). The last matches the delivered relative-moment convention. Analytic dmoment/deta is included in the full covariance. These conventions do not establish physical centroid accuracy.",
+    "sky_geometry": "Exact archived nonlinear GWCS and intrinsic-coordinate Jacobians propagate the full centroid covariance, retaining shared-response cross-image and cross-exposure blocks. The normalized positive ePSF and finite observed-sky scene are declared conditional inputs."
+  },
+  "remaining_dependencies": [
+    "The coarse positive field-response+minimalcoherent-sky mean fails absolute nativepixel adequacy in both fitted and whole-held-target exposure applications. The missing instrument/scene mean response has not been identified by reducing rawchi2.",
+    "One accepted coupled step is an actual provisional iterate. Full nonlinear convergence and response calibration remain unestablished. The reported maximum unconstrained scaled gradient includes active positive-sky directions, so it is not by itself a projectedKKT convergence statistic.",
+    "13all-data and14training sky coefficients sit atzero. Their reported covariance is localunconstrainedcurvature, not an exact nonnegative-coefficient posterior.",
+    "Four17x17fieldstamps can constrain a regularized318coefficient localfamily numerically, but this is not independent transfer validation. Target sky covers only four finite patches; extended source/foreground galaxy decomposition and broad diffuse light remain nonunique.",
+    "The nativeCAL products and compact fieldhistory do not determine actual target65x65 per-read electron histories and pixel-specific slope weights. history_rate requires those actual arrays. No targethistory, gain-aware electroncharge transfer coefficient, or unconsumed observation is fabricated.",
+    "This optical readout application does not derive the microscopic j_c=mu/2 sum_s[U_s^dagger(iG_c)U_s-V_s^dagger(iG_c)V_s] or its dressed statistical state kernel. It neither replaces it by a classical effective current nor uses old retarded arrays/native heat as a statistical kernel. No Wick factorization, occupation closure,2000fm target substitution, or extra BHSM amplitude is introduced."
+  ],
+  "data_split_scope": "E4 is an internal held TARGET exposure from already-consumed F115W observations. All4fieldstar exposures and inherited targetROI/initial guesses were available. It is not genuinely unused validation.",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "source_sha256": {
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22",
+    "tests/test_strong_lensing_joint_scene.py": "74f9718cc0d9118b5da159f49bfc69459b6773bb6c669f746d760212fdc0451f"
+  }
+}

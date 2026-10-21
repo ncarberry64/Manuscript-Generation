@@ -1,0 +1,66 @@
+{
+  "status": "LOCAL_RESEARCH_AND_MANUSCRIPT_CORRECTION_COMPLETE_GITHUB_WRITE_BLOCKED",
+  "reviewed_source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+  "journal": "Galaxies",
+  "special_issue": "Strong Gravitational Lens Modeling",
+  "source_overlay_files": 52,
+  "python": "3.12.14",
+  "numerical_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "main_science": {
+    "screening_radius_kpc": 212.02922497712947,
+    "leading_delay_differences_s": [
+      25.959258149566722,
+      8.649019375383205
+    ],
+    "gr2_corrected_delay_differences_s": [
+      25.959327139730703,
+      8.649009238058625
+    ],
+    "change_of_delay_differences_s": [
+      6.899016398165259e-05,
+      -1.0137324579773122e-05
+    ]
+  },
+  "checks": {
+    "scalar_profile_held_identical": true,
+    "max_lens_equation_residual_rad": 8.470329472543003e-22,
+    "independent_root_delay_values_identical": true,
+    "max_mixed_stationary_drift_discrepancy_s": 6.149864943737291e-10,
+    "max_exact_static_GR_remainder_rad": 1.709727797108659e-16,
+    "max_primitive_quadrature_difference": 1.3322676295501878e-15,
+    "interior_GR2_coefficient_extrapolation_abs_difference": -5.239392253386654e-12,
+    "portable_earlier_review_numeric_values_reproduced": 305,
+    "existing_text_patch_git_apply_check": true
+  },
+  "pdf": {
+    "pages": 13,
+    "sha256": "a75a6f67c6041f59a3c4635f06d46963d6fbc64a7080e4736e8acb96b599623c",
+    "compiled_target": "manuscript/strong_lensing_main.tex",
+    "official_class_unmodified": true,
+    "overfull_boxes": false,
+    "undefined_references": false,
+    "references_heading_present": true,
+    "submission_target_date_absent": true,
+    "visual_review": "All 13 pages rendered and inspected; independent inspection of pages2-6 and9-13. Final changed pages1,8,12 inspected after typography corrections. Scientific figure and tables checked at full page resolution."
+  },
+  "github": {
+    "pr": 23,
+    "head_checked": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "write_attempt": "create_tree",
+    "write_result": "403 Resource not accessible by integration",
+    "branch_updated": false,
+    "github_workflow_executed": false
+  },
+  "qualifications": [
+    "Common ordinary-GR 2PM robustness control within the stated asymptotic-impact/thin-plane identification.",
+    "Leading scalar held fixed; no complete scalar-GR higher-order or finite-distance cosmological calculation.",
+    "Effective-halo equivalence and nuisance ranks concern their declared leading-order approximations.",
+    "Numerical checks are not observational evidence or complete physical error bounds.",
+    "AI-assisted research review is not an external human journal referee report.",
+    "Funding, conflicts, contribution roles, final human approval and publication declarations remain for author confirmation."
+  ]
+}

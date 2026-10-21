@@ -1,0 +1,32 @@
+{"metadata":
+[
+{"name": "column_name", "datatype": "char", "xtype": null, "arraysize": "*", "description": null, "unit": null, "ucd": null, "utype": null},
+{"name": "unit", "datatype": "char", "xtype": null, "arraysize": "*", "description": null, "unit": null, "ucd": null, "utype": null},
+{"name": "description", "datatype": "char", "xtype": null, "arraysize": "*", "description": null, "unit": null, "ucd": null, "utype": null}
+],
+"data":
+[
+["source_id",null,"Unique source identifier (unique within a particular Data Release)"],
+["ref_epoch","yr","Reference epoch"],
+["ra","deg","Right ascension"],
+["ra_error","mas","Standard error of right ascension"],
+["dec","deg","Declination"],
+["dec_error","mas","Standard error of declination"],
+["pmra","mas.yr**-1","Proper motion in right ascension direction"],
+["pmra_error","mas.yr**-1","Standard error of proper motion in right ascension direction"],
+["pmdec","mas.yr**-1","Proper motion in declination direction"],
+["pmdec_error","mas.yr**-1","Standard error of proper motion in declination direction"],
+["ra_dec_corr",null,"Correlation between right ascension and declination"],
+["astrometric_n_good_obs_al",null,"Number of good observations in the along-scan (AL) direction"],
+["astrometric_excess_noise","mas","Excess noise of the source"],
+["astrometric_excess_noise_sig",null,"Significance of excess noise"],
+["astrometric_params_solved",null,"Which parameters have been solved for?"],
+["visibility_periods_used",null,"Number of visibility periods used in Astrometric solution"],
+["ipd_gof_harmonic_amplitude",null,"Amplitude of the IPD GoF versus position angle of scan"],
+["ipd_frac_multi_peak",null,"Percent of successful-IPD windows with more than one peak"],
+["ipd_frac_odd_win",null,"Percent of transits with truncated windows or multiple gate"],
+["ruwe",null,"Renormalised unit weight error"],
+["duplicated_source",null,"Source with multiple source identifiers"],
+["phot_g_mean_mag","mag","G-band mean magnitude"]
+]
+}

@@ -1,0 +1,175 @@
+{
+  "status": "VERIFIED_NATIVE_MASK_REPAIR_NOT_OBSERVATIONAL_VALIDATION",
+  "actual_execution_commands": [
+    ".venv-geometry/Scripts/python.exe tests/test_strong_lensing_jwst_rate_mask.py",
+    ".venv-geometry/Scripts/python.exe tests/test_strong_lensing_rate_mask_integration.py",
+    ".venv-geometry/Scripts/python.exe scripts/replay_he0435_verified_rate_mask.py --root . --baseline-manifest artifacts/strong_lensing_response_repair_20261021/mask_verified_baseline_manifest.json --native-dir data/strong_lensing_geometry_20261021/native --output artifacts/strong_lensing_response_repair_20261021/mask_verified_native_replay.json"
+  ],
+  "regression_groups_passed": 4,
+  "additional_integration_guard_tests_passed": 6,
+  "native_original_point_fits_reproduced": 16,
+  "native_corrected_point_fits_executed": 16,
+  "retained_extra_pixels": 303,
+  "all_16_pixel_profile_adequacy_pass": false,
+  "pixel_profile_adequacy_passes": 0,
+  "pixel_reduced_chi2_range": [
+    27.56850996451971,
+    83.55373943916052
+  ],
+  "exposure_consistency_chi2": 253.02769460638638,
+  "exposure_consistency_dof": 15,
+  "exposure_consistency_p_value": 2.952656578524938e-45,
+  "model_statistics": {
+    "old_frozen_conventional": {
+      "residual": [
+        -0.0002530890749663506,
+        -0.004466776734948663,
+        0.005991565010360134,
+        0.003094381641898847,
+        0.0013243676298604345
+      ],
+      "chi2": 67181.06153289102,
+      "dof": 5,
+      "p_value": 0.0,
+      "gaussian_logdensity": -33544.203238846225,
+      "intrinsic_coordinate_rms_mas": 3.6672645696175383,
+      "conditional_geometry_validation_pass": false
+    },
+    "old_frozen_R1": {
+      "residual": [
+        -0.00025312072685479414,
+        -0.004466570247689816,
+        0.005991014490592139,
+        0.0030947877069804064,
+        0.001324376648841552
+      ],
+      "chi2": 67179.01989782452,
+      "dof": 5,
+      "p_value": 0.0,
+      "gaussian_logdensity": -33543.18242131297,
+      "intrinsic_coordinate_rms_mas": 3.667104006315342,
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_conventional": {
+      "residual": [
+        -0.00026782957497850646,
+        0.0007102156428713258,
+        -0.00044675027521523525,
+        -0.00020317061237107303,
+        -0.00043424141379166947
+      ],
+      "chi2": 1033.113555489574,
+      "dof": 5,
+      "p_value": 4.069520532931627e-221,
+      "gaussian_logdensity": -470.2292501454998,
+      "intrinsic_coordinate_rms_mas": 0.44845705529074037,
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_R1": {
+      "residual": [
+        -0.00026761824697763004,
+        0.000710418832700288,
+        -0.0004469296285491975,
+        -0.00020285436452316397,
+        -0.00043454786370134
+      ],
+      "chi2": 1033.2689334411375,
+      "dof": 5,
+      "p_value": 3.766180488888138e-221,
+      "gaussian_logdensity": -470.3069391212815,
+      "intrinsic_coordinate_rms_mas": 0.4485626546869987,
+      "conditional_geometry_validation_pass": false
+    }
+  },
+  "supplied_receipt_RMS_difference_mas": {
+    "old_frozen_conventional": 3.034660212009044e-08,
+    "old_frozen_R1": 3.033619311310076e-08,
+    "revised_G1_conventional": -3.1916426557199173e-08,
+    "revised_G1_R1": -3.195614811657421e-08
+  },
+  "supplied_receipt_exposure_Q_difference": 8.546439318024568e-06,
+  "native_product_provenance": [
+    {
+      "file": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+      "CAL_VER": "2.0.1",
+      "DATAMODL": "ImageModel",
+      "S_RAMP": "COMPLETE",
+      "READPATT": "SHALLOW2",
+      "NFRAMES": 2,
+      "NGROUPS": 9,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "ZEROFRAM": true,
+      "producing_stcal_version": "Not recorded by native CAL header; this mask replay does not execute JWST/stcal ramp fitting."
+    },
+    {
+      "file": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "sha256": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+      "CAL_VER": "2.0.1",
+      "DATAMODL": "ImageModel",
+      "S_RAMP": "COMPLETE",
+      "READPATT": "SHALLOW2",
+      "NFRAMES": 2,
+      "NGROUPS": 9,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "ZEROFRAM": true,
+      "producing_stcal_version": "Not recorded by native CAL header; this mask replay does not execute JWST/stcal ramp fitting."
+    },
+    {
+      "file": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "sha256": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+      "CAL_VER": "2.0.1",
+      "DATAMODL": "ImageModel",
+      "S_RAMP": "COMPLETE",
+      "READPATT": "SHALLOW2",
+      "NFRAMES": 2,
+      "NGROUPS": 9,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "ZEROFRAM": true,
+      "producing_stcal_version": "Not recorded by native CAL header; this mask replay does not execute JWST/stcal ramp fitting."
+    },
+    {
+      "file": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "sha256": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
+      "CAL_VER": "2.0.1",
+      "DATAMODL": "ImageModel",
+      "S_RAMP": "COMPLETE",
+      "READPATT": "SHALLOW2",
+      "NFRAMES": 2,
+      "NGROUPS": 9,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "ZEROFRAM": true,
+      "producing_stcal_version": "Not recorded by native CAL header; this mask replay does not execute JWST/stcal ramp fitting."
+    }
+  ],
+  "original_fitter_matches_immutable_git_7ec9cea": true,
+  "delivered_ten_files_still_exact_manifest_hashes": true,
+  "original_frozen_experiment_preserved": true,
+  "audit": {
+    "maximum_original_centroid_replay_error_pixel": 0.0,
+    "maximum_original_geometry_replay_error_arcsec": 0.0,
+    "independent_complex_geometry_error_arcsec": 4.440892098500626e-16,
+    "independent_finite_difference_jacobian_error": 3.9557312980775805e-10,
+    "original_fitter_modified": false,
+    "original_dq_modified": false,
+    "native_errors_modified": false,
+    "lens_predictions_refitted": false
+  },
+  "scope": "Only already consumed F115W original native slopes. No new data downloads, pipeline reprocessing, PSF response fit, physical refit, error scaling, broader inherited suite, or manuscript build by this audit.",
+  "remaining_dependency": "Instrument/scene mean-response adequacy, actual read-history response and calibrated correlated uncertainty remain unresolved; retaining valid slopes does not calibrate a PSF or establish geometry validation.",
+  "physical_admission": false,
+  "unchanged_physical_guard": 2e-10,
+  "artifact_sha256": {
+    "scripts/replay_he0435_verified_rate_mask.py": "5e3c1ed83aa2f227c13bd3ec43feac477f5e0b2eb1d154fd2aef7282e06b25da",
+    "tests/test_strong_lensing_rate_mask_integration.py": "c0c2315e0463490448bb7d8f2aadebe304f5bad3ff15321b9430cd77b4ae9197",
+    "artifacts\\strong_lensing_response_repair_20261021\\mask_verified_baseline_manifest.json": "fb888bb629c900f09c41dcf174b1817888f6463e22dc4313b176c3e47abf7190",
+    "artifacts\\strong_lensing_response_repair_20261021\\mask_verified_native_replay.json": "c8ae376e3698aaf68acd6fc8b5f905cd30440415956e44ac77d9330dd7a73c2e"
+  },
+  "integration_runner_LF_normalization": {
+    "previous_executed_source_sha256": "179b05a3c422ad0c8dea5343879043888c330eee30bfb4c1b84836ab97a33f18",
+    "current_source_sha256": "5e3c1ed83aa2f227c13bd3ec43feac477f5e0b2eb1d154fd2aef7282e06b25da",
+    "change": "CRLF to LF and removal of one extra blank EOF line only; replay calculations unchanged",
+    "replay_repeated_after_normalization": true
+  },
+  "integration_guard_test_scope": "Six hermetic unit tests use exact41fa SHA-bound Git-response fixture, check requested immutable commit/path, default rejection and source/manifest tampering. Actual canonical replay separately used REAL git-show7ec9 source object; no CI fetch-depth change required."
+}

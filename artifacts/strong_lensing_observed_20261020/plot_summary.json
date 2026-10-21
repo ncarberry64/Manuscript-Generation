@@ -1,0 +1,56 @@
+{
+  "figure_interpretation": "Point-parameter conditional predictions; batch later-B conditioning, no target fit. Original COSMOGRAIL/CDS data. Conventional/R1 curves may overlap; no separation is visually exaggerated.",
+  "plotted_source": "withheld_scores.json",
+  "models": {
+    "empirical_training_transfer": {
+      "joint_log_density": 795.1984656436452,
+      "count": 300,
+      "rmse_mag": 0.10152042613017852,
+      "mean_residual_mag": 0.07572349009127924,
+      "mean_marginal_negative_log_density": -0.9915253538693253,
+      "coverage_68_27_percent": 0.47333333333333333,
+      "coverage_95_percent": 0.85,
+      "mean_predictive_sigma_mag": 0.06704153800123695
+    },
+    "conventional_macro": {
+      "joint_log_density": 791.6238454191334,
+      "count": 300,
+      "rmse_mag": 0.10133299439906604,
+      "mean_residual_mag": 0.0747456597271889,
+      "mean_marginal_negative_log_density": -0.9923244757533822,
+      "coverage_68_27_percent": 0.47333333333333333,
+      "coverage_95_percent": 0.8533333333333334,
+      "mean_predictive_sigma_mag": 0.0670109912305645
+    },
+    "conditional_R1_macro": {
+      "joint_log_density": 791.6288281092675,
+      "count": 300,
+      "rmse_mag": 0.10133301263454857,
+      "mean_residual_mag": 0.074746064649307,
+      "mean_marginal_negative_log_density": -0.992325008536423,
+      "coverage_68_27_percent": 0.47333333333333333,
+      "coverage_95_percent": 0.8533333333333334,
+      "mean_predictive_sigma_mag": 0.06701104573704733
+    },
+    "matched_conventional_effective_mass": {
+      "joint_log_density": 791.6288281092675,
+      "count": 300,
+      "rmse_mag": 0.10133301263454857,
+      "mean_residual_mag": 0.074746064649307,
+      "mean_marginal_negative_log_density": -0.992325008536423,
+      "coverage_68_27_percent": 0.47333333333333333,
+      "coverage_95_percent": 0.8533333333333334,
+      "mean_predictive_sigma_mag": 0.06701104573704733
+    },
+    "zero_delay_control": {
+      "joint_log_density": 755.9755286520231,
+      "count": 300,
+      "rmse_mag": 0.10143639397089747,
+      "mean_residual_mag": 0.0740088994351459,
+      "mean_marginal_negative_log_density": -0.9799837155924035,
+      "coverage_68_27_percent": 0.4666666666666667,
+      "coverage_95_percent": 0.8666666666666667,
+      "mean_predictive_sigma_mag": 0.06675398748882194
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "status": "INDEPENDENT_PRE_TARGET_RESEARCHER_REVIEW_PASS_WITH_EXPLICIT_LIMITS",
+  "target_photometry_opened_by_reviewer": false,
+  "reviewed_paths_sha256": {
+    "code/strong_lensing_lightcurve_revision.py": "4370ac0f75a848ad6aa5c0c77c60e92598574d89b1093007dbb3de4ffb97708d",
+    "code/strong_lensing_revision_filter.c": "bb6383e90982205a11103b951f938447dcce0be8764ef3b611b964dbad397685",
+    "scripts/fit_he0435_revision.py": "6ad1488c02f32b7a29dcef11b68cabdb22a6b1427ec25a1ac12fb1b0312b4298",
+    "scripts/run_he0435_revision_validation.py": "f81e1137e983acb9fb806a9efa0a4f6adc6f2e96c5839da878fb2100e7a74610",
+    "code/strong_lensing_macro_revision.py": "a6b937bac3e04a1d2178e722ef1fa6b381bb782970b8d1a17a8676fd708e2500",
+    "code/strong_lensing_hst_central.py": "6e30c0faa1576d92a06f64ab1b840361c7dda276ac31261209415ccadcc02fa0"
+  },
+  "validation": [
+    "9 revised brightness tests PASS, independent dense covariance and conditional GP checks; target-value invariance; driver mixture Bayes weights; calibrated joint-density Jacobian; Brownian/slope growing variance; time-origin shifts; intervalscore",
+    "4 exposure-lock/transport tests PASS; no real targets parsed",
+    "9 HST focused tests PASS; summed overlapping-image positivity bound, rotation and correlated-noise guard tests",
+    "Macro7 focused tests previously passed; reviewer independently traced total-source flux/Gauss, metric projection, polynomial roots and final original-equation verification without unnecessary rerun"
+  ],
+  "findings": [
+    "No leakage path identified in prepare: sealed target bytes hashed only. Numerical target parser requires exposure marker; committed freeze/dependency bytes verified before exclusive-create exposure lock; failure preserves lock.",
+    "Normalized finite nuisance mixture uses driver likelihood updates, within/between-component uncertainty and affine calibration Jacobian. Width and proper95intervalscore prevent coverage-only reporting.",
+    "One TOTAL positive TwoPlummer matter source enters nonlinear scalar flux and metric Gauss once. Compact0 limit preserves original body/field; no nonlinear scalar superposition.",
+    "HST fixed-template positive-pixel bound uses Gaussian marginal union bound independent of pixel correlation; arbitrary nonnegative central stellar/host/nuclear nuisance cannot cancel overbright source. Additional images summed before bound.",
+    "Conditional MAP-nuisance development macro objective and finite transported predictive nuisance ensemble are distinct and declared. Nuclear candidates nearly equal in development objective, so selected mass is representative rather than measured."
+  ],
+  "remaining_limits": [
+    "Finite nuisance chains not converged: basicRhat max5.18585; use calibrated finite empirical ensemble characterization, no full-posterior claim.",
+    "Development folds overlap and are not independent validation. Calibration has no temporal-exchangeability guarantee; actual unused coverage/intervalwidth/proper scores must decide adequacy.",
+    "HST bounds conditional on empiricalPSF, approximate estimatedmarginalnoise, background and macro-to-observed flux relation. Numericalcentroidsearch not certifiedglobal continuummax; stress tests not probabilities.",
+    "Retrospective LCO exposures are independent of consumed COSMOGRAIL exposures but share reductionreference/template; qualitative published findings already known. No claim of perfectly blinded reduction or independent primary/secondary targets.",
+    "Microscopic BHSM statisticalstate kernel, complete materialEOS/globalmatching and unique nuclear/envelopestate inference are not supplied by this classical likelihood."
+  ],
+  "physical_guard": 2e-10,
+  "physical_admission": false
+}

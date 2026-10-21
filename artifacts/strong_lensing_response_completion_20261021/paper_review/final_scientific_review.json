@@ -1,0 +1,125 @@
+{
+  "review": "Final independent read-only scientific paper/report audit against completed applications and saved numerical receipts",
+  "status": "PASS: no remaining material scientific/numerical error found in reviewed scope",
+  "reviewed_files": [
+    {
+      "file": "manuscript/sections/he0435_response_repair_20261021.tex",
+      "sha256": "b7bda111e1161b3876b16402b00b0f559e06f9f1d45d7402026bb2d81378eaf1",
+      "bytes": 28002
+    },
+    {
+      "file": "docs/HE0435_RESPONSE_COMPLETION_20261021.md",
+      "sha256": "47c41bbaae06e08a6c82e5d2aa3bf0f0261878e9259e1f1ff53bc91f59c3651f",
+      "bytes": 26749
+    }
+  ],
+  "numerical_receipts": [
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/history_recovery.json",
+      "sha256": "4a1bcb48389a8ceb4f2d2b9f0e3921b74e2b25017dc3872f78ecf40d9a594e6c"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/ipc/ipc_native_early_projection_relation.json",
+      "sha256": "06e5380da47ca50f6b7658010b92cfe3c0b47908018c8d3a1021d7c52c93dc2e"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_ols/source_equation_comparison.json",
+      "sha256": "39c824b74ec9d82bc116ebf2e4c2c8f342185ee17630b60177a4eee46f6b4fc2"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_coupled/all_data/result.json",
+      "sha256": "c304eba83f1411322b13f7d00b8ae7aab17113a3ea641c475c0941ce2f6b0d80"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_coupled/training/result.json",
+      "sha256": "bfba3ca64aa42d9e2a1a457426bfe7ae672443d29d71a2e5cebe7e84103ea5d0"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_coupled/held_target/result.json",
+      "sha256": "6a8d7496385287b1bda2fdb450479f4390d2af074b2978256571d08b8080f0a0"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_coupled/independent_final_result_review.json",
+      "sha256": "3f6698d1e7d9f1760780fd89aa4eb21d35f3f2352a3a04aa5b00a0539f145bca"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/measured_covariance.json",
+      "sha256": "ab0413bcbf4850db08431b2436c213a378ac3d61b1bd14b5a9477e368a3ec8d9"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/analytic_native_projection/fixed_spectral_projection.json",
+      "sha256": "817eb8690ce6d80677eb6bc556fe93b6cf4157bdad7bbc860fb6559042522671"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/nonlocal_G0_E4A/result.json",
+      "sha256": "af840526a83bddc2c1f102ae87f95c5d079af41058841041a895f12ed7254732"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/E4A_temporal_control_mean/result.json",
+      "sha256": "6a043d820b25d89c07c98ac28b35f2aeab9d79b03a2188dd9744d4877a549204"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_coupled/background_partition/result.json",
+      "sha256": "736551efd8f85a4d86feaea09a259a299ea4b8cd33ad28a65c8c82a2965083e5"
+    },
+    {
+      "file": "artifacts/strong_lensing_response_completion_20261021/native_coupled/dark_stage_support/result.json",
+      "sha256": "443c420ad505d53b78dd02f1153ece68344e6e966482937e66bdf970f84a15fd"
+    }
+  ],
+  "verified_numerical_claims": [
+    "Native all/train ranks439/439,424/424; originalERR targetQ33330.089424/23005.302019 in officialfloat32 replay; heldQ10974.065420 remains inadequate",
+    "ConditionalstationaritybothKKT/objective-changegates; 5active skybounds; covariance correctlyunconstrained localcurvature",
+    "Actualnative source slopes11552matchCfloat32; derivative/state/domainqualifications retained",
+    "NominalgroundIPCdeconvolution G/inverse H andcalibration-beforeL relation; clockconversion, reference8.6e-9normalizationdiscrepancyand2.076e-15truncationbound keptdistinct",
+    "SourceREAD+DARK covariance/observedJac correctedprojectionQ3901.2783/1156 and unchangedrawRMS1.525146 notvalidation",
+    "NonlocalG0directintercept contractionscopefixedphysicalcaps/history andsame-realizationcrossterms explicit",
+    "Frozen16outsideROI temporalcontrols: RMS1.29927705->1.29906960 but originalERRQ3385.7513->3425.0588; optionalPoissonvariantproperlyLMMSE",
+    "Backgroundplane-to-carriers heldQ10974.065420->10972.215765 only0.017%; no fittedrepairclaim",
+    "Nonlocaldark-stagefullsupportchangeboundedactualtarget7.53e-14SCI/FIELD2.456e-9SCI withidenticalnativefloat32outputs; no generaldarklawidentification"
+  ],
+  "statistical_and_physical_distinctions": [
+    "ObservedheldE4G0conditionselectronicintercept; E4FIELDcalibrationretained; heldtargetisconditional/internal, nothistoricallyunusedorunconditionalall-groupforecast",
+    "AllnewscienceapplicationsconsumeexistingfourF115W observations; independent1453calibrationdark acquisitionisidentified; noreservedsciencebandopeningclaimed",
+    "OriginalERRmeancomparatorsunchanged; covariancecomponentsreplacevsaddaccountingandcomponent-onlyscores explicit; noerrorinflationadmission",
+    "InstrumentGaussianREAD+DARK andoptionalPoissonsecondmoment/LMMSEapplicationsarenotWickfactorizationofBHSMdressedstate",
+    "Exclusivechronologicaltwo-point/inclusivecontourfour-point/completeoccupationdistinctionpreserved; noUV/currentjcalculationclaimed",
+    "GroundlinearIPC,declaredharmonic/ceiling/backgroundtrialandconditionalstochasticcompletionarenotphysicalstateorBHSMidentification",
+    "Conservativezero-drift exchangeproofvalidforadmissiblesymmetricrates(bothdirectionsallowedorhzeroatstateboundary); covariance2hvvTisfreewithoutchangingdrift"
+  ],
+  "review_findings_corrected_before_final_binding": [
+    {
+      "finding": "Calibration darks didnotbracketfullREADNOISEpedigree",
+      "correction": "Actual31Aug2022/18Oct2023epochswithinpedigreeexplicitlystated"
+    },
+    {
+      "finding": "StaticPSFerrorvsnonlinearreadcurvatureoverclaim",
+      "correction": "Affine-read qualifier added; nonlinear illuminated response remains possible"
+    },
+    {
+      "finding": "Globaloptimizationexclusionoverclaim",
+      "correction": "Conclusion now scoped to testedapplications/conditionalstationarity ratherthan globalnonconvex optimum"
+    },
+    {
+      "finding": "OptionalPoissonmixedcontrolsarenotgenerallyjointGaussian",
+      "correction": "Bestlinear predictor/errorcovarianceinterpretationexplicit"
+    },
+    {
+      "finding": "Earliercontinuationperturbationnumbernotfinaldomain",
+      "correction": "4.81955e-12e/s attributedtoinitialsavedpilot, notsubsequentfit"
+    }
+  ],
+  "remaining_declared_dependencies_are_not_hidden_errors": [
+    "Uniqueilluminatedjointcount/read/IPC/overflowlawandphysicalwellboundarynotidentified",
+    "Translated-capjoint raw/reference/postSIRSnoise path notsupplied bydirectbeta-onlycomponent",
+    "Source/background photonpartition,harmonicexteriorandhotdarkstageconditional; testedfinitesensitivitiesinsufficienttoidentifygeneralstate",
+    "No successfulheldprofile/geometryrepairorBHSMspecificpredictionclaimed; microscopicpreparationstate/source/Cauchyproblemremainsseparate"
+  ],
+  "no_unresolved_material_review_findings": true,
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "physical_validation": false,
+  "paper_or_report_edited_by_reviewer": false,
+  "no_new_fits_data_acquisition_or_native_processing": true,
+  "pdf_visual_QA_scope": "Separate root-ownedrenderQA; this receipt is scientificsource/numericalclaimreview, notPDFvisualinspection"
+}

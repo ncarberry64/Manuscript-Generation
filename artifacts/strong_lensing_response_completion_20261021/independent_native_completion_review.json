@@ -1,0 +1,38 @@
+{
+  "review": "Read-only independent review of current full-native conditional mean and held shared-calibration propagation; no fits or native applications run by reviewer.",
+  "status": "PASS for stated conditional estimating problem; no physical likelihood or validation is established",
+  "source_sha256": {
+    "code/strong_lensing_native_completion.py": "dbb703a5ea8a4bc015089ae5d45b65267417f97bb7205268dfd4b4badc113d02",
+    "scripts/finalize_he0435_native_held.py": "d815b5cffde958d41712ecc675ac768762dddfd4a40dcc060c9914bbf12e8d89",
+    "tests/test_strong_lensing_native_completion.py": "1b5b3249b4ef4c171cec7d1b15f4d4b8ef13e0c9ededc01e71a035296e28e03d",
+    "code/strong_lensing_native_calibration.py": "036211013a4e5e8b3dda9bffc1994a6c6ded61f9effcff73f4c53449e83d4bcc",
+    "code/strong_lensing_response_completion.py": "aa298ba071011c7c13b4292836f048811ed3fc10b0093bcbf584e4b0b7195830",
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b"
+  },
+  "focused_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest -q tests/test_strong_lensing_native_completion.py",
+    "passed": 3,
+    "seconds": 0.67
+  },
+  "equation_checks": [
+    "right_harmonic is the adjoint of the same fixed-mask Dirichlet extension, including zero columns on untrusted raw inputs.",
+    "native_rate_adjoint retains all 19 individual-read directions, inverse L and gain, H coupling, native L, actual ZEROFRAME, implicit beta, cap-context and rate-context derivatives. It matches the forward project_directions application.",
+    "Cap derivative with respect to incident rate includes the original capmult*t0mean term through the fixed harmonic cap context. Effective/preIPC conversion is diag(g)Gdiag(1/g).",
+    "Current native OLS derivatives are evaluated on the model mean continuous extension and fixed observed GROUPDQ; original C float32 value replay is separate.",
+    "Native fit KKT bound proximity is dimensionless in parameter scales; positive kappa is not classified as its zero bound merely because electron-inverse units are small.",
+    "Held fit retains original E1 sky anchors, E1--3 target training and all four FIELD calibration channels; only held point, flux and exposure plane are remeasured.",
+    "Held covariance sensitivity is minus conditional curvature times A^T B. Full trained shared sky/eta/kappa covariance and indirect trained-point crossblocks propagate, including response-moment derivatives."
+  ],
+  "material_limits": [
+    "Original native ERR is a declared conditional mean-estimation metric. The complete state-dependent detector likelihood and its logdet are not supplied by this optimizer.",
+    "Raw/post-SIRS group0 and translated cap covariance paths must be retained for a completed noisy-boundary likelihood. Direct beta-only contraction is evaluated separately at fixed charge/cap state.",
+    "Actual translated cap C=capmult*g[L(G(SAT-raw0+postSIRS0))-L(G postSIRS0)+lambda/g*t0]. At fixed source dC=capmult*g[diag Lprime(a)G(du-dr)-diag Lprime(b)Gdu]. Its unconditional covariance requires the raw/post-SIRS joint channel, not only post-SIRS marginal covariance.",
+    "Physical saturation/storage/noise law and deposited cosmic-ray charge history are not identified merely by native SAT/JUMP selections. Fixed harmonic outer context and cap prescriptions remain conditional.",
+    "Reported covariance is local unconstrained curvature/cut propagation, not active-bound posterior uncertainty. Convergence must be determined by saved projected KKT and relative objective criteria, not solver success alone.",
+    "All exposures and E4 internal holdout were previously consumed. No historically unused science observations or physical admission follows."
+  ],
+  "physical_validation": false,
+  "physical_guard": 2e-10,
+  "reserved_observations_opened": false,
+  "source_or_result_mutations": false
+}

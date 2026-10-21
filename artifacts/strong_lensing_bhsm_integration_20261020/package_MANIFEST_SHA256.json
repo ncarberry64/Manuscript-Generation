@@ -1,0 +1,230 @@
+{
+  "Galaxies_Strong_Lensing_Revised.pdf": {
+    "sha256": "a75a6f67c6041f59a3c4635f06d46963d6fbc64a7080e4736e8acb96b599623c",
+    "bytes": 259514
+  },
+  "PINNED_DEPENDENCIES.json": {
+    "sha256": "4e308507dd381f65d6f580a28c18423d6276f9ae5356816f51026c3d141ab661",
+    "bytes": 2688
+  },
+  "README.md": {
+    "sha256": "4b5c11bc119010653a9de0c1bf8f990d96a17c2b970bea5e6f67a2e0a7ddb05f",
+    "bytes": 8646
+  },
+  "VALIDATION_RECEIPT.json": {
+    "sha256": "b0f5612d965c343ce5b6e470fb7b6a4a1c790d8fbaec42f563c849551acd546d",
+    "bytes": 2864
+  },
+  "existing_text_changes.patch": {
+    "sha256": "e7ced095d0d448bb76fdd59e87e4d80c3bee75fef083e4cabd8661bf6f083da5",
+    "bytes": 11706
+  },
+  "overlay/.github/workflows/strong-lensing-manuscript.yml": {
+    "sha256": "baf66094e3c93250546e930063557ee344f04865a9d629a678ab1b01aeea8c23",
+    "bytes": 2010
+  },
+  "overlay/README.md": {
+    "sha256": "f5d9014052f445e5bfb9dd30d9ad0923b4c15c293224ebdb87e5a95de789d4b0",
+    "bytes": 7991
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/gr2_control.json": {
+    "sha256": "5f4b2518966180f88bee2dedb09f04196d8bc5f38c6ef533bf3d2c2ba460d621",
+    "bytes": 8696
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/results.json": {
+    "sha256": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "bytes": 14505
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/common_gr_composition_review_results.json": {
+    "sha256": "6537c27d4566a4d3f799267ea9261c5f5a6014707c92d73b4dbb7585e6c3ce9d",
+    "bytes": 9606
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/gr_optical_control_results.json": {
+    "sha256": "63cfd9a313107a38c2c509ef41cdcff2d41d37e6c907d6ffd203de1ad71c2258",
+    "bytes": 4096
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/multisource_crossratio_results.json": {
+    "sha256": "4cd70e7a5f257c2e3cc236f1b28a40cb795912715b6dffadabfa5596e8e0f1a8",
+    "bytes": 4918
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/portability_replay.json": {
+    "sha256": "5806d29b91435bfceaab59d0fabff80f765c53777caf29383045d40022585a7c",
+    "bytes": 1923
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/r1_qs_coefficients.json": {
+    "sha256": "0dcb09389d75b611ed96fb09ea2efd37b89ee3ebababdd1a2e41ab394ce08138",
+    "bytes": 12152
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/screened_projection_check_results.json": {
+    "sha256": "55f8110c19e1ca8b17daea25175fd18086dfcc32063511ae1e88edf849f18ab7",
+    "bytes": 1739
+  },
+  "overlay/artifacts/strong_lensing_r1_screened_20261020/review/shared_lens_rank_results.json": {
+    "sha256": "84a7abe7687a49ed5ba31e103d84f83d0087a8bde0162ef8991b21c324cc97b6",
+    "bytes": 8161
+  },
+  "overlay/code/strong_lensing_gr2.py": {
+    "sha256": "5edd7987ec568fde047b3e033cdf86ed1ac53cf2587f30f8244c9fa024b9ff11",
+    "bytes": 7499
+  },
+  "overlay/code/strong_lensing_r1_screened.py": {
+    "sha256": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "bytes": 8788
+  },
+  "overlay/docs/STRONG_LENSING_LOCAL_FAMILY_20261020.md": {
+    "sha256": "2fdecf6f5edbaeef41afa9de180a07878fb2aac4974d5ce8725806acd8ce0aea",
+    "bytes": 16132
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/CODEX_GALAXIES_INTEGRATION_PROMPT.md": {
+    "sha256": "7eb2e32c80ff87b1c350a38119ebcaa6a4b769ec60a43270c873a524b9e86fc9",
+    "bytes": 6374
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/COMMON_GR_2PM_COMPOSITION_REVIEW_20261020.md": {
+    "sha256": "dd4bb3c99ff0d78d631f5daa1648c82ffd81cd42b42f0a7b76ab73fb99c69d40",
+    "bytes": 11846
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/FINITE_BODY_GR_2PM_DERIVATION_20261020.md": {
+    "sha256": "7c1eae54cb2bce96edffbae6bfbbff862ee73f57f20f48edde04b5310ab800ee",
+    "bytes": 9583
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/GALAXIES_COVER_LETTER_DRAFT.md": {
+    "sha256": "7bb87297000743b02d4d91b89795e359a11394cc511dfb97f1efbe5ba785fdd8",
+    "bytes": 3298
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/GALAXIES_NUISANCE_OPTICS_REVIEW_20261020.md": {
+    "sha256": "77c1da1a786f6b4b3eeeea32f95ff4594be096eaa04d1c466e0775d22f08c184",
+    "bytes": 21656
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md": {
+    "sha256": "5b8ee42bb651779369ed7d3d09be761a373b8da7a641d87c313aa6ee573bdc82",
+    "bytes": 19731
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md": {
+    "sha256": "589b39a8fbada81bc41dabdf67c20b16130301f03fe560545bb023ad95d54988",
+    "bytes": 20908
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/R1_REFEREE_ACCURACY_REVIEW_20261020.md": {
+    "sha256": "fc73ab76a1ed77946e05e8649cb9a92aeda7ab8c0fe8fb96d18a27baae92e520",
+    "bytes": 10713
+  },
+  "overlay/docs/strong_lensing_r1_screened_20261020/source_manifest.json": {
+    "sha256": "e186d630f2c20387d3605d7f7814517bba73d98e012322cc8f6049b874a0a829",
+    "bytes": 6203
+  },
+  "overlay/manuscript/Definitions/journalnames.tex": {
+    "sha256": "c8c035b1980b852336584428b44499fdd1dc069c7be8985f258f2ef282775233",
+    "bytes": 143363
+  },
+  "overlay/manuscript/Definitions/logo-mdpi-eps-converted-to.pdf": {
+    "sha256": "d588ec8e92ace694eb3f538e88f70d93bbefa18671832b94ae9f2c5a76141899",
+    "bytes": 13056
+  },
+  "overlay/manuscript/Definitions/logo-mdpi.eps": {
+    "sha256": "f02d31469c6b2666c9de2da8d8731773bce3751d2fa99a27ff4bcf61a106cdcf",
+    "bytes": 563678
+  },
+  "overlay/manuscript/Definitions/logo-orcid.pdf": {
+    "sha256": "0558a0097dc4d1ffe3f4a1b3c9b4b98c6e568eac7d7439d447ca56ed1a8ec759",
+    "bytes": 12671
+  },
+  "overlay/manuscript/Definitions/logo-updates-eps-converted-to.pdf": {
+    "sha256": "4f82ae88eb55d891d5dbc19c34030a7f6e943e0798c1a9dc7d16e7a722dea17b",
+    "bytes": 16591
+  },
+  "overlay/manuscript/Definitions/logo-updates.eps": {
+    "sha256": "71ad8b00bcca718b62f3286af02ea56678e8199b5843d7ed4fdc86bd969c2809",
+    "bytes": 287998
+  },
+  "overlay/manuscript/Definitions/mdpi.bst": {
+    "sha256": "3b747eee144173c46a43562ead905c26322c7cb394e350a925d36dcf63884680",
+    "bytes": 23683
+  },
+  "overlay/manuscript/Definitions/mdpi.cls": {
+    "sha256": "658dbb5b2db2f6560bf3de3ecff7efac310a5817721eebd7539c1990b5345f01",
+    "bytes": 61807
+  },
+  "overlay/manuscript/Definitions/mdpi_apacite.bst": {
+    "sha256": "c7fffe0231922e5521dc360889fafe941ee26d154c1ce4e167e4ec9f2d13498f",
+    "bytes": 138426
+  },
+  "overlay/manuscript/Definitions/mdpi_apacite.sty": {
+    "sha256": "a77a994f978c1860ff14dbcae74631f3ed835b418adbdcf84de2f06d98c34599",
+    "bytes": 71377
+  },
+  "overlay/manuscript/Definitions/mdpi_chicago.bst": {
+    "sha256": "4a73faf6e0cf1a225d1b9a41a6955d3cc29a55c5fdce662177d00eee3946ce36",
+    "bytes": 37920
+  },
+  "overlay/manuscript/Definitions/unicode.tex": {
+    "sha256": "1a41f6c85db06401a4582008e6b8933c7212d17541497701797a55fe473d19e0",
+    "bytes": 7487
+  },
+  "overlay/manuscript/figures/r1_screening_prediction.pdf": {
+    "sha256": "df60044e9ea3eb0501a5c9777e832d8753967cfaffe96e760f3ab3bcf4dc754f",
+    "bytes": 29213
+  },
+  "overlay/manuscript/figures/r1_screening_prediction.png": {
+    "sha256": "1f8675c397879bdf0fa9b35dcae99a65f36e4cfb17bc7248bcfc36d63670de18",
+    "bytes": 146433
+  },
+  "overlay/manuscript/figures/r1_screening_prediction.svg": {
+    "sha256": "02f54724fb211fe4179daafd4a8d693b604c10c16eeb2c870ad8bfb43ed69f3b",
+    "bytes": 89391
+  },
+  "overlay/manuscript/sections/strong_lensing_galaxies_20261020.tex": {
+    "sha256": "77d6f248643ac4960f30f1dbd148ece88a673bcd6e67bc8935308bdbace57d71",
+    "bytes": 37988
+  },
+  "overlay/manuscript/strong_lensing_main.pdf": {
+    "sha256": "a75a6f67c6041f59a3c4635f06d46963d6fbc64a7080e4736e8acb96b599623c",
+    "bytes": 259514
+  },
+  "overlay/manuscript/strong_lensing_main.tex": {
+    "sha256": "767107e74143e8715c51617b4b4ed46a36429f95b33ba344cc8acb2e1a502022",
+    "bytes": 5583
+  },
+  "overlay/requirements-strong-lensing-review.txt": {
+    "sha256": "4ae55e0316e97b9eabd3ee08dcf9bd9d23392e0d0b2f8853a0fbe650393aed7f",
+    "bytes": 124
+  },
+  "overlay/scripts/build_strong_lensing_manuscript.py": {
+    "sha256": "5b448ac29223058631e82e0938f872e93050c364bc8c6f3fb42a4256c05619b3",
+    "bytes": 1703
+  },
+  "overlay/scripts/plot_strong_lensing_r1_screened.py": {
+    "sha256": "692d4f5988db4a16c1491e50c10b947ac8b6e6a674db97b6845f009c11fe292f",
+    "bytes": 3471
+  },
+  "overlay/scripts/r1_screened_review/check_common_gr_composition.py": {
+    "sha256": "c0aaaf72121d357f7a03b8a7d2570986d0b6b11176a0fc3c5841801288a624cf",
+    "bytes": 9119
+  },
+  "overlay/scripts/r1_screened_review/check_gr_optical_control.py": {
+    "sha256": "e94e133637d7f6e4300472349ede65a06918e0926cc0cebb946fba3ce2d72976",
+    "bytes": 4525
+  },
+  "overlay/scripts/r1_screened_review/check_screened_projection.py": {
+    "sha256": "b669ee9edf064b71268fbb12f98add7007fbd89be69828f603e5c36a1a196c27",
+    "bytes": 5020
+  },
+  "overlay/scripts/r1_screened_review/multisource_crossratio.py": {
+    "sha256": "8c0636a9a03a97df5f462ec1eca72462f18224d6afe4761c8bb07b4fe056c106",
+    "bytes": 5186
+  },
+  "overlay/scripts/r1_screened_review/r1_qs_coefficients.py": {
+    "sha256": "8d08350a749357d345f97d71a57aacba3a42d6e26e09654f592f791531f2b4aa",
+    "bytes": 6023
+  },
+  "overlay/scripts/r1_screened_review/shared_lens_rank.py": {
+    "sha256": "e1f1df5cca4918a70d4ed4c87c61f96c451b72cfbee404789667bb720359bbf6",
+    "bytes": 8670
+  },
+  "overlay/scripts/run_strong_lensing_gr2_control.py": {
+    "sha256": "7f6c750cca67983b4a0d38f9b01adac192fbeae4d5876ef0d743f7a82e7e8560",
+    "bytes": 6946
+  },
+  "overlay/scripts/run_strong_lensing_r1_screened.py": {
+    "sha256": "67878e17efde231954e300975f4b496a28949862a91359923850e913b5a3884e",
+    "bytes": 9794
+  }
+}

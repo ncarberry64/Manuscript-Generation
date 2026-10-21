@@ -1,0 +1,17 @@
+{
+  "started_utc": "2026-10-21T13:41:34.999304+00:00",
+  "freeze_commit": "287b28454b8f04fcba54c9253e06163db6bf2eb1",
+  "protocol_sha256": "f645ef20011587c8fd56e2185d439ba1460481354d5e0d9dcf67fc1e9416d25b",
+  "prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "native_filenames": [
+    "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00001_nrcb3_cal.fits",
+    "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00002_nrcb3_cal.fits",
+    "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00003_nrcb3_cal.fits",
+    "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00004_nrcb3_cal.fits"
+  ],
+  "diagnostic_mode": true,
+  "calibration_adequacy_pass": false,
+  "calibration_manifest_sha256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7",
+  "known_failed_calibration_sha256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7",
+  "note": "Created exclusively before numerical native-array opening; targets consumed even if subsequent measurement fails"
+}

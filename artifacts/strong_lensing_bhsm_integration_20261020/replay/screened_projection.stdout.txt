@@ -1,0 +1,65 @@
+{
+  "status": "independent direct-z projection; conditional same radial equation and body",
+  "scalar_coefficients": {
+    "b": 0.11306384489513412,
+    "C": 4.238858559433703,
+    "F_infinity": 0.0015078862438121512,
+    "rV_Mpc": 0.21202922497717772
+  },
+  "impact_Mpc": [
+    0.0038283840798525306,
+    0.00037648891104485356,
+    0.0030128277754399237
+  ],
+  "direct_z_extra_alpha_rad": [
+    8.320894433865074e-11,
+    1.2531391301721676e-11,
+    7.508892163519615e-11
+  ],
+  "module_extra_alpha_rad": [
+    8.320894433865073e-11,
+    1.2531391301727208e-11,
+    7.508892163519613e-11
+  ],
+  "max_relative_alpha_discrepancy": 4.414330550581696e-13,
+  "direct_z_extra_potential_Mpc": [
+    6.560077316660597e-14,
+    -1.2840578848874697e-13,
+    9.623343336389925e-16
+  ],
+  "module_extra_potential_Mpc": [
+    6.560077316660597e-14,
+    -1.284057884887477e-13,
+    9.623343336389925e-16
+  ],
+  "max_absolute_potential_discrepancy_Mpc": 7.32062920045099e-28,
+  "new_images_arcsec": [
+    0.83548215721984,
+    -0.08216115167282029,
+    -0.6574998736686738
+  ],
+  "image_changes_arcsec": [
+    6.123276249319229e-06,
+    7.881071643559561e-07,
+    -4.348591524606198e-06
+  ],
+  "first_order_image_changes_arcsec": [
+    6.123237474376574e-06,
+    7.881150659653258e-07,
+    -4.3485629655966724e-06
+  ],
+  "new_relative_delays_days": [
+    21.716377020433598,
+    14.271552491299554
+  ],
+  "exact_model_delay_changes_seconds": [
+    25.959258149259767,
+    8.649019374922773
+  ],
+  "first_order_delay_changes_seconds": [
+    25.959098922721697,
+    8.648963280201446
+  ],
+  "max_image_equation_residual_rad": 8.470329472543003e-22,
+  "precision_scope": "numerical agreement of local QS weak-field model, not accuracy of its truncations"
+}

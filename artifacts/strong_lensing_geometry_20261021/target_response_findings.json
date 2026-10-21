@@ -1,0 +1,1113 @@
+{
+  "status": "DIAGNOSTIC_ONLY_NO_VALIDATION",
+  "inputs_sha256": {
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "66b87f25245fd603c1c6adc1940d1b779b65769faf67e9096406fdac0de4db43",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/field_psf_calibration.json": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json": "5dbf995caff516ab3286ea23bd080b2a2828c208df2415562e0cb2468ee4e853",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json": "65407275cfda96d8778dfb57d99611d26524c2565df28e7fa3f41769fc14da94",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json": "784d7426ffc6ed8c6e1c5573b4778bf88585930a2fdc6edf3fae4e97121ea45b",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json": "22fde10ed590a2f8427598845998aa830c2ea2ba8ef8f92e5e0c810541b87a33"
+  },
+  "analysis": "Saved-result summaries only; no FITS read, parameter estimation, response fitting or covariance rescaling.",
+  "freeze_commit": "287b28454b8f04fcba54c9253e06163db6bf2eb1",
+  "q_definition": "u=(B-A)/|B-A|, v=J u; q=(|B-A|, (C-A).u, (C-A).v, (D-A).u, (D-A).v); translation/proper rotation removed, scale and chirality retained.",
+  "model_scores": {
+    "old_frozen_conventional": {
+      "residual": [
+        -0.00022655644518088103,
+        -0.004555125362638801,
+        0.005004418203784278,
+        0.002626617010732857,
+        0.0014650710799459787
+      ],
+      "chi2": 18667.775118865164,
+      "dof": 5,
+      "p_value": 0.0,
+      "gaussian_logdensity": -9290.154467541883,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763694378268074,
+        2.103501287984576,
+        1.42320105508813,
+        0.3092488110854121,
+        1.8388276236895564
+      ],
+      "intrinsic_residual_mas": [
+        -0.22655644518088103,
+        -4.555125362638801,
+        5.004418203784278,
+        2.626617010732857,
+        1.4650710799459787
+      ],
+      "intrinsic_coordinate_rms_mas": 3.3133139495357518,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": null,
+      "improves_declared_baseline_raw_q_RMS": null,
+      "raw_q_RMS_reduction_fraction": null,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": false,
+      "conditional_geometry_validation_pass": false
+    },
+    "old_frozen_R1": {
+      "residual": [
+        -0.0002265880970693246,
+        -0.004554918875379954,
+        0.005003867684016283,
+        0.0026270230758144164,
+        0.0014650800989270962
+      ],
+      "chi2": 18667.225196851854,
+      "dof": 5,
+      "p_value": 0.0,
+      "gaussian_logdensity": -9289.879506535228,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763694694786958,
+        2.103501081497317,
+        1.423201605607898,
+        0.3092484050203305,
+        1.8388276146705753
+      ],
+      "intrinsic_residual_mas": [
+        -0.2265880970693246,
+        -4.554918875379954,
+        5.003867684016283,
+        2.6270230758144164,
+        1.4650800989270962
+      ],
+      "intrinsic_coordinate_rms_mas": 3.3131564968561995,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": null,
+      "improves_declared_baseline_raw_q_RMS": null,
+      "raw_q_RMS_reduction_fraction": null,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": false,
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_conventional": {
+      "residual": [
+        -0.0002412969451930369,
+        0.0006218670151811878,
+        -0.0014338970817910912,
+        -0.000670935243537063,
+        -0.0002935379637061253
+      ],
+      "chi2": 958.4342431306987,
+      "dof": 5,
+      "p_value": 5.98645106728816e-205,
+      "gaussian_logdensity": -435.4840296746508,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763841783268195,
+        2.098324295606756,
+        1.4296393703737054,
+        0.312546363339682,
+        1.8405862327332085
+      ],
+      "intrinsic_residual_mas": [
+        -0.2412969451930369,
+        0.6218670151811878,
+        -1.4338970817910912,
+        -0.670935243537063,
+        -0.2935379637061253
+      ],
+      "intrinsic_coordinate_rms_mas": 0.7794000614133585,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": "old_frozen_conventional",
+      "improves_declared_baseline_raw_q_RMS": true,
+      "raw_q_RMS_reduction_fraction": 0.7647672169663956,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": true,
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_R1": {
+      "residual": [
+        -0.00024108561719216048,
+        0.0006220702050101501,
+        -0.0014340764351250535,
+        -0.000670618995689154,
+        -0.00029384441361579583
+      ],
+      "chi2": 958.4283740781915,
+      "dof": 5,
+      "p_value": 6.003989231980817e-205,
+      "gaussian_logdensity": -435.4810951483972,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763839669988187,
+        2.098324092416927,
+        1.4296395497270393,
+        0.3125460470918341,
+        1.8405865391831182
+      ],
+      "intrinsic_residual_mas": [
+        -0.24108561719216048,
+        0.6220702050101501,
+        -1.4340764351250535,
+        -0.670618995689154,
+        -0.29384441361579583
+      ],
+      "intrinsic_coordinate_rms_mas": 0.7794540670689476,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": "old_frozen_R1",
+      "improves_declared_baseline_raw_q_RMS": true,
+      "raw_q_RMS_reduction_fraction": 0.764739737525662,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": true,
+      "conditional_geometry_validation_pass": false
+    }
+  },
+  "maximum_conventional_R1_prediction_difference_microarcsec": {
+    "old": 0.5505197679944729,
+    "G1": 0.316247847909068
+  },
+  "q_exposure_span_mas": [
+    1.4403785446806978,
+    2.2688460337362812,
+    2.736622789324656,
+    2.8659290798538564,
+    1.9218967979265926
+  ],
+  "q_exposure_sample_sd_mas": [
+    0.6488850271281755,
+    0.9659039556232445,
+    1.2102984207176837,
+    1.4902964968364676,
+    0.7963883199912684
+  ],
+  "q_exposure_consistency_chi2": 432.2620079577963,
+  "q_exposure_consistency_dof": 15,
+  "q_exposure_consistency_p_value": 1.1277782075130665e-82,
+  "target_residuals": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal",
+      "points": [
+        {
+          "label": "A",
+          "chi2": 14357.628355414861,
+          "dof": 265,
+          "chi2_per_dof": 54.17972964307495,
+          "p_value": 0.0,
+          "usable_pixels": 274,
+          "standardized_residual_rms": 7.238791576424588,
+          "fraction_abs_standardized_residual_gt_3": 0.5766423357664233,
+          "fraction_abs_standardized_residual_gt_5": 0.3686131386861314,
+          "maximum_abs_standardized_residual": 33.03025144359104,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 32,
+              "mean_standardized_residual": 2.8704661497689465,
+              "mean_SCI_residual": 1.1350092773823353,
+              "chi2_fraction": 0.356168861726691
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 66,
+              "mean_standardized_residual": 1.547752812690007,
+              "mean_SCI_residual": 0.34283587041740216,
+              "chi2_fraction": 0.42704526821573924
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 176,
+              "mean_standardized_residual": 0.02091408161248334,
+              "mean_SCI_residual": 0.0359189298348787,
+              "chi2_fraction": 0.21678587005756986
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "B",
+          "chi2": 11850.7906483076,
+          "dof": 221,
+          "chi2_per_dof": 53.62348709641448,
+          "p_value": 0.0,
+          "usable_pixels": 230,
+          "standardized_residual_rms": 7.1781039788910945,
+          "fraction_abs_standardized_residual_gt_3": 0.6130434782608696,
+          "fraction_abs_standardized_residual_gt_5": 0.4,
+          "maximum_abs_standardized_residual": 23.85919566453343,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 6,
+              "mean_standardized_residual": 5.863890905292865,
+              "mean_SCI_residual": 1.116470592139941,
+              "chi2_fraction": 0.07417633059968443
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 46,
+              "mean_standardized_residual": 3.32827515089519,
+              "mean_SCI_residual": 0.7733454019898215,
+              "chi2_fraction": 0.5112816082136891
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 178,
+              "mean_standardized_residual": -0.12039701392588652,
+              "mean_SCI_residual": 0.02925983736582333,
+              "chi2_fraction": 0.4145420611866265
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "C",
+          "chi2": 10012.197425754433,
+          "dof": 264,
+          "chi2_per_dof": 37.92499024906982,
+          "p_value": 0.0,
+          "usable_pixels": 273,
+          "standardized_residual_rms": 6.055965310770392,
+          "fraction_abs_standardized_residual_gt_3": 0.5091575091575091,
+          "fraction_abs_standardized_residual_gt_5": 0.2967032967032967,
+          "maximum_abs_standardized_residual": 22.93749181571809,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 36,
+              "mean_standardized_residual": 2.3849927371773116,
+              "mean_SCI_residual": 0.8871331481078005,
+              "chi2_fraction": 0.377495959787947
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 63,
+              "mean_standardized_residual": 0.8582619521281462,
+              "mean_SCI_residual": 0.20033641839492108,
+              "chi2_fraction": 0.40080499384309115
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 174,
+              "mean_standardized_residual": 0.027897916883553926,
+              "mean_SCI_residual": 0.032260178109473514,
+              "chi2_fraction": 0.2216990463689618
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "D",
+          "chi2": 8016.79579786506,
+          "dof": 267,
+          "chi2_per_dof": 30.025452426460898,
+          "p_value": 0.0,
+          "usable_pixels": 276,
+          "standardized_residual_rms": 5.3894676533464425,
+          "fraction_abs_standardized_residual_gt_3": 0.45652173913043476,
+          "fraction_abs_standardized_residual_gt_5": 0.2536231884057971,
+          "maximum_abs_standardized_residual": 19.719866980336533,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 1,
+              "mean_standardized_residual": 12.570852421970171,
+              "mean_SCI_residual": 6.761173313192089,
+              "chi2_fraction": 0.019711906676859233
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 38,
+              "mean_standardized_residual": 1.632557777577107,
+              "mean_SCI_residual": 0.5485483092591165,
+              "chi2_fraction": 0.4298285831861084
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 60,
+              "mean_standardized_residual": 0.9569250308200371,
+              "mean_SCI_residual": 0.16282649278431957,
+              "chi2_fraction": 0.3539610885498816
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 177,
+              "mean_standardized_residual": -0.08541612920188273,
+              "mean_SCI_residual": 0.01007928930749794,
+              "chi2_fraction": 0.19649842158715083
+            }
+          ],
+          "pixel_adequacy_pass": false
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal",
+      "points": [
+        {
+          "label": "A",
+          "chi2": 13296.727334523888,
+          "dof": 261,
+          "chi2_per_dof": 50.94531545794593,
+          "p_value": 0.0,
+          "usable_pixels": 270,
+          "standardized_residual_rms": 7.017630531455358,
+          "fraction_abs_standardized_residual_gt_3": 0.5888888888888889,
+          "fraction_abs_standardized_residual_gt_5": 0.362962962962963,
+          "maximum_abs_standardized_residual": 26.188986624025244,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 30,
+              "mean_standardized_residual": 4.762233601726062,
+              "mean_SCI_residual": 1.2895878843938853,
+              "chi2_fraction": 0.3213255184293157
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 63,
+              "mean_standardized_residual": 1.197977065052108,
+              "mean_SCI_residual": 0.2939197523252889,
+              "chi2_fraction": 0.43801245392341026
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 177,
+              "mean_standardized_residual": -0.17841270517295738,
+              "mean_SCI_residual": 0.012329372535291316,
+              "chi2_fraction": 0.24066202764727415
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "B",
+          "chi2": 20631.208209045006,
+          "dof": 258,
+          "chi2_per_dof": 79.96592329087211,
+          "p_value": 0.0,
+          "usable_pixels": 267,
+          "standardized_residual_rms": 8.790360785002266,
+          "fraction_abs_standardized_residual_gt_3": 0.700374531835206,
+          "fraction_abs_standardized_residual_gt_5": 0.4868913857677903,
+          "maximum_abs_standardized_residual": 32.59317757794824,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 27,
+              "mean_standardized_residual": 5.996843635969667,
+              "mean_SCI_residual": 1.844329960824095,
+              "chi2_fraction": 0.2347016575613082
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 64,
+              "mean_standardized_residual": 2.2482536293396365,
+              "mean_SCI_residual": 0.6212252215058714,
+              "chi2_fraction": 0.514190024286981
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 176,
+              "mean_standardized_residual": -0.14130569455457967,
+              "mean_SCI_residual": 0.02943432528569233,
+              "chi2_fraction": 0.2511083181517109
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "C",
+          "chi2": 11492.87290461243,
+          "dof": 264,
+          "chi2_per_dof": 43.53360948716829,
+          "p_value": 0.0,
+          "usable_pixels": 273,
+          "standardized_residual_rms": 6.488330721227986,
+          "fraction_abs_standardized_residual_gt_3": 0.5457875457875457,
+          "fraction_abs_standardized_residual_gt_5": 0.31135531135531136,
+          "maximum_abs_standardized_residual": 26.02795006777783,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 36,
+              "mean_standardized_residual": 3.103442300733418,
+              "mean_SCI_residual": 0.9835821919188871,
+              "chi2_fraction": 0.40836120605659243
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 61,
+              "mean_standardized_residual": 1.5798037049203921,
+              "mean_SCI_residual": 0.31713428113413367,
+              "chi2_fraction": 0.38382018688851677
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 175,
+              "mean_standardized_residual": -0.2757486848415687,
+              "mean_SCI_residual": -0.0030838460495477018,
+              "chi2_fraction": 0.20671482529968346
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "D",
+          "chi2": 9041.727343137554,
+          "dof": 268,
+          "chi2_per_dof": 33.73778859379684,
+          "p_value": 0.0,
+          "usable_pixels": 277,
+          "standardized_residual_rms": 5.71328407810913,
+          "fraction_abs_standardized_residual_gt_3": 0.4404332129963899,
+          "fraction_abs_standardized_residual_gt_5": 0.2888086642599278,
+          "maximum_abs_standardized_residual": 19.454247605391927,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 36,
+              "mean_standardized_residual": 2.2567161005166283,
+              "mean_SCI_residual": 0.8080133909854198,
+              "chi2_fraction": 0.40497148372221015
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 60,
+              "mean_standardized_residual": 1.3770583682455433,
+              "mean_SCI_residual": 0.2389823177490704,
+              "chi2_fraction": 0.40574708083678607
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 181,
+              "mean_standardized_residual": -0.16937958465863256,
+              "mean_SCI_residual": 0.0014795276765705706,
+              "chi2_fraction": 0.18928143544100376
+            }
+          ],
+          "pixel_adequacy_pass": false
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal",
+      "points": [
+        {
+          "label": "A",
+          "chi2": 12700.843247545517,
+          "dof": 264,
+          "chi2_per_dof": 48.1092547255512,
+          "p_value": 0.0,
+          "usable_pixels": 273,
+          "standardized_residual_rms": 6.820794333433209,
+          "fraction_abs_standardized_residual_gt_3": 0.5714285714285714,
+          "fraction_abs_standardized_residual_gt_5": 0.3333333333333333,
+          "maximum_abs_standardized_residual": 24.479036907866412,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 33,
+              "mean_standardized_residual": 1.4231374026881007,
+              "mean_SCI_residual": 0.7448354325164929,
+              "chi2_fraction": 0.33150881286846345
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 65,
+              "mean_standardized_residual": 2.1203875421697522,
+              "mean_SCI_residual": 0.4375510222957868,
+              "chi2_fraction": 0.4428202623771369
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 175,
+              "mean_standardized_residual": -0.051006142343338105,
+              "mean_SCI_residual": 0.0245391697868411,
+              "chi2_fraction": 0.22567092475439957
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "B",
+          "chi2": 18398.517427870036,
+          "dof": 258,
+          "chi2_per_dof": 71.31208305375984,
+          "p_value": 0.0,
+          "usable_pixels": 267,
+          "standardized_residual_rms": 8.301102635993367,
+          "fraction_abs_standardized_residual_gt_3": 0.651685393258427,
+          "fraction_abs_standardized_residual_gt_5": 0.4307116104868914,
+          "maximum_abs_standardized_residual": 28.79961215298556,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 26,
+              "mean_standardized_residual": 2.842185616054395,
+              "mean_SCI_residual": 0.9255931316988956,
+              "chi2_fraction": 0.20756395199972485
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 65,
+              "mean_standardized_residual": 3.339313111734423,
+              "mean_SCI_residual": 0.8153754186594339,
+              "chi2_fraction": 0.5405485064941319
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 176,
+              "mean_standardized_residual": -0.21873910391898133,
+              "mean_SCI_residual": 0.025038906746444264,
+              "chi2_fraction": 0.25188754150614323
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "C",
+          "chi2": 10376.653575847606,
+          "dof": 263,
+          "chi2_per_dof": 39.454956562158195,
+          "p_value": 0.0,
+          "usable_pixels": 272,
+          "standardized_residual_rms": 6.1765250485940975,
+          "fraction_abs_standardized_residual_gt_3": 0.5367647058823529,
+          "fraction_abs_standardized_residual_gt_5": 0.3272058823529412,
+          "maximum_abs_standardized_residual": 22.143238787626274,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 34,
+              "mean_standardized_residual": 2.0328993615917565,
+              "mean_SCI_residual": 0.6876195843957132,
+              "chi2_fraction": 0.3820234527018738
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 66,
+              "mean_standardized_residual": 1.8477093346668592,
+              "mean_SCI_residual": 0.3426874547967751,
+              "chi2_fraction": 0.40006923758271573
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 171,
+              "mean_standardized_residual": -0.26323241330113367,
+              "mean_SCI_residual": -0.0018271092276047878,
+              "chi2_fraction": 0.21532272232287528
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "D",
+          "chi2": 6600.762029201393,
+          "dof": 267,
+          "chi2_per_dof": 24.721955165548287,
+          "p_value": 0.0,
+          "usable_pixels": 276,
+          "standardized_residual_rms": 4.890378763820674,
+          "fraction_abs_standardized_residual_gt_3": 0.4601449275362319,
+          "fraction_abs_standardized_residual_gt_5": 0.22826086956521738,
+          "maximum_abs_standardized_residual": 18.560335286774503,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 1,
+              "mean_standardized_residual": 6.937839025347212,
+              "mean_SCI_residual": 3.485597487477726,
+              "chi2_fraction": 0.0072921293221434764
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 37,
+              "mean_standardized_residual": 0.9621618178836223,
+              "mean_SCI_residual": 0.2654891466186038,
+              "chi2_fraction": 0.34135341039739187
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 61,
+              "mean_standardized_residual": 1.4081435215130458,
+              "mean_SCI_residual": 0.22762341280040355,
+              "chi2_fraction": 0.4297044219909561
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 177,
+              "mean_standardized_residual": -0.12067975273866112,
+              "mean_SCI_residual": 0.006951216577708337,
+              "chi2_fraction": 0.2216500382895084
+            }
+          ],
+          "pixel_adequacy_pass": false
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal",
+      "points": [
+        {
+          "label": "A",
+          "chi2": 10332.636636900077,
+          "dof": 264,
+          "chi2_per_dof": 39.13877513977302,
+          "p_value": 0.0,
+          "usable_pixels": 273,
+          "standardized_residual_rms": 6.152112307935449,
+          "fraction_abs_standardized_residual_gt_3": 0.5531135531135531,
+          "fraction_abs_standardized_residual_gt_5": 0.3553113553113553,
+          "maximum_abs_standardized_residual": 26.01136336166823,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 34,
+              "mean_standardized_residual": 2.2844779843721255,
+              "mean_SCI_residual": 0.71887915731689,
+              "chi2_fraction": 0.2642248996085471
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 66,
+              "mean_standardized_residual": 1.7390159649570254,
+              "mean_SCI_residual": 0.36827402304790186,
+              "chi2_fraction": 0.4831680751979019
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 173,
+              "mean_standardized_residual": -0.24158429049048713,
+              "mean_SCI_residual": -0.0007424454980039628,
+              "chi2_fraction": 0.2526070251935512
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "B",
+          "chi2": 16356.44604198109,
+          "dof": 258,
+          "chi2_per_dof": 63.39707768209725,
+          "p_value": 0.0,
+          "usable_pixels": 267,
+          "standardized_residual_rms": 7.826883002543842,
+          "fraction_abs_standardized_residual_gt_3": 0.6404494382022472,
+          "fraction_abs_standardized_residual_gt_5": 0.4344569288389513,
+          "maximum_abs_standardized_residual": 36.51881863823986,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 29,
+              "mean_standardized_residual": 3.5322645862790067,
+              "mean_SCI_residual": 1.1512423619896779,
+              "chi2_fraction": 0.23704159410579537
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 61,
+              "mean_standardized_residual": 2.0559838984054855,
+              "mean_SCI_residual": 0.5484971545734413,
+              "chi2_fraction": 0.48796043953733603
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 177,
+              "mean_standardized_residual": -0.05418670069421999,
+              "mean_SCI_residual": 0.04068813389263613,
+              "chi2_fraction": 0.27499796635686863
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "C",
+          "chi2": 7735.552209722989,
+          "dof": 262,
+          "chi2_per_dof": 29.52500843405721,
+          "p_value": 0.0,
+          "usable_pixels": 271,
+          "standardized_residual_rms": 5.342702789657013,
+          "fraction_abs_standardized_residual_gt_3": 0.47601476014760147,
+          "fraction_abs_standardized_residual_gt_5": 0.28044280442804426,
+          "maximum_abs_standardized_residual": 22.583949224705123,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 0,
+              "mean_standardized_residual": null,
+              "mean_SCI_residual": null,
+              "chi2_fraction": 0.0
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 32,
+              "mean_standardized_residual": 1.1406446802195214,
+              "mean_SCI_residual": 0.5931880746677948,
+              "chi2_fraction": 0.3043553075990978
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 62,
+              "mean_standardized_residual": 1.5935455472634072,
+              "mean_SCI_residual": 0.2855754670878972,
+              "chi2_fraction": 0.43657336361294996
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 177,
+              "mean_standardized_residual": -0.13563841278159192,
+              "mean_SCI_residual": 0.0032676612359142385,
+              "chi2_fraction": 0.2590713287879525
+            }
+          ],
+          "pixel_adequacy_pass": false
+        },
+        {
+          "label": "D",
+          "chi2": 6859.232369719937,
+          "dof": 268,
+          "chi2_per_dof": 25.59415063328335,
+          "p_value": 0.0,
+          "usable_pixels": 277,
+          "standardized_residual_rms": 4.976200531715029,
+          "fraction_abs_standardized_residual_gt_3": 0.4151624548736462,
+          "fraction_abs_standardized_residual_gt_5": 0.22743682310469315,
+          "maximum_abs_standardized_residual": 20.588161449500586,
+          "annuli": [
+            {
+              "radius_native_pixel": [
+                0,
+                2
+              ],
+              "usable_pixels": 2,
+              "mean_standardized_residual": 2.2526235938328316,
+              "mean_SCI_residual": 1.0135965585700717,
+              "chi2_fraction": 0.008206496732532105
+            },
+            {
+              "radius_native_pixel": [
+                2,
+                4
+              ],
+              "usable_pixels": 36,
+              "mean_standardized_residual": 1.5295163646988603,
+              "mean_SCI_residual": 0.42764736334795717,
+              "chi2_fraction": 0.3976159754489084
+            },
+            {
+              "radius_native_pixel": [
+                4,
+                6
+              ],
+              "usable_pixels": 62,
+              "mean_standardized_residual": 1.1666175093287396,
+              "mean_SCI_residual": 0.20522453849405797,
+              "chi2_fraction": 0.4111505473751777
+            },
+            {
+              "radius_native_pixel": [
+                6,
+                12
+              ],
+              "usable_pixels": 177,
+              "mean_standardized_residual": -0.13997602901721104,
+              "mean_SCI_residual": 0.0011371392251697773,
+              "chi2_fraction": 0.18302698044338186
+            }
+          ],
+          "pixel_adequacy_pass": false
+        }
+      ]
+    }
+  ],
+  "field_control_fit_statistics": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "chi2": 13608.66680405211,
+      "dof": 265,
+      "p_value": 0.0,
+      "absolute_adequacy_pass": false
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "chi2": 14089.97086347977,
+      "dof": 267,
+      "p_value": 0.0,
+      "absolute_adequacy_pass": false
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "chi2": 12962.997153466522,
+      "dof": 265,
+      "p_value": 0.0,
+      "absolute_adequacy_pass": false
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "chi2": 11381.03901420627,
+      "dof": 262,
+      "p_value": 0.0,
+      "absolute_adequacy_pass": false
+    }
+  ],
+  "interpretation": "G1 reduces the raw five-coordinate offset descriptively. Coherent positive wing residuals and exposure scatter demonstrate inadequate measurement response. Neither model is validated or physically rejected by these conditional formal scores; no BHSM-specific signal is established.",
+  "remaining_dependency": "A demonstrably adequate instrument/scene mean response, independently calibrated and with its uncertainty characterized, is required before calibrated geometry inference from this dataset. Finite PSF uncertainty is not supplied by native ERR. These target photons have now been consumed for diagnosis and are not unused future validation data.",
+  "physical_admission": false,
+  "unchanged_physical_guard": 2e-10
+}

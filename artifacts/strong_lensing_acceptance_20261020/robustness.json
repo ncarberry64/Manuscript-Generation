@@ -1,0 +1,1627 @@
+{
+  "status": "BOUNDED_PROFILE_ROBUSTNESS_STUDY_EXECUTED",
+  "scope": "same state-conditioned light transfer, eight paired applications; controlled inputs are not fitted uncertainties or empirical priors",
+  "action_state": {
+    "coefficients": {
+      "z_l": 0.3,
+      "H0_km_s_Mpc": 67.4,
+      "H_over_H0": 1.1836105771859786,
+      "Tdot_over_MplH0": 0.23776442637096692,
+      "Tddot_over_MplH02": 0.24847158912363834,
+      "lambda_over_MplH02": 1.0,
+      "b": 0.11306384489502991,
+      "C": 4.238858559433196
+    },
+    "changed": false,
+    "new_scalar_amplitude": false
+  },
+  "shared_preparation": {
+    "source_Mpc": [
+      0.0014576633674174603,
+      0.0
+    ],
+    "source_change_only_in_declared_control": true,
+    "clocks_redshifts_and_distance_maps": "identical within every response/reference pair and throughout the study"
+  },
+  "profile_matching": {
+    "total_mass_Msun": 100000000000.0,
+    "half_mass_radius_kpc": 1.929416346490062,
+    "tolman_half_radius_over_support": 0.643138782163354,
+    "convention": "same total 3D mass and 3D half-mass radius; Plummer a=r_half sqrt(2^(2/3)-1)",
+    "alternative": "standard Plummer sphere: rho=3 M/(4 pi a\u00b3) (1+r\u00b2/a\u00b2)^(-5/2), regular center, finite total mass, no hard material edge",
+    "citation": "Plummer1911, MNRAS71(5),460-470,doi:10.1093/mnras/71.5.460"
+  },
+  "design": [
+    {
+      "case": "reference"
+    },
+    {
+      "case": "mass_plus_20_percent",
+      "mass_factor": 1.2
+    },
+    {
+      "case": "size_plus_20_percent",
+      "size_factor": 1.2
+    },
+    {
+      "case": "source_plus_20_percent",
+      "source_factor": 1.2
+    }
+  ],
+  "cases": [
+    {
+      "profile": "tolman_vii",
+      "mass_factor": 1.0,
+      "half_mass_radius_factor": 1.0,
+      "physical_source_factor": 1.0,
+      "mass_Msun": 100000000000.0,
+      "half_mass_radius_kpc": 1.929416346490062,
+      "profile_scale_kpc": 3.0,
+      "hard_material_edge": true,
+      "physical_source_Mpc": [
+        0.0014576633674174603,
+        0.0
+      ],
+      "screening_radius_kpc": 212.02922497712947,
+      "conventional": {
+        "images_rad": [
+          [
+            4.050502114949878e-06,
+            0.0
+          ],
+          [
+            -3.9833232471834377e-07,
+            0.0
+          ],
+          [
+            -3.1876282582569995e-06,
+            2.894599020946575e-22
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8354760339435907,
+            0.0
+          ],
+          [
+            -0.08216193977998465,
+            0.0
+          ],
+          [
+            -0.6574955250771493,
+            5.970539062185801e-17
+          ]
+        ],
+        "arrival_days": [
+          4.436398158878797,
+          26.152474724935665,
+          18.707850545787437
+        ],
+        "relative_delays_days": [
+          21.71607656605687,
+          14.27145238690864
+        ],
+        "max_lens_residual_rad": 8.470329472543003e-22,
+        "max_stationarity_Mpc": 1.734723475976807e-18,
+        "inverse_magnification_determinants": [
+          0.380676428194549,
+          4.529393477171768,
+          -0.6146648464950275
+        ],
+        "minimum_image_Jacobian_singular_value": 0.2130288621522064
+      },
+      "screened": {
+        "images_rad": [
+          [
+            4.050531801430866e-06,
+            0.0
+          ],
+          [
+            -3.9832850386698917e-07,
+            0.0
+          ],
+          [
+            -3.1876493408236464e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8354821572198398,
+            0.0
+          ],
+          [
+            -0.08216115167282029,
+            0.0
+          ],
+          [
+            -0.6574998736686738,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          4.436296562989011,
+          26.15267358342261,
+          18.70784905428857
+        ],
+        "relative_delays_days": [
+          21.7163770204336,
+          14.271552491299559
+        ],
+        "max_lens_residual_rad": 8.470329472543003e-22
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.123276249048182,
+            0.0
+          ],
+          [
+            0.7881071643622839,
+            0.0
+          ],
+          [
+            -4.348591524538925,
+            -5.9705390621858e-11
+          ]
+        ],
+        "delays_seconds": [
+          25.959258149566722,
+          8.649019375383205
+        ]
+      },
+      "original_scalar_flux_relative_residual": 2.07523739772322e-16,
+      "maximum_image_residual_rad": 8.470329472543003e-22,
+      "effective_mass_equivalence": {
+        "same_profile_and_state": true,
+        "nonnegative_density": true,
+        "minimum_sampled_density_Msun_per_Mpc3": 14.750221536218223,
+        "enclosed_mass_checks": [
+          {
+            "radius_kpc": 1.929416346490062,
+            "integrated_effective_mass_Msun": 184882.4870618752,
+            "required_effective_mass_Msun": 184882.4870618752,
+            "relative_residual": 0.0
+          },
+          {
+            "radius_kpc": 9.000000000000002,
+            "integrated_effective_mass_Msun": 2614392.583057085,
+            "required_effective_mass_Msun": 2614392.583057085,
+            "relative_residual": 0.0
+          },
+          {
+            "radius_kpc": 212.02922497712947,
+            "integrated_effective_mass_Msun": 124917386.540348,
+            "required_effective_mass_Msun": 124917386.54034796,
+            "relative_residual": 2.385762559807417e-16
+          }
+        ],
+        "independent_direct_z_vs_R1_alpha_relative_error": 4.4298013352257975e-13,
+        "recomputed_effective_mass_images_arcsec": [
+          [
+            0.8354821572198398,
+            0.0
+          ],
+          [
+            -0.08216115167282023,
+            0.0
+          ],
+          [
+            -0.6574998736686738,
+            0.0
+          ]
+        ],
+        "recomputed_effective_mass_relative_delays_days": [
+          21.7163770204336,
+          14.271552491299566
+        ],
+        "maximum_image_difference_arcsec": 5.551115123125783e-17,
+        "maximum_delay_difference_seconds": 6.139089236967266e-10
+      },
+      "linearized_nuisance_check": {
+        "nuisance_names": [
+          "source_0_per_arcsec",
+          "source_1_per_arcsec",
+          "log_mass",
+          "log_radius",
+          "compensated_mass_sheet_log_scale",
+          "center_x_per_arcsec",
+          "center_y_per_arcsec"
+        ],
+        "fixed_center": {
+          "nuisance_rank": 5,
+          "signal_rank": 1,
+          "raw_signal_singular_values": [
+            0.008188675766468641
+          ],
+          "projected_signal_singular_values": [
+            6.390779263507824e-07
+          ],
+          "relative_rank_tolerance": 1e-08,
+          "absolute_rank_threshold": 8.188675766468642e-11,
+          "Fisher": [
+            [
+              4.08420595948816e-13
+            ]
+          ],
+          "projected_response": [
+            [
+              -2.9576043922979744e-08
+            ],
+            [
+              6.039671261157447e-20
+            ],
+            [
+              3.4004290916432676e-07
+            ],
+            [
+              -7.351940408321709e-19
+            ],
+            [
+              -8.007455395888513e-08
+            ],
+            [
+              4.802453357256099e-19
+            ],
+            [
+              -2.9345301159975495e-07
+            ],
+            [
+              4.465311515371162e-07
+            ]
+          ],
+          "null_directions": [],
+          "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+          "nuisance_whitened_column_norms": [
+            1276.787581983726,
+            5991.304282219153,
+            625.1794275164248,
+            376.3308851828753,
+            259.8581025588089
+          ]
+        },
+        "free_center": {
+          "nuisance_rank": 7,
+          "signal_rank": 0,
+          "raw_signal_singular_values": [
+            0.008188675766468641
+          ],
+          "projected_signal_singular_values": [
+            5.5603511087709806e-18
+          ],
+          "relative_rank_tolerance": 1e-08,
+          "absolute_rank_threshold": 8.188675766468642e-11,
+          "Fisher": [
+            [
+              3.0917504452810674e-35
+            ]
+          ],
+          "projected_response": [
+            [
+              -8.673617379884035e-19
+            ],
+            [
+              7.701969459161185e-19
+            ],
+            [
+              3.577867169202165e-18
+            ],
+            [
+              7.280679248619935e-19
+            ],
+            [
+              -8.673617379884035e-19
+            ],
+            [
+              2.5683862988976633e-19
+            ],
+            [
+              3.903127820947816e-18
+            ],
+            [
+              -4.336808689942018e-19
+            ]
+          ],
+          "null_directions": [
+            [
+              1.0
+            ]
+          ],
+          "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+          "nuisance_whitened_column_norms": [
+            1276.787581983726,
+            5991.304282219153,
+            625.1794275164248,
+            376.3308851828753,
+            259.8581025588089,
+            1893.8588527722673,
+            6149.715112383501
+          ]
+        },
+        "scope": "one axial source, this profile family, linearized response; illustrative .001 arcsec/.1 day weighting, not measured precision or detection significance"
+      },
+      "leading_matter_support": {
+        "equation": "p(r)=integral_r^outer rho(s) Phi_prime(s) ds, outer=R for Tolman VII and infinity for Plummer",
+        "central_newtonian_pbar": 0.29841551829730373,
+        "central_extra_pbar": 1.0652200022698515e-06,
+        "central_pressure_fractional_adjustment": 3.569586489160393e-06,
+        "pbar_units": "p/c\u00b2=(M m_g/a^4) pbar, a=declared profile scale",
+        "scope": "positive leading isotropic support for a prescribed density; not a common fixed material EOS, exact modified TOV, or distribution-function stability proof"
+      },
+      "case": "reference",
+      "projected_coefficient_sensitivities": [
+        {
+          "impact_kpc": 3.8283840798525306,
+          "extra_alpha_rad": 8.320894433853424e-11,
+          "d_log_extra_alpha": {
+            "ln_b_T": 1.5254613520463696,
+            "ln_C": -0.050922704092739496
+          },
+          "d_total_alpha_divided_by_total_alpha": {
+            "ln_b_T": 2.5386324153956034e-05,
+            "ln_C": -8.474421663715627e-07
+          },
+          "identity_residual_2_db_plus_dC_minus_3": -4.440892098500626e-16,
+          "scope": "local coefficient partials at fixed M,lambda,profile and physical impact; actual state dependence requires the state-to-coefficient Jacobian"
+        },
+        {
+          "impact_kpc": 0.37648891104485355,
+          "extra_alpha_rad": 1.2531391301709761e-11,
+          "d_log_extra_alpha": {
+            "ln_b_T": 1.5166340263829459,
+            "ln_C": -0.033268052767217685
+          },
+          "d_total_alpha_divided_by_total_alpha": {
+            "ln_b_T": 9.607153737154561e-06,
+            "ln_C": -2.107372588973746e-07
+          },
+          "identity_residual_2_db_plus_dC_minus_3": -1.326050380612287e-12,
+          "scope": "local coefficient partials at fixed M,lambda,profile and physical impact; actual state dependence requires the state-to-coefficient Jacobian"
+        },
+        {
+          "impact_kpc": 3.0128277754399235,
+          "extra_alpha_rad": 7.508892163509118e-11,
+          "d_log_extra_alpha": {
+            "ln_b_T": 1.522208280129512,
+            "ln_C": -0.044416560259024844
+          },
+          "d_total_alpha_divided_by_total_alpha": {
+            "ln_b_T": 1.7990343133329302e-05,
+            "ln_C": -5.249407523877539e-07
+          },
+          "identity_residual_2_db_plus_dC_minus_3": -8.881784197001252e-16,
+          "scope": "local coefficient partials at fixed M,lambda,profile and physical impact; actual state dependence requires the state-to-coefficient Jacobian"
+        }
+      ]
+    },
+    {
+      "profile": "tolman_vii",
+      "mass_factor": 1.2,
+      "half_mass_radius_factor": 1.0,
+      "physical_source_factor": 1.0,
+      "mass_Msun": 120000000000.0,
+      "half_mass_radius_kpc": 1.929416346490062,
+      "profile_scale_kpc": 3.0,
+      "hard_material_edge": true,
+      "physical_source_Mpc": [
+        0.0014576633674174603,
+        0.0
+      ],
+      "screening_radius_kpc": 225.31467283909436,
+      "conventional": {
+        "images_rad": [
+          [
+            4.3912262946175525e-06,
+            0.0
+          ],
+          [
+            -3.062052404635113e-07,
+            0.0
+          ],
+          [
+            -3.5283524379246734e-06,
+            8.869778276861952e-22
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.9057554408464443,
+            0.0
+          ],
+          [
+            -0.0631593645960517,
+            0.0
+          ],
+          [
+            -0.7277749319800029,
+            1.829523097731635e-16
+          ]
+        ],
+        "arrival_days": [
+          2.7445291957132016,
+          31.044533116661793,
+          18.37190098040903
+        ],
+        "relative_delays_days": [
+          28.30000392094859,
+          15.627371784695828
+        ],
+        "max_lens_residual_rad": 1.2705494208814505e-21,
+        "max_stationarity_Mpc": 3.469446951953614e-18,
+        "inverse_magnification_determinants": [
+          0.3543869777575026,
+          7.790115453030496,
+          -0.5489154734310657
+        ],
+        "minimum_image_Jacobian_singular_value": 0.19649951945098543
+      },
+      "screened": {
+        "images_rad": [
+          [
+            4.391259792868522e-06,
+            0.0
+          ],
+          [
+            -3.062027953220366e-07,
+            0.0
+          ],
+          [
+            -3.528376951196888e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.9057623503566902,
+            0.0
+          ],
+          [
+            -0.06315886024941918,
+            0.0
+          ],
+          [
+            -0.7277799882053467,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          2.744370954155178,
+          31.044753345599563,
+          18.37185721476277
+        ],
+        "relative_delays_days": [
+          28.300382391444387,
+          15.627486260607592
+        ],
+        "max_lens_residual_rad": 1.6940658945086007e-21
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.909510245844963,
+            0.0
+          ],
+          [
+            0.504346632526631,
+            0.0
+          ],
+          [
+            -5.056225343857967,
+            -1.8295230977316348e-10
+          ]
+        ],
+        "delays_seconds": [
+          32.69985083682059,
+          9.890718776347285
+        ]
+      },
+      "original_scalar_flux_relative_residual": 1.7293644981026836e-16,
+      "maximum_image_residual_rad": 1.6940658945086007e-21,
+      "case": "mass_plus_20_percent"
+    },
+    {
+      "profile": "tolman_vii",
+      "mass_factor": 1.0,
+      "half_mass_radius_factor": 1.2,
+      "physical_source_factor": 1.0,
+      "mass_Msun": 100000000000.0,
+      "half_mass_radius_kpc": 2.315299615788074,
+      "profile_scale_kpc": 3.5999999999999996,
+      "hard_material_edge": true,
+      "physical_source_Mpc": [
+        0.0014576633674174603,
+        0.0
+      ],
+      "screening_radius_kpc": 212.02922497712947,
+      "conventional": {
+        "images_rad": [
+          [
+            4.050502114949878e-06,
+            0.0
+          ],
+          [
+            -7.426124813057121e-07,
+            0.0
+          ],
+          [
+            -3.045467840805198e-06,
+            -6.284171124218963e-21
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8354760339435907,
+            0.0
+          ],
+          [
+            -0.15317481957319817,
+            0.0
+          ],
+          [
+            -0.6281728341154471,
+            -1.2962033393606222e-15
+          ]
+        ],
+        "arrival_days": [
+          9.8411672830132,
+          26.477030159514843,
+          23.999109082647013
+        ],
+        "relative_delays_days": [
+          16.63586287650164,
+          14.157941799633813
+        ],
+        "max_lens_residual_rad": 1.780497203555823e-21,
+        "max_stationarity_Mpc": 3.431529928778172e-18,
+        "inverse_magnification_determinants": [
+          0.380676428194549,
+          1.2045820671039296,
+          -0.3738278320954976
+        ],
+        "minimum_image_Jacobian_singular_value": 0.2130288621522064
+      },
+      "screened": {
+        "images_rad": [
+          [
+            4.050531801430866e-06,
+            0.0
+          ],
+          [
+            -7.425995708404476e-07,
+            0.0
+          ],
+          [
+            -3.045502752263954e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8354821572198398,
+            0.0
+          ],
+          [
+            -0.15317215659858183,
+            0.0
+          ],
+          [
+            -0.6281800351207232,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          9.841138227877213,
+          26.477282004091524,
+          23.99919514098321
+        ],
+        "relative_delays_days": [
+          16.63614377621431,
+          14.158056913105998
+        ],
+        "max_lens_residual_rad": 8.470329472543003e-22
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.123276249048182,
+            0.0
+          ],
+          [
+            2.6629746163464585,
+            0.0
+          ],
+          [
+            -7.201005276069594,
+            1.2962033393606222e-09
+          ]
+        ],
+        "delays_seconds": [
+          24.2697351747438,
+          9.945803996828317
+        ]
+      },
+      "original_scalar_flux_relative_residual": 2.07523739772322e-16,
+      "maximum_image_residual_rad": 1.780497203555823e-21,
+      "case": "size_plus_20_percent"
+    },
+    {
+      "profile": "tolman_vii",
+      "mass_factor": 1.0,
+      "half_mass_radius_factor": 1.0,
+      "physical_source_factor": 1.2,
+      "mass_Msun": 100000000000.0,
+      "half_mass_radius_kpc": 1.929416346490062,
+      "profile_scale_kpc": 3.0,
+      "hard_material_edge": true,
+      "physical_source_Mpc": [
+        0.0017491960409009523,
+        0.0
+      ],
+      "screening_radius_kpc": 212.02922497712947,
+      "conventional": {
+        "images_rad": [
+          [
+            4.1480870324044876e-06,
+            0.0
+          ],
+          [
+            -4.818750959825742e-07,
+            0.0
+          ],
+          [
+            -3.1121161896292968e-06,
+            -3.8242618372284724e-22
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8556043680350045,
+            0.0
+          ],
+          [
+            -0.09939387330814663,
+            0.0
+          ],
+          [
+            -0.6419200428723387,
+            -7.888106268940956e-17
+          ]
+        ],
+        "arrival_days": [
+          3.1883089113169887,
+          26.70286422500781,
+          20.331970676077095
+        ],
+        "relative_delays_days": [
+          23.514555313690824,
+          17.143661764760108
+        ],
+        "max_lens_residual_rad": 8.470329472543003e-22,
+        "max_stationarity_Mpc": 3.469446951953614e-18,
+        "inverse_magnification_determinants": [
+          0.4369309927242296,
+          4.381117827829831,
+          -0.7599312320371128
+        ],
+        "minimum_image_Jacobian_singular_value": 0.24962075769930148
+      },
+      "screened": {
+        "images_rad": [
+          [
+            4.14811764628681e-06,
+            0.0
+          ],
+          [
+            -4.818703652266657e-07,
+            0.0
+          ],
+          [
+            -3.1121369308295207e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8556106826015102,
+            0.0
+          ],
+          [
+            -0.09939289751969575,
+            0.0
+          ],
+          [
+            -0.6419243210519842,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          3.188195369492775,
+          26.703061392093794,
+          20.331977441282795
+        ],
+        "relative_delays_days": [
+          23.51486602260102,
+          17.14378207179002
+        ],
+        "max_lens_residual_rad": 8.470329472543003e-22
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.314566505682961,
+            0.0
+          ],
+          [
+            0.9757884508743153,
+            0.0
+          ],
+          [
+            -4.278179645433866,
+            7.888106268940957e-11
+          ]
+        ],
+        "delays_seconds": [
+          26.8452498408692,
+          10.394527384517005
+        ]
+      },
+      "original_scalar_flux_relative_residual": 2.0809898811471358e-16,
+      "maximum_image_residual_rad": 8.470329472543003e-22,
+      "case": "source_plus_20_percent"
+    },
+    {
+      "profile": "plummer",
+      "mass_factor": 1.0,
+      "half_mass_radius_factor": 1.0,
+      "physical_source_factor": 1.0,
+      "mass_Msun": 100000000000.0,
+      "half_mass_radius_kpc": 1.929416346490062,
+      "profile_scale_kpc": 1.478745083254196,
+      "hard_material_edge": false,
+      "physical_source_Mpc": [
+        0.0014576633674174603,
+        0.0
+      ],
+      "screening_radius_kpc": 212.02922497712947,
+      "conventional": {
+        "images_rad": [
+          [
+            3.779377193030065e-06,
+            -7.709045847514308e-21
+          ],
+          [
+            -2.0619684629770148e-07,
+            -0.0
+          ],
+          [
+            -2.7103064900394838e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.7795525044550412,
+            -1.5901048480875216e-15
+          ],
+          [
+            -0.042531152550357706,
+            -0.0
+          ],
+          [
+            -0.5590408430382419,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -8.451086488635184,
+          11.330673822086526,
+          4.379389161202257
+        ],
+        "relative_delays_days": [
+          19.781760310721708,
+          12.83047564983744
+        ],
+        "max_lens_residual_rad": 1.7600609259468488e-21,
+        "max_stationarity_Mpc": 3.392143347261525e-18,
+        "inverse_magnification_determinants": [
+          0.3529451282745308,
+          16.770939512766773,
+          -0.528281954488204
+        ],
+        "minimum_image_Jacobian_singular_value": 0.2283111244583348
+      },
+      "screened": {
+        "images_rad": [
+          [
+            3.779409031481897e-06,
+            0.0
+          ],
+          [
+            -2.0619570474940302e-07,
+            0.0
+          ],
+          [
+            -2.7103312770657683e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.7795590716071396,
+            0.0
+          ],
+          [
+            -0.0425309170891191,
+            0.0
+          ],
+          [
+            -0.559045955729416,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -8.451290991551513,
+          11.330729168335633,
+          4.379296001277235
+        ],
+        "relative_delays_days": [
+          19.782020159887146,
+          12.83058699282875
+        ],
+        "max_lens_residual_rad": 2.541098841762901e-21
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.567152098346796,
+            1.5901048480875216e-09
+          ],
+          [
+            0.2354612386040733,
+            0.0
+          ],
+          [
+            -5.112691174091744,
+            0.0
+          ]
+        ],
+        "delays_seconds": [
+          22.450967893860252,
+          9.620034449068271
+        ]
+      },
+      "original_scalar_flux_relative_residual": 4.791967114154596e-16,
+      "maximum_image_residual_rad": 2.541098841762901e-21,
+      "effective_mass_equivalence": {
+        "same_profile_and_state": true,
+        "nonnegative_density": true,
+        "minimum_sampled_density_Msun_per_Mpc3": 14.807616000138278,
+        "enclosed_mass_checks": [
+          {
+            "radius_kpc": 1.929416346490062,
+            "integrated_effective_mass_Msun": 184882.48706187523,
+            "required_effective_mass_Msun": 184882.4870618752,
+            "relative_residual": 1.5741799517762563e-16
+          },
+          {
+            "radius_kpc": 4.436235249762587,
+            "integrated_effective_mass_Msun": 840594.0157468983,
+            "required_effective_mass_Msun": 840594.0157468985,
+            "relative_residual": 2.76983465611507e-16
+          },
+          {
+            "radius_kpc": 212.02922497712947,
+            "integrated_effective_mass_Msun": 124909607.65139067,
+            "required_effective_mass_Msun": 124909607.65139064,
+            "relative_residual": 2.3859111359048063e-16
+          }
+        ],
+        "independent_direct_z_vs_R1_alpha_relative_error": 5.265931120168603e-13,
+        "recomputed_effective_mass_images_arcsec": [
+          [
+            0.7795590716071396,
+            0.0
+          ],
+          [
+            -0.042530917089119095,
+            0.0
+          ],
+          [
+            -0.559045955729416,
+            0.0
+          ]
+        ],
+        "recomputed_effective_mass_relative_delays_days": [
+          19.782020159887146,
+          12.83058699282875
+        ],
+        "maximum_image_difference_arcsec": 6.938893903907228e-18,
+        "maximum_delay_difference_seconds": 0.0
+      },
+      "linearized_nuisance_check": {
+        "nuisance_names": [
+          "source_0_per_arcsec",
+          "source_1_per_arcsec",
+          "log_mass",
+          "log_radius",
+          "compensated_mass_sheet_log_scale",
+          "center_x_per_arcsec",
+          "center_y_per_arcsec"
+        ],
+        "fixed_center": {
+          "nuisance_rank": 5,
+          "signal_rank": 1,
+          "raw_signal_singular_values": [
+            0.008792812128324314
+          ],
+          "projected_signal_singular_values": [
+            1.7692298360554686e-05
+          ],
+          "relative_rank_tolerance": 1e-08,
+          "absolute_rank_threshold": 8.792812128324314e-11,
+          "Fisher": [
+            [
+              3.130174212788861e-10
+            ]
+          ],
+          "projected_response": [
+            [
+              -1.478168022045999e-06
+            ],
+            [
+              -6.822597386210064e-18
+            ],
+            [
+              1.0074536111982362e-05
+            ],
+            [
+              -7.036861463862437e-19
+            ],
+            [
+              -2.8276846594198213e-06
+            ],
+            [
+              -6.6386795731099754e-18
+            ],
+            [
+              -7.721373336824159e-06
+            ],
+            [
+              1.1904652702456834e-05
+            ]
+          ],
+          "null_directions": [],
+          "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+          "nuisance_whitened_column_norms": [
+            1250.0106980761639,
+            5395.1296821888845,
+            661.6341200758263,
+            369.34279935810804,
+            235.78361825875777
+          ]
+        },
+        "free_center": {
+          "nuisance_rank": 7,
+          "signal_rank": 0,
+          "raw_signal_singular_values": [
+            0.008792812128324314
+          ],
+          "projected_signal_singular_values": [
+            4.693162864454757e-18
+          ],
+          "relative_rank_tolerance": 1e-08,
+          "absolute_rank_threshold": 8.792812128324314e-11,
+          "Fisher": [
+            [
+              2.202577767229718e-35
+            ]
+          ],
+          "projected_response": [
+            [
+              -8.673617379884035e-19
+            ],
+            [
+              -1.3369155405731104e-18
+            ],
+            [
+              -1.328147661294743e-18
+            ],
+            [
+              3.688733711526748e-18
+            ],
+            [
+              0.0
+            ],
+            [
+              -1.871931745005903e-18
+            ],
+            [
+              -4.336808689942018e-19
+            ],
+            [
+              6.505213034913027e-19
+            ]
+          ],
+          "null_directions": [
+            [
+              1.0
+            ]
+          ],
+          "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+          "nuisance_whitened_column_norms": [
+            1250.0106980761639,
+            5395.1296821888845,
+            661.6341200758263,
+            369.34279935810804,
+            235.78361825875777,
+            1600.7894131661599,
+            5487.023262902711
+          ]
+        },
+        "scope": "one axial source, this profile family, linearized response; illustrative .001 arcsec/.1 day weighting, not measured precision or detection significance"
+      },
+      "leading_matter_support": {
+        "equation": "p(r)=integral_r^outer rho(s) Phi_prime(s) ds, outer=R for Tolman VII and infinity for Plummer",
+        "central_newtonian_pbar": 0.03978873577297383,
+        "central_extra_pbar": 9.310316978133646e-08,
+        "central_pressure_fractional_adjustment": 2.3399378736877593e-06,
+        "pbar_units": "p/c\u00b2=(M m_g/a^4) pbar, a=declared profile scale",
+        "scope": "positive leading isotropic support for a prescribed density; not a common fixed material EOS, exact modified TOV, or distribution-function stability proof"
+      },
+      "case": "reference",
+      "projected_coefficient_sensitivities": [
+        {
+          "impact_kpc": 3.572126878826006,
+          "extra_alpha_rad": 7.720155733401164e-11,
+          "d_log_extra_alpha": {
+            "ln_b_T": 1.5256054622492357,
+            "ln_C": -0.051210924498471595
+          },
+          "d_total_alpha_divided_by_total_alpha": {
+            "ln_b_T": 2.5745538791338464e-05,
+            "ln_C": -8.642161265415764e-07
+          },
+          "identity_residual_2_db_plus_dC_minus_3": -4.440892098500626e-16,
+          "scope": "local coefficient partials at fixed M,lambda,profile and physical impact; actual state dependence requires the state-to-coefficient Jacobian"
+        },
+        {
+          "impact_kpc": 0.19488959671650186,
+          "extra_alpha_rad": 7.1760496290993566e-12,
+          "d_log_extra_alpha": {
+            "ln_b_T": 1.5150355787234009,
+            "ln_C": -0.03007115744837855
+          },
+          "d_total_alpha_divided_by_total_alpha": {
+            "ln_b_T": 6.483409815462465e-06,
+            "ln_C": -1.2868584744882028e-07
+          },
+          "identity_residual_2_db_plus_dC_minus_3": -1.5769607841775724e-12,
+          "scope": "local coefficient partials at fixed M,lambda,profile and physical impact; actual state dependence requires the state-to-coefficient Jacobian"
+        },
+        {
+          "impact_kpc": 2.5616809776968963,
+          "extra_alpha_rad": 6.451422959230549e-11,
+          "d_log_extra_alpha": {
+            "ln_b_T": 1.521978132152544,
+            "ln_C": -0.04395626430508778
+          },
+          "d_total_alpha_divided_by_total_alpha": {
+            "ln_b_T": 1.7518926388398546e-05,
+            "ln_C": -5.059642726802605e-07
+          },
+          "identity_residual_2_db_plus_dC_minus_3": 4.440892098500626e-16,
+          "scope": "local coefficient partials at fixed M,lambda,profile and physical impact; actual state dependence requires the state-to-coefficient Jacobian"
+        }
+      ]
+    },
+    {
+      "profile": "plummer",
+      "mass_factor": 1.2,
+      "half_mass_radius_factor": 1.0,
+      "physical_source_factor": 1.0,
+      "mass_Msun": 120000000000.0,
+      "half_mass_radius_kpc": 1.929416346490062,
+      "profile_scale_kpc": 1.478745083254196,
+      "hard_material_edge": false,
+      "physical_source_Mpc": [
+        0.0014576633674174603,
+        0.0
+      ],
+      "screening_radius_kpc": 225.31467283909436,
+      "conventional": {
+        "images_rad": [
+          [
+            4.138525341338006e-06,
+            0.0
+          ],
+          [
+            -1.640160443050591e-07,
+            -0.0
+          ],
+          [
+            -3.1116354403400674e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.853632127679782,
+            0.0
+          ],
+          [
+            -0.03383073759999819,
+            -0.0
+          ],
+          [
+            -0.6418208812133424,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -12.33320882549242,
+          13.344794342348068,
+          1.9955717292427766
+        ],
+        "relative_delays_days": [
+          25.678003167840487,
+          14.328780554735197
+        ],
+        "max_lens_residual_rad": 2.117582368135751e-22,
+        "max_stationarity_Mpc": 8.673617379884035e-19,
+        "inverse_magnification_determinants": [
+          0.3322528220492165,
+          26.96107542248549,
+          -0.488556364652336
+        ],
+        "minimum_image_Jacobian_singular_value": 0.20849790336523755
+      },
+      "screened": {
+        "images_rad": [
+          [
+            4.138560916303254e-06,
+            0.0
+          ],
+          [
+            -1.6401526300279844e-07,
+            0.0
+          ],
+          [
+            -3.1116631860004585e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8536394655430962,
+            0.0
+          ],
+          [
+            -0.03383057644483877,
+            0.0
+          ],
+          [
+            -0.6418266041666071,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -12.3334794567079,
+          13.344855589581563,
+          1.9954259158888743
+        ],
+        "relative_delays_days": [
+          25.67833504628946,
+          14.328905372596775
+        ],
+        "max_lens_residual_rad": 8.470329472543003e-22
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            7.33786331419406,
+            0.0
+          ],
+          [
+            0.16115515941855785,
+            0.0
+          ],
+          [
+            -5.722953264730712,
+            0.0
+          ]
+        ],
+        "delays_seconds": [
+          28.674297991437925,
+          10.784263240418568
+        ]
+      },
+      "original_scalar_flux_relative_residual": 6.062543591523567e-16,
+      "maximum_image_residual_rad": 8.470329472543003e-22,
+      "case": "mass_plus_20_percent"
+    },
+    {
+      "profile": "plummer",
+      "mass_factor": 1.0,
+      "half_mass_radius_factor": 1.2,
+      "physical_source_factor": 1.0,
+      "mass_Msun": 100000000000.0,
+      "half_mass_radius_kpc": 2.315299615788074,
+      "profile_scale_kpc": 1.774494099905035,
+      "hard_material_edge": false,
+      "physical_source_Mpc": [
+        0.0014576633674174603,
+        0.0
+      ],
+      "screening_radius_kpc": 212.02922497712947,
+      "conventional": {
+        "images_rad": [
+          [
+            3.6570371845753963e-06,
+            8.953115149860322e-24
+          ],
+          [
+            -3.387046396281579e-07,
+            -0.0
+          ],
+          [
+            -2.455458688254359e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.7543180663148709,
+            1.8467125616938825e-18
+          ],
+          [
+            -0.06986284686789458,
+            -0.0
+          ],
+          [
+            -0.5064747105805347,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -3.995774200397129,
+          11.456593842245022,
+          8.134897207558465
+        ],
+        "relative_delays_days": [
+          15.452368042642151,
+          12.130671407955594
+        ],
+        "max_lens_residual_rad": 4.235164736271502e-22,
+        "max_stationarity_Mpc": 1.734723475976807e-18,
+        "inverse_magnification_determinants": [
+          0.341019971565619,
+          5.920364614045635,
+          -0.47589857068064806
+        ],
+        "minimum_image_Jacobian_singular_value": 0.235948887895452
+      },
+      "screened": {
+        "images_rad": [
+          [
+            3.65707004196783e-06,
+            0.0
+          ],
+          [
+            -3.387017249738937e-07,
+            0.0
+          ],
+          [
+            -2.4554863969492777e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.754324843638555,
+            0.0
+          ],
+          [
+            -0.0698622456772975,
+            0.0
+          ],
+          [
+            -0.5064804259091235,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -3.995938002263262,
+          11.45666467277287,
+          8.134851431708054
+        ],
+        "relative_delays_days": [
+          15.452602675036132,
+          12.130789433971316
+        ],
+        "max_lens_residual_rad": 1.4823076576950256e-21
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.777323684148406,
+            -1.8467125616938824e-12
+          ],
+          [
+            0.6011905970826348,
+            0.0
+          ],
+          [
+            -5.7153285887290295,
+            0.0
+          ]
+        ],
+        "delays_seconds": [
+          20.27223883999909,
+          10.197447758349654
+        ]
+      },
+      "original_scalar_flux_relative_residual": 7.242736437697752e-16,
+      "maximum_image_residual_rad": 1.4823076576950256e-21,
+      "case": "size_plus_20_percent"
+    },
+    {
+      "profile": "plummer",
+      "mass_factor": 1.0,
+      "half_mass_radius_factor": 1.0,
+      "physical_source_factor": 1.2,
+      "mass_Msun": 100000000000.0,
+      "half_mass_radius_kpc": 1.929416346490062,
+      "profile_scale_kpc": 1.478745083254196,
+      "hard_material_edge": false,
+      "physical_source_Mpc": [
+        0.0017491960409009523,
+        0.0
+      ],
+      "screening_radius_kpc": 212.02922497712947,
+      "conventional": {
+        "images_rad": [
+          [
+            3.891599973611771e-06,
+            0.0
+          ],
+          [
+            -2.498943759915715e-07,
+            0.0
+          ],
+          [
+            -2.6062569695887442e-06,
+            6.742192948350332e-24
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8027001145482373,
+            0.0
+          ],
+          [
+            -0.051544415046140546,
+            0.0
+          ],
+          [
+            -0.5375790888623668,
+            1.3906771221720206e-18
+          ]
+        ],
+        "arrival_days": [
+          -9.594677293786985,
+          11.797066623819834,
+          5.808746574890914
+        ],
+        "relative_delays_days": [
+          21.391743917606817,
+          15.403423868677898
+        ],
+        "max_lens_residual_rad": 1.2705494208814505e-21,
+        "max_stationarity_Mpc": 2.6020852139652106e-18,
+        "inverse_magnification_determinants": [
+          0.40700906079256316,
+          16.108581259885167,
+          -0.6583163742233993
+        ],
+        "minimum_image_Jacobian_singular_value": 0.26607272973909035
+      },
+      "screened": {
+        "images_rad": [
+          [
+            3.89163262833681e-06,
+            0.0
+          ],
+          [
+            -2.498929529031849e-07,
+            0.0
+          ],
+          [
+            -2.606281234300979e-06,
+            0.0
+          ]
+        ],
+        "images_arcsec": [
+          [
+            0.8027068500687705,
+            0.0
+          ],
+          [
+            -0.051544121513090214,
+            0.0
+          ],
+          [
+            -0.5375840938185346,
+            0.0
+          ]
+        ],
+        "arrival_days": [
+          -9.594894573133171,
+          11.797121462992813,
+          5.808663130958764
+        ],
+        "relative_delays_days": [
+          21.392016036125984,
+          15.403557704091934
+        ],
+        "max_lens_residual_rad": 2.329340604949326e-21
+      },
+      "reference_relative_offsets": {
+        "images_microarcsec": [
+          [
+            6.735520533207584,
+            0.0
+          ],
+          [
+            0.2935330503314737,
+            0.0
+          ],
+          [
+            -5.004956167731223,
+            -1.3906771221720206e-12
+          ]
+        ],
+        "delays_seconds": [
+          23.51104005600746,
+          11.563379772758253
+        ]
+      },
+      "original_scalar_flux_relative_residual": 1.6463398315645866e-16,
+      "maximum_image_residual_rad": 2.329340604949326e-21,
+      "case": "source_plus_20_percent"
+    }
+  ],
+  "within_profile_sensitivity": [
+    {
+      "profile": "tolman_vii",
+      "case": "reference",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        0.0,
+        0.0
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        25.959258149566722,
+        8.649019375383205
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 0.0
+    },
+    {
+      "profile": "tolman_vii",
+      "case": "mass_plus_20_percent",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        568851.3234626447,
+        117151.43596881306
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        32.69985083682059,
+        9.890718776347285
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 17396.144291340574
+    },
+    {
+      "profile": "tolman_vii",
+      "case": "size_plus_20_percent",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        -438930.4627775718,
+        -9807.314740545109
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        24.2697351747438,
+        9.945803996828317
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 18085.50689231842
+    },
+    {
+      "profile": "tolman_vii",
+      "case": "source_plus_20_percent",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        155388.56379557363,
+        248158.89024636676
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        26.8452498408692,
+        10.394527384517005
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 9244.052177475724
+    },
+    {
+      "profile": "plummer",
+      "case": "reference",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        0.0,
+        0.0
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        22.450967893860252,
+        9.620034449068271
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 0.0
+    },
+    {
+      "profile": "plummer",
+      "case": "mass_plus_20_percent",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        509435.3828550625,
+        129453.54378316611
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        28.674297991437925,
+        10.784263240418568
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 17766.272185885027
+    },
+    {
+      "profile": "plummer",
+      "case": "size_plus_20_percent",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        -374059.4919620737,
+        -60463.08649859153
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        20.27223883999909,
+        10.197447758349654
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 18451.809635550373
+    },
+    {
+      "profile": "plummer",
+      "case": "source_plus_20_percent",
+      "ordinary_delay_change_from_same_profile_baseline_seconds": [
+        139102.58363487342,
+        222302.72610781548
+      ],
+      "R1_reference_relative_delay_offsets_seconds": [
+        23.51104005600746,
+        11.563379772758253
+      ],
+      "ordinary_change_to_R1_offset_max_norm_ratio": 9455.248495100645
+    }
+  ],
+  "cross_profile_baseline": {
+    "conventional_delay_difference_seconds": [
+      -167124.924460958,
+      -124500.39008295165
+    ],
+    "R1_offset_difference_seconds": [
+      -3.50829025570647,
+      0.9710150736850665
+    ],
+    "ordinary_profile_change_to_max_R1_offset_ratio": 6437.9699719480395
+  },
+  "interpretation": "The positive effective-mass representation survives the profile change; ordinary profile/source freedoms alter delays much more than the action-owned offsets in this bounded comparison. This is model sensitivity, not evidence of a detection or a prior on a real lens.",
+  "approximation": "leading weak metric, static quasi-static scalar branch, geometric optics thin plane; no GR2 or environmental equation is newly solved",
+  "physical_admission": false,
+  "sha256": {
+    "artifacts/strong_lensing_first_comparison_20261020/results.json": "a6df929ba8370aef2851def5422e29ec2f209e397402d60340d0f2991156a7b1",
+    "artifacts/strong_lensing_r1_screened_20261020/results.json": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "code/strong_lensing_robustness.py": "38c988b4bf3752c91b3b9bf4d414bbe4c125b5ca2188acd62c4178c574b5a4d0",
+    "scripts/run_strong_lensing_robustness.py": "030c9afb7363b53a9150a9f13140f5c970e6cb96d351635e4e687be430450f2d",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_local_family.py": "14dc83bae0e2d1f2289209c4f11fcacf7f24d91610ddbdd33122cd52b237fdbe",
+    "code/strong_lensing_comparison.py": "aaea9e5fee682dca9871012e5518017ca8603ff726125f95130770069e014a9a"
+  },
+  "execution_records": [
+    "Eight paired optical cases executed once by run_strong_lensing_robustness.py.",
+    "Supplemental weighted coefficient partials evaluated on the six existing reference impacts; the image and delay arrays were preserved.",
+    "Six initial focused tests passed; the additional coefficient-partial finite-variation test passed separately."
+  ]
+}

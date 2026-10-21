@@ -1,0 +1,43 @@
+{
+  "extensions": [
+    [
+      "PRIMARY",
+      []
+    ],
+    [
+      "SCI",
+      [
+        2048,
+        2048,
+        42
+      ]
+    ],
+    [
+      "DQ",
+      [
+        2048,
+        2048
+      ]
+    ],
+    [
+      "ERR",
+      [
+        2048,
+        2048,
+        42
+      ]
+    ],
+    [
+      "DQ_DEF",
+      [
+        128,
+        33
+      ]
+    ]
+  ],
+  "NGROUPS": 42,
+  "dark_first2_matches_inherited_exact_field": true,
+  "dark_first2_max_abs_difference": 0.0,
+  "dark_first2_ERR_matches_inherited_exact_field": true,
+  "dark_first2_ERR_max_abs_difference": 0.0
+}

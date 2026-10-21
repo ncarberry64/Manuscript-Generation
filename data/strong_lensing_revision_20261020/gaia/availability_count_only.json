@@ -1,0 +1,8 @@
+{
+  "status": "METADATA_ONLY_NO_NUMERICAL_TARGET_POSITION_QUERY",
+  "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "adql": "SELECT COUNT(*) AS n_sources FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',69.562083333,-12.287333333,0.001))",
+  "response": "n_sources\n4\n",
+  "count": 4,
+  "target_columns_retrieved": []
+}

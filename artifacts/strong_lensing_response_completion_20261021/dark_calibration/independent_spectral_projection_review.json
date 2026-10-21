@@ -1,0 +1,76 @@
+{
+  "review": "independent spectral operator and saved full matrix review",
+  "reviewed_projection_SHA256": "63ddc91e3480dc58c765a29a229f7de5d0bad9c8783994972fdebded6b7d4364",
+  "source_files_sha256": {
+    "scripts/project_he0435_dark_covariance.py": "944fdf2903d78c61805f9fd592b36fd6171054c298aad9ea199c157e8f85fb53",
+    "code/strong_lensing_dark_covariance.py": "2e80f111f5718e9de7860f784ff734490a9d7ce35df706b7cb63a635d618dd43"
+  },
+  "operator_findings": [
+    "Orthonormal FFT cross products followed by default-normalized inverseFFT yield measured1/N spatial cross correlation",
+    "same commoninnovation across36amp/group channels preserves within-exposure cross-stamp covariance",
+    "signed frequency pooling averages PSD Fourierouterproducts and preserves perchannel lagzero variance; no eigenfloor",
+    "periodic2040x512 clockcell and calibration-mask window are declared conditional spectral laws, not inferred unrestricted covariance"
+  ],
+  "spectral_matrix_min_eigenvalue": -6.041038676164763e-08,
+  "spectral_matrix_max_abs_entry": 18522466.10400449,
+  "min_eigenvalue_relative_to_entry_scale": -3.261465639750158e-15,
+  "saved_matrix_checks": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "n": 1444,
+      "source_electronic_symmetry_max_abs": 0.0,
+      "source_electronic_min_eigenvalue": 0.0012231479691659302,
+      "total_min_eigenvalue": 0.007986195140682759,
+      "component_addition_max_abs": 1.7763568394002505e-15,
+      "whitened_vector_replay_max_abs": 7.105427357601002e-15,
+      "Q_replay_difference": 0.0,
+      "max_abs_analytic_vs_h1_ADC_group_weight_difference": 0.007211143117735479,
+      "analytic_vs_h1_weight_relative_Frobenius": 0.0225840784235332,
+      "native_source_equation_weight_update_available": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "n": 1444,
+      "source_electronic_symmetry_max_abs": 0.0,
+      "source_electronic_min_eigenvalue": 0.0011057450695650364,
+      "total_min_eigenvalue": 0.007222574719357631,
+      "component_addition_max_abs": 1.1102230246251565e-16,
+      "whitened_vector_replay_max_abs": 8.881784197001252e-15,
+      "Q_replay_difference": -9.094947017729282e-13,
+      "max_abs_analytic_vs_h1_ADC_group_weight_difference": 0.015415205791472522,
+      "analytic_vs_h1_weight_relative_Frobenius": 0.07170858545861593,
+      "native_source_equation_weight_update_available": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "n": 1443,
+      "source_electronic_symmetry_max_abs": 0.0,
+      "source_electronic_min_eigenvalue": 0.0020690972070737026,
+      "total_min_eigenvalue": 0.008407312795429653,
+      "component_addition_max_abs": 5.551115123125783e-17,
+      "whitened_vector_replay_max_abs": 1.4210854715202004e-14,
+      "Q_replay_difference": -4.547473508864641e-13,
+      "max_abs_analytic_vs_h1_ADC_group_weight_difference": 0.008956796262243414,
+      "analytic_vs_h1_weight_relative_Frobenius": 0.04372370092468983,
+      "native_source_equation_weight_update_available": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "n": 1445,
+      "source_electronic_symmetry_max_abs": 0.0,
+      "source_electronic_min_eigenvalue": 0.005911194361948392,
+      "total_min_eigenvalue": 0.01239035034269946,
+      "component_addition_max_abs": 2.220446049250313e-16,
+      "whitened_vector_replay_max_abs": 7.993605777301127e-15,
+      "Q_replay_difference": -9.094947017729282e-13,
+      "max_abs_analytic_vs_h1_ADC_group_weight_difference": 0.01189884817267145,
+      "analytic_vs_h1_weight_relative_Frobenius": 0.04721382630313287,
+      "native_source_equation_weight_update_available": true
+    }
+  ],
+  "required_update_before_claiming_exact_native_projection": "Current saved projection consumes h1 finite-difference native weights. Exact branch-analytic source weights now available and value-replay verified; their non-negligible difference should be propagated before using final covariance scores. Existing projection remains explicitly conditional comparator and all physicalvalidationfalse.",
+  "no_native_pipeline_rerun": true,
+  "no_covariance_reprojection_or_fit": true,
+  "physical_guard": 2e-10,
+  "physical_validation": false
+}

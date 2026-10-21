@@ -1,0 +1,15 @@
+{
+  "models": {
+    "selected_R1": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            -0.0005438803319536188,
+            -0.0025369235378098877
+          ],
+          "absolute_macro_flux_relative_A": 0.0026438916173264935
+        }
+      ]
+    }
+  }
+}

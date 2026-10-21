@@ -1,0 +1,34 @@
+{
+  "inputs": {
+    "artifacts\\strong_lensing_response_completion_20261021\\static_diagnostics\\held_target_strict.npz": "3605220c7d1a55309bf1e51770ac0c19ca14c8de20d64e91820c69fad90b518b",
+    "artifacts\\strong_lensing_response_completion_20261021\\native_coupled\\held_target\\native_replay_maps.npz": "9a965ddf0b3ef76e0536ae235c5460b38f651c1935c32f6a0e73acc430a040a0"
+  },
+  "checks": [
+    {
+      "label": "A",
+      "static_Q": 2738.4148871814914,
+      "native_original_ERR_Q": 2727.0788095770968,
+      "source_array_Q": 2727.0788095770968
+    },
+    {
+      "label": "B",
+      "static_Q": 3638.713712649412,
+      "native_original_ERR_Q": 3660.5687517559477,
+      "source_array_Q": 3660.5687517559477
+    },
+    {
+      "label": "C",
+      "static_Q": 2517.1274599502867,
+      "native_original_ERR_Q": 2467.311144901054,
+      "source_array_Q": 2467.311144901054
+    },
+    {
+      "label": "D",
+      "static_Q": 2124.7257018099954,
+      "native_original_ERR_Q": 2119.1067134879095,
+      "source_array_Q": 2119.1067134879095
+    }
+  ],
+  "unclipped_statistics": true,
+  "error_rescaling": false
+}

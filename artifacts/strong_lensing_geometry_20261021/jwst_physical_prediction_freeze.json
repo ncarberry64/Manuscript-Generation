@@ -1,0 +1,37 @@
+{
+  "status": "PHYSICAL_PREDICTIONS_AND_FIELD_ONLY_CALIBRATION_FROZEN_BEFORE_JWST_ARRAY_ACQUISITION",
+  "created_utc": "2026-10-21T13:04:03.968964+00:00",
+  "protocol": "preregistration/he0435_geometry_jwst_20261021.json",
+  "prediction_file": "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json",
+  "source_sha256": {
+    "artifacts/strong_lensing_geometry_20261021/conventional_g1_census.json": "1a2aebb718bcda6d5f6a9783675a4a0f29e1bfe2d46b9875744f3282c5e547dc",
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+    "artifacts/strong_lensing_geometry_20261021/r1_g1_census.json": "95e19e5849da1992bcd0d69a3a37b366a11565bf4323a544d33bbbf29a187a69",
+    "code/strong_lensing_field_psf.py": "0deda8cad111e92e27e204f89951416844ab92263f0f09d8db168842b3e08983",
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "code/strong_lensing_pixel_geometry.py": "596253591bae93e8a4ad16c0b8e289c180386f66ca6a25c1446dd6e7d74b1434",
+    "data/strong_lensing_geometry_20261021/development/G1_source_prescription.json": "99f76ee7c079c0000938f858ef79e20f78d1a26b5173b45edf85b684ed55946b",
+    "data/strong_lensing_geometry_20261021/metadata/jwst_nircam_f115w_products_metadata.json": "b2b486f504d7bde9c96590997b784e2b10cff039131c78d00eb42d4d3a631ed7",
+    "preregistration/he0435_field_psf_algorithm_20261021.json": "8e53d5560d22715326f118dd942ad82b4f16bb8c4f3a63457e1c46d35957ba74",
+    "preregistration/he0435_geometry_jwst_20261021.json": "7e882eb6c68dc379e3eca32702ab048c753335d5bdfbfd529cb046b68e4ac706",
+    "requirements-strong-lensing-geometry.txt": "b2f9af657952eff4d3f83b54f328b9674efd40174798b3bb43c149f9eeec516c",
+    "scripts/acquire_he0435_jwst_geometry.py": "275ebe6752c91ef7c2e64e8576a851935407b1324513d281c357c1cae78d5cfe",
+    "scripts/calibrate_he0435_jwst_psf.py": "15bcda06ff71addb5f8303c85dd6c9f73d3ae1ce565996d2c6debd27c53824a7",
+    "scripts/fit_he0435_geometry_revision.py": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+    "scripts/run_he0435_pixel_geometry.py": "013185bdb185f642fa7e285280555698c222ea6d181fa58f791383611ce85e66",
+    "tests/test_strong_lensing_field_psf.py": "7e89cd382539552115cac544f31e94edba7de5f2593e5613263feaf777859cb1",
+    "tests/test_strong_lensing_geometry_revision.py": "18b2f45fe33d9cd7f19ffc189e51c381816d377d3acf664ccc80ad25e243f34a",
+    "tests/test_strong_lensing_pixel_geometry.py": "7934bd54febbe291aab4e9e0e64e9ce34e7cf48b76062f4ae7e0d772cb49cf44"
+  },
+  "staging": "Phase1: source/physicalpredictions+fieldPSFalgorithm beforedataacquisition. Phase2: bindindependentfieldcalibrationgridsbeforequasartargetmeasurement; no physicalrefit or change ofcriteria.",
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "quasar_target_values_used": false,
+  "validation_before_acquisition": {
+    "original_plus_revision_and_geometry_pixel_tests": "109 passed in25.49s before last minimum-star guard",
+    "last_field_guard_and_transitive_dependency_tests": "10 passed in2.08s",
+    "unique_focused_tests_passed": 110,
+    "unchanged_symbolic_identities": "12PASS"
+  }
+}

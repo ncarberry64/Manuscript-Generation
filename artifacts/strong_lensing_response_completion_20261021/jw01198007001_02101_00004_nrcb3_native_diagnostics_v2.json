@@ -1,0 +1,157 @@
+{
+  "status": "OFFICIAL_REFERENCE_DQ_MAPPING_AMENDMENT",
+  "file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00004_nrcb3_native_diagnostics_v2.npz",
+  "sha256": "563133206ee3a4e1acf091d172c7956a92dc535b0ae962f0bbffc75b043ac8e8",
+  "source": "stdatamodels5.0.2 native dynamic_mask through datamodels.open; exact same native reference files",
+  "superseded_diagnostic_file": "data\\strong_lensing_response_completion_20261021\\histories\\superseded_reference_dq_v1\\jw01198007001_02101_00004_nrcb3_native_diagnostics.npz",
+  "main_history_unchanged": true,
+  "main_reference_DQ_encoding": "Main reference *_DQ fields retain original FITS DQ_DEF codes; use new *_DQ_mapped for global JWST bits. Science GROUPDQ/PIXELDQ were already mapped by the native pipeline.",
+  "pre_sirs_control_DNU_count": 25,
+  "pre_sirs_control_DNU_disagrees_final_count": 32679,
+  "h1_h2_likelihood17_usable_max_abs_J_difference_per_s": 0.001977965235710144,
+  "excluded_nonfinite_or_DNU_J_entries": 0,
+  "arrays": {
+    "labels": [
+      5
+    ],
+    "bounds_xyxy": [
+      5,
+      4
+    ],
+    "reference_control_native_xy": [
+      32704,
+      2
+    ],
+    "native_optional_SLOPE": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_SIGSLOPE": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_VAR_POISSON": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_VAR_RNOISE": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_YINT": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_SIGYINT": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_PEDESTAL": [
+      5,
+      1,
+      65,
+      65
+    ],
+    "native_optional_WEIGHTS": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_CRMAG": [
+      5,
+      1,
+      5,
+      65,
+      65
+    ],
+    "reference_control_mask_DQ": [
+      32704
+    ],
+    "reference_control_saturation_DQ": [
+      32704
+    ],
+    "reference_control_superbias_DQ": [
+      32704
+    ],
+    "reference_control_readnoise_CDS_DN": [
+      32704
+    ],
+    "reference_control_gain_e_per_DN": [
+      32704
+    ],
+    "reference_control_superbias_ERR_DN": [
+      32704
+    ],
+    "reference_control_raw_pixeldq": [
+      32704
+    ],
+    "reference_control_pre_sirs_pixeldq": [
+      32704
+    ],
+    "reference_control_final_pixeldq": [
+      32704
+    ],
+    "mask_DQ_mapped": [
+      5,
+      65,
+      65
+    ],
+    "reference_control_mask_DQ_mapped": [
+      32704
+    ],
+    "saturation_DQ_mapped": [
+      5,
+      65,
+      65
+    ],
+    "reference_control_saturation_DQ_mapped": [
+      32704
+    ],
+    "superbias_DQ_mapped": [
+      5,
+      65,
+      65
+    ],
+    "reference_control_superbias_DQ_mapped": [
+      32704
+    ],
+    "linearity_DQ_mapped": [
+      5,
+      65,
+      65
+    ],
+    "reference_control_linearity_DQ_mapped": [
+      32704
+    ],
+    "flat_DQ_mapped": [
+      5,
+      65,
+      65
+    ],
+    "reference_control_flat_DQ_mapped": [
+      32704
+    ]
+  },
+  "native_processing_rerun": false,
+  "physical_admission": false
+}

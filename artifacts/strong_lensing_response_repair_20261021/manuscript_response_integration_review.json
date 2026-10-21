@@ -1,0 +1,48 @@
+{
+  "status": "PASS_FINAL_SCIENTIFIC_SCOPE_NUMERIC_AND_COLLECTION_AUDIT",
+  "review_scope": "Read-only source and saved-result integration review. No mathematical/native applications or manuscript build rerun by this audit.",
+  "reviewed_file_sha256": {
+    "manuscript/strong_lensing_main.tex": "41f671cc71741179123d9116833696aef84a9f39d5269096ca94d5b7450768df",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "317512e09473f252aef8941e78a3818829ce1bae7ec94ff000feca7cc501effe",
+    "manuscript/sections/he0435_response_repair_20261021.tex": "ed0465398c97af78efc48ad698c7afc0a0b72f6f00fe611755c9407a1fc06668",
+    "conftest.py": "f779c25fbde0dcaa762627d2ea4b7d68df1d09d983d4f5fd44626108e583079a",
+    "scripts/check_he0435_joint_scene_stationarity.py": "ed8dc2922f31da1a121a4badb3b3236b1e525157d380eab0f2d58227b6422887",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/target_nuisance_stationarity.json": "f31025420e16c438da3ddc332fd615f8fc17f3af2544d884a865a64bfda13650"
+  },
+  "basis_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "unchanged_original_math_environments": 42,
+  "original_math_environments_equal": true,
+  "complete_original_preparation_action_source_and_optical_calculation_block_equal": true,
+  "unrelated_manuscript_main_tex_unchanged": true,
+  "collection_review": {
+    "decision": "PASS",
+    "collect_ignore_exactly": [
+      "data/strong_lensing_response_repair_20261021/delivery",
+      "artifacts/strong_lensing_response_repair_20261021"
+    ],
+    "reason": "Only immutable delivered and superseded receipt directories are excluded from pytest recursive import. Canonical executable tests in tests/ and every unrelated collection path remain active. No CI history/dependency change is needed; integration guard unit tests use exact SHA-bound Git fixture, while actual native replay used real immutable Git object.",
+    "observed_parent_collection_result": "New duplicate-module collision resolved. Parent reports three remaining local missing-pandas collection errors; those are not repaired here and no broad-suite pass is claimed by this review."
+  },
+  "verified_numerical_and_scope_points": [
+    "Current mask-only0.448457055/0.448562655mas,303restoredslopes,Q253.027695/15 andformalG1Q1033.114/5 are labeled reanalysis; historicalfirst0.779400mas remains preserved. Abstractabout0.45mas avoids incorrect common3decimalrounding.",
+    "Deliveredpositive-field0.362mas andnativecommon-time7.6653percent\u21925.1787percent are attributed to archived supplied trials, not newly rerun here. Conditionalstcal1.18 numericalmatch doesnotassert unrecordedinstallationhistory.",
+    "Electron-conserving g^-1 L((g f)^2), \u03ba units electron^-1, uniformactualgain2.05 andsupersededDNsurrogate distinction are accurate. The general group-estimator constraints and unreconstructedOLS_C/ZEROFRAME scope are explicit; newapplicationsfitactualgroupsdirectly.",
+    "Freepixelrate temporalholdout is an internal used-data diagnostic. Actualoptical+historyheldprofile worsens; \u03ba is nottransferredtoquasars or gravitationalamplitude.",
+    "One actualjointsky/response continuation andfixedresponseCUT covariance are distinct.414/414rank doesnotimplyadequacy. Bound-unawaregradient14477 isdistinguished fromprojectedKKT test; freeplanegradient12254 andprojectedsky7605 demonstrate necessary-conditionnonstationarity.",
+    "HeldtargetexposureQ10906.483/1141 fails, usingconsumedphotons. Targetrawmapsretainmean-minus-SCIsign,displayclippingonly,unclippedstatisticsandmask.",
+    "BHSM remains governing interpretation; reference/R1-inclusive/effective-mass representations are retained controls, not evidence of a fundamental-theory competition or BHSM detection.",
+    "Microscopicj_c=mu/2sum[Udag(iGc)U\u2212Vdag(iGc)V] remains uncomputed byclassicaloptics. Same-domainstate/Cauchy/sourcepairinglimitsandexclusive2point/inclusive4point/matchedoccupationdistinction remain explicit; noWick/vacuum/statekernelsubstitution.",
+    "Physicaladmissionfalse and2e-10guard remain unchanged. JournalGalaxies/authorreviewstatus/blanksubmissionmetadata retained. Archivepin is explicitly parent-owned pendingfinalcommit."
+  ],
+  "remaining_scientific_caveats": [
+    "An adequate optical/extended-light/history mean is not achieved.",
+    "Actual quasar histories, stochastic charge-transfer covariance, SIRS, native linearity/Jensen, gain/reference, padding and selection covariance are not supplied by the current ideal working likelihood.",
+    "The provisional joint curvature is unconstrained local information at a nonstationary bounded iterate; it does not establish posteriorcoverage or physical centroidaccuracy.",
+    "Reserved bandsremain unopened; re-reduction/internalholdouts do not create fresh physicalvalidation."
+  ],
+  "bibliographic_recommendation": "Resolved by parent: primary stcal changelog, JWST2.0.1 READNOISE and measured-OPD/STPSF references added to the manuscript after official-source verification.",
+  "blocking_scope_or_numerical_findings_remaining": [],
+  "physical_admission": false,
+  "unchanged_physical_guard": 2e-10,
+  "final_publication_scope": "Numerical/source audit complete. Parent owns final archive-commit pin and compiled PDF layout audit after the numerical commit. No further numerical checks were run for this finalization."
+}

@@ -1,0 +1,424 @@
+{
+  "status": "exact public raw dark matched-read subsets acquired",
+  "records": [
+    {
+      "source": "jw01453022001_02301_00001_nrcb3_uncal.fits",
+      "remote": {
+        "source_size": 2516662080,
+        "etag": "\"6ac371c2-96013740\"",
+        "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01453022001_02301_00001_nrcb3_uncal.fits"
+      },
+      "primary_header": {
+        "DETECTOR": "NRCB3",
+        "READPATT": "RAPID",
+        "NFRAMES": 1,
+        "GROUPGAP": 0,
+        "NGROUPS": 150,
+        "NINTS": 2,
+        "SUBARRAY": "FULL",
+        "TFRAME": 10.73677,
+        "EXPSTART": 59822.10055112268,
+        "EXPEND": 59822.137955844904,
+        "CAL_VER": null,
+        "CRDS_CTX": null
+      },
+      "primary_header_cards": "SIMPLE  =                    T / conforms to FITS standard                      \nBITPIX  =                    8 / array data type                                \nNAXIS   =                    0 / number of array dimensions                     \nEXTEND  =                    T                                                  \nDATE    = '2026-10-05T09:27:09.796' / UTC date file created                     \nORIGIN  = 'STSCI   '           / Organization responsible for creating file     \nTIMESYS = 'UTC     '           / principal time system for time-related keywords\nTIMEUNIT= 's       '           / Default unit applicable to all time values     \nFILENAME= 'jw01453022001_02301_00001_nrcb3_uncal.fits' / Name of the file       \nSDP_VER = '2026_2a '           / Data Processing (DP) Software Version          \nPRD_VER = 'PRDOPSSOC-074'      / S&OC Project Reference Database (PRD) Version  \nOSS_VER = '8.4.12  '           / Observatory Scheduling Software (OSS) Version  \nGSC_VER = 'GSC32   '           / Guide Star Catalog (GSC) Version               \nDATAMODL= 'Level1bModel'       / Type of data model                             \nTELESCOP= 'JWST    '           / Telescope used to acquire the data             \nHGA_MOVE=                    T / High Gain Antenna moved during data collection \nHGA_STRT= '2022-08-31 03:15:00' / Start time of HGA motion                      \nHGA_STOP= '2022-08-31 03:15:10' / Stop time of HGA motion                       \nPWFSEET =    59821.55838974537 / [d] Previous WFS exposure end time in MJD      \nNWFSEST =     59823.6876178125 / [d] Next WFS exposure start time in MJD        \nCOMPRESS=                    F / On-board data compression was used (T/F)       \n                                                                                \n        Program information                                                     \n                                                                                \nTITLE   = 'NIRCam Dark Current and Read-Noise Monitor' / Proposal title         \nPI_NAME = 'Boyer, Martha L.'   / Principal investigator name                    \nCATEGORY= 'CAL     '           / Program category                               \nSUBCAT  = 'NIRCAM  '           / Program sub-category                           \n                                                                                \n        Observation identifiers                                                 \n                                                                                \nDATE-OBS= '2022-08-31'         / [yyyy-mm-dd] UTC date at start of exposure     \nTIME-OBS= '02:24:47.617'       / [hh:mm:ss.sss] UTC time at start of exposure   \nDATE-BEG= '2022-08-31T02:24:47.617' / Date-time start of exposure               \nDATE-END= '2022-08-31T03:18:39.385' / Date-time end of exposure                 \nOBS_ID  = 'V01355027001P0145302202301' / Programmatic observation identifier    \nVISIT_ID= '01453022001'        / Visit identifier                               \nPROGRAM = '01453   '           / Program number                                 \nOBSERVTN= '022     '           / Observation number                             \nVISIT   = '001     '           / Visit number                                   \nVISITGRP= '02      '           / Visit group identifier                         \nSEQ_ID  = '3       '           / Parallel sequence identifier                   \nACT_ID  = '01      '           / Activity identifier                            \nEXPOSURE= '1       '           / Exposure request number                        \nBKGDTARG=                    F / Background target                              \nTEMPLATE= 'NIRCam Dark'        / Observation template used                      \nOBSLABEL= 'B       '           / Proposer label for the observation             \nOBSFOLDR= 'monitor: Rapid 150, 2 ints' / Name of the APT observation folder     \n                                                                                \n        Visit information                                                       \n                                                                                \nENG_QUAL= 'OK      '           / Engineering DB quality indicator               \nENGQLPTG= 'CALCULATED_TRACK_TR_202111' / Quality of pointing information from En\nVISITYPE= 'PARALLEL_DARK_CALIBRATION' / Visit type                              \nNEXPOSUR=                    1 / Total number of planned exposures in visit     \nINTARGET=                    T / At least one exposure in visit is internal     \nTARGOOPP=                    F / Visit scheduled as target of opportunity       \nTSOVISIT=                    F / Time Series Observation visit indicator        \nEXP_ONLY=                    F / Special commanding without SI configuration    \nCROWDFLD=                    F / Are the FGSes in a crowded field?              \n                                                                                \n        Target information                                                      \n                                                                                \nTARGPROP= 'UNKNOWN '           / Proposer's name for the target                 \nTARGTYPE= 'UNKNOWN '           / Type of target (fixed, moving, generic)        \nTARG_RA =    260.9435914274171 / [deg] Target RA at mid time of exposure        \nTARG_DEC=   34.291257612466644 / [deg] Target Dec at mid time of exposure       \n                                                                                \n        Instrument configuration information                                    \n                                                                                \nINSTRUME= 'NIRCAM  '           / Instrument used to acquire the data            \nDETECTOR= 'NRCB3   '           / Name of detector used to acquire the data      \nMODULE  = 'B       '           / NIRCam module: A, B or MULTIPLE                \nCHANNEL = 'SHORT   '           / Instrument channel                             \nFILTER  = 'N/A     '           / Name of the filter element used                \nFWPOSOFF=                    0 / Filter wheel position offset (actual minus comm\nFWPOSTOL= 'within commanded tolerance' / Filter wheel position tolerance        \nPUPIL   = 'FLAT    '           / Name of the pupil element used                 \nPILIN   =                    F / Pupil imaging lens in the optical path: T/F    \nPWPOSOFF=                    0 / Pupil wheel position offset (actual minus comma\nPWPOSTOL= 'within commanded tolerance' / Pupil wheel position tolerance         \nCORONMSK= 'NONE    '           / coronagraph mask used                          \n                                                                                \n        Exposure parameters                                                     \n                                                                                \nEXPCOUNT=                    2 / Running count of exposures in visit            \nEXPRIPAR= 'PARALLEL_PURE'      / Prime or parallel exposure                     \nEXP_TYPE= 'NRC_DARK'           / Type of data in the exposure                   \nEXPSTART=    59822.10055112268 / [d] exposure start time in MJD                 \nEXPMID  =     59822.1192534838 / [d] exposure mid time in MJD                   \nEXPEND  =   59822.137955844904 / [d] exposure end time in MJD                   \nOSF_FILE= '2022243T052942908_001_osf.xml' / Observatory Status File name coverin\nREADPATT= 'RAPID   '           / Readout pattern                                \nNOUTPUTS=                    4 / Number of detector outputs used                \nNINTS   =                    2 / Number of integrations in exposure             \nNGROUPS =                  150 / Number of groups in integration                \nNFRAMES =                    1 / Number of frames per group                     \nFRMDIVSR=                    1 / Divisor applied to frame-averaged groups       \nGROUPGAP=                    0 / Number of frames dropped between groups        \nDRPFRMS1=                    0 / Number of frames dropped prior to 1st integrati\nDRPFRMS3=                    0 / Number of frames dropped between integrations  \nNSAMPLES=                    1 / Number of A/D samples per pixel                \nTSAMPLE =                 10.0 / [us] Time between samples                      \nTFRAME  =             10.73677 / [s] Time between frames                        \nTGROUP  =               10.737 / [s] Time between groups                        \nEFFINTTM=             1610.515 / [s] Effective integration time                 \nEFFEXPTM=             3221.031 / [s] Effective exposure time                    \nTMEASURE=             3199.557 / [s] Measurement time                           \nDURATION=             3231.768 / [s] Total duration of exposure                 \nNRSTSTRT=                    0 / Number of reset frames at start of exposure    \nNRESETS =                    1 / Number of reset frames between integrations    \nZEROFRAM=                    F / Zero frame was downlinked separately           \nDATAPROB=                    F / Science telemetry indicated a problem          \nSCA_NUM =                  488 / Sensor Chip Assembly number                    \nDATAMODE=                   33 / post-processing method used in FPAP            \nSCTARATE=  0.09170074032153246 / [ms/s] Spacecraft Clock Time Adjust RATE       \nIS_PSF  =                    F / exposure is PSF reference                      \nSELFREF =                    F / self-referencing PSF                           \n                                                                                \n        Subarray parameters                                                     \n                                                                                \nSUBARRAY= 'FULL    '           / Subarray used                                  \nSUBSTRT1=                    1 / Starting pixel in axis 1 direction             \nSUBSTRT2=                    1 / Starting pixel in axis 2 direction             \nSUBSIZE1=                 2048 / Number of pixels in axis 1 direction           \nSUBSIZE2=                 2048 / Number of pixels in axis 2 direction           \nFASTAXIS=                    1 / Fast readout axis direction                    \nSLOWAXIS=                   -2 / Slow readout axis direction                    \n                                                                                \n        Dither information                                                      \n                                                                                \nPATTTYPE= 'NONE    '           / Primary dither pattern type                    \nPATT_NUM=                    1 / Position number within dither pattern          \nNUMDTHPT=                    1 / Total number of points in dither pattern       \nXOFFSET =                  0.0 / [arcsec] X offset in SI ideal coordinate frame \nYOFFSET =                  0.0 / [arcsec] Y offset in SI ideal coordinate frame \n                                                                                \n        Aperture information                                                    \n                                                                                \nAPERNAME= 'NRCB3_FULL'         / S&OC PRD science aperture used                 \nPPS_APER= 'NONE    '           / original AperName supplied by PPS              \n                                                                                \n        Velocity aberration correction information                              \n                                                                                \nVA_RA   =   260.94521480584336 / [deg] Velocity aberrated apparent reference RA \nVA_DEC  =    34.29589884649865 / [deg] Velocity aberrated apparent reference Dec\n                                                                                \n        Time information                                                        \n                                                                                \nBARTDELT=    532.8268297947943 / [s] Barycentric correction at exposure start   \nBSTRTIME=    59822.10671809988 / [d] Barycentric exposure start time in MJD     \nBENDTIME=      59822.144124212 / [d] Barycentric exposure end time in MJD       \nBMIDTIME=    59822.12542115621 / [d] Barycentric exposure mid time in MJD       \nHELIDELT=    537.3560894513503 / [s] Heliocentric correction at exposure start  \nHSTRTIME=    59822.10677052187 / [d] Heliocentric exposure start time in MJD    \nHENDTIME=    59822.14417663411 / [d] Heliocentric exposure end time in MJD      \nHMIDTIME=   59822.125473578264 / [d] Heliocentric exposure mid time in MJD      \n                                                                                \n        NIRCam Focus Adjust Mechanism parameters                                \n                                                                                \nFAM_LA1 =                    0 / position in steps of linear actuator 1         \nFASTEP1 =                    0 / requested focus actuator 1 starting steps      \nFAUNIT1 =                  0.0 / requested focus actuator 1 starting units      \nFAPHASE1= 'NULL    '           / requested focus actuator 1 starting phase      \nFA1VALUE=                    0 / requested focus actuator 1 position value      \nFAM_LA2 =                    0 / position in steps of linear actuator 2         \nFASTEP2 =                    0 / requested focus actuator 2 starting steps      \nFAUNIT2 =                  0.0 / requested focus actuator 2 starting units      \nFAPHASE2= 'NULL    '           / requested focus actuator 2 starting phase      \nFA2VALUE=                    0 / requested focus actuator 2 position value      \nFAM_LA3 =                    0 / position in steps of linear actuator 3         \nFASTEP3 =                    0 / requested focus actuator 3 starting steps      \nFAUNIT3 =                  0.0 / requested focus actuator 3 starting units      \nFAPHASE3= 'NULL    '           / requested focus actuator 3 starting phase      \nFA3VALUE=                    0 / requested focus actuator 3 position value      \n                                                                                \n        Guide star information                                                  \n                                                                                \nGS_ORDER=                    1 / index of guide star within list of selected gui\nGSSTRTTM= '2022-08-31 02:08:10.0770000' / UTC time when guide star activity star\nGSENDTIM= '2022-08-31 02:12:09.6930000' / UTC time when guide star activity comp\nGDSTARID= 'N3JC004947'         / guide star identifier                          \nGS_RA   =    260.8307883106195 / guide star right ascension                     \nGS_DEC  =    34.23698637002121 / guide star declination                         \nGS_URA  =         0.0297823865 / guide star right ascension uncertainty         \nGS_UDEC =           0.03153977 / guide star declination uncertainty             \nGS_MAG  =    14.55310916900635 / guide star magnitude in FGS detector           \nGS_UMAG =  0.01463664229959249 / guide star magnitude uncertainty               \nGS_V3_PA=    104.0361668520781 / V3 Position Angle of guide star for science    \nPCS_MODE= 'FINEGUIDE'          / Pointing Control System mode                   \nNEXTEND =                    3 / Number of file extensions                      \nCOMMENT / Exposure parameters                                                   \nCOMMENT / Program information                                                   \nCOMMENT / Observation identifiers                                               \nCOMMENT / Visit information                                                     \nMTSHADOW= 'NONE    '           / Moving target shadow state of visit            \nCOMMENT / Target information                                                    \nCOMMENT / Exposure times                                                        \nCOMMENT / NIRCam Focus Adjust Mechanism                                         \nCOMMENT / Guide star information                                                \nEND                                                                             ",
+      "SCI_header_cards": "XTENSION= 'IMAGE   '           / Image extension                                \nBITPIX  =                   16 / array data type                                \nNAXIS   =                    4 / number of array dimensions                     \nNAXIS1  =                 2048                                                  \nNAXIS2  =                 2048                                                  \nNAXIS3  =                  150                                                  \nNAXIS4  =                    2                                                  \nPCOUNT  =                    0 / number of parameters                           \nGCOUNT  =                    1 / number of groups                               \nBSCALE  =                    1                                                  \nBZERO   =                32768                                                  \nEXTNAME = 'SCI     '           / extension name                                 \nMJD-BEG =    59822.10055112268 / [d] exposure start time in MJD                 \nMJD-AVG =     59822.1192534838 / [d] exposure mid-point in MJD                  \nMJD-END =   59822.137955844904 / [d] exposure end time in MJD                   \nTDB-BEG =                  0.0 / [d] TDB time of exposure start in MJD          \nTDB-MID =                  0.0 / [d] TDB time of exposure mid-point in MJD      \nTDB-END =                  0.0 / [d] TDB time of exposure end in MJD            \nXPOSURE =             3221.031 / [s] Effective exposure time                    \nTELAPSE =             3231.768 / [s] Total elapsed exposure time                \n                                                                                \n        JWST ephemeris information                                              \n                                                                                \nREFFRAME= 'EME2000 '           / Ephemeris reference frame (EME2000)            \nEPH_TYPE= 'Definitive'         / Definitive or Predicted                        \nEPH_TIME=     59822.1192534838 / [d] MJD time of position and velocity vectors  \nJWST_X  =   139014618.73272234 / [km] barycentric JWST X coordinate at MJD-AVG  \nJWST_Y  =   -54176690.43958178 / [km] barycentric JWST Y coordinate at MJD-AVG  \nJWST_Z  =  -23460468.086919174 / [km] barycentric JWST Z coordinate at MJD-AVG  \nOBSGEO-X=    938691123.2953622 / [m] geocentric JWST X coordinate at MJD-AVG    \nOBSGEO-Y=  -1078775029.1425025 / [m] geocentric JWST Y coordinate at MJD-AVG    \nOBSGEO-Z=  -474758835.19671667 / [m] geocentric JWST Z coordinate at MJD-AVG    \nJWST_DX =   11.139815953053414 / [km/s] barycentric JWST X velocity at MJD-AVG  \nJWST_DY =   25.309066095952033 / [km/s] barycentric JWST Y velocity at MJD-AVG  \nJWST_DZ =   11.153401395617156 / [km/s] barycentric JWST Z velocity at MJD-AVG  \nOBSGEODX=    182.0156486947198 / [m/s] geocentric JWST X velocity at MJD-AVG    \nOBSGEODY=   184.59449218911138 / [m/s] geocentric JWST Y velocity at MJD-AVG    \nOBSGEODZ=   260.91449260785436 / [m/s] geocentric JWST Z velocity at MJD-AVG    \nPA_APER =    103.6478700343941 / [deg] Position angle of aperture used          \nVA_SCALE=    0.999947254588834 / Velocity aberration scale factor               \nBUNIT   = 'DN      '           / physical units of the array values             \n                                                                                \n        Information about the coordinates in the file                           \n                                                                                \nRADESYS = 'ICRS    '           / Name of the coordinate reference frame         \n                                                                                \n        Spacecraft pointing information                                         \n                                                                                \nRA_V1   =    261.0882915909557 / [deg] RA of telescope V1 axis                  \nDEC_V1  =    34.24548777726473 / [deg] Dec of telescope V1 axis                 \nPA_V3   =   104.18101010602913 / [deg] Position angle of telescope V3 axis      \n                                                                                \n        WCS parameters                                                          \n                                                                                \nS_REGION= 'POLYGON ICRS  260.930686443 34.284750921 260.935791429 &'            \nCONTINUE  '34.301886738 260.956413958 34.297651814 260.951467999 34.280680313&' \nCONTINUE  '' / Spatial footprint of the observation                             \nV2_REF  =           -54.610778 / [arcsec] Telescope V2 coord of reference point \nV3_REF  =          -457.702913 / [arcsec] Telescope V3 coord of reference point \nVPARITY =                   -1 / Relative sense of rotation between Ideal xy and\nV3I_YANG=          -0.45164689 / [deg] Angle from V3 axis to Ideal y axis       \nRA_REF  =    260.9435914274171 / [deg] Right Ascension of the reference point   \nDEC_REF =   34.291257612466644 / [deg] Declination of the reference point       \nROLL_REF=   104.09951692439411 / [deg] V3 roll angle at the ref point (N over E)\nVELOSYS =            -11139.82 / [m/s] Barycentric correction to radial velocity\nEXTVER  =                    1 / extension value                                \nCOMMENT / Ephemeris                                                             \nEND                                                                             ",
+      "source_SCI_offset": 23040,
+      "source_SCI_bytes": 2516582400,
+      "range_chunks": [
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 0,
+          "first_source_byte": 23040,
+          "bytes": 16777216,
+          "raw_range_sha256": "238a8ce35abbbf7dc8ae5577b5d22868a492de204d05764080a34d848d9a8c49",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 1,
+          "first_source_byte": 41966080,
+          "bytes": 16777216,
+          "raw_range_sha256": "2b15f304657e5b5f0a820387ca1b808729814fc8883a2e332de8bfcbf76b121d",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 2,
+          "first_source_byte": 83909120,
+          "bytes": 16777216,
+          "raw_range_sha256": "a9d3391e63e8918d42c2dfe8162805b3de95cf3a8279a385677d9fc813349e63",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 3,
+          "first_source_byte": 125852160,
+          "bytes": 16777216,
+          "raw_range_sha256": "4f372d3f4d51ceafb87d670e90724addd8cc13bc7479e8e77d998d2557ecedcc",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 4,
+          "first_source_byte": 167795200,
+          "bytes": 16777216,
+          "raw_range_sha256": "836ad2e79f47e107238016bb24a88105feeed489abaed44a5f42439e1cd745cf",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 5,
+          "first_source_byte": 209738240,
+          "bytes": 16777216,
+          "raw_range_sha256": "c9e0ceda4f192a43e0e8488c9a774b8ee42df3de11c89dbbdaf46a87444fce94",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 6,
+          "first_source_byte": 251681280,
+          "bytes": 16777216,
+          "raw_range_sha256": "aa646bebeca27f004ef72f4f3b498716a880081a9c52912be5e9d9928ade5133",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 7,
+          "first_source_byte": 293624320,
+          "bytes": 16777216,
+          "raw_range_sha256": "14c030192dd9272fcf35ff53010df58177d2403cf619ccf4f1bfe89d58084f9d",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 8,
+          "first_source_byte": 335567360,
+          "bytes": 16777216,
+          "raw_range_sha256": "f88af2dbb3279107b4265eb001e37c265d97cb9364e30570f6ffbf28c1b80eee",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 0,
+          "first_source_byte": 1258314240,
+          "bytes": 16777216,
+          "raw_range_sha256": "b6d3a13f2d970ff0cf41ea0146ed1b3aa7acb5711fee1b4ec9af636da9b7687e",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 1,
+          "first_source_byte": 1300257280,
+          "bytes": 16777216,
+          "raw_range_sha256": "e128fcbebea356fd84d97f876a82723610f88e2b667bc5cb71411223f8328a70",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 2,
+          "first_source_byte": 1342200320,
+          "bytes": 16777216,
+          "raw_range_sha256": "02915befd97c52fea668d7eeac775391da631bbaa4a33f91f5057618d6249675",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 3,
+          "first_source_byte": 1384143360,
+          "bytes": 16777216,
+          "raw_range_sha256": "0e7e5ff15eacd2d153cb19468045b47a9377c66518b3ff8e7594bb9ab81e6b92",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 4,
+          "first_source_byte": 1426086400,
+          "bytes": 16777216,
+          "raw_range_sha256": "d921418e50579a705ebfe4888c6e76be0fe25d5cef340c30be5df658f32fd635",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 5,
+          "first_source_byte": 1468029440,
+          "bytes": 16777216,
+          "raw_range_sha256": "9d6bc3686e7a2f90bc5783403b4ef5572a7d395a0632ee2a8616fa3f4a97caa0",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 6,
+          "first_source_byte": 1509972480,
+          "bytes": 16777216,
+          "raw_range_sha256": "04162273567c81eeafd3f2f5cdeb10bb5584a1d1ddeb9775ba5139c8e032716f",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 7,
+          "first_source_byte": 1551915520,
+          "bytes": 16777216,
+          "raw_range_sha256": "a7a0f7e442bae1f2905a503d39ab78b565a608a171facb3f295649654b8386d8",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 8,
+          "first_source_byte": 1593858560,
+          "bytes": 16777216,
+          "raw_range_sha256": "098bf87c1a03484e6899875f6cad7f3eaff81590ae473e9bf4d969818f149b24",
+          "ETag": "\"6ac371c2-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        }
+      ],
+      "subsets": [
+        {
+          "integration_zero_based": 0,
+          "file": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453022001_02301_00001_nrcb3_integration0_matched_reads.npy",
+          "bytes": 150995072,
+          "sha256": "cfa26ca1f4ffee798249bd17659fb606aca05e4d93987ea441b97829c41046f7",
+          "reused": true
+        },
+        {
+          "integration_zero_based": 1,
+          "file": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453022001_02301_00001_nrcb3_integration1_matched_reads.npy",
+          "bytes": 150995072,
+          "sha256": "4f250964b51b07c6409b162db3cda8a302987a338ba4191367b5c2201d33cffe",
+          "reused": true
+        }
+      ]
+    },
+    {
+      "source": "jw01453020001_02201_00001_nrcb3_uncal.fits",
+      "remote": {
+        "source_size": 2516662080,
+        "etag": "\"6ac37171-96013740\"",
+        "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01453020001_02201_00001_nrcb3_uncal.fits"
+      },
+      "primary_header": {
+        "DETECTOR": "NRCB3",
+        "READPATT": "RAPID",
+        "NFRAMES": 1,
+        "GROUPGAP": 0,
+        "NGROUPS": 150,
+        "NINTS": 2,
+        "SUBARRAY": "FULL",
+        "TFRAME": 10.73677,
+        "EXPSTART": 60235.63817556713,
+        "EXPEND": 60235.67558028935,
+        "CAL_VER": null,
+        "CRDS_CTX": null
+      },
+      "primary_header_cards": "SIMPLE  =                    T / conforms to FITS standard                      \nBITPIX  =                    8 / array data type                                \nNAXIS   =                    0 / number of array dimensions                     \nEXTEND  =                    T                                                  \nDATE    = '2026-10-05T09:26:42.263' / UTC date file created                     \nORIGIN  = 'STSCI   '           / Organization responsible for creating file     \nTIMESYS = 'UTC     '           / principal time system for time-related keywords\nTIMEUNIT= 's       '           / Default unit applicable to all time values     \nFILENAME= 'jw01453020001_02201_00001_nrcb3_uncal.fits' / Name of the file       \nSDP_VER = '2026_2a '           / Data Processing (DP) Software Version          \nPRD_VER = 'PRDOPSSOC-074'      / S&OC Project Reference Database (PRD) Version  \nOSS_VER = '9.0     '           / Observatory Scheduling Software (OSS) Version  \nGSC_VER = 'GSC32   '           / Guide Star Catalog (GSC) Version               \nDATAMODL= 'Level1bModel'       / Type of data model                             \nTELESCOP= 'JWST    '           / Telescope used to acquire the data             \nHGA_MOVE=                    F / High Gain Antenna moved during data collection \nPWFSEET =    60235.24205626157 / [d] Previous WFS exposure end time in MJD      \nNWFSEST =    60237.08900155093 / [d] Next WFS exposure start time in MJD        \nCOMPRESS=                    F / On-board data compression was used (T/F)       \n                                                                                \n        Program information                                                     \n                                                                                \nTITLE   = 'NIRCam Dark Current and Read-Noise Monitor' / Proposal title         \nPI_NAME = 'Boyer, Martha L.'   / Principal investigator name                    \nCATEGORY= 'CAL     '           / Program category                               \nSUBCAT  = 'NIRCAM  '           / Program sub-category                           \n                                                                                \n        Observation identifiers                                                 \n                                                                                \nDATE-OBS= '2023-10-18'         / [yyyy-mm-dd] UTC date at start of exposure     \nTIME-OBS= '15:18:58.369'       / [hh:mm:ss.sss] UTC time at start of exposure   \nDATE-BEG= '2023-10-18T15:18:58.369' / Date-time start of exposure               \nDATE-END= '2023-10-18T16:12:50.137' / Date-time end of exposure                 \nOBS_ID  = 'V01741005001P0145302002201' / Programmatic observation identifier    \nVISIT_ID= '01453020001'        / Visit identifier                               \nPROGRAM = '01453   '           / Program number                                 \nOBSERVTN= '020     '           / Observation number                             \nVISIT   = '001     '           / Visit number                                   \nVISITGRP= '02      '           / Visit group identifier                         \nSEQ_ID  = '2       '           / Parallel sequence identifier                   \nACT_ID  = '01      '           / Activity identifier                            \nEXPOSURE= '1       '           / Exposure request number                        \nBKGDTARG=                    F / Background target                              \nTEMPLATE= 'NIRCam Dark'        / Observation template used                      \nOBSLABEL= 'B       '           / Proposer label for the observation             \nOBSFOLDR= 'monitor: Rapid 150, 2 ints' / Name of the APT observation folder     \n                                                                                \n        Visit information                                                       \n                                                                                \nENG_QUAL= 'OK      '           / Engineering DB quality indicator               \nENGQLPTG= 'CALCULATED_TRACK_TR_202111' / Quality of pointing information from En\nVISITYPE= 'PARALLEL_DARK_CALIBRATION' / Visit type                              \nNEXPOSUR=                    1 / Total number of planned exposures in visit     \nINTARGET=                    T / At least one exposure in visit is internal     \nTARGOOPP=                    F / Visit scheduled as target of opportunity       \nTSOVISIT=                    F / Time Series Observation visit indicator        \nEXP_ONLY=                    F / Special commanding without SI configuration    \nCROWDFLD=                    F / Are the FGSes in a crowded field?              \n                                                                                \n        Target information                                                      \n                                                                                \nTARGPROP= 'UNKNOWN '           / Proposer's name for the target                 \nTARGTYPE= 'UNKNOWN '           / Type of target (fixed, moving, generic)        \nTARG_RA =    83.87266148826639 / [deg] Target RA at mid time of exposure        \nTARG_DEC=   -5.197097335912762 / [deg] Target Dec at mid time of exposure       \n                                                                                \n        Instrument configuration information                                    \n                                                                                \nINSTRUME= 'NIRCAM  '           / Instrument used to acquire the data            \nDETECTOR= 'NRCB3   '           / Name of detector used to acquire the data      \nMODULE  = 'B       '           / NIRCam module: A, B or MULTIPLE                \nCHANNEL = 'SHORT   '           / Instrument channel                             \nFILTER  = 'N/A     '           / Name of the filter element used                \nFWPOSOFF=                    1 / Filter wheel position offset (actual minus comm\nFWPOSTOL= 'within commanded tolerance' / Filter wheel position tolerance        \nPUPIL   = 'FLAT    '           / Name of the pupil element used                 \nPILIN   =                    F / Pupil imaging lens in the optical path: T/F    \nPWPOSOFF=                    0 / Pupil wheel position offset (actual minus comma\nPWPOSTOL= 'within commanded tolerance' / Pupil wheel position tolerance         \nCORONMSK= 'NONE    '           / coronagraph mask used                          \n                                                                                \n        Exposure parameters                                                     \n                                                                                \nEXPCOUNT=                    2 / Running count of exposures in visit            \nEXPRIPAR= 'PARALLEL_PURE'      / Prime or parallel exposure                     \nEXP_TYPE= 'NRC_DARK'           / Type of data in the exposure                   \nEXPSTART=    60235.63817556713 / [d] exposure start time in MJD                 \nEXPMID  =    60235.65687792824 / [d] exposure mid time in MJD                   \nEXPEND  =    60235.67558028935 / [d] exposure end time in MJD                   \nOSF_FILE= '2023291T211648268_002_osf.xml' / Observatory Status File name coverin\nREADPATT= 'RAPID   '           / Readout pattern                                \nNOUTPUTS=                    4 / Number of detector outputs used                \nNINTS   =                    2 / Number of integrations in exposure             \nNGROUPS =                  150 / Number of groups in integration                \nNFRAMES =                    1 / Number of frames per group                     \nFRMDIVSR=                    1 / Divisor applied to frame-averaged groups       \nGROUPGAP=                    0 / Number of frames dropped between groups        \nDRPFRMS1=                    0 / Number of frames dropped prior to 1st integrati\nDRPFRMS3=                    0 / Number of frames dropped between integrations  \nNSAMPLES=                    1 / Number of A/D samples per pixel                \nTSAMPLE =                 10.0 / [us] Time between samples                      \nTFRAME  =             10.73677 / [s] Time between frames                        \nTGROUP  =               10.737 / [s] Time between groups                        \nEFFINTTM=             1610.515 / [s] Effective integration time                 \nEFFEXPTM=             3221.031 / [s] Effective exposure time                    \nTMEASURE=             3199.557 / [s] Measurement time                           \nDURATION=             3231.768 / [s] Total duration of exposure                 \nNRSTSTRT=                    0 / Number of reset frames at start of exposure    \nNRESETS =                    1 / Number of reset frames between integrations    \nZEROFRAM=                    F / Zero frame was downlinked separately           \nDATAPROB=                    F / Science telemetry indicated a problem          \nSCA_NUM =                  488 / Sensor Chip Assembly number                    \nDATAMODE=                   33 / post-processing method used in FPAP            \nSCTARATE=                  0.0 / [ms/s] Spacecraft Clock Time Adjust RATE       \nIS_PSF  =                    F / exposure is PSF reference                      \nSELFREF =                    F / self-referencing PSF                           \n                                                                                \n        Subarray parameters                                                     \n                                                                                \nSUBARRAY= 'FULL    '           / Subarray used                                  \nSUBSTRT1=                    1 / Starting pixel in axis 1 direction             \nSUBSTRT2=                    1 / Starting pixel in axis 2 direction             \nSUBSIZE1=                 2048 / Number of pixels in axis 1 direction           \nSUBSIZE2=                 2048 / Number of pixels in axis 2 direction           \nFASTAXIS=                    1 / Fast readout axis direction                    \nSLOWAXIS=                   -2 / Slow readout axis direction                    \n                                                                                \n        Dither information                                                      \n                                                                                \nPATTTYPE= 'NONE    '           / Primary dither pattern type                    \nPATT_NUM=                    1 / Position number within dither pattern          \nNUMDTHPT=                    1 / Total number of points in dither pattern       \nXOFFSET =                  0.0 / [arcsec] X offset in SI ideal coordinate frame \nYOFFSET =                  0.0 / [arcsec] Y offset in SI ideal coordinate frame \n                                                                                \n        Aperture information                                                    \n                                                                                \nAPERNAME= 'NRCB3_FULL'         / S&OC PRD science aperture used                 \nPPS_APER= 'NONE    '           / original AperName supplied by PPS              \n                                                                                \n        Velocity aberration correction information                              \n                                                                                \nVA_RA   =    83.87569130054358 / [deg] Velocity aberrated apparent reference RA \nVA_DEC  =  -5.1946351846151595 / [deg] Velocity aberrated apparent reference Dec\n                                                                                \n        Time information                                                        \n                                                                                \nBARTDELT=    519.8407995980233 / [s] Barycentric correction at exposure start   \nBSTRTIME=    60235.64419224305 / [d] Barycentric exposure start time in MJD     \nBENDTIME=     60235.6815953208 / [d] Barycentric exposure end time in MJD       \nBMIDTIME=     60235.6628937822 / [d] Barycentric exposure mid time in MJD       \nHELIDELT=    523.9857504609972 / [s] Heliocentric correction at exposure start  \nHSTRTIME=    60235.64424021702 / [d] Heliocentric exposure start time in MJD    \nHENDTIME=    60235.68164329386 / [d] Heliocentric exposure end time in MJD      \nHMIDTIME=    60235.66294175571 / [d] Heliocentric exposure mid time in MJD      \n                                                                                \n        NIRCam Focus Adjust Mechanism parameters                                \n                                                                                \nFAM_LA1 =                    0 / position in steps of linear actuator 1         \nFASTEP1 =                    0 / requested focus actuator 1 starting steps      \nFAUNIT1 =                  0.0 / requested focus actuator 1 starting units      \nFAPHASE1= 'NULL    '           / requested focus actuator 1 starting phase      \nFA1VALUE=                    0 / requested focus actuator 1 position value      \nFAM_LA2 =                    0 / position in steps of linear actuator 2         \nFASTEP2 =                    0 / requested focus actuator 2 starting steps      \nFAUNIT2 =                  0.0 / requested focus actuator 2 starting units      \nFAPHASE2= 'NULL    '           / requested focus actuator 2 starting phase      \nFA2VALUE=                    0 / requested focus actuator 2 position value      \nFAM_LA3 =                    0 / position in steps of linear actuator 3         \nFASTEP3 =                    0 / requested focus actuator 3 starting steps      \nFAUNIT3 =                  0.0 / requested focus actuator 3 starting units      \nFAPHASE3= 'NULL    '           / requested focus actuator 3 starting phase      \nFA3VALUE=                    0 / requested focus actuator 3 position value      \n                                                                                \n        Guide star information                                                  \n                                                                                \nGS_ORDER=                    1 / index of guide star within list of selected gui\nGSSTRTTM= '2023-10-18 15:09:39.7400000' / UTC time when guide star activity star\nGSENDTIM= '2023-10-18 15:13:43.4520000' / UTC time when guide star activity comp\nGDSTARID= 'S1LG002364'         / guide star identifier                          \nGS_RA   =    83.95105149885885 / guide star right ascension                     \nGS_DEC  =   -5.186201276899428 / guide star declination                         \nGS_URA  =          0.048570767 / guide star right ascension uncertainty         \nGS_UDEC =         0.0438130833 / guide star declination uncertainty             \nGS_MAG  =    12.65341186523438 / guide star magnitude in FGS detector           \nGS_UMAG =  0.01417143642902374 / guide star magnitude uncertainty               \nGS_V3_PA=    283.7257341499082 / V3 Position Angle of guide star for science    \nPCS_MODE= 'FINEGUIDE'          / Pointing Control System mode                   \nNEXTEND =                    3 / Number of file extensions                      \nCOMMENT / Exposure parameters                                                   \nCOMMENT / Program information                                                   \nCOMMENT / Observation identifiers                                               \nCOMMENT / Visit information                                                     \nMTSHADOW= 'NONE    '           / Moving target shadow state of visit            \nCOMMENT / Target information                                                    \nCOMMENT / Exposure times                                                        \nCOMMENT / NIRCam Focus Adjust Mechanism                                         \nCOMMENT / Guide star information                                                \nEND                                                                             ",
+      "SCI_header_cards": "XTENSION= 'IMAGE   '           / Image extension                                \nBITPIX  =                   16 / array data type                                \nNAXIS   =                    4 / number of array dimensions                     \nNAXIS1  =                 2048                                                  \nNAXIS2  =                 2048                                                  \nNAXIS3  =                  150                                                  \nNAXIS4  =                    2                                                  \nPCOUNT  =                    0 / number of parameters                           \nGCOUNT  =                    1 / number of groups                               \nBSCALE  =                    1                                                  \nBZERO   =                32768                                                  \nEXTNAME = 'SCI     '           / extension name                                 \nMJD-BEG =    60235.63817556713 / [d] exposure start time in MJD                 \nMJD-AVG =    60235.65687792824 / [d] exposure mid-point in MJD                  \nMJD-END =    60235.67558028935 / [d] exposure end time in MJD                   \nTDB-BEG =                  0.0 / [d] TDB time of exposure start in MJD          \nTDB-MID =                  0.0 / [d] TDB time of exposure mid-point in MJD      \nTDB-END =                  0.0 / [d] TDB time of exposure end in MJD            \nXPOSURE =             3221.031 / [s] Effective exposure time                    \nTELAPSE =             3231.768 / [s] Total elapsed exposure time                \n                                                                                \n        JWST ephemeris information                                              \n                                                                                \nREFFRAME= 'EME2000 '           / Ephemeris reference frame (EME2000)            \nEPH_TYPE= 'Definitive'         / Definitive or Predicted                        \nEPH_TIME=    60235.65687792824 / [d] MJD time of position and velocity vectors  \nJWST_X  =   135082236.71466747 / [km] barycentric JWST X coordinate at MJD-AVG  \nJWST_Y  =    57529244.19904236 / [km] barycentric JWST Y coordinate at MJD-AVG  \nJWST_Z  =    25264023.72474753 / [km] barycentric JWST Z coordinate at MJD-AVG  \nOBSGEO-X=    883534059.6269495 / [m] geocentric JWST X coordinate at MJD-AVG    \nOBSGEO-Y=    759564483.9059954 / [m] geocentric JWST Y coordinate at MJD-AVG    \nOBSGEO-Z=    620991030.5929835 / [m] geocentric JWST Z coordinate at MJD-AVG    \nJWST_DX =  -13.180182611208322 / [km/s] barycentric JWST X velocity at MJD-AVG  \nJWST_DY =   25.142581926588296 / [km/s] barycentric JWST Y velocity at MJD-AVG  \nJWST_DZ =   10.790658170609502 / [km/s] barycentric JWST Z velocity at MJD-AVG  \nOBSGEODX=  -252.37962270721403 / [m/s] geocentric JWST X velocity at MJD-AVG    \nOBSGEODY=    419.8386092959893 / [m/s] geocentric JWST Y velocity at MJD-AVG    \nOBSGEODZ=     72.7946203032244 / [m/s] geocentric JWST Z velocity at MJD-AVG    \nPA_APER =    283.2816421538597 / [deg] Position angle of aperture used          \nVA_SCALE=    1.000075116041506 / Velocity aberration scale factor               \nBUNIT   = 'DN      '           / physical units of the array values             \n                                                                                \n        Information about the coordinates in the file                           \n                                                                                \nRADESYS = 'ICRS    '           / Name of the coordinate reference frame         \n                                                                                \n        Spacecraft pointing information                                         \n                                                                                \nRA_V1   =     83.7522714663408 / [deg] RA of telescope V1 axis                  \nDEC_V1  =   -5.152166673864148 / [deg] Dec of telescope V1 axis                 \nPA_V3   =   283.74416405278595 / [deg] Position angle of telescope V3 axis      \n                                                                                \n        WCS parameters                                                          \n                                                                                \nS_REGION= 'POLYGON ICRS  83.883326137 -5.190523210 83.879199707 -5.207685272 &' \nCONTINUE  '83.862065946 -5.203559695 83.866058661 -5.186562070&'                \nCONTINUE  '' / Spatial footprint of the observation                             \nV2_REF  =           -54.610778 / [arcsec] Telescope V2 coord of reference point \nV3_REF  =          -457.702913 / [arcsec] Telescope V3 coord of reference point \nVPARITY =                   -1 / Relative sense of rotation between Ideal xy and\nV3I_YANG=          -0.45164689 / [deg] Angle from V3 axis to Ideal y axis       \nRA_REF  =    83.87266148826639 / [deg] Right Ascension of the reference point   \nDEC_REF =   -5.197097335912762 / [deg] Declination of the reference point       \nROLL_REF=    283.7332890438597 / [deg] V3 roll angle at the ref point (N over E)\nVELOSYS =              13180.3 / [m/s] Barycentric correction to radial velocity\nEXTVER  =                    1 / extension value                                \nCOMMENT / Ephemeris                                                             \nEND                                                                             ",
+      "source_SCI_offset": 23040,
+      "source_SCI_bytes": 2516582400,
+      "range_chunks": [
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 0,
+          "first_source_byte": 23040,
+          "bytes": 16777216,
+          "raw_range_sha256": "b829b1bbb4021a6bc5d040c72a9f0f5fca3aa6943ac5f6582fc4797a7174340f",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 1,
+          "first_source_byte": 41966080,
+          "bytes": 16777216,
+          "raw_range_sha256": "d87e2221b06bd1970c439ccac05377c26563f03b2e0e277c367d5c1e1fabb0cd",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 2,
+          "first_source_byte": 83909120,
+          "bytes": 16777216,
+          "raw_range_sha256": "e4d9ae9a73bf2a388bfe7569073a4a3706db0553e99dbbb3c9033d2d009ab38a",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 3,
+          "first_source_byte": 125852160,
+          "bytes": 16777216,
+          "raw_range_sha256": "def25e7ac2117e7ab6a37b76c4e62bb1d553889d855d61a8eea615074a13513a",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 4,
+          "first_source_byte": 167795200,
+          "bytes": 16777216,
+          "raw_range_sha256": "59f62f644804bbef5e926d64958f2c54a1ee1523a72978751d0a1534ed10bb55",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 5,
+          "first_source_byte": 209738240,
+          "bytes": 16777216,
+          "raw_range_sha256": "e1da4091c59c1a637a7a5e79aae66231e64013cbe0871655cea65b3ae378c653",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 6,
+          "first_source_byte": 251681280,
+          "bytes": 16777216,
+          "raw_range_sha256": "49e10117f27c8c3477aa4e4b78c3b475ccaf47f3930303390504c5637f549da6",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 7,
+          "first_source_byte": 293624320,
+          "bytes": 16777216,
+          "raw_range_sha256": "656151845cdabe91fa91c48b87b2f1e93f0ae2a344141a25c129c5eac6fcc02b",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 0,
+          "group_zero_based": 8,
+          "first_source_byte": 335567360,
+          "bytes": 16777216,
+          "raw_range_sha256": "834d7adeab3bc1572cabaaf18e478d347f6f8d74468b1e25c232f1fe5017f047",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 0,
+          "first_source_byte": 1258314240,
+          "bytes": 16777216,
+          "raw_range_sha256": "102079df21ceeebddd2af082a58014eef60bff7f4bcaa6ad149de47f3fbd0ef9",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 1,
+          "first_source_byte": 1300257280,
+          "bytes": 16777216,
+          "raw_range_sha256": "f9fb3b64ae4155386424f0f77daaebee786f8e7a7ba0602fd0befd7fe911e655",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 2,
+          "first_source_byte": 1342200320,
+          "bytes": 16777216,
+          "raw_range_sha256": "b0c6d1a06a122dc49d22bda2668158f216a7f24a88c6cea27acea6d761ddc836",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 3,
+          "first_source_byte": 1384143360,
+          "bytes": 16777216,
+          "raw_range_sha256": "0d6a24f41e7e3653077b5860fe48ff625b5047a27f4c8f25f57e5822c7e2a543",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 4,
+          "first_source_byte": 1426086400,
+          "bytes": 16777216,
+          "raw_range_sha256": "3a777d8a4fa2085a208a01dd57a6b01b45c6747029cd42fe29b37cd4d0584984",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 5,
+          "first_source_byte": 1468029440,
+          "bytes": 16777216,
+          "raw_range_sha256": "9ef2e93b90bcaa60331ac0617097e173e034bf0eeef517eede2525c839ebc738",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 6,
+          "first_source_byte": 1509972480,
+          "bytes": 16777216,
+          "raw_range_sha256": "29715bca14629bbe2544f7721a4efb7c813cd3661f89c5544bea760faa2d800c",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 7,
+          "first_source_byte": 1551915520,
+          "bytes": 16777216,
+          "raw_range_sha256": "f3b2b3d157c73104890bdd5e1f73aaa7c2fe560b66ee80c5b394081ac352c13b",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        },
+        {
+          "integration_zero_based": 1,
+          "group_zero_based": 8,
+          "first_source_byte": 1593858560,
+          "bytes": 16777216,
+          "raw_range_sha256": "3621a8661c0e30fd9ceab0f18d9346d192de4f74b6210f831ad1faf1eab71dd5",
+          "ETag": "\"6ac37171-96013740\"",
+          "range_digest_recovered_from_reversible_exact_uint16_subset": true
+        }
+      ],
+      "subsets": [
+        {
+          "integration_zero_based": 0,
+          "file": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453020001_02201_00001_nrcb3_integration0_matched_reads.npy",
+          "bytes": 150995072,
+          "sha256": "d1e6e743ed9243e2d2f89503f14388703bfb7e6e694d004ee21333497f2bf3d9",
+          "reused": true
+        },
+        {
+          "integration_zero_based": 1,
+          "file": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453020001_02201_00001_nrcb3_integration1_matched_reads.npy",
+          "bytes": 150995072,
+          "sha256": "7a9ec3345c9efc0bccb71b8926f06a2260d79729232dda95d2c427cadb8c29a1",
+          "reused": true
+        }
+      ]
+    }
+  ],
+  "seconds": 0.00021099999867146835,
+  "source_selection_sha256": "61d3fb635d6e382838c7597e25dada4432e1b5d05098989b9e1751120583af1c",
+  "full_5GB_raw_files_downloaded": false,
+  "no_science_reserved_data": true,
+  "pixel_bytes_original_transfer": 603979776,
+  "transferred_pixel_bytes_this_receipt_recovery": 0,
+  "path_relocation": "owned >100MB raw/intermediate files moved into ignored native_cache only; bytes unchanged"
+}

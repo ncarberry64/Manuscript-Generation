@@ -1,0 +1,2072 @@
+{
+  "scope": "Actual consumed9group temporal trajectories versus fitted whole-native mean and same frozen optical body with kappa=0. No refit, unused test or change of original ERR. Temporal intercept and linear rate profiled separately per pixel.",
+  "mean_equations": "positive optical+coherent sky -> G/gain -> bounded leading collection -> implicit G0 intercept -> inverse calibrated L -> H -> mean of actual2read supports -> native L -> native dark subtraction. The kappa0 counterfactual retains the same fitted optical state and boundary.",
+  "noise_scope": "Fixed actual-rate pilot Poisson+postcorrection CDS-marginal comparator from earlier trajectory diagnostic; no SIRS added. Conditional temporal Q is not source-complete likelihood significance.",
+  "rows": [
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.00041506690146884376,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 83.17045285149439,
+            "quadratic_shape_Q": 75.44617025875814
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.00021060835944360835,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 584.1088483873272,
+            "quadratic_shape_Q": 515.241339194845
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 117,
+            "curvature_raw_RMS_DN_s2": 0.00013068648120668878,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 781.5945642264588,
+            "quadratic_shape_Q": 695.151042063661
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.0004253665056242329,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 83.80305650245658,
+            "quadratic_shape_Q": 75.60568593293064
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.00021139995123684884,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 584.314778582515,
+            "quadratic_shape_Q": 515.2416367789525
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 117,
+            "curvature_raw_RMS_DN_s2": 0.0001306865180361352,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 781.5950627419948,
+            "quadratic_shape_Q": 695.1510363573283
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.00048097073432008705,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 87.06516151761426,
+            "quadratic_shape_Q": 75.21724958410005
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.00019978094797802807,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 580.7804369177744,
+            "quadratic_shape_Q": 515.2363143786736
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 117,
+            "curvature_raw_RMS_DN_s2": 0.00013071138317912115,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 781.6140751872041,
+            "quadratic_shape_Q": 695.1510369311603
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 0,
+            "curvature_raw_RMS_DN_s2": null,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 0.0,
+            "quadratic_shape_Q": 0.0
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 48,
+            "curvature_raw_RMS_DN_s2": 0.0005673038999654537,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 508.2493192469651,
+            "quadratic_shape_Q": 249.79849033214998
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 117,
+            "curvature_raw_RMS_DN_s2": 0.0002034133142565867,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 772.1832675283395,
+            "quadratic_shape_Q": 602.2197178065749
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 0,
+            "curvature_raw_RMS_DN_s2": null,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 0.0,
+            "quadratic_shape_Q": 0.0
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 48,
+            "curvature_raw_RMS_DN_s2": 0.0005674365828769943,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 508.34931830746217,
+            "quadratic_shape_Q": 249.79885304701605
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 117,
+            "curvature_raw_RMS_DN_s2": 0.00020342146967947382,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 772.1950331194331,
+            "quadratic_shape_Q": 602.2196590328173
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 0,
+            "curvature_raw_RMS_DN_s2": null,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 0.0,
+            "quadratic_shape_Q": 0.0
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 48,
+            "curvature_raw_RMS_DN_s2": 0.0005659787850853205,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 507.0216585255485,
+            "quadratic_shape_Q": 249.7990728207958
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 117,
+            "curvature_raw_RMS_DN_s2": 0.00020319905312026867,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 771.8708747909199,
+            "quadratic_shape_Q": 602.2196624741661
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0016715477653875075,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 113.7239404484187,
+            "quadratic_shape_Q": 43.2582757650396
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 86,
+            "curvature_raw_RMS_DN_s2": 0.00037319127308130717,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 737.4569642162237,
+            "quadratic_shape_Q": 488.8912468094213
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00015528259825193822,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 682.6085188812431,
+            "quadratic_shape_Q": 570.2949748233018
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0016819737090809739,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 114.40426129266517,
+            "quadratic_shape_Q": 43.24707837098477
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 86,
+            "curvature_raw_RMS_DN_s2": 0.00037347954938803546,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 737.7829719957695,
+            "quadratic_shape_Q": 488.9134590365768
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.0001552841555951471,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 682.6104370091558,
+            "quadratic_shape_Q": 570.2949758901813
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0016775976492338373,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 111.05693577916725,
+            "quadratic_shape_Q": 43.268081616303995
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 86,
+            "curvature_raw_RMS_DN_s2": 0.00036888099052793103,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 732.3935869280352,
+            "quadratic_shape_Q": 488.9272128711243
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00015528670275853307,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 682.5928741806774,
+            "quadratic_shape_Q": 570.2949758553376
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 15,
+            "curvature_raw_RMS_DN_s2": 0.0007517049635152321,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 162.3013678329376,
+            "quadratic_shape_Q": 93.76620571558732
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 84,
+            "curvature_raw_RMS_DN_s2": 0.00022542576487313297,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 539.1716710870938,
+            "quadratic_shape_Q": 425.2179709142116
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 118,
+            "curvature_raw_RMS_DN_s2": 0.00011848997541302746,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 769.6831456825889,
+            "quadratic_shape_Q": 684.7933586778412
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 15,
+            "curvature_raw_RMS_DN_s2": 0.0007609363678927208,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 163.72507133332388,
+            "quadratic_shape_Q": 93.8065788918301
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 84,
+            "curvature_raw_RMS_DN_s2": 0.0002256009715315977,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 539.2771559382664,
+            "quadratic_shape_Q": 425.21963899904074
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 118,
+            "curvature_raw_RMS_DN_s2": 0.00011849024494083844,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 769.6832129567019,
+            "quadratic_shape_Q": 684.7933541771168
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 15,
+            "curvature_raw_RMS_DN_s2": 0.0006582698265191712,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 150.29062176020264,
+            "quadratic_shape_Q": 94.05499280588342
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 84,
+            "curvature_raw_RMS_DN_s2": 0.0002218822841654831,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 537.0399371618083,
+            "quadratic_shape_Q": 425.22002057801865
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 118,
+            "curvature_raw_RMS_DN_s2": 0.00011851033213990952,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 769.7048009950222,
+            "quadratic_shape_Q": 684.7933542608852
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 7,
+            "curvature_raw_RMS_DN_s2": 0.0014834038437938925,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 138.17516113159235,
+            "quadratic_shape_Q": 47.52808658350439
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 77,
+            "curvature_raw_RMS_DN_s2": 0.00042568795798965007,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 677.4715007926246,
+            "quadratic_shape_Q": 423.8203300999432
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 111,
+            "curvature_raw_RMS_DN_s2": 0.00014907688098773976,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 684.3865947446616,
+            "quadratic_shape_Q": 575.4965186220022
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 7,
+            "curvature_raw_RMS_DN_s2": 0.0014919608597351458,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 138.8955986092456,
+            "quadratic_shape_Q": 47.50268259330598
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 77,
+            "curvature_raw_RMS_DN_s2": 0.0004261198064574557,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 677.7697269949622,
+            "quadratic_shape_Q": 423.8225027013093
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 111,
+            "curvature_raw_RMS_DN_s2": 0.0001490798769384808,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 684.3899793003561,
+            "quadratic_shape_Q": 575.4965634149145
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 7,
+            "curvature_raw_RMS_DN_s2": 0.00140654372940372,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 130.17262445594304,
+            "quadratic_shape_Q": 47.62389029873381
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 77,
+            "curvature_raw_RMS_DN_s2": 0.00041502455862596884,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 670.0742039185019,
+            "quadratic_shape_Q": 423.82327142467716
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 111,
+            "curvature_raw_RMS_DN_s2": 0.00014905841767012348,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 684.354407643769,
+            "quadratic_shape_Q": 575.4965628663471
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 1,
+            "curvature_raw_RMS_DN_s2": 0.0014519496855842163,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 17.344536501201326,
+            "quadratic_shape_Q": 3.0506498237376487
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0006705218110337716,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 864.8435744114903,
+            "quadratic_shape_Q": 389.7997876203795
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 119,
+            "curvature_raw_RMS_DN_s2": 0.00017227794936396752,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 748.1010419406686,
+            "quadratic_shape_Q": 626.1187784750612
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 1,
+            "curvature_raw_RMS_DN_s2": 0.0014541770492837672,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 17.39102103001431,
+            "quadratic_shape_Q": 3.0532456352898647
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0006717177966780758,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 865.9575580338328,
+            "quadratic_shape_Q": 389.77508575835105
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 119,
+            "curvature_raw_RMS_DN_s2": 0.00017227979046317865,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 748.1025389098073,
+            "quadratic_shape_Q": 626.1188245158179
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 1,
+            "curvature_raw_RMS_DN_s2": 0.0014062097166532609,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 16.46070980998613,
+            "quadratic_shape_Q": 3.0532226522153163
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0006413025949352124,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 838.8015911373553,
+            "quadratic_shape_Q": 389.7725850726464
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 119,
+            "curvature_raw_RMS_DN_s2": 0.00017229400666185447,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 748.0983679965519,
+            "quadratic_shape_Q": 626.1188230480888
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0010975542301816786,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 98.14486992239486,
+            "quadratic_shape_Q": 49.42420687777053
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 76,
+            "curvature_raw_RMS_DN_s2": 0.000308208271919959,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 660.7227701250296,
+            "quadratic_shape_Q": 495.62597007065074
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 114,
+            "curvature_raw_RMS_DN_s2": 0.00013556416684819375,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 649.5869640818576,
+            "quadratic_shape_Q": 557.8739744912361
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0011047610052053554,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 98.71125120405854,
+            "quadratic_shape_Q": 49.46211969068378
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 76,
+            "curvature_raw_RMS_DN_s2": 0.00030834409173905353,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 660.8562189230338,
+            "quadratic_shape_Q": 495.62816628766234
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 114,
+            "curvature_raw_RMS_DN_s2": 0.00013556423185696905,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 649.5869144572764,
+            "quadratic_shape_Q": 557.8739802200362
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0010520333551404589,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 94.05067918484004,
+            "quadratic_shape_Q": 49.813451233755984
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 76,
+            "curvature_raw_RMS_DN_s2": 0.0003044860261923057,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 657.3920373139681,
+            "quadratic_shape_Q": 495.634488131869
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 114,
+            "curvature_raw_RMS_DN_s2": 0.00013556593379376725,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 649.6010147352407,
+            "quadratic_shape_Q": 557.8739802249894
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.0009661416165545607,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 146.41174269636025,
+            "quadratic_shape_Q": 75.41967423135803
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 81,
+            "curvature_raw_RMS_DN_s2": 0.00019797392087635656,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 552.0785533355929,
+            "quadratic_shape_Q": 469.9301317333486
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 109,
+            "curvature_raw_RMS_DN_s2": 0.00012199390124915695,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 692.9614389160528,
+            "quadratic_shape_Q": 609.7953467051345
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.0009733021047106556,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 147.27211020684422,
+            "quadratic_shape_Q": 75.44860455850487
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 81,
+            "curvature_raw_RMS_DN_s2": 0.00019819178395253924,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 552.1918263322102,
+            "quadratic_shape_Q": 469.931398468542
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 109,
+            "curvature_raw_RMS_DN_s2": 0.00012199299572499076,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 692.9604931551211,
+            "quadratic_shape_Q": 609.7953527865342
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.000892702565330157,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 139.8761271694836,
+            "quadratic_shape_Q": 75.74498264255276
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 81,
+            "curvature_raw_RMS_DN_s2": 0.00019338904332725438,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 549.6644317709562,
+            "quadratic_shape_Q": 469.9347670461915
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 109,
+            "curvature_raw_RMS_DN_s2": 0.00012197528394869863,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 692.945550011791,
+            "quadratic_shape_Q": 609.7953526684381
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.0007741183921115475,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 120.95466118043663,
+            "quadratic_shape_Q": 83.96047034687243
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 85,
+            "curvature_raw_RMS_DN_s2": 0.00022346971841897357,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 548.8211725822384,
+            "quadratic_shape_Q": 461.01549542405945
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00013216082957264976,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 727.4318190875612,
+            "quadratic_shape_Q": 635.6720875288447
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.0007841764319986392,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 121.9470380542329,
+            "quadratic_shape_Q": 84.0166762770273
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 85,
+            "curvature_raw_RMS_DN_s2": 0.00022396272761410462,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 549.0514765098145,
+            "quadratic_shape_Q": 461.0151521405123
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00013216153465957247,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 727.4325522242656,
+            "quadratic_shape_Q": 635.6720893481598
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 12,
+            "curvature_raw_RMS_DN_s2": 0.000610643942880728,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 110.0524815117452,
+            "quadratic_shape_Q": 84.11417316336929
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 85,
+            "curvature_raw_RMS_DN_s2": 0.0002166422857363009,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 545.4798209307089,
+            "quadratic_shape_Q": 461.013705210484
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00013213960868001145,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 727.4126686119637,
+            "quadratic_shape_Q": 635.6720893714544
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 2,
+            "curvature_raw_RMS_DN_s2": 0.0018633471930288895,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 53.406053146130986,
+            "quadratic_shape_Q": 17.33644748257082
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0005842741845681743,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 798.680180270233,
+            "quadratic_shape_Q": 417.8844521807645
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.00016805741832494033,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 734.1723381684992,
+            "quadratic_shape_Q": 602.8818628020997
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 2,
+            "curvature_raw_RMS_DN_s2": 0.0018747305195773419,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 53.86984581589196,
+            "quadratic_shape_Q": 17.357681172480007
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0005852970892143629,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 799.5866753412705,
+            "quadratic_shape_Q": 417.9017032349039
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.0001680609099253247,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 734.1758321647585,
+            "quadratic_shape_Q": 602.8818769507942
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 2,
+            "curvature_raw_RMS_DN_s2": 0.0016623709585189914,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 46.24299759029352,
+            "quadratic_shape_Q": 17.345374900523026
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0005635172204006847,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 781.1361081082704,
+            "quadratic_shape_Q": 417.9087387754584
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.00016785599463735152,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 733.9184151361184,
+            "quadratic_shape_Q": 602.8818765703554
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 4,
+            "curvature_raw_RMS_DN_s2": 0.0015017657037939224,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 73.00514310619971,
+            "quadratic_shape_Q": 29.272436108293107
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 83,
+            "curvature_raw_RMS_DN_s2": 0.0004049965567084354,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 865.4659635095252,
+            "quadratic_shape_Q": 581.0417648932957
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 112,
+            "curvature_raw_RMS_DN_s2": 0.00012481885808259132,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 750.9223679516447,
+            "quadratic_shape_Q": 665.065992216921
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 4,
+            "curvature_raw_RMS_DN_s2": 0.001508354297685036,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 73.41534829630798,
+            "quadratic_shape_Q": 29.32291808081986
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 83,
+            "curvature_raw_RMS_DN_s2": 0.00040526812938088873,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 865.7913617648613,
+            "quadratic_shape_Q": 581.0522787954283
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 112,
+            "curvature_raw_RMS_DN_s2": 0.00012482016893626622,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 750.9238648882837,
+            "quadratic_shape_Q": 665.065995299929
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 4,
+            "curvature_raw_RMS_DN_s2": 0.0014921809354470235,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 72.16415764554394,
+            "quadratic_shape_Q": 29.39981408255341
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 83,
+            "curvature_raw_RMS_DN_s2": 0.000399349650324066,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 858.9928269171526,
+            "quadratic_shape_Q": 581.065410846706
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 112,
+            "curvature_raw_RMS_DN_s2": 0.00012476285688225154,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 750.8595231365259,
+            "quadratic_shape_Q": 665.0659949902594
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 16,
+            "curvature_raw_RMS_DN_s2": 0.0006460192997080869,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 123.42421693924844,
+            "quadratic_shape_Q": 82.09565076193313
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.00018759500399100835,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 558.5451630152216,
+            "quadratic_shape_Q": 479.441323553905
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.000139934225891622,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 882.1691578437975,
+            "quadratic_shape_Q": 752.8501755442552
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 16,
+            "curvature_raw_RMS_DN_s2": 0.0006543932804054733,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 124.47909798646243,
+            "quadratic_shape_Q": 82.11749680888421
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0001877571735120775,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 558.6151558622948,
+            "quadratic_shape_Q": 479.44151998849793
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.0001399333931993808,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 882.1679362491001,
+            "quadratic_shape_Q": 752.8501759297551
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 16,
+            "curvature_raw_RMS_DN_s2": 0.0005648248506872162,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 114.61187694216329,
+            "quadratic_shape_Q": 82.2783830083344
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0001848146162113,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 557.2884415864249,
+            "quadratic_shape_Q": 479.4425029966116
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.00013992659005410214,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 882.1754077134215,
+            "quadratic_shape_Q": 752.8501759101331
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0018235053175733149,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 135.13268240412216,
+            "quadratic_shape_Q": 43.99747106590967
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 74,
+            "curvature_raw_RMS_DN_s2": 0.0004114153300576955,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 673.2640065038773,
+            "quadratic_shape_Q": 438.1932339339861
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 107,
+            "curvature_raw_RMS_DN_s2": 0.00014470209525934373,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 679.6140815018233,
+            "quadratic_shape_Q": 578.6928538909956
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.001832980747630351,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 136.16063401706637,
+            "quadratic_shape_Q": 44.07016045024699
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 74,
+            "curvature_raw_RMS_DN_s2": 0.00041170965145763264,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 673.5677917984216,
+            "quadratic_shape_Q": 438.1996460468807
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 107,
+            "curvature_raw_RMS_DN_s2": 0.000144704550248412,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 679.6169382428758,
+            "quadratic_shape_Q": 578.6928844119258
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0017922589210662362,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 131.46391886506134,
+            "quadratic_shape_Q": 44.12555594619724
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 74,
+            "curvature_raw_RMS_DN_s2": 0.0004042115988075074,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 666.5168250129379,
+            "quadratic_shape_Q": 438.20377312731034
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 107,
+            "curvature_raw_RMS_DN_s2": 0.0001446874074036843,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 679.5762696199915,
+            "quadratic_shape_Q": 578.6928841211205
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 1,
+            "curvature_raw_RMS_DN_s2": 0.0027797510428095766,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 46.0766611700676,
+            "quadratic_shape_Q": 15.358183867648403
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0007906353312574212,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 1264.036646823696,
+            "quadratic_shape_Q": 469.2762773465417
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 120,
+            "curvature_raw_RMS_DN_s2": 0.0002001713023159898,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 882.3305937934299,
+            "quadratic_shape_Q": 708.5471771265416
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 1,
+            "curvature_raw_RMS_DN_s2": 0.0027844083554220047,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 46.18694312871734,
+            "quadratic_shape_Q": 15.36544552080242
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0007912900794888624,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 1265.1596312103022,
+            "quadratic_shape_Q": 469.281126616439
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 120,
+            "curvature_raw_RMS_DN_s2": 0.00020017720938434111,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 882.339759090504,
+            "quadratic_shape_Q": 708.5472231990661
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 1,
+            "curvature_raw_RMS_DN_s2": 0.0027641857387978824,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 45.73661314362928,
+            "quadratic_shape_Q": 15.361190844182072
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 82,
+            "curvature_raw_RMS_DN_s2": 0.0007768745754843185,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 1240.5785674080953,
+            "quadratic_shape_Q": 469.280235711317
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 120,
+            "curvature_raw_RMS_DN_s2": 0.00020009271249974672,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 882.0924578426489,
+            "quadratic_shape_Q": 708.5472235911682
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 7,
+            "curvature_raw_RMS_DN_s2": 0.0011556938960849445,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 109.15761463735774,
+            "quadratic_shape_Q": 63.81894464845898
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 79,
+            "curvature_raw_RMS_DN_s2": 0.0003305393131218123,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 642.9128068828495,
+            "quadratic_shape_Q": 462.7427516086038
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.00014415002272789683,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 793.4683023693441,
+            "quadratic_shape_Q": 664.512775714996
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 7,
+            "curvature_raw_RMS_DN_s2": 0.0011630195887102743,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 109.74616519720497,
+            "quadratic_shape_Q": 63.8928630291322
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 79,
+            "curvature_raw_RMS_DN_s2": 0.0003308489931371602,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 643.1645337632046,
+            "quadratic_shape_Q": 462.7515029560388
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.00014415185815673921,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 793.4709504868484,
+            "quadratic_shape_Q": 664.512780153521
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 7,
+            "curvature_raw_RMS_DN_s2": 0.0011110949598749245,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 105.1762263437263,
+            "quadratic_shape_Q": 63.91078403802178
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 79,
+            "curvature_raw_RMS_DN_s2": 0.00032134011427584295,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 636.0372411214948,
+            "quadratic_shape_Q": 462.7581865618928
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 121,
+            "curvature_raw_RMS_DN_s2": 0.00014410913472191688,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 793.3913821868156,
+            "quadratic_shape_Q": 664.512779961133
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "field": false,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 16,
+            "curvature_raw_RMS_DN_s2": 0.0005966000417969063,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 187.77078827313895,
+            "quadratic_shape_Q": 137.0978736361409
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 79,
+            "curvature_raw_RMS_DN_s2": 0.0001970660339583134,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 600.1363583004081,
+            "quadratic_shape_Q": 504.6309175684816
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 101,
+            "curvature_raw_RMS_DN_s2": 0.00013160136123871433,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 628.4547423811874,
+            "quadratic_shape_Q": 532.0402639651826
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 16,
+            "curvature_raw_RMS_DN_s2": 0.0006039236533764595,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 189.21535317173488,
+            "quadratic_shape_Q": 137.10044313693783
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 79,
+            "curvature_raw_RMS_DN_s2": 0.00019710653738003064,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 600.1700977330793,
+            "quadratic_shape_Q": 504.6312216150168
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 101,
+            "curvature_raw_RMS_DN_s2": 0.00013160140547777168,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 628.4547775216927,
+            "quadratic_shape_Q": 532.0402643136414
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 16,
+            "curvature_raw_RMS_DN_s2": 0.0005058324956504769,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 172.5658937218506,
+            "quadratic_shape_Q": 137.63613458610973
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 79,
+            "curvature_raw_RMS_DN_s2": 0.00019605687860842826,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 599.367205765233,
+            "quadratic_shape_Q": 504.6346078322525
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 101,
+            "curvature_raw_RMS_DN_s2": 0.00013158043994801837,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 628.4268789418884,
+            "quadratic_shape_Q": 532.0402639987673
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "field": true,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 9,
+            "curvature_raw_RMS_DN_s2": 0.001055309681825635,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 115.10628508446405,
+            "quadratic_shape_Q": 53.74220256303896
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 81,
+            "curvature_raw_RMS_DN_s2": 0.0003170115151680756,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 566.8998485535867,
+            "quadratic_shape_Q": 425.6797096493963
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 114,
+            "curvature_raw_RMS_DN_s2": 0.00012053897629473037,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 710.0559908671532,
+            "quadratic_shape_Q": 620.178891038227
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 9,
+            "curvature_raw_RMS_DN_s2": 0.0010649803639288184,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 116.31112495485324,
+            "quadratic_shape_Q": 53.74008232258519
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 81,
+            "curvature_raw_RMS_DN_s2": 0.0003177518638053225,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 567.2317812849666,
+            "quadratic_shape_Q": 425.6811572116676
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 114,
+            "curvature_raw_RMS_DN_s2": 0.00012054083364953767,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 710.0581862131504,
+            "quadratic_shape_Q": 620.1788888437545
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 9,
+            "curvature_raw_RMS_DN_s2": 0.0009166512091078286,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 98.69821996730991,
+            "quadratic_shape_Q": 53.83247438212223
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 81,
+            "curvature_raw_RMS_DN_s2": 0.0003017784651708879,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 560.081804230579,
+            "quadratic_shape_Q": 425.6826499516799
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 114,
+            "curvature_raw_RMS_DN_s2": 0.00012047009175905004,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 709.9632508988925,
+            "quadratic_shape_Q": 620.1788895034348
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "field": true,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 4,
+            "curvature_raw_RMS_DN_s2": 0.0015182982583193689,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 86.94669448023507,
+            "quadratic_shape_Q": 34.34789338683518
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 75,
+            "curvature_raw_RMS_DN_s2": 0.0003959608456747182,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 773.6740266690342,
+            "quadratic_shape_Q": 487.8263558855779
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 113,
+            "curvature_raw_RMS_DN_s2": 0.00013466842007963672,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 798.9781229483706,
+            "quadratic_shape_Q": 675.6070927790998
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 4,
+            "curvature_raw_RMS_DN_s2": 0.0015249608600723867,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 87.40558579685084,
+            "quadratic_shape_Q": 34.408795160273534
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 75,
+            "curvature_raw_RMS_DN_s2": 0.00039626868007062294,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 774.0116383233374,
+            "quadratic_shape_Q": 487.83257808600234
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 113,
+            "curvature_raw_RMS_DN_s2": 0.0001346695654917147,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 798.9803438027893,
+            "quadratic_shape_Q": 675.607096682446
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 4,
+            "curvature_raw_RMS_DN_s2": 0.0015338457195947768,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 85.93509260934798,
+            "quadratic_shape_Q": 34.42307418592031
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 75,
+            "curvature_raw_RMS_DN_s2": 0.000388696606630647,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 765.8590249839092,
+            "quadratic_shape_Q": 487.83352181331685
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 113,
+            "curvature_raw_RMS_DN_s2": 0.00013464406648509343,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 798.935387918387,
+            "quadratic_shape_Q": 675.6070963575532
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "field": true,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 8,
+            "curvature_raw_RMS_DN_s2": 0.0012365512092161104,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 116.13876023256486,
+            "quadratic_shape_Q": 40.68054060164622
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 76,
+            "curvature_raw_RMS_DN_s2": 0.00038221759676139395,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 596.0530426248413,
+            "quadratic_shape_Q": 366.27862382348513
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00010932429035572609,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 676.8194334925377,
+            "quadratic_shape_Q": 589.0549781914758
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 8,
+            "curvature_raw_RMS_DN_s2": 0.0012473633604859716,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 117.38170497038456,
+            "quadratic_shape_Q": 40.73006028136538
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 76,
+            "curvature_raw_RMS_DN_s2": 0.00038282858024359334,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 596.4262248708693,
+            "quadratic_shape_Q": 366.2820801166053
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00010932532020066029,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 676.8209645876984,
+            "quadratic_shape_Q": 589.0549643743176
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 8,
+            "curvature_raw_RMS_DN_s2": 0.0010783246824901105,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 98.564318288751,
+            "quadratic_shape_Q": 40.75480360545961
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 76,
+            "curvature_raw_RMS_DN_s2": 0.0003697036671827905,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 587.4796964879356,
+            "quadratic_shape_Q": 366.2855142221496
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00010931004504309788,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 676.7963131750441,
+            "quadratic_shape_Q": 589.05496292341
+          }
+        ]
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "field": true,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "radial_comparisons": {
+        "observed": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0015038571563135326,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 143.08887330415615,
+            "quadratic_shape_Q": 40.87834754740034
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 83,
+            "curvature_raw_RMS_DN_s2": 0.00044587202070835814,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 808.0561470507088,
+            "quadratic_shape_Q": 442.4989009321851
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00016953649965807612,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 728.2123380630317,
+            "quadratic_shape_Q": 545.574977734614
+          }
+        ],
+        "frozen_body_kappa0_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0015079318468591727,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 143.5691651886109,
+            "quadratic_shape_Q": 40.91784995724173
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 83,
+            "curvature_raw_RMS_DN_s2": 0.0004462845024201157,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 808.5260096584107,
+            "quadratic_shape_Q": 442.500314996158
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00016954002495832727,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 728.2186491935453,
+            "quadratic_shape_Q": 545.5749657913289
+          }
+        ],
+        "fitted_history_residual": [
+          {
+            "radius_pixel": [
+              0,
+              3
+            ],
+            "all9valid_pixels": 6,
+            "curvature_raw_RMS_DN_s2": 0.0014534190852782546,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 136.50468570654988,
+            "quadratic_shape_Q": 40.95499783467872
+          },
+          {
+            "radius_pixel": [
+              3,
+              6
+            ],
+            "all9valid_pixels": 83,
+            "curvature_raw_RMS_DN_s2": 0.000434980217480941,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 795.9822547535279,
+            "quadratic_shape_Q": 442.50013364126505
+          },
+          {
+            "radius_pixel": [
+              6,
+              8.6
+            ],
+            "all9valid_pixels": 115,
+            "curvature_raw_RMS_DN_s2": 0.00016951317800194756,
+            "temporal_shape_Q_after_fitted_intercept_and_linear_rate": 728.1079724664163,
+            "quadratic_shape_Q": 545.5749659037583
+          }
+        ]
+      }
+    }
+  ],
+  "physical_admission": false,
+  "physical_validation_pass": false,
+  "physical_guard": 2e-10,
+  "source_sha256": "1df16509d9b672f68c934a06164821d2a21371184968079bfdb00f33d436618e",
+  "fit_solution_sha256": "830c325ed5755086e3968adf113758baf033e1161d94dd2f6ce6dae512fe5740"
+}

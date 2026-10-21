@@ -1,0 +1,211 @@
+{
+  "status": "PASS_FINAL_FROZEN_SCIENTIFIC_SOURCE",
+  "reviewed_at_utc": "2026-10-20T17:28:46.415011+00:00",
+  "review_type": "Independent final scientific-scope and source-structure audit within the same AI-assisted research session; not external human peer review.",
+  "blocking_findings": [],
+  "scope": {
+    "governing_question": "How do BHSM surface contributions determine gravitational lensing and time delays for light traversing an envelope event?",
+    "adopted_premise": "Environmental light traverses an envelope event; conventional matter and scalar descriptions are developed as representations of its surface contributions.",
+    "derived_effective_result": "The declared R1 action fixes b_T, C and J_eff=J_T-b_T(rho+rho_Sigma)/(2 Mpl^2); the original regular sections, source integral, Gauss residual and material-boundary flux are explicitly applied. The stated pure-cubic comparison has no additional layer but has a nonzero volume source.",
+    "derived_equivalence": "The nonnegative effective-mass construction reproduces the complete retained leading Phi=Psi metric, deflection, relative potential, images and delays; this is constructive, not failed prediction.",
+    "open_common_source_derivation": "Select and evaluate an action-owned physical cap/interface embedding into canonical T, including the cubic vertex, source pairing, complement spectrum, physical length normalization and shared boundary domain. For field continuation specify the material EOS/support and environmental/outer Cauchy data and solve the derived coupled equations. Neither positive witness is chosen as a physical galaxy state.",
+    "independent_variables_preserved": [
+      "rolling scalar T",
+      "target field eta and its phase coordinate",
+      "metric conformal coordinate psi_geo",
+      "inherited topographic psi"
+    ],
+    "deterministic_encounter_requires_no_invented_stochastic_state": true,
+    "actual_section_order": [
+      "Introduction",
+      "Envelope State and Environmental Preparation",
+      "Action, Normalization, Local Source and Boundary Data",
+      "Metric and Optical Encounter Response",
+      "Image Directions and Observer Delays",
+      "Conventional Representation and Consistency Checks",
+      "Computational Methods and Reproducibility",
+      "Discussion: BHSM Interpretation, Accuracy and Remaining Derivation",
+      "Conclusions",
+      "The Constant-Target Null Control",
+      "Moving Measured-Redshift Endpoints",
+      "Leading Scalar Principal Coefficients",
+      "Exact Bulk Continuation, Environment and Matching",
+      "Common-Source Pullback and a Nonuniqueness Construction"
+    ],
+    "required_chain_is_actual_order": true,
+    "derived_common_source_progress": "The cap canonical-momentum source pullback and full Schur source J_P-B D_perp^-1 J_Q-B q0 are derived. Same-domain positive complement witnesses with the same leading C,D but distinct fourth-order coefficients/cutoffs prove that the leading coefficients do not select the microscopic completion. The direct constant-rescaling identification with the inherited distributed seam export is excluded; owned finite-domain or nonlocal maps remain possible.",
+    "derived_continuation": "Exact bulk cubic stress/current, spherical components and environmental cross-Hessian are derived, with the rolling/static current obstruction and material/global defining data explicit. These equations and twelve symbolic identities do not claim an evolved higher-order physical solution."
+  },
+  "reference_and_accounting": {
+    "seconds_are_relative_to_fixed_body_reference": true,
+    "leading_offsets_s": [
+      25.95925815,
+      8.64901938
+    ],
+    "common_GR2_offsets_s": [
+      25.95932714,
+      8.64900924
+    ],
+    "screening_radius_kpc": 212.0292,
+    "fully_matched_representations_share_demonstrated_leading_optical_response": true,
+    "effective_mass_substitutes_for_equivalent_scalar_contribution_not_added_twice": true,
+    "smooth_maps_exclude_main_encounter_and_each_is_counted_once": true,
+    "constant_target_null_preserved_within_source_free_regular_boundary_problem": true,
+    "nuisance_rank_results_keep_specific_source_profile_and_weighting_scope": true,
+    "GR2_scalar_higher_order_environmental_and_global_matching_limits_explicit": true,
+    "new_source_application_is_conditional_and_not_microscopic_physical_admission": true,
+    "positive_complement_lifts_are_nonuniqueness_witnesses_not_selected_states": true
+  },
+  "preservation": {
+    "comparison_source": "C:\\Users\\carbe\\Downloads\\Galaxies_Lensing_Research_Package.zip",
+    "comparison_member": "overlay/manuscript/sections/strong_lensing_galaxies_20261020.tex",
+    "original_member_sha256": "77d6f248643ac4960f30f1dbd148ece88a673bcd6e67bc8935308bdbace57d71",
+    "original_displayed_equation_align_blocks": 32,
+    "original_displayed_blocks_missing_or_changed": 0,
+    "original_numeric_literals_missing": {},
+    "existing_unit_conversion_moved_from_inline_to_unnumbered_display_without_algebra_change": true,
+    "scientific_modules_byte_identical_to_package": {
+      "code/strong_lensing_r1_screened.py": true,
+      "code/strong_lensing_gr2.py": true
+    },
+    "no_equation_or_scientific_value_changed": true,
+    "line_endings_only_normalization": {
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "change": "CRLF to LF only; byte reconstruction of the prior CRLF form exactly matches the previously reviewed SHA256.",
+      "prior_CRLF_sha256": "837a7d86928f5f46cb864cc3f29ca5a0d3413e56063208b628dfdd0cbcedb7b4",
+      "normalized_LF_sha256": "158f30aaf6f64f1bcf56b68723c9f168a7ef428d308955e2718c3662b6e7ab47",
+      "math_prose_and_numeric_text_identical": true
+    },
+    "format_only_cleanup": {
+      "checked_at_utc": "2026-10-20T17:33:04.151910+00:00",
+      "changes": [
+        {
+          "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+          "change": "Remove extra blank line(s) at EOF only",
+          "removed_extra_EOF_newlines": 1,
+          "prior_reviewed_sha256": "158f30aaf6f64f1bcf56b68723c9f168a7ef428d308955e2718c3662b6e7ab47",
+          "current_sha256": "541bd6175048332e379ebb7776a0f0614d16b80852b9814a53e7a9eb0290c4cd",
+          "exact_prior_bytes_reconstructed_using_only_documented_whitespace_changes": true,
+          "word_math_and_numeric_tokens_identical": true
+        },
+        {
+          "file": "docs/strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md",
+          "change": "Remove extra blank line(s) at EOF only",
+          "removed_extra_EOF_newlines": 1,
+          "prior_reviewed_sha256": "7e26245cb46a8eac6fd6d0dc15ed6799deb4d88af2127d9a46075c93cf41a512",
+          "current_sha256": "bb22f3d1fd9f81fba98eff3516fc1b1fd0a6283ab5ddfdc0f74ca67bf869aabc",
+          "exact_prior_bytes_reconstructed_using_only_documented_whitespace_changes": true,
+          "word_math_and_numeric_tokens_identical": true
+        },
+        {
+          "file": "docs/strong_lensing_r1_screened_20261020/GALAXIES_NUISANCE_OPTICS_REVIEW_20261020.md",
+          "change": "Remove extra blank line(s) at EOF only",
+          "removed_extra_EOF_newlines": 1,
+          "prior_reviewed_sha256": "46a7f3715553286c9e79ddf4a17538764417a87bb996d00e4e848f556a108dc3",
+          "current_sha256": "892c425a73f6d1d1485477e8dc4d1e01e6161aa260c5053cde02fecc31ade201",
+          "exact_prior_bytes_reconstructed_using_only_documented_whitespace_changes": true,
+          "word_math_and_numeric_tokens_identical": true
+        },
+        {
+          "file": "docs/strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md",
+          "change": "Remove extra blank line(s) at EOF only",
+          "removed_extra_EOF_newlines": 1,
+          "prior_reviewed_sha256": "d89849e1d81558878febc5c699d80b5f669dfead9d34bdf9a30fd326360435de",
+          "current_sha256": "c5ac9a69ac0f0aaf9443d8411a82367198353bc366815ec753c058e5c0e991d4",
+          "exact_prior_bytes_reconstructed_using_only_documented_whitespace_changes": true,
+          "word_math_and_numeric_tokens_identical": true
+        },
+        {
+          "file": "docs/strong_lensing_r1_screened_20261020/GALAXIES_COVER_LETTER_DRAFT.md",
+          "change": "Replace four Markdown hard breaks with blank paragraphs; words unchanged",
+          "removed_extra_EOF_newlines": 0,
+          "prior_reviewed_sha256": "da8f80218d873084c37b30d66ecf82fa17ac26f5e118f8a78af1fc3638936b08",
+          "current_sha256": "7294ada68af1f4527e4932735f2c06b9305a8e5dcb3bb57acd7774c3ba197897",
+          "exact_prior_bytes_reconstructed_using_only_documented_whitespace_changes": true,
+          "word_math_and_numeric_tokens_identical": true
+        }
+      ],
+      "scientific_or_framing_changes": false
+    },
+    "new_numbered_equation_align_blocks": 12,
+    "total_equation_align_blocks": 44,
+    "no_equation_or_scientific_value_changed_qualification": "All original 32 blocks and original numerical literals remain; twelve additional numbered blocks, explicit target normalization/energy convention, source-application numbers and derived witness/continuation mathematics were added. Original optical predictions were not retuned."
+  },
+  "journal_and_author_only": {
+    "journal": "Galaxies",
+    "special_issue": "Strong Gravitational Lens Modeling",
+    "working_title": "Strong-Lensing Time Delays in the Berger--Hopf Framework: An R1 Effective Calculation",
+    "abstract_word_count": 190,
+    "submission_target_date_absent": true,
+    "separate_Universe_context_preserved": true,
+    "cover_letter_remains_unsent_draft": true,
+    "author_confirmed_declarations_completed": true,
+    "author_fact_provenance": "Author steering and existing author records are reconciled in docs/STRONG_LENSING_BHSM_INTEGRATION_20261020.md and the unsent cover letter; this review verifies consistent transcription, not an external audit of personal declarations.",
+    "sole_author": "Norman P. Carberry",
+    "affiliation": "Independent Researcher, Oconomowoc, Wisconsin, USA",
+    "correspondence_and_ORCID_supplied_in_main": true,
+    "funding": "No external funding, confirmed and stated",
+    "conflicts": "No conflicts, confirmed and stated",
+    "CRediT": "Sole-author roles and responsibility stated",
+    "AI_disclosure": "Substantive ChatGPT/Codex assistance retained; the package model label is attributed to the archived package rather than asserted as this session model.",
+    "immutable_calculation_commit": "0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd",
+    "immutable_commit_scope": "Calculation/source archive; not a claim that this later final manuscript/PDF revision is already in that calculation commit."
+  },
+  "supporting_records": {
+    "README_scope_review_checkpoint_cover_letter_and_handoff_consistent": true,
+    "historical_technical_reviews_have_explicit_superseding_scope_notes": [
+      "docs/strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md",
+      "docs/strong_lensing_r1_screened_20261020/R1_REFEREE_ACCURACY_REVIEW_20261020.md",
+      "docs/strong_lensing_r1_screened_20261020/GALAXIES_NUISANCE_OPTICS_REVIEW_20261020.md",
+      "docs/strong_lensing_r1_screened_20261020/COMMON_GR_2PM_COMPOSITION_REVIEW_20261020.md",
+      "docs/strong_lensing_r1_screened_20261020/FINITE_BODY_GR_2PM_DERIVATION_20261020.md"
+    ],
+    "historical_package_records_identified_as_historical_by_integration_README": true
+  },
+  "structural_checks": {
+    "duplicate_labels": [],
+    "undefined_local_references": []
+  },
+  "validation_scope": {
+    "current_numerical_evidence_read": "artifacts/strong_lensing_bhsm_integration_20261020/validation.json",
+    "numeric_values_compared": 1161,
+    "focused_checks_passed": 16,
+    "numerical_replay_not_repeated_by_this_scope_audit": true,
+    "PDF_visual_audit_owned_by_root": "Root reports final real-MDPI 18-page focused PDF built with zero reported layout/reference warnings and all-page contact/key-page visual inspection; this receipt independently reviews final scientific source and scope, not PDF pixels.",
+    "new_source_checks": 7,
+    "new_symbolic_continuation_identities": 12,
+    "no_calculations_or_old_tests_repeated_for_this_final_refresh": true
+  },
+  "reviewed_file_sha256": {
+    "manuscript/strong_lensing_main.tex": "b26e34e436c76d90b5433bdb7ce17ff8841d8655aaea2e89bb1945a99b453d28",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "1ad0a1d6260daa504e75672799f88df935d203940f3c6b59c1fa724b4e54cc7a",
+    "README.md": "c3eefabb090b2a7cf4c071c4875d8e3f561e7b99f35007ab74343e198c4d5df8",
+    "docs/STRONG_LENSING_SCOPE_20261020.md": "67903a7a92015f1a64d30e89f66c3bfcf8d24e37c7dd305a61d688e2d668745a",
+    "docs/STRONG_LENSING_BHSM_INTEGRATION_20261020.md": "92e74b7fab78fb61432efca8ef85a365c99842eb0ece0c5161e7fa0c7fe27bbb",
+    "docs/STRONG_LENSING_LOCAL_CHECKPOINT_20261020.md": "26ff8f0e99f1e6a00437f1ee535c2a9fa81f6ffda4729bc12cef2e450ae4e327",
+    "docs/STRONG_LENSING_CHECKPOINT_20261020.md": "a28c627ae31b5bb869507fa868b4ee800e0f8cc6ca423d73192c4f90dd0b13b1",
+    "docs/strong_lensing_r1_screened_20261020/GALAXIES_RESEARCHER_REVIEW.md": "08ef4541a535097bd2e947c663f9e22712c8b4d5318e3707834d8c83a0f33b40",
+    "docs/strong_lensing_r1_screened_20261020/GALAXIES_COVER_LETTER_DRAFT.md": "e5908192efd2c6abdaf6bf142f50896cbb3c9fdc9cd98f250d7e264d92377096",
+    "docs/strong_lensing_r1_screened_20261020/CODEX_GALAXIES_INTEGRATION_PROMPT.md": "dc7a11bfa27e065c4e3ec8f73ab2eacfe304d1c5dbdcf91da60ec1e67fbbab8c",
+    "docs/strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md": "c5ac9a69ac0f0aaf9443d8411a82367198353bc366815ec753c058e5c0e991d4",
+    "docs/strong_lensing_r1_screened_20261020/R1_REFEREE_ACCURACY_REVIEW_20261020.md": "1116fe2e1e55225e8af23ce13f4631db7f5e17cb2c65ed0b704b73229060cab3",
+    "docs/strong_lensing_r1_screened_20261020/GALAXIES_NUISANCE_OPTICS_REVIEW_20261020.md": "892c425a73f6d1d1485477e8dc4d1e01e6161aa260c5053cde02fecc31ade201",
+    "docs/strong_lensing_r1_screened_20261020/COMMON_GR_2PM_COMPOSITION_REVIEW_20261020.md": "8a80dffc7f1958f203011487e2fbdf9fbc4ec983f6b1d2277617b4b23572a5df",
+    "docs/strong_lensing_r1_screened_20261020/FINITE_BODY_GR_2PM_DERIVATION_20261020.md": "b10002ec233391cd6a076800b4ab69828d410953df3fd1d3365e4b4fa0ad02c1",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_gr2.py": "5edd7987ec568fde047b3e033cdf86ed1ac53cf2587f30f8244c9fa024b9ff11",
+    "artifacts/strong_lensing_r1_screened_20261020/results.json": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "artifacts/strong_lensing_r1_screened_20261020/gr2_control.json": "5f4b2518966180f88bee2dedb09f04196d8bc5f38c6ef533bf3d2c2ba460d621",
+    "artifacts/strong_lensing_bhsm_integration_20261020/validation.json": "74f7b7668b74a38e5b6958d98c848671bbbc97cf18667ff880c7f72cec727c7d",
+    "artifacts/strong_lensing_bhsm_integration_20261020/README.md": "3b7ed807fad3054b06e394c3190271ec613fd6067c7df9c0ffcc4fd8d9189692",
+    "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md": "6a8820fbe57d98f017273e1a81d83d26a71264a9c342e9ac5d999c0c83934a36",
+    "docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md": "2e86b4514b473153fb68b91c88492ee0367e52d3e963a0aec7d8bd3855e16266",
+    "code/strong_lensing_surface_source.py": "02c503fb0e6b13fcbaab62d6b43d35befbfe534670c82c7d7b1a2579ec4eb5b7",
+    "scripts/run_strong_lensing_surface_source.py": "4e76d7136528817b67ffc0abedef2ce084402fdbcabf383a424c8ca218447ed2",
+    "tests/test_strong_lensing_surface_source.py": "2ddc288d0159c42a4e167af1535eb053ca521c142e411816fffc855a73e89941",
+    "scripts/r1_screened_review/check_remaining_field_algebra.py": "ce764ea54d08564bf874564d728bb917125cc28b842dbc17e59ef53ee1527f48",
+    "artifacts/strong_lensing_bhsm_integration_20261020/source_application.json": "16933844859dc6c9a2a9d8842b70459a18cbcca9ebc878df82569a966899db05",
+    "artifacts/strong_lensing_bhsm_integration_20261020/remaining_field_algebra_check.json": "12e4924536a972104f930e28b658e9044bd204c62d7db12fca330711436bb59c"
+  },
+  "final_reviewed_at_utc": "2026-10-20T17:54:13.957987+00:00"
+}

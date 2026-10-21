@@ -1,0 +1,1318 @@
+{
+  "records": [
+    {
+      "status": "OFFICIAL_REFERENCE_DQ_MAPPING_AMENDMENT",
+      "file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00001_nrcb3_native_diagnostics_v2.npz",
+      "sha256": "b36118b1b42f121732cbdcd3b6c91a41f2489048358c3e6b0b4514c2708a0a82",
+      "source": "stdatamodels5.0.2 native dynamic_mask through datamodels.open; exact same native reference files",
+      "superseded_diagnostic_file": "data\\strong_lensing_response_completion_20261021\\histories\\superseded_reference_dq_v1\\jw01198007001_02101_00001_nrcb3_native_diagnostics.npz",
+      "main_history_unchanged": true,
+      "main_reference_DQ_encoding": "Main reference *_DQ fields retain original FITS DQ_DEF codes; use new *_DQ_mapped for global JWST bits. Science GROUPDQ/PIXELDQ were already mapped by the native pipeline.",
+      "pre_sirs_control_DNU_count": 25,
+      "pre_sirs_control_DNU_disagrees_final_count": 32679,
+      "h1_h2_likelihood17_usable_max_abs_J_difference_per_s": 0.0012683868408203125,
+      "excluded_nonfinite_or_DNU_J_entries": 10,
+      "arrays": {
+        "labels": [
+          5
+        ],
+        "bounds_xyxy": [
+          5,
+          4
+        ],
+        "reference_control_native_xy": [
+          32704,
+          2
+        ],
+        "native_optional_SLOPE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_SIGSLOPE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_VAR_POISSON": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_VAR_RNOISE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_YINT": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_SIGYINT": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_PEDESTAL": [
+          5,
+          1,
+          65,
+          65
+        ],
+        "native_optional_WEIGHTS": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_CRMAG": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ": [
+          32704
+        ],
+        "reference_control_saturation_DQ": [
+          32704
+        ],
+        "reference_control_superbias_DQ": [
+          32704
+        ],
+        "reference_control_readnoise_CDS_DN": [
+          32704
+        ],
+        "reference_control_gain_e_per_DN": [
+          32704
+        ],
+        "reference_control_superbias_ERR_DN": [
+          32704
+        ],
+        "reference_control_raw_pixeldq": [
+          32704
+        ],
+        "reference_control_pre_sirs_pixeldq": [
+          32704
+        ],
+        "reference_control_final_pixeldq": [
+          32704
+        ],
+        "mask_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ_mapped": [
+          32704
+        ],
+        "saturation_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_saturation_DQ_mapped": [
+          32704
+        ],
+        "superbias_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_superbias_DQ_mapped": [
+          32704
+        ],
+        "linearity_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_linearity_DQ_mapped": [
+          32704
+        ],
+        "flat_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_flat_DQ_mapped": [
+          32704
+        ]
+      },
+      "native_processing_rerun": false,
+      "physical_admission": false
+    },
+    {
+      "status": "OFFICIAL_REFERENCE_DQ_MAPPING_AMENDMENT",
+      "file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00002_nrcb3_native_diagnostics_v2.npz",
+      "sha256": "d5f4dd4c3a1c1b0fa255af9ffd2bf54fd5c9e14f8a960b49b9cabe1548d4c731",
+      "source": "stdatamodels5.0.2 native dynamic_mask through datamodels.open; exact same native reference files",
+      "superseded_diagnostic_file": "data\\strong_lensing_response_completion_20261021\\histories\\superseded_reference_dq_v1\\jw01198007001_02101_00002_nrcb3_native_diagnostics.npz",
+      "main_history_unchanged": true,
+      "main_reference_DQ_encoding": "Main reference *_DQ fields retain original FITS DQ_DEF codes; use new *_DQ_mapped for global JWST bits. Science GROUPDQ/PIXELDQ were already mapped by the native pipeline.",
+      "pre_sirs_control_DNU_count": 25,
+      "pre_sirs_control_DNU_disagrees_final_count": 32679,
+      "h1_h2_likelihood17_usable_max_abs_J_difference_per_s": 0.0025618821382522583,
+      "excluded_nonfinite_or_DNU_J_entries": 10,
+      "arrays": {
+        "labels": [
+          5
+        ],
+        "bounds_xyxy": [
+          5,
+          4
+        ],
+        "reference_control_native_xy": [
+          32704,
+          2
+        ],
+        "native_optional_SLOPE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_SIGSLOPE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_VAR_POISSON": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_VAR_RNOISE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_YINT": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_SIGYINT": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_PEDESTAL": [
+          5,
+          1,
+          65,
+          65
+        ],
+        "native_optional_WEIGHTS": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_CRMAG": [
+          5,
+          1,
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ": [
+          32704
+        ],
+        "reference_control_saturation_DQ": [
+          32704
+        ],
+        "reference_control_superbias_DQ": [
+          32704
+        ],
+        "reference_control_readnoise_CDS_DN": [
+          32704
+        ],
+        "reference_control_gain_e_per_DN": [
+          32704
+        ],
+        "reference_control_superbias_ERR_DN": [
+          32704
+        ],
+        "reference_control_raw_pixeldq": [
+          32704
+        ],
+        "reference_control_pre_sirs_pixeldq": [
+          32704
+        ],
+        "reference_control_final_pixeldq": [
+          32704
+        ],
+        "mask_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ_mapped": [
+          32704
+        ],
+        "saturation_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_saturation_DQ_mapped": [
+          32704
+        ],
+        "superbias_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_superbias_DQ_mapped": [
+          32704
+        ],
+        "linearity_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_linearity_DQ_mapped": [
+          32704
+        ],
+        "flat_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_flat_DQ_mapped": [
+          32704
+        ]
+      },
+      "native_processing_rerun": false,
+      "physical_admission": false
+    },
+    {
+      "status": "OFFICIAL_REFERENCE_DQ_MAPPING_AMENDMENT",
+      "file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00003_nrcb3_native_diagnostics_v2.npz",
+      "sha256": "44129b0fbd3b0e72af5b029ef5172e3e2fd5256f0ca3cbdcb210b79fcfaf006a",
+      "source": "stdatamodels5.0.2 native dynamic_mask through datamodels.open; exact same native reference files",
+      "superseded_diagnostic_file": "data\\strong_lensing_response_completion_20261021\\histories\\superseded_reference_dq_v1\\jw01198007001_02101_00003_nrcb3_native_diagnostics.npz",
+      "main_history_unchanged": true,
+      "main_reference_DQ_encoding": "Main reference *_DQ fields retain original FITS DQ_DEF codes; use new *_DQ_mapped for global JWST bits. Science GROUPDQ/PIXELDQ were already mapped by the native pipeline.",
+      "pre_sirs_control_DNU_count": 25,
+      "pre_sirs_control_DNU_disagrees_final_count": 32679,
+      "h1_h2_likelihood17_usable_max_abs_J_difference_per_s": 0.001501724123954773,
+      "excluded_nonfinite_or_DNU_J_entries": 20,
+      "arrays": {
+        "labels": [
+          5
+        ],
+        "bounds_xyxy": [
+          5,
+          4
+        ],
+        "reference_control_native_xy": [
+          32704,
+          2
+        ],
+        "native_optional_SLOPE": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_SIGSLOPE": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_VAR_POISSON": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_VAR_RNOISE": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_YINT": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_SIGYINT": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_PEDESTAL": [
+          5,
+          1,
+          65,
+          65
+        ],
+        "native_optional_WEIGHTS": [
+          5,
+          1,
+          3,
+          65,
+          65
+        ],
+        "native_optional_CRMAG": [
+          5,
+          1,
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ": [
+          32704
+        ],
+        "reference_control_saturation_DQ": [
+          32704
+        ],
+        "reference_control_superbias_DQ": [
+          32704
+        ],
+        "reference_control_readnoise_CDS_DN": [
+          32704
+        ],
+        "reference_control_gain_e_per_DN": [
+          32704
+        ],
+        "reference_control_superbias_ERR_DN": [
+          32704
+        ],
+        "reference_control_raw_pixeldq": [
+          32704
+        ],
+        "reference_control_pre_sirs_pixeldq": [
+          32704
+        ],
+        "reference_control_final_pixeldq": [
+          32704
+        ],
+        "mask_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ_mapped": [
+          32704
+        ],
+        "saturation_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_saturation_DQ_mapped": [
+          32704
+        ],
+        "superbias_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_superbias_DQ_mapped": [
+          32704
+        ],
+        "linearity_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_linearity_DQ_mapped": [
+          32704
+        ],
+        "flat_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_flat_DQ_mapped": [
+          32704
+        ]
+      },
+      "native_processing_rerun": false,
+      "physical_admission": false
+    },
+    {
+      "status": "OFFICIAL_REFERENCE_DQ_MAPPING_AMENDMENT",
+      "file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00004_nrcb3_native_diagnostics_v2.npz",
+      "sha256": "563133206ee3a4e1acf091d172c7956a92dc535b0ae962f0bbffc75b043ac8e8",
+      "source": "stdatamodels5.0.2 native dynamic_mask through datamodels.open; exact same native reference files",
+      "superseded_diagnostic_file": "data\\strong_lensing_response_completion_20261021\\histories\\superseded_reference_dq_v1\\jw01198007001_02101_00004_nrcb3_native_diagnostics.npz",
+      "main_history_unchanged": true,
+      "main_reference_DQ_encoding": "Main reference *_DQ fields retain original FITS DQ_DEF codes; use new *_DQ_mapped for global JWST bits. Science GROUPDQ/PIXELDQ were already mapped by the native pipeline.",
+      "pre_sirs_control_DNU_count": 25,
+      "pre_sirs_control_DNU_disagrees_final_count": 32679,
+      "h1_h2_likelihood17_usable_max_abs_J_difference_per_s": 0.001977965235710144,
+      "excluded_nonfinite_or_DNU_J_entries": 0,
+      "arrays": {
+        "labels": [
+          5
+        ],
+        "bounds_xyxy": [
+          5,
+          4
+        ],
+        "reference_control_native_xy": [
+          32704,
+          2
+        ],
+        "native_optional_SLOPE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_SIGSLOPE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_VAR_POISSON": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_VAR_RNOISE": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_YINT": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_SIGYINT": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_PEDESTAL": [
+          5,
+          1,
+          65,
+          65
+        ],
+        "native_optional_WEIGHTS": [
+          5,
+          1,
+          4,
+          65,
+          65
+        ],
+        "native_optional_CRMAG": [
+          5,
+          1,
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ": [
+          32704
+        ],
+        "reference_control_saturation_DQ": [
+          32704
+        ],
+        "reference_control_superbias_DQ": [
+          32704
+        ],
+        "reference_control_readnoise_CDS_DN": [
+          32704
+        ],
+        "reference_control_gain_e_per_DN": [
+          32704
+        ],
+        "reference_control_superbias_ERR_DN": [
+          32704
+        ],
+        "reference_control_raw_pixeldq": [
+          32704
+        ],
+        "reference_control_pre_sirs_pixeldq": [
+          32704
+        ],
+        "reference_control_final_pixeldq": [
+          32704
+        ],
+        "mask_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_mask_DQ_mapped": [
+          32704
+        ],
+        "saturation_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_saturation_DQ_mapped": [
+          32704
+        ],
+        "superbias_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_superbias_DQ_mapped": [
+          32704
+        ],
+        "linearity_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_linearity_DQ_mapped": [
+          32704
+        ],
+        "flat_DQ_mapped": [
+          5,
+          65,
+          65
+        ],
+        "reference_control_flat_DQ_mapped": [
+          32704
+        ]
+      },
+      "native_processing_rerun": false,
+      "physical_admission": false
+    }
+  ],
+  "DQ_DEF_tables": {
+    "mask": [
+      {
+        "bit": 0,
+        "value": 0,
+        "name": "GOOD",
+        "description": ""
+      },
+      {
+        "bit": 0,
+        "value": 1,
+        "name": "DO_NOT_USE",
+        "description": ""
+      },
+      {
+        "bit": 1,
+        "value": 2,
+        "name": "SATURATED",
+        "description": ""
+      },
+      {
+        "bit": 2,
+        "value": 4,
+        "name": "JUMP_DET",
+        "description": ""
+      },
+      {
+        "bit": 3,
+        "value": 8,
+        "name": "DROPOUT",
+        "description": ""
+      },
+      {
+        "bit": 4,
+        "value": 16,
+        "name": "OUTLIER",
+        "description": ""
+      },
+      {
+        "bit": 5,
+        "value": 32,
+        "name": "PERSISTENCE",
+        "description": ""
+      },
+      {
+        "bit": 6,
+        "value": 64,
+        "name": "AD_FLOOR",
+        "description": ""
+      },
+      {
+        "bit": 7,
+        "value": 128,
+        "name": "CHARGELOSS",
+        "description": ""
+      },
+      {
+        "bit": 8,
+        "value": 256,
+        "name": "UNRELIABLE_ERROR",
+        "description": ""
+      },
+      {
+        "bit": 9,
+        "value": 512,
+        "name": "NON_SCIENCE",
+        "description": ""
+      },
+      {
+        "bit": 10,
+        "value": 1024,
+        "name": "DEAD",
+        "description": ""
+      },
+      {
+        "bit": 11,
+        "value": 2048,
+        "name": "HOT",
+        "description": ""
+      },
+      {
+        "bit": 12,
+        "value": 4096,
+        "name": "WARM",
+        "description": ""
+      },
+      {
+        "bit": 13,
+        "value": 8192,
+        "name": "LOW_QE",
+        "description": ""
+      },
+      {
+        "bit": 14,
+        "value": 16384,
+        "name": "RC",
+        "description": ""
+      },
+      {
+        "bit": 15,
+        "value": 32768,
+        "name": "TELEGRAPH",
+        "description": ""
+      },
+      {
+        "bit": 16,
+        "value": 65536,
+        "name": "NONLINEAR",
+        "description": ""
+      },
+      {
+        "bit": 17,
+        "value": 131072,
+        "name": "BAD_REF_PIXEL",
+        "description": ""
+      },
+      {
+        "bit": 18,
+        "value": 262144,
+        "name": "NO_FLAT_FIELD",
+        "description": ""
+      },
+      {
+        "bit": 19,
+        "value": 524288,
+        "name": "NO_GAIN_VALUE",
+        "description": ""
+      },
+      {
+        "bit": 20,
+        "value": 1048576,
+        "name": "NO_LIN_CORR",
+        "description": ""
+      },
+      {
+        "bit": 21,
+        "value": 2097152,
+        "name": "NO_SAT_CHECK",
+        "description": ""
+      },
+      {
+        "bit": 22,
+        "value": 4194304,
+        "name": "UNRELIABLE_BIAS",
+        "description": ""
+      },
+      {
+        "bit": 23,
+        "value": 8388608,
+        "name": "UNRELIABLE_DARK",
+        "description": ""
+      },
+      {
+        "bit": 24,
+        "value": 16777216,
+        "name": "UNRELIABLE_SLOPE",
+        "description": ""
+      },
+      {
+        "bit": 25,
+        "value": 33554432,
+        "name": "UNRELIABLE_FLAT",
+        "description": ""
+      },
+      {
+        "bit": 26,
+        "value": 67108864,
+        "name": "OPEN",
+        "description": ""
+      },
+      {
+        "bit": 27,
+        "value": 134217728,
+        "name": "ADJ_OPEN",
+        "description": ""
+      },
+      {
+        "bit": 28,
+        "value": 268435456,
+        "name": "FLUX_ESTIMATED",
+        "description": ""
+      },
+      {
+        "bit": 29,
+        "value": 536870912,
+        "name": "MSA_FAILED_OPEN",
+        "description": ""
+      },
+      {
+        "bit": 30,
+        "value": 1073741824,
+        "name": "OTHER_BAD_PIXEL",
+        "description": ""
+      },
+      {
+        "bit": 31,
+        "value": 2147483648,
+        "name": "REFERENCE_PIXEL",
+        "description": ""
+      }
+    ],
+    "saturation": [
+      {
+        "bit": 0,
+        "value": 0,
+        "name": "GOOD",
+        "description": ""
+      },
+      {
+        "bit": 0,
+        "value": 1,
+        "name": "DO_NOT_USE",
+        "description": ""
+      },
+      {
+        "bit": 1,
+        "value": 2,
+        "name": "SATURATED",
+        "description": ""
+      },
+      {
+        "bit": 2,
+        "value": 4,
+        "name": "JUMP_DET",
+        "description": ""
+      },
+      {
+        "bit": 3,
+        "value": 8,
+        "name": "DROPOUT",
+        "description": ""
+      },
+      {
+        "bit": 4,
+        "value": 16,
+        "name": "OUTLIER",
+        "description": ""
+      },
+      {
+        "bit": 5,
+        "value": 32,
+        "name": "PERSISTENCE",
+        "description": ""
+      },
+      {
+        "bit": 6,
+        "value": 64,
+        "name": "AD_FLOOR",
+        "description": ""
+      },
+      {
+        "bit": 7,
+        "value": 128,
+        "name": "RESERVED_4",
+        "description": ""
+      },
+      {
+        "bit": 8,
+        "value": 256,
+        "name": "UNRELIABLE_ERROR",
+        "description": ""
+      },
+      {
+        "bit": 9,
+        "value": 512,
+        "name": "NON_SCIENCE",
+        "description": ""
+      },
+      {
+        "bit": 10,
+        "value": 1024,
+        "name": "DEAD",
+        "description": ""
+      },
+      {
+        "bit": 11,
+        "value": 2048,
+        "name": "HOT",
+        "description": ""
+      },
+      {
+        "bit": 12,
+        "value": 4096,
+        "name": "WARM",
+        "description": ""
+      },
+      {
+        "bit": 13,
+        "value": 8192,
+        "name": "LOW_QE",
+        "description": ""
+      },
+      {
+        "bit": 14,
+        "value": 16384,
+        "name": "RC",
+        "description": ""
+      },
+      {
+        "bit": 15,
+        "value": 32768,
+        "name": "TELEGRAPH",
+        "description": ""
+      },
+      {
+        "bit": 16,
+        "value": 65536,
+        "name": "NONLINEAR",
+        "description": ""
+      },
+      {
+        "bit": 17,
+        "value": 131072,
+        "name": "BAD_REF_PIXEL",
+        "description": ""
+      },
+      {
+        "bit": 18,
+        "value": 262144,
+        "name": "NO_FLAT_FIELD",
+        "description": ""
+      },
+      {
+        "bit": 19,
+        "value": 524288,
+        "name": "NO_GAIN_VALUE",
+        "description": ""
+      },
+      {
+        "bit": 20,
+        "value": 1048576,
+        "name": "NO_LIN_CORR",
+        "description": ""
+      },
+      {
+        "bit": 21,
+        "value": 2097152,
+        "name": "NO_SAT_CHECK",
+        "description": ""
+      },
+      {
+        "bit": 22,
+        "value": 4194304,
+        "name": "UNRELIABLE_BIAS",
+        "description": ""
+      },
+      {
+        "bit": 23,
+        "value": 8388608,
+        "name": "UNRELIABLE_DARK",
+        "description": ""
+      },
+      {
+        "bit": 24,
+        "value": 16777216,
+        "name": "UNRELIABLE_SLOPE",
+        "description": ""
+      },
+      {
+        "bit": 25,
+        "value": 33554432,
+        "name": "UNRELIABLE_FLAT",
+        "description": ""
+      },
+      {
+        "bit": 26,
+        "value": 67108864,
+        "name": "OPEN",
+        "description": ""
+      },
+      {
+        "bit": 27,
+        "value": 134217728,
+        "name": "ADJ_OPEN",
+        "description": ""
+      },
+      {
+        "bit": 28,
+        "value": 268435456,
+        "name": "UNRELIABLE_RESET",
+        "description": ""
+      },
+      {
+        "bit": 29,
+        "value": 536870912,
+        "name": "MSA_FAILED_OPEN",
+        "description": ""
+      },
+      {
+        "bit": 30,
+        "value": 1073741824,
+        "name": "OTHER_BAD_PIXEL",
+        "description": ""
+      },
+      {
+        "bit": 31,
+        "value": 2147483648,
+        "name": "REFERENCE_PIXEL",
+        "description": ""
+      }
+    ],
+    "superbias": [
+      {
+        "bit": 0,
+        "value": 0,
+        "name": "GOOD",
+        "description": ""
+      },
+      {
+        "bit": 0,
+        "value": 1,
+        "name": "DO_NOT_USE",
+        "description": ""
+      },
+      {
+        "bit": 1,
+        "value": 2,
+        "name": "SATURATED",
+        "description": ""
+      },
+      {
+        "bit": 2,
+        "value": 4,
+        "name": "JUMP_DET",
+        "description": ""
+      },
+      {
+        "bit": 3,
+        "value": 8,
+        "name": "DROPOUT",
+        "description": ""
+      },
+      {
+        "bit": 4,
+        "value": 16,
+        "name": "OUTLIER",
+        "description": ""
+      },
+      {
+        "bit": 5,
+        "value": 32,
+        "name": "PERSISTENCE",
+        "description": ""
+      },
+      {
+        "bit": 6,
+        "value": 64,
+        "name": "AD_FLOOR",
+        "description": ""
+      },
+      {
+        "bit": 7,
+        "value": 128,
+        "name": "CHARGELOSS",
+        "description": ""
+      },
+      {
+        "bit": 8,
+        "value": 256,
+        "name": "UNRELIABLE_ERROR",
+        "description": ""
+      },
+      {
+        "bit": 9,
+        "value": 512,
+        "name": "NON_SCIENCE",
+        "description": ""
+      },
+      {
+        "bit": 10,
+        "value": 1024,
+        "name": "DEAD",
+        "description": ""
+      },
+      {
+        "bit": 11,
+        "value": 2048,
+        "name": "HOT",
+        "description": ""
+      },
+      {
+        "bit": 12,
+        "value": 4096,
+        "name": "WARM",
+        "description": ""
+      },
+      {
+        "bit": 13,
+        "value": 8192,
+        "name": "LOW_QE",
+        "description": ""
+      },
+      {
+        "bit": 14,
+        "value": 16384,
+        "name": "RC",
+        "description": ""
+      },
+      {
+        "bit": 15,
+        "value": 32768,
+        "name": "TELEGRAPH",
+        "description": ""
+      },
+      {
+        "bit": 16,
+        "value": 65536,
+        "name": "NONLINEAR",
+        "description": ""
+      },
+      {
+        "bit": 17,
+        "value": 131072,
+        "name": "BAD_REF_PIXEL",
+        "description": ""
+      },
+      {
+        "bit": 18,
+        "value": 262144,
+        "name": "NO_FLAT_FIELD",
+        "description": ""
+      },
+      {
+        "bit": 19,
+        "value": 524288,
+        "name": "NO_GAIN_VALUE",
+        "description": ""
+      },
+      {
+        "bit": 20,
+        "value": 1048576,
+        "name": "NO_LIN_CORR",
+        "description": ""
+      },
+      {
+        "bit": 21,
+        "value": 2097152,
+        "name": "NO_SAT_CHECK",
+        "description": ""
+      },
+      {
+        "bit": 22,
+        "value": 4194304,
+        "name": "UNRELIABLE_BIAS",
+        "description": ""
+      },
+      {
+        "bit": 23,
+        "value": 8388608,
+        "name": "UNRELIABLE_DARK",
+        "description": ""
+      },
+      {
+        "bit": 24,
+        "value": 16777216,
+        "name": "UNRELIABLE_SLOPE",
+        "description": ""
+      },
+      {
+        "bit": 25,
+        "value": 33554432,
+        "name": "UNRELIABLE_FLAT",
+        "description": ""
+      },
+      {
+        "bit": 26,
+        "value": 67108864,
+        "name": "OPEN",
+        "description": ""
+      },
+      {
+        "bit": 27,
+        "value": 134217728,
+        "name": "ADJ_OPEN",
+        "description": ""
+      },
+      {
+        "bit": 28,
+        "value": 268435456,
+        "name": "FLUX_ESTIMATED",
+        "description": ""
+      },
+      {
+        "bit": 29,
+        "value": 536870912,
+        "name": "MSA_FAILED_OPEN",
+        "description": ""
+      },
+      {
+        "bit": 30,
+        "value": 1073741824,
+        "name": "OTHER_BAD_PIXEL",
+        "description": ""
+      },
+      {
+        "bit": 31,
+        "value": 2147483648,
+        "name": "REFERENCE_PIXEL",
+        "description": ""
+      }
+    ],
+    "linearity": [
+      {
+        "bit": 1,
+        "value": 2,
+        "name": "NONLINEAR",
+        "description": ""
+      },
+      {
+        "bit": 0,
+        "value": 1,
+        "name": "DO_NOT_USE",
+        "description": ""
+      },
+      {
+        "bit": 2,
+        "value": 4,
+        "name": "NO_LIN_CORR",
+        "description": ""
+      },
+      {
+        "bit": 8,
+        "value": 256,
+        "name": "UAZ_DO_NOT_USE",
+        "description": "Do no use linearity correction/does not exist."
+      },
+      {
+        "bit": 9,
+        "value": 512,
+        "name": "UAZ_NO_LIN_SAMP",
+        "description": "Few samples in ~linear regime."
+      },
+      {
+        "bit": 10,
+        "value": 1024,
+        "name": "UAZ_BAD_LIN_FIT",
+        "description": "Linear model poor below LINCUT"
+      },
+      {
+        "bit": 11,
+        "value": 2048,
+        "name": "UAZ_NO_WELL_SAMP",
+        "description": "Few samples below well."
+      },
+      {
+        "bit": 12,
+        "value": 4096,
+        "name": "UAZ_MODEL_FIT_FAIL",
+        "description": "Linearity model failed."
+      },
+      {
+        "bit": 13,
+        "value": 8192,
+        "name": "UAZ_WELL_NOT_DEFINED",
+        "description": "Well undefined, but pixel not in master DQ"
+      },
+      {
+        "bit": 14,
+        "value": 16384,
+        "name": "UAZ_MASTER_MASK",
+        "description": "Pixel was masked DO_NOT_USE in master"
+      }
+    ],
+    "flat": [
+      {
+        "bit": 1,
+        "value": 2,
+        "name": "UNRELIABLE_FLAT",
+        "description": ""
+      },
+      {
+        "bit": 2,
+        "value": 4,
+        "name": "NO_FLAT_FIELD",
+        "description": ""
+      },
+      {
+        "bit": 0,
+        "value": 1,
+        "name": "DO_NOT_USE",
+        "description": ""
+      }
+    ]
+  },
+  "error_corrected": "Earlier diagnostic pre-SIRS DQ OR incorrectly used raw reference bit codes. Native science processing and replay were correct; all original arrays and receipts are preserved.",
+  "native_processing_rerun": false
+}

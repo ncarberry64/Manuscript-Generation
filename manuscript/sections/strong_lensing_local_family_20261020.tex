@@ -1,0 +1,305 @@
+% Historical detailed constant-target construction; its null remains valid.
+% The active Galaxies paper retains this result in its target-control appendix.
+\section{A constructed source-free local family}
+\label{sec:sl-local-family}
+\subsection{Retained action, fields and conditional data}
+We now evaluate a local encounter, rather than identify its missing inputs.
+The retained four-dimensional action is Einstein gravity plus ordinary
+perfect-fluid matter and the recovered physical Path--B target sector,
+\begin{align}
+ S_{\rm loc}&=\frac{c^4}{16\pi G}\int\dd t\dd^3x\,N\sqrt h\,R
+       +S_{\rm fluid}+S_{\rm GHY}+S_\eta+S_{\rm YM},\\
+ S_\eta&=-\int\dd t\dd^3x\,N\sqrt h\,w(\sigma)F(X)+S_{\rm unit},\\
+ F(X)&=\frac{\kappa_\eta}{2}X+\frac18X^4,
+ \qquad X=g^{\mu\nu}\langle D_\mu\eta,D_\nu\eta\rangle .
+ \label{eq:sl-local-action}
+\end{align}
+The target is $S^6\subset\R\oplus\mathbb C^3$, with
+$\eta=(s,z)$, $s^2+2z^\dagger z=1$ and target norm
+$\dd s^2+2\dd z^\dagger\dd z$. The connection is $SU(3)$ on $z$;
+$N$ is the physical static lapse and $h$ the spatial metric.
+Here $\kappa_\eta$ denotes the original target coefficient $\kappa_1$,
+distinguished from the gravitational coefficient. We require
+$w_0\kappa_\eta>0$; its dimensional value remains a specified coupling,
+not a lens fit. The higher-power coefficient and the dimensions of $X$
+are those of the original target-sector units.
+The intrinsic boundary action contains $C_\partial R_4$; setting
+$C_\partial=c^4/(16\pi G)$ defines the retained effective gravity sector.
+This does not derive the cap reduction or its reaction terms.
+We condition on no additional local cap traction or vacuum energy in this
+sector. Restoring a nonzero cap reaction requires its own field equation.
+The local isolated solution is inserted in the declared weak-field
+comparison with cosmological propagation. Pure background-curvature
+corrections scale as $(H R/c)^2$. A joint solution with a rolling scalar
+or cap reaction is not supplied, and that estimate does not bound such
+mixed responses. This is a conditional local effective sector, not a
+complete stratified or globally matched BHSM galaxy solution.
+
+The source equations and their version-pinned implementation are recovered
+from the Path--B foundational action v14.31, physical topology v14.32,
+metric/phase source v14.39 and Lorentzian Legendre gate v14.87.
+The input receipt records their repository commit, Git blob and SHA256.
+The recovered source repository is pinned at
+\texttt{524ed90689bd5923c249bba2e699abf627e703cd};
+the focused derivation and eight source hashes accompany the calculation.
+In particular, the physical $M_4\to S^6$ sector does not inherit a
+degree-one seven-dimensional texture charge.
+
+For each specified constant $q$, choose the real target meridian
+\begin{equation}
+ \eta_q=(\cos q,\,\sin q\,e_1/\sqrt2),\qquad A_\mu=0,
+ \qquad w=w_0>0 .
+ \label{eq:sl-eta-family}
+\end{equation}
+The parameter $s=\cos q$ is $SU(3)$ invariant, so this is not just a
+gauge orbit. It is not claimed to be a uniquely selected environment.
+Let $T\eta=\partial_q\eta$ on this meridian; $|T\eta|^2=1$.
+This tangent is a target-sector direction, not an $SU(3)$ generator
+annihilating the north pole.
+All reference derivatives vanish: $D\eta=0$, $X=F(0)=0$,
+$A_{\mu\nu}=\langle D_\mu\eta,D_\nu\eta\rangle=0$ and
+$j_\mu=\langle D_\mu\eta,T\eta\rangle=0$.
+The target Euler equation, unit multiplier, Yang--Mills current/Gauss
+row, stress tensor and momentum row therefore vanish exactly, on any
+metric. The additional $\sigma$ force is $w'(\sigma)F(0)=0$.
+This adds no $\eta$-dependent $\sigma$/cap source. The independent local
+$\sigma$/cap equations are outside the retained effective truncation.
+
+The constant family also follows from the declared source-free radial
+problem. For $q=q(r)$, $A_\mu=0$ and
+$\dd s^2=-e^{2\nu}c^2\dd t^2+f_r^{-1}\dd r^2+r^2\dd\Omega^2$,
+the original target equation is
+\begin{equation}
+ \partial_r\{r^2e^\nu\sqrt{f_r}\,w_0
+       (\kappa_\eta+X^3)q'\}=0,\qquad X=f_r q'^2 .
+ \label{eq:sl-radial-target}
+\end{equation}
+Its conserved conormal flux must be zero at a regular centre. Positivity
+of $\kappa_\eta+X^3$ forces $q'=0$ everywhere. A prescribed constant
+Dirichlet boundary value fixes $q$. A nonzero radial texture would consume
+an inner boundary charge or external source, absent in this problem.
+
+\subsection{Finite body, field equations and matching}
+The shared conventional and envelope body has specified mass
+$M=10^{11}M_\odot$ and areal support $R=3\,{\rm kpc}$, chosen as finite
+illustrative matter data rather than tuned to a deflection. We use the
+quadratic-density Tolman--VII profile \citep{Tolman1939},
+\begin{equation}
+ \rho(r)=\frac{15M}{8\pi R^3}(1-r^2/R^2),\quad
+ m(r)=\frac M2(5x^3-3x^5),\quad x=r/R\leq1,
+ \label{eq:sl-finite-matter}
+\end{equation}
+and vacuum outside. Pressure is solved, not replaced by stationary dust.
+The applications evaluated are
+\begin{align}
+ m'&=4\pi r^2\rho,\qquad f_r=1-\frac{2Gm}{c^2r},\\
+ \nu'&=\frac{G(m+4\pi r^3p/c^2)}{c^2r^2f_r},\qquad
+ p'=-(\rho c^2+p)\nu'.
+ \label{eq:sl-tov}
+\end{align}
+The outer Cauchy data are $p(R)=0$ and
+$\nu(R)=\tfrac12\ln(1-2GM/(Rc^2))$. Inward integration gives finite
+central pressure and lapse. Monotone $\rho(r)$ defines a conditional
+barotropic relation $p(\rho)$ along the solution; the evaluated
+$0\leq\dd p/\dd(\rho c^2)<1$ check excludes the incompressible-fluid
+shortcut. This is a specified fluid model, not a stellar-population fit.
+The original Einstein radial and angular equations and conservation
+residuals are recorded in the result receipt. At $R$, $m=M$, $p=\rho=0$;
+the induced metric and extrinsic curvature match Schwarzschild with
+continuous $\nu'$. No Israel surface stress or target conormal flux is
+required. The body, reference target, source and matching conditions are
+the same for both optical calculations.
+For the evaluated body, the Hamiltonian and radial Einstein residuals
+scaled by $\epsilon=GM/(Rc^2)$ are below $4.3\times10^{-15}$;
+the angular residual scaled by $\epsilon^2$ is $2.23\times10^{-9}$.
+An independent derivative of the integrated lapse gives a scaled
+Einstein residual $2.38\times10^{-12}$. These are equation/discretization
+checks, not errors on the physical matter model.
+
+\subsection{Exact common-domain physical Hessian and source}
+The local projection uses the vacuum annulus in isotropic radius
+$r_0<\varrho<L$, with
+\begin{equation}
+ m_g=GM/c^2,\quad r_0=\tfrac12(R-m_g+\sqrt{R(R-2m_g)}),
+ \quad L=2R,\quad \ell=L-r_0.
+\end{equation}
+This exterior domain avoids an unspecified fluid second variation.
+Its boundary metric is fixed by the solved body and exterior solution.
+Write $N=e^\Phi$, $h_{ij}=e^{-2\Psi}\delta_{ij}$, so
+\begin{equation}
+ \Phi_0=\ln\frac{1-m_g/(2\varrho)}{1+m_g/(2\varrho)},\qquad
+ \Psi_0=-2\ln(1+m_g/(2\varrho)).
+\end{equation}
+These are physical log lapse and spatial conformal potential, equal to
+the Newtonian potentials at leading order. They are not the cosmological
+ADM auxiliary coordinates.
+Use the same real Dirichlet profile in all three columns,
+\begin{equation}
+ f(\varrho)=\frac{\ell}{\sqrt{2\pi}\varrho}
+       \sin\frac{\pi(\varrho-r_0)}\ell,
+ \qquad \ell^{-3}\int_{r_0}^{L} f^2\dd^3x=1,
+ \quad \int|\nabla f|^2\dd^3x=\pi^2\ell .
+\end{equation}
+The variation is $\delta\Phi=q_Af$, $\delta\Psi=q_\psi f$,
+$\delta\eta=q_\varphi f T\eta$. Thus the inverse-metric columns are
+$\delta g^{00}=2N^{-2}f q_A/c^2$ and
+$\delta g^{ij}=2e^{2\Psi_0}f\delta^{ij}q_\psi$ in a time coordinate
+with $g_{00}=-N^2c^2$.
+The boundary variations vanish and the Gibbons--Hawking--York term
+implements fixed induced metric.
+
+All Hessian entries below use the \emph{static energy}, the negative of
+the static Lorentzian action per unit coordinate time. The exact
+Einstein energy restricted to this static conformal domain is
+\begin{equation}
+ E_g=K\int e^{\Phi-\Psi}
+       [2\nabla\Phi\cdot\nabla\Psi-|\nabla\Psi|^2]\dd^3x,
+ \qquad K=\frac{c^4}{8\pi G} .
+ \label{eq:sl-exact-energy}
+\end{equation}
+To make the evaluated second variation explicit, set
+$E=e^{\Phi_0-\Psi_0}$, $p=\nabla\Phi_0$, $q=\nabla\Psi_0$,
+$g=\nabla f$ and $B_0=q^2-2p\cdot q$. Then
+\begin{align}
+ a/K&=-\int E[f^2B_0-4f q\cdot g]\dd^3x,\\
+ b/K&=-\int E[-f^2B_0+4f q\cdot g-2f p\cdot g-2g^2]\dd^3x,\\
+ c/K&=-\int E[f^2B_0-4f q\cdot g+4f p\cdot g+2g^2]\dd^3x.
+ \label{eq:sl-exact-hessian}
+\end{align}
+In vacuum the lapse constraint gives $a=0$ after integration. The
+flat-limit check is $(a,b,c)/(K\ell)=(0,2\pi^2,-2\pi^2)$, with
+$\det A_g/(K\ell)^2=-4\pi^4$. The receipt evaluates the curved integrals and
+checks their Hessian against independent finite differences.
+For this body's exterior the evaluated entries are
+\begin{align}
+ (a,b,c)/(KR)&=(-1.27\times10^{-21},\ 19.739240289,\ -19.739240289),\\
+ (u,v)&=(0,0),\qquad
+ c_\varphi/(w_0\kappa_\eta R)=9.86962014448,\\
+ (ac-b^2)/(KR)^2&=-389.637607185 .
+\end{align}
+The profile norm is $1+2.2\times10^{-16}$, the metric condition number
+is $2.61803$, the original annulus metric Euler residual is below
+$3.3\times10^{-21}$ in $R$ units and the projected inverse-response
+residual is zero. The near-zero $a$ is below its quadrature error;
+the nonzero determinant comes from the mixed metric entry $b$.
+Indeed the vacuum equations and zero boundary traces give the exact
+simplification
+\begin{equation}
+ A_g=2KI_E\begin{pmatrix}0&1\\1&-1\end{pmatrix},\qquad
+ I_E=\int E|\nabla f|^2\dd^3x,
+\end{equation}
+which the unsimplified quadratures independently reproduce.
+Invertibility asserted here is that of this specified two-mode projected
+block. It is not an inverse for an unrestricted gravitational functional.
+Its indefinite sign is a static constraint property, not a propagating
+ghost test.
+
+Since $j=A=F=0$, Eq.~\eqref{eq:sl-static-current} gives $u=v=0$
+pointwise; all remaining target metric derivatives vanish as well. The
+nonconstant phase self entry is nevertheless
+\begin{equation}
+ c_\varphi=w_0\kappa_\eta\int E|\nabla f|^2\dd^3x>0,
+ \qquad k_{\rm loc}=c_\varphi,
+ \qquad \mathcal R_{g\varphi}^{\rm loc}=0 .
+ \label{eq:sl-curved-phase}
+\end{equation}
+Metric entries have energy units $K\ell$; phase entries have units
+$w_0\kappa_\eta\ell$ in the retained target action. Canonical phase
+$\phi_c=\sqrt{w_0\kappa_\eta}\,\delta q$ removes this unfixed coupling
+from the quadratic coefficient without calibrating it. Independently,
+the original Lorentzian Legendre matrix at $D\eta=0$ is
+$w_0\kappa_\eta$ times the positive target metric (with the appropriate
+lapse/volume factors). Thus the physical phase kinetic condition also
+holds; it is not inferred from the gravitational static Hessian.
+
+For an arbitrary small meridian phase $\phi$, the actual linear source
+equation, with all quantities on the same annulus, is
+\begin{equation}
+ \mathcal L_\phi\phi
+ =-\partial_i(N\sqrt h\,w_0\kappa_\eta h^{ij}\partial_j\phi)
+ =J_{\phi,{\rm grav}}+\mathcal E_\Sigma[Q_\phi]+\xi_\phi=0,
+ \quad \phi|_{r_0,L}=0 .
+ \label{eq:sl-actual-phase-source}
+\end{equation}
+The vanishing gravitational source follows from the first target variation
+at $D\eta=0$; the ordinary fluid action has no target-phase coupling in
+the declared sector. There is no internal target interface or random
+forcing in the specified problem. The conormal flux
+$N\sqrt h\,w_0(\kappa_\eta+X^3)h^{ij}\partial_jq$ vanishes on the
+reference, so the target-phase interface source is zero on both oriented
+boundaries. This does not set the separately exported topographic $Q_\Sigma$.
+Multiplication by $\phi$ and integration prove uniqueness of $\phi=0$.
+This is an evaluated homogeneous source problem, rather than assigning
+zero to an unavailable source array.
+
+The exported scalar $\psi$ in Eq.~\eqref{eq:sl-envelope-chain} is not
+identified with this target phase by name. The derived map here is
+$\phi_c\mapsto\delta\eta=\phi_c T\eta/\sqrt{w_0\kappa_\eta}$ and its
+linear physical metric response is zero. A general constitutive map
+$\psi\mapsto\phi_c$, or extra cap/interface forcing of either field,
+is still required away from this target-phase problem. The solved zero
+phase does not determine the separately exported scalar or its source.
+No moving-seam law or statistical-state kernel is used.
+
+\subsection{Encounter, intrinsic derivatives and distinguishability}
+The nonzero local metric is the solved fluid interior and matched
+Schwarzschild exterior. At leading post-Newtonian order,
+\begin{equation}
+ \Phi_N(r)=\Psi_N(r)=
+ -\frac{GM}{Rc^2}\begin{cases}
+ 15/8-5x^2/4+3x^4/8,&x\leq1,\\1/x,&x>1 .
+ \end{cases}
+\end{equation}
+The weak-field line-of-sight integral of $\Phi_N+\Psi_N$ gives a thin
+potential. For physical impact $b_\perp=|x_\perp|$, define $y=b_\perp/R$,
+\begin{equation}
+ F_2(y)=\begin{cases}1-(1-y^2)^{5/2},&0\leq y<1,\\1,&y\geq1,\end{cases}
+ \quad
+ \widehat\alpha(x_\perp)=\frac{4GM}{c^2b_\perp}F_2(y)
+                         \frac{x_\perp}{b_\perp} .
+ \label{eq:sl-finite-alpha}
+\end{equation}
+The potential is the radial primitive of this expression; its additive
+constant cancels from relative delays. The finite support defines the
+same mass aperture in both models. The reduction retains leading
+post-Newtonian and thin-plane accuracy; the fractional omitted scales
+are $GM/(Rc^2)$ and $R/D_{ab}$. The exact TOV solution is not represented
+as an all-orders thin-plane optical calculation.
+
+The parameter derivatives at fixed physical impact are obtained from
+this potential and its gradient, not a change in propagation maps.
+In particular $\partial_{\ln M}\widehat\psi=\widehat\psi$ in a
+mass-independent potential gauge and
+$\partial_{\ln M}\widehat\alpha=\widehat\alpha$.
+The radius derivative differentiates the same finite profile; all
+$q$ derivatives vanish. In the complete image response these enter as
+\begin{equation}
+ \delta\theta=J^{-1}\{\delta\beta+\delta G\widehat\alpha
+       +G\widehat H\delta D_{ol}\theta
+       +G\delta\widehat\alpha|_x\},
+ \qquad G=D_{os}^{-1}D_{ls},
+\end{equation}
+and the intrinsic arrival term is
+$-(1+z_l)\delta\widehat\psi|_x/c$ in the units of
+Eq.~\eqref{eq:sl-complete-variation}. Both terms are now implemented.
+The local body \emph{replaces} the galaxy encounter for this comparison;
+it is not added to the SIS, and its potential is excluded from all three
+smooth propagation maps. The same fixed physical source, incoming-light
+preparation and observer clock protocol are retained.
+
+\begin{center}\input{tables/strong_lensing_local_family_results.tex}\end{center}
+The receipt also gives mass/radius image and delay columns, finite-change
+checks, covariance, nuisance columns and singular values for this new
+family. The envelope and conventional predictions agree for every
+constant $q$ and the same matter data: $\partial_q\theta=
+\partial_q\Delta t=0$. Thus $q$ is unidentifiable even with galaxy
+nuisances fixed. Nonzero mass/radius responses measure the shared body,
+not an additional BHSM effect. The six smooth-state columns are separately
+tested against this finite body's source, mass, radius and mass-sheet
+nuisances. They have fixed-nuisance rank three and unrestricted rank zero;
+the separately derived finite-profile factorization has relative
+whitened residual $1.32\times10^{-16}$. No independent kinematic
+likelihood is assumed. This
+equivalence is the outcome for the declared source-free sector; it does
+not establish an equivalence theorem for charged interfaces or other
+reference states.

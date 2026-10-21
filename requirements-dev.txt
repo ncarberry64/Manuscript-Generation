@@ -1,2 +1,11 @@
 -r requirements.txt
 pytest>=8
+# HST cutout and catalogue utility imports collected by the repository-wide suite.
+astropy==7.2.0
+requests==2.33.0
+# Native JWST geometry/field-PSF synthetic tests (no network or target files).
+stdatamodels==6.0.0
+asdf==6.0.0
+asdf-astropy==0.11.0
+gwcs==1.0.3
+photutils==3.1.1

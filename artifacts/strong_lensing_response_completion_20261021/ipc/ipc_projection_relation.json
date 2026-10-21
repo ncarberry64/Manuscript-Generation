@@ -1,0 +1,828 @@
+{
+  "status": "archived reference inverse and actual pilot photon projection executed",
+  "reference_file": "jwst_nircam_ipc_0022.fits",
+  "reference_sha256": "7f288227e4283c65e45a30a774d22bc63df2ec89951bf90dd592bc1deaec252f",
+  "reference_bytes": 11520,
+  "inverse": {
+    "reference_sum": 0.9999999913852662,
+    "inverse_sum": 1.000000008614732,
+    "tail_l1_bound": 2.0757308278335053e-15,
+    "rho": 0.02336547202917036,
+    "order": 8,
+    "renormalized": false
+  },
+  "reference_G": [
+    [
+      -0.00021762942196801305,
+      -0.005763490218669176,
+      -0.00021762942196801305
+    ],
+    [
+      -0.005763490218669176,
+      1.023924469947815,
+      -0.005763490218669176
+    ],
+    [
+      -0.00021762942196801305,
+      -0.005763490218669176,
+      -0.00021762942196801305
+    ]
+  ],
+  "inverse_H_center": 0.9767586797225459,
+  "G_H_identity_max_abs": 2.220446049250313e-16,
+  "reference_sum_differs_from_one_by": -8.614733815193176e-09,
+  "physical_guard": 2e-10,
+  "reference_renormalized": false,
+  "calibration_source_relation": "linearity0054 S_IPC=COMPLETE,S_REFPIX=COMPLETE,S_BIAS=COMPLETE; HISTORY explicitly applies them before fitting native L",
+  "physical_order": "Q_e/g -> L_cal^-1 -> H(raw-DN IPC) -> individual-read/group-average -> actual bias/reference channel -> L_native -> native OLS -> /flat*PHOTMJSR",
+  "low_charge_optical_state_relation": "lambda_pre_e_s=diag(gain)*G*mu_effective_DN_s; H must not reconvolve the effective PSF mean",
+  "photon_covariance_relation": "Jraw=H*diag((L_cal^-1)'/gain); Cphoton=J_native*Jraw*Ccollection*Jraw.T*J_native.T. Here only the stated low-charge independent-Poisson/first-two-group channel is applied",
+  "dark_source_relation": "dark0337 contains thresholded post-linearity slope-times-time at hot pixels and zeros at nominal pixels; header has no explicit S_IPC/S_REFPIX provenance. Its pre_IPC high-charge relation is therefore conditional, not derived from absent keywords",
+  "electronic_noise_accounting": "empirical post-SIRS calibration dark covariance already includes actual electronics/IPC; no second H or independent CDS+reference variance is added",
+  "not_identified": [
+    "flight signal-dependent/nonlinear IPC and its uncertainty",
+    "pre_IPC field-template support/positivity",
+    "hot-dark pre_IPC/readwise relation",
+    "full nonlinear/correlated photon-count law from a static ground correction kernel"
+  ],
+  "headers": {
+    "jwst_nircam_ipc_0022.fits": {
+      "cards": [
+        "SIMPLE  =                    T / conforms to FITS standard                      ",
+        "BITPIX  =                    8 / array data type                                ",
+        "NAXIS   =                    0 / number of array dimensions                     ",
+        "EXTEND  =                    T                                                  ",
+        "                                                                                ",
+        "        IPC kernel model                                                        ",
+        "                                                                                ",
+        "                                                                                ",
+        "        Level 1b Schema Metadata                                                ",
+        "                                                                                ",
+        "DATE    = '2016-03-18T00:00:00' / Date this file was created (UTC)              ",
+        "FILENAME= 'NRCB3_17011_IPCDeconvolutionKernel_2016-03-18_ssbipc.fits' / Name of ",
+        "TELESCOP= 'JWST    '           / Telescope used to acquire the data             ",
+        "                                                                                ",
+        "        Instrument configuration information                                    ",
+        "                                                                                ",
+        "INSTRUME= 'NIRCAM  '           / Instrument used to acquire the data            ",
+        "DETECTOR= 'NRCB3   '           / Name of detector used to acquire the data      ",
+        "MODULE  = 'B       '           / NIRCam module: A or B                          ",
+        "CHANNEL = 'SHORT   '           / NIRCam channel: long or short                  ",
+        "                                                                                ",
+        "        Subarray parameters                                                     ",
+        "                                                                                ",
+        "SUBARRAY= 'FULL    '           / Subarray used                                  ",
+        "SUBSTRT1=                    1 / Starting pixel in axis 1 direction             ",
+        "SUBSTRT2=                    1 / Starting pixel in axis 2 direction             ",
+        "SUBSIZE1=                 2048 / Number of pixels in axis 1 direction           ",
+        "SUBSIZE2=                 2048 / Number of pixels in axis 2 direction           ",
+        "                                                                                ",
+        "        Information about the reference file                                    ",
+        "                                                                                ",
+        "REFTYPE = 'IPC     '           / Reference file type                            ",
+        "DESCRIP = 'IPC Deconvolution kernel' / Description of the reference file        ",
+        "COMMENT FITS (Flexible Image Transport System) format is defined in 'Astronomy  ",
+        "COMMENT and Astrophysics', volume 376, page 359; bibcode 2001A&A...376..359H    ",
+        "DESCRIPT= 'IPC Deconvolution kernel'                                            ",
+        "AUTHOR  = 'NIRCam Instrument Team'                                              ",
+        "PEDIGREE= 'GROUND  '                                                            ",
+        "TERROIR = 'ISIMCV3 '           / Test environment                               ",
+        "SCA     = 'B3      '           / NIRCAM SCA identification (kept for compatibili",
+        "TLDYNEID= '17011   '           / Numeric SCA identifier                         ",
+        "ALPHA   =     0.00550419976935 / Capacitive coupling constant, nearest neighbors",
+        "BETA    =    0.000269599986495 / Capacitive coupling constant, next nearest neig",
+        "GAMMA   =     0.00550419976935 / Capacitive coupling constant, downstream readou",
+        "ASSYMKER=                    0 / Is de-convoluation symmetric? (ALPHA=GAMMA)    ",
+        "KSIZE   =                    3 / Size of (square) de-convolution kernel         ",
+        "DOCUMENT= 'IPC_v3_20160315.pdf' / Document describing this cal file.            ",
+        "SOFTWRE0= 'genipccal.pro'      / Software used to derive cal file.              ",
+        "DATAUSED= ' See DOCUMENT'      / Data sets used to derive cal file.             ",
+        "USEAFTER= '2015-10-01T00:00:00'                                                 ",
+        "FASTAXIS=                    1                                                  ",
+        "SLOWAXIS=                   -2                                                  ",
+        "HISTORY  Description of Reference File Creation                                 ",
+        "HISTORY  In the FITS extension is the g kernel as described                     ",
+        "HISTORY  in McCullough, ISR WFC3 2008-26 and DOCUMENT keyword.                  ",
+        "HISTORY  The kernel in the extension should be convolved                        ",
+        "HISTORY  with the image frame by frame prior to any other                       ",
+        "HISTORY  processing.                                                            ",
+        "HISTORY  If ASSYMKER, asymmetry is assumed to be in the sense                   ",
+        "HISTORY  of a left to right readout (e.g. outputs 1 and 3)                      ",
+        "HISTORY  When applied to outputs 2 and 4, kernel should be                      ",
+        "HISTORY  flipped in x-dimension.                                                ",
+        "HISTORY  Reference pixels should not be convoled                                ",
+        "HISTORY  with the kernel. The kernel size has been chosen                       ",
+        "HISTORY  such that edges extend into reference pixels and so                    ",
+        "HISTORY  edge detection should not be necessary.                                ",
+        "HISTORY |----------------------------------------------------------------------|",
+        "HISTORY This file was delivered by the NIRCam team from the University of Arizon",
+        "HISTORY a. File was modified by B. Brooks to be compliant with CRDS and JWST Pip",
+        "HISTORY eline standards.                                                        "
+      ],
+      "science_array_not_opened_for_header_audit": true
+    },
+    "jwst_nircam_linearity_0054.fits": {
+      "cards": [
+        "SIMPLE  =                    T / conforms to FITS standard                      ",
+        "BITPIX  =                    8 / array data type                                ",
+        "NAXIS   =                    0 / number of array dimensions                     ",
+        "EXTEND  =                    T                                                  ",
+        "                                                                                ",
+        "        Linearity correction data model                                         ",
+        "                                                                                ",
+        "                                                                                ",
+        "        Level 1b Schema Metadata                                                ",
+        "                                                                                ",
+        "DATE    = '2016-05-20T00:27:38' / Date this file was created (UTC)              ",
+        "FILENAME= 'NRCB3_17011_LinearityCoeff_ADU0_2016-05-20_ssblinearity_v2.fits' / Na",
+        "TELESCOP= 'JWST    '           / Telescope used to acquire the data             ",
+        "                                                                                ",
+        "        Instrument configuration information                                    ",
+        "                                                                                ",
+        "INSTRUME= 'NIRCAM  '           / Instrument used to acquire the data            ",
+        "DETECTOR= 'NRCB3   '           / Name of detector used to acquire the data      ",
+        "MODULE  = 'B       '           / NIRCam module: A or B                          ",
+        "CHANNEL = 'SHORT   '           / NIRCam channel: long or short                  ",
+        "                                                                                ",
+        "        Subarray parameters                                                     ",
+        "                                                                                ",
+        "SUBARRAY= 'GENERIC '           / Subarray used                                  ",
+        "SUBSTRT1=                    1 / Starting pixel in axis 1 direction             ",
+        "SUBSTRT2=                    1 / Starting pixel in axis 2 direction             ",
+        "SUBSIZE1=                 2048 / Number of pixels in axis 1 direction           ",
+        "SUBSIZE2=                 2048 / Number of pixels in axis 2 direction           ",
+        "                                                                                ",
+        "        Calibration step information                                            ",
+        "                                                                                ",
+        "S_IPC   = 'COMPLETE'           / Interpixel Capacitance Correction              ",
+        "S_REFPIX= 'COMPLETE'           / Reference Pixel Correction                     ",
+        "                                                                                ",
+        "        Information about the reference file                                    ",
+        "                                                                                ",
+        "COMMENT FITS (Flexible Image Transport System) format is defined in 'Astronomy  ",
+        "COMMENT and Astrophysics', volume 376, page 359; bibcode 2001A&A...376..359H    ",
+        "DESCRIP = 'Linearity correction coefficients'                                   ",
+        "AUTHOR  = 'NIRCam Instrument Team'                                              ",
+        "REFTYPE = 'LINEARITY'                                                           ",
+        "TERROIR = 'ISIM-CV3'                                                            ",
+        "SCA     = 'NRCB3   '           / NIRCAM SCA identification (compatibiliy)       ",
+        "TLDYNEID= '17011   '           / Numeric SCA identifier                         ",
+        "BUNIT   = 'DN      '           / Coefficients derived assuming ramp in DN       ",
+        "ORDER   =                    5 / Order of linearity correction.                 ",
+        "NRAMP   =                    8 / Number of ramps used                           ",
+        "WELLFACT=                 0.92 / Validity as fraction of hard saturation        ",
+        "LINCUT  =               3000.0 / Threshold in ELECTRONS for linear model        ",
+        "DOCUMENT= 'UNK     '           / Document describing this cal file.             ",
+        "SOFTWRE0= 'lincal9.pro'        / Software used to derive cal file.              ",
+        "DATAUSED= 'NRCB3_ISIMCV3_AvgLinRamp_Reduced.fits' / data set used (average ramp)",
+        "MASKFILE= 'NRCB3_17011_BPM_ISIMCV3_2016-01-21.fits' / Input mask/DQ             ",
+        "WELLFILE= 'NRCB3_17011_WellDepth_2016-02-03.fits' / Input well depth            ",
+        "GAINFILE= 'NRCB3_17011_Gain_ISIMCV3_2016-01-23.fits' / Input gain map           ",
+        "FILEVERS=                    1 / Version of cal file.                           ",
+        "S_BIAS  = 'COMPLETE'           / Super bias applied.                            ",
+        "DQ_1    = 'DO_NOT_USE'         / Do no use linearity correction/does not exist. ",
+        "DQ_2    = 'NO_LIN_SAMP'        / Few samples in ~linear regime.                 ",
+        "DQ_4    = 'BAD_LIN_FIT'        / Linear model poor below LINCUT                 ",
+        "DQ_8    = 'NO_WELL_SAMP'       / Few samples below well.                        ",
+        "DQ_16   = 'MODEL_FIT_FAIL'     / Linearity model failed.                        ",
+        "PEDIGREE= 'GROUND  '                                                            ",
+        "USEAFTER= '2015-10-01T00:00:00'                                                 ",
+        "FASTAXIS=                    1                                                  ",
+        "SLOWAXIS=                   -2                                                  ",
+        "HISTORY  DESCRIPTION OF REFERENCE FILE CREATION:                                ",
+        "HISTORY  FITS file contains three extenstions:                                  ",
+        "HISTORY   1) 3D cube of linearity correction coefficients.                      ",
+        "HISTORY   2) 3D cube of associated uncertainties.                               ",
+        "HISTORY   3) 2D array of DQ flags associated with linearity correction          ",
+        "HISTORY      see DQ header for info on flags.                                   ",
+        "HISTORY  Correction was constructed from a cube constructed from                ",
+        "HISTORY  NRAMP linearity data sets. Calibrations defined in S_*                 ",
+        "HISTORY  keywords were applied to individual ramps prior to averaging.          ",
+        "HISTORY  For each data pixel in the average ramp:                               ",
+        "HISTORY  1) All data below LINCUT was fit as f(TIME) with linear func           ",
+        "HISTORY  2) Predicted linear response over full time domain was                 ",
+        "HISTORY     constructed from linear fit below LINCUT.                           ",
+        "HISTORY  3) Ratio of predicted linear response to raw ramp was computed         ",
+        "HISTORY  4) For all signal levels below well*WELLFACT for a pixel               ",
+        "HISTORY     the ratio from 3) was fit with a function of the form               ",
+        "HISTORY     1.0+SUM(A_i*Signal^i) with i={1:order}                              ",
+        "HISTORY     Note that the i=0 term was fixed at 1 to ensure no                  ",
+        "HISTORY     correction at 0 signal. The i=1 term was fixed to be positive       ",
+        "HISTORY     definite so that the correction would increase from                 ",
+        "HISTORY     1 a 0 signal                                                        ",
+        "HISTORY  5) The FIT parameters and their associated uncertainties were          ",
+        "HISTORY     computed for each pixel and are recorded in extensions 1 and        ",
+        "HISTORY     2, respectively.                                                    ",
+        "HISTORY  6) Pixels for which the linearity correction derivation failed         ",
+        "HISTORY     at any stage were flagged and added to the linearity mask in        ",
+        "HISTORY     extenstion 3.  DQ flag definitions for linearity are given          ",
+        "HISTORY     DQ_{I} KEYWORDS above.                                              ",
+        "HISTORY  All fitting was done using propagated uncertainties from the           ",
+        "HISTORY  averaged ramp; the uncertainties in the averaged ramp include          ",
+        "HISTORY  all sources, including read noise, correlated noise, source            ",
+        "HISTORY  instability, etc.                                                      ",
+        "HISTORY |----------------------------------------------------------------------|",
+        "HISTORY This file was delivered by the NIRCam team from the University of Arizon",
+        "HISTORY a. File was modified by B. Brooks and B. Hilbert to be compliant with CR",
+        "HISTORY DS and JWST Pipeline standards.                                         "
+      ],
+      "science_array_not_opened_for_header_audit": true
+    },
+    "derived_jwst_nircam_dark_0337_first42.fits": {
+      "cards": [
+        "SIMPLE  =                    T / conforms to FITS standard                      ",
+        "BITPIX  =                    8 / array data type                                ",
+        "NAXIS   =                    0 / number of array dimensions                     ",
+        "EXTEND  =                    T                                                  ",
+        "                                                                                ",
+        "        Dark current data model                                                 ",
+        "                                                                                ",
+        "DATE    = '2021-10-13T14:45:54.924' / Date this file was created (UTC)          ",
+        "FILENAME= 'derived_jwst_nircam_dark_0337_first42.fits' / Name of the file       ",
+        "DATAMODL= 'DarkModel'          / Type of data model                             ",
+        "TELESCOP= 'JWST    '           / Telescope used to acquire the data             ",
+        "REFTYPE = 'DARK    '           / Reference file type                            ",
+        "PEDIGREE= 'GROUND  '           / The pedigree of the reference file             ",
+        "DESCRIP = 'CV3 based dark with zero for nominal pixels and non zero for hot &'  CONTINUE  'pixels and noutputs added.&'                                         CONTINUE  '' / Description of the reference file                                ",
+        "AUTHOR  = 'B. Hilbert'         / Author of the reference file                   ",
+        "USEAFTER= '2015-10-01T00:00:00' / Use after date of the reference file          ",
+        "                                                                                ",
+        "        Instrument configuration information                                    ",
+        "                                                                                ",
+        "INSTRUME= 'NIRCAM  '           / Instrument used to acquire the data            ",
+        "DETECTOR= 'NRCB3   '           / Name of detector used to acquire the data      ",
+        "EXP_TYPE= 'N/A     '           / Type of data in the exposure                   ",
+        "READPATT= 'RAPID   '           / Readout pattern                                ",
+        "P_READPA= 'ANY|    '           / Readout pattern                                ",
+        "NOUTPUTS=                    4 / Number of detector outputs used                ",
+        "NFRAMES =                    1 / Number of frames per group                     ",
+        "NGROUPS =                   42 / Number of groups in integration                ",
+        "GROUPGAP=                    0 / Number of frames dropped between groups        ",
+        "SUBARRAY= 'FULL    '           / Subarray used                                  ",
+        "SUBSTRT1=                    1 / Starting pixel in axis 1 direction             ",
+        "SUBSTRT2=                    1 / Starting pixel in axis 2 direction             ",
+        "SUBSIZE1=                 2048 / Number of pixels in axis 1 direction           ",
+        "SUBSIZE2=                 2048 / Number of pixels in axis 2 direction           ",
+        "FASTAXIS=                    1 / Fast readout axis direction                    ",
+        "SLOWAXIS=                   -2 / Slow readout axis direction                    ",
+        "HISTORY This dark reference file was created from CV3 dark current observations.",
+        "HISTORY  We first created a slope image for each input dark exposure, and then c",
+        "HISTORY reated a mean slope image. Pixels with signal rates more than 5-sigma ab",
+        "HISTORY ove the mean are treated as hot and have dark signal values equal to the",
+        "HISTORY ir mean dark rate times the exposure time of each group. Pixels with sig",
+        "HISTORY nal rates below this threshold have their dark signals set to zero. This",
+        "HISTORY  strategy was agreed upon by members of the NIRCam IDT.                 ",
+        "HISTORY NIRCAM NRCB3 FULL dark current file, created from data in files:        ",
+        "HISTORY NRCNRCB3-DARK-53422033131_1_488_SE_2015-12-08T21h45m15_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53451104351_1_488_SE_2015-12-11T11h41m42_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53452229541_1_488_SE_2015-12-11T22h59m30_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53461630131_1_488_SE_2015-12-12T20h46m05_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53501126111_1_488_SE_2015-12-16T11h52m57_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53501540431_1_488_SE_2015-12-16T16h32m48_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53510806161_1_488_SE_2015-12-17T11h01m23_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53521055421_1_488_SE_2015-12-18T11h28m03_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53521535531_1_488_SE_2015-12-18T16h08m25_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53531631591_1_488_SE_2015-12-19T17h10m35_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53541453501_1_488_SE_2015-12-20T15h54m49_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53542003351_1_488_SE_2015-12-21T00h30m04_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53550112041_1_488_SE_2015-12-21T04h09m22_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53550518501_1_488_SE_2015-12-21T07h07m41_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53550925371_1_488_SE_2015-12-21T11h34m34_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53551355101_1_488_SE_2015-12-21T14h28m40_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53560916421_1_488_SE_2015-12-22T11h59m44_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53561314021_1_488_SE_2015-12-22T14h23m38_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-53561753031_1_488_SE_2015-12-22T18h59m48_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60011634061_1_488_SE_2016-01-01T17h24m22_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60020156291_1_488_SE_2016-01-02T02h34m53_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60020730151_1_488_SE_2016-01-02T09h07m00_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60081209331_1_488_SE_2016-01-08T14h34m30_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60081636161_1_488_SE_2016-01-08T18h33m14_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60090043151_1_488_SE_2016-01-09T02h53m21_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60090451471_1_488_SE_2016-01-09T05h33m25_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60090852451_1_488_SE_2016-01-09T09h35m03_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60091254111_1_488_SE_2016-01-09T14h23m58_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY NRCNRCB3-DARK-60091757401_1_488_SE_2016-01-09T18h40m55_level1b_linearity",
+        "HISTORY .fits                                                                   ",
+        "HISTORY The NOUTPUTS keyword has been added to differentiate between data taken ",
+        "HISTORY using 1 or 4 amps. The EXP_TYPE has been set to N/A, which corrects an e",
+        "HISTORY rror in the previously delivered version of these files.                ",
+        "HISTORY Exact first42 RAPID dark frames for native SHALLOW2 groups; no new detec",
+        "HISTORY tor model                                                               "
+      ],
+      "science_array_not_opened_for_header_audit": true
+    }
+  },
+  "records": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "pilot_file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00001_nrcb3_pilot.npz",
+      "pilot_sha256": "967632ab3384b1eac76de1f86fce872860ea32c5ce8daeb0e91d4db6d300be5a",
+      "history_file": "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00001_nrcb3_histories.npz",
+      "history_sha256": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+      "array_file": "artifacts/strong_lensing_response_completion_20261021/ipc/jw01198007001_02101_00001_nrcb3_conditional_ipc_projection.npz",
+      "array_sha256": "21aab3c9bf1077794e16d15608e664def18955fed1766d5cade1364c4af71c69",
+      "individual_read_times_s": [
+        10.73677,
+        21.47354,
+        64.42062,
+        75.15738999999999
+      ],
+      "early_poisson_time_coefficient_per_s": 0.016764818469614227,
+      "patches": [
+        {
+          "label": "A",
+          "pre_IPC_rate_min_inner17_e_s": 0.31944407166573174,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0005050971548480246,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 409,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.01229373226187758,
+            "maximum_offdiagonal_correlation": 0.023957036426833087,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8796280787010973,
+              0.970271890889936
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "B",
+          "pre_IPC_rate_min_inner17_e_s": 0.5347302996145995,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0001683360414823291,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 368,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.020301815003704603,
+            "maximum_offdiagonal_correlation": 0.025232962979136617,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8658335061418883,
+              0.9703790890942685
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "C",
+          "pre_IPC_rate_min_inner17_e_s": 0.3456928477530314,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00033671932471782985,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 390,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.012772863573476895,
+            "maximum_offdiagonal_correlation": 0.023167204719466754,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8877816987469425,
+              0.9665027579212147
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "D",
+          "pre_IPC_rate_min_inner17_e_s": 0.1976015856773931,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00019691134667339518,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 429,
+          "native_dark_nonzero_inner17_pixels": 1,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.007607585660211143,
+            "maximum_offdiagonal_correlation": 0.02278674890799368,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8933158740504871,
+              0.9677352327698552
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "FIELD",
+          "pre_IPC_rate_min_inner17_e_s": 0.18925202931258703,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 104,
+          "pre_IPC_rate_min_inner33_e_s": -0.007240264972894652,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 104,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "pre_IPC_context_not_a_positive_photon_state",
+            "reason": "G applied to the delivered effective field template gives negative rates on104 inner33 pixels; no clipping or Gaussian replacement used",
+            "required_relation": "positive pre_IPC optical/context mean whose H-image matches the effective field response, with boundary/support prescribed"
+          }
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "pilot_file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00002_nrcb3_pilot.npz",
+      "pilot_sha256": "885b965c8c7f6feeaa90248afbdc26974da2e85fa77ccb1559f5c66dc2c2fca7",
+      "history_file": "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00002_nrcb3_histories.npz",
+      "history_sha256": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+      "array_file": "artifacts/strong_lensing_response_completion_20261021/ipc/jw01198007001_02101_00002_nrcb3_conditional_ipc_projection.npz",
+      "array_sha256": "c4cda8ccba1f57a28163e8ba268c9cb4fafbf4a1179d02257d2716b10fcaee03",
+      "individual_read_times_s": [
+        10.73677,
+        21.47354,
+        64.42062,
+        75.15738999999999
+      ],
+      "early_poisson_time_coefficient_per_s": 0.016764818469614227,
+      "patches": [
+        {
+          "label": "A",
+          "pre_IPC_rate_min_inner17_e_s": 0.38755946670405544,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0005685763287591264,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 356,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.01424307795095163,
+            "maximum_offdiagonal_correlation": 0.026582913046927312,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8625033780679754,
+              0.9696036561267178
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "B",
+          "pre_IPC_rate_min_inner17_e_s": 0.5505127489339808,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00017743727083341214,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 372,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.02042186480179415,
+            "maximum_offdiagonal_correlation": 0.024972470203260922,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8706273466843379,
+              0.9700020524949448
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "C",
+          "pre_IPC_rate_min_inner17_e_s": 0.2072143261196708,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0002165741923204594,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 428,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.008155391866047055,
+            "maximum_offdiagonal_correlation": 0.021978262118531135,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8966742177256318,
+              0.9657774102474501
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "D",
+          "pre_IPC_rate_min_inner17_e_s": 0.23053783476650996,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00021599358235267088,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 364,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.008992984530666217,
+            "maximum_offdiagonal_correlation": 0.020325551133153208,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.903468960570285,
+              0.9685095334694122
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "FIELD",
+          "pre_IPC_rate_min_inner17_e_s": 0.2753125590595056,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 104,
+          "pre_IPC_rate_min_inner33_e_s": -0.00768410196300285,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 104,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "pre_IPC_context_not_a_positive_photon_state",
+            "reason": "G applied to the delivered effective field template gives negative rates on104 inner33 pixels; no clipping or Gaussian replacement used",
+            "required_relation": "positive pre_IPC optical/context mean whose H-image matches the effective field response, with boundary/support prescribed"
+          }
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "pilot_file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00003_nrcb3_pilot.npz",
+      "pilot_sha256": "c7473a1b062fff78f52fad1861328b96f5c6a55dadd8ef017709c992137c3a9c",
+      "history_file": "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00003_nrcb3_histories.npz",
+      "history_sha256": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+      "array_file": "artifacts/strong_lensing_response_completion_20261021/ipc/jw01198007001_02101_00003_nrcb3_conditional_ipc_projection.npz",
+      "array_sha256": "b0da559aa90fd1bdcd81772d1126c5fd01bb4c5d26840b10cc09dd4b261f8353",
+      "individual_read_times_s": [
+        10.73677,
+        21.47354,
+        64.42062,
+        75.15738999999999
+      ],
+      "early_poisson_time_coefficient_per_s": 0.016764818469614227,
+      "patches": [
+        {
+          "label": "A",
+          "pre_IPC_rate_min_inner17_e_s": 0.39145608270888826,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0006702445897897365,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 397,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.015857980744536582,
+            "maximum_offdiagonal_correlation": 0.0272221016155037,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8570729521111023,
+              0.9699670833256177
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "B",
+          "pre_IPC_rate_min_inner17_e_s": 0.645869916676613,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00021578376056025954,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 419,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.02478609845240535,
+            "maximum_offdiagonal_correlation": 0.023909499809738295,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8775518749911468,
+              0.9703100171135949
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "C",
+          "pre_IPC_rate_min_inner17_e_s": 0.47621985338287026,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00041303981998681654,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 433,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.018119082807739325,
+            "maximum_offdiagonal_correlation": 0.025392938091673093,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8699566626733333,
+              0.9661654293894774
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "D",
+          "pre_IPC_rate_min_inner17_e_s": 0.2569435111417634,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0002905707718683806,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 406,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.009816941732788551,
+            "maximum_offdiagonal_correlation": 0.0243538578481072,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8808754391718387,
+              0.9696254100247881
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "FIELD",
+          "pre_IPC_rate_min_inner17_e_s": 0.2331496085387494,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 104,
+          "pre_IPC_rate_min_inner33_e_s": -0.007046614489570409,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 104,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "pre_IPC_context_not_a_positive_photon_state",
+            "reason": "G applied to the delivered effective field template gives negative rates on104 inner33 pixels; no clipping or Gaussian replacement used",
+            "required_relation": "positive pre_IPC optical/context mean whose H-image matches the effective field response, with boundary/support prescribed"
+          }
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "pilot_file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00004_nrcb3_pilot.npz",
+      "pilot_sha256": "372adc656bd5f146a0b4da53f16e3b74c141ee0b5cfa5339145bdfdc8ea766c1",
+      "history_file": "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00004_nrcb3_histories.npz",
+      "history_sha256": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+      "array_file": "artifacts/strong_lensing_response_completion_20261021/ipc/jw01198007001_02101_00004_nrcb3_conditional_ipc_projection.npz",
+      "array_sha256": "fc7ca7ed877361353a17d3b4715403c16aa2c97681e518bc318eaf85758b5722",
+      "individual_read_times_s": [
+        10.73677,
+        21.47354,
+        64.42062,
+        75.15738999999999
+      ],
+      "early_poisson_time_coefficient_per_s": 0.016764818469614227,
+      "patches": [
+        {
+          "label": "A",
+          "pre_IPC_rate_min_inner17_e_s": 0.3790013690878799,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0005367588911932901,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 371,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.01461805390283635,
+            "maximum_offdiagonal_correlation": 0.026809166377630603,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8515032056306926,
+              0.9674493662717205
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "B",
+          "pre_IPC_rate_min_inner17_e_s": 0.6121837858828002,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.00021424768739820917,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 408,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.025268122134468145,
+            "maximum_offdiagonal_correlation": 0.02270648073529906,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8876731215568129,
+              0.9694612979797737
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "C",
+          "pre_IPC_rate_min_inner17_e_s": 0.35331655111454113,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0003004595715945524,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 439,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.013519249267605862,
+            "maximum_offdiagonal_correlation": 0.0238351691300079,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8792280064981433,
+              0.9699216193566915
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "D",
+          "pre_IPC_rate_min_inner17_e_s": 0.2410389343031957,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 0,
+          "pre_IPC_rate_min_inner33_e_s": 0.0002399933351813975,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 356,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "computed low-charge constant-reference Poisson photon projection",
+            "dimension": 289,
+            "minimum_eigenvalue_SCI2": 0.008959351498970541,
+            "maximum_offdiagonal_correlation": 0.028065537695856176,
+            "variance_ratio_to_independent_effective_rate_min_max": [
+              0.8449096295578966,
+              0.968151594113251
+            ],
+            "source_complete_or_validated_instrument_covariance": false
+          }
+        },
+        {
+          "label": "FIELD",
+          "pre_IPC_rate_min_inner17_e_s": 0.1698083023406051,
+          "pre_IPC_negative_inner17_pixels": 0,
+          "pre_IPC_negative_inner33_pixels": 104,
+          "pre_IPC_rate_min_inner33_e_s": -0.0067005798574132835,
+          "effective_rate_negative_inner33_pixels": 0,
+          "pre_IPC_negative_inner63_pixels": 104,
+          "native_dark_nonzero_inner17_pixels": 0,
+          "conditional_photon_application": {
+            "status": "pre_IPC_context_not_a_positive_photon_state",
+            "reason": "G applied to the delivered effective field template gives negative rates on104 inner33 pixels; no clipping or Gaussian replacement used",
+            "required_relation": "positive pre_IPC optical/context mean whose H-image matches the effective field response, with boundary/support prescribed"
+          }
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://jwst-pipeline.readthedocs.io/en/stable/jwst/ipc/description.html",
+    "https://jwst-pipeline.readthedocs.io/en/stable/jwst/ipc/reference_files.html",
+    "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_ipc_0022.fits"
+  ],
+  "source_sha256": {
+    "scripts/derive_he0435_ipc_projection.py": "5b11d431fcaa8d6b5953c1e944915f9ff96f0d6916878d461f2da28d44242984",
+    "code/strong_lensing_ipc_response.py": "843a889f8380f63808eeb4660b2db4fe6dd1fdf3acdf1be4b18c0560c7462bfa",
+    "tests/test_strong_lensing_ipc_response.py": "c98073225f11ba8f308b1dcc00688220ee0d57c22cd88272c7f16d8d97bc5cee"
+  },
+  "native_pipeline_rerun": false,
+  "new_optical_fit": false,
+  "noise_rescaled": false,
+  "physical_validation": false,
+  "no_reserved_science_observations": true
+}

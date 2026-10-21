@@ -1,0 +1,1430 @@
+{
+  "scope": "No-fit partition of unchanged official-native saved residuals. Jump flags identify potentially unmodeled deposited charge/segment-state response; they are not discarded to improve fit.",
+  "rows": [
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+      "label": "A",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2385.292466895046,
+        "raw_RMS_SCI": 2.2382986869307886
+      },
+      "native_jump_history": {
+        "pixels": 9,
+        "Q_original_native_ERR": 13.024534347632672,
+        "raw_RMS_SCI": 0.1904747124968989
+      },
+      "no_native_jump_history": {
+        "pixels": 280,
+        "Q_original_native_ERR": 2372.2679325474132,
+        "raw_RMS_SCI": 2.2737304046896494
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 274,
+        "Q_original_native_ERR": 2182.0469984367915,
+        "raw_RMS_SCI": 0.6011377905702328
+      },
+      "fewer_eligible_groups": {
+        "pixels": 15,
+        "Q_original_native_ERR": 203.24546845825438,
+        "raw_RMS_SCI": 9.482861917490226
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 9,
+          "Q_original_native_ERR": 50.20601858744921,
+          "raw_RMS_SCI": 11.986340392266477
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 18,
+          "Q_original_native_ERR": 579.1233642033939,
+          "raw_RMS_SCI": 2.46569720473275
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 50,
+          "Q_original_native_ERR": 906.105519880512,
+          "raw_RMS_SCI": 0.8333639046657074
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 849.8575642236908,
+          "raw_RMS_SCI": 0.22439236475690125
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.2637134099998116,
+        "y": 0.2529103348067282
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+      "label": "B",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2617.8589021125986,
+        "raw_RMS_SCI": 2.9346539791507045
+      },
+      "native_jump_history": {
+        "pixels": 12,
+        "Q_original_native_ERR": 79.29826146089037,
+        "raw_RMS_SCI": 0.7200002633182513
+      },
+      "no_native_jump_history": {
+        "pixels": 277,
+        "Q_original_native_ERR": 2538.5606406517086,
+        "raw_RMS_SCI": 2.993798195441265
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 230,
+        "Q_original_native_ERR": 1866.1747044967385,
+        "raw_RMS_SCI": 0.46304414527505516
+      },
+      "fewer_eligible_groups": {
+        "pixels": 59,
+        "Q_original_native_ERR": 751.6841976158602,
+        "raw_RMS_SCI": 6.430343569575155
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 9,
+          "Q_original_native_ERR": 52.82057707420821,
+          "raw_RMS_SCI": 15.783319666927344
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 18,
+          "Q_original_native_ERR": 158.12181874884706,
+          "raw_RMS_SCI": 2.874784013844206
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 48,
+          "Q_original_native_ERR": 1016.9828774562434,
+          "raw_RMS_SCI": 1.216002461912927
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 214,
+          "Q_original_native_ERR": 1389.9336288333002,
+          "raw_RMS_SCI": 0.35632319159763354
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.3655611141497547,
+        "y": 0.3216424022771155
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+      "label": "C",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2697.3496773071256,
+        "raw_RMS_SCI": 1.681401686820821
+      },
+      "native_jump_history": {
+        "pixels": 17,
+        "Q_original_native_ERR": 111.57536393109537,
+        "raw_RMS_SCI": 0.7521921951745675
+      },
+      "no_native_jump_history": {
+        "pixels": 272,
+        "Q_original_native_ERR": 2585.7743133760305,
+        "raw_RMS_SCI": 1.72291730527514
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 273,
+        "Q_original_native_ERR": 2221.3416362888247,
+        "raw_RMS_SCI": 0.501686009907105
+      },
+      "fewer_eligible_groups": {
+        "pixels": 16,
+        "Q_original_native_ERR": 476.00804101830107,
+        "raw_RMS_SCI": 6.838878768819765
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 52.42050567957099,
+          "raw_RMS_SCI": 9.406425739801652
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 22,
+          "Q_original_native_ERR": 602.2005330717894,
+          "raw_RMS_SCI": 2.5977217499569276
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 1143.8305997174634,
+          "raw_RMS_SCI": 0.8737552852547117
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 209,
+          "Q_original_native_ERR": 898.8980388383021,
+          "raw_RMS_SCI": 0.22171579483573037
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.10389022778610368,
+        "y": 0.0812089141312405
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+      "label": "D",
+      "all": {
+        "pixels": 288,
+        "Q_original_native_ERR": 1619.39704716624,
+        "raw_RMS_SCI": 0.8753964788980141
+      },
+      "native_jump_history": {
+        "pixels": 0,
+        "Q_original_native_ERR": 0.0,
+        "raw_RMS_SCI": null
+      },
+      "no_native_jump_history": {
+        "pixels": 288,
+        "Q_original_native_ERR": 1619.39704716624,
+        "raw_RMS_SCI": 0.8753964788980141
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 276,
+        "Q_original_native_ERR": 1515.8128518605574,
+        "raw_RMS_SCI": 0.374674443246741
+      },
+      "fewer_eligible_groups": {
+        "pixels": 12,
+        "Q_original_native_ERR": 103.58419530568231,
+        "raw_RMS_SCI": 3.893956124906535
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 46.80274830676039,
+          "raw_RMS_SCI": 4.918783869869333
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 20,
+          "Q_original_native_ERR": 180.86191986078788,
+          "raw_RMS_SCI": 1.238897491751545
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 52,
+          "Q_original_native_ERR": 699.002010973954,
+          "raw_RMS_SCI": 0.5361921547548391
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 209,
+          "Q_original_native_ERR": 692.7303680247376,
+          "raw_RMS_SCI": 0.16501967450429494
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.2155895257039574,
+        "y": 0.14120604421146135
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+      "label": "A",
+      "all": {
+        "pixels": 288,
+        "Q_original_native_ERR": 1858.272540927609,
+        "raw_RMS_SCI": 1.8580164582593643
+      },
+      "native_jump_history": {
+        "pixels": 23,
+        "Q_original_native_ERR": 270.4636730253709,
+        "raw_RMS_SCI": 0.9711843142398745
+      },
+      "no_native_jump_history": {
+        "pixels": 265,
+        "Q_original_native_ERR": 1587.808867902238,
+        "raw_RMS_SCI": 1.9157217167798977
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 270,
+        "Q_original_native_ERR": 1694.5559771485152,
+        "raw_RMS_SCI": 0.4549365342756983
+      },
+      "fewer_eligible_groups": {
+        "pixels": 18,
+        "Q_original_native_ERR": 163.71656377909375,
+        "raw_RMS_SCI": 7.22018654837401
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 55.34046889742059,
+          "raw_RMS_SCI": 11.309598703150858
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 330.9940644427786,
+          "raw_RMS_SCI": 1.7147927428938587
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 48,
+          "Q_original_native_ERR": 705.4941766057663,
+          "raw_RMS_SCI": 0.7581382753455909
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 766.4438309816436,
+          "raw_RMS_SCI": 0.21226267484264366
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.30529153641268597,
+        "y": 0.188380258254445
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+      "label": "B",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2489.407179915133,
+        "raw_RMS_SCI": 2.1623782827305753
+      },
+      "native_jump_history": {
+        "pixels": 11,
+        "Q_original_native_ERR": 281.08961634356507,
+        "raw_RMS_SCI": 1.898209269959728
+      },
+      "no_native_jump_history": {
+        "pixels": 278,
+        "Q_original_native_ERR": 2208.3175635715675,
+        "raw_RMS_SCI": 2.1721703583933625
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 267,
+        "Q_original_native_ERR": 2344.172856174192,
+        "raw_RMS_SCI": 0.5776777389063324
+      },
+      "fewer_eligible_groups": {
+        "pixels": 22,
+        "Q_original_native_ERR": 145.23432374094045,
+        "raw_RMS_SCI": 7.574563545410382
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 8,
+          "Q_original_native_ERR": 37.888978186674734,
+          "raw_RMS_SCI": 12.198495452419218
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 19,
+          "Q_original_native_ERR": 281.3306954552518,
+          "raw_RMS_SCI": 2.2147783663799454
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 50,
+          "Q_original_native_ERR": 823.1622566908911,
+          "raw_RMS_SCI": 0.9540033242081047
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 1347.0252495823154,
+          "raw_RMS_SCI": 0.32357965752905676
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.1538284772636834,
+        "y": 0.16233971744634598
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+      "label": "C",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2652.789838612047,
+        "raw_RMS_SCI": 1.9024158145226862
+      },
+      "native_jump_history": {
+        "pixels": 18,
+        "Q_original_native_ERR": 296.95611343202904,
+        "raw_RMS_SCI": 1.292490440862268
+      },
+      "no_native_jump_history": {
+        "pixels": 271,
+        "Q_original_native_ERR": 2355.833725180018,
+        "raw_RMS_SCI": 1.9361345124621332
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 273,
+        "Q_original_native_ERR": 2179.307040944682,
+        "raw_RMS_SCI": 0.6072180294294877
+      },
+      "fewer_eligible_groups": {
+        "pixels": 16,
+        "Q_original_native_ERR": 473.4827976673652,
+        "raw_RMS_SCI": 7.686375464221838
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 4,
+          "Q_original_native_ERR": 35.04957866442817,
+          "raw_RMS_SCI": 13.516491024808419
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 28,
+          "Q_original_native_ERR": 863.2905280305025,
+          "raw_RMS_SCI": 3.1244940395719527
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 48,
+          "Q_original_native_ERR": 877.1397211951213,
+          "raw_RMS_SCI": 0.8260223730450424
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 209,
+          "Q_original_native_ERR": 877.3100107219948,
+          "raw_RMS_SCI": 0.20823511571486192
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.030781747869296383,
+        "y": 0.005858230380558075
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+      "label": "D",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 1851.5661878147919,
+        "raw_RMS_SCI": 1.0955031970008662
+      },
+      "native_jump_history": {
+        "pixels": 25,
+        "Q_original_native_ERR": 102.90742131265206,
+        "raw_RMS_SCI": 1.618388999440137
+      },
+      "no_native_jump_history": {
+        "pixels": 264,
+        "Q_original_native_ERR": 1748.6587665021395,
+        "raw_RMS_SCI": 1.0323502216423162
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 277,
+        "Q_original_native_ERR": 1508.12621513652,
+        "raw_RMS_SCI": 0.4878160008365973
+      },
+      "fewer_eligible_groups": {
+        "pixels": 12,
+        "Q_original_native_ERR": 343.43997267827194,
+        "raw_RMS_SCI": 4.8383935329344485
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 29.14755577497043,
+          "raw_RMS_SCI": 5.325814866638318
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 19,
+          "Q_original_native_ERR": 657.4873885681553,
+          "raw_RMS_SCI": 2.609521227139349
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 52,
+          "Q_original_native_ERR": 555.8463542326795,
+          "raw_RMS_SCI": 0.5059385484016284
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 609.0848892389866,
+          "raw_RMS_SCI": 0.16281863553552506
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.17366109176362837,
+        "y": 0.12185103186949799
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+      "label": "A",
+      "all": {
+        "pixels": 288,
+        "Q_original_native_ERR": 1565.6626551128495,
+        "raw_RMS_SCI": 1.470425866103779
+      },
+      "native_jump_history": {
+        "pixels": 8,
+        "Q_original_native_ERR": 27.35188270850056,
+        "raw_RMS_SCI": 0.23465466421476203
+      },
+      "no_native_jump_history": {
+        "pixels": 280,
+        "Q_original_native_ERR": 1538.3107724043487,
+        "raw_RMS_SCI": 1.4907564463914287
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 273,
+        "Q_original_native_ERR": 1429.3600721385724,
+        "raw_RMS_SCI": 0.40666781023694326
+      },
+      "fewer_eligible_groups": {
+        "pixels": 15,
+        "Q_original_native_ERR": 136.30258297427716,
+        "raw_RMS_SCI": 6.205113237363713
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 8,
+          "Q_original_native_ERR": 30.899140327316477,
+          "raw_RMS_SCI": 8.268841406389388
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 19,
+          "Q_original_native_ERR": 172.9584653849405,
+          "raw_RMS_SCI": 1.5453968515516827
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 49,
+          "Q_original_native_ERR": 633.4491160911871,
+          "raw_RMS_SCI": 0.6551455435162975
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 728.3559333094055,
+          "raw_RMS_SCI": 0.2094646176753173
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.3335226058520317,
+        "y": 0.3359877475277998
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+      "label": "B",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 1465.5175168633948,
+        "raw_RMS_SCI": 1.582174028106136
+      },
+      "native_jump_history": {
+        "pixels": 10,
+        "Q_original_native_ERR": 145.84905024789583,
+        "raw_RMS_SCI": 1.2723532872269876
+      },
+      "no_native_jump_history": {
+        "pixels": 279,
+        "Q_original_native_ERR": 1319.6684666154993,
+        "raw_RMS_SCI": 1.5921599432469495
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 267,
+        "Q_original_native_ERR": 1268.801598698728,
+        "raw_RMS_SCI": 0.3908061407993017
+      },
+      "fewer_eligible_groups": {
+        "pixels": 22,
+        "Q_original_native_ERR": 196.71591816466682,
+        "raw_RMS_SCI": 5.57048885956752
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 8,
+          "Q_original_native_ERR": 16.53086010455538,
+          "raw_RMS_SCI": 8.44956152814476
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 19,
+          "Q_original_native_ERR": 207.23544779667768,
+          "raw_RMS_SCI": 2.4670566414531683
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 50,
+          "Q_original_native_ERR": 382.45517267123495,
+          "raw_RMS_SCI": 0.6455663154404275
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 859.2960362909267,
+          "raw_RMS_SCI": 0.27305798732159264
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.014993558678366119,
+        "y": 0.11643802497133893
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+      "label": "C",
+      "all": {
+        "pixels": 288,
+        "Q_original_native_ERR": 2036.2421444018407,
+        "raw_RMS_SCI": 1.3328576217902401
+      },
+      "native_jump_history": {
+        "pixels": 13,
+        "Q_original_native_ERR": 326.70149711253674,
+        "raw_RMS_SCI": 1.31525744853336
+      },
+      "no_native_jump_history": {
+        "pixels": 275,
+        "Q_original_native_ERR": 1709.5406472893037,
+        "raw_RMS_SCI": 1.3336838806073077
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 272,
+        "Q_original_native_ERR": 1920.65352302383,
+        "raw_RMS_SCI": 0.49326368046981
+      },
+      "fewer_eligible_groups": {
+        "pixels": 16,
+        "Q_original_native_ERR": 115.58862137801067,
+        "raw_RMS_SCI": 5.27644917774799
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 6,
+          "Q_original_native_ERR": 21.62397020801714,
+          "raw_RMS_SCI": 8.298981142530645
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 22,
+          "Q_original_native_ERR": 230.73612732616192,
+          "raw_RMS_SCI": 1.5208455423567653
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 52,
+          "Q_original_native_ERR": 965.8059448034038,
+          "raw_RMS_SCI": 0.8678900767387149
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 208,
+          "Q_original_native_ERR": 818.076102064258,
+          "raw_RMS_SCI": 0.20027264406725725
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.009999285274606856,
+        "y": 0.09131961410823619
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+      "label": "D",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 1282.684782572246,
+        "raw_RMS_SCI": 1.8069097593148127
+      },
+      "native_jump_history": {
+        "pixels": 4,
+        "Q_original_native_ERR": 24.0242556769218,
+        "raw_RMS_SCI": 3.7207693640648007
+      },
+      "no_native_jump_history": {
+        "pixels": 285,
+        "Q_original_native_ERR": 1258.6605268953247,
+        "raw_RMS_SCI": 1.765344967221136
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 277,
+        "Q_original_native_ERR": 1045.5768243689188,
+        "raw_RMS_SCI": 0.2755948970515448
+      },
+      "fewer_eligible_groups": {
+        "pixels": 12,
+        "Q_original_native_ERR": 237.1079582033272,
+        "raw_RMS_SCI": 8.767952327624545
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 113.27439807612588,
+          "raw_RMS_SCI": 11.19012088513529
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 190.7628836415981,
+          "raw_RMS_SCI": 1.6042080234469767
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 50,
+          "Q_original_native_ERR": 304.55714736039954,
+          "raw_RMS_SCI": 0.38064496678374093
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 674.0903534941224,
+          "raw_RMS_SCI": 0.16498446421122084
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.32193487110547825,
+        "y": 0.15234573649524422
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "label": "A",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2160.7799561617535,
+        "raw_RMS_SCI": 1.200714666065131
+      },
+      "native_jump_history": {
+        "pixels": 37,
+        "Q_original_native_ERR": 286.5140373560522,
+        "raw_RMS_SCI": 0.7811676118797145
+      },
+      "no_native_jump_history": {
+        "pixels": 252,
+        "Q_original_native_ERR": 1874.265918805701,
+        "raw_RMS_SCI": 1.2505198839333296
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 273,
+        "Q_original_native_ERR": 2015.9677295842475,
+        "raw_RMS_SCI": 0.47787676480452096
+      },
+      "fewer_eligible_groups": {
+        "pixels": 16,
+        "Q_original_native_ERR": 144.81222657750578,
+        "raw_RMS_SCI": 4.705793415766871
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 43.13819383800216,
+          "raw_RMS_SCI": 6.096159007998086
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 263.48093011636394,
+          "raw_RMS_SCI": 2.3310187405591565
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 927.3338343087385,
+          "raw_RMS_SCI": 0.7835437745567138
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 210,
+          "Q_original_native_ERR": 926.8269978986486,
+          "raw_RMS_SCI": 0.22986702686843247
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.04872236740442548,
+        "y": 0.22581519528789445
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "label": "B",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2829.373651480964,
+        "raw_RMS_SCI": 2.561842363479606
+      },
+      "native_jump_history": {
+        "pixels": 17,
+        "Q_original_native_ERR": 398.56063134945936,
+        "raw_RMS_SCI": 2.7367089065739867
+      },
+      "no_native_jump_history": {
+        "pixels": 272,
+        "Q_original_native_ERR": 2430.8130201315043,
+        "raw_RMS_SCI": 2.5505151609662327
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 267,
+        "Q_original_native_ERR": 2389.3104270741983,
+        "raw_RMS_SCI": 0.6753532627840173
+      },
+      "fewer_eligible_groups": {
+        "pixels": 22,
+        "Q_original_native_ERR": 440.06322440676524,
+        "raw_RMS_SCI": 8.982149589492558
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 27.238694016171614,
+          "raw_RMS_SCI": 14.516785613309182
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 22,
+          "Q_original_native_ERR": 534.8687669201564,
+          "raw_RMS_SCI": 3.8960841467810834
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 49,
+          "Q_original_native_ERR": 1171.9166989169587,
+          "raw_RMS_SCI": 1.1850673872820763
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 1095.349491627677,
+          "raw_RMS_SCI": 0.2984542301911566
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.059660598116542424,
+        "y": 0.07035574164263182
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "label": "C",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2053.185555231951,
+        "raw_RMS_SCI": 1.0526394520544333
+      },
+      "native_jump_history": {
+        "pixels": 9,
+        "Q_original_native_ERR": 136.36751379668064,
+        "raw_RMS_SCI": 1.8086651973186838
+      },
+      "no_native_jump_history": {
+        "pixels": 280,
+        "Q_original_native_ERR": 1916.8180414352707,
+        "raw_RMS_SCI": 1.0190769084012725
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 271,
+        "Q_original_native_ERR": 1797.5518877519744,
+        "raw_RMS_SCI": 0.5503393866563802
+      },
+      "fewer_eligible_groups": {
+        "pixels": 18,
+        "Q_original_native_ERR": 255.63366747997676,
+        "raw_RMS_SCI": 3.6373654572541256
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 8,
+          "Q_original_native_ERR": 15.4702599483918,
+          "raw_RMS_SCI": 4.389780789316438
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 19,
+          "Q_original_native_ERR": 479.7009215696764,
+          "raw_RMS_SCI": 2.6494010785535633
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 819.4705181272334,
+          "raw_RMS_SCI": 0.6913958324781585
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 738.5438555866498,
+          "raw_RMS_SCI": 0.19855354098840947
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.11956457495390396,
+        "y": 0.2482936502780954
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "label": "D",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 1764.7093213197506,
+        "raw_RMS_SCI": 0.9035974424384522
+      },
+      "native_jump_history": {
+        "pixels": 35,
+        "Q_original_native_ERR": 141.06288810227073,
+        "raw_RMS_SCI": 1.432667530400553
+      },
+      "no_native_jump_history": {
+        "pixels": 254,
+        "Q_original_native_ERR": 1623.6464332174799,
+        "raw_RMS_SCI": 0.8038449943456029
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 277,
+        "Q_original_native_ERR": 1621.9836925573613,
+        "raw_RMS_SCI": 0.4085875882567001
+      },
+      "fewer_eligible_groups": {
+        "pixels": 12,
+        "Q_original_native_ERR": 142.7256287623891,
+        "raw_RMS_SCI": 3.9761968040112565
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 41.3509503475508,
+          "raw_RMS_SCI": 4.6481502151959315
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 417.207817934584,
+          "raw_RMS_SCI": 1.7678895832452362
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 537.0888467339373,
+          "raw_RMS_SCI": 0.4904348670324106
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 210,
+          "Q_original_native_ERR": 769.0617063036784,
+          "raw_RMS_SCI": 0.18030499645869777
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.11281243883505418,
+        "y": 0.31343128206314036
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "label": "FIELD",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 1610.179667722795,
+        "raw_RMS_SCI": 0.7484756406203457
+      },
+      "native_jump_history": {
+        "pixels": 14,
+        "Q_original_native_ERR": 30.389998212837703,
+        "raw_RMS_SCI": 0.1569193456374895
+      },
+      "no_native_jump_history": {
+        "pixels": 275,
+        "Q_original_native_ERR": 1579.7896695099575,
+        "raw_RMS_SCI": 0.7664739341247733
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 271,
+        "Q_original_native_ERR": 1516.168844485827,
+        "raw_RMS_SCI": 0.35361350526878105
+      },
+      "fewer_eligible_groups": {
+        "pixels": 18,
+        "Q_original_native_ERR": 94.01082323696829,
+        "raw_RMS_SCI": 2.666831674473914
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 3.29850443925022,
+          "raw_RMS_SCI": 3.0791108168780164
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 20,
+          "Q_original_native_ERR": 149.56978272666194,
+          "raw_RMS_SCI": 1.8699344399485056
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 513.4400889296311,
+          "raw_RMS_SCI": 0.5811430981995912
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 943.8712916272518,
+          "raw_RMS_SCI": 0.19927248328834357
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.15833587353576403,
+        "y": 0.2218564069279595
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "label": "FIELD",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2721.7945784417193,
+        "raw_RMS_SCI": 1.4876486655330576
+      },
+      "native_jump_history": {
+        "pixels": 27,
+        "Q_original_native_ERR": 413.5130033132771,
+        "raw_RMS_SCI": 2.076737599591017
+      },
+      "no_native_jump_history": {
+        "pixels": 262,
+        "Q_original_native_ERR": 2308.281575128442,
+        "raw_RMS_SCI": 1.4130509828460516
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 273,
+        "Q_original_native_ERR": 2596.389240212173,
+        "raw_RMS_SCI": 0.7439546687695262
+      },
+      "fewer_eligible_groups": {
+        "pixels": 16,
+        "Q_original_native_ERR": 125.40533822954625,
+        "raw_RMS_SCI": 5.5254443691139885
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 27.26661412749913,
+          "raw_RMS_SCI": 7.681387265646397
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 353.5214288922239,
+          "raw_RMS_SCI": 2.9383682900625288
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 1012.8491722446879,
+          "raw_RMS_SCI": 0.8093099630399018
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 210,
+          "Q_original_native_ERR": 1328.157363177308,
+          "raw_RMS_SCI": 0.23745900371137463
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": -0.0062218131777670915,
+        "y": 0.2525204683062059
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "label": "FIELD",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2130.151429892772,
+        "raw_RMS_SCI": 1.2433421860664504
+      },
+      "native_jump_history": {
+        "pixels": 20,
+        "Q_original_native_ERR": 106.48373809634545,
+        "raw_RMS_SCI": 0.2992049966319005
+      },
+      "no_native_jump_history": {
+        "pixels": 269,
+        "Q_original_native_ERR": 2023.667691796426,
+        "raw_RMS_SCI": 1.2861495042043094
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 271,
+        "Q_original_native_ERR": 1979.1392944022964,
+        "raw_RMS_SCI": 0.42516780509679986
+      },
+      "fewer_eligible_groups": {
+        "pixels": 18,
+        "Q_original_native_ERR": 151.01213549047515,
+        "raw_RMS_SCI": 4.700927823623743
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 9,
+          "Q_original_native_ERR": 15.469044230444373,
+          "raw_RMS_SCI": 6.107083585474941
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 18,
+          "Q_original_native_ERR": 301.7043667683679,
+          "raw_RMS_SCI": 2.153410613832825
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 50,
+          "Q_original_native_ERR": 680.4431977284394,
+          "raw_RMS_SCI": 0.5924403739338979
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 1132.53482116552,
+          "raw_RMS_SCI": 0.2180351774306228
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.19032326406600017,
+        "y": 0.19198820721563914
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "label": "FIELD",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 3454.4069387344794,
+        "raw_RMS_SCI": 1.5817993318544568
+      },
+      "native_jump_history": {
+        "pixels": 19,
+        "Q_original_native_ERR": 104.7795769079749,
+        "raw_RMS_SCI": 0.37180513760652467
+      },
+      "no_native_jump_history": {
+        "pixels": 270,
+        "Q_original_native_ERR": 3349.6273618265045,
+        "raw_RMS_SCI": 1.6335342453995068
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 268,
+        "Q_original_native_ERR": 2961.8737294589,
+        "raw_RMS_SCI": 0.5875979647838535
+      },
+      "fewer_eligible_groups": {
+        "pixels": 21,
+        "Q_original_native_ERR": 492.5332092755795,
+        "raw_RMS_SCI": 5.4797072862616805
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 41.01242274920397,
+          "raw_RMS_SCI": 8.469081888695724
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 632.4171274838444,
+          "raw_RMS_SCI": 2.7792798029206227
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 49,
+          "Q_original_native_ERR": 1487.444148165531,
+          "raw_RMS_SCI": 0.9783452986243647
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 212,
+          "Q_original_native_ERR": 1293.5332403359,
+          "raw_RMS_SCI": 0.23705329291613098
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.2753973979108526,
+        "y": 0.224489017928618
+      }
+    }
+  ],
+  "source_sha256": "2b69697188efad1a22017c9ff6238d4a99a474169b571afe4f7196477838b97a",
+  "saved_mean_sha256": "78d6ee0aea874dccfd0f886c2b11508b5afb8f20e8be2e8a760fe435c5c65731",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

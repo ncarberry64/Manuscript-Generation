@@ -1,0 +1,39 @@
+{
+  "scope": "Consumed-development diagnostic. Taylor expansion atxp=0; matches constantandlinearrear deflection then drops only nonlinearspatial variation. Fixed localbodyandmaps. Not an independentfit.",
+  "full_minus_matched_quadratic_image_offsets_mas": [
+    [
+      -8.88557261031675,
+      18.416328202677022
+    ],
+    [
+      -10.044832735133957,
+      -4.177456638406074
+    ],
+    [
+      -4.5033588701326455,
+      3.7700979937407424
+    ],
+    [
+      -4.7694536647107935,
+      -2.369788383723259
+    ]
+  ],
+  "full_minus_matched_quadratic_relative_offsets_mas": [
+    [
+      -1.159260124817152,
+      -22.5937848410831
+    ],
+    [
+      4.382213740184326,
+      -14.646230208936295
+    ],
+    [
+      4.116118945605929,
+      -20.786116586400283
+    ]
+  ],
+  "G1_added_kappa_at_origin": 1.132204644063023e-06,
+  "G1_added_gamma1_at_origin": 0.009649589430492312,
+  "G1_added_gamma2_at_origin": -0.027729621107657268,
+  "max_quadratic_lens_residual_arcsec": 6.879327790793663e-16
+}

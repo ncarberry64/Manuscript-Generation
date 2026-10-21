@@ -1,0 +1,567 @@
+{
+  "scope": "Read-only saved-mean replay on already-consumed native target stamps. No optimizer, field nuisance refit, changed mean, response update, ERR scaling, physical lens fit or unused data application.",
+  "array_conventions": "Arrays retain full17x17 native x/y, SCI, ERR, DQ and mask. Model/raw/standardized residuals are defined on exactly the original valid rows; excluded pixels are NaN in these three arrays. Raw SCI/ERR/DQ at excluded pixels are retained unchanged.",
+  "applications": {
+    "all_data_baseline": {
+      "file": "artifacts/strong_lensing_response_repair_20261021/joint_scene/raw_residuals/all_data_baseline.npz",
+      "sha256": "554fdde27df1825b194d070026a1949c658dd461a9d1f3992605e001a3c15cd1",
+      "Q_replayed": 50121.53207379594,
+      "Q_original": 50121.53207379593,
+      "difference": 1.4551915228366852e-11,
+      "records": [
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 4092.78614165009,
+          "standardized_residual_max_abs": 20.001220335035452,
+          "raw_residual_mean_SCI": -0.40347192557522993,
+          "raw_residual_RMS_SCI": 3.4933320699271215
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 4678.811262155572,
+          "standardized_residual_max_abs": 17.603705682969792,
+          "raw_residual_mean_SCI": -0.38926941598386205,
+          "raw_residual_RMS_SCI": 3.4595203558642074
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 3947.493583816687,
+          "standardized_residual_max_abs": 19.571827129338196,
+          "raw_residual_mean_SCI": -0.16593880969443686,
+          "raw_residual_RMS_SCI": 2.436340170651443
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+          "pixels": 288,
+          "Q": 2656.2577023223857,
+          "standardized_residual_max_abs": 12.418744133396972,
+          "raw_residual_mean_SCI": -0.057198608554000385,
+          "raw_residual_RMS_SCI": 1.782043720347768
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 3339.422864329881,
+          "standardized_residual_max_abs": 14.471770681863557,
+          "raw_residual_mean_SCI": 0.0071150601384060526,
+          "raw_residual_RMS_SCI": 2.810230664411279
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 4961.43123254748,
+          "standardized_residual_max_abs": 16.101369520681892,
+          "raw_residual_mean_SCI": 0.10779457890081288,
+          "raw_residual_RMS_SCI": 2.5004304554928054
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 4047.1484977899913,
+          "standardized_residual_max_abs": 17.985812328370386,
+          "raw_residual_mean_SCI": -0.15894144706393767,
+          "raw_residual_RMS_SCI": 2.5086313968904768
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 2921.549278428355,
+          "standardized_residual_max_abs": 18.08531882376481,
+          "raw_residual_mean_SCI": -0.08990312637374781,
+          "raw_residual_RMS_SCI": 2.035922303760726
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 2341.4566513887116,
+          "standardized_residual_max_abs": 11.286295382918762,
+          "raw_residual_mean_SCI": -0.040003176778670255,
+          "raw_residual_RMS_SCI": 1.9763476359410361
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2879.0016617456617,
+          "standardized_residual_max_abs": 10.740345161861427,
+          "raw_residual_mean_SCI": -0.09775825078868006,
+          "raw_residual_RMS_SCI": 1.2964608309290948
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+          "pixels": 288,
+          "Q": 2736.186770321523,
+          "standardized_residual_max_abs": 14.34717542961758,
+          "raw_residual_mean_SCI": 0.000517091440707878,
+          "raw_residual_RMS_SCI": 1.4051164864319436
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1848.102872608656,
+          "standardized_residual_max_abs": 9.453350223218166,
+          "raw_residual_mean_SCI": 0.061228585035505614,
+          "raw_residual_RMS_SCI": 2.293601253880136
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 2502.445724951704,
+          "standardized_residual_max_abs": 9.939240609424948,
+          "raw_residual_mean_SCI": 0.007510333933749664,
+          "raw_residual_RMS_SCI": 1.9188338969589331
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 3415.2089106117546,
+          "standardized_residual_max_abs": 11.301676892882648,
+          "raw_residual_mean_SCI": 0.01573593247127373,
+          "raw_residual_RMS_SCI": 4.811259671207371
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 1977.255149188267,
+          "standardized_residual_max_abs": 13.438719830465123,
+          "raw_residual_mean_SCI": -0.06781803385875883,
+          "raw_residual_RMS_SCI": 1.2469865780051526
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1776.9737699391974,
+          "standardized_residual_max_abs": 8.589908175318575,
+          "raw_residual_mean_SCI": -0.02090925795176886,
+          "raw_residual_RMS_SCI": 1.0813716499130217
+        }
+      ]
+    },
+    "all_data_final": {
+      "file": "artifacts/strong_lensing_response_repair_20261021/joint_scene/raw_residuals/all_data_final.npz",
+      "sha256": "49543cd04d67e6cf6f90ad46a864c7f26f8839fa4d7960928491ac42dea63df4",
+      "Q_replayed": 34712.08143651598,
+      "Q_original": 34712.08143651598,
+      "difference": 0.0,
+      "records": [
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 2484.877072844594,
+          "standardized_residual_max_abs": 17.112789684336178,
+          "raw_residual_mean_SCI": -0.35238721657101973,
+          "raw_residual_RMS_SCI": 3.5614681515364515
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2735.0815010109613,
+          "standardized_residual_max_abs": 11.610963606344782,
+          "raw_residual_mean_SCI": -0.3506080066723262,
+          "raw_residual_RMS_SCI": 3.8062057796608473
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 2793.0295798376355,
+          "standardized_residual_max_abs": 17.954290860253845,
+          "raw_residual_mean_SCI": -0.09979286438340468,
+          "raw_residual_RMS_SCI": 1.3454083207199174
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+          "pixels": 288,
+          "Q": 1747.6471958616085,
+          "standardized_residual_max_abs": 12.74627518327764,
+          "raw_residual_mean_SCI": -0.042468069339980506,
+          "raw_residual_RMS_SCI": 0.8112149997040926
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 1911.9987733115363,
+          "standardized_residual_max_abs": 11.359361687884633,
+          "raw_residual_mean_SCI": 0.0423849264445492,
+          "raw_residual_RMS_SCI": 1.6450951717382971
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2680.472574263745,
+          "standardized_residual_max_abs": 12.658340876981466,
+          "raw_residual_mean_SCI": 0.16722014724857084,
+          "raw_residual_RMS_SCI": 1.9703247171988856
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 2833.7607032839624,
+          "standardized_residual_max_abs": 17.284304049895795,
+          "raw_residual_mean_SCI": -0.11419583859580551,
+          "raw_residual_RMS_SCI": 1.5836042881671317
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1977.4698569658601,
+          "standardized_residual_max_abs": 16.472520634645146,
+          "raw_residual_mean_SCI": -0.08533699914168064,
+          "raw_residual_RMS_SCI": 1.0750295324126546
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 1549.467070681266,
+          "standardized_residual_max_abs": 8.677161900060453,
+          "raw_residual_mean_SCI": -0.033643143389845934,
+          "raw_residual_RMS_SCI": 1.6029528868890561
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 1579.160078268059,
+          "standardized_residual_max_abs": 8.304952291521797,
+          "raw_residual_mean_SCI": -0.11137260536131452,
+          "raw_residual_RMS_SCI": 1.7868937036699166
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+          "pixels": 288,
+          "Q": 2079.6614600046178,
+          "standardized_residual_max_abs": 13.637820099323324,
+          "raw_residual_mean_SCI": 0.04952765674830704,
+          "raw_residual_RMS_SCI": 1.6774409826781542
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1400.4813816227986,
+          "standardized_residual_max_abs": 6.93728198851716,
+          "raw_residual_mean_SCI": 0.055648485280655226,
+          "raw_residual_RMS_SCI": 1.4843891507940412
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 2175.683374426399,
+          "standardized_residual_max_abs": 10.465982166627613,
+          "raw_residual_mean_SCI": -0.014652638904434636,
+          "raw_residual_RMS_SCI": 1.333975935416591
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2881.606090213706,
+          "standardized_residual_max_abs": 10.254048071278183,
+          "raw_residual_mean_SCI": -0.04630765198860339,
+          "raw_residual_RMS_SCI": 1.9963460255966323
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 2049.553698361504,
+          "standardized_residual_max_abs": 11.601994958368131,
+          "raw_residual_mean_SCI": -0.08145111935286549,
+          "raw_residual_RMS_SCI": 1.0333609729161433
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1832.1310255577246,
+          "standardized_residual_max_abs": 9.647953592937125,
+          "raw_residual_mean_SCI": -0.04583157069187613,
+          "raw_residual_RMS_SCI": 0.8834457333077831
+        }
+      ]
+    },
+    "held_exposure_training_baseline": {
+      "file": "artifacts/strong_lensing_response_repair_20261021/joint_scene/raw_residuals/held_exposure_training_baseline.npz",
+      "sha256": "938956cd3991e3ecdb7fb0e6c8936f07caf4117d7019e6b9f3ac438c09152c52",
+      "Q_replayed": 40336.15216338233,
+      "Q_original": 40336.152163382336,
+      "difference": -7.275957614183426e-12,
+      "records": [
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 3999.2198769400547,
+          "standardized_residual_max_abs": 20.115877447223834,
+          "raw_residual_mean_SCI": -0.3547874770060224,
+          "raw_residual_RMS_SCI": 3.1603384761621336
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 4609.482220773365,
+          "standardized_residual_max_abs": 17.362491033016898,
+          "raw_residual_mean_SCI": -0.3225699214383381,
+          "raw_residual_RMS_SCI": 3.042383007593756
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 3937.0157849974257,
+          "standardized_residual_max_abs": 19.550949030932518,
+          "raw_residual_mean_SCI": -0.1679410846546436,
+          "raw_residual_RMS_SCI": 2.432911680863579
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+          "pixels": 288,
+          "Q": 2649.0666495127716,
+          "standardized_residual_max_abs": 12.446909660199706,
+          "raw_residual_mean_SCI": -0.057251389936759725,
+          "raw_residual_RMS_SCI": 1.780296313037143
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 3387.4283609661734,
+          "standardized_residual_max_abs": 14.647496842636274,
+          "raw_residual_mean_SCI": 0.04720549334358458,
+          "raw_residual_RMS_SCI": 2.9110218861067167
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 4976.807936820058,
+          "standardized_residual_max_abs": 16.312534071381858,
+          "raw_residual_mean_SCI": 0.18547755299307053,
+          "raw_residual_RMS_SCI": 2.931093923514626
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 4040.9535971799774,
+          "standardized_residual_max_abs": 17.967110580436124,
+          "raw_residual_mean_SCI": -0.16075179956042934,
+          "raw_residual_RMS_SCI": 2.500989284210599
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 2915.0384695859516,
+          "standardized_residual_max_abs": 18.08582040987209,
+          "raw_residual_mean_SCI": -0.08999402786325007,
+          "raw_residual_RMS_SCI": 2.035290486526457
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 2344.070564089316,
+          "standardized_residual_max_abs": 11.511456770817922,
+          "raw_residual_mean_SCI": 9.400671978396533e-05,
+          "raw_residual_RMS_SCI": 1.999459748253877
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2883.429577997099,
+          "standardized_residual_max_abs": 10.306302322486529,
+          "raw_residual_mean_SCI": -0.02252001307476138,
+          "raw_residual_RMS_SCI": 1.2775880705522726
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+          "pixels": 288,
+          "Q": 2742.740606384631,
+          "standardized_residual_max_abs": 14.338208754396227,
+          "raw_residual_mean_SCI": -0.0011914795940052723,
+          "raw_residual_RMS_SCI": 1.3963394049538997
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1850.8985181355088,
+          "standardized_residual_max_abs": 9.427170754713156,
+          "raw_residual_mean_SCI": 0.06085533089680289,
+          "raw_residual_RMS_SCI": 2.288909691108493
+        }
+      ]
+    },
+    "held_exposure_training_final": {
+      "file": "artifacts/strong_lensing_response_repair_20261021/joint_scene/raw_residuals/held_exposure_training_final.npz",
+      "sha256": "53cbd0d6e34c777f43f46cbfa3b5e907d157b54b3e78ad0fdb3fd4d2a5ebe1e9",
+      "Q_replayed": 24106.145225206044,
+      "Q_original": 24106.145225206034,
+      "difference": 1.0913936421275139e-11,
+      "records": [
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 2110.3708399419093,
+          "standardized_residual_max_abs": 16.669094789518827,
+          "raw_residual_mean_SCI": -0.3073635859095233,
+          "raw_residual_RMS_SCI": 3.1658376897279403
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2393.1406175617108,
+          "standardized_residual_max_abs": 11.699047581183045,
+          "raw_residual_mean_SCI": -0.3080089446029443,
+          "raw_residual_RMS_SCI": 3.4167420849546937
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 2656.685141226169,
+          "standardized_residual_max_abs": 16.91085703623495,
+          "raw_residual_mean_SCI": -0.11606295681869254,
+          "raw_residual_RMS_SCI": 1.2382945117609503
+        },
+        {
+          "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+          "pixels": 288,
+          "Q": 1640.0635402311823,
+          "standardized_residual_max_abs": 12.594615560268045,
+          "raw_residual_mean_SCI": -0.046206023408025314,
+          "raw_residual_RMS_SCI": 0.733802780535324
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 1705.6991164682554,
+          "standardized_residual_max_abs": 11.236408655015742,
+          "raw_residual_mean_SCI": 0.0733899168770866,
+          "raw_residual_RMS_SCI": 1.6136261678455572
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 2384.9811119839696,
+          "standardized_residual_max_abs": 10.955965296525779,
+          "raw_residual_mean_SCI": 0.22114933412450838,
+          "raw_residual_RMS_SCI": 2.3133696477804357
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 2702.9222690767256,
+          "standardized_residual_max_abs": 17.281945110199047,
+          "raw_residual_mean_SCI": -0.1225959809445309,
+          "raw_residual_RMS_SCI": 1.4814664371002804
+        },
+        {
+          "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1870.717167701194,
+          "standardized_residual_max_abs": 16.062432990628093,
+          "raw_residual_mean_SCI": -0.08852810705395647,
+          "raw_residual_RMS_SCI": 1.0250113807314787
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+          "pixels": 288,
+          "Q": 1511.94510859085,
+          "standardized_residual_max_abs": 8.115573055683575,
+          "raw_residual_mean_SCI": 0.00285015707480372,
+          "raw_residual_RMS_SCI": 1.436475890227349
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 1604.313283617086,
+          "standardized_residual_max_abs": 8.72847238860935,
+          "raw_residual_mean_SCI": -0.06892551108699446,
+          "raw_residual_RMS_SCI": 1.5649507081655072
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+          "pixels": 288,
+          "Q": 2109.0272341621367,
+          "standardized_residual_max_abs": 13.24756743621395,
+          "raw_residual_mean_SCI": 0.03911534395309704,
+          "raw_residual_RMS_SCI": 1.5770247882708577
+        },
+        {
+          "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 1416.2797946448504,
+          "standardized_residual_max_abs": 7.311329574433504,
+          "raw_residual_mean_SCI": 0.050733769518045146,
+          "raw_residual_RMS_SCI": 1.3824593408033266
+        }
+      ]
+    },
+    "held_exposure": {
+      "file": "artifacts/strong_lensing_response_repair_20261021/joint_scene/raw_residuals/held_exposure.npz",
+      "sha256": "287233ca3b1ecc14afe9b49a4ecb0d6206766e9603ffeda671ed9e1ab6c1691a",
+      "Q_replayed": 10906.483291781296,
+      "Q_original": 10906.483291781296,
+      "difference": 0.0,
+      "records": [
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+          "pixels": 289,
+          "Q": 2681.640664212932,
+          "standardized_residual_max_abs": 11.544039739951987,
+          "raw_residual_mean_SCI": -0.023733710230745754,
+          "raw_residual_RMS_SCI": 1.3919729879311837
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+          "pixels": 289,
+          "Q": 3619.0725502016553,
+          "standardized_residual_max_abs": 11.12910989114859,
+          "raw_residual_mean_SCI": -0.0791187179466022,
+          "raw_residual_RMS_SCI": 2.11770612832793
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+          "pixels": 289,
+          "Q": 2460.760752411018,
+          "standardized_residual_max_abs": 12.132386496741644,
+          "raw_residual_mean_SCI": -0.13549577516246564,
+          "raw_residual_RMS_SCI": 1.2687512574626323
+        },
+        {
+          "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+          "pixels": 289,
+          "Q": 2145.009324955691,
+          "standardized_residual_max_abs": 10.17213936758856,
+          "raw_residual_mean_SCI": -0.06967367490206187,
+          "raw_residual_RMS_SCI": 1.0093167772042566
+        }
+      ]
+    }
+  },
+  "plot": {
+    "file": "artifacts/strong_lensing_response_repair_20261021/joint_scene/raw_residuals/all_data_final_standardized_residuals.png",
+    "sha256": "87f8447b2fb395488a710387683523012ce82b318e936c86063293cd9efdfcee",
+    "display_only_clip": [
+      -10,
+      10
+    ],
+    "raw_arrays_unclipped": true
+  },
+  "original_results_sha256_before": {
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/all_data.json": "82906d5b46ecda327d59a664e96b611ca66ed336c1296f6f072621fdc76ef268",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/all_data_linearized_arrays.npz": "2a3bdfbdb3c80baaf11b38cede539d69bf88291bbe020432f2ea6fe0792d3e28",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_training.json": "9fbd96ebe561e7fc3b32a045903ea10edea01523a54303c969896596648065d8",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_training_linearized_arrays.npz": "a74356c5dfffd88757842cbdb0a7130024091eb8a6448b156378249fa8ccecb5",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_application.json": "211d9c930e61300f2d8698be424f84c63b47a3afdd93b50853067fcde440fc38",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/execution_summary.json": "527a0407b7f095db18f900dc8e765e8526503c2f9db6b842bc3dc88b4f9ce17b"
+  },
+  "original_results_sha256_after": {
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/all_data.json": "82906d5b46ecda327d59a664e96b611ca66ed336c1296f6f072621fdc76ef268",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/all_data_linearized_arrays.npz": "2a3bdfbdb3c80baaf11b38cede539d69bf88291bbe020432f2ea6fe0792d3e28",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_training.json": "9fbd96ebe561e7fc3b32a045903ea10edea01523a54303c969896596648065d8",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_training_linearized_arrays.npz": "a74356c5dfffd88757842cbdb0a7130024091eb8a6448b156378249fa8ccecb5",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_application.json": "211d9c930e61300f2d8698be424f84c63b47a3afdd93b50853067fcde440fc38",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/execution_summary.json": "527a0407b7f095db18f900dc8e765e8526503c2f9db6b842bc3dc88b4f9ce17b"
+  },
+  "original_results_byte_identical": true,
+  "source_sha256": {
+    "scripts/export_he0435_joint_scene_residuals.py": "daa60b1aa829bb5ae5918efbcba31252ef64955554ef1ba5ab2f48a82783cff3",
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22"
+  },
+  "input_provenance": "../execution_summary.json records exact native receipts, response NPZ,20localPSFs and4archivedGWCS hashes. No new observation is opened.",
+  "field_map_scope": "Only target means are exported. Field nuisance flux/background values were not retained in the original fit receipt; reconstructing those would require an additional nuisance fit, which this no-refit exporter does not perform.",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

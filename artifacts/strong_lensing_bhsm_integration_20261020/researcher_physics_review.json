@@ -1,0 +1,173 @@
+{
+  "review_type": "AI_ASSISTED_FRESH_RESEARCHER_PHYSICS_REVIEW_NOT_EXTERNAL_HUMAN_PEER_REVIEW",
+  "disposition": "RETAINED_ACTION_EQUATIONS_CONSISTENT_NEW_SOURCE_APPLICATION_AND_NONUNIQUENESS_DERIVATION_COMPLETED",
+  "equations_or_existing_optical_values_changed": false,
+  "reviewed": [
+    {
+      "subject": "Covariant cubic Euler equation and stress",
+      "result": "PASS",
+      "independent_derivation": "delta[(grad T)^2 Box T] gives 2[Pi^2-(Box T)^2+Ric(U,U)]; homogeneous reduction reproduces J=v+6Hv^2/lambda and rho3=6Hv^3/lambda,p3=-2v^2 d/lambda."
+    },
+    {
+      "subject": "Local source, scalar-metric mixing, signs and dimensions",
+      "result": "PASS",
+      "independent_derivation": "A=1+4(d+2Hv)/lambda,b_T=2v^2/lambda; common metric elimination gives C=A-b_T^2/(2Mpl^2),J_eff=J_T-b_T(rho+rho_Sigma)/(2Mpl^2). lambda has mass dimension3,b_T mass dimension1; rV^3=16(b_T/Mpl)m_g(c/H0)^2/(lambda_hat C^2)."
+    },
+    {
+      "subject": "Regular root and original spherical source flux",
+      "result": "PASS",
+      "independent_derivation": "div F_R1=J_eff with F_R1=C grad pi-2[(Delta pi)grad pi-Hess(pi)grad pi]/lambda; integrated charge C r^2 pi_prime-4r pi_prime^2/lambda=-b_T GM(<r). Root regular at origin and continuous at the prescribed zero-density surface."
+    },
+    {
+      "subject": "Weyl projection and stationary delay",
+      "result": "PASS",
+      "independent_derivation": "Equal retained potentials give alpha_extra=4b integral_0^infinity Phi_prime/r dz; z=b tan(theta) gives the implemented cosine-weighted expression. Finite radial primitive fixes only an irrelevant additive constant. Intrinsic delay variation has -(1+zl)delta psi/c sign."
+    },
+    {
+      "subject": "Positive effective-mass theorem",
+      "result": "PASS",
+      "independent_derivation": "dln(f_M F)/dlnr=[(1+1/S)n_M+3(1-1/S)]/2>=0. One common positive halo reproduces both retained potentials, lensing and leading slow-matter dynamics. It represents the same contribution and is not added twice."
+    },
+    {
+      "subject": "Ordinary finite-body GR2 coefficient and impact convention",
+      "result": "PASS",
+      "independent_derivation": "Optical radius rho=r exp(-nu) gives the flat-subtracted exact integral 2 int[1/(sqrt(f)(1-r nu_prime))-1]dtheta. Expansion F2=11u^2/2+4pi x^2 p0+2x n1 u_prime yields -15x^2+60x^4-105x^6/2+15x^8 inside,15/(2x^2) outside. Direct differentiation verifies J_prime=I, center I/y=-6/7 and exterior 15pi(m/b)^2/4."
+    },
+    {
+      "subject": "Leading scalar principal coefficients",
+      "result": "PASS_WITH_DECLARED_SCOPE",
+      "independent_derivation": "Debraided principal tensor yields spatial C,time D,Kr=S,Kangular=S+rS_prime/2,Ktime=D+3(S-C)/2+rS_prime/2; positivity follows for nonnegative density. Radial speed squared about1.474 is not hidden or misidentified as a photon speed."
+    },
+    {
+      "subject": "Actual later BHSM source trail",
+      "result": "DERIVED_SOURCE_IDENTITIES_AND_EXPLICIT_NONUNIQUENESS",
+      "independent_derivation": "v7.1 provides oriented R85 and R54 critical-value/KKT maps; their source pullback includes J_P-B D_perp^-1 J_Q-B q0. Covariant matcher variation fixes the canonical cap sum and operational boundary stress. The later encapsulation Euler source depends on an unselected invariant density; it is not determined by Q_Sigma alone."
+    }
+  ],
+  "concrete_corrections": [
+    {
+      "priority": "P2",
+      "status": "RESOLVED_BY_ROOT",
+      "finding": "Distinguish package-era numerical residuals from current-platform replay residuals; do not replace historical evidence."
+    },
+    {
+      "priority": "P2",
+      "status": "RESOLVED",
+      "finding": "q=0 is excluded by the witness Dirichlet ball; it is only a formal limit. Kernel retention statement applies to other physical domains."
+    },
+    {
+      "priority": "P2",
+      "status": "RESOLVED",
+      "finding": "Ordinary-GR exact material K_uu and leading-R1 K_uu are separate applications; neither substitutes for an exact modified-TOV solution."
+    }
+  ],
+  "new_application": {
+    "artifact": "artifacts/strong_lensing_bhsm_integration_20261020/source_application.json",
+    "pi_prime_R_in_MplH0": -0.0002119825778845613,
+    "integrated_source_natural": -1.216417408185084e-13,
+    "max_original_scalar_flux_relative_residual": 4.15047479544644e-16,
+    "max_original_metric_Gauss_relative_residual": 0.0,
+    "scalar_shell_jump_relative_residual": 6.225712193169661e-16,
+    "GR_reference_K_uu_per_Mpc": -0.0005317137194453,
+    "leading_R1_K_uu_per_Mpc": -0.0005317155655079203,
+    "both_material_jumps_zero_at_their_stated_orders": true,
+    "physical_admission": false
+  },
+  "underdetermination_proofs": [
+    "Two explicit positive quadratic lifts on the same normalized Dirichlet ball reproduce identical frozen C,D but have B/ell0^2=0.23591256607857095 and0.058978141519642736, with expansion scales p ell0^2=1 and4. Therefore those microscopic data are not uniquely fixed by the leading R1 action.",
+    "Inherited distributed exterior seam source a Theta(r-r_star)/r^2 integrates to flux a(1/r-r_star/r^2). Its growing charge and1/r tail cannot be identified by constant field rescaling with the isolated finite-charge R1 flux/metric1/r^2 tail. This rejects direct identification only, not every possible owned nonlocal bridge."
+  ],
+  "remaining_physical_relations": [
+    {
+      "relation": "Canonical surface/cap/interface source pullback into independent R1 T and metric rows",
+      "why_not_determined": "An evaluated physical embedding/profile and invariant interface density are not selected by the retained low-energy C,D or generic R54 trace functor. Source correction in the Schur reduction depends on complement forcing as well as its operator.",
+      "evidence": {
+        "path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\owner_authorized_encapsulation_interface_action.py",
+        "line": 422
+      }
+    },
+    {
+      "relation": "Physical complement spectrum, cubic vertex and normalization/cutoff",
+      "why_not_determined": "The two explicitly admissible quadratic witnesses establish nonuniqueness with the same leading inputs. Their ell0 is not assigned to a kpc scale.",
+      "evidence": {
+        "path": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\strong-lensing-first-comparison-20261020\\docs\\strong_lensing_r1_screened_20261020\\BHSM_COMMON_SOURCE_DERIVATION_20261020.md",
+        "line": 213
+      }
+    },
+    {
+      "relation": "Environmental nonlinear boundary problem",
+      "why_not_determined": "An optical tidal nuisance alone does not supply the scalar environmental Hessian and its cross terms. The present isolated spherical effective boundary state is explicit."
+    },
+    {
+      "relation": "Scalar-GR higher-order fluid/optical response and global closed matching",
+      "why_not_determined": "Common ordinary-GR2 terms with fixed leading scalar do not solve mixed scalar orders or exact finite-distance cosmological arrival transfer. No physical error bound is inferred from their small differential drift."
+    },
+    {
+      "relation": "Full coupled stability and ultraviolet causal completion",
+      "why_not_determined": "Leading scalar principal positivity and conditional complement positivity are limited checks; the retained scalar has superluminal radial characteristics."
+    }
+  ],
+  "focused_validation": {
+    "command": "python -m pytest -q tests/test_strong_lensing_surface_source.py",
+    "passed": 7,
+    "reproduction": "python scripts/run_strong_lensing_surface_source.py",
+    "new_application_status": "PASS",
+    "prior_evidence_reused": "nine numerical commands,1161 numeric comparisons,16 focused checks; not repeated during source continuation"
+  },
+  "physical_guard_unchanged": 2e-10,
+  "additional_assumptions_selected_for_galaxy": false,
+  "external_BHSM_files_edited": false,
+  "input_sha256": {
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "1ad0a1d6260daa504e75672799f88df935d203940f3c6b59c1fa724b4e54cc7a",
+    "docs/strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md": "c5ac9a69ac0f0aaf9443d8411a82367198353bc366815ec753c058e5c0e991d4",
+    "docs/strong_lensing_r1_screened_20261020/FINITE_BODY_GR_2PM_DERIVATION_20261020.md": "b10002ec233391cd6a076800b4ab69828d410953df3fd1d3365e4b4fa0ad02c1",
+    "docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md": "2e86b4514b473153fb68b91c88492ee0367e52d3e963a0aec7d8bd3855e16266",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_gr2.py": "5edd7987ec568fde047b3e033cdf86ed1ac53cf2587f30f8244c9fa024b9ff11",
+    "code/strong_lensing_surface_source.py": "02c503fb0e6b13fcbaab62d6b43d35befbfe534670c82c7d7b1a2579ec4eb5b7",
+    "scripts/run_strong_lensing_surface_source.py": "4e76d7136528817b67ffc0abedef2ce084402fdbcabf383a424c8ca218447ed2",
+    "tests/test_strong_lensing_surface_source.py": "2ddc288d0159c42a4e167af1535eb053ca521c142e411816fffc855a73e89941",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\reduction.py": "12e446647111398cf25adc7117426837397589ddc57f44b12755444d44a2f544",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\mass_curvature_response.py": "976bfce9a396df574a3b18895cf0bbb8a7836f8c49ef94b0868d2359a4f3a4ef",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\terms.py": "1641f950a7177b31be85a065748c7d7831071c175dd3beef0c70497a780be378",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\variations.py": "61e02ae34256917540faf73123be6ed011adae8d26f750645412a3749dc11d32",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\coefficients.py": "c1e0a357e0943b33659c9ec8e117563eb38f51c41735f5943943fa032d3faf88",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\owner_authorized_encapsulation_interface_action.py": "a89dd9b7ac160cf19fdadb91e052379a505db45587dafe7a93a0bf64862820ba",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\fsc_encapsulation_constitutive_adjudication.py": "92b31e94608f11aacd73cefc5f8bfd729c8f6274787e4b9add01cf09b82380f9",
+    "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\docs\\BHSM_GLOBAL_ACTION_X2_SELECTION_V1.md": "fdd193692a5b191bb6538f4fac609d1f7435c1eff0f855f8b5cca31ae7274599"
+  },
+  "manuscript_and_CI_rereview": {
+    "status": "PASS_NO_CONCRETE_ERROR_FOUND",
+    "scope": "Current executed-source subsection eq:source-application and Appendix E app:source-reduction compared independently with the new code, derivation and actual receipt. Focused CI reviewed read-only; no tests rerun.",
+    "verified": [
+      "J_eff scalar/metric source signs, the factor 1/(2 Mpl\u00b2), and nonlinear radial flux match the original coupled rows.",
+      "The proper-radial layer jump includes R\u00b2. Actual source, pi_R, flux and mismatch values match source_application.json.",
+      "The exact ordinary-GR material K_uu is kept separate from the leading R1 result and the cosmological cap seam. No exact modified TOV solution or microscopic closure is claimed.",
+      "Covariant matcher variation gives the cap-stress factor of two and preserves the cap sum/mean distinction.",
+      "The Schur source includes complement forcing and the retained kernel coordinate with the correct minus signs.",
+      "The Dirichlet radial basis has n>=1. Complement witnesses share C,D but have different B and cutoffs; physical ell0 remains unspecified.",
+      "The direct seam-tail obstruction excludes constant normalization alone. It does not exclude every finite-domain or nonlocal map.",
+      "The source-checks CI job uses pinned scientific requirements plus pytest, runs the seven source tests and exact algebra script, and writes its algebra receipt separately under /tmp. The manuscript build remains separate."
+    ],
+    "tests_repeated": false,
+    "reviewed_sha256": {
+      "manuscript/sections/strong_lensing_galaxies_20261020.tex": "1ad0a1d6260daa504e75672799f88df935d203940f3c6b59c1fa724b4e54cc7a",
+      "manuscript/strong_lensing_main.tex": "b26e34e436c76d90b5433bdb7ce17ff8841d8655aaea2e89bb1945a99b453d28",
+      ".github/workflows/strong-lensing-manuscript.yml": "10923e851dce3cfb7ea6aadae0e18d11f1e5a1184cfb62a18fbd1f2cdcb92592",
+      "requirements-strong-lensing-review.txt": "2e9a192f1611a1b4619792ea42437390935c5d4bcf34332d46ecde1d8a8eb3fc",
+      "scripts/r1_screened_review/check_remaining_field_algebra.py": "ce764ea54d08564bf874564d728bb917125cc28b842dbc17e59ef53ee1527f48",
+      "code/strong_lensing_surface_source.py": "02c503fb0e6b13fcbaab62d6b43d35befbfe534670c82c7d7b1a2579ec4eb5b7",
+      "scripts/run_strong_lensing_surface_source.py": "4e76d7136528817b67ffc0abedef2ce084402fdbcabf383a424c8ca218447ed2",
+      "tests/test_strong_lensing_surface_source.py": "2ddc288d0159c42a4e167af1535eb053ca521c142e411816fffc855a73e89941",
+      "docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md": "2e86b4514b473153fb68b91c88492ee0367e52d3e963a0aec7d8bd3855e16266",
+      "artifacts/strong_lensing_bhsm_integration_20261020/source_application.json": "16933844859dc6c9a2a9d8842b70459a18cbcca9ebc878df82569a966899db05"
+    }
+  },
+  "final_frozen_source_refresh": {
+    "science_commit": "0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd",
+    "scope": "Final hashes refreshed after an AST-identical EOF whitespace correction and final manuscript prose, source table, display layout and data-availability pin changes. Previously reviewed source mathematics and seven-test evidence are retained.",
+    "scientific_tests_repeated": false,
+    "scientific_equations_changed": false,
+    "PDF_validation": "Root reports a clean final 18-page manuscript; this hash refresh does not constitute a separate visual PDF review."
+  }
+}

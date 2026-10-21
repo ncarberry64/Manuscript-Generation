@@ -1,0 +1,121 @@
+{
+  "scope": "Gaia FIELD candidates covering the union of four NRCB3 footprints, plus5arcsec motion padding; explicit10arcsec HE0435exclusion. Filter by exact projected native footprint before any pixel use. No quasar source row requested.",
+  "query_utc": "2026-10-21T13:15:29.000898+00:00",
+  "center_icrs_deg": [
+    69.562083333,
+    -12.287333333
+  ],
+  "enclosing_radius_arcsec": 63.80968657542398,
+  "exposure_metadata_only": [
+    {
+      "filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "shape": [
+        2048,
+        2048
+      ],
+      "corners_icrs_deg": [
+        [
+          69.57506860536839,
+          -12.284079266832396
+        ],
+        [
+          69.56962120263121,
+          -12.300895997302659
+        ],
+        [
+          69.55251135668213,
+          -12.295564418075015
+        ],
+        [
+          69.55781171153988,
+          -12.278902547480794
+        ]
+      ],
+      "date": "2022-10-12",
+      "time": "04:24:52.245"
+    },
+    {
+      "filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "shape": [
+        2048,
+        2048
+      ],
+      "corners_icrs_deg": [
+        [
+          69.57398638503852,
+          -12.28202608250446
+        ],
+        [
+          69.56853911755701,
+          -12.298842841544772
+        ],
+        [
+          69.55142937592343,
+          -12.293511352503375
+        ],
+        [
+          69.55672959736421,
+          -12.276849454055057
+        ]
+      ],
+      "date": "2022-10-12",
+      "time": "04:34:10.580"
+    },
+    {
+      "filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "shape": [
+        2048,
+        2048
+      ],
+      "corners_icrs_deg": [
+        [
+          69.5729042399004,
+          -12.279972447734398
+        ],
+        [
+          69.56745695776313,
+          -12.29678918898497
+        ],
+        [
+          69.5503473679883,
+          -12.291457644516049
+        ],
+        [
+          69.55564760453413,
+          -12.27479576332196
+        ]
+      ],
+      "date": "2022-10-12",
+      "time": "04:43:28.916"
+    },
+    {
+      "filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "shape": [
+        2048,
+        2048
+      ],
+      "corners_icrs_deg": [
+        [
+          69.57182212594556,
+          -12.277918766434787
+        ],
+        [
+          69.56637481406032,
+          -12.294735485232131
+        ],
+        [
+          69.54926538090481,
+          -12.289403870681681
+        ],
+        [
+          69.55456564750794,
+          -12.272742011279389
+        ]
+      ],
+      "date": "2022-10-12",
+      "time": "04:52:36.435"
+    }
+  ],
+  "adql": "SELECT g.source_id,g.ra,g.dec,g.ref_epoch,g.parallax,g.parallax_error,g.pmra,g.pmdec,g.pmra_error,g.pmdec_error,g.pmra_pmdec_corr,g.ruwe,g.duplicated_source,g.ipd_frac_multi_peak,g.ipd_frac_odd_win,g.phot_g_mean_mag,g.bp_rp,a.classprob_dsc_combmod_star,a.classprob_dsc_combmod_quasar,a.classprob_dsc_combmod_galaxy FROM gaiadr3.gaia_source AS g LEFT OUTER JOIN gaiadr3.astrophysical_parameters AS a ON g.source_id=a.source_id WHERE 1=CONTAINS(POINT('ICRS',g.ra,g.dec),CIRCLE('ICRS',69.562083333,-12.287333333,0.017724912937617774)) AND 0=CONTAINS(POINT('ICRS',g.ra,g.dec),CIRCLE('ICRS',69.562083333,-12.287333333,0.00277777777777778)) ORDER BY g.source_id",
+  "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync"
+}

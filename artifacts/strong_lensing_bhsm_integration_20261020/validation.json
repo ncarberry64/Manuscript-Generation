@@ -1,0 +1,283 @@
+{
+  "status": "PASS",
+  "equations_changed": false,
+  "numeric_values_compared": 1161,
+  "invalidating_discrepancies": [],
+  "diagnostics_assessed_by_equation_bounds": [
+    {
+      "command": "r1_screened",
+      "path": "/checks/max_integrated_scalar_equation_relative_residual",
+      "supplied": 7.883875800826668e-16,
+      "replay": 8.300949590885229e-16,
+      "absolute_difference": 4.170737900585611e-17,
+      "relative_difference": 0.05290212588265642
+    },
+    {
+      "command": "r1_screened",
+      "path": "/checks/max_independent_alpha_derivative_relative_error",
+      "supplied": 2.3877179486829967e-12,
+      "replay": 3.19013099127063e-12,
+      "absolute_difference": 8.024130425876335e-13,
+      "relative_difference": 0.33605855458356115
+    },
+    {
+      "command": "r1_screened",
+      "path": "/checks/max_independent_potential_derivative_relative_error",
+      "supplied": 1.920472965291313e-09,
+      "replay": 1.920585267590459e-09,
+      "absolute_difference": 1.1230229914584671e-13,
+      "relative_difference": 5.847637596336159e-05
+    },
+    {
+      "command": "r1_screened",
+      "path": "/checks/finite_matching_tail/0/fraction_extra_alpha_beyond_20_Mpc",
+      "supplied": 1.6599832589614394e-06,
+      "replay": 1.6599832586283725e-06,
+      "absolute_difference": 3.3306690738754696e-16,
+      "relative_difference": 2.0064473878846747e-10
+    },
+    {
+      "command": "r1_screened",
+      "path": "/checks/finite_matching_tail/1/fraction_extra_alpha_beyond_20_Mpc",
+      "supplied": 1.0839546505936326e-06,
+      "replay": 1.0839546484842089e-06,
+      "absolute_difference": 2.1094237467877974e-15,
+      "relative_difference": 1.9460442792810217e-09
+    },
+    {
+      "command": "r1_screened",
+      "path": "/checks/finite_matching_tail/2/fraction_extra_alpha_beyond_20_Mpc",
+      "supplied": 1.4476269389884777e-06,
+      "replay": 1.4476269385443885e-06,
+      "absolute_difference": 4.440892098500626e-16,
+      "relative_difference": 3.067704792509373e-10
+    },
+    {
+      "command": "screened_projection",
+      "path": "/max_relative_alpha_discrepancy",
+      "supplied": 4.431090567281086e-13,
+      "replay": 4.414330550581696e-13,
+      "absolute_difference": 1.676001669938981e-15,
+      "relative_difference": 0.00378236834587512
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/image_rows/1/static_quadrature_error_rad",
+      "supplied": 2.1964325424362105e-20,
+      "replay": 2.196453227000157e-20,
+      "absolute_difference": 2.068456394658191e-25,
+      "relative_difference": 9.41734542124352e-06
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/image_rows/2/static_quadrature_error_rad",
+      "supplied": 7.053710467220119e-20,
+      "replay": 7.05371046722012e-20,
+      "absolute_difference": 1.2037062152420224e-35,
+      "relative_difference": 1.7064865659511614e-16
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/image_rows/2/static_exact_minus_1PM_minus_2PM_rad",
+      "supplied": 1.709727797108659e-16,
+      "replay": 1.7097362674381315e-16,
+      "absolute_difference": 8.470329472543003e-22,
+      "relative_difference": 4.954197672206815e-06
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/central_exact_compactness_sequence/0/quadrature_error_in_coefficient",
+      "supplied": 2.752110841637189e-11,
+      "replay": 2.7521425993059368e-11,
+      "absolute_difference": 3.1757668747748604e-16,
+      "relative_difference": 1.153938579336305e-05
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/central_exact_compactness_sequence/1/quadrature_error_in_coefficient",
+      "supplied": 5.506771375257735e-11,
+      "replay": 5.5067713855965465e-11,
+      "absolute_difference": 1.0338811569087238e-19,
+      "relative_difference": 1.8774724542842216e-09
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/central_exact_compactness_sequence/2/quadrature_error_in_coefficient",
+      "supplied": 1.1009768437953998e-10,
+      "replay": 1.1009693176593822e-10,
+      "absolute_difference": 7.526136017587997e-16,
+      "relative_difference": 6.835871308285769e-06
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/central_coefficient/absolute_difference",
+      "supplied": -5.239392253386654e-12,
+      "replay": -1.2756545819669896e-11,
+      "absolute_difference": 7.517153566283241e-12,
+      "relative_difference": 1.4347376952783562
+    },
+    {
+      "command": "gr_optical_control",
+      "path": "/central_coefficient/relative_difference",
+      "supplied": 5.518232791625698e-11,
+      "replay": 1.3435449389092202e-10,
+      "absolute_difference": 7.917216597466504e-11,
+      "relative_difference": 1.4347376952783562
+    },
+    {
+      "command": "common_gr_composition",
+      "path": "/checks/primitive/0/absolute_difference",
+      "supplied": 0.0,
+      "replay": 4.440892098500626e-16,
+      "absolute_difference": 4.440892098500626e-16,
+      "relative_difference": 4.440892098500626e+284
+    },
+    {
+      "command": "common_gr_composition",
+      "path": "/checks/primitive/2/absolute_difference",
+      "supplied": 1.3322676295501878e-15,
+      "replay": 2.220446049250313e-15,
+      "absolute_difference": 8.881784197001252e-16,
+      "relative_difference": 0.6666666666666666
+    },
+    {
+      "command": "common_gr_composition",
+      "path": "/checks/primitive/3/absolute_difference",
+      "supplied": 8.881784197001252e-16,
+      "replay": 1.3322676295501878e-15,
+      "absolute_difference": 4.440892098500626e-16,
+      "relative_difference": 0.5
+    }
+  ],
+  "reproduction_policy": {
+    "relative_tolerance": 2e-09,
+    "default_absolute_tolerance": 1e-18,
+    "null_projector_absolute_tolerance": 1e-15,
+    "null_rank_singular_value_absolute_tolerance": 1e-10,
+    "canceled_difference_absolute_tolerance": 1e-09,
+    "note": "Special absolute bounds concern near-zero numerical nulls and subtraction diagnostics, not a physical error budget."
+  },
+  "focused_checks": [
+    {
+      "name": "integrated scalar flux residual",
+      "value": 8.300949590885229e-16,
+      "absolute_upper_bound": 1e-12,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "alpha derivative relative error",
+      "value": 3.19013099127063e-12,
+      "absolute_upper_bound": 1e-08,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "potential derivative relative error",
+      "value": 1.920585267590459e-09,
+      "absolute_upper_bound": 1e-07,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "independent direct-z projection relative discrepancy",
+      "value": 4.414330550581696e-13,
+      "absolute_upper_bound": 1e-10,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "independent lens-equation residual",
+      "value": 8.470329472543003e-22,
+      "absolute_upper_bound": 1e-18,
+      "units": "rad",
+      "passed": true
+    },
+    {
+      "name": "four-case GR2 lens-equation residual",
+      "value": 8.470329472543003e-22,
+      "absolute_upper_bound": 1e-18,
+      "units": "rad",
+      "passed": true
+    },
+    {
+      "name": "exact static GR remainder after 1PM and 2PM",
+      "value": 1.7097362674381315e-16,
+      "absolute_upper_bound": 3e-16,
+      "units": "rad",
+      "passed": true
+    },
+    {
+      "name": "central GR2 coefficient extrapolation difference",
+      "value": -1.2756545819669896e-11,
+      "absolute_upper_bound": 1e-09,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "GR2 potential primitive discrepancy",
+      "value": 2.220446049250313e-15,
+      "absolute_upper_bound": 1e-12,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "GR2 deflection derivative relative discrepancy",
+      "value": 7.318474910803791e-10,
+      "absolute_upper_bound": 1e-08,
+      "units": "dimensionless",
+      "passed": true
+    },
+    {
+      "name": "mixed stationary drift discrepancy",
+      "value": 6.149864943601766e-10,
+      "absolute_upper_bound": 2e-09,
+      "units": "s",
+      "passed": true
+    },
+    {
+      "name": "single-source fixed-center signal rank",
+      "value": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "single-source free-center signal rank",
+      "value": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "three-source finite-profile screened rank",
+      "value": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "name": "three-source distance rank with independent convergence",
+      "value": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "scalar profile held identical in common GR2 control",
+      "value": true,
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "headline": {
+    "screening_radius_kpc": 212.0292249771777,
+    "leading_fixed_body_reference_delay_offsets_s": [
+      25.959258149259767,
+      8.64901937507625
+    ],
+    "common_GR2_fixed_body_reference_delay_offsets_s": [
+      25.959327139730703,
+      8.649009238058625
+    ],
+    "screened_three_source_retained_norm_fraction": 0.0012022126048053731
+  },
+  "portability": "UTF-8/LF replay text; parsed numeric comparison ignores path-separator/hash provenance metadata; original evidence preserved byte-for-byte.",
+  "qualification": "No bound on omitted scalar higher orders, environmental response or global matching; no completed microscopic common-source derivation."
+}

@@ -1,0 +1,9 @@
+{
+  "status": "GAIA_TARGETS_EXPOSED_AND_SCORED_ONCE",
+  "time_utc": "2026-10-20T22:34:24.121248+00:00",
+  "protocol_sha256": "748b3b40369b220588de22c61d18448f8a94c99885a16f09d2c257ea18c1da6e",
+  "prediction_sha256": "70f61abfa8068d48cccb56f3b7990c3c203621d8116788132898e0cf3a68d0e6",
+  "head_before_query": "3032a852fdb497fcb7711991d236897637d55caf",
+  "target_sha256": "f16654b688a122ebf7733970e9f6dca39a2f18aa4b5a2c8b16c445689c4cec3a",
+  "score_sha256": "ca366d713090649c76a8638da5826bc95ecbd44115b636d4b0b7616afb35a08b"
+}

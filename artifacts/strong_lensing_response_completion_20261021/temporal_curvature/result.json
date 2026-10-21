@@ -1,0 +1,3303 @@
+{
+  "scope": "Actual9downlinked two-read-average trajectories on consumed4target+field exposures; no invented individual readvalues or optical/refit. Staticper-pixel intercept/rate profiled out. Actual18time supports enter quadraticmean and conditional\u03ba0Poisson/CDSmarginal metric.",
+  "equations": "y_g=beta+lambda*mean(t_gr)+a*mean(t_gr^2); original neighbour low-charge law a=\u03ba_e/(2gain) L[(gain*lambda_DN)^2]. The neighbour test is restricted to completeunsaturated9group centre+fourneighbours; JUMPpixels excluded.",
+  "noise_scope": "Independent post-correction CDS-marginal+conditional\u03ba0Poisson comparator only, no SIRS addition/no sigmafit. Errorbars/deltaQ are not source-complete significance or validation.",
+  "Jensen_scope": "Nativecorrected and subtraction ofroot data-anchored knownnonlinearaveraging diagnostic are shown separately. This is not a joint latent\u03b2/readlikelihood solve.",
+  "lambda_basis_scope": "The neighbour basis uses the actual native-rate pilot converted to physicalTFRAME timing, not the independently profiled initial-rate coefficient. Diagnostic\u03ba is not a joint incident\u03bb/\u03ba optimum or uniquely identified collection coefficient. Staticoptical shape errors alone are linear-in-time and are profiled out, but coefficient-calibration/reference temporal drift can also produce curvature.",
+  "rows": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 18,
+          "fixed_all9valid_pixels": 12,
+          "median_quadratic_DN_s2": 0.0002741547952462633,
+          "raw_deltaQ_linear_to_quadratic": 17.811725383775425,
+          "fully_unsaturated_neighbour_stencil_pixels": 1,
+          "conditional_leading_kappa_e_inverse": 1.912914981913185e-06,
+          "conditional_kappa_standard_error": 4.947712438631663e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.19233353725002486,
+            -1.5359301590740913,
+            -2.348414662155733,
+            3.331590967412353,
+            12.550908323868365,
+            18.41218836749879,
+            30.929886257809006,
+            38.94717724707747,
+            43.40293462632002
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.0001254746892600099,
+          "raw_deltaQ_linear_to_quadratic": 68.86750919248198,
+          "fully_unsaturated_neighbour_stencil_pixels": 74,
+          "conditional_leading_kappa_e_inverse": 1.5138212503870962e-06,
+          "conditional_kappa_standard_error": 5.161031569140079e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.27880918283562744,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.9431839558076334,
+            -2.8005731589204896,
+            -2.875497004433378,
+            0.5714085516282125,
+            8.28655636217958,
+            10.070521776609809,
+            14.572495558066763,
+            22.098217225623177,
+            20.365912397967154
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 117,
+          "fixed_all9valid_pixels": 117,
+          "median_quadratic_DN_s2": 3.7191202312174794e-07,
+          "raw_deltaQ_linear_to_quadratic": 86.4435221627983,
+          "fully_unsaturated_neighbour_stencil_pixels": 108,
+          "conditional_leading_kappa_e_inverse": -7.905449525711747e-06,
+          "conditional_kappa_standard_error": 8.758947842692634e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.1715855058191451,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.6034527932137791,
+            -0.3383034534958704,
+            -2.319290183670218,
+            -1.2717882248458126,
+            0.25241615104249737,
+            1.7177197916136777,
+            -0.01923057787707723,
+            4.047669340697239,
+            -1.0612196201229753
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 18,
+          "fixed_all9valid_pixels": 12,
+          "median_quadratic_DN_s2": 0.00027414829507182254,
+          "raw_deltaQ_linear_to_quadratic": 17.810715048544424,
+          "fully_unsaturated_neighbour_stencil_pixels": 1,
+          "conditional_leading_kappa_e_inverse": 1.9129147815056186e-06,
+          "conditional_kappa_standard_error": 4.947712438631663e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.19233253588062973,
+            -1.535954053043703,
+            -2.3484768275657473,
+            3.3314737301383084,
+            12.550715336561913,
+            18.411897208460488,
+            30.929473393978185,
+            38.94661971493699,
+            43.40220931970507
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.00012547468936669842,
+          "raw_deltaQ_linear_to_quadratic": 68.86749592669692,
+          "fully_unsaturated_neighbour_stencil_pixels": 74,
+          "conditional_leading_kappa_e_inverse": 1.513821157045351e-06,
+          "conditional_kappa_standard_error": 5.161031569140079e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2788091505221916,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.943183964657487,
+            -2.80057350472125,
+            -2.875497561171869,
+            0.5714076045490951,
+            8.286555035623874,
+            10.070519716829283,
+            14.572492667708403,
+            22.098213289174595,
+            20.36590710545153
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 117,
+          "fixed_all9valid_pixels": 117,
+          "median_quadratic_DN_s2": 3.719119872072468e-07,
+          "raw_deltaQ_linear_to_quadratic": 86.44352229014794,
+          "fully_unsaturated_neighbour_stencil_pixels": 108,
+          "conditional_leading_kappa_e_inverse": -7.905449513033729e-06,
+          "conditional_kappa_standard_error": 8.758947842692634e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.1715855051875878,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.6034527936137899,
+            -0.3383034535647313,
+            -2.319290186970286,
+            -1.2717882270865124,
+            0.2524161478472326,
+            1.7177197878188681,
+            -0.019230585500569674,
+            4.047669336676135,
+            -1.0612196328559704
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 17,
+          "fixed_all9valid_pixels": 0,
+          "median_quadratic_DN_s2": 0.003715573555005529,
+          "raw_deltaQ_linear_to_quadratic": 77.41494589885714,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 80,
+          "fixed_all9valid_pixels": 48,
+          "median_quadratic_DN_s2": 0.0004697542307465891,
+          "raw_deltaQ_linear_to_quadratic": 306.0383489235992,
+          "fully_unsaturated_neighbour_stencil_pixels": 20,
+          "conditional_leading_kappa_e_inverse": 6.0922551616954805e-06,
+          "conditional_kappa_standard_error": 4.9644993327915245e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.1264072749202985,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3333599341186449,
+            4.757940907765048,
+            8.91224618251573,
+            14.81047142587146,
+            23.099957769996195,
+            37.3525655283055,
+            51.200082636692116,
+            71.50813511240867,
+            92.43082273776308
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 117,
+          "fixed_all9valid_pixels": 117,
+          "median_quadratic_DN_s2": 0.00012686671353944037,
+          "raw_deltaQ_linear_to_quadratic": 169.96354972176456,
+          "fully_unsaturated_neighbour_stencil_pixels": 111,
+          "conditional_leading_kappa_e_inverse": 1.2723627814754461e-05,
+          "conditional_kappa_standard_error": 3.300401204100401e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.15480848188084667,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.5284186123725497,
+            -0.7018150092280444,
+            1.0854375424806946,
+            4.421619942412086,
+            6.905000483474085,
+            11.335878857005538,
+            13.004852049434726,
+            21.042595678207903,
+            24.630838399800417
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 17,
+          "fixed_all9valid_pixels": 0,
+          "median_quadratic_DN_s2": 0.0037155735309302544,
+          "raw_deltaQ_linear_to_quadratic": 77.41071321855563,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 80,
+          "fixed_all9valid_pixels": 48,
+          "median_quadratic_DN_s2": 0.00046975423442998125,
+          "raw_deltaQ_linear_to_quadratic": 306.0383393319855,
+          "fully_unsaturated_neighbour_stencil_pixels": 20,
+          "conditional_leading_kappa_e_inverse": 6.092255762991963e-06,
+          "conditional_kappa_standard_error": 4.9644993327915245e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.12640730708556108,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3333599403716045,
+            4.757940920633954,
+            8.912246155381904,
+            14.810471263517792,
+            23.099957485196285,
+            37.35256520026798,
+            51.200082172265446,
+            71.50813451327171,
+            92.43082191876847
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 117,
+          "fixed_all9valid_pixels": 117,
+          "median_quadratic_DN_s2": 0.00012686671385445482,
+          "raw_deltaQ_linear_to_quadratic": 169.96355073066212,
+          "fully_unsaturated_neighbour_stencil_pixels": 111,
+          "conditional_leading_kappa_e_inverse": 1.2723627909610622e-05,
+          "conditional_kappa_standard_error": 3.300401204100401e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.15480848627566213,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.5284186151636733,
+            -0.7018150204129961,
+            1.0854375367198659,
+            4.421619938974466,
+            6.90500048436367,
+            11.335878859596157,
+            13.004852046216502,
+            21.04259568085311,
+            24.630838390114736
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 22,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.0010066749571133369,
+          "raw_deltaQ_linear_to_quadratic": 131.30781960320846,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.18530758965566343,
+            2.42923013371095,
+            16.797896457266745,
+            58.03232358404506,
+            84.11893373491198,
+            120.07711065823963,
+            175.78868520526512,
+            237.07566868783763,
+            304.1744400935873
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 86,
+          "fixed_all9valid_pixels": 86,
+          "median_quadratic_DN_s2": 0.0002548894700520788,
+          "raw_deltaQ_linear_to_quadratic": 248.56571740680263,
+          "fully_unsaturated_neighbour_stencil_pixels": 75,
+          "conditional_leading_kappa_e_inverse": 1.6325520252168995e-06,
+          "conditional_kappa_standard_error": 4.061426603309682e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.22738537267465428,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.4604468709713572,
+            3.0599591648542206,
+            6.5615111973668405,
+            10.194750120767123,
+            16.37568723144098,
+            20.7593813125426,
+            28.681027728026038,
+            41.11629101589771,
+            56.171518725950996
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 7.233517777638818e-05,
+          "raw_deltaQ_linear_to_quadratic": 112.31354405794114,
+          "fully_unsaturated_neighbour_stencil_pixels": 112,
+          "conditional_leading_kappa_e_inverse": 8.672306333503087e-06,
+          "conditional_kappa_standard_error": 9.183209348380714e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.04465462468901158,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.12528673058596365,
+            0.7981447960407363,
+            0.05957159397117608,
+            2.611276399194166,
+            4.402053331344732,
+            5.7364324854403534,
+            5.646841043885925,
+            10.133000036211849,
+            13.029213376363854
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 22,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.0010066743867052936,
+          "raw_deltaQ_linear_to_quadratic": 131.01893007363046,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.18530003204797416,
+            2.4290773982262883,
+            16.797494493750452,
+            58.03155082080383,
+            84.1176317515566,
+            120.07512977480263,
+            175.78587495044988,
+            237.07188182316077,
+            304.1695370621025
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 86,
+          "fixed_all9valid_pixels": 86,
+          "median_quadratic_DN_s2": 0.00025488945570806184,
+          "raw_deltaQ_linear_to_quadratic": 248.56571769616406,
+          "fully_unsaturated_neighbour_stencil_pixels": 75,
+          "conditional_leading_kappa_e_inverse": 1.6325519803847788e-06,
+          "conditional_kappa_standard_error": 4.061426603309682e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2273853491567877,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.46044687473433044,
+            3.059959178227859,
+            6.561511199864366,
+            10.19475008841916,
+            16.375687207105386,
+            20.759381215733992,
+            28.681027607958956,
+            41.11629086171837,
+            56.171518549043505
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 7.233517774052288e-05,
+          "raw_deltaQ_linear_to_quadratic": 112.31354449460689,
+          "fully_unsaturated_neighbour_stencil_pixels": 112,
+          "conditional_leading_kappa_e_inverse": 8.672306315353209e-06,
+          "conditional_kappa_standard_error": 9.183209348380714e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.044654625063476935,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.12528673037430868,
+            0.7981447964935121,
+            0.059571592712274524,
+            2.61127640292794,
+            4.402053340975075,
+            5.736432496016523,
+            5.646841056192838,
+            10.133000053807994,
+            13.029213399964295
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 27,
+          "fixed_all9valid_pixels": 15,
+          "median_quadratic_DN_s2": 0.0006451006067910137,
+          "raw_deltaQ_linear_to_quadratic": 132.87315697080808,
+          "fully_unsaturated_neighbour_stencil_pixels": 1,
+          "conditional_leading_kappa_e_inverse": 8.517150135114925e-07,
+          "conditional_kappa_standard_error": 1.4465474484530186e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3218953878000953,
+            12.062811034429805,
+            20.67716474339278,
+            29.478536783247673,
+            34.72895667466501,
+            52.186506489584914,
+            66.89413971921844,
+            99.68446948205495,
+            138.23156194020402
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 84,
+          "fixed_all9valid_pixels": 84,
+          "median_quadratic_DN_s2": 7.239024668511562e-05,
+          "raw_deltaQ_linear_to_quadratic": 113.9537001728823,
+          "fully_unsaturated_neighbour_stencil_pixels": 81,
+          "conditional_leading_kappa_e_inverse": 1.997084953665078e-06,
+          "conditional_kappa_standard_error": 5.239190127362526e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3525071727890183,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.34585709847587925,
+            -0.6967048312662235,
+            1.8271435428171103,
+            4.053367528989055,
+            3.967586965998256,
+            9.189890868215965,
+            12.080728958477176,
+            17.260675052627196,
+            20.32474281454833
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 118,
+          "fixed_all9valid_pixels": 118,
+          "median_quadratic_DN_s2": -1.2416292945791886e-05,
+          "raw_deltaQ_linear_to_quadratic": 84.88978700474776,
+          "fully_unsaturated_neighbour_stencil_pixels": 117,
+          "conditional_leading_kappa_e_inverse": -1.4688260448997083e-05,
+          "conditional_kappa_standard_error": 1.4648049727409903e-05,
+          "curvature_vs_original_neighbour_basis_correlation": -0.12822914265107485,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.6082965060704478,
+            -0.9805703909117311,
+            -0.7906911116985565,
+            0.6642515829697279,
+            -2.3284711914831195,
+            0.4440889438129499,
+            -0.15243662071594588,
+            0.36570952190848105,
+            -2.0101394588615586
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 27,
+          "fixed_all9valid_pixels": 15,
+          "median_quadratic_DN_s2": 0.0006451004428350188,
+          "raw_deltaQ_linear_to_quadratic": 132.09191547305127,
+          "fully_unsaturated_neighbour_stencil_pixels": 1,
+          "conditional_leading_kappa_e_inverse": 8.517149554273457e-07,
+          "conditional_kappa_standard_error": 1.4465474484530186e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.32189622053987865,
+            12.062791588388386,
+            20.67711469040076,
+            29.47844562960424,
+            34.72880761702472,
+            52.18628217810429,
+            66.89382121964516,
+            99.6840407714965,
+            138.2310014537421
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 84,
+          "fixed_all9valid_pixels": 84,
+          "median_quadratic_DN_s2": 7.239024680874837e-05,
+          "raw_deltaQ_linear_to_quadratic": 113.95370006123146,
+          "fully_unsaturated_neighbour_stencil_pixels": 81,
+          "conditional_leading_kappa_e_inverse": 1.9970848845763353e-06,
+          "conditional_kappa_standard_error": 5.239190127362526e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3525071451930556,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.345857099637709,
+            -0.6967048456900853,
+            1.8271435252895416,
+            4.053367482942662,
+            3.9675868933057514,
+            9.189890789320994,
+            12.08072883575186,
+            17.260674880581348,
+            20.32474258377045
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 118,
+          "fixed_all9valid_pixels": 118,
+          "median_quadratic_DN_s2": -1.2416292963100618e-05,
+          "raw_deltaQ_linear_to_quadratic": 84.88978713092088,
+          "fully_unsaturated_neighbour_stencil_pixels": 117,
+          "conditional_leading_kappa_e_inverse": -1.4688260449356015e-05,
+          "conditional_kappa_standard_error": 1.4648049727409903e-05,
+          "curvature_vs_original_neighbour_basis_correlation": -0.12822914250697517,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.6082965061148445,
+            -0.9805703908986065,
+            -0.7906911121352734,
+            0.6642515829272566,
+            -2.3284711952973565,
+            0.4440889406461402,
+            -0.1524366245446942,
+            0.3657095195456272,
+            -2.010139466059598
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 18,
+          "fixed_all9valid_pixels": 9,
+          "median_quadratic_DN_s2": 0.0012965366717941182,
+          "raw_deltaQ_linear_to_quadratic": 127.7569044482798,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.43169578563510114,
+            5.390914581405898,
+            17.459179465501418,
+            32.14528289126362,
+            56.66587253664367,
+            81.92039637256208,
+            111.15343583348029,
+            145.9027648994334,
+            197.63207443413648
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 81,
+          "fixed_all9valid_pixels": 81,
+          "median_quadratic_DN_s2": 0.00014736309726870277,
+          "raw_deltaQ_linear_to_quadratic": 141.22013890419058,
+          "fully_unsaturated_neighbour_stencil_pixels": 69,
+          "conditional_leading_kappa_e_inverse": 3.7043828574197468e-06,
+          "conditional_kappa_standard_error": 8.428930679972639e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3514434183312283,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2139138750011697,
+            0.4329935053595533,
+            1.9440768677546194,
+            6.69938344216811,
+            10.413060566760763,
+            14.43757071574336,
+            19.282316223070154,
+            26.450780990530273,
+            35.19911666486734
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 114,
+          "fixed_all9valid_pixels": 114,
+          "median_quadratic_DN_s2": 5.279667740867463e-05,
+          "raw_deltaQ_linear_to_quadratic": 89.87709982892615,
+          "fully_unsaturated_neighbour_stencil_pixels": 102,
+          "conditional_leading_kappa_e_inverse": 2.318142845074379e-05,
+          "conditional_kappa_standard_error": 9.153970976989343e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.1823197547168946,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.051974192250669064,
+            0.6610377706961309,
+            -0.6564333202994898,
+            2.0072538054992193,
+            2.5419427191737514,
+            4.810333136438815,
+            5.807236766284309,
+            6.5389156491621865,
+            9.873409106030733
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 18,
+          "fixed_all9valid_pixels": 9,
+          "median_quadratic_DN_s2": 0.0012965357439128368,
+          "raw_deltaQ_linear_to_quadratic": 127.7556688567794,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.43169554422403345,
+            5.3909069379078955,
+            17.45915989836955,
+            32.1452470098931,
+            56.665814032651596,
+            81.92030955650823,
+            111.153312948417,
+            145.9025986608887,
+            197.63185672863858
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 81,
+          "fixed_all9valid_pixels": 81,
+          "median_quadratic_DN_s2": 0.0001473630973058886,
+          "raw_deltaQ_linear_to_quadratic": 141.22011091776207,
+          "fully_unsaturated_neighbour_stencil_pixels": 69,
+          "conditional_leading_kappa_e_inverse": 3.7043828794794163e-06,
+          "conditional_kappa_standard_error": 8.428930679972639e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.35144342100824894,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2139138693479372,
+            0.4329932389364785,
+            1.9440763585640626,
+            6.699382719040819,
+            10.413059308687432,
+            14.437568788237451,
+            19.28231354711428,
+            26.450777333284012,
+            35.19911184549778
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 114,
+          "fixed_all9valid_pixels": 114,
+          "median_quadratic_DN_s2": 5.2796677418117844e-05,
+          "raw_deltaQ_linear_to_quadratic": 89.87709992811436,
+          "fully_unsaturated_neighbour_stencil_pixels": 102,
+          "conditional_leading_kappa_e_inverse": 2.3181428461429273e-05,
+          "conditional_kappa_standard_error": 9.153970976989343e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.18231975477996953,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.05197419235225919,
+            0.6610377708646504,
+            -0.6564333227590736,
+            2.007253805923354,
+            2.54194271888501,
+            4.810333136928272,
+            5.807236764894251,
+            6.538915646237683,
+            9.873409103948944
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 21,
+          "fixed_all9valid_pixels": 7,
+          "median_quadratic_DN_s2": 0.0018682568390890326,
+          "raw_deltaQ_linear_to_quadratic": 138.58963609277052,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.10602965131642098,
+            16.95776160563306,
+            24.32870001572548,
+            40.88832861136469,
+            73.32787489673593,
+            105.4522705124645,
+            155.1180392448223,
+            210.63326040463562,
+            274.0545920555203
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 77,
+          "fixed_all9valid_pixels": 77,
+          "median_quadratic_DN_s2": 0.00029769586199596734,
+          "raw_deltaQ_linear_to_quadratic": 253.65117069268115,
+          "fully_unsaturated_neighbour_stencil_pixels": 58,
+          "conditional_leading_kappa_e_inverse": 2.3714558947666812e-06,
+          "conditional_kappa_standard_error": 5.681268936795318e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.29153585459225595,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.8423051855702286,
+            4.727030213937391,
+            6.055807483238026,
+            8.4770010204291,
+            16.713450602082283,
+            24.156820163474954,
+            36.00827939978012,
+            47.884962207069954,
+            62.92689888890324
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 111,
+          "fixed_all9valid_pixels": 111,
+          "median_quadratic_DN_s2": 3.78808255833069e-05,
+          "raw_deltaQ_linear_to_quadratic": 108.89007612265962,
+          "fully_unsaturated_neighbour_stencil_pixels": 103,
+          "conditional_leading_kappa_e_inverse": 9.319302866292585e-06,
+          "conditional_kappa_standard_error": 8.41587202939489e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.026322631563514616,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.7780192489512607,
+            1.6951759871969683,
+            1.5871469588185168,
+            1.1043048299995188,
+            1.8927080432976835,
+            2.217640565636639,
+            4.29396765194264,
+            4.438283434647676,
+            8.031727583084162
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 21,
+          "fixed_all9valid_pixels": 7,
+          "median_quadratic_DN_s2": 0.0018682566228498609,
+          "raw_deltaQ_linear_to_quadratic": 136.21355745659469,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.10602809986431996,
+            16.957716503739125,
+            24.32858819040814,
+            40.88813400570997,
+            73.32757707684219,
+            105.45183191680505,
+            155.1174208305147,
+            210.6324170199542,
+            274.0534765401075
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 77,
+          "fixed_all9valid_pixels": 77,
+          "median_quadratic_DN_s2": 0.00029769586230931353,
+          "raw_deltaQ_linear_to_quadratic": 253.65116134810157,
+          "fully_unsaturated_neighbour_stencil_pixels": 58,
+          "conditional_leading_kappa_e_inverse": 2.3714558980226335e-06,
+          "conditional_kappa_standard_error": 5.681268936795318e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.29153585399704174,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.8423051916790443,
+            4.727030149893273,
+            6.055807293020352,
+            8.477000662803675,
+            16.71345003231009,
+            24.156819256640794,
+            36.008278217238285,
+            47.884960581158666,
+            62.92689674360773
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 111,
+          "fixed_all9valid_pixels": 111,
+          "median_quadratic_DN_s2": 3.788082566295614e-05,
+          "raw_deltaQ_linear_to_quadratic": 108.89007645121569,
+          "fully_unsaturated_neighbour_stencil_pixels": 103,
+          "conditional_leading_kappa_e_inverse": 9.319302869891442e-06,
+          "conditional_kappa_standard_error": 8.41587202939489e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.026322631389373397,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.7780192493319376,
+            1.6951759880892971,
+            1.5871469586993676,
+            1.104304830664942,
+            1.892708043971477,
+            2.217640569051056,
+            4.293967659285146,
+            4.4382834405703715,
+            8.031727591319841
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 11,
+          "fixed_all9valid_pixels": 1,
+          "median_quadratic_DN_s2": 0.004797426190370715,
+          "raw_deltaQ_linear_to_quadratic": 107.97156414220463,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.04822012622523175,
+            13.952520035312261,
+            24.561333494204064,
+            41.68735886715831,
+            66.53701705261255,
+            127.05342328494135,
+            164.2751517828956,
+            221.25664590584984,
+            288.4073294819291
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.0003624427109460427,
+          "raw_deltaQ_linear_to_quadratic": 475.0437867911107,
+          "fully_unsaturated_neighbour_stencil_pixels": 63,
+          "conditional_leading_kappa_e_inverse": 9.412306749455854e-06,
+          "conditional_kappa_standard_error": 1.6738012668584953e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3206381727557268,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.13428002624226199,
+            4.361369646183399,
+            8.105653377863806,
+            14.900580018617461,
+            27.357892832526325,
+            43.322657797105684,
+            57.9606022951085,
+            77.85659171052029,
+            102.44453427326204
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 119,
+          "fixed_all9valid_pixels": 119,
+          "median_quadratic_DN_s2": 5.1789795242208424e-05,
+          "raw_deltaQ_linear_to_quadratic": 121.98226346560729,
+          "fully_unsaturated_neighbour_stencil_pixels": 119,
+          "conditional_leading_kappa_e_inverse": -7.324069434960808e-07,
+          "conditional_kappa_standard_error": 3.7537481693696654e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.13052204975377832,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.004168637404757556,
+            0.7582567428577558,
+            -0.6531197838397405,
+            0.5980594150973607,
+            2.763904942144064,
+            4.012300389793769,
+            4.569987132086331,
+            4.916703164073291,
+            7.659509599384667
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 11,
+          "fixed_all9valid_pixels": 1,
+          "median_quadratic_DN_s2": 0.0047966493251918475,
+          "raw_deltaQ_linear_to_quadratic": 107.96793526256056,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.04822010161065293,
+            13.952517836867798,
+            24.561328129428716,
+            41.687349482308946,
+            66.53700252017825,
+            127.05340295191081,
+            164.2751228108582,
+            221.25660637050896,
+            288.4072767722473
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.00036244269432218843,
+          "raw_deltaQ_linear_to_quadratic": 475.0437700217573,
+          "fully_unsaturated_neighbour_stencil_pixels": 63,
+          "conditional_leading_kappa_e_inverse": 9.412306929065631e-06,
+          "conditional_kappa_standard_error": 1.6738012668584953e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3206381840094576,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.13428002615548024,
+            4.361369452530349,
+            8.105652956727084,
+            14.900579346022477,
+            27.357891891175523,
+            43.32265655912275,
+            57.96060044530907,
+            77.85658910884877,
+            102.44453080599561
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 119,
+          "fixed_all9valid_pixels": 119,
+          "median_quadratic_DN_s2": 5.178979531938994e-05,
+          "raw_deltaQ_linear_to_quadratic": 121.98226395731882,
+          "fully_unsaturated_neighbour_stencil_pixels": 119,
+          "conditional_leading_kappa_e_inverse": -7.324069508881507e-07,
+          "conditional_kappa_standard_error": 3.7537481693696654e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.13052204873531673,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.004168637407301851,
+            0.7582567430796867,
+            -0.6531197925231945,
+            0.5980594066844123,
+            2.7639049298921785,
+            4.012300372896843,
+            4.569987107999026,
+            4.916703124489223,
+            7.659509551927506
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 22,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.001278955304124677,
+          "raw_deltaQ_linear_to_quadratic": 119.90755441414967,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.33298609262550727,
+            18.879281423251374,
+            37.62680437125724,
+            45.482494331795635,
+            53.27637602410476,
+            71.74897882644002,
+            103.78628906692624,
+            159.10447292394883,
+            214.8017461364403
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 76,
+          "fixed_all9valid_pixels": 76,
+          "median_quadratic_DN_s2": 0.0001913297128545921,
+          "raw_deltaQ_linear_to_quadratic": 165.0968000543789,
+          "fully_unsaturated_neighbour_stencil_pixels": 60,
+          "conditional_leading_kappa_e_inverse": 2.9854914128697112e-06,
+          "conditional_kappa_standard_error": 7.046227304420816e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.4174036754242021,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.5081695771556046,
+            2.2087140486965495,
+            7.177601556040836,
+            8.29486399105645,
+            13.767167528431216,
+            13.973156007147981,
+            18.24503143510278,
+            32.655772685297485,
+            42.391136641855276
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 114,
+          "fixed_all9valid_pixels": 114,
+          "median_quadratic_DN_s2": -1.2898136812801969e-05,
+          "raw_deltaQ_linear_to_quadratic": 91.71298959062166,
+          "fully_unsaturated_neighbour_stencil_pixels": 109,
+          "conditional_leading_kappa_e_inverse": -5.187819365304406e-07,
+          "conditional_kappa_standard_error": 1.1152636038373856e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.05923090319925316,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.26343351544276256,
+            0.4273778570903489,
+            0.2934869332827929,
+            -1.7709509215322157,
+            0.7078316767477861,
+            -1.3961008263815924,
+            -2.141192889062007,
+            -2.5097369208222275,
+            -2.5423637976345286
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 22,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.0012789544046646335,
+          "raw_deltaQ_linear_to_quadratic": 118.7489901868044,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3329866269275807,
+            18.87926518553441,
+            37.62676963800197,
+            45.48243433953083,
+            53.27628212400373,
+            71.74884101335584,
+            103.78609504030264,
+            159.104209169251,
+            214.8013959537257
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 76,
+          "fixed_all9valid_pixels": 76,
+          "median_quadratic_DN_s2": 0.00019132971291233145,
+          "raw_deltaQ_linear_to_quadratic": 165.09679999350615,
+          "fully_unsaturated_neighbour_stencil_pixels": 60,
+          "conditional_leading_kappa_e_inverse": 2.985491349200997e-06,
+          "conditional_kappa_standard_error": 7.046227304420816e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.4174036599569228,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.5081695808489677,
+            2.2087140574805626,
+            7.177601558330451,
+            8.294863975407694,
+            13.76716748762669,
+            13.973155900362963,
+            18.24503127517632,
+            32.655772518542854,
+            42.39113643443043
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 114,
+          "fixed_all9valid_pixels": 114,
+          "median_quadratic_DN_s2": -1.2898136831087392e-05,
+          "raw_deltaQ_linear_to_quadratic": 91.71298981278805,
+          "fully_unsaturated_neighbour_stencil_pixels": 109,
+          "conditional_leading_kappa_e_inverse": -5.187819259948152e-07,
+          "conditional_kappa_standard_error": 1.1152636038373856e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.05923090343979427,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.2634335156292105,
+            0.4273778573459264,
+            0.29348693289166017,
+            -1.7709509253942626,
+            0.7078316776387521,
+            -1.396100829387208,
+            -2.1411928950137193,
+            -2.509736926576267,
+            -2.5423638054113353
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 21,
+          "fixed_all9valid_pixels": 12,
+          "median_quadratic_DN_s2": 0.0007614738615190595,
+          "raw_deltaQ_linear_to_quadratic": 96.0409093593945,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.21887112795212094,
+            10.940509100509283,
+            22.103050958011835,
+            34.68500669999512,
+            52.1109781992211,
+            68.41885938676096,
+            86.00521347469142,
+            126.50805875321434,
+            176.1049032586253
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 81,
+          "fixed_all9valid_pixels": 81,
+          "median_quadratic_DN_s2": 6.947338730347e-05,
+          "raw_deltaQ_linear_to_quadratic": 82.14842160224381,
+          "fully_unsaturated_neighbour_stencil_pixels": 73,
+          "conditional_leading_kappa_e_inverse": 2.1856977209487835e-06,
+          "conditional_kappa_standard_error": 5.243357647083745e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.5531863539269563,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.9577593456129255,
+            3.2011608468374635,
+            2.8292921519957193,
+            4.784357053023253,
+            2.638910379599932,
+            3.3927861217521844,
+            6.179335075649705,
+            8.393022746633454,
+            14.368118152052482
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 109,
+          "fixed_all9valid_pixels": 109,
+          "median_quadratic_DN_s2": -1.909243328466114e-05,
+          "raw_deltaQ_linear_to_quadratic": 83.16609221091804,
+          "fully_unsaturated_neighbour_stencil_pixels": 97,
+          "conditional_leading_kappa_e_inverse": 2.7419421585192123e-05,
+          "conditional_kappa_standard_error": 1.726281632138912e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.24677939778287786,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.6207335620746013,
+            1.336319248567294,
+            0.2090568872483514,
+            0.10754052089619347,
+            -1.4684847614752727,
+            -1.0452442155828698,
+            -1.2998355469526879,
+            -2.538318076716999,
+            -1.7512068576012207
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 21,
+          "fixed_all9valid_pixels": 12,
+          "median_quadratic_DN_s2": 0.0007614738352167906,
+          "raw_deltaQ_linear_to_quadratic": 95.95217047118481,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.2188720034436192,
+            10.940488221640848,
+            22.10299713185051,
+            34.6849042220215,
+            52.11081003967515,
+            68.41860641730507,
+            86.00485631222482,
+            126.50757841246059,
+            176.10427516817174
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 81,
+          "fixed_all9valid_pixels": 81,
+          "median_quadratic_DN_s2": 6.947338767832705e-05,
+          "raw_deltaQ_linear_to_quadratic": 82.14842182886949,
+          "fully_unsaturated_neighbour_stencil_pixels": 73,
+          "conditional_leading_kappa_e_inverse": 2.1856977131805834e-06,
+          "conditional_kappa_standard_error": 5.243357647083745e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.553186349757096,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.9577593487318294,
+            3.20116085129892,
+            2.829292158606455,
+            4.784357058555689,
+            2.6389103554219338,
+            3.3927860834414814,
+            6.179335037386288,
+            8.39302268630276,
+            14.368118091950691
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 109,
+          "fixed_all9valid_pixels": 109,
+          "median_quadratic_DN_s2": -1.9092433287188124e-05,
+          "raw_deltaQ_linear_to_quadratic": 83.16609236456532,
+          "fully_unsaturated_neighbour_stencil_pixels": 97,
+          "conditional_leading_kappa_e_inverse": 2.741942165039076e-05,
+          "conditional_kappa_standard_error": 1.726281632138912e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.24677939819846148,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.6207335627717021,
+            1.3363192500548444,
+            0.209056887671359,
+            0.10754051988893923,
+            -1.4684847630994318,
+            -1.0452442188928652,
+            -1.2998355510357322,
+            -2.538318082349534,
+            -1.7512068632775986
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 16,
+          "fixed_all9valid_pixels": 4,
+          "median_quadratic_DN_s2": 0.0014303170864882653,
+          "raw_deltaQ_linear_to_quadratic": 88.89497663773506,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.13416434025092894,
+            19.68641678406815,
+            28.88503059271354,
+            35.98755599193517,
+            61.6611186836371,
+            106.0427959993623,
+            168.82207921108366,
+            221.73570080171132,
+            281.3924101608934
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 75,
+          "fixed_all9valid_pixels": 75,
+          "median_quadratic_DN_s2": 0.00022468503978205885,
+          "raw_deltaQ_linear_to_quadratic": 285.84767078345624,
+          "fully_unsaturated_neighbour_stencil_pixels": 56,
+          "conditional_leading_kappa_e_inverse": 2.446081408768987e-06,
+          "conditional_kappa_standard_error": 4.614730304419992e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.42479217266338654,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.7180368888111348,
+            5.457459358995986,
+            3.802747750108267,
+            7.457336417658947,
+            12.488097367110644,
+            19.94327370149073,
+            35.78202415289554,
+            42.10942308249047,
+            55.02021841508019
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 113,
+          "fixed_all9valid_pixels": 113,
+          "median_quadratic_DN_s2": 6.120920527763384e-06,
+          "raw_deltaQ_linear_to_quadratic": 123.37103016927077,
+          "fully_unsaturated_neighbour_stencil_pixels": 108,
+          "conditional_leading_kappa_e_inverse": 1.3147848048966401e-05,
+          "conditional_kappa_standard_error": 8.164298900922783e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.12011030197832842,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.15753198347963507,
+            1.0090507536609292,
+            -0.35454078408615985,
+            0.6500537996600653,
+            0.4195551717005775,
+            1.105376382408426,
+            6.678964220200113,
+            3.4571654144554764,
+            5.34948476278086
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 16,
+          "fixed_all9valid_pixels": 4,
+          "median_quadratic_DN_s2": 0.0014303112880761503,
+          "raw_deltaQ_linear_to_quadratic": 88.00053646019045,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.13416994027402307,
+            19.6863140494585,
+            28.884718701035183,
+            35.98694918344806,
+            61.6601245157472,
+            106.0413088461935,
+            168.81998261990222,
+            221.73286846274468,
+            281.388722087891
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 75,
+          "fixed_all9valid_pixels": 75,
+          "median_quadratic_DN_s2": 0.00022468504005294275,
+          "raw_deltaQ_linear_to_quadratic": 285.8476725753783,
+          "fully_unsaturated_neighbour_stencil_pixels": 56,
+          "conditional_leading_kappa_e_inverse": 2.446081438986221e-06,
+          "conditional_kappa_standard_error": 4.614730304419992e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.42479217655683865,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.7180368948774749,
+            5.45745938043571,
+            3.8027477032889654,
+            7.457336329607488,
+            12.488097214828977,
+            19.943273502270127,
+            35.78202393217788,
+            42.1094227152572,
+            55.02021795363568
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 113,
+          "fixed_all9valid_pixels": 113,
+          "median_quadratic_DN_s2": 6.120920528954198e-06,
+          "raw_deltaQ_linear_to_quadratic": 123.37103036017392,
+          "fully_unsaturated_neighbour_stencil_pixels": 108,
+          "conditional_leading_kappa_e_inverse": 1.314784809605042e-05,
+          "conditional_kappa_standard_error": 8.164298900922783e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.12011030279131155,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.1575319835971551,
+            1.0090507543493228,
+            -0.35454078338264544,
+            0.6500537989149721,
+            0.4195551696298933,
+            1.1053763788926017,
+            6.6789642224765,
+            3.457165413058533,
+            5.349484760781003
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 27,
+          "fixed_all9valid_pixels": 12,
+          "median_quadratic_DN_s2": 0.000779651945034244,
+          "raw_deltaQ_linear_to_quadratic": 77.45307326967193,
+          "fully_unsaturated_neighbour_stencil_pixels": 1,
+          "conditional_leading_kappa_e_inverse": 5.639296590070679e-07,
+          "conditional_kappa_standard_error": 1.665525553857105e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.1382671823345293,
+            4.037994880272279,
+            3.370699857237445,
+            20.530814578465264,
+            44.158906187713775,
+            60.19405651278265,
+            71.33582508329422,
+            91.81061672509479,
+            129.42628259378367
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 85,
+          "fixed_all9valid_pixels": 85,
+          "median_quadratic_DN_s2": 9.782932043255098e-05,
+          "raw_deltaQ_linear_to_quadratic": 87.80567715817925,
+          "fully_unsaturated_neighbour_stencil_pixels": 75,
+          "conditional_leading_kappa_e_inverse": 1.0370579115759761e-06,
+          "conditional_kappa_standard_error": 3.906025305040509e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.279416310443003,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.10910588250616461,
+            0.750747798309434,
+            -1.067787530220936,
+            4.480225174570304,
+            7.289118562811652,
+            7.768593544285995,
+            7.249514340902801,
+            14.607226339840386,
+            17.977726281103333
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 1.0901336616976392e-06,
+          "raw_deltaQ_linear_to_quadratic": 91.75973155871634,
+          "fully_unsaturated_neighbour_stencil_pixels": 105,
+          "conditional_leading_kappa_e_inverse": 1.2173620441444474e-06,
+          "conditional_kappa_standard_error": 7.5275222255384055e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.04819745434931922,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.15599937925999693,
+            0.4406487054679857,
+            -2.958836958819201,
+            1.5176912592222451,
+            2.903982156239326,
+            0.2262204548836557,
+            -1.8472489491087298,
+            0.78578089590109,
+            0.5852881101364514
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 27,
+          "fixed_all9valid_pixels": 12,
+          "median_quadratic_DN_s2": 0.0007796513308844852,
+          "raw_deltaQ_linear_to_quadratic": 75.39078298759648,
+          "fully_unsaturated_neighbour_stencil_pixels": 1,
+          "conditional_leading_kappa_e_inverse": 5.639294023744838e-07,
+          "conditional_kappa_standard_error": 1.665525553857105e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.13826401119891743,
+            4.037931482740983,
+            3.3705258959275852,
+            20.530477908382277,
+            44.158347561067565,
+            60.193205256187206,
+            71.33461701268774,
+            91.80899206980614,
+            129.424175496988
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 85,
+          "fixed_all9valid_pixels": 85,
+          "median_quadratic_DN_s2": 9.782932086567852e-05,
+          "raw_deltaQ_linear_to_quadratic": 87.80567440470483,
+          "fully_unsaturated_neighbour_stencil_pixels": 75,
+          "conditional_leading_kappa_e_inverse": 1.0370578470477137e-06,
+          "conditional_kappa_standard_error": 3.906025305040509e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2794162829897019,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.10910588046649862,
+            0.7507477171426596,
+            -1.0677877780211948,
+            4.480224752068157,
+            7.289117860699855,
+            7.76859242756566,
+            7.24951270245478,
+            14.607224201768108,
+            17.977723506108077
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 1.090133633783395e-06,
+          "raw_deltaQ_linear_to_quadratic": 91.75973191655426,
+          "fully_unsaturated_neighbour_stencil_pixels": 105,
+          "conditional_leading_kappa_e_inverse": 1.2173620791439534e-06,
+          "conditional_kappa_standard_error": 7.5275222255384055e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.048197455396938274,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.15599937915582934,
+            0.4406487067926753,
+            -2.9588369646968884,
+            1.5176912581070263,
+            2.9039821587612153,
+            0.2262204502147712,
+            -1.8472489578048183,
+            0.7857808881775635,
+            0.5852880995330573
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 14,
+          "fixed_all9valid_pixels": 2,
+          "median_quadratic_DN_s2": 0.002944019560056077,
+          "raw_deltaQ_linear_to_quadratic": 84.45937001706069,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.3877596535303667,
+            17.585393326727228,
+            31.574694938156654,
+            60.78546261403915,
+            83.46772687195266,
+            132.3799715986163,
+            217.00620558309242,
+            292.09301085663105,
+            365.00501144266946
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.0003418551740988979,
+          "raw_deltaQ_linear_to_quadratic": 380.7957280894683,
+          "fully_unsaturated_neighbour_stencil_pixels": 61,
+          "conditional_leading_kappa_e_inverse": 4.800533885099612e-06,
+          "conditional_kappa_standard_error": 1.095612203035706e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2928792206188617,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.040436605974039766,
+            3.3869502403882596,
+            6.57070043246956,
+            15.460712588656833,
+            22.45342816497138,
+            29.733141559651237,
+            45.055781835702604,
+            61.783792870554905,
+            80.72355384288345
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 121,
+          "fixed_all9valid_pixels": 121,
+          "median_quadratic_DN_s2": 4.4541266662001636e-05,
+          "raw_deltaQ_linear_to_quadratic": 131.29047536639962,
+          "fully_unsaturated_neighbour_stencil_pixels": 121,
+          "conditional_leading_kappa_e_inverse": 9.736914889769325e-06,
+          "conditional_kappa_standard_error": 3.3489424222566994e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2199175139022669,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.17816718455277386,
+            -0.09472333377893746,
+            -0.8670774677571781,
+            3.6146241199652667,
+            4.743488570733379,
+            1.8243294508338808,
+            4.037466175903068,
+            6.206131160249595,
+            8.931250826749244
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 14,
+          "fixed_all9valid_pixels": 2,
+          "median_quadratic_DN_s2": 0.002944017032599055,
+          "raw_deltaQ_linear_to_quadratic": 84.45580966551688,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.3877590474761661,
+            17.585383756183774,
+            31.57465768967097,
+            60.78539624247583,
+            83.46761568222007,
+            132.37980747271217,
+            217.00598120941368,
+            292.09271034107496,
+            365.00461171594316
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.00034185517538177964,
+          "raw_deltaQ_linear_to_quadratic": 380.79570724454857,
+          "fully_unsaturated_neighbour_stencil_pixels": 61,
+          "conditional_leading_kappa_e_inverse": 4.800534045664682e-06,
+          "conditional_kappa_standard_error": 1.095612203035706e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.29287923925891285,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.040436611104322936,
+            3.386950036505256,
+            6.570700009901277,
+            15.460711812776639,
+            22.453426977859923,
+            29.73313985833898,
+            45.05577941291574,
+            61.78378951069186,
+            80.7235494335367
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 121,
+          "fixed_all9valid_pixels": 121,
+          "median_quadratic_DN_s2": 4.454126664711255e-05,
+          "raw_deltaQ_linear_to_quadratic": 131.29047587913752,
+          "fully_unsaturated_neighbour_stencil_pixels": 121,
+          "conditional_leading_kappa_e_inverse": 9.736914910085551e-06,
+          "conditional_kappa_standard_error": 3.3489424222566994e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2199175148234464,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.17816718473547724,
+            -0.09472333424016631,
+            -0.8670774721309173,
+            3.6146241172903273,
+            4.743488564274193,
+            1.8243294270773147,
+            4.037466145000053,
+            6.206131122233924,
+            8.931250781064326
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 20,
+          "fixed_all9valid_pixels": 4,
+          "median_quadratic_DN_s2": 0.0013591756143870894,
+          "raw_deltaQ_linear_to_quadratic": 100.36899196685707,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2596272027160573,
+            18.0973892099302,
+            46.6610995508847,
+            52.952219254632155,
+            73.90686740076234,
+            105.63937809572036,
+            150.29187170083503,
+            210.1722400618088,
+            287.77428811028267
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 83,
+          "fixed_all9valid_pixels": 83,
+          "median_quadratic_DN_s2": 0.000248338112679352,
+          "raw_deltaQ_linear_to_quadratic": 284.4241986162293,
+          "fully_unsaturated_neighbour_stencil_pixels": 64,
+          "conditional_leading_kappa_e_inverse": 3.4664664541264436e-06,
+          "conditional_kappa_standard_error": 7.560174183744401e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3979884707457328,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.32184490408571903,
+            2.602180131655153,
+            6.867532795135321,
+            10.803726339572483,
+            19.807384459719685,
+            18.835409119511798,
+            26.515260293122854,
+            39.86307580455395,
+            55.81641172525885
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 112,
+          "fixed_all9valid_pixels": 112,
+          "median_quadratic_DN_s2": 7.855397716269364e-06,
+          "raw_deltaQ_linear_to_quadratic": 85.85637573472394,
+          "fully_unsaturated_neighbour_stencil_pixels": 108,
+          "conditional_leading_kappa_e_inverse": 2.1257544512183745e-05,
+          "conditional_kappa_standard_error": 9.209013992071271e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.2625328153636656,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.04943734369023457,
+            -0.23578218328271178,
+            0.6296373712980847,
+            1.05791707257596,
+            5.084959818245183,
+            0.08361910455074144,
+            -1.0827059716096947,
+            1.6915042591604135,
+            4.232926199634238
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 20,
+          "fixed_all9valid_pixels": 4,
+          "median_quadratic_DN_s2": 0.0013591745991318512,
+          "raw_deltaQ_linear_to_quadratic": 99.55572490236568,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.25962615743829787,
+            18.09736063730375,
+            46.66104000143264,
+            52.95211216131281,
+            73.90670107644547,
+            105.63913322463605,
+            150.29152755894324,
+            210.17177222889802,
+            287.77366777109364
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 83,
+          "fixed_all9valid_pixels": 83,
+          "median_quadratic_DN_s2": 0.0002483381115321453,
+          "raw_deltaQ_linear_to_quadratic": 284.4241978980108,
+          "fully_unsaturated_neighbour_stencil_pixels": 64,
+          "conditional_leading_kappa_e_inverse": 3.466466440959297e-06,
+          "conditional_kappa_standard_error": 7.560174183744401e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3979884660546082,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3218449062231309,
+            2.6021801279745915,
+            6.867532774144246,
+            10.803726287860181,
+            19.80738440175101,
+            18.835408963736867,
+            26.51526007221468,
+            39.8630755179263,
+            55.816411381593795
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 112,
+          "fixed_all9valid_pixels": 112,
+          "median_quadratic_DN_s2": 7.855397713574378e-06,
+          "raw_deltaQ_linear_to_quadratic": 85.85637597630857,
+          "fully_unsaturated_neighbour_stencil_pixels": 108,
+          "conditional_leading_kappa_e_inverse": 2.1257544578714127e-05,
+          "conditional_kappa_standard_error": 9.209013992071271e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.26253281633204323,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.049437343601034626,
+            -0.2357821835523999,
+            0.6296373685184969,
+            1.0579170725968232,
+            5.0849598218302265,
+            0.08361909968131988,
+            -1.0827059797806138,
+            1.6915042524430342,
+            4.2329261922160155
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 26,
+          "fixed_all9valid_pixels": 16,
+          "median_quadratic_DN_s2": 0.0007516094350824029,
+          "raw_deltaQ_linear_to_quadratic": 72.53456072548992,
+          "fully_unsaturated_neighbour_stencil_pixels": 2,
+          "conditional_leading_kappa_e_inverse": 7.120981843595806e-07,
+          "conditional_kappa_standard_error": 1.0812403579712862e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2753521376432464,
+            2.841474831874544,
+            4.126997335943255,
+            19.2061742818455,
+            25.8759989251963,
+            38.35354184552469,
+            52.811437167586476,
+            75.94871862856425,
+            95.83341753949324
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 1.1220950635010083e-05,
+          "raw_deltaQ_linear_to_quadratic": 79.1038394613165,
+          "fully_unsaturated_neighbour_stencil_pixels": 79,
+          "conditional_leading_kappa_e_inverse": 1.5975904123676486e-06,
+          "conditional_kappa_standard_error": 5.987245639877135e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.4239346136730226,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.26910129820240164,
+            -0.8364043647864654,
+            -1.4850839042527695,
+            3.8940495373049475,
+            2.8461436696168647,
+            1.6710912438649916,
+            0.4826078272892351,
+            3.8468852094701496,
+            4.917779807435647
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 121,
+          "fixed_all9valid_pixels": 121,
+          "median_quadratic_DN_s2": -3.0052919595167104e-05,
+          "raw_deltaQ_linear_to_quadratic": 129.31898229954245,
+          "fully_unsaturated_neighbour_stencil_pixels": 120,
+          "conditional_leading_kappa_e_inverse": -1.553992491674295e-05,
+          "conditional_kappa_standard_error": 1.48394863806774e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.044003875414777564,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.7093081853267618,
+            -1.5137627310309358,
+            -3.1225196559099735,
+            0.9410320990350206,
+            1.1656096106267835,
+            -3.7407171148823526,
+            -5.658920301325961,
+            -4.765643651313525,
+            -6.925655074880231
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 26,
+          "fixed_all9valid_pixels": 16,
+          "median_quadratic_DN_s2": 0.0007516088261123291,
+          "raw_deltaQ_linear_to_quadratic": 72.53045282447792,
+          "fully_unsaturated_neighbour_stencil_pixels": 2,
+          "conditional_leading_kappa_e_inverse": 7.120980290545122e-07,
+          "conditional_kappa_standard_error": 1.0812403579712862e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.27535159311495705,
+            2.841462600884925,
+            4.126963508296697,
+            19.206111173975014,
+            25.87589651471339,
+            38.35338672511247,
+            52.81121787759229,
+            75.94842224290394,
+            95.83303150371114
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 1.1220947178604701e-05,
+          "raw_deltaQ_linear_to_quadratic": 79.10383939267557,
+          "fully_unsaturated_neighbour_stencil_pixels": 79,
+          "conditional_leading_kappa_e_inverse": 1.597590366276198e-06,
+          "conditional_kappa_standard_error": 5.987245639877135e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.42393459944390505,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2691012994674603,
+            -0.8364043762487515,
+            -1.4850839327517162,
+            3.8940495234203416,
+            2.8461436261488915,
+            1.6710911739799625,
+            0.48260772739937,
+            3.846885077667805,
+            4.917779633177561
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 121,
+          "fixed_all9valid_pixels": 121,
+          "median_quadratic_DN_s2": -3.0052919636857893e-05,
+          "raw_deltaQ_linear_to_quadratic": 129.31898254480484,
+          "fully_unsaturated_neighbour_stencil_pixels": 120,
+          "conditional_leading_kappa_e_inverse": -1.553992487218572e-05,
+          "conditional_kappa_standard_error": 1.48394863806774e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.04400387611859754,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.7093081859278948,
+            -1.5137627322458704,
+            -3.1225196603203123,
+            0.9410320978329205,
+            1.1656096107054035,
+            -3.740717120146505,
+            -5.658920309192657,
+            -4.765643660025039,
+            -6.925655087373651
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 17,
+          "fixed_all9valid_pixels": 8,
+          "median_quadratic_DN_s2": 0.0012513704078602134,
+          "raw_deltaQ_linear_to_quadratic": 117.35851485130664,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2240940092226804,
+            7.600135312470982,
+            20.073962088589226,
+            35.959738022422286,
+            75.91535343379435,
+            99.1275682714359,
+            132.10591927851104,
+            177.60003261468782,
+            240.1648704381692
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 76,
+          "fixed_all9valid_pixels": 76,
+          "median_quadratic_DN_s2": 0.00019417973959817047,
+          "raw_deltaQ_linear_to_quadratic": 229.77441880135575,
+          "fully_unsaturated_neighbour_stencil_pixels": 58,
+          "conditional_leading_kappa_e_inverse": 5.042482997771195e-06,
+          "conditional_kappa_standard_error": 7.504232426195426e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.5481847182164852,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.2749450897194248,
+            2.3530123452437657,
+            5.395475361529443,
+            8.776899279502144,
+            13.758972896259294,
+            18.042156573607894,
+            25.76330546834604,
+            34.72685829696063,
+            48.27595621369071
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 3.6085489077891756e-05,
+          "raw_deltaQ_linear_to_quadratic": 87.76445530106203,
+          "fully_unsaturated_neighbour_stencil_pixels": 106,
+          "conditional_leading_kappa_e_inverse": 8.408002707446505e-06,
+          "conditional_kappa_standard_error": 8.261209822336954e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.012581829310722995,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.23676074894315008,
+            0.37033274846451114,
+            1.0804774141169948,
+            2.4799252254890916,
+            2.386168099828148,
+            0.6226257819470995,
+            3.0225887653342536,
+            2.6461419610043357,
+            6.58691494891605
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 17,
+          "fixed_all9valid_pixels": 8,
+          "median_quadratic_DN_s2": 0.0012513702253051672,
+          "raw_deltaQ_linear_to_quadratic": 117.35670852940353,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2240933771634488,
+            7.600116522177821,
+            20.073921375677685,
+            35.95966565286943,
+            75.91524393814996,
+            99.12739865913264,
+            132.1056788315926,
+            177.59970820010514,
+            240.16444353290606
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 76,
+          "fixed_all9valid_pixels": 76,
+          "median_quadratic_DN_s2": 0.0001941797383465417,
+          "raw_deltaQ_linear_to_quadratic": 229.77441174650448,
+          "fully_unsaturated_neighbour_stencil_pixels": 58,
+          "conditional_leading_kappa_e_inverse": 5.042483030970829e-06,
+          "conditional_kappa_standard_error": 7.504232426195426e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.5481847188276971,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.27494509218601115,
+            2.3530122433857947,
+            5.395475162702222,
+            8.776898906771843,
+            13.758972344999757,
+            18.042155728894762,
+            25.763304262900036,
+            34.7268566360059,
+            48.27595405694711
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 3.6085489078499465e-05,
+          "raw_deltaQ_linear_to_quadratic": 87.76445543299376,
+          "fully_unsaturated_neighbour_stencil_pixels": 106,
+          "conditional_leading_kappa_e_inverse": 8.408002726217264e-06,
+          "conditional_kappa_standard_error": 8.261209822336954e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.0125818299001334,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.23676074972418837,
+            0.3703327504069007,
+            1.080477414391683,
+            2.4799252266393523,
+            2.3861680988234264,
+            0.6226257766993916,
+            3.022588761801357,
+            2.6461419551487197,
+            6.58691494427505
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 21,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.0020497192553700088,
+          "raw_deltaQ_linear_to_quadratic": 131.96788303664056,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.23020906962013754,
+            19.032317778614242,
+            34.5987799218532,
+            46.8419744462772,
+            82.89114838150817,
+            142.64639734929128,
+            195.13152506056394,
+            266.32940098147213,
+            344.30144682425527
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 74,
+          "fixed_all9valid_pixels": 74,
+          "median_quadratic_DN_s2": 0.0001805344840930774,
+          "raw_deltaQ_linear_to_quadratic": 235.0707725698908,
+          "fully_unsaturated_neighbour_stencil_pixels": 51,
+          "conditional_leading_kappa_e_inverse": 6.925775667677799e-06,
+          "conditional_kappa_standard_error": 1.148626577763891e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.5306817330294934,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.9804670519525134,
+            6.370986075183012,
+            8.418160769398385,
+            7.132822537202776,
+            8.843166067702455,
+            19.691833098551843,
+            26.20325326033978,
+            38.77830587171599,
+            50.13076533024697
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 107,
+          "fixed_all9valid_pixels": 107,
+          "median_quadratic_DN_s2": 3.649487483705563e-05,
+          "raw_deltaQ_linear_to_quadratic": 100.92122761082776,
+          "fully_unsaturated_neighbour_stencil_pixels": 94,
+          "conditional_leading_kappa_e_inverse": 9.859431121624035e-06,
+          "conditional_kappa_standard_error": 8.961678842626628e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.029241308233722122,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.8643440887734172,
+            2.580809286797976,
+            1.0740826101014316,
+            1.0497019528600908,
+            0.9585551093234691,
+            4.643814277635655,
+            3.39222550962063,
+            6.724212979649559,
+            8.710874801450904
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "A",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 21,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.0020496684273889855,
+          "raw_deltaQ_linear_to_quadratic": 131.25824601760112,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.23020727251698028,
+            19.032278426649203,
+            34.598676825938036,
+            46.84177700460585,
+            82.89082609711409,
+            142.64591597826993,
+            195.1308459338621,
+            266.3284835871414,
+            344.30024814086534
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 74,
+          "fixed_all9valid_pixels": 74,
+          "median_quadratic_DN_s2": 0.0001805344845902696,
+          "raw_deltaQ_linear_to_quadratic": 235.0707720566518,
+          "fully_unsaturated_neighbour_stencil_pixels": 51,
+          "conditional_leading_kappa_e_inverse": 6.925775727217465e-06,
+          "conditional_kappa_standard_error": 1.148626577763891e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.5306817375660301,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.9804670648339745,
+            6.3709861655445135,
+            8.418160805297008,
+            7.132822432850205,
+            8.843165903040374,
+            19.691832930020873,
+            26.203252992636322,
+            38.7783055392027,
+            50.130764928045515
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 107,
+          "fixed_all9valid_pixels": 107,
+          "median_quadratic_DN_s2": 3.649487485662076e-05,
+          "raw_deltaQ_linear_to_quadratic": 100.92122784013439,
+          "fully_unsaturated_neighbour_stencil_pixels": 94,
+          "conditional_leading_kappa_e_inverse": 9.859431139764201e-06,
+          "conditional_kappa_standard_error": 8.961678842626628e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.02924130787479607,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.8643440894899252,
+            2.580809289652085,
+            1.0740826100802188,
+            1.049701953964355,
+            0.9585551104233117,
+            4.643814282009722,
+            3.3922255114145967,
+            6.724212983874326,
+            8.710874808191672
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 10,
+          "fixed_all9valid_pixels": 1,
+          "median_quadratic_DN_s2": 0.003007721766836208,
+          "raw_deltaQ_linear_to_quadratic": 97.82208889729353,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.7639874684382448,
+            2.2456305944255064,
+            42.16417862763933,
+            53.919640723353496,
+            113.52922879562948,
+            229.92543796165592,
+            354.7051920495569,
+            465.1748875437079,
+            552.0903838191098
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.0005497670283548107,
+          "raw_deltaQ_linear_to_quadratic": 794.7603694771537,
+          "fully_unsaturated_neighbour_stencil_pixels": 64,
+          "conditional_leading_kappa_e_inverse": 6.462987947476338e-06,
+          "conditional_kappa_standard_error": 8.976608285628926e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.28474311250902806,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.09753080160538737,
+            5.825286210005687,
+            10.045545206438891,
+            16.68517333637944,
+            33.485274894441375,
+            51.13099998058841,
+            73.3211714071568,
+            101.73432510077932,
+            127.1046661678655
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 120,
+          "fixed_all9valid_pixels": 120,
+          "median_quadratic_DN_s2": 0.00010622706705167386,
+          "raw_deltaQ_linear_to_quadratic": 173.78341666688834,
+          "fully_unsaturated_neighbour_stencil_pixels": 120,
+          "conditional_leading_kappa_e_inverse": 1.2971520584631977e-05,
+          "conditional_kappa_standard_error": 3.733572811777692e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.020353970465505695,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3291985613074594,
+            1.535340197854055,
+            3.1933344556811516,
+            1.445748345863619,
+            7.161029458275713,
+            8.335106849323468,
+            12.040087643335502,
+            20.559184978892123,
+            22.743769349564317
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "B",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 10,
+          "fixed_all9valid_pixels": 1,
+          "median_quadratic_DN_s2": 0.003007588869514679,
+          "raw_deltaQ_linear_to_quadratic": 97.8210950415862,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.7639865639694676,
+            2.2456011392273467,
+            42.16411543731965,
+            53.91954140429334,
+            113.52907716470645,
+            229.9252097618014,
+            354.704864387566,
+            465.17443880995506,
+            552.089794052903
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 82,
+          "fixed_all9valid_pixels": 82,
+          "median_quadratic_DN_s2": 0.0005497670303581388,
+          "raw_deltaQ_linear_to_quadratic": 794.7603706241133,
+          "fully_unsaturated_neighbour_stencil_pixels": 64,
+          "conditional_leading_kappa_e_inverse": 6.462988099747992e-06,
+          "conditional_kappa_standard_error": 8.976608285628926e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.28474313668129697,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.0975308059116447,
+            5.825286199924097,
+            10.04554502018052,
+            16.685173020428707,
+            33.48527459661256,
+            51.13099960890618,
+            73.32117085596997,
+            101.73432442413143,
+            127.1046650929922
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 120,
+          "fixed_all9valid_pixels": 120,
+          "median_quadratic_DN_s2": 0.00010622706502737124,
+          "raw_deltaQ_linear_to_quadratic": 173.7834172354071,
+          "fully_unsaturated_neighbour_stencil_pixels": 120,
+          "conditional_leading_kappa_e_inverse": 1.2971520714721541e-05,
+          "conditional_kappa_standard_error": 3.733572811777692e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.020353976025401715,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.32919856211821696,
+            1.5353401996558098,
+            3.193334465376563,
+            1.4457483322269988,
+            7.161029450705966,
+            8.335106830078917,
+            12.040087619096797,
+            20.559184966371465,
+            22.743769317911767
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 24,
+          "fixed_all9valid_pixels": 7,
+          "median_quadratic_DN_s2": 0.0009791752289004371,
+          "raw_deltaQ_linear_to_quadratic": 113.23127637227415,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3426464582302994,
+            5.12600232368326,
+            22.562552607933714,
+            26.781726183199712,
+            50.446225337427805,
+            91.06365766687891,
+            115.30421534510245,
+            165.87635086930803,
+            208.074585026326
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 79,
+          "fixed_all9valid_pixels": 79,
+          "median_quadratic_DN_s2": 0.0001737266966479305,
+          "raw_deltaQ_linear_to_quadratic": 180.1700552742459,
+          "fully_unsaturated_neighbour_stencil_pixels": 63,
+          "conditional_leading_kappa_e_inverse": 1.4791633683417196e-06,
+          "conditional_kappa_standard_error": 4.7517031386818967e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3318212842620292,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.53802067484291,
+            3.947693639274709,
+            6.5380274047310705,
+            5.064674954762599,
+            9.866117095418177,
+            16.880435085157757,
+            20.387818631290745,
+            31.01174919458155,
+            41.00767377642705
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 121,
+          "fixed_all9valid_pixels": 121,
+          "median_quadratic_DN_s2": 5.60150408127e-05,
+          "raw_deltaQ_linear_to_quadratic": 128.95552665434832,
+          "fully_unsaturated_neighbour_stencil_pixels": 121,
+          "conditional_leading_kappa_e_inverse": 2.039740184195178e-05,
+          "conditional_kappa_standard_error": 8.365345669468662e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.0928103284525673,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3663869500946471,
+            0.7262172587500865,
+            3.357420771402923,
+            -0.3933100389767753,
+            1.3230281794663614,
+            5.250676498858999,
+            5.572045043120786,
+            9.559266031613593,
+            10.422302797845619
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "C",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 24,
+          "fixed_all9valid_pixels": 7,
+          "median_quadratic_DN_s2": 0.0009791710484558071,
+          "raw_deltaQ_linear_to_quadratic": 112.42174725645995,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.34265144149627147,
+            5.12589375004736,
+            22.562307715303145,
+            26.781263921342184,
+            50.44546894408375,
+            91.06252373702543,
+            115.30260698845935,
+            165.87417309918285,
+            208.07174507171788
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 79,
+          "fixed_all9valid_pixels": 79,
+          "median_quadratic_DN_s2": 0.00017372669646096488,
+          "raw_deltaQ_linear_to_quadratic": 180.170052473868,
+          "fully_unsaturated_neighbour_stencil_pixels": 63,
+          "conditional_leading_kappa_e_inverse": 1.4791633714998756e-06,
+          "conditional_kappa_standard_error": 4.7517031386818967e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.3318212872898244,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.5380206797377,
+            3.9476936505957627,
+            6.538027378024236,
+            5.064674843586992,
+            9.866116931844966,
+            16.88043484134287,
+            20.38781828107886,
+            31.01174877159973,
+            41.00767320157072
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 121,
+          "fixed_all9valid_pixels": 121,
+          "median_quadratic_DN_s2": 5.6015040867814e-05,
+          "raw_deltaQ_linear_to_quadratic": 128.95552690106237,
+          "fully_unsaturated_neighbour_stencil_pixels": 121,
+          "conditional_leading_kappa_e_inverse": 2.0397401886678235e-05,
+          "conditional_kappa_standard_error": 8.365345669468662e-06,
+          "curvature_vs_original_neighbour_basis_correlation": 0.0928103290640071,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3663869502693387,
+            0.7262172590010751,
+            3.3574207728685734,
+            -0.39331004329458824,
+            1.3230281771015564,
+            5.250676501148271,
+            5.5720450421002825,
+            9.559266031641918,
+            10.42230279539288
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 26,
+          "fixed_all9valid_pixels": 16,
+          "median_quadratic_DN_s2": 0.0005439255460363848,
+          "raw_deltaQ_linear_to_quadratic": 84.78594003229816,
+          "fully_unsaturated_neighbour_stencil_pixels": 2,
+          "conditional_leading_kappa_e_inverse": 1.0559912461635576e-06,
+          "conditional_kappa_standard_error": 1.1428160967164936e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.30378283311512,
+            7.680102245865081,
+            14.256185160290755,
+            23.567875221933235,
+            29.81736473731094,
+            30.620645298831278,
+            32.00579307836914,
+            59.188883973141344,
+            86.58401863012068
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 79,
+          "fixed_all9valid_pixels": 79,
+          "median_quadratic_DN_s2": 0.00014410825632710944,
+          "raw_deltaQ_linear_to_quadratic": 95.50544073192675,
+          "fully_unsaturated_neighbour_stencil_pixels": 67,
+          "conditional_leading_kappa_e_inverse": 2.3740470827575316e-06,
+          "conditional_kappa_standard_error": 9.915290423126907e-07,
+          "curvature_vs_original_neighbour_basis_correlation": -0.03030321944309649,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.5128559639162532,
+            1.8355195191495453,
+            4.375387522818177,
+            6.362016746048666,
+            7.972517205186965,
+            9.485286568999172,
+            9.129080933274937,
+            18.31908702309954,
+            25.79039159338055
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 101,
+          "fixed_all9valid_pixels": 101,
+          "median_quadratic_DN_s2": 2.8268243778377853e-05,
+          "raw_deltaQ_linear_to_quadratic": 96.4144784160045,
+          "fully_unsaturated_neighbour_stencil_pixels": 80,
+          "conditional_leading_kappa_e_inverse": 2.4995943974637658e-05,
+          "conditional_kappa_standard_error": 1.6167156938296884e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.15427496041282632,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.5446266166391862,
+            1.15035846881226,
+            1.252553519304491,
+            1.6770695704624436,
+            1.6436611063163875,
+            2.6611809232556594,
+            -0.02481441646600131,
+            5.961517889746794,
+            6.08217743292828
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "D",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 26,
+          "fixed_all9valid_pixels": 16,
+          "median_quadratic_DN_s2": 0.0005439251254164102,
+          "raw_deltaQ_linear_to_quadratic": 84.36488589838831,
+          "fully_unsaturated_neighbour_stencil_pixels": 2,
+          "conditional_leading_kappa_e_inverse": 1.0559910232565666e-06,
+          "conditional_kappa_standard_error": 1.1428160967164936e-06,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.3037832113938652,
+            7.680092334796782,
+            14.25616437969758,
+            23.567837932645674,
+            29.817304267037528,
+            30.620553987947538,
+            32.00566280169127,
+            59.188709771908364,
+            86.583789325344
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 79,
+          "fixed_all9valid_pixels": 79,
+          "median_quadratic_DN_s2": 0.00014410825644793065,
+          "raw_deltaQ_linear_to_quadratic": 95.50544100125401,
+          "fully_unsaturated_neighbour_stencil_pixels": 67,
+          "conditional_leading_kappa_e_inverse": 2.374047064846743e-06,
+          "conditional_kappa_standard_error": 9.915290423126907e-07,
+          "curvature_vs_original_neighbour_basis_correlation": -0.030303223761024067,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.512855965927329,
+            1.8355195242307605,
+            4.375387535650532,
+            6.362016746325453,
+            7.972517194745847,
+            9.485286540026905,
+            9.129080878400606,
+            18.319086987479135,
+            25.790391544628505
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 101,
+          "fixed_all9valid_pixels": 101,
+          "median_quadratic_DN_s2": 2.8268243781091567e-05,
+          "raw_deltaQ_linear_to_quadratic": 96.41447857532448,
+          "fully_unsaturated_neighbour_stencil_pixels": 80,
+          "conditional_leading_kappa_e_inverse": 2.4995944029610398e-05,
+          "conditional_kappa_standard_error": 1.6167156938296884e-05,
+          "curvature_vs_original_neighbour_basis_correlation": 0.1542749609670845,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.5446266169158532,
+            1.1503584692862958,
+            1.252553519080269,
+            1.6770695702899139,
+            1.643661104417049,
+            2.661180921301396,
+            -0.024814421106398896,
+            5.961517885683003,
+            6.082177427486798
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "native_corrected",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 17,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.001777826093673422,
+          "raw_deltaQ_linear_to_quadratic": 201.2580909910452,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.40086131816944715,
+            9.406561135678578,
+            34.45480174183833,
+            46.77809473650712,
+            86.79876016769929,
+            114.0264822802066,
+            156.11075143047424,
+            215.69417626108051,
+            290.3676788097856
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 83,
+          "fixed_all9valid_pixels": 83,
+          "median_quadratic_DN_s2": 0.0002679797645466479,
+          "raw_deltaQ_linear_to_quadratic": 365.55724611852355,
+          "fully_unsaturated_neighbour_stencil_pixels": 71,
+          "conditional_leading_kappa_e_inverse": 5.50591446475488e-06,
+          "conditional_kappa_standard_error": 7.672916973467937e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.45024625297211884,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.020066302169603815,
+            1.6210758524578157,
+            6.131721049869333,
+            10.645491598876436,
+            18.470617669763527,
+            27.771648963715727,
+            37.26901367176866,
+            49.233446144287655,
+            66.66674995175586
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 0.00010348706695749306,
+          "raw_deltaQ_linear_to_quadratic": 182.63736032841757,
+          "fully_unsaturated_neighbour_stencil_pixels": 106,
+          "conditional_leading_kappa_e_inverse": 2.1770771554754795e-05,
+          "conditional_kappa_standard_error": 7.169041439044386e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.00334388716129779,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.2527239424180216,
+            0.24294405404486477,
+            0.6752330879322461,
+            4.303690447466692,
+            5.92760847896503,
+            10.524378025279647,
+            12.238025608425005,
+            15.230182779397301,
+            22.504328774301744
+          ]
+        }
+      ]
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "FIELD",
+      "variant": "minus_data_anchored_Jensen",
+      "radial_results": [
+        {
+          "radius_pixel": [
+            0,
+            3
+          ],
+          "pixels_with_fit": 17,
+          "fixed_all9valid_pixels": 6,
+          "median_quadratic_DN_s2": 0.0017778260800914432,
+          "raw_deltaQ_linear_to_quadratic": 201.25727478173891,
+          "fully_unsaturated_neighbour_stencil_pixels": 0,
+          "conditional_leading_kappa_e_inverse": null,
+          "conditional_kappa_standard_error": null,
+          "curvature_vs_original_neighbour_basis_correlation": null,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.400860862321102,
+            9.40654833700915,
+            34.454772639022,
+            46.77803703796391,
+            86.7986684629327,
+            114.02634264858625,
+            156.11055378159963,
+            215.69390921088362,
+            290.36733073779726
+          ]
+        },
+        {
+          "radius_pixel": [
+            3,
+            6
+          ],
+          "pixels_with_fit": 83,
+          "fixed_all9valid_pixels": 83,
+          "median_quadratic_DN_s2": 0.000267979764054125,
+          "raw_deltaQ_linear_to_quadratic": 365.55724632108974,
+          "fully_unsaturated_neighbour_stencil_pixels": 71,
+          "conditional_leading_kappa_e_inverse": 5.505914465592415e-06,
+          "conditional_kappa_standard_error": 7.672916973467937e-07,
+          "curvature_vs_original_neighbour_basis_correlation": 0.4502462498832791,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            -0.020066301533921572,
+            1.6210758322501324,
+            6.131721024175515,
+            10.645491542630701,
+            18.470617608930908,
+            27.771648890581876,
+            37.26901351102483,
+            49.23344592751782,
+            66.66674968681797
+          ]
+        },
+        {
+          "radius_pixel": [
+            6,
+            8.6
+          ],
+          "pixels_with_fit": 115,
+          "fixed_all9valid_pixels": 115,
+          "median_quadratic_DN_s2": 0.00010348706696217694,
+          "raw_deltaQ_linear_to_quadratic": 182.63736075769933,
+          "fully_unsaturated_neighbour_stencil_pixels": 106,
+          "conditional_leading_kappa_e_inverse": 2.1770771524694172e-05,
+          "conditional_kappa_standard_error": 7.169041439044386e-06,
+          "curvature_vs_original_neighbour_basis_correlation": -0.003343888353999968,
+          "mean_group_trajectory_after_static_intercept_and_rate_DN": [
+            0.25272394254532543,
+            0.2429440541853786,
+            0.6752330898659016,
+            4.303690453567678,
+            5.927608485290402,
+            10.524378034504904,
+            12.238025621076009,
+            15.230182792790531,
+            22.504328797588894
+          ]
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00001_nrcb3_histories.npz": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+    "artifacts/strong_lensing_response_completion_20261021/group_average/jw01198007001_02101_00001_nrcb3_histories_group_bias.npz": "8a61cb3bea1d3e7eb7b50921d627ac2efdd3b0b220dff06e7f125de31fb8f228",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00002_nrcb3_histories.npz": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+    "artifacts/strong_lensing_response_completion_20261021/group_average/jw01198007001_02101_00002_nrcb3_histories_group_bias.npz": "46a9ca29f8ab2ca49ff93b5dbc0d87f0190ef256eba3b50bb770853b8686779e",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00003_nrcb3_histories.npz": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+    "artifacts/strong_lensing_response_completion_20261021/group_average/jw01198007001_02101_00003_nrcb3_histories_group_bias.npz": "bfe15ac98e6656ea67989fdbede8f56227f07d64bed690b866b84bfea5edcc93",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00004_nrcb3_histories.npz": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+    "artifacts/strong_lensing_response_completion_20261021/group_average/jw01198007001_02101_00004_nrcb3_histories_group_bias.npz": "2b78449244411783421420f4e3b8a727ee7e9078317871f8c24b7dbd28a29ed6"
+  },
+  "source_sha256": "8507fb53cc3fc7d158e4a251bdd930821749c43e242e3330ba55528be9e0c8d3",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

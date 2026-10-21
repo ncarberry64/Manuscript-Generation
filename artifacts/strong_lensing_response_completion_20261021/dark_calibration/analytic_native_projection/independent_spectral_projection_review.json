@@ -1,0 +1,83 @@
+{
+  "review": "independent read-only exactanalytic native projection audit",
+  "source_receipt_SHA256": "817eb8690ce6d80677eb6bc556fe93b6cf4157bdad7bbc860fb6559042522671",
+  "unchanged_calibration_spectrum_sha256": "311aa6cfabed3fadf0f41c5f75110c45cafb5b53b49fe230d420897bad5dc1f3",
+  "source_sha256": {
+    "scripts/project_he0435_dark_covariance.py": "c770a8e2c3a13306d378b34f22e7add3bf98e218a86d0eb53a2a7f455a41c74f",
+    "code/strong_lensing_dark_covariance.py": "b22943a006972a0ea05c3ed6f0448c23e3e2b0f1ba3b66f5a7a2dacd6682f1eb",
+    "code/strong_lensing_native_ols.py": "8e921f910aedfe9fa59ad2c78864aefce00fa5d17dc5a80aae86a89dd29ea3a6"
+  },
+  "saved_array_checks": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "n": 1444,
+      "analytic_weight_map_vs_independent_native_source_saved_J_max_abs": 0.0,
+      "component_addition_max_abs": 0.0,
+      "electronic_min_eigenvalue": 0.0412873312097237,
+      "total_min_eigenvalue": 0.04601940444488126,
+      "white_replay_max_abs": 2.842170943040401e-14,
+      "Q_replay_difference": 1.3642420526593924e-12,
+      "source_native_float32_match": true,
+      "observed_nonunique_native_derivative_pixels": 0,
+      "strict_held_target": null
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "n": 1444,
+      "analytic_weight_map_vs_independent_native_source_saved_J_max_abs": 0.0,
+      "component_addition_max_abs": 0.0,
+      "electronic_min_eigenvalue": 0.041508255395863905,
+      "total_min_eigenvalue": 0.04658886299918821,
+      "white_replay_max_abs": 1.4210854715202004e-14,
+      "Q_replay_difference": 0.0,
+      "source_native_float32_match": true,
+      "observed_nonunique_native_derivative_pixels": 0,
+      "strict_held_target": null
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "n": 1443,
+      "analytic_weight_map_vs_independent_native_source_saved_J_max_abs": 0.0,
+      "component_addition_max_abs": 0.0,
+      "electronic_min_eigenvalue": 0.041581082167576486,
+      "total_min_eigenvalue": 0.046621832047316264,
+      "white_replay_max_abs": 1.2434497875801753e-14,
+      "Q_replay_difference": 0.0,
+      "source_native_float32_match": true,
+      "observed_nonunique_native_derivative_pixels": 0,
+      "strict_held_target": null
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "n": 1445,
+      "analytic_weight_map_vs_independent_native_source_saved_J_max_abs": 0.0,
+      "component_addition_max_abs": 0.0,
+      "electronic_min_eigenvalue": 0.04169510361687742,
+      "total_min_eigenvalue": 0.046520052310671425,
+      "white_replay_max_abs": 2.3092638912203256e-14,
+      "Q_replay_difference": -9.094947017729282e-13,
+      "source_native_float32_match": true,
+      "observed_nonunique_native_derivative_pixels": 0,
+      "strict_held_target": {
+        "n": 1156,
+        "raw_RMS": 1.5251460047423564,
+        "Q": 3901.2782755346593,
+        "Q_per_observation": 3.37480819682929,
+        "logdet": -2727.2943165742,
+        "Gaussian_NLL": 1649.2849238648314,
+        "physical_validation": false
+      }
+    }
+  ],
+  "required_OLS_update_status": "RESOLVED:analyticmapsmatchindependentlysourcevalidatednativeJacexactly; oldh1projectionpreservedseparately",
+  "confirmed_scope": [
+    "Actual5776selectedobservednativebranchvaluesmatchCfloat32; allobservedlocalderivativesunique",
+    "READ+DARK replacesnativeVAR_RNOISE; originalERRisnotaddedagain",
+    "NativePoissondiagonal/flatmarginalretainexplicitconditionalcomparatorstatus; photonIPC/NLIPC/anchorjointcovarianceisnotclaimedcomplete",
+    "Sharedamp/crossstamp electronicnoise retained underdeclaredstationaryperiodicmodel; finitecalibrationstatevariationretained",
+    "Allphysicalvalidationfalse; lowerwhitenedQdoesnotrepairrawmean"
+  ],
+  "no_new_native_pipeline_or_fit_execution": true,
+  "physical_guard": 2e-10,
+  "physical_validation": false
+}

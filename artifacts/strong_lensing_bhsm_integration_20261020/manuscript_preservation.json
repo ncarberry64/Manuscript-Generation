@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "original_displayed_blocks": 32,
+  "original_blocks_missing_or_changed": 0,
+  "original_numeric_literals_missing": {},
+  "new_numbered_blocks": 12,
+  "retained_effective_equations_changed": false,
+  "concrete_correction": "Target norm convention stated; phase quadratic energy distinguished from its Hessian (factor one half), without changing target null or retained Hessian.",
+  "added_derivations": "Consumed source and shell application, exact bulk/current/environment equations, cap/Schur source pullback and conditional nonuniqueness theorem.",
+  "duplicate_labels": [],
+  "undefined_local_references": []
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "degree": 1,
+    "centroid_max_abs_error_pixel": 2.7283730830163222e-14,
+    "chi2": 5.759252214293382e-27,
+    "optimizer_success": true
+  },
+  {
+    "degree": 2,
+    "centroid_max_abs_error_pixel": 2.7283730830163222e-14,
+    "chi2": 9.214221430667997e-27,
+    "optimizer_success": true
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "status": "POST_SCORE_REPORT_RESEARCHER_REVIEW_PASS_WITH_CONSERVATIVE_UNCERTAINTY",
+  "no_scoring_replay": true,
+  "no_frozen_input_changes": true,
+  "only_completed_score_receipt_consumed": true,
+  "report_metrics_sha256": "0fb03b3e9c9f0d9916a6043050fcfd7cfe317a5ae1a877ac21ccbbc313a51506",
+  "figure_visual_inspection": "Three panels readable; unusedA/B/D cataloguepoints, quoted errors, conv/R1means and marginal95bands aligned and sameordering; nativeMJDaxis, magnitudeaxisinverted; nearly identical opticalpredictions visibly coincide.",
+  "numeric_checks": "Report recomputesRMSEandcoverage from scoredprediction ordering and quotedtargetdesign, confirms storedmetrics; inputs/outputhashes verified.",
+  "findings": [
+    "Conventional primary160/162=98.77percent95coverage corrects undercoverage on this unusedcataloguesample; does not establish exact calibration.",
+    "68.27percentintervals cover94.44percent; B95width1.3014mag and100percentcoverage show conservativeoverdispersion, not sharpprediction.",
+    "Zero-delaycontrol hasbetter95intervalscore than conventional butworsejointscore/RMSE; empiricaldelayensemble hashighestprimaryjointscore. No singlemetricmodelwinasserted.",
+    "R1separaterefitprimarylogscoregapâˆ’3.460eâˆ’5 andfixedbodyactivationgap+1.507eâˆ’4 provide noBHSMdiscrimination. Matchedeffectivemasscontrolisstructuralidentity.",
+    "Secondary100percentcoverage requiresmean95width1.2534mag andhaspositive.1761mag residualbias; overlapsprimary and isnotindependentreplication.",
+    "Paperlanguage mustsayunusedcataloguevalues/separatecampaign; common2022DIAreference preventsestablishingphoton-disjointcalibration orprospectiveblinding."
+  ],
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "editorial_rerender_after_review": "Added explicit overdispersion,bias and metrictradeoff paragraph; compact tableheadings andunusedcatalogue wording. No sourcefilter,fit orscore rerun."
+}

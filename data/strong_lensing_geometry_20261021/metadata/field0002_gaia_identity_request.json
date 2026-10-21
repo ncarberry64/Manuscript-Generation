@@ -1,0 +1,14 @@
+{
+  "scope": "Independent Gaia FIELD-star identity query only, explicitly excluding the10arcsec lens guard; no quasar target positions or classifications requested",
+  "requested_utc": "2026-10-21T13:13:56.275163+00:00",
+  "field_candidate_id": "field0002",
+  "field_candidate_icrs_deg": [
+    69.56067525934186,
+    -12.283446334217272
+  ],
+  "cone_radius_arcsec": 0.5,
+  "excluded_HE0435_radius_arcsec": 10.0,
+  "adql": "SELECT g.source_id,g.ra,g.dec,g.ref_epoch,g.parallax,g.parallax_error,g.pmra,g.pmdec,g.pmra_error,g.pmdec_error,g.pmra_pmdec_corr,g.ruwe,g.duplicated_source,g.ipd_frac_multi_peak,g.ipd_frac_odd_win,g.phot_g_mean_mag,g.bp_rp,a.classprob_dsc_combmod_star,a.classprob_dsc_combmod_quasar,a.classprob_dsc_combmod_galaxy FROM gaiadr3.gaia_source AS g LEFT OUTER JOIN gaiadr3.astrophysical_parameters AS a ON g.source_id=a.source_id WHERE 1=CONTAINS(POINT('ICRS',g.ra,g.dec),CIRCLE('ICRS',69.56067525934186,-12.283446334217272,0.000138888888888889)) AND 0=CONTAINS(POINT('ICRS',g.ra,g.dec),CIRCLE('ICRS',69.562083333,-12.287333333,0.00277777777777778))",
+  "endpoint": "https://gea.esac.esa.int/tap-server/tap/sync",
+  "quasar_SCI_values_inspected": false
+}

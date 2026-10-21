@@ -1,0 +1,35 @@
+{
+  "completed_utc": "2026-10-21T13:07:02.923123+00:00",
+  "freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "products": [
+    {
+      "filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "dataURI": "mast:JWST/product/jw01198007001_02101_00001_nrcb3_cal.fits",
+      "bytes": 117573120,
+      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+      "science_arrays_opened": false
+    },
+    {
+      "filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "dataURI": "mast:JWST/product/jw01198007001_02101_00002_nrcb3_cal.fits",
+      "bytes": 117573120,
+      "sha256": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+      "science_arrays_opened": false
+    },
+    {
+      "filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "dataURI": "mast:JWST/product/jw01198007001_02101_00003_nrcb3_cal.fits",
+      "bytes": 117573120,
+      "sha256": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+      "science_arrays_opened": false
+    },
+    {
+      "filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "dataURI": "mast:JWST/product/jw01198007001_02101_00004_nrcb3_cal.fits",
+      "bytes": 117573120,
+      "sha256": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
+      "science_arrays_opened": false
+    }
+  ],
+  "science_arrays_opened": false
+}

@@ -1,0 +1,34 @@
+{
+  "coefficients": {
+    "b": 0.11306384489513412,
+    "A": 4.245250275944938,
+    "C": 4.238858559433703,
+    "D": 4.39622102870814,
+    "background_scalar_speed_squared": 0.9642050596985843,
+    "beta1_Barreira_c3_equals_1": -0.7064764265722839,
+    "beta2_Barreira_M3_equals_lambda": -24.99389357322973
+  },
+  "prediction": {
+    "unscreened_mu_minus_one": 0.0015078862438121512,
+    "unscreened_Sigma_minus_one": 0.0015078862438121512,
+    "slip_Phi_over_Psi": 1.0,
+    "rV_Mpc": 0.2120292249771778,
+    "rV_kpc": 212.0292249771778,
+    "H_times_rV_over_c": 5.642138685207788e-05,
+    "rV_background_curvature_parameter": 6.912402979286736e-11
+  },
+  "exterior_scalar_radial_speed_maximum": {
+    "radius_kpc": 100.10700485068504,
+    "enclosed_mass_fraction": 1.0,
+    "dlogM_dlogr": 0.0,
+    "pi_prime_in_MplH0": -2.6719500039199425e-05,
+    "gradient_ratio_squared_to_rolling_background": 1.2628823705879529e-08,
+    "Phi_force_fractional_enhancement": 0.000711165251363711,
+    "Weyl_force_fractional_enhancement": 0.000711165251363711,
+    "Kr": 13.736475581200677,
+    "Kangular": 4.415152300521376,
+    "Ktime": 9.321323280679298,
+    "scalar_radial_characteristic_speed_squared": 1.473661535768516,
+    "scalar_angular_characteristic_speed_squared": 0.4736615357685157
+  }
+}

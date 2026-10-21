@@ -1,0 +1,45 @@
+\subsection{A separate unused Gaia astrometric test}
+\label{sec:he0435-gaia}
+The LCO common-reference limitation motivates a second type of observation:
+the four image positions in Gaia DR3~\cite{GaiaDR3}. We declare this
+additional test after the LCO result is known, while retaining exactly the
+already-frozen conventional and R1 physical predictions. A count-only
+catalogue query establishes four entries in the lens field. Numerical
+positions, errors and quality rows remain unopened until a separate
+prediction/protocol commit. No mass, screen, source, angle, plate scale or
+rotation is fitted against Gaia.
+
+In a common small-angle ICRS tangent frame the three relative observables
+are $z_i=((\alpha_i-\alpha_A)\cos\delta_A,\delta_i-\delta_A)$,
+$i=B,C,D$, with degree-to-arcsecond conversion. All 24 source assignments
+are compared with the fixed conventional relative pattern; the same
+assignment is used for R1 and its runner-up gap is retained. For each Gaia
+source, the published RA tangent-plane error
+$\sigma_{\alpha*}=\sigma_\alpha\cos\delta$, declination error and their
+correlation define $C_i$. The RA error receives no second cosine.
+The full six-coordinate formal covariance is
+\begin{equation}
+ [C_{\rm rel}]_{ij}=\delta_{ij}C_i+C_A,
+ \qquad C_s=C_{\rm rel}+s^2I_6,
+ \quad s=0,2,5\ {\rm mas}.
+ \label{eq:gaia-covariance}
+\end{equation}
+The added floors apply per relative coordinate after differencing; they
+are prespecified sensitivity controls, not fitted noise or a derived macro
+posterior. The Gaussian density and quadratic residual use $C_s$, including
+its determinant and common-A off-diagonal blocks. Between-source catalogue
+covariances are unpublished, so source-error independence remains a
+conditional approximation. All four sources are retained irrespective of
+their quality diagnostics; missing mandatory errors cannot be replaced
+silently with zero correlation.
+
+Gaia collected different photons in 2014--2017, whereas the fitted NIC2
+point astrometry was published in 2011. However, the reprocessed HST central
+mosaics use a Gaia-EDR3 field frame. Their pixel test uses relative
+registration, but independence of every field calibration is not certified.
+Close-image blending, chromatic photocentres and fixed macro parameters
+further limit a catalogue-only Gaussian interpretation. This test assesses
+the previously unused numerical quasar geometry; it is not a complete
+Einstein-ring reconstruction or a BHSM state measurement.
+
+\input{sections/he0435_gaia_results_20261020}

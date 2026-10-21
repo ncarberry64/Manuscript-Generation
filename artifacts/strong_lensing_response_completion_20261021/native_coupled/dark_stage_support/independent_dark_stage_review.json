@@ -1,0 +1,55 @@
+{
+  "review": "independent read-only bounded dark-stage sensitivity audit",
+  "reviewed_report_sha256": "443c420ad505d53b78dd02f1153ece68344e6e966482937e66bdf970f84a15fd",
+  "reviewed_maps_sha256": "56f193d6b47b8307c232cdb640ab11886af4d820aaa1a863d660f4ea93a323ed",
+  "source_and_held_solution_hashes_match": true,
+  "saved_checks": [
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "hot_support33_pixels": 1,
+      "hot_direct17_pixels": 0,
+      "max_continuous_change_SCI": 0.0,
+      "max_original_float32_change_SCI": 0.0,
+      "original_ERR_Q_change": 0.0
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "hot_support33_pixels": 0,
+      "hot_direct17_pixels": 0,
+      "max_continuous_change_SCI": 0.0,
+      "max_original_float32_change_SCI": 0.0,
+      "original_ERR_Q_change": 0.0
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "hot_support33_pixels": 1,
+      "hot_direct17_pixels": 0,
+      "max_continuous_change_SCI": 7.527312106958561e-14,
+      "max_original_float32_change_SCI": 0.0,
+      "original_ERR_Q_change": 0.0
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "hot_support33_pixels": 0,
+      "hot_direct17_pixels": 0,
+      "max_continuous_change_SCI": 0.0,
+      "max_original_float32_change_SCI": 0.0,
+      "original_ERR_Q_change": 0.0
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "hot_support33_pixels": 1,
+      "hot_direct17_pixels": 0,
+      "max_continuous_change_SCI": 2.4562385458892777e-09,
+      "max_original_float32_change_SCI": 0.0,
+      "original_ERR_Q_change": 0.0
+    }
+  ],
+  "held_Q_nominal": 10974.065419722008,
+  "held_Q_alternative": 10974.065419722008,
+  "scope": "Actualnonlocal33supporthotreferencevaluesincluded; removingnominalpreIPCreadwiseDonly,re-solvingG0whileholdingnativepostLdarksubtractionfixed is a conditionalstagecounterfactual, notproofphysicaldarkzero/generalcalibrationclosure.",
+  "no_implementation_error_found": true,
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "no_new_fit_native_pipeline_or_mean_application": true
+}

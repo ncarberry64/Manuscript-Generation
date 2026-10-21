@@ -1,0 +1,467 @@
+{
+  "status": "PASS",
+  "classification": "DERIVED_EFFECTIVE_SOURCE_APPLICATION_AND_CONDITIONAL_NONUNIQUENESS_PROOF_NOT_MICROSCOPIC_CLOSURE",
+  "source_input": "frozen supplied finite-body R1 coefficient receipt; no background refit",
+  "equations": {
+    "metric": "2 Mpl\u00b2 Delta Phi=rho+rho_Sigma-b_T Delta pi_T",
+    "scalar_before_elimination": "A Delta pi_T-2[(Delta pi_T)\u00b2-|Hess pi_T|\u00b2]/lambda+b_T Delta Phi=J_T",
+    "consumed_source": "J_eff=J_T-b_T(rho+rho_Sigma)/(2 Mpl\u00b2)",
+    "scalar_flux": "r\u00b2 F_R1\u00b7n=C r\u00b2 pi_T_prime-4 r pi_T_prime\u00b2/lambda",
+    "shell": "[r\u00b2 F_R1\u00b7n]=R\u00b2(J_T,Sigma-b_T sigma_Sigma/(2 Mpl\u00b2))"
+  },
+  "normalization": {
+    "Mpl_H0_c": 1,
+    "length_unit_Mpc": 4447.959317507418,
+    "radius_natural": 6.744666004906636e-07,
+    "mass_length_natural": 1.0758677182033066e-12,
+    "density_integral": 2.7039504957935374e-11,
+    "required_density_integral": 2.7039504957935374e-11,
+    "integrated_scalar_source": -1.216417408185084e-13
+  },
+  "computed_section_and_original_residuals": [
+    {
+      "radius_over_R": 0.1,
+      "radius_Mpc": 0.00030000000000000003,
+      "pi_prime_in_MplH0": -3.34372551911231e-05,
+      "metric_phi_prime_in_H0": 0.587713639462701,
+      "computed_nonlinear_scalar_flux": -3.0227972593399347e-16,
+      "independent_integrated_effective_source": -3.0227972593399347e-16,
+      "scalar_flux_relative_residual": 0.0,
+      "original_metric_Gauss_relative_residual": 0.0
+    },
+    {
+      "radius_over_R": 0.5,
+      "radius_Mpc": 0.0015,
+      "pi_prime_in_MplH0": -0.0001545892018840635,
+      "metric_phi_prime_in_H0": 2.5128607855619256,
+      "computed_nonlinear_scalar_flux": -3.23110874049163e-14,
+      "independent_integrated_effective_source": -3.23110874049163e-14,
+      "scalar_flux_relative_residual": 0.0,
+      "original_metric_Gauss_relative_residual": 0.0
+    },
+    {
+      "radius_over_R": 1.0,
+      "radius_Mpc": 0.003,
+      "pi_prime_in_MplH0": -0.0002119825778845613,
+      "metric_phi_prime_in_H0": 2.36504920386468,
+      "computed_nonlinear_scalar_flux": -1.2164174081850838e-13,
+      "independent_integrated_effective_source": -1.216417408185084e-13,
+      "scalar_flux_relative_residual": 2.07523739772322e-16,
+      "original_metric_Gauss_relative_residual": 0.0
+    },
+    {
+      "radius_over_R": 2.0,
+      "radius_Mpc": 0.006,
+      "pi_prime_in_MplH0": -0.0001494337642198866,
+      "metric_phi_prime_in_H0": 0.5912677527984767,
+      "computed_nonlinear_scalar_flux": -1.2164174081850836e-13,
+      "independent_integrated_effective_source": -1.216417408185084e-13,
+      "scalar_flux_relative_residual": 4.15047479544644e-16,
+      "original_metric_Gauss_relative_residual": 0.0
+    },
+    {
+      "radius_over_R": 10.0,
+      "radius_Mpc": 0.03,
+      "pi_prime_in_MplH0": -6.366901407172176e-05,
+      "metric_phi_prime_in_H0": 0.023653971532586086,
+      "computed_nonlinear_scalar_flux": -1.2164174081850838e-13,
+      "independent_integrated_effective_source": -1.216417408185084e-13,
+      "scalar_flux_relative_residual": 2.07523739772322e-16,
+      "original_metric_Gauss_relative_residual": 0.0
+    }
+  ],
+  "material_matching": {
+    "surface": "material timelike worldtube r=R; distinct from the cosmological cap equator",
+    "orientation": "same +dr unit normal on both material limits",
+    "scalar_boundary_data": "continuous pi_T and nonlinear canonical flux; no explicit scalar layer in this R1 action",
+    "density_surface_in_Mpl2H02": 0.0,
+    "surface_pressure": 0.0,
+    "pi_prime_interior_quadratic_root": -0.00021198257788456135,
+    "pi_prime_exterior_computed_root": -0.0002119825778845613,
+    "nonlinear_flux_jump": 7.573064690121713e-29,
+    "required_scalar_shell_jump": 0.0,
+    "relative_flux_jump": 6.225712193169661e-16,
+    "K_uu_inside_per_Mpc": -0.0005317137194453,
+    "K_uu_outside_per_Mpc": -0.0005317137194453,
+    "delta_K_uu_per_Mpc": 0.0,
+    "K_uu_evaluation_scope": "ordinary-GR reference: exact TOV surface p(R)=0 matched to Schwarzschild; not the rolling-scalar metric",
+    "leading_R1_K_uu_inside_per_Mpc": -0.0005317155655079203,
+    "leading_R1_K_uu_outside_per_Mpc": -0.0005317155655079203,
+    "leading_R1_delta_K_uu_per_Mpc": 0.0,
+    "leading_R1_K_uu_scope": "leading weak-metric K_uu=-Phi_prime, evaluated from the R1 metric Gauss row on both material limits; no exact modified-TOV junction claimed",
+    "material_surface_Q_Sigma": 0.0,
+    "qualification": "The GR reference junction and leading R1 junction are separate applications at their stated orders. Their zero material seam functional follows from smooth matching; it does not set the volume matter-curvature source or all BHSM cap sources to zero."
+  },
+  "effective_mass_application": {
+    "extra_enclosed_mass_at_R_Msun": 506705.8797822506,
+    "extra_total_mass_Msun": 150788624.3809552,
+    "positive_density_proof": "dln(f_M F)/dlnr=[(1+1/S)n_M+3(1-1/S)]/2>=0"
+  },
+  "complement_nonuniqueness": {
+    "status": "TWO_EXPLICIT_POSITIVE_QUADRATIC_LIFTS_SAME_LEADING_C_D_DIFFERENT_B_AND_CUTOFF",
+    "domain": "same ball radius 10 pi ell0; both real fields regular at origin and Dirichlet at boundary; radial q_n=(n/10)\u00b2",
+    "normalized_radial_basis": "f_n(r)=sin(n pi r/L)/(r sqrt(2 pi L)); integral 4 pi r\u00b2 f_n\u00b2 dr=1",
+    "source_data": "same retained source J_P, explicitly unforced complement J_Q=0 for this mathematical counterexample; no quantum vacuum is chosen",
+    "witnesses": [
+      {
+        "name": "A",
+        "parameters": {
+          "C": 4.238858559433196,
+          "D_time": 4.396221028708471,
+          "mass_squared": 1.0,
+          "complement_gradient": 1.0,
+          "mixing": 1.0
+        },
+        "Z0": 5.238858559433196,
+        "leading_spatial_C": 4.238858559433196,
+        "leading_temporal_D": 4.396221028708471,
+        "p2_coefficient_in_ell0_squared": 1.0,
+        "normalized_B_in_ell0_squared": 0.23591256607857095,
+        "derivative_expansion_scale_p_ell0_squared": 1.0,
+        "complement_spectrum": [
+          1.01,
+          1.04,
+          1.09,
+          1.1600000000000001,
+          1.25,
+          1.3599999999999999,
+          1.49,
+          1.6400000000000001,
+          1.81,
+          2.0,
+          2.21,
+          2.44,
+          2.6900000000000004,
+          2.96,
+          3.25,
+          3.5600000000000005,
+          3.8899999999999997,
+          4.24,
+          4.609999999999999,
+          5.0
+        ],
+        "q_spectrum": [
+          0.010000000000000002,
+          0.04000000000000001,
+          0.09,
+          0.16000000000000003,
+          0.25,
+          0.36,
+          0.48999999999999994,
+          0.6400000000000001,
+          0.81,
+          1.0,
+          1.2100000000000002,
+          1.44,
+          1.6900000000000002,
+          1.9599999999999997,
+          2.25,
+          2.5600000000000005,
+          2.8899999999999997,
+          3.24,
+          3.61,
+          4.0
+        ],
+        "full_spatial_hessian_eigenvalues": [
+          [
+            0.04205739452633832,
+            1.0203311910679937
+          ],
+          [
+            0.163897580008833,
+            1.085656762368495
+          ],
+          [
+            0.3498931992723362,
+            1.2116040710766516
+          ],
+          [
+            0.5679636797721364,
+            1.4302536897371754
+          ],
+          [
+            0.7789666536621971,
+            1.780747986196102
+          ],
+          [
+            0.9678868179248888,
+            2.2781022634710615
+          ],
+          [
+            1.1453419029181366,
+            2.911698791204129
+          ],
+          [
+            1.3244789112683204,
+            3.6683905667689256
+          ],
+          [
+            1.5133142229887377,
+            4.540161210152151
+          ],
+          [
+            1.716129200379811,
+            5.522729359053385
+          ],
+          [
+            1.9352362122234188,
+            6.613782644690749
+          ],
+          [
+            2.1719440241037318,
+            7.81201230148007
+          ],
+          [
+            2.4270320591162355,
+            9.116638906325868
+          ],
+          [
+            2.7009866038168555,
+            10.527176172672208
+          ],
+          [
+            2.994123603950091,
+            12.0433081547746
+          ],
+          [
+            3.3066556140737267,
+            13.664822298075258
+          ],
+          [
+            3.638729983379437,
+            15.391571253382498
+          ],
+          [
+            3.990451540078663,
+            17.223450192484894
+          ],
+          [
+            4.36189656241986,
+            19.160382837133977
+          ],
+          [
+            4.753121662027564,
+            21.20231257570522
+          ]
+        ],
+        "minimum_spatial_eigenvalue": 0.04205739452633832,
+        "kinetic_eigenvalues": [
+          1.0,
+          4.396221028708471
+        ],
+        "reduced_kernels": [
+          0.04248759549532207,
+          0.1710928039157894,
+          0.3889284630095381,
+          0.7002863350265529,
+          1.109714639858299,
+          1.6212831990430094,
+          2.2381816337195812,
+          2.962625575598222,
+          3.7959616209861933,
+          4.738858559433196,
+          5.791507544696974,
+          6.953792391157572,
+          8.225418177338014,
+          9.606000614326902,
+          11.095124066417,
+          12.69237678855348,
+          14.397370645502294,
+          16.20975078916733,
+          18.12919913925015,
+          20.155434237732784
+        ]
+      },
+      {
+        "name": "B",
+        "parameters": {
+          "C": 4.238858559433196,
+          "D_time": 4.396221028708471,
+          "mass_squared": 4.0,
+          "complement_gradient": 1.0,
+          "mixing": 2.0
+        },
+        "Z0": 5.238858559433196,
+        "leading_spatial_C": 4.238858559433196,
+        "leading_temporal_D": 4.396221028708471,
+        "p2_coefficient_in_ell0_squared": 0.25,
+        "normalized_B_in_ell0_squared": 0.058978141519642736,
+        "derivative_expansion_scale_p_ell0_squared": 4.0,
+        "complement_spectrum": [
+          4.01,
+          4.04,
+          4.09,
+          4.16,
+          4.25,
+          4.36,
+          4.49,
+          4.640000000000001,
+          4.8100000000000005,
+          5.0,
+          5.21,
+          5.4399999999999995,
+          5.69,
+          5.96,
+          6.25,
+          6.5600000000000005,
+          6.89,
+          7.24,
+          7.609999999999999,
+          8.0
+        ],
+        "q_spectrum": [
+          0.010000000000000002,
+          0.04000000000000001,
+          0.09,
+          0.16000000000000003,
+          0.25,
+          0.36,
+          0.48999999999999994,
+          0.6400000000000001,
+          0.81,
+          1.0,
+          1.2100000000000002,
+          1.44,
+          1.6900000000000002,
+          1.9599999999999997,
+          2.25,
+          2.5600000000000005,
+          2.8899999999999997,
+          3.24,
+          3.61,
+          4.0
+        ],
+        "full_spatial_hessian_eigenvalues": [
+          [
+            0.04230716003711213,
+            4.02008142555722
+          ],
+          [
+            0.16822957810535327,
+            4.081324764271975
+          ],
+          [
+            0.3746031787302704,
+            4.186894091618718
+          ],
+          [
+            0.655590320035332,
+            4.34262704947398
+          ],
+          [
+            1.001847336895898,
+            4.557867302962401
+          ],
+          [
+            1.3995727970893448,
+            4.846416284306606
+          ],
+          [
+            1.8301555090432693,
+            5.226885185078997
+          ],
+          [
+            2.2718547190885454,
+            5.7210147589487015
+          ],
+          [
+            2.7045858235566587,
+            6.348889609584231
+          ],
+          [
+            3.1158666146487883,
+            7.122991944784408
+          ],
+          [
+            3.5032386619439975,
+            8.04578019497017
+          ],
+          [
+            3.8715472716995554,
+            9.112409053884246
+          ],
+          [
+            4.228448636722773,
+            10.31522232871933
+          ],
+          [
+            4.581367611672547,
+            11.646795164816517
+          ],
+          [
+            4.936340636855453,
+            13.101091121869239
+          ],
+          [
+            5.297915645073282,
+            14.673562267075702
+          ],
+          [
+            5.669417027532197,
+            16.360884209229738
+          ],
+          [
+            6.053256891954951,
+            18.160644840608605
+          ],
+          [
+            6.451192570290907,
+            20.07108682926293
+          ],
+          [
+            6.864516801519244,
+            22.09091743621354
+          ]
+        ],
+        "minimum_spatial_eigenvalue": 0.04230716003711213,
+        "kinetic_eigenvalues": [
+          1.0,
+          4.396221028708471
+        ],
+        "reduced_kernels": [
+          0.04241352325019232,
+          0.16995038198128828,
+          0.38347771044678713,
+          0.6843712156631576,
+          1.0744205222112402,
+          1.5557138520381524,
+          2.1305150816501053,
+          2.8011453401062116,
+          3.5698787595442156,
+          4.438858559433196,
+          5.410036131386337,
+          6.485132796172038,
+          7.665621756303262,
+          8.952726534878325,
+          10.347431758724692,
+          11.850502302392888,
+          13.462507332552939,
+          15.183846483944773,
+          17.01477611440272,
+          18.955434237732785
+        ]
+      }
+    ],
+    "proof": "D_QQ=M\u00b2+c q>0 and K_red=C q+g\u00b2 c q\u00b2/[M\u00b2(M\u00b2+c q)]>0 for q>0; diag(D_time,1)>0. q=0 is a formal limit excluded by this Dirichlet domain. A kernel on another physical domain would have to remain explicit.",
+    "qualification": "ell0 and the embedding of either complement into the BHSM domain are not supplied. Neither witness is selected for the galaxy or asserted as the microscopic cutoff."
+  },
+  "old_seam_direct_identification": {
+    "inherited_source": "S_top=a Theta(r-r_star)/r\u00b2, a=epsilon_Sigma Q_Sigma/Q",
+    "integrated_source": "4 pi a(r-r_star)",
+    "radial_flux": "F_top\u00b7n=a(1/r-r_star/r\u00b2), with F_top(r_star)=0",
+    "direct_rescaling_obstruction": "For nonzero a the exterior flux falls as 1/r, while the isolated R1 metric correction and canonical scalar flux fall as 1/r\u00b2. No constant field normalization identifies them on an unbounded exterior.",
+    "scope": "Rejects that direct identification only; a different owned finite-support export/operator/nonlocal map remains possible."
+  },
+  "remaining_defining_relation": "An action-owned physical embedding e_T and source pullback must identify the retained cap/surface sector with canonical R1 T and its cubic vertex; the supplied Schur family does not fix its complement spectrum or physical ell0.",
+  "physical_admission": false,
+  "fitted_new_amplitude": false,
+  "sha256": {
+    "artifacts/strong_lensing_r1_screened_20261020/results.json": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "code/strong_lensing_surface_source.py": "02c503fb0e6b13fcbaab62d6b43d35befbfe534670c82c7d7b1a2579ec4eb5b7",
+    "scripts/run_strong_lensing_surface_source.py": "4e76d7136528817b67ffc0abedef2ce084402fdbcabf383a424c8ca218447ed2",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_local_family.py": "14dc83bae0e2d1f2289209c4f11fcacf7f24d91610ddbdd33122cd52b237fdbe",
+    "manuscript/sections/03_reduced_response.tex": "4181d6b7bd0f95e5d7c9369a4f0608e99e020b2d84245b4ae3a99e7e3680a530"
+  },
+  "post_execution_format_audit": "Removed one extra EOF blank line from source helper; AST identical, original seven-test result reused."
+}

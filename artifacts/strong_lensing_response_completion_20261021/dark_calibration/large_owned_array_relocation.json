@@ -1,0 +1,27 @@
+{
+  "status": "same-worktree owned new intermediate relocation only; no deletion",
+  "moves": [
+    {
+      "old_canonical": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01453022001_02301_00001_nrcb3_integration0_matched_reads.npy",
+      "canonical": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453022001_02301_00001_nrcb3_integration0_matched_reads.npy",
+      "sha256": "cfa26ca1f4ffee798249bd17659fb606aca05e4d93987ea441b97829c41046f7"
+    },
+    {
+      "old_canonical": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01453022001_02301_00001_nrcb3_integration1_matched_reads.npy",
+      "canonical": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453022001_02301_00001_nrcb3_integration1_matched_reads.npy",
+      "sha256": "4f250964b51b07c6409b162db3cda8a302987a338ba4191367b5c2201d33cffe"
+    },
+    {
+      "old_canonical": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01453020001_02201_00001_nrcb3_integration0_matched_reads.npy",
+      "canonical": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453020001_02201_00001_nrcb3_integration0_matched_reads.npy",
+      "sha256": "d1e6e743ed9243e2d2f89503f14388703bfb7e6e694d004ee21333497f2bf3d9"
+    },
+    {
+      "old_canonical": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01453020001_02201_00001_nrcb3_integration1_matched_reads.npy",
+      "canonical": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration/jw01453020001_02201_00001_nrcb3_integration1_matched_reads.npy",
+      "sha256": "7a9ec3345c9efc0bccb71b8926f06a2260d79729232dda95d2c427cadb8c29a1"
+    }
+  ],
+  "full_pre_post_fields": "epoch{0,1}_{pre,post}_integration_difference_DN.npy moved to same native_cache/dark_calibration directory",
+  "unrelated_files_moved": false
+}

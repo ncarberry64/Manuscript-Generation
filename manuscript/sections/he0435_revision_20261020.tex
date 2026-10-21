@@ -1,0 +1,174 @@
+\section{HST Central Light, Revised Uncertainty and Unused Catalogue Targets}
+\label{sec:observed-revision}
+The first experiment is retained as an exposed development result.
+We now address its two concrete failures: overly restrictive brightness
+uncertainty and an additional central-image prediction that had not been
+tested against pixels. HST data constrain the revised source; a separate
+Las Cumbres Observatory (LCO) exposure set tests its subsequent predictions.
+Neither reuse of the first targets nor the HST-conditioned profile is
+counted as a new independent validation.
+
+\subsection{The original central-image prediction in HST pixels}
+We apply the original conventional $0.06320$ and conditional R1 $0.06313$
+central/A macro-flux predictions to public
+HST ACS/WFC F814W data (proposal 9744, 1445 s, 2003 August 18) and WFC3/IR
+F160W data (proposal 12889, 9939.59 s, 2012 October 28). Exact science,
+weight and context cutouts and full-product provenance are retained.
+Three field-star PSFs and an image-A empirical PSF probe template
+dependence. The four outer quasar images determine translation and
+rotation; the central template also receives independent freedom of
+$\pm50$ mas in each coordinate. The weight maps in these products are
+exposure-like, rather than inverse variance; drizzle correlations require
+separate attention~\cite{STScIDrizzle}. Blank-sky scatter, relative exposure and
+source Poisson noise define the adopted marginal variance.
+The nominal bound also permits a 5\% lower image-A flux normalization.
+
+A deliberately flexible bound allows arbitrary nonnegative galaxy,
+host and unresolved nuclear light at every pixel. With
+$d_p=fP_p+B_p+\epsilon_p$, $P_p\geq0$ and $B_p\geq0$, a fixed-template
+Gaussian marginal-error union bound gives
+\begin{equation}
+ f\leq\min_{p\in\mathcal S}
+ \frac{d_p+\Phi_{\rm N}^{-1}(1-0.05/|\mathcal S|)\sigma_p}{P_p},
+ \qquad \mathcal S=\{p:P_p>0.03\max P\}.
+ \label{eq:hst-positive-bound}
+\end{equation}
+Here $\Phi_{\rm N}$ is the standard-normal CDF. Pixel independence is
+unnecessary. The 95\% interpretation is conditional on the adopted PSF,
+sky subtraction and marginal-error model. Maximization over the finite
+PSF set and continuous centroid freedom is numerical, not a certified
+global or arbitrary-PSF coverage statement.
+
+The F814W numerical envelope is $0.02935$ of A, conservatively rounded
+up to $0.030$. Multiplying every marginal noise scale by five and lowering
+the A normalization by 20\% increases it to $0.04124$, conservatively
+rounded to $0.042$. Both are below the original $0.06320$ prediction.
+The noise/normalization stress test is a sensitivity control, not an
+independent calibration of 95\% coverage.
+F160W gives $0.554$ and is inconclusive. Positive smooth galaxy profiles,
+including a free compact cusp and nuclear point, give the same direction
+of tension; their residual sums are descriptive, not detection
+significances. Figure~\ref{fig:hst-central} shows the pixel application.
+This tests the achromatic, unattenuated macro ratio. Differential
+extinction, microlensing or intrinsic variability across the central-image
+delay are not inferred here; retaining the old profile with such effects
+requires a separate physical flux prescription.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.96\textwidth]{figures/he0435_hst_central_pixel_test.pdf}
+ \caption{Actual ACS F814W pixels and the original central-image application.
+ Upper left: measured central pixels; upper right: a fitted positive
+ galaxy/cusp/nuclear-light model plus the frozen central source. Lower
+ left: residual divided by the adopted marginal noise (colour range
+ clipped at $\pm10$); lower right: predicted central light alone.
+ Intensity colour bars are in electrons per second.
+ The nonnegative-pixel test permits arbitrary positive contaminating
+ galaxy/host/nuclear light. Its F814W conditional tension motivates the
+ source revision. The separate F160W application does not exclude this
+ prediction. HST data are development information in the revised model.}
+ \label{fig:hst-central}
+\end{figure}
+
+\subsection{A revised source and classical brightness uncertainty}
+We retain a regular positive local source by adding a compact Plummer
+component to the outer body:
+\begin{equation}
+ \rho(r)=\sum_{j=\mathrm{o,n}}
+ \frac{3M_ja_j^2}{4\pi(r^2+a_j^2)^{5/2}},\qquad
+ M(<r)=\sum_{j=\mathrm{o,n}}
+ \frac{M_jr^3}{(r^2+a_j^2)^{3/2}}.
+ \label{eq:revision-source}
+\end{equation}
+The compact scale is prescribed as $a_{\rm n}=0.03$ kpc and its candidate
+masses are $0,10^8,10^{8.5},10^9,10^{9.5}M_\odot$.
+This is a regular unresolved matter surrogate, not a black-hole mass
+measurement. The original R1 nonlinear equation consumes the \emph{total}
+$M(<r)$ once; independently solved component scalars cannot be added.
+The original regular branch, metric Gauss equation, optical projection,
+rear screen and nine nuisance parameters are otherwise retained at this
+compact-source stage. The subsequent geometry revision is developed in
+Section~\ref{sec:he0435-geometry-revision}.
+
+For each conventional candidate, original astrometry and the exact
+development brightness likelihood determine the optical parameters.
+HST assesses the \emph{sum} of every additional-image PSF, including
+unresolved multiple nuclear images. Among HST-admissible candidates the
+development objective selects one common compact mass for both models.
+The R1 model then refits its nuisance parameters using the same data.
+Candidate traces and the separate fixed-body R1 activation remain visible;
+this discrete profile selection does not define a posterior mass interval.
+
+The revised classical brightness law is
+\begin{align}
+ u&=t+\delta_k-d_i,\nonumber\\
+ m_{ik}(t)&=m_0+b_{ik}+q(u)+e_i(u)
+             +a_i\frac{u-t_0}{Y}+w_i(u)+\epsilon_{ik},
+ \qquad Y=365.25\ {\rm day}.
+ \label{eq:revision-brightness}
+\end{align}
+The source $q$ and individual extrinsic processes $e_i$ are independent
+stationary OUs. Gaussian slopes have standard deviation
+$0.03$ mag yr$^{-1}$, and independent Brownian increments have covariance
+$D_i^2\min(u-t_0,v-t_0)/Y$. Proper per-image/instrument offsets have
+30-mag prior width, accommodating the distinct relative and apparent
+magnitude zeros without a target-derived offset. Quoted marginal errors
+plus per-image jitter supply measurement variance. Slopes and Brownian
+increments propagate increasing uncertainty beyond the last observation;
+all latent processes are conditioned jointly by the original state-space
+likelihood. Brownian increments start at zero at $t_0=52832$ in native day
+units, the floor of the earliest development epoch minus 31 days; this
+precedes every allowed shifted observation. None is a BHSM statistical-state contraction.
+
+All 1002 old epochs and 25 pre-2019 LCO R epochs are development data.
+Three 500-day and three 2000-day rolling-origin windows recalibrate
+per-image uncertainty. The longer windows were added before numerical
+target inspection because known timestamps extend about five years past
+calibration. Overlapping development windows are not independent
+replications. The unchanged higher empirical 97.5th-percentile rule gives
+primary A/B/C/D scale factors $(1,3.61321,1,1)$ and all-image forecast
+factors $(1.61012,1.90726,1.87754,1.92479)$. In particular, short-window
+calibration alone misses longer-horizon B undercoverage.
+
+A frozen 72-component finite nuisance ensemble propagates retained
+parameter variation and catalogue epoch-origin offsets $(-0.5,0,+0.5)$ day. It is
+constructed from two short correlated chains and three development-only
+epoch-origin reweightings, not 72 independent posterior draws. Between-chain
+$\widehat R$ reaches $5.19$ for weak extrinsic/Brownian decomposition
+and about $2.16$ for source amplitude/time scale. Posterior convergence
+is not established; this is a specified empirical predictive algorithm,
+not a complete marginalized physical posterior. Fixing macro delays
+transports the ensemble with development likelihood-ratio weights.
+Driver conditioning subsequently updates weights and latent states only.
+The per-image affine calibration includes its joint-density Jacobian.
+We therefore assess both coverage and the cost in interval width and
+proper score on the new observations.
+
+\subsection{Unused LCO catalogue targets}
+The separate CTIO 1-m LCO monitoring~\cite{Sorgenfrei2025} supplies
+54 R epochs from 2019 through 2024 beyond every consumed COSMOGRAIL
+epoch. Its earlier 25 R epochs calibrate the instrument; all 80 V epochs
+remain unscored. Before opening R target values we fixed the split,
+model, calibration and source hashes and committed their predictive
+artifact. The primary application allows the 54 C magnitudes as a batch
+driver and withholds the 162 A/B/D magnitudes. C was selected using
+consumed first-experiment behavior. The secondary forecast withholds all
+216 magnitudes and overlaps the primary test.
+
+These numerical catalogue targets were unused by our model fitting and
+selection, with explicit limitations. The published LCO reduction
+uses a common difference-imaging reference mostly assembled from 2022;
+the exact reference-exposure list and full photometric covariance are
+unavailable. Common offsets capture static calibration uncertainty,
+but a full reference-noise likelihood is not identified by the released
+marginal errors. Numerical target values were unused; photon-disjoint calibration and full
+reference-noise independence are not established. The experiment is a
+retrospective catalogue-withholding test, not an independently blinded
+reduction or prospective forecast.
+Source identification also exposed qualitative published microlensing
+findings; numerical catalogue targets and plots were not inspected
+before freezing. Complete analyst blinding is not claimed.
+
+\input{sections/he0435_revision_results_20261020}
+\input{sections/he0435_gaia_20261020}
+\input{sections/he0435_geometry_20261021}

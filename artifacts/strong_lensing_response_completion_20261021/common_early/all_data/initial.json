@@ -1,0 +1,19 @@
+{
+  "objective": 11687.584895556476,
+  "target_raw_chi2": 8648.058807604788,
+  "field_raw_chi2": 2253.890406031491,
+  "scaled_projected_KKT_gradient_max": 6746.083388035505,
+  "scaled_projected_KKT_target_max": 5855.984657849127,
+  "scaled_projected_KKT_eta_max": 1065.3823315847999,
+  "scaled_projected_KKT_field_nuisance_max": 6746.083388035505,
+  "active_lower_indices": [
+    63,
+    64,
+    66,
+    76,
+    77
+  ],
+  "active_upper_indices": [],
+  "function_evaluations": 1,
+  "jacobian_evaluations": 1
+}

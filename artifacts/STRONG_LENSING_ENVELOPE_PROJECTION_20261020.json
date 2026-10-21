@@ -1,0 +1,294 @@
+{
+  "schema": "strong-lensing-envelope-action-projection-v1",
+  "adm_native_projection": {
+    "status": "EXECUTED_ACTION_NATIVE_ADM_PROJECTION_NOT_LOCAL_PHASE_EXTRACTION",
+    "z": 0.3,
+    "N": -0.262364264467491,
+    "background_phi_v_H": [
+      0.09074930116451298,
+      0.2377644263710765,
+      1.1836105771853052
+    ],
+    "units": "H0=Mpl=1; action density divided by a^3",
+    "normalization": "one real closed-S3 n=2 harmonic: integral sqrt(gamma) Q^2=1",
+    "metric_basis_normalization": "unit lapse harmonic amplitude alpha; unit covariant shift potential harmonic amplitude chi with N_i=D_i chi; chi measured in H0^-1",
+    "metric_coordinates": [
+      "alpha_ADM_lapse",
+      "chi_ADM_shift"
+    ],
+    "source_coordinates": [
+      "zeta_dot",
+      "D_m_dot",
+      "D_r_dot",
+      "zeta",
+      "D_m",
+      "D_r"
+    ],
+    "a_ADM": -7.96725027661529,
+    "b_ADM": 0.5695448002713244,
+    "c_ADM": 0.48267978497855984,
+    "metric_block": [
+      [
+        -7.96725027661529,
+        0.5695448002713244
+      ],
+      [
+        0.5695448002713244,
+        0.48267978497855984
+      ]
+    ],
+    "mixed_columns": [
+      [
+        7.021015782437431,
+        0.0,
+        0.0,
+        6.436914587999999,
+        -2.0432099999999997,
+        -0.0010281959999999997
+      ],
+      [
+        -0.48671999999999993,
+        2.0432099999999997,
+        0.0010281959999999999,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "source_state_self_block": [
+      [
+        -6.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        8.395833333333334,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.004225,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.30111541199999997,
+        0.0,
+        0.0010281959999999997
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0010281959999999997,
+        0.0,
+        -0.0003427319999999999
+      ]
+    ],
+    "determinant": -4.1700119299031435,
+    "metric_condition_number": 15.368657973059397,
+    "response_columns": [
+      [
+        0.8791608501396269,
+        -0.27906386142866546,
+        -0.00014043213671894133,
+        0.7450742591360788,
+        -0.23650200048443268,
+        -0.00011901390992119837
+      ],
+      [
+        -0.02900782513558868,
+        -3.9037695122520266,
+        -0.0019644775610042457,
+        -0.879160850139627,
+        0.27906386142866546,
+        0.0001404321367189413
+      ]
+    ],
+    "response_residual_norm": 1.41621372581761e-15,
+    "explicit_inverse_vs_solve_norm": 4.849413209257403e-16,
+    "analytic_vs_projected_max": 5.551115123125783e-17,
+    "original_constraints_by_unit_column": [
+      [
+        4.440892098500626e-16,
+        -1.8388068845354155e-16,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.273559366969494e-16,
+        0.0,
+        0.0
+      ],
+      [
+        -1.0842021724855044e-19,
+        -3.3881317890172014e-19,
+        0.0,
+        0.0
+      ],
+      [
+        4.440892098500626e-16,
+        -2.220446049250313e-16,
+        0.0,
+        0.0
+      ],
+      [
+        -2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "original_constraints_max": 5.273559366969494e-16,
+    "simultaneous_aux_reconstruction_max_norm": 1.4657992515888388e-15,
+    "schur_state_block": [
+      [
+        0.18672089278142323,
+        -0.05926907839528635,
+        -2.9825729773111976e-05,
+        5.659083301462245,
+        -1.796310240613787,
+        -0.0009039496694701636
+      ],
+      [
+        -0.0592690783952863,
+        0.41961242820487055,
+        -0.004013840197419485,
+        -1.796310240613787,
+        0.5701860723096636,
+        0.00028693234606550806
+      ],
+      [
+        -2.9825729773111817e-05,
+        -0.004013840197419485,
+        0.004222980132029685,
+        -0.0009039496694701638,
+        0.0002869323460655081,
+        1.443917612458686e-07
+      ],
+      [
+        5.659083301462245,
+        -1.7963102406137872,
+        -0.0009039496694701639,
+        5.0970947797763175,
+        -1.5223431770094276,
+        0.0002621136270533201
+      ],
+      [
+        -1.796310240613787,
+        0.5701860723096636,
+        0.0002869323460655081,
+        -1.5223431770094276,
+        0.4832232524097977,
+        0.0002431704108900917
+      ],
+      [
+        -0.0009039496694701636,
+        0.00028693234606550806,
+        1.443917612458686e-07,
+        0.0002621136270533201,
+        0.0002431704108900917,
+        -0.00034260963037387453
+      ]
+    ],
+    "schur_vs_native_reduction_norm": 4.154655943942955e-16,
+    "c_zeta_before_metric_elimination": 0.30111541199999997,
+    "zeta_schur_curvature": 5.0970947797763175,
+    "kinetic_eigenvalues": [
+      0.004182113778467213,
+      0.17251064482078457,
+      0.4338635425190717
+    ],
+    "legendre_gate": true,
+    "common_domain": "same N, R1 background, normalized n=2 harmonic, endpoint-vanishing temporal variations",
+    "local_phase_extraction_dependency": "ADM lapse/shift entries cannot be renamed local Phi/Psi entries. Phi=alpha+chi_dot; Psi=-zeta-H chi is a derivative/state map, not an instantaneous invertible 2x2 change of metric coordinates."
+  },
+  "local_static_phase": {
+    "status": "DERIVED_EXACT_ZERO_IN_SPECIFIED_STATIC_SPATIAL_PHASE_CHANNELS",
+    "applications": {
+      "zero_spatial_current": {
+        "pointwise_source_tensor": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "u": 0.0,
+        "v": 0.0,
+        "source_norm": 0.0,
+        "scope": "exact static spatial phase bilinear identity, conditional on stated channel"
+      },
+      "constant_local_texture": {
+        "pointwise_source_tensor": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "u": 0.0,
+        "v": 0.0,
+        "source_norm": 0.0,
+        "scope": "exact static spatial phase bilinear identity, conditional on stated channel"
+      }
+    },
+    "metric_response": "zero if the same-domain physical metric block is invertible",
+    "schur_curvature": "c_phi (because u=v=0); not determined by the current-null condition",
+    "phase_invariant_FX_sector_self_entry": "integral dmu*w*[4 F''(X)(j.dphi)^2+2 F'(X)|T eta|^2 (dphi)^2]",
+    "constant_texture_FX_sector_self_entry": 0.0,
+    "constant_texture_self_entry_scope": "only the phase-invariant F(X) sector on a domain admitting the constant; additional action and boundary terms must be included before claiming a full c_phi",
+    "not_inferred": "D0 eta=0 and j0=0 alone do not imply ji=0 or zero full lensing"
+  },
+  "seam_used": "no seam amplitude inserted; static export remains symbolic",
+  "moving_seam_status": "kinematic proposal only; not selected as an action-derived source",
+  "muon_input_consumed": false,
+  "realized_physical_envelope_amplitude_claimed": false
+}

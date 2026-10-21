@@ -1,0 +1,66 @@
+{
+  "status": "Two actual bounded conditional electronic-response applications completed without mean/noise refit or reserved science access",
+  "source_sha256": {
+    "code/strong_lensing_anchor_covariance.py": "d7394000a87660b97de86fbd0a6ade1acc268b6eddf595a3cbc3b9360a46d929",
+    "scripts/project_he0435_nonlocal_anchor_covariance.py": "cbd28293675390586e6945392f204a9b66281e9886b380e5eb2d2ebdfb2c3574",
+    "tests/test_strong_lensing_anchor_covariance.py": "fa87dfa9cf8f98cebbbffc279e3bfe686bdfe4951b72d73862f003db8dacf3b7",
+    "code/strong_lensing_temporal_controls.py": "69d5e480f0bc3f3ecd292b7e35eca0c815a133e6f7bd3932f5f08dcf225fa129",
+    "scripts/apply_he0435_temporal_control_mean.py": "e797006ba797d2018de6b3f6422e42de04ac2d4dc79cf0947307fddd6eb67069",
+    "tests/test_strong_lensing_temporal_controls.py": "10eb7a1e50231d0eac6385bee43f4f63d4d67dafc6878165d21cfa75aa836e30",
+    "preregistration/he0435_E4A_temporal_control_20261021.json": "93571e126ffa771883b4e7c8b8672373e50d1e8e91f30515ee8c3bba9f522c3a"
+  },
+  "focused_tests": {
+    "anchor_tests_passed": 3,
+    "temporal_control_tests_passed": 2
+  },
+  "nonlocal_G0_component": {
+    "receipt": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/nonlocal_G0_E4A/result.json",
+    "receipt_sha256": "af840526a83bddc2c1f102ae87f95c5d079af41058841041a895f12ed7254732",
+    "independent_review": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/nonlocal_G0_E4A/independent_nonlocal_anchor_review.json",
+    "selected_outputs": 289,
+    "anchor_context_pixels": 1225,
+    "raw_RMS_SCI": 1.2992770499921562,
+    "original_ERR_Q": 3385.751258412859,
+    "READ_DARK_only_component_Q": 3422.540250026064,
+    "scope": "Exact local direct electronic-intercept anchor contraction at fixed incident charge/cap state; same-realization source cross covariance retained. Not the full cap/raw/reference/photon likelihood."
+  },
+  "outside_ROI_noise_mean": {
+    "receipt": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/E4A_temporal_control_mean/result.json",
+    "receipt_sha256": "6a043d820b25d89c07c98ac28b35f2aeab9d79b03a2188dd9744d4877a549204",
+    "fixed_controls": 16,
+    "contrast_dimension": 112,
+    "before": {
+      "original_ERR_Q": 3385.751258412859,
+      "raw_RMS_SCI": 1.2992770499921562
+    },
+    "after": {
+      "original_ERR_Q": 3425.0587567775037,
+      "raw_RMS_SCI": 1.2990696014510261,
+      "conditional_noise_mean_RMS_SCI": 0.01056453638033185,
+      "conditional_noise_mean_max_abs_SCI": 0.026123750939277796,
+      "raw_residual_dot_noise_mean_SCI2": 0.09401641808742221
+    },
+    "optional_Poisson_control_term": {
+      "raw_RMS_SCI": 1.2990714051122914,
+      "original_ERR_Q": 3424.482848861101,
+      "conditional_mean_RMS_SCI": 0.010378222628312455,
+      "control_Poisson_variance_DN2_range": [
+        0.9982609747013151,
+        12.22115206594137
+      ],
+      "full_target_counting_covariance_supplied": false,
+      "interpretation": "Best linear prediction of the electronic target residual and its error covariance from electronics plus independent Poisson control moments; not generally the exact conditional expectation after adding non-Gaussian Poisson noise."
+    },
+    "interpretation_correction_receipt": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/E4A_temporal_control_mean/interpretation_review_correction.json",
+    "conclusion": "Fixed calibration-based noise-realization prediction is quantitatively insufficient. Original-ERR Q worsens; raw RMS decreases by only about 0.016 percent. No control/PSD/mean family tuning was performed.",
+    "independent_review": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/E4A_temporal_control_mean/independent_temporal_control_review.json",
+    "independent_review_sha256": "37563d3d95e7e5afb0ef67afc864c91e8403d6d490ea147ffcf4b792718ecb05",
+    "independent_review_status": "PASS for declared Gaussian electronics / optional best-linear-prediction scope; nonlinear mean failure retained"
+  },
+  "preserved": "Existing eleven stochastic/dark source files, original h1 comparison, canonical analytic covariance outputs, physical preparation/source equations and guard are unchanged.",
+  "physical_guard": 2e-10,
+  "physical_validation_pass": false,
+  "source_complete_likelihood": false,
+  "reserved_observations_opened": false,
+  "commits_or_pushes_by_agent": false
+}

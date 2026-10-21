@@ -1,0 +1,105 @@
+{
+  "protocol_start_index": 0,
+  "fit": {
+    "parameters": {
+      "delays_days": [
+        0.0,
+        6.4204185656543995,
+        -0.9747313403920538,
+        12.48800134791793
+      ],
+      "source_sigma_mag": 0.17385213798839083,
+      "source_tau_days": 1500.0,
+      "extrinsic_sigma_mag": 0.16050545911012357,
+      "extrinsic_tau_days": 10000.00000000001,
+      "jitter_mag": 0.010038599791759572,
+      "offset_sigma_mag": 3.0,
+      "magnitude_zero": -10.3459
+    },
+    "starts": [
+      {
+        "initial_delays_days": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "coordinates": [
+          6.4204185656543995,
+          -0.9747313403920538,
+          12.48800134791793,
+          -1.7495501227126522,
+          7.313220387090301,
+          -1.8294273238433132,
+          9.210340371976184,
+          -4.601317637416573
+        ],
+        "training_log_likelihood": 8791.55342232394,
+        "optimizer_success": true,
+        "optimizer_message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 81,
+        "function_evaluations": 1170,
+        "maximum_absolute_optimizer_gradient": 2.244923962365142
+      }
+    ],
+    "selected_start_index": 0,
+    "training_observation_count": 3608,
+    "coordinate_order": [
+      "delay_image_1_days",
+      "delay_image_2_days",
+      "delay_image_3_days",
+      "log_source_sigma",
+      "log_source_tau",
+      "log_extrinsic_sigma",
+      "log_extrinsic_tau",
+      "log_jitter"
+    ],
+    "coordinate_bounds": [
+      [
+        -30.0,
+        30.0
+      ],
+      [
+        -30.0,
+        30.0
+      ],
+      [
+        -30.0,
+        30.0
+      ],
+      [
+        -3.912023005428146,
+        -0.6931471805599453
+      ],
+      [
+        2.302585092994046,
+        7.313220387090301
+      ],
+      [
+        -5.298317366548036,
+        -0.6931471805599453
+      ],
+      [
+        5.298317366548036,
+        9.210340371976184
+      ],
+      [
+        -9.210340371976182,
+        -3.506557897319982
+      ]
+    ],
+    "active_bound_flags": [
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      false
+    ],
+    "training_log_likelihood": 8791.55342232394,
+    "predictive_uncertainty": "Conditional on fitted delays/hyperparameters; no parameter-posterior integration"
+  },
+  "wall_seconds": 62.587629900008324
+}

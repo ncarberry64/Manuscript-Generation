@@ -1,0 +1,86 @@
+{
+  "status": "DEVELOPMENT_PHYSICAL_PSF_CALIBRATION_TRIAL",
+  "stpsf_version": "2.2.0",
+  "spectral_assumption": "4000K blackbody field star, prescribed rather than measured NIR spectrum",
+  "native_errors_changed": false,
+  "target_pixels_used_for_response": false,
+  "oversampling": 5,
+  "fft_oversampling": 2,
+  "fov_pixels": 25,
+  "nlambda": 9,
+  "records": [
+    {
+      "centroid_xy_pixel": [
+        899.7584575791528,
+        875.9559384636351
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.7525773898941667e-06,
+          -5.884109961505651e-08
+        ],
+        [
+          -5.884109961505651e-08,
+          2.5618788834410705e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5283.892647569027,
+      "background_plane_SCI": [
+        0.37259951077037823,
+        0.004356696846298432,
+        -0.0019077623557950737
+      ],
+      "background_polynomial_SCI": [
+        0.37259951077037823,
+        0.004356696846298432,
+        -0.0019077623557950737
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 10181.278895105714,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 18,
+        "4": 14
+      },
+      "stamp_bounds_xyxy": [
+        892,
+        868,
+        909,
+        885
+      ],
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "chi2_dof": 35.97625051274104,
+      "elapsed_seconds": 1.6228554248809814,
+      "psf_sha256": "9a681e0082eb923be6305d0990b12956ecdbc3323a9d8e199c87a5ee71ad65b6",
+      "options": {
+        "jitter": "gaussian",
+        "jitter_sigma": 0.0008,
+        "pupil_shift_x": 0,
+        "pupil_shift_y": 0,
+        "output_mode": "Oversampled image",
+        "add_ipc": true,
+        "add_distortion": true,
+        "crop_psf": true
+      },
+      "metadata": "{'instrume': ('NIRCam', 'Instrument name'), 'detector': ('NRCB3', 'Detector name'), 'filter': ('F115W', 'Filter name'), 'pupilopd': ('OPD from supplied FITS HDUlist object', 'Pupil OPD source name'), 'opd_file': ('R2022101203-NRCA3_FP1-1.fits', 'Pupil OPD file name'), 'opdslice': (0, 'Pupil OPD slice number'), 'fovpixel': (25, 'Field of view in pixels (full array)'), 'fov': (np.float64(0.7718297500000001), 'Field of view in arcsec (full array)'), 'oversamp': (2, 'Oversampling factor for FFTs in computation'), 'det_samp': (5, 'Oversampling factor for MFT to detector plane'), 'nwaves': (9, 'Number of wavelengths used in calculation'), 'det_yx0': ('(875.0, 899.0)', \"The #0 PSF's (y,x) detector pixel position\"), 'num_psfs': (1, 'The total number of fiducial PSFs'), 'distort': ('True', 'SIAF distortion coefficients applied'), 'siaf_ver': ('PRDOPSSOC-075', 'SIAF PRD version used'), 'coef_x00': (np.float64(0.0), 'SIAF distortion coefficient for COEF_X00'), 'coef_x10': (np.float64(32.436330707), 'SIAF distortion coefficient for COEF_X10'), 'coef_x11': (np.float64(6.8582110817e-05), 'SIAF distortion coefficient for COEF_X11'), 'coef_x20': (np.float64(0.0021505216385), 'SIAF distortion coefficient for COEF_X20'), 'coef_x21': (np.float64(0.0055659092093), 'SIAF distortion coefficient for COEF_X21'), 'coef_x22': (np.float64(-0.00045247949658), 'SIAF distortion coefficient for COEF_X22'), 'coef_x30': (np.float64(-1.0958773271e-05), 'SIAF distortion coefficient for COEF_X30'), 'coef_x31': (np.float64(1.4492006081e-06), 'SIAF distortion coefficient for COEF_X31'), 'coef_x32': (np.float64(-1.2563922478e-05), 'SIAF distortion coefficient for COEF_X32'), 'coef_x33': (np.float64(1.688192047e-07), 'SIAF distortion coefficient for COEF_X33'), 'coef_x40': (np.float64(-2.1289383641e-08), 'SIAF distortion coefficient for COEF_X40'), 'coef_x41': (np.float64(-8.9607072926e-09), 'SIAF distortion coefficient for COEF_X41'), 'coef_x42': (np.float64(9.391615061e-09), 'SIAF distortion coefficient for COEF_X42'), 'coef_x43': (np.float64(-4.1774855183e-09), 'SIAF distortion coefficient for COEF_X43'), 'coef_x44': (np.float64(1.4507962025e-08), 'SIAF distortion coefficient for COEF_X44'), 'coef_x50': (np.float64(7.0561459437e-10), 'SIAF distortion coefficient for COEF_X50'), 'coef_x51': (np.float64(-1.5200617167e-10), 'SIAF distortion coefficient for COEF_X51'), 'coef_x52': (np.float64(-1.3569890867e-09), 'SIAF distortion coefficient for COEF_X52'), 'coef_x53': (np.float64(-2.5526194045e-10), 'SIAF distortion coefficient for COEF_X53'), 'coef_x54': (np.float64(8.4357148019e-10), 'SIAF distortion coefficient for COEF_X54'), 'coef_x55': (np.float64(-1.1705792988e-10), 'SIAF distortion coefficient for COEF_X55'), 'coef_y00': (np.float64(0.0), 'SIAF distortion coefficient for COEF_Y00'), 'coef_y10': (np.float64(-0.02047725829), 'SIAF distortion coefficient for COEF_Y10'), 'coef_y11': (np.float64(32.344921034), 'SIAF distortion coefficient for COEF_Y11'), 'coef_y20': (np.float64(-0.0029671227704), 'SIAF distortion coefficient for COEF_Y20'), 'coef_y21': (np.float64(0.0026283138997), 'SIAF distortion coefficient for COEF_Y21'), 'coef_y22': (np.float64(0.0026831612236), 'SIAF distortion coefficient for COEF_Y22'), 'coef_y30': (np.float64(-1.5278031188e-06), 'SIAF distortion coefficient for COEF_Y30'), 'coef_y31': (np.float64(-1.5807189232e-05), 'SIAF distortion coefficient for COEF_Y31'), 'coef_y32': (np.float64(1.8207261948e-06), 'SIAF distortion coefficient for COEF_Y32'), 'coef_y33': (np.float64(-1.228577421e-05), 'SIAF distortion coefficient for COEF_Y33'), 'coef_y40': (np.float64(3.721139425e-08), 'SIAF distortion coefficient for COEF_Y40'), 'coef_y41': (np.float64(9.5028228547e-09), 'SIAF distortion coefficient for COEF_Y41'), 'coef_y42': (np.float64(-2.8386466358e-08), 'SIAF distortion coefficient for COEF_Y42'), 'coef_y43': (np.float64(3.5661456578e-08), 'SIAF distortion coefficient for COEF_Y43'), 'coef_y44': (np.float64(-1.2741490579e-08), 'SIAF distortion coefficient for COEF_Y44'), 'coef_y50': (np.float64(1.1774372944e-09), 'SIAF distortion coefficient for COEF_Y50'), 'coef_y51': (np.float64(1.2526394759e-09), 'SIAF distortion coefficient for COEF_Y51'), 'coef_y52': (np.float64(2.7712448733e-10), 'SIAF distortion coefficient for COEF_Y52'), 'coef_y53': (np.float64(3.1582139003e-09), 'SIAF distortion coefficient for COEF_Y53'), 'coef_y54': (np.float64(-6.9824747105e-10), 'SIAF distortion coefficient for COEF_Y54'), 'coef_y55': (np.float64(1.6558394623e-10), 'SIAF distortion coefficient for COEF_Y55'), 'rotation': (-0.45164689, 'PSF rotated to match detector rotation'), 'wavelen': (np.float64(1.152701284554082e-06), 'Weighted mean wavelength in meters'), 'difflmt': (np.float64(0.03175210811048577), 'Diffraction limit lambda/D in arcsec'), 'ffttype': ('numpy.fft', 'Algorithm for FFTs: numpy or fftw'), 'normaliz': ('first', 'PSF normalization method'), 'tel_wfe': (68.46139748093157, '[nm] Telescope pupil RMS wavefront error'), 'jitrtype': ('Gaussian convolution', 'Type of jitter applied'), 'jitrsigm': (0.0008, 'Gaussian sigma for jitter, per axis [arcsec]'), 'jitrstrl': (np.float64(0.9999999999999696), 'Strehl reduction from jitter'), 'chdftype': ('gaussian', 'Type of detector charge diffusion model'), 'chdfsigm': (0.0062, '[arcsec] Gaussian sigma for charge diff model'), 'ipcinst': ('NIRCam', 'Interpixel capacitance (IPC)'), 'ipctypa': ('488', 'NRC SCA num used for IPC and PPC model'), 'ipcfile': ('KERNEL_IPC_CUBE.fits', 'IPC model source file'), 'ppcfile': ('KERNEL_PPC_CUBE.fits', 'PPC model source file'), 'date': ('2026-10-21T14:29:57.852', 'Date of calculation'), 'author': ('root@fb6e2c1b10cb', 'username@host for calculation'), 'version': ('2.2.0', 'STPSF software version'), 'datavers': ('2.2.0', 'STPSF reference data files version'), 'grid_xypos': array([[899., 875.]]), 'oversampling': (2, 2)}"
+    }
+  ]
+}

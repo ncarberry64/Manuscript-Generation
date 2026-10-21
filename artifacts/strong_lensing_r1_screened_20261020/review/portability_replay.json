@@ -1,0 +1,54 @@
+{
+  "scope": "one portability replay only; source paths and output mkdir changed, no science changes",
+  "runs": [
+    {
+      "script": "multisource_crossratio.py",
+      "result": "multisource_crossratio_results.json",
+      "returncode": 0,
+      "seconds": 1.4785770059997958,
+      "comparison": {
+        "numeric_values": 99,
+        "max_absolute_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "nonmatching": []
+      },
+      "stderr": ""
+    },
+    {
+      "script": "shared_lens_rank.py",
+      "result": "shared_lens_rank_results.json",
+      "returncode": 0,
+      "seconds": 2.36982580699987,
+      "comparison": {
+        "numeric_values": 169,
+        "max_absolute_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "nonmatching": []
+      },
+      "stderr": ""
+    },
+    {
+      "script": "check_screened_projection.py",
+      "result": "screened_projection_check_results.json",
+      "returncode": 0,
+      "seconds": 2.380945703999714,
+      "comparison": {
+        "numeric_values": 37,
+        "max_absolute_difference": 0.0,
+        "max_relative_difference": 0.0,
+        "nonmatching": []
+      },
+      "stderr": ""
+    }
+  ],
+  "original_agent_files_unchanged": true,
+  "scientific_values_match": true,
+  "original_sha256": {
+    "multisource_crossratio.py": "5829d8ee9bb79e79706d5428cc9655704ca7b78a85a2c15c03140f35aba618c0",
+    "multisource_crossratio_results.json": "4cd70e7a5f257c2e3cc236f1b28a40cb795912715b6dffadabfa5596e8e0f1a8",
+    "shared_lens_rank.py": "e68a0d4f995f4bb35fb76c20cda6a1fd7ea87570c2c9d00cae1f8ead7d7143af",
+    "shared_lens_rank_results.json": "b8bb8d12604b811fde318ee22eada8660c9bd0c31744b18c495305bf6e773777",
+    "check_screened_projection.py": "e4ca637aa5d55c93c27218f060f599563024349cf6cd2db6c33474dc234dbcd6",
+    "screened_projection_check_results.json": "55f8110c19e1ca8b17daea25175fd18086dfcc32063511ae1e88edf849f18ab7"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "Focused Galaxies build dependency correction only; no manuscript, scientific code or numerical artifacts changed.",
+  "failed_run": "https://github.com/ncarberry64/Manuscript-Generation/actions/runs/39470205427/job/118791954548",
+  "observed_error": "MDPI class requires soul.sty; absent under Ubuntu 24.04 apt --no-install-recommends package list.",
+  "defining_package_evidence": "https://packages.ubuntu.com/noble/all/texlive-plain-generic/filelist",
+  "correction": "Explicitly install texlive-plain-generic, which owns tex/generic/soul/soul.sty.",
+  "workflow_sha256": "4d69f82879cc4a7aa09ea18a92e50c525ef8750b7d37b0c3d31717c976b78cdd",
+  "original_manuscript_revision": "d8e7ca23aa4ced602c7f120fa200cbbd3488d506",
+  "original_manuscript_PDF_sha256": "cfcbb605fd6331f7165f29e0bb2594c4c9659c849ac198db829eea1908f2160a",
+  "prior_scientific_reviews_and_local_PDF_audit_remain_valid": true,
+  "broad_background_import_failure": "Observed unchanged in push run39470205280; no unrelated repair performed."
+}

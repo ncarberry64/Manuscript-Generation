@@ -1,0 +1,147 @@
+{
+  "status": "PASS_FINAL_SCIENTIFIC_MANUSCRIPT_CLAIMS_AFTER_PROSE_AND_RELEASE_PIN_CORRECTIONS",
+  "reviewed_utc": "2026-10-20T19:27:55.316030+00:00",
+  "review_scope": "Static researcher review of the observed-lens section, revised abstract/introduction/discussion/conclusions and reproducibility claims against archived original applications. Reviewer implemented the physical macro/audit code but did not author these manuscript passages; this is an internal AI-assisted review, not external human peer review.",
+  "numerical_policy": "No fitting, target scoring, test application or parameter changes repeated for this review. Previously archived results were read only.",
+  "checks": [
+    {
+      "id": "original_source_and_units",
+      "result": "PASS_NORMALIZATION_CLARIFICATION_VERIFIED",
+      "evidence": "The A-impact radius7.741611730637014kpc, pi_prime/(MplH0)=-1.8351972574832728e-4, consumed J_eff/(MplH0^2)=-40596.79508804083, integrated scalar source=-2.3686786826639066e-13 and metric Gauss source5.1666940730059555e-12 match the actual original R1 application. Global scalarflux max1.0978423550475534e-15; four metricGauss section max3.799151714282194e-16. Main text should make these dimensional normalizations explicit."
+    },
+    {
+      "id": "two_plane_maps_and_clock",
+      "result": "PASS",
+      "evidence": "Printed D_ol,D_os,D_ls follow elimination of one symmetric rear quadratic optical plane. The time-delay matrix derives from the full two-plane action with its source-only constant removed. No duplicate local sheet is inserted; fixed z_p=.8 is labeled conditional, not an identified perturber."
+    },
+    {
+      "id": "data_and_release_split",
+      "result": "PASS",
+      "evidence": "902training/100later epochs in the common2020reduction, 884epoch earlier release endpoint, nativecut57447.03918 and retrospective/reduction caveat match the archived protocol and provenance. Required2mas systematic and missingfullastrometriccovariance approximation are disclosed."
+    },
+    {
+      "id": "source_state_scope",
+      "result": "PASS",
+      "evidence": "Abstract,introduction,observedsection,discussion andconclusions distinguish fixed-stateR1conditionalresponse from a uniquely derived microscopicBHSMstate, interface law or global scalar environment. No fitted local scalar amplitude or quantum-statistical/Wick closure is claimed."
+    },
+    {
+      "id": "brightness_likelihood_normalization",
+      "result": "PASS_CONDITIONING_WORDING_CORRECTED",
+      "evidence": "The OU covariance, proper offset priors, independentmeasurementnoise approximation and normalized9statefilter agree with SupplementaryNoteS10. Jointscore is correctly a loglikelihooddifference, not a sumofmarginals. Primary smoothing conditions on historical plus permittedlaterB, so the printed phrase Training-only smoothing is inaccurate in that paragraph."
+    },
+    {
+      "id": "withheld_protocol_and_target_isolation",
+      "result": "PASS",
+      "evidence": "Primary uses100laterB driver points for300reservedA/C/D; secondary reserves400allimagepoints usingtrainingonly. Batch conditioning, possiblefuture driverdates, committedfreeze, no postscorefit and same-data nonindependence ofprimary/secondary are explicit."
+    },
+    {
+      "id": "tabulated_scores_and_coverage",
+      "result": "PASS",
+      "evidence": "Table jointlogs795.1985,791.6238,791.6288,755.9755; RMSE values and85.00/85.33/85.33/86.67percent coverages match withheld_scores.json. R1minusconventional=.0049826901341, conventionalminuscontrol35.6483167671, empiricalminusconventional3.5746202245. ImageA62%,C99%,D95%; secondaryconventionalRMSE.1949449285,coverage75.5%,deltaLog.00501435647 match."
+    },
+    {
+      "id": "predictive_interpretation",
+      "result": "PASS",
+      "evidence": "Text does not call score differences Bayesfactors, independent confirmation or a BHSM detection. Pointparameter intervals exclude hyperparameter/macro uncertainty; substantial Aundercoverage and correlatedtargets are disclosed. Activevariability timescale bounds and localmode/curvature limitations are retained."
+    },
+    {
+      "id": "fixed_body_vs_refitted_difference",
+      "result": "PASS",
+      "evidence": "Fixed-body originalsource delaychanges19.2903442,.93856058,29.03669445seconds are separated from separately refitted228.5061,7.23433,438.43556seconds. The latter are explicitly said to include nuisance reallocation and numericaloptimizer termination."
+    },
+    {
+      "id": "positive_effective_mass_equality",
+      "result": "PASS",
+      "evidence": "The source-derived positive conventional representation gives the entire retained R1field and same remote maps; its sharedscore is labeled structural equality rather than an independently fitted empirical confirmation."
+    },
+    {
+      "id": "stationary_central_image",
+      "result": "PASS",
+      "evidence": "Both actual macro models predict the fifthcentralstationaryimage with macroflux~6.32%ofA; no detectionlimit is assumed. Maintext restricts result to timing/pointgeometry and explicitly requires a separate image-leveltest. It does not claim a complete Einsteinring/galaxtreconstruction."
+    },
+    {
+      "id": "coherent_argument",
+      "result": "PASS",
+      "evidence": "The mainline remains specifiedstate/source -> normalizedmetric/optics -> observedimages/delays -> identifiability. The observedtest provides the empirical endpoint of that argument; longmicroscopiccap/continuation algebra is not promoted to a second coequal empirical claim."
+    }
+  ],
+  "corrections_requested": [
+    {
+      "id": "conditioning_wording",
+      "severity": "minor_prose",
+      "file": "manuscript/sections/he0435_observed_20261020.tex",
+      "original": "Training-only smoothing gives predictive means and marginal variances.",
+      "replace": "Smoothing over each permitted conditioning set gives predictive means and marginal variances.",
+      "reason": "The primary conditioning set includes allowed laterB as well as training; no algorithm/result change is needed.",
+      "resolution": "VERIFIED_RESOLVED_IN_CURRENT_SOURCES"
+    },
+    {
+      "id": "explicit_section_units",
+      "severity": "normalization_clarity",
+      "file": "manuscript/sections/he0435_observed_20261020.tex",
+      "recommendation": "Write pi_prime/(Mpl H0) and J_eff/(Mpl H0^2) explicitly, or state c=1 and those respective units with the numerical section.",
+      "reason": "The values are correct in the normalized code, but an explicit source dimension prevents confusing the large J_eff value with a physical massdensity or an unnormalized current.",
+      "resolution": "VERIFIED_RESOLVED_IN_CURRENT_SOURCES"
+    },
+    {
+      "id": "tests_vs_executed_audit",
+      "severity": "minor_reporting",
+      "file": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "recommendation": "Separate the8+7focusedtests of likelihood/map/action/projection from original scalar/metricresidual applications archived in the macro/audit receipts.",
+      "reason": "The7new macrotests do not directly assert every scalarflux/Gaussrow; those originalapplications were actually executed and recorded separately.",
+      "resolution": "VERIFIED_RESOLVED_IN_CURRENT_SOURCES"
+    },
+    {
+      "id": "immutable_calculation_revision",
+      "severity": "required_release_integration",
+      "files": [
+        "manuscript/strong_lensing_main.tex",
+        "manuscript/sections/strong_lensing_galaxies_20261020.tex"
+      ],
+      "recommendation": "Replace87503ae calculation pin with14ad777 or a later immutable sciencecommit including observeddata, frozenpredictions, scores andforwardaudit before finalbuild.",
+      "reason": "87503ae predates the new observed-lens calculations.",
+      "resolution": "VERIFIED_RESOLVED_IN_CURRENT_SOURCES"
+    }
+  ],
+  "blocking_scientific_formula_or_data_errors_identified": [],
+  "physical_admission": false,
+  "interpretation_limit": "This observedtest cannot select a unique envelope state or interface response. The restricted conventional/R1 family is nearly tied, and the matchedpositiveeffective-mass representation is exactly equivalent at retainedorder. Shared brightnessundercoverage and a centralimage require declared futuretests rather than result-drivenretuning of this exposedholdout.",
+  "initial_review_sha256": {
+    "manuscript/strong_lensing_main.tex": "04b2c48f773a668f94a980bd9cdf52e9a889ec8b5976d39cb2b995dc6185a861",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "b83d22e8599a40a468ef6b6f586fbb5f4bf481a991c240ffefd1d40217ed0c96",
+    "manuscript/sections/he0435_observed_20261020.tex": "eef457a6cee14812bf2f6791e04616fe0464babefce198b59922a193db521a8f",
+    "docs/strong_lensing_observed_20261020/LIGHTCURVE_LIKELIHOOD.md": "a942df313be1536a9e442768440ee1495d1623b751c6f29620a7e20eda941ddf",
+    "docs/strong_lensing_observed_20261020/OBSERVED_MODEL_DERIVATION.md": "4fa96fb65ebe593e8c4030df4fe44ad9cd2579ed7d523493a3a622fc2e5d0fe2",
+    "artifacts/strong_lensing_observed_20261020/withheld_scores.json": "7eb1827710b190cf1eeb125dd05f65ef18dc4490fcf3c24dbc2d5e33f67fb44a",
+    "artifacts/strong_lensing_observed_20261020/lightcurve_training.json": "6219ef5533dc5fa297a3c1b864e95141d7728025af3af242e40049fbc4c1e65d",
+    "artifacts/strong_lensing_observed_20261020/conventional_training.json": "01d439ca5817ded7628743f8fe8cbf7f6944c024642c9641bc937da903089ef0",
+    "artifacts/strong_lensing_observed_20261020/r1_training.json": "d42ca071675b9fccf8f59edcfee0e5af4d3646db8ee157bca9e382db5e63937d",
+    "artifacts/strong_lensing_observed_20261020/macro_forward_audit.json": "447bc0c210b120c068e4e43042f614c14edf87eeac7ba4dce1a964d86a69920f"
+  },
+  "reviewed_sha256": {
+    "manuscript/strong_lensing_main.tex": "04b2c48f773a668f94a980bd9cdf52e9a889ec8b5976d39cb2b995dc6185a861",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "b83d22e8599a40a468ef6b6f586fbb5f4bf481a991c240ffefd1d40217ed0c96",
+    "manuscript/sections/he0435_observed_20261020.tex": "eef457a6cee14812bf2f6791e04616fe0464babefce198b59922a193db521a8f",
+    "docs/strong_lensing_observed_20261020/LIGHTCURVE_LIKELIHOOD.md": "a942df313be1536a9e442768440ee1495d1623b751c6f29620a7e20eda941ddf",
+    "docs/strong_lensing_observed_20261020/OBSERVED_MODEL_DERIVATION.md": "4fa96fb65ebe593e8c4030df4fe44ad9cd2579ed7d523493a3a622fc2e5d0fe2",
+    "artifacts/strong_lensing_observed_20261020/withheld_scores.json": "7eb1827710b190cf1eeb125dd05f65ef18dc4490fcf3c24dbc2d5e33f67fb44a",
+    "artifacts/strong_lensing_observed_20261020/lightcurve_training.json": "6219ef5533dc5fa297a3c1b864e95141d7728025af3af242e40049fbc4c1e65d",
+    "artifacts/strong_lensing_observed_20261020/conventional_training.json": "01d439ca5817ded7628743f8fe8cbf7f6944c024642c9641bc937da903089ef0",
+    "artifacts/strong_lensing_observed_20261020/r1_training.json": "d42ca071675b9fccf8f59edcfee0e5af4d3646db8ee157bca9e382db5e63937d",
+    "artifacts/strong_lensing_observed_20261020/macro_forward_audit.json": "447bc0c210b120c068e4e43042f614c14edf87eeac7ba4dce1a964d86a69920f",
+    "artifacts/strong_lensing_observed_20261020/known_outcome_replay.json": "ffb81bc13bad131bd626a5a6fb75c4d428605e8d4efdb0a81ea71698bd9d3dde",
+    "scripts/replay_he0435_scores.py": "64fe280b14c49782819143fd2efb006d8b1c0ddab925354881eae4357438a8f7"
+  },
+  "final_reviewed_utc": "2026-10-20T19:28:56.707706+00:00",
+  "resolution_evidence": {
+    "conditioning_wording": "Current observed section now says Smoothing over each permitted conditioning set.",
+    "explicit_section_units": "Current observed section explicitly writes pi_prime/(Mpl H0) and J_eff/(Mpl H0^2).",
+    "tests_vs_executed_audit": "Current methods text separately attributes derivative-consistent projection/map/action to focusedtests and original scalar-source/metricGauss rows to executed macro/audit receipts.",
+    "immutable_calculation_revision": "Current bibliography and dataavailability both pin14ad777eaf8befda387b9c3cb4504cf499e76cfc, the immutable source/results revision containing the observed calculation."
+  },
+  "reviewed_final_pdf_sha256": "5a031e394a1b9626f9eec4e5ba0cec6c20f97cc5320419771c7f8136e78c43f6",
+  "reviewed_final_pdf_bytes": 427799,
+  "PDF_scope": "Scientific source/claim review. Root performs full24page rendered visual inspection and build diagnostics independently.",
+  "known_outcome_replay_reporting": "VERIFIED_RESOLVED: known_outcome_replay.json records the completed separately labeled known-outcome numerical replay, with no refitting or reopened experiment. The frozen prediction and original withheld-score artifacts remain unchanged. This replay is reproducibility evidence, not another independent predictive test.",
+  "unresolved_review_items": []
+}

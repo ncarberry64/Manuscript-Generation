@@ -1,0 +1,219 @@
+{
+  "scope": "Catalogue-selected field-only calibration diagnostics before independent STDPSF array opening; no quasar target pixels used; no PSF fit or result-based source selection",
+  "rows": [
+    {
+      "source_id": "3178014085210919680",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "star_probability": 0.9999962,
+      "Gmag": 19.268305,
+      "RUWE": 1.0124046,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014841125164160",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "star_probability": 0.99997324,
+      "Gmag": 16.992136,
+      "RUWE": 1.0537688,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "xy_epoch_projected": [
+        918.0539172698426,
+        904.2478939887649
+      ],
+      "star_probability": 0.99999106,
+      "Gmag": 20.355795,
+      "RUWE": 0.9401555,
+      "status": "FIELD_PIXELS_ONLY_INSPECTED",
+      "peak_snr": 1.5797470727617349,
+      "aperture_snr": -0.09236844646037491,
+      "central5x5_valid": true,
+      "valid_stamp_fraction": 0.9984,
+      "saturated_pixels_in_stamp": 0
+    },
+    {
+      "source_id": "3178020716640422912",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "star_probability": 0.9999796,
+      "Gmag": 16.577074,
+      "RUWE": 1.4138169,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178020785359899520",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "star_probability": 0.99998456,
+      "Gmag": 16.422436,
+      "RUWE": 1.0106548,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014085210919680",
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "star_probability": 0.9999962,
+      "Gmag": 19.268305,
+      "RUWE": 1.0124046,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014841125164160",
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "star_probability": 0.99997324,
+      "Gmag": 16.992136,
+      "RUWE": 1.0537688,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "xy_epoch_projected": [
+        1109.7219015837381,
+        715.3433911468427
+      ],
+      "star_probability": 0.99999106,
+      "Gmag": 20.355795,
+      "RUWE": 0.9401555,
+      "status": "FIELD_PIXELS_ONLY_INSPECTED",
+      "peak_snr": 2.398443638074321,
+      "aperture_snr": 0.298240790767901,
+      "central5x5_valid": true,
+      "valid_stamp_fraction": 0.9984,
+      "saturated_pixels_in_stamp": 0
+    },
+    {
+      "source_id": "3178020716640422912",
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "star_probability": 0.9999796,
+      "Gmag": 16.577074,
+      "RUWE": 1.4138169,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178020785359899520",
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "star_probability": 0.99998456,
+      "Gmag": 16.422436,
+      "RUWE": 1.0106548,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014085210919680",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "star_probability": 0.9999962,
+      "Gmag": 19.268305,
+      "RUWE": 1.0124046,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014841125164160",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "star_probability": 0.99997324,
+      "Gmag": 16.992136,
+      "RUWE": 1.0537688,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "xy_epoch_projected": [
+        1301.1527818966556,
+        526.2554112033794
+      ],
+      "star_probability": 0.99999106,
+      "Gmag": 20.355795,
+      "RUWE": 0.9401555,
+      "status": "FIELD_PIXELS_ONLY_INSPECTED",
+      "peak_snr": 1.9412324282779754,
+      "aperture_snr": -2.422428477510212,
+      "central5x5_valid": true,
+      "valid_stamp_fraction": 0.9984,
+      "saturated_pixels_in_stamp": 0
+    },
+    {
+      "source_id": "3178020716640422912",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "xy_epoch_projected": [
+        62.08522676639782,
+        1406.146404692603
+      ],
+      "star_probability": 0.9999796,
+      "Gmag": 16.577074,
+      "RUWE": 1.4138169,
+      "status": "FIELD_PIXELS_ONLY_INSPECTED",
+      "peak_snr": 2.0267140051449357,
+      "aperture_snr": -5.542380473364443,
+      "central5x5_valid": true,
+      "valid_stamp_fraction": 0.9984,
+      "saturated_pixels_in_stamp": 0
+    },
+    {
+      "source_id": "3178020785359899520",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "star_probability": 0.99998456,
+      "Gmag": 16.422436,
+      "RUWE": 1.0106548,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014085210919680",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "star_probability": 0.9999962,
+      "Gmag": 19.268305,
+      "RUWE": 1.0124046,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178014841125164160",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "star_probability": 0.99997324,
+      "Gmag": 16.992136,
+      "RUWE": 1.0537688,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    },
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "xy_epoch_projected": [
+        1492.2721213722311,
+        337.0342033722637
+      ],
+      "star_probability": 0.99999106,
+      "Gmag": 20.355795,
+      "RUWE": 0.9401555,
+      "status": "FIELD_PIXELS_ONLY_INSPECTED",
+      "peak_snr": 2.837254694469984,
+      "aperture_snr": -1.271414078559134,
+      "central5x5_valid": true,
+      "valid_stamp_fraction": 0.9968,
+      "saturated_pixels_in_stamp": 0
+    },
+    {
+      "source_id": "3178020716640422912",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "xy_epoch_projected": [
+        254.4273560229897,
+        1218.4163340151363
+      ],
+      "star_probability": 0.9999796,
+      "Gmag": 16.577074,
+      "RUWE": 1.4138169,
+      "status": "FIELD_PIXELS_ONLY_INSPECTED",
+      "peak_snr": 2.2845725058977338,
+      "aperture_snr": -1.7572478755123575,
+      "central5x5_valid": true,
+      "valid_stamp_fraction": 1.0,
+      "saturated_pixels_in_stamp": 0
+    },
+    {
+      "source_id": "3178020785359899520",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "star_probability": 0.99998456,
+      "Gmag": 16.422436,
+      "RUWE": 1.0106548,
+      "status": "OUTSIDE_REQUIRED_STAMP_FOOTPRINT"
+    }
+  ]
+}

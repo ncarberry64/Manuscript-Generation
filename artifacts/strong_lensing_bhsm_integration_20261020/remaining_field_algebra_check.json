@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-20T17:43:36.690528+00:00",
+  "sympy_version": "1.14.0",
+  "scope": "New exact component-algebra checks for the R1 continuation derivation; no repeat of existing numerical tests and no new physical solve.",
+  "checks": [
+    {
+      "name": "Cubic stress energy-density projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Cubic stress radial-pressure projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Cubic stress tangential-pressure projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Cubic stress mixed temporal-radial projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Scalar-current temporal component",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Scalar-current radial component",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Trace-reversed Ricci contraction with scalar gradient",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein tt row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein rr row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein tr row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein angular row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Perfect-fluid radial Euler acceleration projection",
+      "identity_residual": "0"
+    }
+  ],
+  "new_arithmetic_from_existing_coefficients": {
+    "H0_rV_over_c": 4.766887685833153e-05,
+    "Hl_rV_over_c": 5.642138685209712e-05,
+    "scalar_velocity_variation_parameter": 4.981553281754921e-05,
+    "bT_variation_parameter": 9.963106563509841e-05,
+    "interpretation": "Local coefficient-variation parameters, not physical delay-error bounds."
+  },
+  "derived_dependencies": {
+    "static_rolling_obstruction": "Dropping the temporal current balance forces Jr = -mu^3 integral(NA r^2 dr)/(NA r^2), rather than the decaying local excess; the rolling background must remain in the continuation.",
+    "environment": "The explicit cross-Hessian contraction in equation (17) is required; a projected optical tide does not determine it.",
+    "material": "Exact coupled evolution consumes a stated material relation in equation (14); prescribed common density plus different hydrostatic pressure is not a common fixed barotropic EOS.",
+    "domain": "An outer constrained Cauchy/matching solution must carry the regular branch amplitudes; the naive compact Poisson extension has an integral compatibility condition."
+  },
+  "derivation_file": "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md",
+  "derivation_sha256": "6a8820fbe57d98f017273e1a81d83d26a71264a9c342e9ac5d999c0c83934a36",
+  "physical_admission": false,
+  "scientific_prediction_or_original_artifacts_changed": false,
+  "verification_script": "scripts/r1_screened_review/check_remaining_field_algebra.py",
+  "verification_script_sha256": "ce764ea54d08564bf874564d728bb917125cc28b842dbc17e59ef53ee1527f48",
+  "saved_checker_provenance": "The three already executed SymPy blocks were extracted into named functions without changing the component mathematics. Extraction syntax was checked; prior twelve-identity execution evidence is retained without rerunning."
+}

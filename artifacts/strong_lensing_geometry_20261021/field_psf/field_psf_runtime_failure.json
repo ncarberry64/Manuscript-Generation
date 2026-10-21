@@ -1,0 +1,19 @@
+{
+  "status": "FROZEN_FIELD_ONLY_CALIBRATION_OUTPUT_SERIALIZATION_FAILED",
+  "recorded_utc": "2026-10-21T13:09:56.859537+00:00",
+  "protocol_sha256": "7e882eb6c68dc379e3eca32702ab048c753335d5bdfbfd529cb046b68e4ac706",
+  "freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "command": ".venv-geometry/Scripts/python.exe scripts/calibrate_he0435_jwst_psf.py --protocol preregistration/he0435_geometry_jwst_20261021.json --expected-protocol-sha256 7e882eb6c68dc379e3eca32702ab048c753335d5bdfbfd529cb046b68e4ac706 --execute-field-calibration",
+  "all_four_acquisition_hashes_preverified": true,
+  "error_type": "TypeError",
+  "error_message": "Object of type int64 is not JSON serializable",
+  "error_source": "scripts/calibrate_he0435_jwst_psf.py dump(); json.dumps(value,indent=2,allow_nan=False)",
+  "consumed_contraction": "Output selection catalogue stamp_bounds_xyxy contains numpy.int64 pixel-index scalars. This is an output encoding error, not a numeric field-PSF or lens-model residual.",
+  "persistent_first_execution_lock": "artifacts/strong_lensing_geometry_20261021/field_psf/calibration_started.json",
+  "calibration_psf_fits_emitted": 0,
+  "overall_adequacy_pass": false,
+  "quasar_target_values_inspected": false,
+  "target_measurement_authorized": false,
+  "frozen_sources_changed": false,
+  "recovery_rule": "Preserve first execution lock and freeze; any recovery must use the same field algorithm and gates, with serialization-only coercion documented before another field-only execution. No target values may be opened."
+}

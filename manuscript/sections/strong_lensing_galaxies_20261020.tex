@@ -1,0 +1,1504 @@
+\section{Introduction}
+In the Berger--Hopf Standard Model (BHSM) interpretation, gravitational
+lensing is the optical response of an envelope event traversed by
+environmental radiation. The BHSM program asks how envelope-state and
+surface contributions determine that response. Prepared incoming light is related to outgoing
+image directions and observer arrival-time differences, conditional on
+the envelope state and surrounding geometry. This raises a modeling
+question: which properties of a state-conditioned transfer can be
+identified once ordinary lens and source freedoms are admitted?
+
+We address that question through one explicit conditional realization.
+The previously specified closed reference branch R1 supplies a cubic
+scalar--tensor action and frozen rolling coefficients
+\citep{CarberryRepository}. Its regular finite-body source determines
+the metric and projected encounter without a fitted local amplitude.
+The same emitted marker, physical source coordinate, measured redshifts,
+observer clock and compatible distance maps \citep{Fleury2021arbitrary} are used for the response
+and its conventional fixed-body reference. This common preparation
+makes their difference a defined forward calculation.
+
+Cubic kinetic braiding, screening and their effects on lensing are
+established mechanisms \citep{Deffayet2010,Barreira2013,Barreira2015}.
+Lensing inference also depends on the assumed profile, mass sheet,
+source and propagation geometry
+\citep{SchneiderSluse2013,Fleury2021los,Teodori2022,Saha2024}.
+Our contribution is a controlled finite-body forward benchmark together
+with an explicit test of what its image and delay response identifies.
+It combines the normalized scalar source, one consistent
+potential/gradient/Hessian, re-solved image branches, a positive
+conventional effective-mass representation and a finite nonlinear
+nuisance refit. Smooth-profile and distributed-encounter controls test
+whether the conclusions depend on the convenient body or optical plane.
+This is the practical role of a bounded forward model with stated
+limitations \citep{Schechter2026}.
+
+The calculation follows state and preparation, normalized source and
+boundary problem, metric/optical transfer, images and delays, then
+identifiability and approximation controls. A positive effective mass
+reproduces the retained scalar metric and its complete optical
+response. The reference-relative seconds therefore quantify a
+conditional transfer; they do not by themselves identify a unique
+underlying state. The finite refit makes this distinction concrete
+without changing the injected preparation.
+We then construct an observed-lens timing and point-geometry baseline
+for HE~0435$-$1223 and test frozen conventional and conditional R1
+predictions against reserved later light curves. This applies the same
+identifiability question to actual observations without promoting the
+synthetic profile to a complete galaxy reconstruction. Its coverage failure
+and extra central image motivate a distinct HST-constrained source revision,
+followed by a frozen test on unused LCO catalogue targets. This sequence tests the
+ordinary source and predictive uncertainty before any residual is assigned
+to an additional state or interface response.
+The shared LCO reduction also motivates a separately frozen Gaia
+astrometric test of the same physical predictions. Its failure leads to
+an explicit diagnosis of the circular-deflector/constant-tide geometry,
+followed by a positive nearby G1 perturber in the full two-plane
+equations. Gaia is consumed in that revision. A further, separately
+frozen native JWST experiment tests its predictions without fitting
+the new target geometry or enlarging the errors.
+Its failed calibration motivates a separately labeled development
+calculation on those consumed photons: corrected native-rate selection,
+an electron-conserving read-history mean and a coherent sky with shared
+calibration covariance. Their actual residuals distinguish a repaired
+implementation from an adequate precision measurement. This extends
+the chain from a conditional optical transfer to the measurement
+operator that would be needed to infer its state dependence.
+
+BHSM determines the research question and interpretation. The R1 action
+is an effective representation with its own independent rolling scalar;
+a unique physical reduction of BHSM cap/interface data to that action
+requires additional constitutive and embedding data. Those source
+conditions are derived separately in Supplementary Note S4. The present
+paper establishes the forward response and its information limits at
+the level actually specified. Its profiles are controlled examples;
+the observed-lens application is a restricted retrospective test and
+does not claim an empirical BHSM detection.
+
+\section{Envelope State and Environmental Preparation}
+\label{sec:models}
+The incoming marker probes the event; it does not select the envelope
+reference state. The conditional state consists of the frozen R1 branch,
+the finite local density excess and the regular local boundary branch
+specified below. The earlier source-free target state is retained as a
+separate null control in Appendix~\ref{app:target}. Homogeneous geometry,
+local matter and the local scalar response are accounted for once.
+This section specifies the synthetic preparation. The distinct observed
+R-band channel and its measured redshifts are introduced in
+Section~\ref{sec:observed-lens}; its two hypotheses share that same
+observational preparation and variability likelihood.
+
+\subsection{Incident light, finite body and environment}
+The lens and source redshifts are $z_l=0.3$ and $z_s=1$.
+The incoming test light is a narrow transient marker with identical
+emission phase, spectrum, polarization and physical transverse source
+coordinate in the effective response and its reference. The observed reference wavelength is
+$550$ nm. The fixed source displacement is
+$s=(0.0014576633674174603,0)$ Mpc. The light intensity is taken in the
+test-field limit, so its gravitational backreaction is neglected.
+The observables are image directions and
+observer proper-time differences between copies of that marker.
+
+The local body in the conditional envelope is prescribed as a finite
+excess density above the homogeneous environment. The effective response and fixed-body
+reference use this same profile:
+\begin{equation}
+ \rho(r)=\frac{15M}{8\pi R^3}\left(1-\frac{r^2}{R^2}\right)
+ \quad(0\le r\le R),\qquad
+ M=10^{11}M_\odot,\quad R=3\ {\rm kpc}.
+ \label{eq:body}
+\end{equation}
+It vanishes outside the body. This is the quadratic-density Tolman--VII
+profile \citep{Tolman1939}, used as a controlled spherical mass
+distribution. Define
+\begin{equation}
+ m_g=\frac{GM}{c^2},\qquad
+ f_M(r)=\frac{M(<r)}{M}
+ =\begin{cases}
+ \frac12(5x^3-3x^5),&x=r/R\le1,\\
+ 1,&r\ge R .
+ \end{cases}
+ \label{eq:enclosed}
+\end{equation}
+For the effective scalar response, the density is prescribed and the
+leading pressure adjustment is calculated separately. We do not reuse the exact
+Einstein-fluid pressure as an exact modified-gravity solution.
+
+The physical Jacobi maps are independently initialized for
+observer--lens, observer--source and lens--source propagation. They share
+one background, the same transported screen basis, and frequency
+normalization. At the reference state their scalar values are
+\begin{equation}
+ (D_{ol},D_{os},D_{ls})
+ =(945.162839373,\ 1689.312239687,\ 1076.994348060)\ {\rm Mpc}.
+ \label{eq:maps}
+\end{equation}
+The main body is excluded from these maps and enters the local encounter
+once. The local response calculation holds the maps fixed, isolating the
+encounter contribution. Its fixed-body reference uses the same R1
+geometry; it is not a fit of a separate complete
+$\Lambda$CDM cosmology.
+
+\section{Action, Normalization, Local Source and Boundary Data}
+\label{sec:scalar}
+\subsection{Conditional BHSM state representation}
+The question is how an envelope state determines a light transfer, and
+which state information that transfer identifies. At the effective level
+used here, the state specifies the rolling values $H,v,d$, the cubic
+normalization $\lambda$, the finite matter source and the regular
+boundary branch. The normalized action below makes their source and
+metric applications explicit. This is the state-conditioned forward
+problem used throughout the paper.
+
+A unique microscopic map from BHSM cap/interface variables into this
+independent scalar action is not assumed. The cap momentum and source
+pullback, including their normalization and complement dependence, are
+worked out in Supplementary Note S4. They specify additional physical
+selection data rather than another adjustable lensing contribution.
+The present light calculation measures properties of the conditional
+metric response. Its equivalence to a conventional effective mass is
+then a statement about what those observations can identify.
+
+\subsection{Effective action and frozen R1 normalization}
+We use signature $(-,+,+,+)$ and $M_{\rm Pl}^{-2}=8\pi G$.
+In the action and local field equations, $c=\hbar=1$.
+The conditional R1 representation uses the retained scalar--tensor action
+\begin{equation}
+ S=\int \sqrt{-g}\,\dd^4x\left[
+ \frac{\Mpl^2}{2}R-\frac12(\nabla T)^2
+ +\frac{(\nabla T)^2\Box T}{\lambda}
+ -V_0+\mu^3 T+\mathcal L_m\right],
+ \qquad \lambda=\Lambda^3>0 .
+ \label{eq:r1-action}
+\end{equation}
+The field $T$ is an independent scalar. It is distinct from the target field $\eta$ and from a metric conformal coordinate. For example,
+$\gamma_{ij}=a^2e^{2\psi_{\rm geo}}\bar\gamma_{ij}$ gives
+$\psi_{\rm geo}=-\Psi$ to linear order in Newtonian gauge; it does not
+supply another independent scalar in addition to the metric.
+
+The dimensionless background convention is
+$\widehat T=T/\Mpl$,
+$\widehat v=\dot{\bar T}/(\Mpl H_0)$,
+$\widehat d=\ddot{\bar T}/(\Mpl H_0^2)$,
+$\widehat\lambda=\lambda/(\Mpl H_0^2)$.
+The frozen parameters are
+\begin{align}
+ (\Omega_{m0},\Omega_{r0},\Omega_{k0})&=(0.31,9\times10^{-5},-0.018),\nonumber\\
+ H_0&=67.4\ {\rm km\,s^{-1}\,Mpc^{-1}},\qquad
+ \widehat\lambda=1,\qquad \frac{\mu^3}{\Mpl H_0^2}=3,\nonumber\\
+ \frac{V_0}{\Mpl^2H_0^2}&=2.3986073449708067 .
+ \label{eq:freeze}
+\end{align}
+They define one reference branch, not a framework-wide calibration.
+The stored background solution is reused without refitting.
+R1 serves as a reproducible fiducial background for this transfer
+benchmark; no fit to current cosmological observations or claim of
+phenomenological viability is made here.
+The reference spatial curvature is
+$K=-\Omega_{k0}H_0^2/c^2>0$. Its unperturbed angular-diameter maps obey
+$D_{ab}=a_b\sin[\sqrt K(\chi_b-\chi_a)]/\sqrt K$.
+The previously computed six-amplitude sensitivity of one normalized axial
+$n=2$ harmonic is retained as a separate propagation control; its
+amplitudes are zero in the reference maps used for the local comparison.
+Its homogeneous scalar current,
+\begin{equation}
+ J=\dot{\bar T}+\frac{6H\dot{\bar T}^{\,2}}{\lambda},
+ \qquad \dot J+3HJ=\mu^3 ,
+ \label{eq:current}
+\end{equation}
+also provides a sign and normalization check on the local variation.
+
+\subsection{Reduction from the retained effective action}
+Varying Equation~\eqref{eq:r1-action} gives
+\begin{equation}
+ \Box T+\frac{2}{\lambda}
+ \left[(\nabla_\mu\nabla_\nu T)^2-(\Box T)^2+
+ R_{\mu\nu}\nabla^\mu T\nabla^\nu T\right]-V_T=0 .
+ \label{eq:scalar-covariant}
+\end{equation}
+The Ricci term couples the scalar response to matter through the same
+Einstein equation. No independent phenomenological matter coupling is
+introduced. Write $T=\bar T(t)+\pi_T(r)$ and freeze
+$v=\dot{\bar T}$, $d=\ddot{\bar T}$ and $H$ at the lens epoch.
+After subtracting the homogeneous equations, retain leading weak metric
+potentials and quasi-static derivatives, including the nonlinear spatial
+Hessian responsible for screening. Set
+\begin{equation}
+ b_T=\frac{2v^2}{\lambda},\qquad
+ C=1+\frac{4(d+2Hv)}{\lambda}
+      -\frac{2v^4}{\Mpl^2\lambda^2}.
+ \label{eq:coefficients}
+\end{equation}
+The leading common constraints are
+\begin{align}
+ 2\Mpl^2\Delta\Phi&=\delta\rho-b_T\Delta\pi_T,\qquad
+ \Phi=\Psi,\label{eq:metric-source}\\
+ C\Delta\pi_T-\frac2{\lambda}
+ \left[(\Delta\pi_T)^2-(\partial_i\partial_j\pi_T)^2\right]
+ &=-\frac{b_T}{2\Mpl^2}\delta\rho .
+ \label{eq:local-scalar}
+\end{align}
+The last term of $C$ follows from eliminating the metric constraint.
+The equal potentials are a result at the retained order; they are not an
+exact assertion about a fully nonlinear space-time.
+
+At $z_l=0.3$ the frozen solution yields
+\begin{equation}
+ \begin{aligned}
+ H/H_0&=1.1836105772, &\widehat v&=0.2377644264,\\
+ \widehat d&=0.2484715891, &b_T/\Mpl&=0.1130638449,\\
+ C&=4.2388585594 .
+ \end{aligned}
+ \label{eq:coeff-values}
+\end{equation}
+The physical $b_T$ has mass dimension one. In numerical units
+$\widehat\lambda=1$ is fixed; it is not a new local adjustable length.
+
+\subsection{Regular finite-body branch}
+For spherical symmetry the scalar equation integrates to
+\begin{equation}
+ Cr^2\pi_T'-\frac4{\lambda}r(\pi_T')^2=-b_TGM(<r).
+ \label{eq:flux}
+\end{equation}
+The origin is regular and carries no additional scalar charge.
+The root continuously connected to the decaying weak-source solution is
+\begin{equation}
+ \pi_T'=-\frac{2b_TGM(<r)}
+ {r^2\left[C+\sqrt{C^2+16b_TGM(<r)/(\lambda r^3)}\right]} .
+ \label{eq:root}
+\end{equation}
+It has $\pi_T'\propto r$ at the center and no interface delta-function
+source at $R$.
+
+\subsection{Executed source and material-boundary application}
+The source consumed by this reduction can be made explicit. Define an
+additional metric energy source $\rho_\Sigma$ and independent scalar
+Euler source $J_T$ by the pre-elimination rows
+$2\Mpl^2\Delta\Phi=\rho+\rho_\Sigma-b_T\Delta\pi_T$ and
+$A\Delta\pi_T-2[(\Delta\pi_T)^2-|\operatorname{Hess}\pi_T|^2]/\lambda
++b_T\Delta\Phi=J_T$, where $A=C+b_T^2/(2\Mpl^2)$.
+The actual reduced source and spherical flux are
+\begin{align}
+ J_{\rm eff}&=J_T-\frac{b_T}{2\Mpl^2}(\rho+\rho_\Sigma),\nonumber\\
+ Cr^2\pi_T'-\frac4\lambda r(\pi_T')^2
+ &=\int_0^r s^2J_{\rm eff}(s)\,\dd s.
+ \label{eq:source-application}
+\end{align}
+For the declared action there is no extra layer term:
+$\rho_\Sigma=J_T=0$, while the volume source remains nonzero.
+For a proper-radial thin layer with coefficients $\sigma_\Sigma$ and
+$j_{T,\Sigma}$, its retained weak-metric jump would instead be
+\begin{equation}
+ [Cr^2\pi_T'-4r(\pi_T')^2/\lambda]_{R^-}^{R^+}
+ =R^2\left(j_{T,\Sigma}-\frac{b_T\sigma_\Sigma}{2\Mpl^2}\right).
+ \label{eq:source-jump}
+\end{equation}
+These are source applications of the original coupled equations; a
+surface charge is not an independently adjustable lensing amplitude.
+An additional anisotropic interface stress would also consume the
+corresponding metric slip equation.
+
+Using the frozen coefficients, the computed surface section is
+$\pi_T'(R)/(\Mpl H_0)=-2.119825778845613\times10^{-4}$.
+In $\Mpl=H_0=c=1$ units, with radius in $c/H_0$, an independent density
+integration gives $\int_0^Rr^2J_{\rm eff}\,\dd r
+=-1.216417408185084\times10^{-13}$.
+The maximum relative nonlinear-flux residual at
+$r/R=0.1,0.5,1,2,10$ is $4.15\times10^{-16}$; the original integrated
+metric Gauss residual is zero at printed precision. Independent interior
+quadratic and exterior rational roots give a relative material-boundary
+flux mismatch $6.23\times10^{-16}$. The separate exact-GR material
+control has continuous same-oriented extrinsic curvature and no
+material layer. That material worldtube is distinct from the cosmological
+cap seam, and its zero layer does not remove the nonzero volume source.
+The receipt is
+\path{artifacts/strong_lensing_bhsm_integration_20261020/source_application.json}.
+Supplementary Note S4 derives the cap/source pullback and
+shows constructively why the leading normalization does not select a
+unique microscopic completion.
+
+\section{Metric and Optical Encounter Response}
+The common metric constraint gives
+\begin{equation}
+ \Phi'=\Psi'=\frac{GM(<r)}{r^2}
+ -\frac{b_T}{2\Mpl^2}\pi_T',\qquad
+ F(r)\equiv\frac{\delta\Phi'}{\Phi_N'}
+ =\frac{2\epsilon_\infty}
+ {1+\sqrt{1+r_V^3 f_M(r)/r^3}},
+ \label{eq:force}
+\end{equation}
+where
+\begin{equation}
+ \epsilon_\infty=\frac{b_T^2}{2\Mpl^2C},
+ \qquad r_V^3=\frac{16b_TGM}{\lambda C^2}.
+ \label{eq:scales}
+\end{equation}
+The last expression uses $c=1$. The numerical conversion is
+\[
+r_V^3=16(b_T/\Mpl)m_g(c/H_0)^2/(\widehat\lambda C^2).
+\]
+Deep in the exterior screened region $F(r)$ approaches
+$2\epsilon_\infty(r/r_V)^{3/2}$; at large radius it approaches
+$\epsilon_\infty$. The potential itself still decays.
+This is the usual cubic screening mechanism
+\citep{Barreira2013,Barreira2015}, evaluated here with the frozen
+normalization and a regular extended body.
+
+The corresponding leading hydrostatic correction is
+\begin{equation}
+ \delta p(r)=\int_r^R \rho(s)\,\delta\Phi'(s)\,\dd s,\qquad
+ \delta p(R)=0 .
+ \label{eq:pressure}
+\end{equation}
+It is positive and changes the central Newtonian pressure by
+$3.56959\times10^{-6}$ fractionally. This supports the specified
+leading-order matter configuration; it does not construct an exact
+modified Tolman--Oppenheimer--Volkoff sequence or prove radial stability.
+Holding density fixed and changing its required pressure does not impose
+an independently fixed common material equation of state on both models.
+
+\subsection{Projection into the optical encounter}
+Restore $c$ and interpret $\Phi$ as the dimensionless metric potential.
+For physical impact radius $b_{\rm imp}$ the additional deflection is
+\begin{align}
+ \delta\hat\alpha(b_{\rm imp})&=
+ 4b_{\rm imp}\int_0^\infty
+ \frac{\delta\Phi'(\sqrt{b_{\rm imp}^2+z^2})}
+ {\sqrt{b_{\rm imp}^2+z^2}}\dd z,\label{eq:projection}\\
+ \delta\hat\psi(b_{\rm imp})&=
+ \int_R^{b_{\rm imp}}\delta\hat\alpha(s)\,\dd s .
+ \label{eq:potential}
+\end{align}
+The arbitrary zero of potential does not affect relative delays.
+We calculate the gradient and Hessian consistently from this same
+projected potential. A local force ratio is not substituted for a
+projected photon deflection ratio.
+
+The leading stationary delay change between image $i$ and reference
+image $0$ is
+\begin{equation}
+ \delta\Delta t_{i0}
+ =-\frac{1+z_l}{c}
+ \left[\delta\hat\psi(b_i)-\delta\hat\psi(b_0)\right].
+ \label{eq:delay-prediction}
+\end{equation}
+The finite result also resolves the image positions in
+Equation~\eqref{eq:image}. The projection freezes the local coefficients
+during the encounter and extends the isolated local solution through the
+thin plane. Matching to the linear perturbation is assumed in an overlap
+region $r_V\ll r\ll c/H_l$; a global closed-cosmology solution has not
+been constructed.
+
+\subsection{Which state coefficients enter the transfer?}
+The state dependence is explicit in $b_T=2v^2/\lambda$ and
+$C=1+4(d+2Hv)/\lambda-b_T^2/(2\Mpl^2)$. At fixed body,
+$\lambda$ and physical radius, define
+$S_r=\sqrt{1+r_V^3f_M(r)/r^3}$. Differentiating the original force gives
+\begin{equation}
+ \frac{\partial\ln\delta\Phi'}{\partial\ln b_T}
+ =\frac32+\frac1{2S_r},\qquad
+ \frac{\partial\ln\delta\Phi'}{\partial\ln C}=-\frac1{S_r}.
+ \label{eq:state-sensitivity}
+\end{equation}
+Deep screening suppresses the local force sensitivity to $C$. Projection
+in Equation~\eqref{eq:projection} takes positive weighted averages of
+these coefficients. For the reference image impacts, ordered positive,
+central and negative, the projected logarithmic derivatives are
+\[
+ \begin{aligned}
+ \partial_{\ln b_T}\ln\delta\hat\alpha
+   &=(1.525461,1.516634,1.522208),\\
+ \partial_{\ln C}\ln\delta\hat\alpha
+   &=(-0.050923,-0.033268,-0.044417).
+ \end{aligned}
+\]
+The outer field therefore retains nonzero $C$ sensitivity even though
+the impact lies well inside $r_V$.
+
+These derivatives concern the extra deflection; derivatives divided by
+the total deflection carry its additional small fractional contribution.
+They quantify the conditional state-to-transfer relation without
+changing the frozen prediction. A particular physical state variation
+must also satisfy the action's background and boundary constraints and
+be composed with its $H,v,d$ to $b_T,C$ map. Independently varying the
+two reduced coefficients is not asserted to produce another globally
+matched R1 state. Section~\ref{sec:degeneracies} addresses the separate
+question of identifying those coefficients from light when the ordinary
+mass distribution is allowed to change.
+
+\section{Image Directions and Observer Delays}
+\label{sec:results}
+\subsection{Image directions and observer arrival-time differences}
+Let $x=D_{ol}\theta$, $\beta=D_{os}^{-1}s$ and
+$\hat\alpha=\nabla_x\hat\psi$, where $\hat\psi$ has length units.
+The common thin-lens equations are
+\begin{align}
+ \beta&=\theta-D_{os}^{-1}D_{ls}\hat\alpha(D_{ol}\theta),\label{eq:image}\\
+ ct(\theta)&=\frac12(\theta-\beta)^T\mathsf T(\theta-\beta)
+ -(1+z_l)\hat\psi(D_{ol}\theta)+f(\beta),\nonumber\\
+ \mathsf T&=(1+z_l)D_{ol}^{T}D_{ls}^{-1}D_{os}.
+ \label{eq:arrival}
+\end{align}
+The maps must satisfy reciprocity so that $\mathsf T$ is symmetric
+\citep{Fleury2021arbitrary}. A common $f(\beta)$ cancels in relative delays.
+Image positions are resolved again after changing the encounter.
+
+For smooth geometric variations, fixing $s$ implies
+$\delta\beta=-D_{os}^{-1}\delta D_{os}\beta$; fixed physical and fixed
+angular source prescriptions cannot be imposed simultaneously.
+At fixed measured redshift, the stationary first variation is
+\begin{equation}
+ c\delta t=
+ \frac12 q^T\delta\mathsf Tq-q^T\mathsf T\delta\beta
+ -(1+z_l)\left[\hat\alpha^T\delta D_{ol}\theta+
+ \delta\hat\psi|_x\right]+\delta f,\qquad q=\theta-\beta .
+ \label{eq:variation}
+\end{equation}
+The image-position variation cancels at a stationary image.
+In the local R1 comparison $\delta D_{ab}=\delta\beta=0$ and the
+nonzero intrinsic term is retained. Appendix~\ref{app:endpoints}
+records the measured-redshift convention for comparisons that vary
+the maps.
+
+\subsection{Evaluated response and reference-relative offsets}
+The screened branch predicts
+$r_V=212.0292$ kpc and
+$\epsilon_\infty=0.001507886$, or a $0.1507886\%$ asymptotic
+force enhancement. At $r=R=3$ kpc the local force enhancement is
+$5.06706$ parts per million (ppm), whereas the deflection enhancement at
+the same impact radius is $11.7467$ ppm. The ray samples the outer,
+less screened field as well as the field near closest approach.
+
+\begin{table}[htbp]
+ \centering
+ \caption{Leading-order image positions for the effective response and its
+ fixed-body reference. Image $0$ is the positive
+ outer image, image $1$ the central image, and image $2$ the negative
+ outer image. Printed digits specify reproducible model values, not
+ absolute astrometric accuracy.}
+ \label{tab:images}
+ \begin{tabular}{lrrr}
+ \toprule
+ Image & Reference (arcsec) & R1 response (arcsec) & Offset ($\mu$as)\\
+ \midrule
+ $0$ & $+0.835476034$ & $+0.835482157$ & $+6.1233$\\
+ $1$ & $-0.082161940$ & $-0.082161152$ & $+0.7881$\\
+ $2$ & $-0.657495525$ & $-0.657499874$ & $-4.3486$\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+ \centering
+ \caption{Relative delays for the same source marker, with image $0$ as
+ reference. The offsets are relative to the specified
+ fixed-body reference, with the physical light preparation held fixed.}
+ \label{tab:delays}
+ \begin{tabular}{lrrr}
+ \toprule
+ Observable & Fixed-body reference & R1 response & Offset\\
+ \midrule
+ $\Delta t_{10}$ (days) & $21.716076566$ & $21.716377020$ & $25.9593$ s\\
+ $\Delta t_{20}$ (days) & $14.271452387$ & $14.271552491$ & $8.6490$ s\\
+ $\Delta t_{10}/\Delta t_{20}$ & $1.521644467$ & $1.521654847$ & $6.8212$ ppm\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+Figure~\ref{fig:prediction} compares the radial response and the two
+delay changes. The nonzero response follows from the rolling scalar already in
+Equation~\eqref{eq:r1-action}. It does not alter the earlier constant-target
+null result in Appendix~\ref{app:target}. An independent singular
+isothermal control, with velocity dispersion $220$ km\,s$^{-1}$ and
+the same reference source, retains images at $+1.067883$ and $-0.711922$
+arcsec and a $17.094532$-day delay. That analytic control validates the
+optical conventions; the finite body in Tables~\ref{tab:images}
+and~\ref{tab:delays} is the local boundary problem used for the evaluated response.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=\linewidth]{figures/r1_screening_prediction.pdf}
+ \caption{R1 envelope response relative to the fixed-body reference. Left:
+ additional local force and projected deflection as fractions of their
+ fixed-body reference values. The distinction reflects integration along the
+ ray. Right: reference-relative offsets in the two delays for the fixed source
+ preparation. Neither panel is an observational detection forecast.}
+ \label{fig:prediction}
+\end{figure}
+
+At fixed epoch, $r_V\propto M^{1/3}$. The same frozen background also
+specifies the redshift dependence, without refitting:
+\begin{center}
+ \begin{tabular}{rrr}
+ \toprule
+ Lens redshift & $\epsilon_\infty$ & $r_V$ (kpc), $M=10^{11}M_\odot$\\
+ \midrule
+ $0.0$ & $0.00351132$ & $248.300$\\
+ $0.3$ & $0.00150789$ & $212.029$\\
+ $0.5$ & $0.00086052$ & $191.230$\\
+ $1.0$ & $0.00022832$ & $150.778$\\
+ $1.5$ & $0.00007085$ & $123.011$\\
+ \bottomrule
+ \end{tabular}
+\end{center}
+This is a prediction for the coefficients and force law, not a delay
+table for identical angular sources at these different redshifts.
+
+The supplied reference-run outputs give the following implementation checks.
+The integrated scalar flux has maximum relative residual
+$7.9\times10^{-16}$. A direct line-of-sight quadrature and an independent
+angular-substitution quadrature agree on the additional deflection to
+$4.5\times10^{-13}$ relative. The image equation residual is below
+$8.5\times10^{-22}$ rad. Differentiating the projected potential and
+deflection independently gives relative discrepancies below
+$2.0\times10^{-9}$ and $2.4\times10^{-12}$, respectively.
+Finite re-solved and stationary first-order delay changes differ by
+$0.00016$ s and $0.000056$ s. These are numerical and perturbative checks
+within the model, not bounds on omitted physics. In the current Windows
+replay, the corresponding flux residual is $8.30\times10^{-16}$ and the
+deflection-derivative discrepancy is $3.19\times10^{-12}$; the remaining
+differences are recorded with their numerical tolerances in the replay
+receipt. The supplied and replay outputs remain separate records.
+
+\section{What the Light Transfer Identifies}
+\label{sec:degeneracies}
+\subsection{Positive effective-mass representation of the same response}
+The retained metric and optical response admit an explicit conventional
+representation. Define an effective additional enclosed mass by
+\begin{equation}
+ \delta M_{\rm eff}(r)=M f_M(r)F(r),\qquad
+ \delta\rho_{\rm eff}(r)=
+ \frac{M}{4\pi r^2}\frac{\dd}{\dd r}[f_M(r)F(r)] .
+ \label{eq:halo}
+\end{equation}
+This density is nonnegative. To see this, put
+$S=\sqrt{1+r_V^3f_M/r^3}$ and
+$n_M=\dd\ln f_M/\dd\ln r\ge0$. Then
+\begin{equation}
+ \frac{\dd\ln(f_MF)}{\dd\ln r}
+ =\frac12\left[(1+S^{-1})n_M+3(1-S^{-1})\right]\ge0 .
+ \label{eq:positive-halo}
+\end{equation}
+The ordinary Poisson field of
+$M(<r)+\delta M_{\rm eff}(r)$ has exactly the same $\Phi=\Psi$
+as Equation~\eqref{eq:force} within the retained approximation.
+It therefore reproduces the full deflection field, relative potential,
+images and delays, including multiple source planes in the same geometry.
+Its asymptotic extra mass is
+\begin{equation}
+ \delta M_{\rm eff}(\infty)=\epsilon_\infty M
+ =1.50788624\times10^8M_\odot .
+ \label{eq:halo-total}
+\end{equation}
+
+The rank-one multiple-source residual discussed below distinguishes the scalar from the
+restricted Tolman--VII parameter family, not from all conventional
+matter distributions. Because slow matter and light respond to the same
+retained potentials, ordinary dynamical data do not automatically break
+this equivalence either. Independent restrictions on the matter/environment model or an observable
+outside this retained equivalence would be needed to distinguish those
+representations. No such independent likelihood is asserted here, and
+such a distinction is not required for the envelope-transfer calculation.
+
+The effective mass in Equation~\eqref{eq:halo} represents the same
+retained contribution as the scalar correction in
+Equation~\eqref{eq:force}. One uses either the explicit scalar correction
+or its effective-mass representation in the encounter, not their sum.
+The construction proves equivalence of the retained metric and optical
+response. The physical pullback of microscopic BHSM surface variables
+into the normalized effective source is specified separately in
+Supplementary Note S4.
+
+\subsection{Single-source constraints and nuisance freedoms}
+For an observable residual $\delta y=y-y_0$, write
+\begin{equation}
+ \delta y=B\,\delta a+N\,\delta\nu+\epsilon,\qquad
+ W\mathsf C W^T=I,\qquad
+ P=I-(WN)(WN)^+ .
+ \label{eq:nuisance}
+\end{equation}
+Here $B$ is a physical response, $N$ the stated nuisance response,
+$\mathsf C$ a specified covariance, and $+$ a Moore--Penrose inverse.
+The rank of $PWB$ concerns distinguishability in that nuisance model.
+A zero direction is unconstrained by the corresponding likelihood; a
+Fisher pseudoinverse does not turn it into a zero error bar.
+We take $\mathsf C$ positive definite. For the screened comparison,
+the single column is a fixed reference-relative response template; rank one denotes
+a surviving residual direction, not identification of a freely varied
+fundamental scalar parameter.
+
+Using source position, body mass and radius, and a compensated mass-sheet
+scale as nuisances, the single R1-response column has projected rank
+one if the body center is fixed. Adding both center coordinates gives
+rank zero. The raw delay shifts in Table~\ref{tab:delays} are therefore not
+nuisance-independent observables for this configuration.
+The rank calculation uses $0.001$ arcsec and $0.1$ day as numerical
+whitening scales, not as demonstrated observational precisions.
+
+The ordinary mass-sheet transformation,
+\begin{equation}
+ \psi_\lambda(\theta)=\lambda\psi(\theta)
+       +\frac{1-\lambda}{2}|\theta|^2,\qquad
+ \beta_\lambda=\lambda\beta,\qquad
+ \Delta t_\lambda=\lambda\Delta t ,
+ \label{eq:mst}
+\end{equation}
+cancels from the ratio of two delays. It does not remove source,
+centering, radial-profile, or independent line-of-sight freedoms
+\citep{Teodori2022}. Consequently the $6.8212$ ppm ratio change is a
+fixed-preparation prediction, not a unique diagnostic of a distinct representation.
+
+For the separately computed axial smooth-map response, the images of a
+softened isothermal model depend only on
+$\beta=s/D_{os}$, $\theta_E=b_{\rm phys}D_{ls}/D_{os}$, and
+$\theta_c=r_c/D_{ol}$, while all delays share the factor
+$(1+z_l)D_{ol}D_{os}/(cD_{ls})$. Varying the three scalar maps can therefore
+be reproduced by these source/profile changes and a delay scale.
+The saved six-anchor response accordingly has zero projected rank in
+the unrestricted nuisance model. This analytic factorization concerns
+that family; it is not a universal theorem that cosmological lensing
+information always vanishes.
+
+\subsection{A finite nonlinear conventional refit}
+\label{sec:nonlinear-refit}
+A local rank calculation can be tested by a finite inverse application.
+We take the saved R1 images and delays as a deterministic injection and
+fit an ordinary Tolman--VII body with mass, radius, source position,
+lens center and one physical convergence sheet free. The injected
+marker, state, geometry and source remain the original preparation;
+fitted source coordinates are inverse-model nuisances. The fitted
+encounter contains the sheet once, while the propagation maps remain
+fixed. No independent delay scale is introduced.
+
+For each of the three observed axial image positions, the original rows
+are $\theta_i-\beta-q\hat\alpha_{M,R}[D_{ol}(\theta_i-\theta_c)]
+-\kappa(\theta_i-\theta_c)=0$, with $q=D_{ls}/D_{os}$.
+The two relative Fermat arrival rows use
+\begin{equation}
+ \hat\psi(x)=\hat\psi_{M,R}(x-D_{ol}\theta_c)
+ +\frac{\kappa}{2D_{ol}q}|x-D_{ol}\theta_c|^2.
+ \label{eq:finite-refit}
+\end{equation}
+All three image branches are re-solved after fitting. This is a bounded
+five-coordinate fit to five axial observables, a deliberately saturated
+local example whose Jacobian is nonsingular. It demonstrates finite
+absorption in this example; it is not a global uniqueness or detection
+claim.
+\begin{table}[htbp]
+ \centering
+ \caption{Finite conventional fits to the saved R1 injection.
+ Entries are numerical mismatches after re-solving image branches,
+ not observational errors or sensitivity forecasts.}
+ \label{tab:finite-refit}
+ \begin{tabular}{lrr}
+ \toprule
+ Quantity & Center fixed & Center free\\
+ \midrule
+ $\delta\ln M$ & $3.9960\times10^{-6}$ & $4.0206\times10^{-6}$\\
+ $\delta\ln R$ & $3.9827\times10^{-7}$ & $4.1234\times10^{-7}$\\
+ $\delta\beta$ (arcsec) & $4.3495\times10^{-9}$ & $6.8148\times10^{-9}$\\
+ $\theta_c$ (arcsec) & $0$ & $1.7743\times10^{-9}$\\
+ $\kappa$ & $9.9469\times10^{-6}$ & $9.9229\times10^{-6}$\\
+ Maximum image mismatch ($\mu$as) & $1.0143\times10^{-4}$ & $8.74\times10^{-11}$\\
+ First delay mismatch (s) & $+0.0033064$ & $+9.21\times10^{-10}$\\
+ Second delay mismatch (s) & $-0.0050312$ & $-1.53\times10^{-10}$\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+The free-center original lens and stationarity residuals are
+$4.24\times10^{-22}$ rad and $1.30\times10^{-18}$ Mpc. Allowing the
+ordinary model to adjust therefore removes the original $25.96$ s and
+$8.65$ s fixed-body offsets to numerical precision in this preparation.
+Fixing the center leaves a small finite residual; its significance
+would require an actual observing likelihood and independently justified
+lens priors. Supplementary Note S7 gives the original equations,
+parameter bounds, mass-sheet symmetry and independent-root checks.
+
+\subsection{A bounded multiple-source test}
+A supplemental design uses one body and three sources at
+$z_s=(0.8,1.2,1.8)$, with source offsets $0.1\theta_{E,s}$ at angles
+$(0.15,1.1,2.2)$ rad. These choices were fixed before applying the
+screened response. The nuisance model includes independent source
+positions and delay scales, a shared mass, radius and center, and
+shared physical convergence and two shear components.
+The resulting scalar column retains rank one; adding independent
+source-plane convergence columns leaves rank one as well.
+
+This surviving component is small: its norm is $0.1202\%$ of the raw
+whitened response in the expanded nuisance model. In the same illustrative
+weighting, the residual coordinates reach approximately $6$ nanoarcsec
+and the residual delays $0.086$ s. The explicit 24 observable weights and
+response arrays are supplied with the code.
+These tidal nuisance fields are phenomenological controls. This test
+does not solve the nonlinear scalar equation for a nonspherical galaxy
+and its environment, and it is not a signal-to-noise forecast. Its rank
+is specific to the finite radial profile family.
+
+\section{Robustness of the Transfer Calculation}
+\label{sec:robustness}
+\subsection{A smooth profile with the same mass and half-mass radius}
+The body is a controlled input, so the response must be tested against
+its profile choice. We compare the compact Tolman--VII body with the
+standard smooth Plummer sphere \citep{Plummer1911}, matching total
+three-dimensional mass and three-dimensional half-mass radius, rather
+than fitting a desired deflection. The reference half-mass radius is
+$r_h=1.92941634649$ kpc. The Plummer scale is fixed by
+$a=r_h\sqrt{2^{2/3}-1}=1.47874508325$ kpc, with
+\begin{align}
+ \rho_P(r)&=\frac{3Ma^2}{4\pi(r^2+a^2)^{5/2}},\nonumber\\
+ M_P(<r)&=\frac{Mr^3}{(r^2+a^2)^{3/2}},\qquad
+ \hat\alpha_P(b)=\frac{4m_gb}{b^2+a^2}.
+ \label{eq:plummer-control}
+\end{align}
+This profile has a regular center and finite total mass, with no hard
+material edge. Its consistent potential is
+$\hat\psi_P=2m_g\ln[(b^2+a^2)/(2a^2)]$.
+The same original scalar flux, regular root and metric constraint are
+applied to its enclosed mass. The background, clock and maps remain
+fixed. Both profiles have the same reference $r_V$ because their total
+mass and R1 state are equal.
+
+Eight paired applications use the two profiles and four settings:
+reference, total mass increased by $20\%$, half-mass radius increased
+by $20\%$, or physical source displacement increased by $20\%$.
+Only one ordinary input changes at a time, and the change is shared by
+the response and its same-profile reference. These are sensitivity
+controls, with no assigned probability or empirical uncertainty prior.
+All eight applications retain three images.
+\begin{table}[htbp]
+ \centering
+ \caption{Re-solved reference-relative delay offsets for two declared
+ profiles. Each pair uses common preparation, state and ordinary inputs.
+ The finite input changes are controls, not fitted uncertainties.}
+ \label{tab:profile-robustness}
+ \begin{tabular}{lrr}
+ \toprule
+ Shared control & Tolman--VII offsets (s) & Plummer offsets (s)\\
+ \midrule
+ Reference & $25.9593,\ 8.6490$ & $22.4510,\ 9.6200$\\
+ $M$ increased $20\%$ & $32.6999,\ 9.8907$ & $28.6743,\ 10.7843$\\
+ $r_h$ increased $20\%$ & $24.2697,\ 9.9458$ & $20.2722,\ 10.1974$\\
+ Source offset increased $20\%$ & $26.8452,\ 10.3945$ & $23.5110,\ 11.5634$\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+At matched $M,r_h$, changing the ordinary profile changes the two
+reference delays by approximately $-167125$ s and $-124500$ s, while
+changing the R1 offsets by $-3.5083$ s and $+0.9710$ s. The former
+are deliberate model changes, about $6438$ times the largest reference
+R1 offset; they are not an estimated error on an observed lens. This
+shows why mass and one size alone do not fix the transfer. A ray samples
+the entire field, even though both profiles share the same scalar force
+at their half-mass radius.
+
+The positive effective-mass construction applies to both profiles.
+Independent direct line-of-sight projection and re-solved images agree
+with their scalar representations within $5.56\times10^{-17}$ arcsec
+and $6.14\times10^{-10}$ s. The maximum original scalar-flux residual
+across the eight applications is $7.25\times10^{-16}$ and the maximum
+image-equation residual is $2.55\times10^{-21}$ rad. Both baseline
+profiles retain projected rank one with a fixed center and zero with a
+free center in the declared linearized nuisance family. Thus profile
+smoothness changes the quantitative response while preserving its
+retained conventional representation. Supplementary Note S6 gives the
+profile normalization, support and independent checks.
+
+\subsection{The ordinary finite-body control}
+For the conventional control, a regular Einstein-fluid interior can be
+matched to Schwarzschild. Its compactness is
+$m_g/R=1.59514\times10^{-6}$.
+The leading optical application above uses the weak-field projection of
+this density.
+
+\subsection{A common second-order ordinary-gravity control}
+\label{sec:gr2-method}
+To test the effect of the first omitted conventional deflection, we
+expand the exact static GR optical scattering integral of the same
+Tolman--VII body through second post-Minkowskian order (2PM).
+Put $\varepsilon_g=m_g/R$, $y=b_{\rm imp}/R$ and
+$t=\sqrt{1-y^2}$. The additional radial deflection is
+\begin{align}
+ \delta\hat\alpha_{\rm GR2}(b_{\rm imp})&=2\varepsilon_g^2 I(y),
+ \label{eq:gr2-alpha}\\
+ I(y)&=\begin{cases}
+ \displaystyle\frac{15(\arcsin y-yt)}{4y^2}
+ +y\left(\frac{15}{2}t-4t^5-\frac{48}{7}t^7\right),&0<y<1,\\[4pt]
+ \displaystyle\frac{15\pi}{8y^2},&y\ge1.
+ \end{cases}
+ \label{eq:gr2-I}
+\end{align}
+At the center $I(0)=0$ and $I'(0)=-6/7$; the interior coefficient
+includes the leading fluid pressure and the conversion from areal radius
+to invariant asymptotic impact. At and outside the surface it matches the
+standard $15\pi m_g^2/(4b_{\rm imp}^2)$ exterior deflection
+\citep{IyerPetters2007}.
+The consistent plane potential is
+\begin{equation}
+ \delta\hat\psi_{\rm GR2}(b_{\rm imp})
+ =2\varepsilon_g^2R J(y),\qquad J'(y)=I(y),\qquad J(1)=0.
+ \label{eq:gr2-potential}
+\end{equation}
+The supplied implementation evaluates $I$, $I'$ and $J$ analytically.
+
+The R1 response and fixed-body reference receive the identical GR2 potential,
+gradient and Hessian, and both image systems are re-solved. The R1
+coefficients and leading scalar profile are held fixed. The scattering
+impact is identified with the physical thin-plane impact in this control.
+This checks robustness to the common GR term; it does not compute the
+missing scalar--GR higher-order terms or a complete finite-distance 2PM
+cosmological arrival functional. The replay command is
+\begin{quote}\small\ttfamily\raggedright
+python scripts/run\_strong\_lensing\_gr2\_control.py
+\end{quote}
+
+\subsection{Result of the common GR correction}
+\label{sec:gr2-result}
+At the original two exterior-image impacts, the GR2 term is $3.68$ and
+$4.68$ ppm of the leading conventional deflection. Its inclusion changes
+the conventional image coordinates by
+$(+1.35456,-0.01519,-1.72123)$ microarcsec and the conventional
+relative delays by $(+8.28473,+2.55245)$ s.
+The absolute correction is therefore material at the scale of the
+calculated reference-relative image shifts.
+
+The response-minus-fixed-body-reference offsets are considerably more
+stable under this common-term check.
+
+\begin{table}[htbp]
+ \centering
+ \caption{Robustness of the reference-relative R1 offsets under
+ the same GR2 correction in both calculations. The final column is the change
+ in the reference-relative offset, not the absolute GR correction.}
+ \label{tab:gr2-control}
+ \begin{tabular}{lrrr}
+ \toprule
+ Response offset & Leading calculation & Common GR2 added & Change\\
+ \midrule
+ $\delta\Delta t_{10}$ (s) & $25.95925815$ & $25.95932714$ & $+68.99\ \mu$s\\
+ $\delta\Delta t_{20}$ (s) & $8.64901938$ & $8.64900924$ & $-10.14\ \mu$s\\
+ $\delta\theta_0$ ($\mu$as) & $+6.12327625$ & $+6.12326934$ & $-6.91\times10^{-6}\ \mu$as\\
+ $\delta\theta_1$ ($\mu$as) & $+0.78810716$ & $+0.78810711$ & $-5.58\times10^{-8}\ \mu$as\\
+ $\delta\theta_2$ ($\mu$as) & $-4.34859153$ & $-4.34858643$ & $+5.09\times10^{-6}\ \mu$as\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+The two relative changes in the reference-relative delay offsets are
+$+2.66$ and $-1.17$ ppm. The delay-ratio response remains $6.8212$ ppm.
+Thus the nonzero reference-relative response survives this specific common-term
+control without changing its quoted precision in seconds or microarcseconds.
+
+An independent mixed stationary-action derivative reproduces the change
+in the reference-relative delay offsets within $0.7$ ns; this checks the small
+drift without subtracting four re-solved delays.
+
+The analytic correction was also compared with direct null-geodesic
+scattering in the solved static GR fluid and exterior metric. At the
+three reference impacts, the exact deflection minus the 1PM and 2PM
+terms has magnitude below $1.8\times10^{-16}$ rad for this body's
+compactness $\varepsilon_g=1.59514\times10^{-6}$.
+A compactness extrapolation independently recovers the interior 2PM
+coefficient, and direct integration verifies $J'=I$.
+The latter checks establish the implemented ordinary-GR scattering
+coefficient, not a physical error bound for the scalar model or its
+cosmological embedding. The full corrected coordinates, delays and
+checks are supplied in \texttt{gr2\_control.json} and the review outputs.
+
+\subsection{A distributed encounter with the same physical endpoints}
+\label{sec:distributed-control}
+The thin plane can be checked by distributing the same retained field
+along the ray. Use lens-scaled conformal coordinates
+$z=a_l(\chi-\chi_l)$, $x=a_l x_{\rm com}$ and
+$\kappa_K=K/a_l^2$, where $a_l=(1+z_l)^{-1}$.
+The observer and source lengths are $\ell_o=a_l\chi_l$ and
+$\ell_s=a_l(\chi_s-\chi_l)$; the fixed source endpoint is
+$X_s=(a_l/a_s)s$. These are determined by the original closed reference
+and its physical distance maps. Define
+$S_\kappa(d)=\sin(\sqrt{\kappa_K}d)/\sqrt{\kappa_K}$,
+$C_\kappa(d)=\cos(\sqrt{\kappa_K}d)$ and the background generating function
+\begin{equation}
+ G_d(x_1,x_2)=\frac{C_\kappa(d)(x_1^2+x_2^2)-2x_1x_2}
+                   {2S_\kappa(d)}.
+ \label{eq:background-generating}
+\end{equation}
+For a common half-window $L$, the retained paraxial arrival action is
+\begin{align}
+ ct[x]=\frac1{a_l}\Bigg\{&G_{\ell_o-L}[0,x(-L)]
+ +G_{\ell_s-L}[x(L),X_s]\nonumber\\
+ &+\int_{-L}^{L}\left[\frac{x'^2-\kappa_Kx^2}{2}
+             -2\Phi(\sqrt{x^2+z^2})\right]\dd z\Bigg\}.
+ \label{eq:distributed-action}
+\end{align}
+Its original ray equation and endpoint rows are
+\begin{align}
+ x''+\kappa_Kx&=-2\partial_x\Phi,\nonumber\\
+ x'(-L)&=\frac{C_\kappa(\ell_o-L)}{S_\kappa(\ell_o-L)}x(-L),\nonumber\\
+ x'(L)&=-\frac{C_\kappa(\ell_s-L)}{S_\kappa(\ell_s-L)}x(L)
+              +\frac{X_s}{S_\kappa(\ell_s-L)}.
+ \label{eq:distributed-rays}
+\end{align}
+The individual exterior wavefront curvatures are fixed by those physical
+endpoint data. At the plane their sum is
+$D_{os}/(D_{ol}D_{ls})$ and the source term is $s/D_{ls}$, so they
+recover the original thin-plane preparation. They are not a freely
+chosen split of that sum. The factor $1/a_l=1+z_l$ retains the same
+observer clock.
+
+Both the fixed-body and R1 fields are solved on each window, using all
+three noncritical ray branches. Their distributed actions are compared
+with the thin-plane/Born projection of the same windowed fields.
+\begin{table}[htbp]
+ \centering
+ \caption{Distributed-path change of the reference-relative delay
+ offsets compared with the same-window thin plane, evaluated by direct
+ arrival subtraction. This is a control of the retained frozen
+ weak-field optical action.}
+ \label{tab:distributed-control}
+ \begin{tabular}{rrr}
+ \toprule
+ Half-window $L$ (Mpc) & Change of $\delta\Delta t_{10}$ (ms)
+ & Change of $\delta\Delta t_{20}$ ($\mu$s)\\
+ \midrule
+ $0.21203$ & $-0.46019$ & $+1.5548$\\
+ $0.84812$ & $-0.57857$ & $+1.1474$\\
+ $4.24058$ & $-0.61238$ & $+1.0321$\\
+ $20.00000$ & $-0.61905$ & $+1.0056$\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+At $L=20$ Mpc, the same-window thin-plane offsets are
+$25.95922277$ s and $8.64900576$ s; the distributed offsets are
+$25.95860372$ s and $8.64900676$ s. Tighter collocation and potential
+quadrature change the latter offsets by less than $0.3$ ns. These are
+refinement figures for that subtraction. A separate on-shell derivative
+integrated along a numerical interpolation between the two fixed optical
+fields gives the preferred finite-response changes $-0.61904348$ ms
+and $+1.00640532$ microseconds. They agree with the raw subtraction
+within $7$ ns; the interpolation is a numerical integration device,
+not a physical state variation. These are numerical controls within
+this defined optical problem.
+
+An analytic exterior-tail bound follows from
+$0\le\delta\Phi'\le\epsilon_\infty m_g/r^2$. For two fixed Born
+impacts $b_i,b_0$, it gives
+\begin{equation}
+ |\delta\Delta t_{i0}^{\rm tail}|
+ \le\frac{1+z_l}{c}\,
+       \frac{m_g\epsilon_\infty|b_i^2-b_0^2|}{L^2}.
+ \label{eq:tail-bound}
+\end{equation}
+The sharper integrated bounds at $20$ Mpc are $35.04$ and $13.47$
+microseconds for the two extra-field fixed-impact delays. They do not
+bound shifts caused by re-solving all images, an arbitrary environment,
+or a changed global state. The new control isolates finite thickness
+and path response with fixed background, source and clock. It does not
+add the scalar-dependent field-equation corrections needed for a full
+higher-order metric prediction. The complete boundary construction,
+force/action residuals, tail derivation and convergence data are in
+Supplementary Note S8.
+
+\input{sections/he0435_observed_20261020}
+\input{sections/he0435_revision_20261020}
+
+\section{Computational Methods and Reproducibility}
+The calculation uses the fixed manuscript source revision
+\texttt{49a1dab} and records full input hashes.
+The main reproduction command from the repository root is
+\begin{quote}\small\ttfamily
+python scripts/run\_strong\_lensing\_r1\_screened.py
+\end{quote}
+The coefficient, independent projection, and multiple-source checks are
+under \path{scripts/r1_screened_review/}. Numerical results and their
+units are under
+\path{artifacts/strong_lensing_r1_screened_20261020/}.
+The research package additions and exact commands are integrated with the
+pinned repository background and optical dependencies. The recorded
+package-era replay of three portable review scripts reproduced all 305
+saved numerical values in that environment. The current integration
+replayed nine numerical commands, compared 1161 saved numerical values,
+and passed 16 focused checks without changing the original numerical
+artifacts. These are separate execution records, not independent
+physical measurements.
+
+The additional inverse and profile applications are reproduced with
+\path{scripts/run_strong_lensing_refit.py} and
+\path{scripts/run_strong_lensing_robustness.py}; the distributed optical
+control uses \path{scripts/run_strong_lensing_encounter_accuracy.py}.
+Their outputs are under
+\path{artifacts/strong_lensing_acceptance_20261020/}.
+Four refit, seven profile/coefficient and seven encounter tests check
+the original applications and independent projections. The distributed-control
+receipt records its boundary identities, original variational residuals
+and convergence checks. The complete commands and software versions
+are in the acceptance checkpoint. The original 305-value portable
+package check and the current 1161-value replay remain separate records.
+
+The reproducibility manifest identifies versions and hashes rather than
+equating successful execution with physical validation.
+
+The independent quadrature uses the same physical radial equation but a separately
+implemented integration variable and root calculation. Its agreement is a
+reproducibility check, not independent empirical evidence or external
+human peer review.
+
+The observed application archives original COSMOGRAIL/CDS files and
+row-level provenance, the pre-fit protocol, all four training starts,
+the committed pre-scoring predictions and the single reserved-target
+application. Eight light-curve and seven macro tests check exact
+likelihood normalization, dense conditioning, target-label invariance,
+delay sign/recovery, compatible maps, two-plane action reduction and
+consistent radial projection. The executed application and forward-audit
+receipts verify original scalar-source and metric-Gauss residuals.
+The full source and conditional-statistics
+definitions are in Supplementary Notes S9--S10. The scoring-start record
+persists even after an aborted exposure, so these targets cannot silently
+be reclassified as unseen after model revision. A separately labeled known-outcome replay reproduces the saved predictions and scores without refitting or reopening the experiment; it is not a second independent test.
+
+The separate revision archives exact HST cutouts, all five compact-source
+candidates, their original scalar and optical applications, the six
+development windows and their calibration, and the committed LCO prediction
+freeze. The commands \path{scripts/fit_he0435_revision.py},
+\path{scripts/fit_he0435_macro_revision.py} and
+\path{scripts/test_he0435_central_image.py} perform the development
+applications; \path{scripts/run_he0435_revision_validation.py} separates
+prediction preparation from the single guarded unused-target evaluation.
+The reporting script reads completed score receipts and performs no fitting.
+Independent dense-covariance and Python-filter comparisons check the optional
+C likelihood accelerator. Focused tests cover the normalized calibrated
+mixture, growing forecast variance, total nonlinear matter source,
+nonzero HST registration rotation, overlapping nuclear-image templates,
+and the persistent exposure lock. The numerical record distinguishes
+short-chain nuisance-ensemble uncertainty from a converged physical posterior.
+The additional Gaia protocol pins the already-fitted relative image
+predictions before its numerical catalogue query. Eight pure-mathematics
+and synthetic-runner checks verify coordinate signs, the RA-error convention,
+shared-reference covariance, labels, normalized density, missing-error
+handling and the exclusive query lock. No real target row enters those tests.
+The full focused application suite contains 81 tests; the 12 exact
+continuation identities retain their separate symbolic audit.
+
+The subsequent geometry application is separately archived at calculation
+revision \texttt{7ad3cf175666}. It preserves the pre-acquisition physical
+freeze \texttt{fc3a449}, independent-library calibration freeze
+\texttt{29dcff9}, pre-opening diagnostic amendment \texttt{287b284},
+the once-only target marker, failed field diagnostics and original
+per-pixel residuals. Sixteen exact native SCI/ERR/DQ windows and four
+serialized official GWCS maps support portable inspection; public
+native product identities and full-file hashes recover the larger
+archive inputs. The fixed predictions are byte-identical to their
+pre-acquisition freeze. The additional geometry, pixel, calibration and
+guard checks bring the focused suite to 123 passing tests; internal
+post-opening checks reproduce the saved extraction and scores without
+refitting. Reproduction checks are not observational validation.
+
+The additive response repair is documented in
+\path{docs/HE0435_RESPONSE_REPAIR_EXECUTION_20261021.md}, with its
+delivered byte manifest, failed initial source guard, explicit
+Git-bound provenance correction and canonical native replay. New
+read-group and joint-sky applications retain actual residuals,
+covariances, rank/bound diagnostics and superseded implementations
+under \path{artifacts/strong_lensing_response_repair_20261021/}.
+Independent reviews recompute held-group statistics and covariance
+transforms from saved arrays. The current focused suite has 146 passing
+tests, including the new mask, history and joint-scene checks; the
+12 algebra identities retain their separate successful audit.
+These implementation tests do not repair failed empirical adequacy.
+The repair source, numerical applications and reviews are frozen at
+revision \texttt{34694083c22d}.
+
+\section{Discussion: State Inference and Physical Scope}
+\label{sec:discussion}
+The calculation answers one forward and inverse modeling question.
+A specified R1 state and finite source determine a regular encounter
+and its light observables. The coefficient derivatives quantify that
+state dependence. A positive effective mass represents the same
+retained metric, and a finite conventional nuisance fit reproduces the
+injected three-image system. Accordingly, the reference-relative
+seconds are a calculated response at fixed preparation; assigning them
+to a unique envelope state requires restrictions on the ordinary lens
+model and the state-to-source relation. A shared multiple-source profile
+can retain information that a one-source fit absorbs, but the complete
+positive effective-mass representation remains available at this order.
+This is a constructive equivalence within the BHSM transfer program.
+
+The smooth-profile comparison gives the practical scale of this issue.
+The imposed profile changes alter ordinary delays much more than the
+state-conditioned offsets. They do not define an empirical prior; they
+show why a model-conditioned transfer is insufficient on its own for
+state identification. The finite refit is likewise a saturated local
+example rather than a forecast. The HE~0435 application supplies an
+actual but restricted test using point imaging and original brightness
+likelihoods. Its additional central-image prediction and conditional
+optical screen prevent interpreting that point fit as a complete measured
+galaxy or independently reconstructed environment.
+
+The executed chronological test illustrates how existing light can
+establish a per-lens baseline, and how reserved observations can test it.
+Its conventional/R1 predictive tie is consistent with the effective-mass
+equivalence. Its brightness undercoverage, particularly in image A,
+shows why recovering a transfer does not establish a calibrated
+microlensing/source-variability model or unique physical state.
+The first experiment's two-stage point-fit intervals exclude parameter
+uncertainty. The separate revision uses a finite nuisance ensemble and
+development-only long-horizon calibration, then opens unused LCO
+catalogue targets once. The sample, driver and uncertainty rule all change, so
+the two coverage fractions are not a controlled single-variable ablation.
+Interval widths and proper scores quantify the cost of broader uncertainty.
+Coverage remains descriptive for correlated observations. No later residual
+is assigned to envelope evolution or a new interface amplitude.
+
+A progressively constrained optical map needs the admitted mass,
+source, line-of-sight and calibration uncertainties and a specified
+interface law for an interface-state inference. A published cosmological
+posterior conditioned on a lens model cannot replace the light-data
+likelihood. For HE~0435 the HST-conditioned compact source and unused-catalogue
+test implement that next inference stage. HST constrains excess central
+light conditional on the macro-to-observed flux relation, while the LCO
+test assesses an empirical brightness prediction. Neither selects a unique
+composition for the compact source or supplies the global environmental
+scalar Hessian. The positive conventional representation remains available.
+This is the same transfer-to-identifiability question tested first in the
+controlled finite-body calculation.
+
+The compact-source model's unused Gaia geometry gives a separate adequacy failure: both frozen
+point predictions have about $3.26$ mas coordinate RMS and fail the
+catalogue-error-only precision check. The predeclared 2 and 5 mas floor
+controls expose uncertainty sensitivity; they are not an empirically
+justified replacement for training, frame, photocentre and macro-parameter
+uncertainty. Source-quality flags do not justify discarding the discrepant
+images. Development diagnosis finds that the old model already misses
+its fitted NIC2 geometry and that the small coordinate-map correction
+cannot explain the discrepancy. An explicitly positive G1 perturber
+supplies spatially varying tidal deflection absent from the quadratic
+screen. It reduces consumed-Gaia RMS to about $0.011$ mas under unchanged
+errors. Nine free parameters and six relative coordinates make that
+fit underidentified. The frozen-body Taylor comparison isolates the
+nonlinear contribution within this model, without establishing a unique
+physical cause. Only the subsequent unused-observation application can
+test the revised prediction; the old LCO scores cannot validate it.
+
+That new F115W application reduces raw five-coordinate RMS from
+$3.31$ to $0.779$ mas without changing errors or refitting lens parameters.
+The instrumental field-star response, all sixteen native pixel fits
+and exposure consistency nevertheless fail. The scatter identity in
+Equation~\eqref{eq:he0435-scatter-decomposition} shows why a common lens
+correction cannot repair the exposure-dependent part. This result
+shows a smaller raw diagnostic residual for G1. Uncalibrated centroid
+bias prevents inferring that the true physical geometry is correspondingly
+improved; neither precision validation nor a BHSM preference follows.
+An adequate response in Equation~\eqref{eq:he0435-instrument-response}
+must precede a physical interpretation of the remaining sub-mas
+residual. The unused bands remain reserved, rather than replacing
+the primary outcome.
+
+The subsequent rate-mask correction in
+Section~\ref{sec:he0435-response-repair} reduces the same-data raw RMS
+to $0.448$ mas by restoring 303 usable native slopes. Its reduced
+raw residual does not override the failed profiles or the larger
+formal geometry statistic after conditional errors tighten. The
+delivered common-time history lead is then tested through actual
+electron-conserving group means: free pixel rates improve an internal
+temporal prediction, but coupling the same term to the dated optical
+profile worsens the held residual. A coherent shared sky and learned
+response covariance remove the assumption of independent fixed-PSF
+centroid errors. The coupled conditional mean now converges, but
+still fails a held target exposure. Actual target histories and
+source-calibration darks supply new readout/covariance applications;
+their reduced quadratic noise score does not repair the raw mean.
+Thus the calibrated instrumental
+likelihood remains an empirical dependency of envelope-state
+inference, distinct from the microscopic state-to-source map. No
+field-star residual is assigned to an extra gravitational response.
+
+The approximation controls have separate meanings. The common GR2 term
+moves absolute image coordinates by up to $1.72$ microarcsec, while its
+change of the reference-relative image offsets is below
+$7\times10^{-6}$ microarcsec and its delay-offset change is below
+$0.1$ ms. The distributed-encounter control tests the optical plane
+within the retained leading action. Its finite-window and path effects
+are distinct from scalar-dependent field-equation higher orders.
+The local parameter $H_lr_V/c=5.64\times10^{-5}$ and the
+$1.1$--$1.7\times10^{-6}$ fraction of extra deflection beyond $20$ Mpc
+in the formal isolated projection characterize scale separation and
+tails. They are not complete physical error bounds. A time-dependent
+material/environmental continuation consumes the specific equation of
+state or support and constrained outer data derived in Supplementary
+Note S5.
+
+The leading scalar principal coefficients are positive on the retained
+branch (Appendix~\ref{app:principal}); its maximum radial characteristic
+speed squared is approximately $1.474$ in metric light-speed units.
+Photons in this benchmark follow metric null rays. This leading
+coefficient check establishes neither full coupled stability nor a
+causal ultraviolet completion. The independent rolling scalar $T$,
+target phase and metric coordinate retain their stated normalizations;
+the earlier source-free target null is preserved in Appendix~\ref{app:target}.
+
+The BHSM microscopic source question has a precise boundary in this
+paper. Supplementary Note S4 derives the cap/matcher and Schur source
+pullback and gives positive same-domain complements with identical
+leading normalization but different higher-derivative coefficients.
+A physical cap/interface embedding into canonical $T$, its cubic
+vertex, source pairing and complement length/spectrum must therefore
+be supplied by the framework before a unique microscopic state is
+assigned to this transfer. This result supplies the defining conditions
+and their nonuniqueness; it does not select an extra optical amplitude.
+The present calculation is a reproducible effective benchmark against
+which that physical source construction can be tested.
+The original microscopic current remains
+\begin{equation}
+ j_c=\frac{\mu}{2}\sum_s\left[
+ U_s^\dagger(iG_c)U_s-V_s^\dagger(iG_c)V_s\right].
+ \label{eq:he0435-microscopic-current-scope}
+\end{equation}
+The classical density and reduced $J_{\rm eff}$ evaluated here do not
+compute these sections or an achieved microscopic current. Their
+identification consumes the cap-to-canonical-field source pairing and
+same-domain state/Cauchy prescription; those are not fixed by this
+optical fit. The exclusive chronological two-point, inclusive contour
+four-point and complete matched-occupation constructions remain distinct.
+Neither a classical variability process nor inherited retarded arrays
+or a native heat functional supplies the statistical state kernel.
+No vacuum, dressed-state factorization or Wick replacement is selected,
+and the later four-point is not imposed as a prerequisite for the
+conditional classical optics used here.
+
+
+\section{Conclusions}
+For the prescribed $10^{11}M_\odot$, $3$ kpc body at $z_l=0.3$ and
+common source at $z_s=1$, the fixed R1 action/state produces a regular
+source, screening radius approximately $212$ kpc, reference-relative
+delay offsets $25.96$ s and $8.65$ s, image changes approximately
+$0.79$--$6.12$ microarcsec and a $6.82$ ppm delay-ratio change.
+The state dependence enters explicitly through the normalized scalar
+mixing and stiffness. These results retain one physical incident-light,
+clock and propagation prescription throughout.
+
+The same retained metric and light transfer admit a positive
+conventional effective mass. A finite five-parameter ordinary refit
+also reproduces the three injected images and two delays to numerical
+precision; fixing its center leaves millisecond-scale delay mismatches
+in the declared profile family. The interpretation of the response
+therefore depends on the admitted lens freedoms. A smooth Plummer
+control matched by total mass and half-mass radius gives offsets
+$22.45$ s and $9.62$ s while preserving the effective-mass equivalence.
+The eight paired profile/input controls, common ordinary-GR correction
+and distributed optical encounter make the benchmark's model and
+approximation dependencies explicit. The common GR2 changes of the
+original offsets remain $+69$ and $-10$ microseconds.
+
+The observed HE~0435 baseline trains on 902 epochs and reserves 100
+later epochs. With later B as the allowed driver, conventional and R1
+predictions for 300 A/C/D targets differ by only $0.00498$ in joint log
+score. Their nominal 95\% intervals cover $85.33\%$ of these targets,
+and the separately retained all-channel forecast also undercovers.
+The first experiment exposes its brightness and central-image limitations.
+Actual HST F814W pixels constrain its unattenuated central/A ratio below
+$0.030$ within the tested conditional PSF/noise family, versus the original
+$0.0632$ prediction. A positive compact-source revision reduces that ratio
+to about $0.00264$; the nearly tied allowed source candidates do not measure
+a nuclear mass. A separately committed test then evaluates the revised
+predictions on 162 unused LCO A/B/D magnitudes with C as the allowed driver,
+and all 216 magnitudes without a driver. Both revised macro models cover
+160 of 162 primary targets, with approximately $0.0772$ mag RMSE and
+$0.670$ mag mean 95\% interval width. Their nominal 68.27\% intervals
+cover $94.44\%$, indicating conservative uncertainty. The primary
+R1-minus-conventional joint score is about $-3.46\times10^{-5}$.
+These applications constrain source and predictive adequacy without
+identifying a unique BHSM envelope state or establishing sharp nominal
+probability calibration.
+The compact-source model's separate unused Gaia test leaves a $3.26$ mas coordinate RMS and
+rejects the exact frozen point predictions under catalogue errors alone.
+Sensitivity to prespecified uncertainty floors does not establish precision
+validity. Diagnosing the old geometry motivates the explicit positive
+rear G1 and separately specified quadratic remainder. Full ordered
+two-plane propagation reduces consumed-Gaia RMS to about $0.011$ mas
+without changing catalogue errors. Its revised central/A prediction is
+about $0.00165$ and remains permitted by the consumed conditional HST
+test. These development fits establish neither a unique geometry nor
+an envelope-state measurement. The separately frozen JWST experiment
+in Section~\ref{sec:he0435-jwst-geometry} improves raw geometry RMS from
+$3.31$ to $0.779$ mas on previously unused photons, but fails its
+instrumental and exposure-consistency gates. Neither conventional nor
+R1 receives a validation pass. The remaining precision-inference task
+is sharpened by an explicit valid-rate correction and two new consumed-data
+applications. Restoring 303 valid slopes gives $0.448$ mas raw RMS while
+all profiles still fail. An electron-conserving history term does not
+repair the held optical mean. A coherent sky with shared calibration
+uncertainty lowers training residuals at a converged conditional optimum,
+but also fails a held-exposure profile. Actual histories and calibration
+darks identify missing temporal/spatial covariance and a noncommuting
+IPC/linearity composition; these are tested instrumental relations,
+not extra gravitational amplitudes. Precision inference therefore
+requires an adequate instrumental mean and stochastic/reference covariance,
+with the physical-state and global-matching dependencies still explicit.
+
+Prepared light constrains an envelope encounter transfer. Identifying
+that transfer with a particular underlying state consumes the specified
+action/source map and independently justified mass/environment data.
+The calculation provides a coherent forward and inverse test problem
+for that inference, with its physical source conditions and technical
+continuation derived separately.
+
+\supplementary{The repository supplies Notes S1--S10: local action/source
+reduction; finite-body GR2; nuisance optics; cap/interface source
+pullback; exact field/environmental continuation; profile robustness;
+finite nonlinear refit; distributed-encounter accuracy control;
+observed-lens source/two-plane derivation; and classical light-curve
+likelihood and reserved-target protocol.
+Their source paths, executable commands, input hashes, numerical outputs
+and focused checks are mapped in the acceptance checkpoint. The long
+cap and continuation TeX derivations are retained as technical
+supplementary source; the historical target and transport calculations
+remain available.}
+\authorcontributions{Norman P. Carberry: conceptualization, methodology,
+software, validation, formal analysis, investigation, resources, data
+curation, writing---original draft preparation, writing---review and
+editing, and visualization. The author accepts responsibility for the
+scientific content. AI assistance is disclosed below.}
+\funding{This research received no external funding.}
+\institutionalreview{Not applicable. This theoretical analysis and use of public astronomical observations involve
+no human participants or animals.}
+\informedconsent{Not applicable.}
+\dataavailability{The numerical code, frozen inputs, outputs, source
+applications and derivation checks are archived in the public repository
+at calculation revision \texttt{64046bf8e15c} in the
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/64046bf8e15c5122345eae7e86ee0ade387338bb}{Manuscript-Generation calculation archive}.
+The frozen background and prior controls are preserved from revision
+\texttt{49a1dab}. The accompanying manuscript sources, official journal
+dependencies and integration reviews are supplied with this manuscript.
+The observed photometry comprises the public COSMOGRAIL and LCO/CDS
+releases cited above. Exact HST science/weight/context cutouts and original
+MAST product URLs are also retained. Original files, attribution, hashes
+and reduction caveats accompany the data. The Gaia DR3 query, raw catalogue
+rows and separate pre-query prediction freeze are preserved as well.
+The later G1 geometry, field calibrations and first JWST application are
+preserved at immutable revision
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/7ad3cf1756667d2f24902cf9898600977d49a70e}{\texttt{7ad3cf175666}}.
+This includes the separate pretarget protocols, independent LMC PSF
+file, exact native target windows, embedded official GWCS exports,
+raw residuals and failed adequacy diagnostics. Full native JWST files
+remain available from MAST under the recorded product URLs and hashes;
+the complete 470~MB native streams are not duplicated in the repository.
+The additive native-rate repair, byte-preserved supplied package,
+actual read-group and coherent-sky applications, residual maps and
+independent computational reviews are archived at
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/34694083c22d32261c6f0ac27211d8e3f984803d}{\texttt{34694083c22d}}.
+The supplied detector processing is preserved without a new replay;
+the new applications and their failed adequacy gates are separately
+identified. Reserved observations are not included in the development
+fits.}
+% Numerical Gaia quasar targets were queried only after their separate freeze.
+\acknowledgments{The author acknowledges COSMOGRAIL, the original LCO
+investigators and CDS/VizieR for the public photometry, and NASA/ESA HST
+investigators and MAST at STScI for the archival imaging, and ESA Gaia and
+the Gaia Data Processing and Analysis Consortium for the DR3 catalogue.
+The author also acknowledges NASA/ESA/CSA JWST program 1198 and its
+investigators, MAST, and STScI's independent standard-PSF calibration
+library used for the explicitly limited instrumental diagnostic.
+Original data
+publications are cited above. OpenAI ChatGPT and
+OpenAI Codex materially assisted mathematical derivation, code generation
+and revision, numerical verification, analysis, and manuscript drafting.
+The supplied package records its ChatGPT assistance under the label
+``GPT-6 Astra Pro'' in its archived validation record. Scientific claims
+are specified by explicit equations, executable code and recorded numerical
+checks. AI output is not independent scientific evidence. Responsibility
+for the content remains with the listed author.}
+\conflictsofinterest{The author declares no conflicts of interest.}
+\appendixtitles{yes}
+\appendixstart
+\appendix
+\section{The Constant-Target Null Control}
+\label{app:target}
+The earlier source-free target sector has
+\begin{equation}
+ S_\eta=-\int N\sqrt h\,w_0 F(X)\,\dd t\,\dd^3x,\qquad
+ F(X)=\frac{\kappa_\eta}{2}X+\frac18X^4,\qquad
+ X=g^{\mu\nu}\langle D_\mu\eta,D_\nu\eta\rangle ,
+\end{equation}
+with $\eta=(s,z)\in S^6\subset\mathbb R\oplus\mathbb C^3$,
+$s^2+2z^\dagger z=1$, target metric
+$\dd s^2+2\operatorname{Re}(\dd z^\dagger\dd z)$, and
+$w_0\kappa_\eta>0$. For
+$\eta_q=(\cos q,\sin q\,e_1/\sqrt2)$ with constant $q$ and zero
+connection, $D\eta=0$, $F(0)=0$, and the target current and stress vanish.
+For a radial meridian $q(r)$, regularity sets the conserved flux
+\begin{equation}
+ r^2e^\nu\sqrt{f_r}\,w_0(\kappa_\eta+X^3)q'=0,
+ \qquad X=f_r(q')^2
+\end{equation}
+to zero. Positivity gives $q'=0$. This proves the null only for the stated
+source-free regular boundary problem.
+
+A constant background still permits positive perturbation stiffness.
+For a nonconstant Dirichlet phase perturbation, the quadratic energy
+and its second variation (phase self-curvature) are
+\[
+ \begin{aligned}
+ E_\eta^{(2)}[\varphi]&=\tfrac12w_0\kappa_\eta
+   \int e^{\Phi-\Psi}|\nabla\varphi|^2\,\dd^3x,\\
+ \delta^2E_\eta[\varphi,\varphi]&=2E_\eta^{(2)}[\varphi]>0.
+ \end{aligned}
+\]
+The mixed metric/phase response vanishes at $D\eta=0$.
+The solved matter body therefore has ordinary nonzero lensing and zero
+additional response in this target family. A vanishing matched seam
+contribution is not a statement that all possible gravitational or
+boundary sources vanish. The rolling scalar $T$ in
+Equation~\eqref{eq:r1-action} is a different explicitly specified field.
+
+\section{Moving Measured-Redshift Endpoints}
+\label{app:endpoints}
+For an observer-normalized affine ray,
+$J_a''=\mathcal T J_a$ with
+$(J_a,J_a')_a=(0,\omega_a I)$.
+Let $Z_{\lambda,a}=\delta\ln\omega|_{\lambda_a}$ and
+$Z_{\chi,a}=\delta\ln\omega|_{\chi_a}$. On the reference ray,
+\begin{align}
+ Z_{\chi,a}&=Z_{\lambda,a}
+ -\mathcal H_a\delta\chi_{{\rm ray},a}|_\lambda,\nonumber\\
+ \delta\lambda_a&=-\frac{Z_{\lambda,a}}
+ {(\ln\overline\omega)'_{\lambda,a}},\qquad
+ \delta\chi_a=\delta\chi_{{\rm ray},a}|_\lambda
+ +\overline\chi'_{\lambda,a}\delta\lambda_a
+ =-\frac{Z_{\chi,a}}{\mathcal H_a}.
+\end{align}
+Thus converting an affine shift alone does not give the full radial
+event shift. The moving-vertex initial conditions are
+\begin{equation}
+ \delta J_a|_a=-\omega_aI\,\delta\lambda_a,\qquad
+ \delta J_a'|_a=\Delta\omega_a I,\qquad
+ \Delta\omega_a=\delta\omega_a|_\lambda+
+ \overline\omega'_a\delta\lambda_a .
+\end{equation}
+At fixed measured redshift and observer normalization,
+$\Delta\omega_a=0$. Output event and frame conversions must also be
+included. These conventions are needed for the three compatible maps;
+they are inactive in the local comparison where the maps are held fixed.
+
+\section{Leading Scalar Principal Coefficients}
+\label{app:principal}
+After eliminating the leading metric mixing, the homogeneous time
+coefficient is
+\begin{equation}
+ D=1+\frac{12Hv}{\lambda}
+ +\frac{6v^4}{\Mpl^2\lambda^2}=4.3962210287 .
+\end{equation}
+For
+$\mathcal S=\sqrt{C^2+16b_TGM(<r)/(\lambda r^3)}$,
+the leading local diagonal coefficients are
+\begin{equation}
+ K_r=\mathcal S,\qquad
+ K_\Omega=\mathcal S+\frac12r\mathcal S',\qquad
+ K_t=D+\frac32(\mathcal S-C)+\frac12r\mathcal S'.
+\end{equation}
+Nonnegative density implies
+$K_\Omega\ge(\mathcal S^2+3C^2)/(4\mathcal S)>0$.
+For this branch $K_t$ is also positive; the frozen homogeneous
+ratio is $C/D=0.9642051$. The exterior maximum of $K_r/K_t$
+is $1.47366$ at approximately $100.107$ kpc.
+These are leading local coefficients. Mixed time--space and
+higher weak-field terms, the full coupled spectrum, and an ultraviolet
+completion are outside this check.

@@ -1,0 +1,28 @@
+{
+  "status": "KNOWN_OUTCOME_NUMERICAL_REPLAY_NOT_AN_INDEPENDENT_TEST",
+  "scores": {
+    "empirical_training_transfer": {
+      "primary_joint_log_density": 795.1984656436452,
+      "secondary_joint_log_density": 1032.8751971216207
+    },
+    "conventional_macro": {
+      "primary_joint_log_density": 791.6238454191334,
+      "secondary_joint_log_density": 1029.2914875550305
+    },
+    "conditional_R1_macro": {
+      "primary_joint_log_density": 791.6288281092675,
+      "secondary_joint_log_density": 1029.2965019115018
+    },
+    "matched_conventional_effective_mass": {
+      "primary_joint_log_density": 791.6288281092675,
+      "secondary_joint_log_density": 1029.2965019115018
+    },
+    "zero_delay_control": {
+      "primary_joint_log_density": 755.9755286520231,
+      "secondary_joint_log_density": 993.3909429117739
+    }
+  },
+  "runner": "scripts/replay_he0435_scores.py",
+  "runner_sha256": "64fe280b14c49782819143fd2efb006d8b1c0ddab925354881eae4357438a8f7",
+  "interpretation": "Verification after original target exposure, with all source hashes and parameters fixed; not a new independent held-out test and no refitting."
+}

@@ -1,0 +1,211 @@
+{
+  "status": "PASS_PHYSICAL_EQUATION_AND_FROZEN_POINT_REVIEW_WITH_EXPLICIT_CONDITIONAL_SCOPE",
+  "review_role": "Read-only physical source/equation and receipt audit; independent checking by a collaborating research agent, not external human peer review",
+  "created_utc": "2026-10-21T13:22:50.565927+00:00",
+  "scope": "New final exact-gnomonic geometry module and frozen physical point predictions only; no quasar pixels, broad suite, macro refit or old numerical artifact replay",
+  "first_physical_freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "inherited_baseline_commit": "2fc7162c34d7825ce819e0a50e1db262a622df2e",
+  "current_head_at_review": "1cd70be38ce6012ecc1b694ceb600cbf91910c86",
+  "frozen_point_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "current_source_and_receipt_sha256": {
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "scripts/fit_he0435_geometry_revision.py": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+    "tests/test_strong_lensing_geometry_revision.py": "18b2f45fe33d9cd7f19ffc189e51c381816d377d3acf664ccc80ad25e243f34a",
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+    "artifacts/strong_lensing_geometry_20261021/conventional_g1_census.json": "1a2aebb718bcda6d5f6a9783675a4a0f29e1bfe2d46b9875744f3282c5e547dc",
+    "artifacts/strong_lensing_geometry_20261021/r1_g1_census.json": "95e19e5849da1992bcd0d69a3a37b366a11565bf4323a544d33bbbf29a187a69",
+    "data/strong_lensing_geometry_20261021/development/G1_source_prescription.json": "99f76ee7c079c0000938f858ef79e20f78d1a26b5173b45edf85b684ed55946b"
+  },
+  "physical_files_byte_identical_to_first_freeze": {
+    "code/strong_lensing_geometry_revision.py": true,
+    "scripts/fit_he0435_geometry_revision.py": true,
+    "tests/test_strong_lensing_geometry_revision.py": true,
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": true,
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": true,
+    "artifacts/strong_lensing_geometry_20261021/conventional_g1_census.json": true,
+    "artifacts/strong_lensing_geometry_20261021/r1_g1_census.json": true,
+    "data/strong_lensing_geometry_20261021/development/G1_source_prescription.json": true
+  },
+  "prior_review_preserved": {
+    "path": "artifacts/strong_lensing_geometry_20261021/geometry_equation_review.json",
+    "scope": "Earlier pre-gnomonic source review retained unchanged; this new receipt reviews the final exact-map source and final fit"
+  },
+  "focused_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_geometry_revision.py -q",
+    "passed": 8,
+    "failed": 0,
+    "elapsed_seconds": 1.26,
+    "test_names": [
+      "test_zero_mass_reproduces_existing_exact_images_and_relative_delays",
+      "test_perturber_center_is_its_foreground_deflected_observed_ray",
+      "test_two_plane_ordered_jacobian_matches_finite_difference",
+      "test_full_action_partial_gradients_match_independent_variations",
+      "test_positive_projected_source_satisfies_original_poisson_trace",
+      "test_measured_redshift_distance_identity_and_stationary_bright_rays",
+      "test_zero_perturber_original_r1_projection_is_retained",
+      "test_exact_gnomonic_gaia_jacobian_including_uncertain_origin_matches_complex_step"
+    ]
+  },
+  "exact_Gaia_geometry": {
+    "source": "Four ordered A/B/C/D rows in already-consumed Gaia receipt",
+    "projection": "Exact gnomonic at A; analytic 6x8 Jacobian includes uncertain reference-A direction and every row own alpha-star tangent basis",
+    "covariance": "J diag(C_A,C_B,C_C,C_D) J^T, no second cos(delta) on Gaia ra_error; conditional between-source independence because catalogue cross-covariances unavailable",
+    "independent_check": "Analytic Jacobian agrees with independent complex-step calculation in the eighth focused test; high-precision frame audit separately uses the same tangent convention",
+    "maximum_coordinate_correction_from_previous_smallfield_map_mas": 0.0032117621360239212,
+    "old_frozen_helper_and_arrays_unchanged": true
+  },
+  "equations_reviewed": {
+    "local_matter": "rho=sum_j 3 M_j a_j^2/[4 pi(r^2+a_j^2)^(5/2)]; Menc=sum_j M_j r^3/(r^2+a_j^2)^(3/2)",
+    "original_local_scalar": "C x^2 p - 4 x p^2/lambda_hat = -b_hat m_total(x), original regular branch, TOTAL local enclosed mass consumed once",
+    "original_local_Gauss": "2 x^2 Phi_prime + b_hat x^2 p = 2 m_total(x)",
+    "reduced_source": "J_eff/(Mpl H0^2)=-b_hat rho/(2 Mpl^2 H0^2)",
+    "rear_center": "c_G=D_op theta_G-D_lp alpha_l(D_ol theta_G), on the matching conventional or R1 foreground field",
+    "rear_source": "Sigma_G=M_G a_G^2/[pi(R^2+a_G^2)^2]>=0; psi_G=2 G M_G/c^2 log[(R^2+a_G^2)/(2a_G^2)]",
+    "rear_full_potential": "psi_p=.5 x_p^T U_rem x_p+psi_G; one insertion, no re-addition of the retained former total environment",
+    "ray": "x_p=D_op theta-D_lp alpha_l; R=theta-(D_ls/D_os)alpha_l-(D_ps/D_os)(U_rem x_p+alpha_G)-beta0",
+    "ordered_jacobian": "I-(D_ls D_ol/D_os)H_l-(D_ps/D_os)(U_rem+H_G)(D_op I-D_lp D_ol H_l); no symmetrization of noncommuting multi-plane products",
+    "full_action": "ct=.5 k_l|theta-theta_p|^2+.5 k_p|theta_p-beta0|^2-(1+zl)psi_l-(1+zp)psi_p; both independent plane gradients checked; exact distance identity retained",
+    "nested_control": "M_G=0,zp=.8 recovers original conventional and original R1 image/delay applications in focused synthetic tests"
+  },
+  "final_computed_original_R1_source_applications": {
+    "source_receipt": "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json",
+    "sections_copied_from_executed_final_receipt_not_recomputed": [
+      {
+        "radius_kpc": 0.030000000000000002,
+        "density_over_Mpl2H02": 3736053052.348633,
+        "consumed_reduced_source_J_eff": -171279915.11312822,
+        "scalar_gradient_over_MplH0": -3.5991919806817106e-05,
+        "scalar_integrated_lhs": -3.495570286398091e-17,
+        "scalar_integrated_source": -3.495570286398091e-17,
+        "metric_Gauss_lhs": 7.624732899692909e-16,
+        "metric_Gauss_source": 7.624732899692909e-16,
+        "scalar_relative_residual": 0.0,
+        "metric_relative_residual": 0.0
+      },
+      {
+        "radius_kpc": 0.2,
+        "density_over_Mpl2H02": 18271743.011113375,
+        "consumed_reduced_source_J_eff": -837670.811431602,
+        "scalar_gradient_over_MplH0": -2.566831453951925e-05,
+        "scalar_integrated_lhs": -1.1872490700906853e-16,
+        "scalar_integrated_source": -1.1872490700906848e-16,
+        "metric_Gauss_lhs": 2.589693899182927e-15,
+        "metric_Gauss_source": 2.5896938991829276e-15,
+        "scalar_relative_residual": 4.1527770219729295e-16,
+        "metric_relative_residual": 3.0461550126441765e-16
+      },
+      {
+        "radius_kpc": 1.0,
+        "density_over_Mpl2H02": 15463161.718113845,
+        "consumed_reduced_source_J_eff": -708910.9788722463,
+        "scalar_gradient_over_MplH0": -5.642550208266809e-05,
+        "scalar_integrated_lhs": -2.875466285356208e-15,
+        "scalar_integrated_source": -2.875466285356208e-15,
+        "metric_Gauss_lhs": 6.272127461783887e-14,
+        "metric_Gauss_source": 6.272127461783887e-14,
+        "scalar_relative_residual": 0.0,
+        "metric_relative_residual": 0.0
+      },
+      {
+        "radius_kpc": 6.0,
+        "density_over_Mpl2H02": 2263767.1806671335,
+        "consumed_reduced_source_J_eff": -103782.74748984216,
+        "scalar_gradient_over_MplH0": -0.00018667285305774565,
+        "scalar_integrated_lhs": -1.894859613889067e-13,
+        "scalar_integrated_source": -1.8948596138890683e-13,
+        "metric_Gauss_lhs": 4.133173489469925e-12,
+        "metric_Gauss_source": 4.133173489469924e-12,
+        "scalar_relative_residual": 6.661060476998013e-16,
+        "metric_relative_residual": 1.9544148558107463e-16
+      }
+    ],
+    "original_source_checks_copied_from_executed_final_receipt": {
+      "max_integrated_scalar_equation_relative_residual": 7.174316178907552e-16,
+      "max_independent_alpha_derivative_relative_error": 1.868219187632096e-12,
+      "max_independent_potential_derivative_relative_error": 3.5715397081250243e-09,
+      "finite_matching_tail": [
+        {
+          "impact_Mpc": 0.007712154554126865,
+          "fraction_extra_alpha_beyond_20_Mpc": 5.207113145111464e-06
+        },
+        {
+          "impact_Mpc": 0.006842525856145785,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.972870769948123e-06
+        },
+        {
+          "impact_Mpc": 0.007702849918162241,
+          "fraction_extra_alpha_beyond_20_Mpc": 5.204585003415474e-06
+        },
+        {
+          "impact_Mpc": 0.006435229611917048,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.864982399821471e-06
+        }
+      ]
+    },
+    "maximum_section_scalar_relative_residual": 6.661060476998013e-16,
+    "maximum_section_metric_Gauss_relative_residual": 3.0461550126441765e-16,
+    "interpretation": "The scalar/Gauss applications have relative residuals of order7e-16. This is not a statement that every numerical derivative check is at machine precision: potential-derivative discrepancy is3.571539708e-9 and alpha-derivative discrepancy is1.868219188e-12."
+  },
+  "final_development_point_results": {
+    "conventional": {
+      "Gaia_chi2": 0.026511601826968118,
+      "rms_coordinate_residual_mas": 0.010551209235733208,
+      "perturber_mass_Msun": 235148467073.52893,
+      "predicted_delays_days": [
+        6.423926074988515,
+        0.4954612293732339,
+        13.491351395601782
+      ],
+      "max_lens_residual_rad": 7.411538288475128e-22,
+      "max_arrival_stationarity_Mpc": 1.0408340855860843e-17
+    },
+    "r1": {
+      "Gaia_chi2": 0.026279970748485534,
+      "rms_coordinate_residual_mas": 0.01050590675422826,
+      "perturber_mass_Msun": 235146069816.55292,
+      "predicted_delays_days": [
+        6.423799409901505,
+        0.4954429756751324,
+        13.491078161096539
+      ],
+      "max_lens_residual_rad": 1.5352472168984194e-21,
+      "max_arrival_stationarity_Mpc": 1.431146867680866e-17
+    }
+  },
+  "conditional_scope_and_unresolved_dependencies": [
+    "Gaia is consumed development data: nine free fitted parameters versus six Gaia coordinate values, with other development light/center information; small Gaia Q is not a held-out validation or a complete posterior.",
+    "Quadratic REMAINDER kappa is anchored to the inherited numerical value to fix a mass-sheet degree, not measured as the new total environmental convergence.",
+    "G1 a=.2kpc and the fitted positive mass describe a prescribed total optical regularized point-mass surrogate, not a uniquely inferred galaxy state or material support solution.",
+    "Local total two-Plummer R1 source/state coefficients are unchanged. The optical rear G1 potential does not derive its nonlinear R1 scalar source in a globally coupled environmental domain.",
+    "Remaining two-dimensional U_rem and prescribed G1 optics do not determine a three-dimensional environmental scalar Hessian, microscopic UV state/current, Cauchy completion or full matching boundary.",
+    "Activation field explicitly holds the local body and observed G1 direction fixed while reconditioning its inferred physical rear center on the matching local field; it is not a fixed complete two-plane material configuration.",
+    "Finite line-of-sight projection and outer environmental matching remain conditional. Recorded fractions beyond20Mpc are about4.9e-6 to5.2e-6; they are diagnostics, not proof of physical global matching.",
+    "The finite logarithmic image search finds seven verified roots but supplies no theorem excluding remote/critical additional branches.",
+    "Independent potential derivative agreement is3.57e-9, not machine precision or a separate relaxation of the2e-10 physical-admission guard.",
+    "No added empirical BHSM response amplitude, quantum statistical state kernel, Wick factorization or Gaussian quantum-state closure is introduced. The inherited brightness GP remains a classical observation model; exclusive chronological two-point, inclusive contour four-point and complete matched-occupation tasks stay distinct.",
+    "Field-star PSF/WCS calibration and JWST measurement adequacy are separate later stages. This physical review opens no target arrays and asserts no new-observation validation pass."
+  ],
+  "inheritance_audit": {
+    "original_source_byte_match_to_baseline": {
+      "code/strong_lensing_observed_macro.py": true,
+      "code/strong_lensing_macro_revision.py": true,
+      "code/strong_lensing_comparison.py": true,
+      "code/strong_lensing_robustness.py": true,
+      "code/strong_lensing_local_family.py": true,
+      "code/strong_lensing_r1_screened.py": true,
+      "code/strong_lensing_lightcurve_revision.py": true,
+      "code/action_native_matter_n2.py": true,
+      "code/background.py": true
+    },
+    "changed_old_numerical_paths": [],
+    "original_old_numerical_arrays_reexecuted": false
+  },
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "no_extra_BHSM_response_parameter": true,
+  "no_quantum_kernel_closed_by_GP": true,
+  "target_pixels_opened_by_this_review": false,
+  "no_code_fit_prediction_or_old_receipt_edits": true,
+  "important_bugs_found": []
+}

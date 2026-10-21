@@ -1,0 +1,35 @@
+{
+  "request": {
+    "service": "Mast.Jwst.Filtered.Nircam",
+    "params": {
+      "columns": "filename,apername,ra_ref,dec_ref,ra_v1,dec_v1,pa_v3,targ_ra,targ_dec,filter,detector",
+      "filters": [
+        {
+          "paramName": "program",
+          "values": [
+            "1198"
+          ]
+        },
+        {
+          "paramName": "obsnum",
+          "values": [
+            "007"
+          ]
+        },
+        {
+          "paramName": "filter",
+          "values": [
+            "F115W"
+          ]
+        }
+      ]
+    },
+    "format": "json",
+    "pagesize": 200,
+    "page": 1
+  },
+  "response": {
+    "status": "ERROR",
+    "msg": "Request failed.  If this problem persists, please notify archive[at]stsci.edu.'"
+  }
+}

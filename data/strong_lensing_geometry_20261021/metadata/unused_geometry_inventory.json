@@ -1,0 +1,206 @@
+{
+  "schema": "he0435-unused-geometry-metadata-v1",
+  "status": "Metadata-only candidate inventory: this does not freeze any physical model or certify complete blind reduction.",
+  "target_pixels_centroids_fluxes_opened": false,
+  "query_provenance": "MAST filtered position metadata at already-known field coordinate69.562083333,-12.287333333; selected columns contain observation metadata only.",
+  "selected_observations": [
+    {
+      "obsid": 97278410,
+      "obs_collection": "JWST",
+      "proposal_id": "1198",
+      "instrument_name": "NIRCAM/IMAGE",
+      "t_min": 59864.18393802083,
+      "filters": "F356W",
+      "t_max": 59864.20841947917,
+      "t_exptime": 1803.776,
+      "dataRights": "PUBLIC",
+      "obs_id": "jw01198-o007_t005_nircam_clear-f356w",
+      "dataURL": "mast:JWST/product/jw01198-o007_t005_nircam_clear-f356w_i2d.fits",
+      "start_utc_from_mjd": "2022-10-12T04:24:52.245",
+      "end_utc_from_mjd": "2022-10-12T05:00:07.443"
+    },
+    {
+      "obsid": 97278411,
+      "obs_collection": "JWST",
+      "proposal_id": "1198",
+      "instrument_name": "NIRCAM/IMAGE",
+      "t_min": 59864.211898726855,
+      "filters": "F150W",
+      "t_max": 59864.23575871528,
+      "t_exptime": 1803.776,
+      "dataRights": "PUBLIC",
+      "obs_id": "jw01198-o007_t005_nircam_clear-f150w",
+      "dataURL": "mast:JWST/product/jw01198-o007_t005_nircam_clear-f150w_i2d.fits",
+      "start_utc_from_mjd": "2022-10-12T05:05:08.050",
+      "end_utc_from_mjd": "2022-10-12T05:39:29.553"
+    },
+    {
+      "obsid": 97278424,
+      "obs_collection": "JWST",
+      "proposal_id": "1198",
+      "instrument_name": "NIRCAM/IMAGE",
+      "t_min": 59864.18393802083,
+      "filters": "F115W",
+      "t_max": 59864.20841947917,
+      "t_exptime": 1803.776,
+      "dataRights": "PUBLIC",
+      "obs_id": "jw01198-o007_t005_nircam_clear-f115w",
+      "dataURL": "mast:JWST/product/jw01198-o007_t005_nircam_clear-f115w_i2d.fits",
+      "start_utc_from_mjd": "2022-10-12T04:24:52.245",
+      "end_utc_from_mjd": "2022-10-12T05:00:07.443"
+    },
+    {
+      "obsid": 97278409,
+      "obs_collection": "JWST",
+      "proposal_id": "1198",
+      "instrument_name": "NIRCAM/IMAGE",
+      "t_min": 59864.21189798611,
+      "filters": "F277W",
+      "t_max": 59864.23575797454,
+      "t_exptime": 1803.776,
+      "dataRights": "PUBLIC",
+      "obs_id": "jw01198-o007_t005_nircam_clear-f277w",
+      "dataURL": "mast:JWST/product/jw01198-o007_t005_nircam_clear-f277w_i2d.fits",
+      "start_utc_from_mjd": "2022-10-12T05:05:07.986",
+      "end_utc_from_mjd": "2022-10-12T05:39:29.489"
+    },
+    {
+      "obsid": 26506487,
+      "obs_collection": "HST",
+      "proposal_id": "11732",
+      "instrument_name": "WFC3/UVIS",
+      "t_min": 55072.07934855,
+      "filters": "F275W",
+      "t_max": 55072.14592278,
+      "t_exptime": 2524,
+      "dataRights": "PUBLIC",
+      "obs_id": "hst_11732_04_wfc3_uvis_f275w_ib1304",
+      "dataURL": "mast:HST/product/hst_11732_04_wfc3_uvis_f275w_ib1304_drc.fits",
+      "start_utc_from_mjd": "2009-08-29T01:54:15.715",
+      "end_utc_from_mjd": "2009-08-29T03:30:07.728"
+    },
+    {
+      "obsid": 26356063,
+      "obs_collection": "HST",
+      "proposal_id": "9744",
+      "instrument_name": "ACS/WFC",
+      "t_min": 52869.88645176,
+      "filters": "F555W",
+      "t_max": 52869.91671834,
+      "t_exptime": 2030,
+      "dataRights": "PUBLIC",
+      "obs_id": "hst_9744_12_acs_wfc_f555w_j8oi12",
+      "dataURL": "mast:HST/product/hst_9744_12_acs_wfc_f555w_j8oi12_drc.fits",
+      "start_utc_from_mjd": "2003-08-18T21:16:29.432",
+      "end_utc_from_mjd": "2003-08-18T22:00:04.465"
+    }
+  ],
+  "metadata_files": [
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/acs_f555w_products_metadata.json",
+      "bytes": 98991,
+      "sha256": "ced0816edc75ad6a8aab2faf4df8a9d2dc07ce8fb8cafdd2114fda5478899d39"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrca1_cal_headers_only.json",
+      "bytes": 12564,
+      "sha256": "313f02dede02d2ac703cbad0bfc0fd9b7ffbf66ddc7c4b7cc63bc4b5700d9166"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrca2_cal_headers_only.json",
+      "bytes": 11694,
+      "sha256": "8e652e90c7a73620ba3983e14afd1ae568cc5aacff546fa55c2c2cf9c3c46db2"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrca3_cal_headers_only.json",
+      "bytes": 12561,
+      "sha256": "e71d37abd79045c91244dfb61138aec6798df9d144785d7798d40f1e3d814923"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrca4_cal_headers_only.json",
+      "bytes": 12563,
+      "sha256": "97f9a369561c3d1a908ed4fb77e9de8b8d59419f770817a61c9c634ca87e01da"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb1_cal_headers_only.json",
+      "bytes": 12557,
+      "sha256": "17a3fdd9c2bdcfc1ca9e68d7483ff2b58ba583ea0a7d2930ab8ccdbc65a6b92e"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb2_cal_headers_only.json",
+      "bytes": 12548,
+      "sha256": "5e493568f96866008d9a0cce0c216a5226474eeeeab896e60f6d3a25a9be007e"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb3_cal_headers_only.json",
+      "bytes": 12564,
+      "sha256": "9464493d58a2c5d6e7b65bef20f83918de2ba4480ea2dba358292d452220ad37"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb4_cal_headers_only.json",
+      "bytes": 12553,
+      "sha256": "44cd4b626e925a033ef906a25441c5a46c92dc0d3c4b466209d05798c344c977"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00002_nrcb3_cal_headers_only.json",
+      "bytes": 12564,
+      "sha256": "8ad493369cf160304640277e500fb466d19d2a9eac1934b191a9c6b67c9672b8"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00003_nrcb3_cal_headers_only.json",
+      "bytes": 12561,
+      "sha256": "aacbae22d9d3b94b88a66adf6058a5cb618b48c1911cd53ca177d952e97bcc6e"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00004_nrcb3_cal_headers_only.json",
+      "bytes": 12545,
+      "sha256": "284a911912dd3a458290b55c04cf23cf0c73c9cfa0c4b6aba2975d011415fefd"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jwst_f115w_individual_observations.json",
+      "bytes": 3459,
+      "sha256": "0ed6e18884e98e19278e7bc2673859cd412571a57c0239e18f8812ad7db58d30"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jwst_nircam_f115w_products_metadata.json",
+      "bytes": 429651,
+      "sha256": "b2b486f504d7bde9c96590997b784e2b10cff039131c78d00eb42d4d3a631ed7"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jwst_nircam_f150w_products_metadata.json",
+      "bytes": 429652,
+      "sha256": "9a78aabc44a0f7aef0ae791a58a89f51f40a9d2744ef2d0afc243a761bc35f4f"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jwst_nircam_footprint_metadata_query.json",
+      "bytes": 772,
+      "sha256": "7045908f54384ad75f5a0406be18aa1936882da59f685ebd1084b8b8d999d41f"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/mast_observation_query.json",
+      "bytes": 776,
+      "sha256": "f1a143c74e6f50b24a5e8ee0fca268b241c6b4ffb779070dd00ed16011777a49"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/mast_observations_metadata.json",
+      "bytes": 44550,
+      "sha256": "00092717eb891224b8ed61516cdf3618608c064b3e9e9280061f5d7107b8ff38"
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/uvis_f275w_2009_products_metadata.json",
+      "bytes": 77323,
+      "sha256": "d79d8b090591ab45fd314e35aa8e4e5b2fb398b40d2ea1d58f6b75e2fd1e4ba9"
+    }
+  ],
+  "header_only_follow_up": {
+    "target_detector": "NRCB3",
+    "native_F115W_files": [
+      "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "jw01198007001_02101_00004_nrcb3_cal.fits"
+    ],
+    "scope": "PRIMARY+SCI header only, stream closes at SCI-header end before any SCI array bytes; known field-pointing/WCS metadata only; no centroid or flux measurements",
+    "note": "Large ~270pixel dithersteps. Instrument PSF spatial variation must not be silently ignored."
+  }
+}

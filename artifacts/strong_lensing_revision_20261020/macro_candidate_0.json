@@ -1,0 +1,251 @@
+{
+  "model": "conventional",
+  "status": "CONDITIONAL_TWO_PLUMMER_DEVELOPMENT_FIT",
+  "compact_mass_Msun": 0.0,
+  "compact_scale_kpc": 0.03,
+  "compact_matter_scope": "positive finite regular matter surrogate; not an inferred black hole or solved material equation of state",
+  "candidate_compact_masses_Msun": [
+    0.0,
+    100000000.0,
+    316227766.01683795,
+    1000000000.0,
+    3162277660.1683793
+  ],
+  "compact_mass_prior": "fixed discrete development candidate, no continuous fitted prior; select using HST and old development data only",
+  "parameters": {
+    "log10_mass_Msun": 11.68999144225833,
+    "log10_plummer_a_kpc": 0.754150393104723,
+    "source_x_arcsec": -0.007952723112454286,
+    "source_y_arcsec": 0.04113092095493897,
+    "screen_kappa": 0.25605890597698017,
+    "screen_gamma1": 0.12486185159383671,
+    "screen_gamma2": 0.06542663652728127,
+    "mass_center_x_arcsec": -0.0011281170303756593,
+    "mass_center_y_arcsec": 0.0009998271611881737
+  },
+  "parameter_vector": [
+    11.68999144225833,
+    0.754150393104723,
+    -0.007952723112454286,
+    0.04113092095493897,
+    0.25605890597698017,
+    0.12486185159383671,
+    0.06542663652728127,
+    -0.0011281170303756593,
+    0.0009998271611881737
+  ],
+  "parameter_lower_bounds": [
+    10.0,
+    -0.7,
+    -0.8,
+    -0.8,
+    -0.4,
+    -0.4,
+    -0.4,
+    -0.03,
+    -0.03
+  ],
+  "parameter_upper_bounds": [
+    13.0,
+    1.3,
+    0.8,
+    0.8,
+    0.4,
+    0.4,
+    0.4,
+    0.03,
+    0.03
+  ],
+  "predicted_delays_days": [
+    6.114512817530997,
+    0.6908785371460553,
+    13.84846849178738
+  ],
+  "predicted_images_light_centered_arcsec": [
+    [
+      1.1721864113221696,
+      0.5660342406674397
+    ],
+    [
+      -0.3047166841665522,
+      1.1171225784909213
+    ],
+    [
+      -1.2961291075363819,
+      -0.03199504029286765
+    ],
+    [
+      0.23960885897925374,
+      -1.0486547351117261
+    ]
+  ],
+  "predicted_relative_astrometry_arcsec": [
+    -1.476903095488722,
+    0.5510883378234817,
+    -2.4683155188585513,
+    -0.5980292809603074,
+    -0.9325775523429158,
+    -1.6146889757791658,
+    -1.1721864113221696,
+    -0.5660342406674397
+  ],
+  "observed_relative_astrometry_arcsec": [
+    -1.4743,
+    0.5518,
+    -2.4664,
+    -0.6022,
+    -0.9378,
+    -1.616,
+    -1.1706,
+    -0.5665
+  ],
+  "chi2_astrometry": 12.756608892859283,
+  "chi2_delay_initializer": 19.281138058028777,
+  "chi2_center_prior": 0.25247804294146653,
+  "standardized_astrometry_residuals": [
+    -1.2762725666094787,
+    -0.3408243694334621,
+    -0.9471631169129966,
+    1.7484563771068804,
+    2.533259213460864,
+    0.6278667296383308,
+    -0.4399913358506798,
+    0.2283573005156766
+  ],
+  "optimizer_trace": [
+    {
+      "iteration": 0,
+      "chi2": 31.162487594223396,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "evaluations": 61,
+      "parameters": [
+        11.689502259944915,
+        0.7451471982303346,
+        -0.008514532052715101,
+        0.043315174846871675,
+        0.23152841890440296,
+        0.13332125560409658,
+        0.06983150942241188,
+        -0.0011773160332906407,
+        0.0009427038972564093
+      ]
+    }
+  ],
+  "quadratic_initializer_parameters": [
+    11.689502259944915,
+    0.7451471982303346,
+    -0.008514532052715101,
+    0.043315174846871675,
+    0.23152841890440296,
+    0.13332125560409658,
+    0.06983150942241188,
+    -0.0011773160332906407,
+    0.0009427038972564093
+  ],
+  "exact_training_refinement": [
+    {
+      "iteration": 0,
+      "objective": -19195.401218441617,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "evaluations": 55,
+      "parameters": [
+        11.68999144225833,
+        0.754150393104723,
+        -0.007952723112454286,
+        0.04113092095493897,
+        0.25605890597698017,
+        0.12486185159383671,
+        0.06542663652728127,
+        -0.0011281170303756593,
+        0.0009998271611881737
+      ]
+    }
+  ],
+  "optimizer_success": true,
+  "max_lens_residual_rad": 2.541098841762901e-20,
+  "max_arrival_stationarity_Mpc": 6.591949208711867e-17,
+  "astrometry_covariance": "Published internal errors plus required2mas systematic in quadrature; diagonal relative-position covariance approximation; imageA fixes origin.",
+  "total_local_mass_Msun": 489769168406.9657,
+  "physical_admission": false,
+  "exact_training_log_likelihood": 9604.205152688708,
+  "exact_training_objective": -19195.401218441617,
+  "two_plane_minus_effective_delay_days": [
+    -7.105427357601002e-15,
+    -1.0880185641326534e-14,
+    -5.329070518200751e-15
+  ],
+  "global_image_census": {
+    "images_light_centered_arcsec": [
+      [
+        0.004639428106628003,
+        -0.03229682064534079
+      ],
+      [
+        0.23960885897925516,
+        -1.0486547351117252
+      ],
+      [
+        -0.304716684166558,
+        1.1171225784909247
+      ],
+      [
+        -1.2961291075363819,
+        -0.03199504029286757
+      ],
+      [
+        1.1721864113221696,
+        0.5660342406674398
+      ]
+    ],
+    "image_count": 5,
+    "absolute_magnifications": [
+      0.3983048452207033,
+      3.494142764551673,
+      5.457256595046023,
+      4.875167151516825,
+      4.67792736286017
+    ],
+    "signed_magnifications": [
+      0.3983048452207033,
+      -3.494142764551673,
+      -5.457256595046023,
+      4.875167151516825,
+      4.67792736286017
+    ],
+    "arrival_days": [
+      56.44122440159573,
+      37.07240943882364,
+      29.338453764567294,
+      23.914819484182352,
+      23.223940947036304
+    ],
+    "max_lens_residual_rad": 1.6940658945086007e-21,
+    "max_arrival_stationarity_Mpc": 3.469446951953614e-18,
+    "min_jacobian_singular_value": 0.15505526103491915,
+    "polynomial_degree": 9,
+    "polynomial_positive_candidates": 5,
+    "scope": "degree-nine conventional radial polynomial plus logarithmic-seed audit; all roots checked in original 2D equations"
+  },
+  "additional_images": [
+    {
+      "position_arcsec": [
+        0.004639428106628003,
+        -0.03229682064534079
+      ],
+      "absolute_magnification": 0.3983048452207033,
+      "flux_ratio_to_image_A_achromatic_no_differential_extinction_or_microlensing": 0.08514558143484564
+    }
+  ],
+  "candidate_index": 0,
+  "wall_seconds": 11.062539599995944,
+  "target_photometry_consumed": false,
+  "development_sha256": "bba68bf36d1c8e27a3ebb4795a2b057c4030db889df7a1648286dde46b8bdd14",
+  "protocol_sha256": "c1ec4b2410b084d8dc10dbb99d57656377be15d028fd25a423ce591c46cdca29",
+  "source_sha256": {
+    "code/strong_lensing_macro_revision.py": "3ffc45db4252527a23af190277cceeb99f78019d4128ca1f779ffaabb370637f",
+    "scripts/fit_he0435_macro_revision.py": "6d91d2cce2a41be2e3778b7a22abf24a99fe5add4366b019c451701d210567f6"
+  },
+  "source_evolution_audit": "artifacts/strong_lensing_revision_20261020/macro_source_provenance.json"
+}

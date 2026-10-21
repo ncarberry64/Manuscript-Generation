@@ -1,0 +1,65 @@
+{
+  "a_over_KR": -1.2705514475847008e-21,
+  "analytic_flat_gradient_norm_over_R": 9.86962014448272,
+  "b_over_KR": 19.73924028895931,
+  "c_over_KR": -19.73924028895931,
+  "c_phi_over_k_eta_R": 9.869620144479654,
+  "determinant_over_KR_squared": -389.63760718527425,
+  "domain_in_R": {
+    "areal_body_surface": 1.0,
+    "isotropic_inner": 0.99999840486075,
+    "isotropic_outer": 2.0,
+    "width": 1.00000159513925
+  },
+  "energy_sign_convention": "E_g=-L_static; E_eta=+int N sqrt(h) w F(X)",
+  "eta_Euler_residual": 0.0,
+  "eta_Legendre_gate": "w*kappa1>0; local orthonormal tangent kinetic matrix is w*kappa1 identity; positive coordinate-time profile norm recorded separately",
+  "eta_boundary_conormal_residual": 0.0,
+  "eta_gauge_current_residual": 0.0,
+  "eta_stress_residual": 0.0,
+  "eta_unit_constraint_residual": 0.0,
+  "flat_gradient_norm_over_R": 9.86962014448272,
+  "inverse_scope": "invertibility of the retained two-dimensional Dirichlet projection; no claim of invertibility of the complete metric functional",
+  "m_over_R": 1.595138613862614e-06,
+  "metric_condition_number": 2.6180339887498953,
+  "metric_hessian_over_KR": [
+    [
+      -1.2705514475847008e-21,
+      19.73924028895931
+    ],
+    [
+      19.73924028895931,
+      -19.73924028895931
+    ]
+  ],
+  "metric_response": [
+    -0.0,
+    -0.0
+  ],
+  "metric_response_residual": 0.0,
+  "not_claimed": [
+    "a physical selector of q,w,kappa1",
+    "a solved 5D cap response",
+    "a nonzero seam-export to target-phase constitutive map"
+  ],
+  "original_metric_Euler_residual_max_in_R": 3.2676110083127284e-21,
+  "phase_kinetic_over_k_eta_Rcubed_per_c_squared": 1.000009103198552,
+  "phase_kinetic_quadrature_error": 1.1102331312057868e-14,
+  "phase_stiffness_curved_over_flat": 0.9999999999996894,
+  "physical_scope": "retained 4D Einstein-Hilbert plus Path-B eta sector; fixed matched body boundary data",
+  "profile": "f=d sin(pi(r-r0)/d)/(sqrt(2pi) r); both endpoint traces zero",
+  "profile_norm": 1.0000000000000002,
+  "profile_norm_quadrature_error": 1.1102230246251569e-14,
+  "quadrature_absolute_error_by_entry": [
+    6.560212329679195e-20,
+    2.1914959057411153e-13,
+    2.1914959057411153e-13,
+    1.0957479528705576e-13
+  ],
+  "schema": "strong-lensing-local-physical-hessian-v1",
+  "schur_over_k_eta_R": 9.869620144479654,
+  "status": "EXACT_CONDITIONAL_VACUUM_ANNULUS_PROJECTION",
+  "u": 0.0,
+  "v": 0.0,
+  "vacuum_simplified_block_residual_over_KR": 1.2705514475847008e-21
+}

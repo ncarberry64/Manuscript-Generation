@@ -1,0 +1,46 @@
+{
+  "review": "independent read-only nonlocal electronicG0 READ+DARK component review",
+  "reviewed_receipt_sha256": "af840526a83bddc2c1f102ae87f95c5d079af41058841041a895f12ed7254732",
+  "source_sha256": {
+    "scripts/project_he0435_nonlocal_anchor_covariance.py": "cbd28293675390586e6945392f204a9b66281e9886b380e5eb2d2ebdfb2c3574",
+    "code/strong_lensing_anchor_covariance.py": "d7394000a87660b97de86fbd0a6ade1acc268b6eddf595a3cbc3b9360a46d929",
+    "code/strong_lensing_dark_covariance.py": "b22943a006972a0ea05c3ed6f0448c23e3e2b0f1ba3b66f5a7a2dacd6682f1eb",
+    "code/strong_lensing_native_calibration.py": "036211013a4e5e8b3dda9bffc1994a6c6ded61f9effcff73f4c53449e83d4bcc",
+    "code/strong_lensing_native_ols.py": "8e921f910aedfe9fa59ad2c78864aefce00fa5d17dc5a80aae86a89dd29ea3a6"
+  },
+  "all_input_source_hashes_match": true,
+  "focused_tests": "3PASS",
+  "actual_dimensions": {
+    "selected_rate_outputs": 289,
+    "same_realization_ADC0_anchor_inputs": 1225,
+    "joint_source": 1514
+  },
+  "direct_transform_covariance_replay_max_abs": 1.1102230246251565e-16,
+  "component_cross_replay_max_abs": 2.710505431213761e-20,
+  "component_self_replay_max_abs": 3.3881317890172014e-21,
+  "full_component_identity_max_abs": 1.1102230246251565e-16,
+  "joint_source_min_eigenvalue": 0.04188396841731895,
+  "residual_component_min_eigenvalue_SCI2": 0.04191977547336352,
+  "white_replay_max_abs": 7.105427357601002e-15,
+  "component_Q": 3422.5402500260643,
+  "component_Q_replay_difference": 4.547473508864641e-13,
+  "original_ERR_Q": 3385.751258412859,
+  "original_ERR_Q_replay_difference": 0.0,
+  "raw_RMS_SCI": 1.2992770499921562,
+  "raw_RMS_replay_difference": 0.0,
+  "logdet_replay_difference": 0.0,
+  "scientific_checks": [
+    "Implicit beta relation gives dbeta/dADC0=diag(1/mean(invLprime0))*G at FIXED charge and cap state",
+    "Prediction B contains actualcurrent Wpred/nativeLprime/H/readinverseL derivatives; nonlocal K is SCIoutput perADC0-DN",
+    "Observed native rate and ADC0 context consume the SAME postSIRS noise realization; [I,-K] retainsbothcross terms",
+    "Measured READ+DARK is not added tooriginalERR/VAR_RNOISE; component-onlyscoreclearlylabeled",
+    "Laternonzero activecap-Jac counts establishexcludedcapnoisepathmaymatter; theyarenotweightedcapsensitivityorclosedboundarylikelihood",
+    "Noadditionalmeanconvolution, photoncountingclosure,noiseinflation,newsciencevalidationorphysicaladmission"
+  ],
+  "remaining_relation": "Full residual covariance additionally needs translated-cap/reference-control noise derivatives and stochastic photon/IPC/full-well plus sharedcalibration relations; this directbeta-only component does not supplythem.",
+  "no_implementation_error_found": true,
+  "physical_validation": false,
+  "source_complete_covariance": false,
+  "physical_guard": 2e-10,
+  "no_native_pipeline_fit_or_spectral_projection_rerun": true
+}

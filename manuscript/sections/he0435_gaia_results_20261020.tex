@@ -1,0 +1,42 @@
+The Gaia prediction freeze was committed before the numerical query.
+The unique closest A/B/C/D assignment has squared residual
+$6.3594\times10^{-5}$ arcsec$^2$; the runner-up is $4.6197$ arcsec$^2$.
+No continuous frame parameter is fitted. The conventional observed-minus-
+predicted east/north residuals are $(0.623,1.701)$ mas for B,
+$(1.915,-5.026)$ mas for C and $(-5.572,0.580)$ mas for D.
+Their coordinate RMS is $3.25560$ mas, versus $3.25557$ mas for R1.
+Table~\ref{tab:gaia-frozen} reports every prespecified covariance control.
+
+\begin{table}[htbp]
+ \centering
+ \caption{Previously unused Gaia DR3 relative astrometry, with all physical
+ predictions fixed before the query. $Q=r^TC_s^{-1}r$ uses six coordinates;
+ the log density is normalized in mas$^{-6}$. Added floors are sensitivity
+ controls, not fitted errors or a completed macro posterior.}
+ \label{tab:gaia-frozen}
+ \begin{tabular}{lrrrr}
+ \toprule
+ Floor (mas) & Conventional $Q$ & R1 $Q$ & Conventional $\log p$ & R1 $\log p$\\
+ \midrule
+ $0$ & $3465.905$ & $3465.667$ & $-1727.177$ & $-1727.058$\\
+ $2$ & $15.7966$ & $15.7963$ & $-17.5910$ & $-17.5908$\\
+ $5$ & $2.54112$ & $2.54107$ & $-16.4441$ & $-16.4440$\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+
+Both frozen point predictions fail the catalogue-error-only precision
+check. The source RUWE values are $1.00$--$1.11$, none is marked duplicated,
+and multi-peak fractions are 0--1\%. B and D nevertheless have odd-window
+fractions of 64\% and 69\%, and C has excess-noise significance 2.57;
+these diagnostics remain visible without post-target image exclusion.
+Adding the declared floors reduces the
+formal mismatch, but cannot turn a sensitivity calculation into successful
+validation or establish the required physical uncertainty. The R1-minus-
+conventional log densities are $0.1191$, $1.53\times10^{-4}$ and
+$2.43\times10^{-5}$ for the three controls. A small difference between
+inadequate point predictions is not evidence for a BHSM state.
+The next physical inference requires justified training/frame/photocentre
+and macro-model uncertainty together with richer mass/environment
+constraints. These Gaia targets are now consumed; fitting them later
+cannot count as another unused-data success.

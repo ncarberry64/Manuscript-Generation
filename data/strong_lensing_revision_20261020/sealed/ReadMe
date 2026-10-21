@@ -1,0 +1,98 @@
+J/A+A/703/A250      HE0435-1223 V and R light curves         (Sorgenfrei+, 2025)
+================================================================================
+Detection of colour variations from gravitational microlensing observations in
+the quadruple quasar HE0435-1223: Implications for the accretion disc.
+    Sorgenfrei C., Schmidt R.W., Wambsganss J.
+    <Astron. Astrophys. 703, A250 (2025)>
+    =2025A&A...703A.250S        (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: QSOs ; Gravitational lensing ; Photometry ; Optical
+Keywords: accretion, accretion disks - gravitational lensing: micro -
+          quasars: individual: HE0435-1223
+
+Abstract:
+    We present monitoring observations of quasar microlensing in the
+    quadruple quasar HE0435-1223. The microlensing-induced light curves of
+    the quasar images are chromatic, i.e. they depend on the applied
+    filter band. Comparison with microlensing simulations allows us to
+    infer properties of the accretion disk.
+
+    We determine the R and V band light curves of the four images of
+    HE0435-1223 from 79 and 80 epochs respectively, taken from 2014 to
+    2024 at the Las Cumbres Observatory using difference imaging analysis.
+    We consider difference light curves to remove the intrinsic quasar
+    variability. This reveals a prominent long-term chromatic microlensing
+    event in image B. We use microlensing light curve simulations with
+    both Gaussian and standard thin accretion disk brightness profiles to
+    analyse this signal.
+
+    The particularly strong signal observed in image B of HE0435-1223
+    makes it possible to detect a size ratio of the accretion disk in the
+    R band compared to the V band of 1.24^+0.08^_-0.20_ and
+    1.42^+0.11^_-0.22_ for the Gaussian and the thin disk model,
+    respectively. These values are in agreement with standard thin disk
+    theory. For the absolute size we find large disk half-light radii of
+    around 0.7 to 1.0 Einstein radii with an uncertainty of about 0.6dex
+    (depending on the filter bands and the models). Finally, our
+    calculations show that image B undergoes caustic crossings about once
+    per year.
+
+Description:
+    The two files contain the light curves of the four images of the
+    gravitationally lensed quasar HE0435-1223 in the R band and the
+    V band from data taken at the Las Cumbres Observatory (LCO) from 2014
+    to 2024.
+
+Objects:
+    ---------------------------------------------------------------------
+       RA   (2000)   DE       Designation(s)
+    ---------------------------------------------------------------------
+    04 38 14.87 -12 17 14.6   HE 0435-1223 = [VV2003] J043814.8-122314
+    ---------------------------------------------------------------------
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+he0435v.dat       72       80   V band light curves of HE0435-1223
+he0435r.dat       72       79   R band light curves of HE0435-1223
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: he0435v.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1- 10  F10.4 d       MJD       Modified Julian Date
+  12- 18  F7.4  mag     VmagA     V band magnitude of image A
+  20- 25  F6.4  mag   e_VmagA     1-sigma error of VmagA
+  27- 33  F7.4  mag     VmagB     V band magnitude of image B
+  35- 40  F6.4  mag   e_VmagB     1-sigma error of VmagB
+  42- 48  F7.4  mag     VmagC     V band magnitude of image C
+  50- 55  F6.4  mag   e_VmagC     1-sigma error of VmagC
+  57- 63  F7.4  mag     VmagD     V band magnitude of image D
+  65- 70  F6.4  mag   e_VmagD     1-sigma error of VmagD
+      72  A1    ---     Band      [V] Band
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: he0435r.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1- 10  F10.4 d       MJD       Modified Julian Date
+  12- 18  F7.4  mag     RmagA     R band magnitude of image A
+  20- 25  F6.4  mag   e_RmagA     1-sigma error of RmagA
+  27- 33  F7.4  mag     RmagB     R band magnitude of image B
+  35- 40  F6.4  mag   e_RmagB     1-sigma error of RmagB
+  42- 48  F7.4  mag     RmagC     R band magnitude of image C
+  50- 55  F6.4  mag   e_RmagC     1-sigma error of RmagC
+  57- 63  F7.4  mag     RmagD     R band magnitude of image D
+  65- 70  F6.4  mag   e_RmagD     1-sigma error of RmagD
+      72  A1    ---     Band      [R] Band
+--------------------------------------------------------------------------------
+
+Acknowledgements:
+    Christian Sorgenfrei, c.sorgenfrei(at)stud.uni-heidelberg.de
+
+================================================================================
+(End)                                        Patricia Vannier [CDS]  12-Sep-2025

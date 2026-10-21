@@ -1,0 +1,241 @@
+{
+  "status": "PRESPECIFIED_CALIBRATION_INADEQUATE_DIAGNOSTIC_BEFORE_QUASAR_OPENING",
+  "created_utc": "2026-10-21T13:39:26.203954+00:00",
+  "chronology": "Physical predictions frozen at fc3a449 before native acquisition. Original field EPSF failed too few training stars; independent LMC STDPSF subsequently failed all four field-star known-ERR fits. Mean-response diagnostics failed. Quasar target values still unused at this diagnostic freeze. This is an explicit pretarget diagnostic amendment, not a successful execution of the original precision-validation protocol.",
+  "primary_observation": {
+    "telescope": "JWST",
+    "instrument": "NIRCam",
+    "filter": "F115W",
+    "program": 1198,
+    "observation": 7,
+    "date": "2022-10-12",
+    "detector": "NRCB3",
+    "products": [
+      "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "jw01198007001_02101_00004_nrcb3_cal.fits"
+    ],
+    "exposure_time_total_s": 1803.776,
+    "calibration_level": "native stage2 CAL, SCI/ERR/DQ and embedded official nonlinear GWCS",
+    "download_uri_prefix": "mast:JWST/product/"
+  },
+  "reserved_unopened": [
+    "JWSTF150W",
+    "JWSTF277W",
+    "JWSTF356W",
+    "HSTF555W",
+    "HSTF275W",
+    "LCO V photometry"
+  ],
+  "used_for_development": [
+    "GaiaDR3quasarrows",
+    "Courbin2011NIC2andcomparisonastrometry",
+    "oldCOSMOGRAIL R plus25pre2019LCO R developmentlikelihood",
+    "consumedHSTF814W/F160Wcentralpixels",
+    "historicalG1G22positionandredshift"
+  ],
+  "not_fresh_targets": [
+    "oldLCO R primary/secondary",
+    "GaiaDR2orEDR3copiesofsharedphotons",
+    "alternativeprocessedoldHSTpixels",
+    "publishedFadelyKeetonquasarastrometryandfluxes"
+  ],
+  "new_geometry": "Exact full two-plane arrival/ray equations; original spherical localtwoPlummer totalmassR1field; positive rearPlummerG1 plus quadraticremainder atz=.7821. G1center follows foregrounddeflected observedray. No added empiricalBHSMresponseamplitude.",
+  "physical_inputs": "Fixed G1direction(-2.585,-3.637)arcsec east/north; G1regularizationa=.2kpc; localnuclearM=1e8Msun/a=.03kpc. Quadraticremainderkappa anchored to old.25625719126715585 to remove mass-sheet coordinate, not measuredenvironmental convergence. Exact olddevelopmentlightlikelihood, Gaiafullcommon-Acovariance, NIC2lenslight/3masmasscenterprior in objective.",
+  "comparators": [
+    "old_frozen_conventional",
+    "old_frozen_R1",
+    "revised_G1_conventional",
+    "revised_G1_R1"
+  ],
+  "source_constraints": [
+    "localTOTALmassconsumedonce",
+    "matchlocalR1projectioncoefficientsanddistances",
+    "noWickorGaussianquantumstateclosure",
+    "exclusive2pt/inclusive4pt/matchedoccupationdistinctionsunchanged",
+    "physicalguard2e-10unchanged",
+    "physical_admission=false"
+  ],
+  "field_psf_calibration": {
+    "protocol_path": "preregistration/he0435_standard_psf_calibration_20261021.json",
+    "protocol_sha256": "843ae918c8d2c2d66c0eca564def3e4a7a9b048b0ab8cdc0aef7dc658c1909b8",
+    "manifest": {
+      "path": "artifacts/strong_lensing_geometry_20261021/standard_psf/field_psf_calibration.json",
+      "sha256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7"
+    },
+    "adequacy_pass": false,
+    "prior_failures_preserved": true,
+    "not_used": "Exploratory jitter/dilation/halo corrections were inadequate and are not transferred."
+  },
+  "target_measurement": {
+    "method": "Fixed spatial LMC pixel-integrated ePSF separately per A/B/C/D/exposure; freecentroids/fluxes and quadratic smooth background, fixed17x17stamps; field-translated NIC2 association guesses; no fitted target scale/shear/affine physical geometry, no image exclusions. Unchanged native ERR and fixed masks.",
+    "DQ": "samefixedmaskasfieldcalibration; allqualitydiagnosticsretained",
+    "pixel_gate": "KnownERRchi2p>=.001 for everypoint/exposurefit andoptimizerinterior; formalJTWJcovariancewithoutchi2rescaling. Failureblocksconditionalgeometryvalidation.",
+    "exposure_gate": "InverseformalCovweighted5DmeanandfixedsamepointconfigurationconsistencyQ with5*(nexposure-1)degrees; p>=.001. No scatterrescaling.",
+    "intrinsic_q": "u=(B-A)/|B-A|,v=J*u; q=(|B-A|,(C-A).u,(C-A).v,(D-A).u,(D-A).v). Retainscalibratedangularscaleandchirality; quotients only translation/rotation.",
+    "covariance": "Full8centroidpixelcov->officialGWCSexactlocalJacobian->5DintrinsicJacobian; commonA/commonABoffdiagonals retained. Formal conditionalGaussianmeasurementstatistic; no completeastrophysicalposterior claimed.",
+    "primary_geometry_statistic": "Q=(qobs-qpred)^T Cov(qobs)^-1(qobs-qpred) for eachfrozenpointprediction,5coordinates,0physicaltargetparametersfit. Reportrawqresidualvector/RMSandnormalizeddensity. Primary conditionalpointtest alpha=.05, Q<=chi2.ppf(.95,5).",
+    "improvement_requirement": "A conditionalgeometrysuccessalso requires revisedrawqRMS at least25percentbelowmatchingoldfrozenmodel on sameobservations andsamecovariance; uncertaintywidth cannotestablishimprovement.",
+    "prohibited": [
+      "residualtunederrorfloor",
+      "chi2ERRrescale",
+      "targetfittedscale/shear/affinemap",
+      "switchprimaryafterfailure",
+      "targetrefitreportedfreshsuccess",
+      "excludingdisagreeingimages",
+      "claimingBHSMdetectionfromequalgeometry"
+    ]
+  },
+  "independence": "Different2022telescope/photonsfromdevelopmentHST/Gaia. Stage2calGWCSmustretaininstrumentdistortionandinspecttweakreg/calibrationrefs; completeindependenceofallsharedastrometricreferencecalibrationnotassumed. Ifquasaralignmentleakagenotexcludedlabelthatlimitation.",
+  "exposure_lock": "Persistentmarkerbeforetargetnetworkretrieval; sourcepredictionfreezecommittedandhashverified. Separatefieldcalibrationstageandtargetopeningmarker. Firstoutcomeincludingfailureretained; no repeatfreshclaim.",
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "target_pixels_opened": false,
+  "source_gaia_coordinate_map": "Exact gnomonic about A with analytic6x8alpha-star/decJac including movingAorigin; fixed originalGaiarowcov propagated. The3microasmapcorrectionisnotdominantcause.",
+  "psf_model": "field_empirical",
+  "primary_filter": "F115W",
+  "expected_target_exposures": 4,
+  "planned_point_fits": 16,
+  "pixel_familywise_alpha": 0.016,
+  "exposure_consistency_alpha": 0.001,
+  "geometry_alpha": 0.05,
+  "required_raw_q_rms_reduction_fraction": 0.25,
+  "stamp_radius_pixels": 8,
+  "centroid_bound_pixels": 5.0,
+  "quadrature_order": 7,
+  "anchor_radec_deg": [
+    69.56230463465737,
+    -12.28731414961521
+  ],
+  "tangent_origin_radec_deg": [
+    69.56230463465737,
+    -12.28731414961521
+  ],
+  "association_reference_relative_arcsec": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      -1.4743,
+      0.5518
+    ],
+    [
+      -2.4664,
+      -0.6022
+    ],
+    [
+      -0.9378,
+      -1.616
+    ]
+  ],
+  "prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "psf_calibration_binding_status": "Fixed independent LMC spatially sampled A/B/C/D grids, with failed field diagnostics retained; forced-false validation diagnostic only.",
+  "source_sha256": {
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "scripts/fit_he0435_geometry_revision.py": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+    "code/strong_lensing_pixel_geometry.py": "41fa74373d8e7caf658af50fa7fd55d714f0c2d36af3e9e6660a75a6ded15f0a",
+    "scripts/run_he0435_pixel_geometry.py": "cde1043c959ffe3b31b8c409557d775a2c40fdc50c6c1ed60a3b69046a5e3809",
+    "tests/test_strong_lensing_pixel_geometry.py": "54db41681bc972b84389032a8375bb22bcfd943b2c0ec847a0823b07816a60b4",
+    "scripts/acquire_he0435_jwst_geometry.py": "275ebe6752c91ef7c2e64e8576a851935407b1324513d281c357c1cae78d5cfe"
+  },
+  "amends_protocol": {
+    "path": "preregistration/he0435_geometry_jwst_20261021.json",
+    "sha256": "7e882eb6c68dc379e3eca32702ab048c753335d5bdfbfd529cb046b68e4ac706",
+    "original_validation_status": "BLOCKED_BY_FIELD_CALIBRATION; never reclassified as passed"
+  },
+  "allow_inadequate_field_calibration_for_diagnostic": true,
+  "background_degree": 2,
+  "background_development_evidence": {
+    "path": "artifacts/strong_lensing_geometry_20261021/background_development_diagnostic.json",
+    "sha256": "32f9cb94e416e764829b406757060df663d6bffe755af9cc92fbbfe6f69815eb",
+    "scope": "Consumed HST and independent synthetic curved background; no JWST target tuning"
+  },
+  "psf_calibration": {
+    "path": "artifacts/strong_lensing_geometry_20261021/standard_psf/field_psf_calibration.json",
+    "sha256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7"
+  },
+  "reference_guesses_xy_pixel_by_exposure": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": [
+      [
+        768.8939248353055,
+        1241.2785108475468
+      ],
+      [
+        766.0193921954675,
+        1292.148849708665
+      ],
+      [
+        811.358028430803,
+        1311.7053270422352
+      ],
+      [
+        828.0137852419596,
+        1254.6943869409129
+      ]
+    ],
+    "jw01198007001_02101_00002_nrcb3_cal.fits": [
+      [
+        960.9835322217169,
+        1052.4593155984105
+      ],
+      [
+        958.1681627787779,
+        1103.31593295863
+      ],
+      [
+        1003.5219713107572,
+        1122.7913540990264
+      ],
+      [
+        1020.108663543788,
+        1065.7740499454014
+      ]
+    ],
+    "jw01198007001_02101_00003_nrcb3_cal.fits": [
+      [
+        1152.9283656043544,
+        863.3659587993607
+      ],
+      [
+        1150.176061052123,
+        914.2018594969156
+      ],
+      [
+        1195.5418345477792,
+        933.5968042604247
+      ],
+      [
+        1212.05371539361,
+        876.5819656696431
+      ]
+    ],
+    "jw01198007001_02101_00004_nrcb3_cal.fits": [
+      [
+        1344.5792093382772,
+        674.0521871361143
+      ],
+      [
+        1341.8924030830003,
+        724.8604476401048
+      ],
+      [
+        1387.2667799233307,
+        744.1763823576551
+      ],
+      [
+        1403.6998965666587,
+        687.1729868416029
+      ]
+    ]
+  },
+  "native_sha256": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+    "jw01198007001_02101_00002_nrcb3_cal.fits": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+    "jw01198007001_02101_00003_nrcb3_cal.fits": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+    "jw01198007001_02101_00004_nrcb3_cal.fits": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed"
+  },
+  "diagnostic_interpretation": "All conditional_geometry_validation_pass values must be false even if target fits/consistency/formal Q pass and raw RMS improves. Retain raw q residuals and original pixel/exposure statistics; do not call formal known-ERR covariance a calibrated precision result or reject physical lens models from inadequate instrumental likelihood. These target values become consumed once the marker is made.",
+  "calibration_adequacy_pass": false
+}

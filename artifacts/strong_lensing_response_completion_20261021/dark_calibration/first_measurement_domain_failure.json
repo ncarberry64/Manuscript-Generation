@@ -1,0 +1,6 @@
+{
+  "status": "new calibration first pass stopped before covariance application",
+  "exception": "ValueError Matching finite calibration integrations required",
+  "cause": "actual superbias SCI contains NaN on DNU detector pixels; these are not physical zero ADC data",
+  "resolution": "preserve NaN/DNU values and explicitly exclude their locations from calibration spatial ensembles; no interpolation, no arbitrary replacement, reference controls remain finite"
+}

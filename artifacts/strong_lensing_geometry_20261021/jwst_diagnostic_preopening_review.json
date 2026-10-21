@@ -1,0 +1,102 @@
+{
+  "status": "PASS_PREOPENING_DIAGNOSTIC_ONLY_WITH_FAILED_CALIBRATION_EXPLICIT",
+  "review_role": "Independent read-only source/protocol/evidence review before any quasar target pixel access",
+  "protocol_path": "preregistration/he0435_geometry_jwst_diagnostic_20261021.json",
+  "protocol_sha256": "f645ef20011587c8fd56e2185d439ba1460481354d5e0d9dcf67fc1e9416d25b",
+  "source_hash_checks": {
+    "code/strong_lensing_geometry_revision.py": true,
+    "scripts/fit_he0435_geometry_revision.py": true,
+    "code/strong_lensing_pixel_geometry.py": true,
+    "scripts/run_he0435_pixel_geometry.py": true,
+    "tests/test_strong_lensing_pixel_geometry.py": true,
+    "scripts/acquire_he0435_jwst_geometry.py": true
+  },
+  "prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "physical_predictions_unchanged": true,
+  "native_files": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": {
+      "bytes": 117573120,
+      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+      "matches_protocol_and_field_calibration": true
+    },
+    "jw01198007001_02101_00002_nrcb3_cal.fits": {
+      "bytes": 117573120,
+      "sha256": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+      "matches_protocol_and_field_calibration": true
+    },
+    "jw01198007001_02101_00003_nrcb3_cal.fits": {
+      "bytes": 117573120,
+      "sha256": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+      "matches_protocol_and_field_calibration": true
+    },
+    "jw01198007001_02101_00004_nrcb3_cal.fits": {
+      "bytes": 117573120,
+      "sha256": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
+      "matches_protocol_and_field_calibration": true
+    }
+  },
+  "PSF_grid_count": 16,
+  "PSF_grid_hash_checks": {
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_A_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_B_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_C_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_D_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_A_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_B_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_C_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_D_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_A_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_B_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_C_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_D_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_A_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_B_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_C_standard_epsf.fits": true,
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_D_standard_epsf.fits": true
+  },
+  "calibration_manifest_sha256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7",
+  "field_calibration_adequacy_pass": false,
+  "field_known_ERR_chi2_dof": [
+    [
+      13608.66680405211,
+      265
+    ],
+    [
+      14089.97086347977,
+      267
+    ],
+    [
+      12962.997153466522,
+      265
+    ],
+    [
+      11381.03901420627,
+      262
+    ]
+  ],
+  "checks": {
+    "default_protocol_blocks_failed_field_calibration_before_target_marker": true,
+    "diagnostic_exception_requires_literal_protocol_boolean_True": true,
+    "native_exact_four_names_and_hashes_checked_before_numerical_exposure": true,
+    "all16_perlabel_PSFgrids_and_manifest_frozen_and_hashchecked": true,
+    "reference_guesses_equal_field_only_registration_output": true,
+    "original_fixed_independent_library_PSFS_only_no_fitted_halo_transferred": true,
+    "per_exposure_every_model_conditional_geometry_validation_pass_false": true,
+    "aggregate_every_model_conditional_geometry_validation_pass_false": true,
+    "synthetic_perfect_geometry_and_all_other_gates_cannot_override_failed_calibration": true,
+    "original_physical_parameter_source_and_prediction_hashes_preserved": true,
+    "pixel_errors_not_rescaled_no_covariance_floor": true,
+    "persistent_marker_precedes_quasar_numerical_arrays": true,
+    "all_existing_quasar_target_exposure_markers_absent": true
+  },
+  "interpretation": "Authorizes a concrete first numerical diagnostic application under a known inadequate instrumental response. Formal q residuals/Q/relative RMS may be reported descriptively. They cannot validate either physical lens geometry or supply a calibrated physical-model rejection. Original blocked validation remains blocked. Quasar targets become consumed upon the new marker; no later retuning may be called the same unused test.",
+  "required_final_step": "Root must commit this exact reviewed protocol, current helper/runner/tests, calibration manifest and sixteen PSF grids before invoking the runner with that commit. The runner independently enforces committed bytes.",
+  "quasar_SCI_values_opened_during_review": false,
+  "focused_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_pixel_geometry.py -q",
+    "passed": 15,
+    "failed": 0,
+    "seconds": 4.59,
+    "test_source_sha256": "54db41681bc972b84389032a8375bb22bcfd943b2c0ec847a0823b07816a60b4"
+  }
+}

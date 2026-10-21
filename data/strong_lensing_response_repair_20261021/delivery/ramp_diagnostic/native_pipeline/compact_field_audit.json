@@ -1,0 +1,133 @@
+{
+  "status": "SAVED_FIELD_ARITHMETIC_AND_SUPPORT_AUDIT_PASS",
+  "not_an_independent_observation": true,
+  "field_stamp_sha256": "3d1432dfaa44fabde5d0fa0d9b9fea0829836b155854d056483b1ce96439bce5",
+  "group_exclusions": "GROUPDQ DO_NOT_USE|SATURATED; JUMP starts a segment",
+  "group_support_by_radius": [
+    {
+      "radius_pixel": [
+        0,
+        1
+      ],
+      "pixels": 3,
+      "count_of_pixels_by_usable_groups": {
+        "2": 3
+      }
+    },
+    {
+      "radius_pixel": [
+        1,
+        2
+      ],
+      "pixels": 9,
+      "count_of_pixels_by_usable_groups": {
+        "2": 6,
+        "5": 2,
+        "7": 1
+      }
+    },
+    {
+      "radius_pixel": [
+        2,
+        3
+      ],
+      "pixels": 16,
+      "count_of_pixels_by_usable_groups": {
+        "5": 1,
+        "7": 5,
+        "9": 10
+      }
+    },
+    {
+      "radius_pixel": [
+        3,
+        4
+      ],
+      "pixels": 21,
+      "count_of_pixels_by_usable_groups": {
+        "9": 21
+      }
+    },
+    {
+      "radius_pixel": [
+        4,
+        6
+      ],
+      "pixels": 62,
+      "count_of_pixels_by_usable_groups": {
+        "9": 62
+      }
+    },
+    {
+      "radius_pixel": [
+        6,
+        8
+      ],
+      "pixels": 90,
+      "count_of_pixels_by_usable_groups": {
+        "9": 90
+      }
+    },
+    {
+      "radius_pixel": [
+        8,
+        12
+      ],
+      "pixels": 88,
+      "count_of_pixels_by_usable_groups": {
+        "9": 88
+      }
+    }
+  ],
+  "core_groupdq_sequences": [
+    [
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    [
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  ],
+  "matched_pixels": 289,
+  "diagnostics": {
+    "full": {
+      "normalized_residual_L2": 0.07665300928607109,
+      "chi2_per_dof": 34.86343742205507,
+      "p_value": 0.0
+    },
+    "early": {
+      "normalized_residual_L2": 0.051787293425787806,
+      "chi2_per_dof": 1.2064448889942927,
+      "p_value": 0.009846530769988048
+    }
+  },
+  "normalized_L2_reduction_fraction": 0.3243932115891728,
+  "early_p_passes_0_01": false,
+  "precision_validation": false
+}

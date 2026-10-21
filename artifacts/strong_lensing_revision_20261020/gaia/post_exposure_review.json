@@ -1,0 +1,35 @@
+{
+  "status": "PASS_POST_EXPOSURE_READ_ONLY_INTEGRITY_AND_INTERPRETATION_REVIEW",
+  "review_activity": "Read saved raw rows, protocol, predictions, score, marker and git objects; hash checks only. No network, refit, rescore, source mutation or target-based filtering.",
+  "checks": {
+    "protocol_matches_marker_and_score": true,
+    "prediction_matches_marker_and_score": true,
+    "target_matches_marker_and_score": true,
+    "score_matches_marker": true,
+    "frozen_source_files_unchanged": true,
+    "frozen_macro_inputs_unchanged": true,
+    "source_archive_commit_precedes_query": true,
+    "protocol_and_predictions_exactly_committed_before_query": true,
+    "all_four_sources_retained": true,
+    "all24_assignments_no_continuous_fit": true,
+    "physical_admission_false_and_guard_unchanged": true
+  },
+  "freeze_commit": "3032a852fdb497fcb7711991d236897637d55caf",
+  "input_sha256": {
+    "artifacts/strong_lensing_revision_20261020/gaia/gaia_protocol.json": "748b3b40369b220588de22c61d18448f8a94c99885a16f09d2c257ea18c1da6e",
+    "artifacts/strong_lensing_revision_20261020/gaia/frozen_astrometry_predictions.json": "70f61abfa8068d48cccb56f3b7990c3c203621d8116788132898e0cf3a68d0e6",
+    "artifacts/strong_lensing_revision_20261020/gaia/gaia_astrometry_score.json": "ca366d713090649c76a8638da5826bc95ecbd44115b636d4b0b7616afb35a08b",
+    "artifacts/strong_lensing_revision_20261020/gaia/query_started.json": "56dbaf8870a7772c4e6300d5e32980fab9b8ff00880ce33a1edc18f2b1f0e64e"
+  },
+  "findings": {
+    "both_restricted_models_fail_catalogue_error_only_astrometry": true,
+    "conventional_coordinate_RMS_mas": 3.2556013063665485,
+    "conventional_formal_chi2_six_coordinates": 3465.9052654742304,
+    "floor_controls_not_a_refit_or_validated_cure": true,
+    "no_quality_based_image_exclusion": true,
+    "posterior_and_between_source_covariance_not_complete": true,
+    "Gaia_EDR3_alignment_of_HST_global_frame_caveat_retained": true,
+    "no_empirical_BHSM_or_unique_state_identification": true
+  },
+  "qualification": "Repository/test integrity passes; the physical point-model adequacy test fails at the published catalogue-error scale."
+}

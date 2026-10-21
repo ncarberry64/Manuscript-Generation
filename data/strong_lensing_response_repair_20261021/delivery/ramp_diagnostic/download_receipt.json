@@ -1,0 +1,29 @@
+{
+  "purpose": "Development diagnostic of existing F115W photons; no unused band acquired.",
+  "products": [
+    {
+      "filename": "jwst_nircam_linearity_0054.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_linearity_0054.fits",
+      "bytes": 151015680,
+      "sha256": "e21ec1577441b7c581903dcc6b3630c9f02d1085b280245076b5271b73ff69c0"
+    },
+    {
+      "filename": "jwst_nircam_superbias_0180.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_superbias_0180.fits",
+      "bytes": 50359680,
+      "sha256": "ecd533f8ae007d38b1e6c58adbd5c5317eebf231e1d5b69baf57da0945773a6e"
+    },
+    {
+      "filename": "jwst_nircam_saturation_0100.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_saturation_0100.fits",
+      "bytes": 33580800,
+      "sha256": "1734f8b4ba30d44b6e8473e614ba9f831fd0ad2a6b484bbf9eb4a5d3c893a849"
+    },
+    {
+      "filename": "jw01198007001_02101_00001_nrcb3_uncal.fits",
+      "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01198007001_02101_00001_nrcb3_uncal.fits",
+      "bytes": 83946240,
+      "sha256": "2ce9fa2e9d10a1d0dc802c2cfcc68ca7cff5b5b62f707b94d6f7aa8d068302c8"
+    }
+  ]
+}

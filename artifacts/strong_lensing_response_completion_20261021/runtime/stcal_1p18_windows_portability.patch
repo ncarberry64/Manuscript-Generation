@@ -1,0 +1,91 @@
+--- a/src/stcal/ramp_fitting/src/slope_fitter.c
++++ b/src/stcal/ramp_fitting/src/slope_fitter.c
+@@ -7,9 +7,21 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++#ifndef _WIN32
+ #include <sys/resource.h>
++#endif
+ #include <time.h>
++#ifdef _WIN32
++#include <process.h>
++#define getpid _getpid
++typedef int pid_t;
++typedef Py_ssize_t ssize_t;
++#ifndef PATH_MAX
++#define PATH_MAX 4096
++#endif
++#else
+ #include <unistd.h>
++#endif
+ 
+ #include <numpy/arrayobject.h>
+ #include <numpy/npy_math.h>
+@@ -787,7 +799,7 @@
+ {
+     /* Pixel list */
+     // JP-3669 - (1804, 173)
+-    const int len = 1;
++    enum { len = 1 };
+     npy_intp rows[len];
+     npy_intp cols[len];
+     npy_intp row;
+@@ -810,6 +822,10 @@
+ static inline long long
+ print_pid_info(long long prev, int line, char *label)
+ {
++#ifdef _WIN32
++    /* POSIX peak-RSS instrumentation is unavailable; numerical code is unchanged. */
++    return -1;
++#else
+     struct rusage res_usage;
+     long long now_time = (long long) time(NULL);
+     long long mem_usage = -1;
+@@ -831,6 +847,7 @@
+     }
+ 
+     return mem_usage;
++#endif
+ }
+ 
+ /* ------------------------------------------------------------------------- */
+@@ -1402,9 +1419,9 @@
+     struct opt_res_product *opt_res, /* The optional results product */
+     struct ramp_data *rd)            /* The ramp fitting data */
+ {
+-    const npy_intp nd = 4;
++    enum { nd = 4 };
+     npy_intp dims[nd];
+-    const npy_intp pnd = 3;
++    enum { pnd = 3 };
+     npy_intp pdims[pnd];
+     const int fortran = 0; /* Want C order */
+     const char *msg = "Couldn't allocate memory for opt_res products.";
+@@ -1545,7 +1562,7 @@
+     struct rate_product *rate, /* The rate product */
+     struct ramp_data *rd)      /* The ramp fitting data */
+ {
+-    const npy_intp nd = 2;
++    enum { nd = 2 };
+     npy_intp dims[nd];
+     const int fortran = 0;
+     const char *msg = "Couldn't allocate memory for rate products.";
+@@ -1603,7 +1620,7 @@
+     struct rateint_product *rateint, /* The rateints product */
+     struct ramp_data *rd)            /* The ramp fitting data */
+ {
+-    const npy_intp nd = 3;
++    enum { nd = 3 };
+     npy_intp dims[nd];
+     const int fortran = 0;
+     const char *msg = "Couldn't allocate memory for rateint products.";
+@@ -3474,7 +3491,7 @@
+ {
+     void *ptr = NULL;
+     npy_intp integ, crnum, segnum, row, col, idx;
+-    const int msg_size = 1024;
++    enum { msg_size = 1024 };
+     char msg[msg_size];
+     struct simple_ll_node *current;
+     struct simple_ll_node *next;

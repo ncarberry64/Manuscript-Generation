@@ -1,0 +1,439 @@
+{
+  "status": "CONSUMED_GAIA_POST_FAILURE_FRAME_DIAGNOSIS_NOT_VALIDATION",
+  "no_new_observations_opened": true,
+  "original_gaia_coordinate_rms_mas": 3.2556013063665485,
+  "gnomonic_minus_smallangle_mas": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      -0.0008617279734224326,
+      -0.0011506571495623064
+    ],
+    [
+      0.0015704353346635003,
+      -0.0032117621360239212
+    ],
+    [
+      0.0015989776804836708,
+      -0.00046473593329210416
+    ]
+  ],
+  "maximum_gnomonic_correction_mas": 0.0032117621360239212,
+  "spherical_minus_smallangle_mas": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      -0.0008617027655866139,
+      -0.0011506726314003402
+    ],
+    [
+      0.00157055288374508,
+      -0.0032117173049961423
+    ],
+    [
+      0.001598984149642213,
+      -0.00046468629033569187
+    ]
+  ],
+  "gnomonic_coordinate_rms_mas": 3.2559845570627295,
+  "gaia_minus_NIC2_mas": [
+    [
+      -1.980033199137754,
+      0.989526895480819
+    ],
+    [
+      -0.00047330347197060973,
+      -0.8558599306346393
+    ],
+    [
+      -0.34911166112749914,
+      1.8906593752636702
+    ]
+  ],
+  "gaia_minus_NIC2_coordinate_rms_mas": 1.246907054585954,
+  "model_minus_NIC2_mas": [
+    [
+      -2.602989028006375,
+      -0.7118350803153595
+    ],
+    [
+      -1.9151703150761534,
+      4.170626349181306
+    ],
+    [
+      5.222522340464164,
+      1.3108333293061492
+    ]
+  ],
+  "model_minus_NIC2_coordinate_rms_mas": 3.091312724275092,
+  "residual_decomposition_identity_max_abs_mas": 0.0,
+  "raw_RA_no_cos_mistake_max_abs_coordinate_change_mas": 57.823102541679994,
+  "double_cos_mistake_max_abs_coordinate_change_mas": 56.49853236593295,
+  "post_consumption_similarity_diagnostic": {
+    "scale": 1.0002060300311093,
+    "rotation_deg": 0.005347873037891536,
+    "residual_mas": [
+      [
+        0.9786838235286144,
+        1.7257032264399452
+      ],
+      [
+        2.3674029472919855,
+        -4.672841825649643
+      ],
+      [
+        -5.5302419942526715,
+        0.999556313523664
+      ]
+    ],
+    "coordinate_rms_mas": 3.2393057495259194
+  },
+  "post_consumption_linear_frame_diagnostic": {
+    "matrix": [
+      [
+        0.9992361619432667,
+        0.0009549977559619331
+      ],
+      [
+        0.0030137904457729074,
+        1.0002866312351208
+      ]
+    ],
+    "residual_mas": [
+      [
+        -2.16602312646752,
+        2.953841934720036
+      ],
+      [
+        1.831639161105958,
+        -2.4978369331501993
+      ],
+      [
+        -1.4176373864752678,
+        1.933255794562161
+      ]
+    ],
+    "coordinate_rms_mas": 2.1892960606684158
+  },
+  "common_A_covariance": {
+    "rank": 6,
+    "minimum_eigenvalue_mas2": 0.010710231070162972,
+    "chi2_retained": 3465.90526547423,
+    "chi2_if_discarding_shared_A_blocks": 2436.589986130371
+  },
+  "coordinate_origin_note": "Changing common image or light-center origin algebraically cancels from pairwise offsets. Moving physical mass center is a model nuisance and changes lens roots; it is not a coordinate correction.",
+  "NIC2_primary_source": "https://arxiv.org/html/1009.1473; Table 2; NIC2 distortion and unequal x/y plate scale already corrected; 2mas systematic explicitly required; delta-alpha columns are east/north angular offsets and not raw-degree RA differences. No NIC2 PA enters the circular model.",
+  "original_frozen_root_recompute": {
+    "max_difference_arcsec": 0.0,
+    "max_lens_residual_rad": 2.795208725939191e-20,
+    "mass_center_light_offset_mas": [
+      -1.1291968484621835,
+      1.0014758182217534
+    ]
+  },
+  "Gaia_anchor_at_predicted_A": {
+    "lens_equation_residual_mas": [
+      [
+        1.7471308675031525e-13,
+        1.7471308675031525e-13
+      ],
+      [
+        -0.6164863762652533,
+        1.64936492439687
+      ],
+      [
+        2.4979055178713514,
+        -0.7133553264841224
+      ],
+      [
+        0.8721711879325706,
+        2.2910825592117865
+      ]
+    ],
+    "implied_source_angle_mas": [
+      [
+        -7.907461015949502,
+        46.75413252137301
+      ],
+      [
+        -8.523947392214929,
+        48.40349744576971
+      ],
+      [
+        -5.409555498078325,
+        46.04077719488871
+      ],
+      [
+        -7.035289828017106,
+        49.045215080584626
+      ]
+    ],
+    "implied_source_coordinate_rms_about_mean_mas": 1.1916120333813822
+  },
+  "NIC2_absolute_light_frame": {
+    "lens_equation_residual_mas": [
+      [
+        -1.483119108164985,
+        -0.4992425628050325
+      ],
+      [
+        -0.4644090344603615,
+        0.9468144795461665
+      ],
+      [
+        0.44343605780398054,
+        -0.5730535788847388
+      ],
+      [
+        1.5238687522193428,
+        1.153666850551475
+      ]
+    ],
+    "implied_source_angle_mas": [
+      [
+        -9.390580124114662,
+        46.2548899585678
+      ],
+      [
+        -8.371870050410038,
+        47.700947000919
+      ],
+      [
+        -7.464024958145696,
+        46.1810789424881
+      ],
+      [
+        -6.383592263730334,
+        47.90779937192431
+      ]
+    ],
+    "implied_source_coordinate_rms_about_mean_mas": 0.9666164556465433
+  },
+  "post_consumption_source_only_diagnostic": {
+    "indices": [
+      2,
+      3
+    ],
+    "changes_mas": [
+      0.09253185129470473,
+      -0.3126558599732751
+    ],
+    "remaining_rms_mas": 3.033381634957558,
+    "residual_observed_minus_model_mas": [
+      1.6177399165018258,
+      0.03627892988444792,
+      2.8151606212869495,
+      -4.779830855293987,
+      -4.54762018022159,
+      -1.0664261011275045
+    ],
+    "success": true,
+    "nfev": 10
+  },
+  "post_consumption_mass_center_only_diagnostic": {
+    "indices": [
+      7,
+      8
+    ],
+    "changes_mas": [
+      -0.11235943781388673,
+      0.3515033248907705
+    ],
+    "remaining_rms_mas": 3.033381634944409,
+    "residual_observed_minus_model_mas": [
+      1.6177481896029189,
+      0.03628068782079996,
+      2.8151608167927833,
+      -4.779833338527162,
+      -4.547614682095968,
+      -1.0664252907353067
+    ],
+    "success": true,
+    "nfev": 6
+  },
+  "post_consumption_source_and_mass_center_diagnostic": {
+    "indices": [
+      2,
+      3,
+      7,
+      8
+    ],
+    "changes_mas": [
+      -46.606599507338835,
+      -4.601006300746842,
+      -76.58478104301652,
+      -10.704623567618556
+    ],
+    "remaining_rms_mas": 3.033381634972853,
+    "residual_observed_minus_model_mas": [
+      1.6177238123198379,
+      0.036243518808709574,
+      2.8151751267193603,
+      -4.779816745561827,
+      -4.547624700497188,
+      -1.066457407924215
+    ],
+    "success": true,
+    "nfev": 21,
+    "scope": "Unbounded post-consumption degeneracy diagnostic only: large co-shifts of source and center are unidentifiable from relative coordinates. This is neither a bounded physical fit nor an eligible prediction."
+  },
+  "flip_east_rms_mas": 2468.8848668488213,
+  "flip_north_rms_mas": 1476.839338744054,
+  "swap_axes_rms_mas": 1639.2106081486115,
+  "post_consumption_no_delay_NIC2_diagnostic": {
+    "scope": "Descriptive geometry-only refit to already consumed rows; never an independent prediction or validation. Uses inherited NIC2 2mas systematic and physical center3mas prior; no widening relative to old fit.",
+    "parameter_vector": [
+      11.705478175141796,
+      0.7740609329928614,
+      -0.007628461562024441,
+      0.03930742818872617,
+      0.25835254982907285,
+      0.12013867620811594,
+      0.06293029908390618,
+      -0.0010751866799511938,
+      0.000686848182196414
+    ],
+    "residual_observed_minus_model_mas": [
+      2.3222867893382126,
+      0.7661013516294668,
+      2.058875411147021,
+      -4.26216085009079,
+      -5.280059804554593,
+      -1.243846368342405,
+      1.553019923751453,
+      -0.3175811800073536
+    ],
+    "relative_coordinate_rms_mas": 3.104059052576358,
+    "chi2_astrometry": 12.784451616136927,
+    "chi2_center_prior": 0.18086520245899879,
+    "predicted_delays_days": [
+      5.89313515601097,
+      0.6611926959156911,
+      13.367482808869838
+    ],
+    "original_predicted_delays_days": [
+      6.1146311608356285,
+      0.6908914467259777,
+      13.848663316545128
+    ],
+    "success": true,
+    "message": "`ftol` termination condition is satisfied.",
+    "nfev": 30
+  },
+  "post_consumption_no_delay_Gaia_plus_consumed_NIC2_light_center_diagnostic": {
+    "scope": "Descriptive geometry-only refit to already consumed rows; never an independent prediction or validation. Uses inherited NIC2 2mas systematic and physical center3mas prior; no widening relative to old fit.",
+    "parameter_vector": [
+      11.833654908264212,
+      0.9051769627893929,
+      -0.005615544373047126,
+      0.028856088278380494,
+      0.26106519434948444,
+      0.08994376349138847,
+      0.047233177612047705,
+      -0.0010525549801984721,
+      0.0006696027377983507
+    ],
+    "residual_observed_minus_model_mas": [
+      2.2463848181861756,
+      0.739432057965006,
+      1.9988661297491994,
+      -4.11908289955365,
+      -5.121390583597063,
+      -1.2119749602672591,
+      1.5203101823533238,
+      -0.30963536959993654
+    ],
+    "relative_coordinate_rms_mas": 3.007015105600265,
+    "chi2_astrometry": 12.006387534032038,
+    "chi2_center_prior": 0.17291553475640586,
+    "predicted_delays_days": [
+      4.4413055112699595,
+      0.5143974071544548,
+      10.030181709734983
+    ],
+    "original_predicted_delays_days": [
+      6.1146311608356285,
+      0.6908914467259777,
+      13.848663316545128
+    ],
+    "success": true,
+    "message": "`xtol` termination condition is satisfied.",
+    "nfev": 124
+  },
+  "exact_gnomonic_full_reference_jacobian_covariance": {
+    "scope": "Independent high precision first-order covariance pushforward from all eight alpha-star/declination perturbations, including changing reference-A tangent frame; no between-source covariance invented.",
+    "jacobian_6_by_8": [
+      [
+        -1.000000583762789,
+        1.9181282225547873e-11,
+        1.0000000000536018,
+        -1.5588636863223301e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1.5588454149176344e-06,
+        -1.0000000000071825,
+        1.5588445050057757e-06,
+        1.0000000000315803,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -0.9999993633485603,
+        -3.4960119383870126e-11,
+        0.0,
+        0.0,
+        1.000000000143863,
+        -2.604371831727646e-06,
+        0.0,
+        0.0
+      ],
+      [
+        -2.6044051331979633e-06,
+        -1.000000000008548,
+        0.0,
+        0.0,
+        2.6044067916719743e-06,
+        1.000000000076647,
+        0.0,
+        0.0
+      ],
+      [
+        -0.9999982956169797,
+        -3.559212687493465e-11,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0000000000508147,
+        -9.906295213183753e-07
+      ],
+      [
+        -9.90663424942198e-07,
+        -1.0000000000612372,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        9.906651134653365e-07,
+        1.00000000007109
+      ]
+    ],
+    "maximum_absolute_covariance_change_mas2": 4.260779321680827e-08,
+    "max_diagonal_fractional_change": 8.679575009828966e-07,
+    "coordinate_rms_mas": 3.2559845597227897,
+    "chi2": 3467.545575532978,
+    "gaia_covariance_convention_source": "https://gea.esac.esa.int/archive/documentation/GDR3/Gaia_archive/chap_datamodel/sec_dm_main_source_catalogue/ssec_dm_gaia_source.html#ra_error"
+  },
+  "conclusion": "The Gaia failure is not produced by image association, RA*cos(delta), east/north parity, missing common-A covariance, tangent-plane curvature, a coordinate origin, or exact-root solver tolerance. The dominant discrepancy already exists in the development-data geometric fit; no-delay refits leave it. The restricted circular body plus uniform quadratic optical screen is inadequate at Gaia coordinate precision. A noncircular or spatially varying physical deflection/photocenter response must be derived and tested on unused data; this diagnosis alone does not select that response.",
+  "source_document_exposure_note": "The already adopted Courbin2011 source paper Table2 was read for coordinate/distortion conventions; its Morgan2005 ACS and Kochanek2006 NIC2 comparison columns are visible there. Those comparison columns are exposed/development, not eligible genuinely unused validation targets, whether or not they were already consumed in earlier source-identity controls. No new catalogue or unseen observation array was requested."
+}

@@ -1,0 +1,1208 @@
+{
+  "scope": "Read-only saved bounded/native application audit; no native or physical mean rerun",
+  "rows": 240,
+  "domain_failures": 0,
+  "storage_vs_readout": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 305307.9533938386
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.00012246847563801566,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 296386.3243148029
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.00028981307514186483,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 284194.91817830055
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 273131.56961116585
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 263407.9188733116
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 250120.5501400338
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 673802.824800458
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 661419.7388654049
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 644498.2519351544
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 619914.3120074595
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 606702.7854721503
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 588649.2344616505
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 280853.8599439742
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 270634.0220527629
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 256668.6135744227
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 237756.7464675033
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 226916.1449501028
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 212102.46297657513
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 114776.55783942217
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 108302.95759701084
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 99456.78286575573
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 93210.99987651073
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 86326.0220081674
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 76917.69975107629
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 299201.89635142375
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 289899.97160975495
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 277204.6908770874
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 277370.1891206886
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 266886.9300128233
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 252561.5564419254
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 326538.93840983167
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 316137.0484453695
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 301922.8658089318
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 296408.21132911916
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 285084.86010071595
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 269611.50064710283
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 668683.2614880225
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 654867.8317372858
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 635989.0469829043
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 631636.0965815609
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 614712.3913690752
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 591586.1481962139
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 287570.6076368601
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 276911.92220885755
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 262346.828571492
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 243858.78152298933
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 232555.14203156857
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 217108.71866654215
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 109169.96160350736
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 102897.59153984243
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 94326.39784784432
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 87717.00120940724
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 81055.95341823886
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 71953.63161160718
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 327500.2075971491
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 316905.10743902775
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 302426.90307295485
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 293000.64102900564
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 281297.7435704383
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 265305.73419330624
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 299860.8935897785
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 290125.45077666757
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 276821.96817255137
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 267402.74284133775
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 256830.7192661821
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 242384.0490507318
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 659296.6969304237
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 647163.1433974543
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 630582.6424946514
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 608579.7804001427
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 594331.3700822741
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 574860.917382907
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 281407.61875301175
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 271000.63668200927
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 256779.49568198435
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 237807.6200437006
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 226770.88521534164
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 211689.18707238918
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 94031.0121430096
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 88594.44615102498
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 81165.378722978
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 73628.1151154985
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 67859.94823917207
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 59977.748202671944
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 299307.1585865721
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 289967.61671844823
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 277205.13275565684
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 267131.91021255974
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 256986.8238654927
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 243123.56337222562
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 318327.00078586984
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 307604.2617978593
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "A",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 292951.6389707429
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 285818.0961396446
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 274111.5442656725
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "A",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 258660.8937039849
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 707701.3375777162
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 691460.4279873724
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "B",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 669267.2250321675
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 664153.931708759
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 646180.2402665704
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "B",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 621619.1909108197
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 238611.09754689108
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 230122.30726545124
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "C",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 218522.37534586366
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 216826.4308772178
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 207404.89327091782
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "C",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 194530.36213190883
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 105939.8338098987
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 99724.72085275047
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "D",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 91231.76899680743
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 84413.7205208925
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 77821.9710231834
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "D",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 68814.34533456393
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 291121.0058340207
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 282038.0003975807
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "FIELD",
+      "cap": 1.0,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 269626.0734686853
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 0.0,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 269599.8717051489
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 1e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 259389.25611190102
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "label": "FIELD",
+      "cap": 1.1,
+      "kappa": 2.3665e-07,
+      "max_group_difference_DN": 0.0,
+      "max_native_rate_difference_DN_s": 0.0,
+      "max_valid_SCI_difference": 0.0,
+      "storage_lost_charge_e": 245436.4499037278
+    }
+  ],
+  "physical_admission": false
+}

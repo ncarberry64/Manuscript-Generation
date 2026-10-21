@@ -1,0 +1,75 @@
+{
+  "baseline_preservation": {
+    "artifacts/strong_lensing_first_comparison_20261020/response_arrays.npz": {
+      "current_blob": "c467fe8f501cb7e9a01df00dde448795b483bfec",
+      "reviewed_blob": "c467fe8f501cb7e9a01df00dde448795b483bfec",
+      "unchanged": true
+    },
+    "artifacts/strong_lensing_first_comparison_20261020/results.json": {
+      "current_blob": "994535459ce69f70e3318d0a907af131a7d58341",
+      "reviewed_blob": "994535459ce69f70e3318d0a907af131a7d58341",
+      "unchanged": true
+    },
+    "artifacts/strong_lensing_first_comparison_20261020/verification.json": {
+      "current_blob": "6189857e45caa366d8115581472be2d56606a8fd",
+      "reviewed_blob": "6189857e45caa366d8115581472be2d56606a8fd",
+      "unchanged": true
+    }
+  },
+  "checkpoint_doc": "docs/STRONG_LENSING_LOCAL_CHECKPOINT_20261020.md",
+  "focused_tests": {
+    "errors": 0,
+    "failures": 0,
+    "final_hessian_supplementary_tests_passed": 6,
+    "junit": "focused_pytest.xml",
+    "passed": 75
+  },
+  "independent_review_sha256": "7ac41fe934fd2276bb0ac6f23c682bbaf2150660c40fb33d23b40acb6e4412fb",
+  "independent_review_status": "PASS_FOR_EXPLICIT_CONDITIONAL_EFFECTIVE_SECTOR",
+  "pdf": {
+    "all_pages_contact_sheet_visually_reviewed": true,
+    "contact_sheet": "pdf_contact_sheet.png",
+    "contact_sheet_sha256": "2d0aa8bdb932769b73e567ff287e7e9e433eb34b9f960c12a406e1664a1dd798",
+    "final_log_problem_flags": {
+      "Overfull": false,
+      "Underfull": false,
+      "undefined": false
+    },
+    "full_page_visual_checks": [
+      1,
+      5,
+      9,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "pages": 17,
+    "sha256": "df9742f8b874cb75f1f28357a7f2636879a0cfeb8a4f629b12f56334a4b19456",
+    "visual_result": "legible equations and tables; no clipping, collisions, unresolved references or layout defects"
+  },
+  "portable_LF_receipts_match_index": true,
+  "replay_numerical_results_byte_identical": true,
+  "reviewed_base_commit": "97bf5571335cf60e15e2e486e1197ca226198ed2",
+  "reviewed_hash_checks": {
+    "artifacts/strong_lensing_first_comparison_20261020/nuisance_factorization.json": true,
+    "artifacts/strong_lensing_local_family_20261020/input_manifest.json": true,
+    "artifacts/strong_lensing_local_family_20261020/profiles.npz": true,
+    "artifacts/strong_lensing_local_family_20261020/results.json": true,
+    "artifacts/strong_lensing_local_family_source_receipt_20261020.json": true,
+    "artifacts/strong_lensing_local_hessian_20261020.json": true,
+    "code/strong_lensing_comparison.py": true,
+    "code/strong_lensing_degeneracy.py": true,
+    "code/strong_lensing_local_family.py": true,
+    "code/strong_lensing_local_hessian.py": true,
+    "docs/STRONG_LENSING_LOCAL_FAMILY_20261020.md": true,
+    "docs/STRONG_LENSING_TRANSPORT_20261020.md": true,
+    "manuscript/sections/strong_lensing_20261020.tex": true,
+    "manuscript/sections/strong_lensing_local_family_20261020.tex": true,
+    "scripts/run_strong_lensing_local_family.py": true
+  },
+  "schema": "strong-lensing-local-publication-verification-v1",
+  "scientific_scope": "conditional effective Einstein-Path-B sector only; no full cap/sigma/global matching or separate exported-psi source completion"
+}

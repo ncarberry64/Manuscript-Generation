@@ -1,0 +1,5 @@
+{
+  "status": "all36exact206ranges603979776bytes completed; all4uint16subsets finalized; acquisition receipt serialization failed",
+  "exception": "TypeError _HeaderCommentaryCards is not JSON serializable in Astropy primary-header dict",
+  "resolution": "serialize header cards as exact text plus selected scalar keywords; recover reversible raw-range hashes from completed uint16 arrays; no raw pixels redownloaded"
+}

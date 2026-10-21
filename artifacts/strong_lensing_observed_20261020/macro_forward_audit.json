@@ -1,0 +1,332 @@
+{
+  "status": "FROZEN_TRAINING_PREDICTIONS_FORWARD_AUDIT_NO_TARGET_CONSUMPTION",
+  "fixed_body_R1_activation": {
+    "parameters": [
+      11.613944935269394,
+      0.7062594274802957,
+      -0.007034046784994176,
+      0.03668224930292636,
+      0.3844016821168951,
+      0.10198233611746468,
+      0.05344865964141931,
+      -0.0012083943208419372,
+      0.0014603043350662097
+    ],
+    "images_light_centered_arcsec": [
+      [
+        1.172396222543639,
+        0.5657844739128339
+      ],
+      [
+        -0.30434607051395046,
+        1.1169823743465241
+      ],
+      [
+        -1.2961079683720549,
+        -0.03253820363472245
+      ],
+      [
+        0.23992631896979155,
+        -1.0488653777198467
+      ]
+    ],
+    "relative_delays_days": [
+      6.0202376647899545,
+      0.6727069916557493,
+      13.611759480140327
+    ],
+    "image_change_microarcsec": [
+      [
+        19.88225341698069,
+        4.9668058133001125
+      ],
+      [
+        -3.871126662446933,
+        16.240614201024073
+      ],
+      [
+        -19.912414952694135,
+        -4.980456840115998
+      ],
+      [
+        3.898636986604531,
+        -16.0559176562991
+      ]
+    ],
+    "delay_change_seconds": [
+      19.29034419868003,
+      0.9385605818295062,
+      29.036694449393963
+    ],
+    "original_source_checks": {
+      "max_integrated_scalar_equation_relative_residual": 1.314234813415146e-15,
+      "max_independent_alpha_derivative_relative_error": 1.411605601520727e-12,
+      "max_independent_potential_derivative_relative_error": 3.566066143630193e-09,
+      "finite_matching_tail": [
+        {
+          "impact_Mpc": 0.007741757294441979,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.849014935692786e-06
+        },
+        {
+          "impact_Mpc": 0.006872267582198213,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.62149377422616e-06
+        },
+        {
+          "impact_Mpc": 0.007700815904339036,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.83823298025321e-06
+        },
+        {
+          "impact_Mpc": 0.0064066180365510254,
+          "fraction_extra_alpha_beyond_20_Mpc": 4.501345226226583e-06
+        }
+      ]
+    },
+    "max_lens_residual_rad": 3.1340219048409113e-18,
+    "max_arrival_stationarity_Mpc": 6.364700433358905e-15,
+    "rV_kpc": 313.50843141676023,
+    "scope": "Activate the original fixed-state R1 source at identical fitted ordinary body, source, screen, redshifts, maps and observer clock; no nuisance refit."
+  },
+  "separately_refitted_R1_minus_conventional_delay_seconds": [
+    228.50609664764647,
+    7.234333963060635,
+    438.4355631427354
+  ],
+  "refit_minus_fixed_body_delay_change_seconds": [
+    209.21575244896644,
+    6.295773381231129,
+    409.39886869334146
+  ],
+  "interpretation": "The separately refitted difference includes parameter reallocation and finite optimizer termination. It is not the fixed-body physical R1 signal. No further fit or model selection was performed in this audit.",
+  "conventional_census": {
+    "searched_stationary_image_count": 5,
+    "images": [
+      {
+        "label": "additional_stationary_image",
+        "position_light_centered_arcsec": [
+          0.003735903400556197,
+          -0.027160207164578308
+        ],
+        "position_relative_A_arcsec": [
+          -1.168640436889666,
+          -0.592939714271599
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": 0.700063383043153,
+        "absolute_macro_flux_relative_A": 0.06319717558937626,
+        "image_parity": 1,
+        "normalized_lens_jacobian_singular_values": [
+          2.3021041237714974,
+          1.6967107303278064
+        ],
+        "original_lens_residual_rad": 6.617444900424222e-24,
+        "original_arrival_stationarity_Mpc": 2.710505431213761e-20
+      },
+      {
+        "label": "D",
+        "position_light_centered_arcsec": [
+          0.23992242033280728,
+          -1.0488493218021888
+        ],
+        "position_relative_A_arcsec": [
+          -0.9324539199574148,
+          -1.6146288289092094
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": -7.960565237916269,
+        "absolute_macro_flux_relative_A": 0.7186281289908122,
+        "image_parity": -1,
+        "normalized_lens_jacobian_singular_values": [
+          1.2374826047273308,
+          0.277579329909337
+        ],
+        "original_lens_residual_rad": 4.235164736271502e-22,
+        "original_arrival_stationarity_Mpc": 1.3010426069826053e-18
+      },
+      {
+        "label": "B",
+        "position_light_centered_arcsec": [
+          -0.3043421993872903,
+          1.116966133732323
+        ],
+        "position_relative_A_arcsec": [
+          -1.4767185396775124,
+          0.5511866266253023
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": -12.609807120437699,
+        "absolute_macro_flux_relative_A": 1.1383314911777724,
+        "image_parity": -1,
+        "normalized_lens_jacobian_singular_values": [
+          1.2800240988157716,
+          0.16941175512628023
+        ],
+        "original_lens_residual_rad": 8.470329472543003e-22,
+        "original_arrival_stationarity_Mpc": 4.336808689942018e-19
+      },
+      {
+        "label": "C",
+        "position_light_centered_arcsec": [
+          -1.2960880559575545,
+          -0.032533223178053114
+        ],
+        "position_relative_A_arcsec": [
+          -2.468464396247777,
+          -0.5983127302850737
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": 11.527312573252878,
+        "absolute_macro_flux_relative_A": 1.0406109138271862,
+        "image_parity": 1,
+        "normalized_lens_jacobian_singular_values": [
+          1.391539441630824,
+          0.17046944278205808
+        ],
+        "original_lens_residual_rad": 1.6940658945086007e-21,
+        "original_arrival_stationarity_Mpc": 1.734723475976807e-18
+      },
+      {
+        "label": "A",
+        "position_light_centered_arcsec": [
+          1.172376340290225,
+          0.5657795071070199
+        ],
+        "position_relative_A_arcsec": [
+          2.886579864025407e-15,
+          -7.771561172376096e-16
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": 11.077447314921276,
+        "absolute_macro_flux_relative_A": 0.999999999999988,
+        "image_parity": 1,
+        "normalized_lens_jacobian_singular_values": [
+          1.39327539797522,
+          0.1771713399997596
+        ],
+        "original_lens_residual_rad": 8.470329472543003e-22,
+        "original_arrival_stationarity_Mpc": 1.734723475976807e-18
+      }
+    ],
+    "seed_count": 1060,
+    "rejected_seed_count": 0,
+    "rigorous_outer_image_radius_bound_arcsec": 1.5818322311034323,
+    "bound": "For R>|beta_eff|,|center|: (R-|beta_eff|)(R-|center|)<=||G||4m_total/D_l; m_total includes the derived positive R1 effective mass exactly once.",
+    "search_scope": "Dense Cartesian and logarithmic polar multiseed search inside the analytic outer radial bound; no proof that every interior root basin was sampled.",
+    "magnification_convention": "Actual source angular Jacobian=(D_os_eff/D_s) times normalized main-lens Jacobian. Ratios exclude microlensing, extinction, finite source and galaxy contamination.",
+    "observational_scope": "Only published four point-image positions trained the model. No central-image detection limit or non-detection likelihood has been imposed."
+  },
+  "conditional_R1_census": {
+    "searched_stationary_image_count": 5,
+    "images": [
+      {
+        "label": "additional_stationary_image",
+        "position_light_centered_arcsec": [
+          0.0037117881081277226,
+          -0.027082923900568476
+        ],
+        "position_relative_A_arcsec": [
+          -1.1686491036936513,
+          -0.5928994258539301
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": 0.6985367621499459,
+        "absolute_macro_flux_relative_A": 0.06313147684181039,
+        "image_parity": 1,
+        "normalized_lens_jacobian_singular_values": [
+          2.3037707636089384,
+          1.6979520055895267
+        ],
+        "original_lens_residual_rad": 1.3234889800848443e-23,
+        "original_arrival_stationarity_Mpc": 1.0842021724855044e-19
+      },
+      {
+        "label": "D",
+        "position_light_centered_arcsec": [
+          0.23990751007799724,
+          -1.0487930648589965
+        ],
+        "position_relative_A_arcsec": [
+          -0.9324533817237817,
+          -1.6146095668123581
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": -7.950630401742635,
+        "absolute_macro_flux_relative_A": 0.7185520738243765,
+        "image_parity": -1,
+        "normalized_lens_jacobian_singular_values": [
+          1.2378413212135573,
+          0.2776434283857613
+        ],
+        "original_lens_residual_rad": 0.0,
+        "original_arrival_stationarity_Mpc": 1.734723475976807e-18
+      },
+      {
+        "label": "B",
+        "position_light_centered_arcsec": [
+          -0.3043541155003721,
+          1.1170206259115556
+        ],
+        "position_relative_A_arcsec": [
+          -1.476715007302151,
+          0.551204123958194
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": -12.594138236429995,
+        "absolute_macro_flux_relative_A": 1.1382171841158848,
+        "image_parity": -1,
+        "normalized_lens_jacobian_singular_values": [
+          1.2803266897710235,
+          0.16945901776209688
+        ],
+        "original_lens_residual_rad": 1.6940658945086007e-21,
+        "original_arrival_stationarity_Mpc": 6.938893903907228e-18
+      },
+      {
+        "label": "C",
+        "position_light_centered_arcsec": [
+          -1.2961060200179135,
+          -0.032502604962304976
+        ],
+        "position_relative_A_arcsec": [
+          -2.4684669118196925,
+          -0.5983191069156666
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": 11.513960645142756,
+        "absolute_macro_flux_relative_A": 1.0405942524615666,
+        "image_parity": 1,
+        "normalized_lens_jacobian_singular_values": [
+          1.39183067031128,
+          0.1705072290136351
+        ],
+        "original_lens_residual_rad": 1.6940658945086007e-21,
+        "original_arrival_stationarity_Mpc": 3.469446951953614e-18
+      },
+      {
+        "label": "A",
+        "position_light_centered_arcsec": [
+          1.172360891801782,
+          0.56581650195336
+        ],
+        "position_relative_A_arcsec": [
+          3.1086244689504383e-15,
+          -1.6653345369377348e-15
+        ],
+        "signed_magnification_relative_unperturbed_FLRW": 11.06479361951682,
+        "absolute_macro_flux_relative_A": 0.999999999999988,
+        "image_parity": 1,
+        "normalized_lens_jacobian_singular_values": [
+          1.3935621421430033,
+          0.17720839088674248
+        ],
+        "original_lens_residual_rad": 1.6940658945086007e-21,
+        "original_arrival_stationarity_Mpc": 1.734723475976807e-18
+      }
+    ],
+    "seed_count": 1060,
+    "rejected_seed_count": 1,
+    "rigorous_outer_image_radius_bound_arcsec": 1.582459819236528,
+    "bound": "For R>|beta_eff|,|center|: (R-|beta_eff|)(R-|center|)<=||G||4m_total/D_l; m_total includes the derived positive R1 effective mass exactly once.",
+    "search_scope": "Dense Cartesian and logarithmic polar multiseed search inside the analytic outer radial bound; no proof that every interior root basin was sampled.",
+    "magnification_convention": "Actual source angular Jacobian=(D_os_eff/D_s) times normalized main-lens Jacobian. Ratios exclude microlensing, extinction, finite source and galaxy contamination.",
+    "observational_scope": "Only published four point-image positions trained the model. No central-image detection limit or non-detection likelihood has been imposed."
+  },
+  "input_sha256": {
+    "artifacts/strong_lensing_observed_20261020/conventional_training.json": "01d439ca5817ded7628743f8fe8cbf7f6944c024642c9641bc937da903089ef0",
+    "artifacts/strong_lensing_observed_20261020/r1_training.json": "d42ca071675b9fccf8f59edcfee0e5af4d3646db8ee157bca9e382db5e63937d",
+    "scripts/audit_he0435_macro.py": "2b786775dd14ed854f6975fb36a64bc2af889299e0af8afe57f37494e0ef8e94",
+    "code/strong_lensing_observed_macro.py": "5705e8715fd9c8c1bd8bc4d5d97ae1d84f4b731dbccb7c4ca60dcb9d66bd1785"
+  },
+  "target_values_consumed": false,
+  "physical_admission": false
+}

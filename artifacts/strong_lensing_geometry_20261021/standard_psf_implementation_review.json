@@ -1,0 +1,29 @@
+{
+  "status": "IMPLEMENTED_AND_REVIEWED_BEFORE_EXTERNAL_PSF_ARRAY_OPENING",
+  "source_sha256": {
+    "scripts/calibrate_he0435_standard_psf.py": "1af4ce6b84161285be278fb30e3fde7d1e4f36c4203e550555040f033e36144e",
+    "code/strong_lensing_standard_psf.py": "9b2f81c27be866d177896d416473025123126666289efc576db9c4f0186d44d0",
+    "tests/test_strong_lensing_standard_psf.py": "4d5420e1ddd09c97a1c80aaeae7483734bd483fae4d996d262d7fd49de2fcd0a"
+  },
+  "tests": {
+    "passed": 8,
+    "failed": 0,
+    "seconds": 1.27,
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_standard_psf.py -q"
+  },
+  "independent_review": "Fresh-data agent reviewed instrument/runner API; native exposure SHA mapping added so target measurement must consume identical field-calibrated files. Official JWST1PASS direct-CAL convention supports no unprescribed PAM multiplication. Root review required consuming the frozen minimum_valid_native_pixels explicitly; fitter already rejects fewer than50, and the added explicit cfg gate now records the required count and cannot rescue a failed PSF fit. Regression tests cover49/50threshold, stricterfrozenminimum andfitfailure.",
+  "test_evidence": [
+    "Gaia alpha-star proper-motion transport and independent stellar identity",
+    "Protected DQ components excluded from saturated-core association",
+    "Spatially varying ePSF sampling retains source center and normalization",
+    "Field-only translation preserves relative quad coordinates",
+    "Real Photutils griddedPSF interface with synthetic calibration data",
+    "Arbitrary saturated SCI core values cannot change wing-only fit",
+    "Execution authorization gate precedes file/array access"
+  ],
+  "new_calibration_relation": "Independent LMC empirical PSF field supports known-ERR unsaturated-wing assessment for the prespecified Gaia field star. Unlike learning a new ePSF from HE0435 field stars, this relation needs no three-star training set. Every one of four fixed field applications still must pass p>=.001; failures remain blockers.",
+  "external_PSF_arrays_opened": false,
+  "quasar_SCI_values_inspected": false,
+  "physical_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "no_error_floor_or_rescale": true
+}

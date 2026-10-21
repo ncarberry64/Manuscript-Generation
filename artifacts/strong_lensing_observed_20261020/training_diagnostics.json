@@ -1,0 +1,1623 @@
+{
+  "training_only": true,
+  "parameters_unchanged": true,
+  "gradient_step_sensitivity": [
+    {
+      "delay_step_days": 0.0001,
+      "log_hyperparameter_step": 0.0001,
+      "negative_log_likelihood_central_gradient": [
+        -0.0059685589803848416,
+        -0.14242526049201842,
+        -0.05673300620401278,
+        -0.0023852862796047702,
+        -2.25149772631994,
+        -0.0065332369558745995,
+        -0.1885994879557984,
+        -0.008854713087202981
+      ],
+      "projected_gradient": [
+        -0.0059685589803848416,
+        -0.14242526049201842,
+        -0.05673300620401278,
+        -0.0023852862796047702,
+        0.0,
+        -0.0065332369558745995,
+        0.0,
+        -0.008854713087202981
+      ],
+      "maximum_absolute_projected_gradient": 0.14242526049201842
+    },
+    {
+      "delay_step_days": 0.001,
+      "log_hyperparameter_step": 0.0001,
+      "negative_log_likelihood_central_gradient": [
+        -0.03837768326775404,
+        -0.12759567016473738,
+        -0.01910576429509092,
+        -0.0023852862796047702,
+        -2.25149772631994,
+        -0.0065332369558745995,
+        -0.1885994879557984,
+        -0.008854713087202981
+      ],
+      "projected_gradient": [
+        -0.03837768326775404,
+        -0.12759567016473738,
+        -0.01910576429509092,
+        -0.0023852862796047702,
+        0.0,
+        -0.0065332369558745995,
+        0.0,
+        -0.008854713087202981
+      ],
+      "maximum_absolute_projected_gradient": 0.12759567016473738
+    },
+    {
+      "delay_step_days": 0.01,
+      "log_hyperparameter_step": 0.001,
+      "negative_log_likelihood_central_gradient": [
+        0.10758789721876383,
+        -0.28917012796227937,
+        -0.10234041837975383,
+        -0.002459541974531021,
+        -2.251488610454544,
+        -0.006546017175423913,
+        -0.18859801184589742,
+        -0.008487711966154166
+      ],
+      "projected_gradient": [
+        0.10758789721876383,
+        -0.28917012796227937,
+        -0.10234041837975383,
+        -0.002459541974531021,
+        0.0,
+        -0.006546017175423913,
+        0.0,
+        -0.008487711966154166
+      ],
+      "maximum_absolute_projected_gradient": 0.28917012796227937
+    }
+  ],
+  "conditional_delay_slices": [
+    {
+      "image_index": 1,
+      "all_other_parameters_fixed": true,
+      "points": [
+        {
+          "delay_days": 1.4198406177859786,
+          "offset_days": -5.0,
+          "delta_log_likelihood_from_frozen_best": -58.6320031348514
+        },
+        {
+          "delay_days": 1.5198406177859782,
+          "offset_days": -4.9,
+          "delta_log_likelihood_from_frozen_best": -56.95740838906386
+        },
+        {
+          "delay_days": 1.6198406177859788,
+          "offset_days": -4.8,
+          "delta_log_likelihood_from_frozen_best": -55.215061813150896
+        },
+        {
+          "delay_days": 1.7198406177859784,
+          "offset_days": -4.7,
+          "delta_log_likelihood_from_frozen_best": -53.62478005853336
+        },
+        {
+          "delay_days": 1.819840617785979,
+          "offset_days": -4.6,
+          "delta_log_likelihood_from_frozen_best": -52.07383502378252
+        },
+        {
+          "delay_days": 1.9198406177859786,
+          "offset_days": -4.5,
+          "delta_log_likelihood_from_frozen_best": -50.6603633976265
+        },
+        {
+          "delay_days": 2.0198406177859782,
+          "offset_days": -4.4,
+          "delta_log_likelihood_from_frozen_best": -49.15160149364419
+        },
+        {
+          "delay_days": 2.1198406177859788,
+          "offset_days": -4.3,
+          "delta_log_likelihood_from_frozen_best": -47.15002652572184
+        },
+        {
+          "delay_days": 2.2198406177859784,
+          "offset_days": -4.2,
+          "delta_log_likelihood_from_frozen_best": -45.30017040445091
+        },
+        {
+          "delay_days": 2.319840617785979,
+          "offset_days": -4.1,
+          "delta_log_likelihood_from_frozen_best": -43.593736398666806
+        },
+        {
+          "delay_days": 2.4198406177859786,
+          "offset_days": -4.0,
+          "delta_log_likelihood_from_frozen_best": -42.02135296436609
+        },
+        {
+          "delay_days": 2.5198406177859787,
+          "offset_days": -3.9,
+          "delta_log_likelihood_from_frozen_best": -40.56642574186844
+        },
+        {
+          "delay_days": 2.6198406177859788,
+          "offset_days": -3.8,
+          "delta_log_likelihood_from_frozen_best": -39.17346523105698
+        },
+        {
+          "delay_days": 2.7198406177859784,
+          "offset_days": -3.7,
+          "delta_log_likelihood_from_frozen_best": -37.765662746549424
+        },
+        {
+          "delay_days": 2.819840617785979,
+          "offset_days": -3.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -36.47459988769151
+        },
+        {
+          "delay_days": 2.9198406177859786,
+          "offset_days": -3.5,
+          "delta_log_likelihood_from_frozen_best": -35.19181694071813
+        },
+        {
+          "delay_days": 3.0198406177859787,
+          "offset_days": -3.4,
+          "delta_log_likelihood_from_frozen_best": -33.805003845571264
+        },
+        {
+          "delay_days": 3.1198406177859788,
+          "offset_days": -3.3,
+          "delta_log_likelihood_from_frozen_best": -31.97044894170176
+        },
+        {
+          "delay_days": 3.2198406177859784,
+          "offset_days": -3.2,
+          "delta_log_likelihood_from_frozen_best": -30.154961604695927
+        },
+        {
+          "delay_days": 3.319840617785979,
+          "offset_days": -3.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -28.46545660461379
+        },
+        {
+          "delay_days": 3.4198406177859786,
+          "offset_days": -3.0,
+          "delta_log_likelihood_from_frozen_best": -27.032052520846264
+        },
+        {
+          "delay_days": 3.5198406177859787,
+          "offset_days": -2.9,
+          "delta_log_likelihood_from_frozen_best": -25.598027200780052
+        },
+        {
+          "delay_days": 3.6198406177859788,
+          "offset_days": -2.8,
+          "delta_log_likelihood_from_frozen_best": -23.962867938067575
+        },
+        {
+          "delay_days": 3.719840617785979,
+          "offset_days": -2.6999999999999997,
+          "delta_log_likelihood_from_frozen_best": -22.5119302175317
+        },
+        {
+          "delay_days": 3.819840617785979,
+          "offset_days": -2.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -21.27745933182814
+        },
+        {
+          "delay_days": 3.9198406177859786,
+          "offset_days": -2.5,
+          "delta_log_likelihood_from_frozen_best": -20.025499593857603
+        },
+        {
+          "delay_days": 4.019840617785979,
+          "offset_days": -2.4,
+          "delta_log_likelihood_from_frozen_best": -18.801206580759754
+        },
+        {
+          "delay_days": 4.119840617785979,
+          "offset_days": -2.3,
+          "delta_log_likelihood_from_frozen_best": -17.032769179872048
+        },
+        {
+          "delay_days": 4.219840617785978,
+          "offset_days": -2.1999999999999997,
+          "delta_log_likelihood_from_frozen_best": -15.260976058203596
+        },
+        {
+          "delay_days": 4.319840617785979,
+          "offset_days": -2.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -13.50622052181825
+        },
+        {
+          "delay_days": 4.419840617785979,
+          "offset_days": -2.0,
+          "delta_log_likelihood_from_frozen_best": -11.813188109246767
+        },
+        {
+          "delay_days": 4.519840617785979,
+          "offset_days": -1.9,
+          "delta_log_likelihood_from_frozen_best": -10.402057895971666
+        },
+        {
+          "delay_days": 4.619840617785979,
+          "offset_days": -1.7999999999999998,
+          "delta_log_likelihood_from_frozen_best": -9.22179503188454
+        },
+        {
+          "delay_days": 4.719840617785978,
+          "offset_days": -1.6999999999999997,
+          "delta_log_likelihood_from_frozen_best": -8.147444378628279
+        },
+        {
+          "delay_days": 4.819840617785979,
+          "offset_days": -1.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -7.248293792928962
+        },
+        {
+          "delay_days": 4.919840617785979,
+          "offset_days": -1.5,
+          "delta_log_likelihood_from_frozen_best": -6.529489062268112
+        },
+        {
+          "delay_days": 5.019840617785979,
+          "offset_days": -1.4,
+          "delta_log_likelihood_from_frozen_best": -5.875171489087734
+        },
+        {
+          "delay_days": 5.119840617785979,
+          "offset_days": -1.2999999999999998,
+          "delta_log_likelihood_from_frozen_best": -4.861467042917866
+        },
+        {
+          "delay_days": 5.219840617785978,
+          "offset_days": -1.1999999999999997,
+          "delta_log_likelihood_from_frozen_best": -3.9678931953167194
+        },
+        {
+          "delay_days": 5.319840617785979,
+          "offset_days": -1.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -3.236328337550731
+        },
+        {
+          "delay_days": 5.419840617785979,
+          "offset_days": -1.0,
+          "delta_log_likelihood_from_frozen_best": -2.676830133950716
+        },
+        {
+          "delay_days": 5.519840617785979,
+          "offset_days": -0.8999999999999995,
+          "delta_log_likelihood_from_frozen_best": -2.300625927375222
+        },
+        {
+          "delay_days": 5.619840617785979,
+          "offset_days": -0.7999999999999998,
+          "delta_log_likelihood_from_frozen_best": -1.8125748250313336
+        },
+        {
+          "delay_days": 5.719840617785978,
+          "offset_days": -0.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -1.4713217657244968
+        },
+        {
+          "delay_days": 5.819840617785979,
+          "offset_days": -0.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -1.2368372509135952
+        },
+        {
+          "delay_days": 5.919840617785979,
+          "offset_days": -0.5,
+          "delta_log_likelihood_from_frozen_best": -1.1474909212556668
+        },
+        {
+          "delay_days": 6.019840617785979,
+          "offset_days": -0.39999999999999947,
+          "delta_log_likelihood_from_frozen_best": -0.9026127336437639
+        },
+        {
+          "delay_days": 6.119840617785979,
+          "offset_days": -0.2999999999999998,
+          "delta_log_likelihood_from_frozen_best": -0.5248741884661285
+        },
+        {
+          "delay_days": 6.219840617785979,
+          "offset_days": -0.1999999999999993,
+          "delta_log_likelihood_from_frozen_best": -0.2436466058552469
+        },
+        {
+          "delay_days": 6.319840617785979,
+          "offset_days": -0.09999999999999964,
+          "delta_log_likelihood_from_frozen_best": -0.10036250150551496
+        },
+        {
+          "delay_days": 6.419840617785979,
+          "offset_days": 0.0,
+          "delta_log_likelihood_from_frozen_best": 0.0
+        },
+        {
+          "delay_days": 6.519840617785979,
+          "offset_days": 0.10000000000000053,
+          "delta_log_likelihood_from_frozen_best": -0.18131971523507673
+        },
+        {
+          "delay_days": 6.619840617785979,
+          "offset_days": 0.20000000000000018,
+          "delta_log_likelihood_from_frozen_best": -0.7006156755160191
+        },
+        {
+          "delay_days": 6.719840617785979,
+          "offset_days": 0.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -1.4855566009264294
+        },
+        {
+          "delay_days": 6.819840617785979,
+          "offset_days": 0.40000000000000036,
+          "delta_log_likelihood_from_frozen_best": -2.4080360897532955
+        },
+        {
+          "delay_days": 6.919840617785979,
+          "offset_days": 0.5,
+          "delta_log_likelihood_from_frozen_best": -3.3794423725175875
+        },
+        {
+          "delay_days": 7.019840617785979,
+          "offset_days": 0.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -4.29873748083628
+        },
+        {
+          "delay_days": 7.119840617785979,
+          "offset_days": 0.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -4.3604848594732175
+        },
+        {
+          "delay_days": 7.219840617785979,
+          "offset_days": 0.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -4.545717823213636
+        },
+        {
+          "delay_days": 7.319840617785979,
+          "offset_days": 0.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -4.836523163872698
+        },
+        {
+          "delay_days": 7.419840617785979,
+          "offset_days": 1.0,
+          "delta_log_likelihood_from_frozen_best": -5.2201648960417515
+        },
+        {
+          "delay_days": 7.519840617785979,
+          "offset_days": 1.1000000000000005,
+          "delta_log_likelihood_from_frozen_best": -5.651656621681468
+        },
+        {
+          "delay_days": 7.619840617785979,
+          "offset_days": 1.2000000000000002,
+          "delta_log_likelihood_from_frozen_best": -5.650354964693179
+        },
+        {
+          "delay_days": 7.719840617785979,
+          "offset_days": 1.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -5.7870308547862805
+        },
+        {
+          "delay_days": 7.819840617785979,
+          "offset_days": 1.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -6.167969150021236
+        },
+        {
+          "delay_days": 7.919840617785979,
+          "offset_days": 1.5,
+          "delta_log_likelihood_from_frozen_best": -6.771617025415253
+        },
+        {
+          "delay_days": 8.01984061778598,
+          "offset_days": 1.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -7.238233966700136
+        },
+        {
+          "delay_days": 8.119840617785979,
+          "offset_days": 1.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -7.68533874579407
+        },
+        {
+          "delay_days": 8.21984061778598,
+          "offset_days": 1.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -8.425362356776532
+        },
+        {
+          "delay_days": 8.319840617785978,
+          "offset_days": 1.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -9.181195817971457
+        },
+        {
+          "delay_days": 8.41984061778598,
+          "offset_days": 2.0,
+          "delta_log_likelihood_from_frozen_best": -9.896036413114416
+        },
+        {
+          "delay_days": 8.51984061778598,
+          "offset_days": 2.1000000000000005,
+          "delta_log_likelihood_from_frozen_best": -10.692736023460384
+        },
+        {
+          "delay_days": 8.619840617785979,
+          "offset_days": 2.2,
+          "delta_log_likelihood_from_frozen_best": -11.002583198254797
+        },
+        {
+          "delay_days": 8.71984061778598,
+          "offset_days": 2.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -11.427119067837339
+        },
+        {
+          "delay_days": 8.819840617785978,
+          "offset_days": 2.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -12.123469088222919
+        },
+        {
+          "delay_days": 8.91984061778598,
+          "offset_days": 2.5,
+          "delta_log_likelihood_from_frozen_best": -12.960524333280773
+        },
+        {
+          "delay_days": 9.01984061778598,
+          "offset_days": 2.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -13.631548194651259
+        },
+        {
+          "delay_days": 9.119840617785979,
+          "offset_days": 2.7,
+          "delta_log_likelihood_from_frozen_best": -13.61635482685233
+        },
+        {
+          "delay_days": 9.21984061778598,
+          "offset_days": 2.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -13.709343148684638
+        },
+        {
+          "delay_days": 9.319840617785978,
+          "offset_days": 2.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -14.05891425750633
+        },
+        {
+          "delay_days": 9.41984061778598,
+          "offset_days": 3.0,
+          "delta_log_likelihood_from_frozen_best": -14.503040974876058
+        },
+        {
+          "delay_days": 9.519840617785977,
+          "offset_days": 3.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -15.374781449734655
+        },
+        {
+          "delay_days": 9.619840617785979,
+          "offset_days": 3.200000000000001,
+          "delta_log_likelihood_from_frozen_best": -16.710116247175392
+        },
+        {
+          "delay_days": 9.71984061778598,
+          "offset_days": 3.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -18.169439674762543
+        },
+        {
+          "delay_days": 9.819840617785978,
+          "offset_days": 3.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -19.774831708946294
+        },
+        {
+          "delay_days": 9.91984061778598,
+          "offset_days": 3.5,
+          "delta_log_likelihood_from_frozen_best": -21.582679630877465
+        },
+        {
+          "delay_days": 10.019840617785977,
+          "offset_days": 3.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -23.387446155011276
+        },
+        {
+          "delay_days": 10.119840617785979,
+          "offset_days": 3.700000000000001,
+          "delta_log_likelihood_from_frozen_best": -24.883513866647263
+        },
+        {
+          "delay_days": 10.21984061778598,
+          "offset_days": 3.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -26.763084687829178
+        },
+        {
+          "delay_days": 10.319840617785978,
+          "offset_days": 3.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -28.84073767155678
+        },
+        {
+          "delay_days": 10.41984061778598,
+          "offset_days": 4.0,
+          "delta_log_likelihood_from_frozen_best": -31.008921552105676
+        },
+        {
+          "delay_days": 10.519840617785977,
+          "offset_days": 4.1,
+          "delta_log_likelihood_from_frozen_best": -33.3713921198505
+        },
+        {
+          "delay_days": 10.619840617785979,
+          "offset_days": 4.200000000000001,
+          "delta_log_likelihood_from_frozen_best": -35.53884022240891
+        },
+        {
+          "delay_days": 10.71984061778598,
+          "offset_days": 4.300000000000001,
+          "delta_log_likelihood_from_frozen_best": -37.85627867693984
+        },
+        {
+          "delay_days": 10.819840617785978,
+          "offset_days": 4.4,
+          "delta_log_likelihood_from_frozen_best": -40.056234116258565
+        },
+        {
+          "delay_days": 10.91984061778598,
+          "offset_days": 4.5,
+          "delta_log_likelihood_from_frozen_best": -42.30005326518767
+        },
+        {
+          "delay_days": 11.019840617785981,
+          "offset_days": 4.600000000000001,
+          "delta_log_likelihood_from_frozen_best": -44.35792084723653
+        },
+        {
+          "delay_days": 11.119840617785979,
+          "offset_days": 4.700000000000001,
+          "delta_log_likelihood_from_frozen_best": -46.07446289714244
+        },
+        {
+          "delay_days": 11.21984061778598,
+          "offset_days": 4.800000000000001,
+          "delta_log_likelihood_from_frozen_best": -47.9372234215698
+        },
+        {
+          "delay_days": 11.319840617785978,
+          "offset_days": 4.9,
+          "delta_log_likelihood_from_frozen_best": -49.91757394745582
+        },
+        {
+          "delay_days": 11.41984061778598,
+          "offset_days": 5.0,
+          "delta_log_likelihood_from_frozen_best": -51.95102905776366
+        }
+      ]
+    },
+    {
+      "image_index": 2,
+      "all_other_parameters_fixed": true,
+      "points": [
+        {
+          "delay_days": -5.974730418632346,
+          "offset_days": -5.0,
+          "delta_log_likelihood_from_frozen_best": -59.620765700330594
+        },
+        {
+          "delay_days": -5.874730418632346,
+          "offset_days": -4.9,
+          "delta_log_likelihood_from_frozen_best": -58.1191797532756
+        },
+        {
+          "delay_days": -5.774730418632346,
+          "offset_days": -4.8,
+          "delta_log_likelihood_from_frozen_best": -56.639943931106245
+        },
+        {
+          "delay_days": -5.674730418632346,
+          "offset_days": -4.7,
+          "delta_log_likelihood_from_frozen_best": -55.14503368133592
+        },
+        {
+          "delay_days": -5.574730418632345,
+          "offset_days": -4.6,
+          "delta_log_likelihood_from_frozen_best": -53.72753049241146
+        },
+        {
+          "delay_days": -5.474730418632346,
+          "offset_days": -4.5,
+          "delta_log_likelihood_from_frozen_best": -52.18474315911226
+        },
+        {
+          "delay_days": -5.374730418632346,
+          "offset_days": -4.4,
+          "delta_log_likelihood_from_frozen_best": -50.07413440463097
+        },
+        {
+          "delay_days": -5.274730418632346,
+          "offset_days": -4.3,
+          "delta_log_likelihood_from_frozen_best": -47.93547214902537
+        },
+        {
+          "delay_days": -5.174730418632346,
+          "offset_days": -4.2,
+          "delta_log_likelihood_from_frozen_best": -45.87789997913205
+        },
+        {
+          "delay_days": -5.074730418632345,
+          "offset_days": -4.1,
+          "delta_log_likelihood_from_frozen_best": -43.893937086679216
+        },
+        {
+          "delay_days": -4.974730418632346,
+          "offset_days": -4.0,
+          "delta_log_likelihood_from_frozen_best": -42.022012335673935
+        },
+        {
+          "delay_days": -4.874730418632346,
+          "offset_days": -3.9,
+          "delta_log_likelihood_from_frozen_best": -40.20841777065107
+        },
+        {
+          "delay_days": -4.774730418632346,
+          "offset_days": -3.8,
+          "delta_log_likelihood_from_frozen_best": -38.49894344019958
+        },
+        {
+          "delay_days": -4.674730418632346,
+          "offset_days": -3.7,
+          "delta_log_likelihood_from_frozen_best": -36.944325571521404
+        },
+        {
+          "delay_days": -4.574730418632345,
+          "offset_days": -3.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -35.54201313462909
+        },
+        {
+          "delay_days": -4.474730418632346,
+          "offset_days": -3.5,
+          "delta_log_likelihood_from_frozen_best": -33.92115064204336
+        },
+        {
+          "delay_days": -4.374730418632346,
+          "offset_days": -3.4,
+          "delta_log_likelihood_from_frozen_best": -32.24414527401677
+        },
+        {
+          "delay_days": -4.274730418632346,
+          "offset_days": -3.3,
+          "delta_log_likelihood_from_frozen_best": -30.69140651613452
+        },
+        {
+          "delay_days": -4.174730418632346,
+          "offset_days": -3.2,
+          "delta_log_likelihood_from_frozen_best": -29.30607395050538
+        },
+        {
+          "delay_days": -4.074730418632345,
+          "offset_days": -3.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -28.05111856543772
+        },
+        {
+          "delay_days": -3.9747304186323458,
+          "offset_days": -3.0,
+          "delta_log_likelihood_from_frozen_best": -26.8658265394497
+        },
+        {
+          "delay_days": -3.8747304186323457,
+          "offset_days": -2.9,
+          "delta_log_likelihood_from_frozen_best": -25.727177864640908
+        },
+        {
+          "delay_days": -3.7747304186323456,
+          "offset_days": -2.8,
+          "delta_log_likelihood_from_frozen_best": -24.600481214059982
+        },
+        {
+          "delay_days": -3.6747304186323455,
+          "offset_days": -2.6999999999999997,
+          "delta_log_likelihood_from_frozen_best": -23.706871028538444
+        },
+        {
+          "delay_days": -3.5747304186323454,
+          "offset_days": -2.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -22.82628155618295
+        },
+        {
+          "delay_days": -3.4747304186323458,
+          "offset_days": -2.5,
+          "delta_log_likelihood_from_frozen_best": -21.50287057186688
+        },
+        {
+          "delay_days": -3.3747304186323457,
+          "offset_days": -2.4,
+          "delta_log_likelihood_from_frozen_best": -19.94669224479003
+        },
+        {
+          "delay_days": -3.2747304186323456,
+          "offset_days": -2.3,
+          "delta_log_likelihood_from_frozen_best": -18.499830976868907
+        },
+        {
+          "delay_days": -3.1747304186323455,
+          "offset_days": -2.1999999999999997,
+          "delta_log_likelihood_from_frozen_best": -17.15937676228168
+        },
+        {
+          "delay_days": -3.0747304186323454,
+          "offset_days": -2.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -15.897042753016649
+        },
+        {
+          "delay_days": -2.9747304186323458,
+          "offset_days": -2.0,
+          "delta_log_likelihood_from_frozen_best": -14.592651146525895
+        },
+        {
+          "delay_days": -2.8747304186323457,
+          "offset_days": -1.9,
+          "delta_log_likelihood_from_frozen_best": -13.103929775395954
+        },
+        {
+          "delay_days": -2.7747304186323456,
+          "offset_days": -1.7999999999999998,
+          "delta_log_likelihood_from_frozen_best": -11.702576942938322
+        },
+        {
+          "delay_days": -2.6747304186323455,
+          "offset_days": -1.6999999999999997,
+          "delta_log_likelihood_from_frozen_best": -10.322384279246762
+        },
+        {
+          "delay_days": -2.5747304186323454,
+          "offset_days": -1.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -9.128374089745193
+        },
+        {
+          "delay_days": -2.4747304186323458,
+          "offset_days": -1.5,
+          "delta_log_likelihood_from_frozen_best": -8.293503306937055
+        },
+        {
+          "delay_days": -2.3747304186323457,
+          "offset_days": -1.4,
+          "delta_log_likelihood_from_frozen_best": -7.45283005647434
+        },
+        {
+          "delay_days": -2.2747304186323456,
+          "offset_days": -1.2999999999999998,
+          "delta_log_likelihood_from_frozen_best": -6.749627641873303
+        },
+        {
+          "delay_days": -2.1747304186323455,
+          "offset_days": -1.1999999999999997,
+          "delta_log_likelihood_from_frozen_best": -6.097065884112453
+        },
+        {
+          "delay_days": -2.0747304186323454,
+          "offset_days": -1.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -5.604680715781797
+        },
+        {
+          "delay_days": -1.9747304186323458,
+          "offset_days": -1.0,
+          "delta_log_likelihood_from_frozen_best": -5.156722199080832
+        },
+        {
+          "delay_days": -1.8747304186323452,
+          "offset_days": -0.8999999999999995,
+          "delta_log_likelihood_from_frozen_best": -4.549363013820766
+        },
+        {
+          "delay_days": -1.7747304186323456,
+          "offset_days": -0.7999999999999998,
+          "delta_log_likelihood_from_frozen_best": -4.0538978018885246
+        },
+        {
+          "delay_days": -1.674730418632346,
+          "offset_days": -0.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -3.6864172932146175
+        },
+        {
+          "delay_days": -1.5747304186323454,
+          "offset_days": -0.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -3.426370531104112
+        },
+        {
+          "delay_days": -1.4747304186323458,
+          "offset_days": -0.5,
+          "delta_log_likelihood_from_frozen_best": -2.782511660203454
+        },
+        {
+          "delay_days": -1.3747304186323452,
+          "offset_days": -0.39999999999999947,
+          "delta_log_likelihood_from_frozen_best": -2.0793368386475777
+        },
+        {
+          "delay_days": -1.2747304186323456,
+          "offset_days": -0.2999999999999998,
+          "delta_log_likelihood_from_frozen_best": -1.383742804877329
+        },
+        {
+          "delay_days": -1.174730418632345,
+          "offset_days": -0.1999999999999993,
+          "delta_log_likelihood_from_frozen_best": -0.8071534007631271
+        },
+        {
+          "delay_days": -1.0747304186323454,
+          "offset_days": -0.09999999999999964,
+          "delta_log_likelihood_from_frozen_best": -0.3268721948388702
+        },
+        {
+          "delay_days": -0.9747304186323459,
+          "offset_days": 0.0,
+          "delta_log_likelihood_from_frozen_best": 0.0
+        },
+        {
+          "delay_days": -0.8747304186323454,
+          "offset_days": 0.10000000000000053,
+          "delta_log_likelihood_from_frozen_best": -0.1386675391204335
+        },
+        {
+          "delay_days": -0.7747304186323457,
+          "offset_days": 0.20000000000000018,
+          "delta_log_likelihood_from_frozen_best": -0.4453830535057932
+        },
+        {
+          "delay_days": -0.6747304186323452,
+          "offset_days": 0.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -0.8893590830957692
+        },
+        {
+          "delay_days": -0.5747304186323455,
+          "offset_days": 0.40000000000000036,
+          "delta_log_likelihood_from_frozen_best": -1.5096675143558969
+        },
+        {
+          "delay_days": -0.4747304186323459,
+          "offset_days": 0.5,
+          "delta_log_likelihood_from_frozen_best": -2.2568373335561773
+        },
+        {
+          "delay_days": -0.37473041863234535,
+          "offset_days": 0.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -3.0043763300291175
+        },
+        {
+          "delay_days": -0.2747304186323457,
+          "offset_days": 0.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -4.035733251774218
+        },
+        {
+          "delay_days": -0.17473041863234517,
+          "offset_days": 0.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -5.259204642501572
+        },
+        {
+          "delay_days": -0.07473041863234553,
+          "offset_days": 0.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -6.5582668215247395
+        },
+        {
+          "delay_days": 0.025269581367654115,
+          "offset_days": 1.0,
+          "delta_log_likelihood_from_frozen_best": -7.404859059095543
+        },
+        {
+          "delay_days": 0.12526958136765465,
+          "offset_days": 1.1000000000000005,
+          "delta_log_likelihood_from_frozen_best": -7.217066440685812
+        },
+        {
+          "delay_days": 0.2252695813676543,
+          "offset_days": 1.2000000000000002,
+          "delta_log_likelihood_from_frozen_best": -7.212630381320196
+        },
+        {
+          "delay_days": 0.3252695813676548,
+          "offset_days": 1.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -7.3546081873064395
+        },
+        {
+          "delay_days": 0.42526958136765447,
+          "offset_days": 1.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -7.6564845007869735
+        },
+        {
+          "delay_days": 0.5252695813676541,
+          "offset_days": 1.5,
+          "delta_log_likelihood_from_frozen_best": -7.618374610372484
+        },
+        {
+          "delay_days": 0.6252695813676546,
+          "offset_days": 1.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -7.480780864312692
+        },
+        {
+          "delay_days": 0.7252695813676543,
+          "offset_days": 1.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -7.45845845265103
+        },
+        {
+          "delay_days": 0.8252695813676548,
+          "offset_days": 1.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -7.5691763868180715
+        },
+        {
+          "delay_days": 0.9252695813676545,
+          "offset_days": 1.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -7.803726807820567
+        },
+        {
+          "delay_days": 1.0252695813676542,
+          "offset_days": 2.0,
+          "delta_log_likelihood_from_frozen_best": -8.224924118427225
+        },
+        {
+          "delay_days": 1.1252695813676548,
+          "offset_days": 2.1000000000000005,
+          "delta_log_likelihood_from_frozen_best": -8.8608945014239
+        },
+        {
+          "delay_days": 1.2252695813676544,
+          "offset_days": 2.2,
+          "delta_log_likelihood_from_frozen_best": -9.665148374970158
+        },
+        {
+          "delay_days": 1.325269581367655,
+          "offset_days": 2.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -10.523652516751099
+        },
+        {
+          "delay_days": 1.4252695813676546,
+          "offset_days": 2.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -11.484236825823245
+        },
+        {
+          "delay_days": 1.5252695813676542,
+          "offset_days": 2.5,
+          "delta_log_likelihood_from_frozen_best": -12.20840181596759
+        },
+        {
+          "delay_days": 1.6252695813676548,
+          "offset_days": 2.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -12.665458389683408
+        },
+        {
+          "delay_days": 1.7252695813676544,
+          "offset_days": 2.7,
+          "delta_log_likelihood_from_frozen_best": -13.034608660647791
+        },
+        {
+          "delay_days": 1.825269581367655,
+          "offset_days": 2.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -13.501057264455085
+        },
+        {
+          "delay_days": 1.9252695813676546,
+          "offset_days": 2.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -14.095019359603612
+        },
+        {
+          "delay_days": 2.0252695813676542,
+          "offset_days": 3.0,
+          "delta_log_likelihood_from_frozen_best": -14.80300640938367
+        },
+        {
+          "delay_days": 2.125269581367654,
+          "offset_days": 3.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -15.704972187404564
+        },
+        {
+          "delay_days": 2.2252695813676553,
+          "offset_days": 3.200000000000001,
+          "delta_log_likelihood_from_frozen_best": -16.645937682122167
+        },
+        {
+          "delay_days": 2.325269581367655,
+          "offset_days": 3.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -17.759826014567807
+        },
+        {
+          "delay_days": 2.4252695813676546,
+          "offset_days": 3.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -18.97677732149532
+        },
+        {
+          "delay_days": 2.5252695813676542,
+          "offset_days": 3.5,
+          "delta_log_likelihood_from_frozen_best": -19.6926995296526
+        },
+        {
+          "delay_days": 2.625269581367654,
+          "offset_days": 3.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -20.459509441245245
+        },
+        {
+          "delay_days": 2.7252695813676553,
+          "offset_days": 3.700000000000001,
+          "delta_log_likelihood_from_frozen_best": -21.327331872484137
+        },
+        {
+          "delay_days": 2.825269581367655,
+          "offset_days": 3.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -22.32997161478488
+        },
+        {
+          "delay_days": 2.9252695813676546,
+          "offset_days": 3.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -23.49276161517264
+        },
+        {
+          "delay_days": 3.0252695813676542,
+          "offset_days": 4.0,
+          "delta_log_likelihood_from_frozen_best": -24.58760515546419
+        },
+        {
+          "delay_days": 3.125269581367654,
+          "offset_days": 4.1,
+          "delta_log_likelihood_from_frozen_best": -25.36179712989906
+        },
+        {
+          "delay_days": 3.2252695813676553,
+          "offset_days": 4.200000000000001,
+          "delta_log_likelihood_from_frozen_best": -26.288853632257087
+        },
+        {
+          "delay_days": 3.325269581367655,
+          "offset_days": 4.300000000000001,
+          "delta_log_likelihood_from_frozen_best": -27.237565468038156
+        },
+        {
+          "delay_days": 3.4252695813676546,
+          "offset_days": 4.4,
+          "delta_log_likelihood_from_frozen_best": -28.1481330618808
+        },
+        {
+          "delay_days": 3.5252695813676542,
+          "offset_days": 4.5,
+          "delta_log_likelihood_from_frozen_best": -28.88764370665922
+        },
+        {
+          "delay_days": 3.6252695813676556,
+          "offset_days": 4.600000000000001,
+          "delta_log_likelihood_from_frozen_best": -29.36743909276811
+        },
+        {
+          "delay_days": 3.7252695813676553,
+          "offset_days": 4.700000000000001,
+          "delta_log_likelihood_from_frozen_best": -29.925505292549133
+        },
+        {
+          "delay_days": 3.825269581367655,
+          "offset_days": 4.800000000000001,
+          "delta_log_likelihood_from_frozen_best": -30.49919265677272
+        },
+        {
+          "delay_days": 3.9252695813676546,
+          "offset_days": 4.9,
+          "delta_log_likelihood_from_frozen_best": -31.17142513482395
+        },
+        {
+          "delay_days": 4.025269581367654,
+          "offset_days": 5.0,
+          "delta_log_likelihood_from_frozen_best": -31.93382410974118
+        }
+      ]
+    },
+    {
+      "image_index": 3,
+      "all_other_parameters_fixed": true,
+      "points": [
+        {
+          "delay_days": 7.487994831847848,
+          "offset_days": -5.0,
+          "delta_log_likelihood_from_frozen_best": -68.85290629320843
+        },
+        {
+          "delay_days": 7.587994831847848,
+          "offset_days": -4.9,
+          "delta_log_likelihood_from_frozen_best": -66.08737628622112
+        },
+        {
+          "delay_days": 7.687994831847848,
+          "offset_days": -4.8,
+          "delta_log_likelihood_from_frozen_best": -63.51471951212807
+        },
+        {
+          "delay_days": 7.787994831847848,
+          "offset_days": -4.7,
+          "delta_log_likelihood_from_frozen_best": -61.15773069448005
+        },
+        {
+          "delay_days": 7.887994831847848,
+          "offset_days": -4.6,
+          "delta_log_likelihood_from_frozen_best": -58.99214481742274
+        },
+        {
+          "delay_days": 7.987994831847848,
+          "offset_days": -4.5,
+          "delta_log_likelihood_from_frozen_best": -56.808846724174145
+        },
+        {
+          "delay_days": 8.087994831847848,
+          "offset_days": -4.4,
+          "delta_log_likelihood_from_frozen_best": -54.04098655739108
+        },
+        {
+          "delay_days": 8.187994831847849,
+          "offset_days": -4.3,
+          "delta_log_likelihood_from_frozen_best": -51.3002564214421
+        },
+        {
+          "delay_days": 8.287994831847847,
+          "offset_days": -4.2,
+          "delta_log_likelihood_from_frozen_best": -48.29584813419024
+        },
+        {
+          "delay_days": 8.387994831847848,
+          "offset_days": -4.1,
+          "delta_log_likelihood_from_frozen_best": -45.185981087193795
+        },
+        {
+          "delay_days": 8.487994831847848,
+          "offset_days": -4.0,
+          "delta_log_likelihood_from_frozen_best": -41.831323731959856
+        },
+        {
+          "delay_days": 8.587994831847848,
+          "offset_days": -3.9,
+          "delta_log_likelihood_from_frozen_best": -38.63774549779009
+        },
+        {
+          "delay_days": 8.687994831847849,
+          "offset_days": -3.8,
+          "delta_log_likelihood_from_frozen_best": -35.521647172325174
+        },
+        {
+          "delay_days": 8.787994831847847,
+          "offset_days": -3.7,
+          "delta_log_likelihood_from_frozen_best": -32.65815814634516
+        },
+        {
+          "delay_days": 8.887994831847848,
+          "offset_days": -3.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -30.078090172544762
+        },
+        {
+          "delay_days": 8.987994831847848,
+          "offset_days": -3.5,
+          "delta_log_likelihood_from_frozen_best": -27.700475566445675
+        },
+        {
+          "delay_days": 9.087994831847848,
+          "offset_days": -3.4,
+          "delta_log_likelihood_from_frozen_best": -25.372796441319224
+        },
+        {
+          "delay_days": 9.187994831847849,
+          "offset_days": -3.3,
+          "delta_log_likelihood_from_frozen_best": -23.322025811352432
+        },
+        {
+          "delay_days": 9.287994831847847,
+          "offset_days": -3.2,
+          "delta_log_likelihood_from_frozen_best": -21.474651517659368
+        },
+        {
+          "delay_days": 9.387994831847848,
+          "offset_days": -3.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -19.761984776614554
+        },
+        {
+          "delay_days": 9.487994831847848,
+          "offset_days": -3.0,
+          "delta_log_likelihood_from_frozen_best": -18.316273226830162
+        },
+        {
+          "delay_days": 9.587994831847848,
+          "offset_days": -2.9,
+          "delta_log_likelihood_from_frozen_best": -17.297516668506432
+        },
+        {
+          "delay_days": 9.687994831847849,
+          "offset_days": -2.8,
+          "delta_log_likelihood_from_frozen_best": -16.45852914945317
+        },
+        {
+          "delay_days": 9.787994831847849,
+          "offset_days": -2.6999999999999997,
+          "delta_log_likelihood_from_frozen_best": -15.860534670637207
+        },
+        {
+          "delay_days": 9.887994831847848,
+          "offset_days": -2.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -15.43843287319396
+        },
+        {
+          "delay_days": 9.987994831847848,
+          "offset_days": -2.5,
+          "delta_log_likelihood_from_frozen_best": -15.03122947285192
+        },
+        {
+          "delay_days": 10.087994831847848,
+          "offset_days": -2.4,
+          "delta_log_likelihood_from_frozen_best": -14.410063016814092
+        },
+        {
+          "delay_days": 10.187994831847849,
+          "offset_days": -2.3,
+          "delta_log_likelihood_from_frozen_best": -13.696867592141643
+        },
+        {
+          "delay_days": 10.287994831847849,
+          "offset_days": -2.1999999999999997,
+          "delta_log_likelihood_from_frozen_best": -13.19517654055744
+        },
+        {
+          "delay_days": 10.387994831847848,
+          "offset_days": -2.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -12.763966761755
+        },
+        {
+          "delay_days": 10.487994831847848,
+          "offset_days": -2.0,
+          "delta_log_likelihood_from_frozen_best": -11.815769518476372
+        },
+        {
+          "delay_days": 10.587994831847848,
+          "offset_days": -1.9,
+          "delta_log_likelihood_from_frozen_best": -11.061619629916095
+        },
+        {
+          "delay_days": 10.687994831847849,
+          "offset_days": -1.7999999999999998,
+          "delta_log_likelihood_from_frozen_best": -10.436417197663104
+        },
+        {
+          "delay_days": 10.787994831847849,
+          "offset_days": -1.6999999999999997,
+          "delta_log_likelihood_from_frozen_best": -9.97940393268982
+        },
+        {
+          "delay_days": 10.887994831847848,
+          "offset_days": -1.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -9.651240668699756
+        },
+        {
+          "delay_days": 10.987994831847848,
+          "offset_days": -1.5,
+          "delta_log_likelihood_from_frozen_best": -9.309424776942251
+        },
+        {
+          "delay_days": 11.087994831847848,
+          "offset_days": -1.4,
+          "delta_log_likelihood_from_frozen_best": -8.73649487516559
+        },
+        {
+          "delay_days": 11.187994831847849,
+          "offset_days": -1.2999999999999998,
+          "delta_log_likelihood_from_frozen_best": -8.133601051227743
+        },
+        {
+          "delay_days": 11.287994831847849,
+          "offset_days": -1.1999999999999997,
+          "delta_log_likelihood_from_frozen_best": -7.753828185843304
+        },
+        {
+          "delay_days": 11.387994831847848,
+          "offset_days": -1.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -7.37508326680836
+        },
+        {
+          "delay_days": 11.487994831847848,
+          "offset_days": -1.0,
+          "delta_log_likelihood_from_frozen_best": -6.567285024606463
+        },
+        {
+          "delay_days": 11.587994831847848,
+          "offset_days": -0.8999999999999995,
+          "delta_log_likelihood_from_frozen_best": -5.804690176250006
+        },
+        {
+          "delay_days": 11.687994831847849,
+          "offset_days": -0.7999999999999998,
+          "delta_log_likelihood_from_frozen_best": -5.031395070265717
+        },
+        {
+          "delay_days": 11.787994831847847,
+          "offset_days": -0.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -4.262452852502975
+        },
+        {
+          "delay_days": 11.887994831847848,
+          "offset_days": -0.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -3.7406559649534756
+        },
+        {
+          "delay_days": 11.987994831847848,
+          "offset_days": -0.5,
+          "delta_log_likelihood_from_frozen_best": -3.266272794277029
+        },
+        {
+          "delay_days": 12.087994831847848,
+          "offset_days": -0.39999999999999947,
+          "delta_log_likelihood_from_frozen_best": -2.318073605585596
+        },
+        {
+          "delay_days": 12.187994831847849,
+          "offset_days": -0.2999999999999998,
+          "delta_log_likelihood_from_frozen_best": -1.3830631206474209
+        },
+        {
+          "delay_days": 12.287994831847849,
+          "offset_days": -0.1999999999999993,
+          "delta_log_likelihood_from_frozen_best": -0.6445349755704228
+        },
+        {
+          "delay_days": 12.387994831847848,
+          "offset_days": -0.09999999999999964,
+          "delta_log_likelihood_from_frozen_best": -0.16979162838470074
+        },
+        {
+          "delay_days": 12.487994831847848,
+          "offset_days": 0.0,
+          "delta_log_likelihood_from_frozen_best": 0.0
+        },
+        {
+          "delay_days": 12.587994831847848,
+          "offset_days": 0.10000000000000053,
+          "delta_log_likelihood_from_frozen_best": -0.05573245957202744
+        },
+        {
+          "delay_days": 12.687994831847849,
+          "offset_days": 0.20000000000000018,
+          "delta_log_likelihood_from_frozen_best": -0.21364718762379198
+        },
+        {
+          "delay_days": 12.787994831847849,
+          "offset_days": 0.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -0.5816431396015105
+        },
+        {
+          "delay_days": 12.887994831847848,
+          "offset_days": 0.40000000000000036,
+          "delta_log_likelihood_from_frozen_best": -0.902889574486835
+        },
+        {
+          "delay_days": 12.987994831847848,
+          "offset_days": 0.5,
+          "delta_log_likelihood_from_frozen_best": -1.059148254851607
+        },
+        {
+          "delay_days": 13.087994831847848,
+          "offset_days": 0.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -0.9746702246466157
+        },
+        {
+          "delay_days": 13.187994831847849,
+          "offset_days": 0.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -1.1145074185806152
+        },
+        {
+          "delay_days": 13.287994831847849,
+          "offset_days": 0.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -1.3293601104705886
+        },
+        {
+          "delay_days": 13.387994831847848,
+          "offset_days": 0.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -1.6778159211698949
+        },
+        {
+          "delay_days": 13.487994831847848,
+          "offset_days": 1.0,
+          "delta_log_likelihood_from_frozen_best": -1.9773015269947791
+        },
+        {
+          "delay_days": 13.587994831847848,
+          "offset_days": 1.1000000000000005,
+          "delta_log_likelihood_from_frozen_best": -2.3982424654313945
+        },
+        {
+          "delay_days": 13.687994831847849,
+          "offset_days": 1.2000000000000002,
+          "delta_log_likelihood_from_frozen_best": -3.0147707849446306
+        },
+        {
+          "delay_days": 13.787994831847849,
+          "offset_days": 1.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -3.7526021276371466
+        },
+        {
+          "delay_days": 13.887994831847848,
+          "offset_days": 1.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -4.53083327299646
+        },
+        {
+          "delay_days": 13.987994831847848,
+          "offset_days": 1.5,
+          "delta_log_likelihood_from_frozen_best": -5.400065753801755
+        },
+        {
+          "delay_days": 14.087994831847848,
+          "offset_days": 1.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -6.166260152356699
+        },
+        {
+          "delay_days": 14.187994831847849,
+          "offset_days": 1.7000000000000002,
+          "delta_log_likelihood_from_frozen_best": -6.907699679759389
+        },
+        {
+          "delay_days": 14.287994831847849,
+          "offset_days": 1.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -7.7749486096963665
+        },
+        {
+          "delay_days": 14.387994831847848,
+          "offset_days": 1.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -8.71405795089413
+        },
+        {
+          "delay_days": 14.487994831847848,
+          "offset_days": 2.0,
+          "delta_log_likelihood_from_frozen_best": -9.836609289995977
+        },
+        {
+          "delay_days": 14.587994831847848,
+          "offset_days": 2.1000000000000005,
+          "delta_log_likelihood_from_frozen_best": -11.184553306169619
+        },
+        {
+          "delay_days": 14.687994831847849,
+          "offset_days": 2.2,
+          "delta_log_likelihood_from_frozen_best": -12.734776872175644
+        },
+        {
+          "delay_days": 14.787994831847849,
+          "offset_days": 2.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -14.413012962922949
+        },
+        {
+          "delay_days": 14.887994831847848,
+          "offset_days": 2.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -16.194777403876287
+        },
+        {
+          "delay_days": 14.987994831847848,
+          "offset_days": 2.5,
+          "delta_log_likelihood_from_frozen_best": -17.898109594629204
+        },
+        {
+          "delay_days": 15.087994831847848,
+          "offset_days": 2.6000000000000005,
+          "delta_log_likelihood_from_frozen_best": -18.930144994767033
+        },
+        {
+          "delay_days": 15.187994831847849,
+          "offset_days": 2.7,
+          "delta_log_likelihood_from_frozen_best": -19.866150220974305
+        },
+        {
+          "delay_days": 15.287994831847849,
+          "offset_days": 2.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -20.924964612695476
+        },
+        {
+          "delay_days": 15.387994831847848,
+          "offset_days": 2.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -22.062423528626823
+        },
+        {
+          "delay_days": 15.487994831847848,
+          "offset_days": 3.0,
+          "delta_log_likelihood_from_frozen_best": -22.99605862086355
+        },
+        {
+          "delay_days": 15.587994831847848,
+          "offset_days": 3.0999999999999996,
+          "delta_log_likelihood_from_frozen_best": -23.970611379490947
+        },
+        {
+          "delay_days": 15.687994831847849,
+          "offset_days": 3.200000000000001,
+          "delta_log_likelihood_from_frozen_best": -25.158486601303593
+        },
+        {
+          "delay_days": 15.787994831847849,
+          "offset_days": 3.3000000000000007,
+          "delta_log_likelihood_from_frozen_best": -26.43879865807503
+        },
+        {
+          "delay_days": 15.887994831847848,
+          "offset_days": 3.4000000000000004,
+          "delta_log_likelihood_from_frozen_best": -27.801039995054452
+        },
+        {
+          "delay_days": 15.987994831847848,
+          "offset_days": 3.5,
+          "delta_log_likelihood_from_frozen_best": -29.198290312147947
+        },
+        {
+          "delay_days": 16.087994831847848,
+          "offset_days": 3.5999999999999996,
+          "delta_log_likelihood_from_frozen_best": -30.44634230882002
+        },
+        {
+          "delay_days": 16.18799483184785,
+          "offset_days": 3.700000000000001,
+          "delta_log_likelihood_from_frozen_best": -31.851155189811834
+        },
+        {
+          "delay_days": 16.287994831847847,
+          "offset_days": 3.8000000000000007,
+          "delta_log_likelihood_from_frozen_best": -33.36707776492767
+        },
+        {
+          "delay_days": 16.38799483184785,
+          "offset_days": 3.9000000000000004,
+          "delta_log_likelihood_from_frozen_best": -34.71356397848285
+        },
+        {
+          "delay_days": 16.48799483184785,
+          "offset_days": 4.0,
+          "delta_log_likelihood_from_frozen_best": -36.063916760746
+        },
+        {
+          "delay_days": 16.587994831847848,
+          "offset_days": 4.1,
+          "delta_log_likelihood_from_frozen_best": -37.64400033163838
+        },
+        {
+          "delay_days": 16.68799483184785,
+          "offset_days": 4.200000000000001,
+          "delta_log_likelihood_from_frozen_best": -39.400380372051586
+        },
+        {
+          "delay_days": 16.787994831847847,
+          "offset_days": 4.300000000000001,
+          "delta_log_likelihood_from_frozen_best": -41.32556973341707
+        },
+        {
+          "delay_days": 16.88799483184785,
+          "offset_days": 4.4,
+          "delta_log_likelihood_from_frozen_best": -43.4471311218349
+        },
+        {
+          "delay_days": 16.98799483184785,
+          "offset_days": 4.5,
+          "delta_log_likelihood_from_frozen_best": -45.576465737825856
+        },
+        {
+          "delay_days": 17.08799483184785,
+          "offset_days": 4.600000000000001,
+          "delta_log_likelihood_from_frozen_best": -47.01559521189665
+        },
+        {
+          "delay_days": 17.18799483184785,
+          "offset_days": 4.700000000000001,
+          "delta_log_likelihood_from_frozen_best": -48.39704748265831
+        },
+        {
+          "delay_days": 17.287994831847847,
+          "offset_days": 4.800000000000001,
+          "delta_log_likelihood_from_frozen_best": -49.75206873499701
+        },
+        {
+          "delay_days": 17.38799483184785,
+          "offset_days": 4.9,
+          "delta_log_likelihood_from_frozen_best": -51.163388912587834
+        },
+        {
+          "delay_days": 17.48799483184785,
+          "offset_days": 5.0,
+          "delta_log_likelihood_from_frozen_best": -52.53768865922393
+        }
+      ]
+    }
+  ],
+  "interpretation": "These are fixed-other-parameter slices, not profiled likelihoods or calibrated confidence intervals; OU delay likelihood has sample-coincidence cusps.",
+  "training_receipt_sha256": "6219ef5533dc5fa297a3c1b864e95141d7728025af3af242e40049fbc4c1e65d",
+  "code_sha256": "214150eee754ec3ca88517dd44767be496e322bc4459f1808278fed0f0e897cc",
+  "runner_sha256": "caf432ff125fee6d1c86148bda1492d85d108e600173788c7cdb6d062b83c2b1",
+  "executed_code_sha256": "35970ae906e9312a8af2088b1ab2530c26cd2dd01a84b4e4cc13286879937149",
+  "input_normalization_audit": "code_normalization_audit.json",
+  "executed_training_receipt_sha256": "83953672c087daba10f5057e3c0ccf1ccc1c05acb58841e5b0d9a1a45c8df53e"
+}

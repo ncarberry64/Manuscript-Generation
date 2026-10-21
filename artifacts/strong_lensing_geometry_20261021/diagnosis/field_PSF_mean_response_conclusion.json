@@ -1,0 +1,147 @@
+{
+  "status": "FIELD_MEAN_RESPONSE_DIAGNOSIS_COMPLETE_NO_ADEQUATE_CALIBRATION",
+  "scope": "Already consumed field-star calibration development; no quasar target pixel use, no held-out validation claim. Raw SCI/ERR/model/residual arrays retained in source artifacts.",
+  "tested_mean_response_equations": {
+    "jitter": "P_mean=P_STDPSF * Gaussian(C), C positive semidefinite",
+    "halo": "P_mean=P_STDPSF * [(1-f)delta+f Gaussian(C)], 0<=f<=.5, C positive semidefinite",
+    "dilation": "Empirical whole-ePSF scale/elliptic remap diagnostic; not an exact optical wavelength law because the input already contains the native pixel integral."
+  },
+  "actual_residual_findings": "Independent convention audit found a10\u201323percent excess in native stellar wings near radius4\u20135pixels; original orientation/oversampling/spatial/origin/PAM conventions were checked. Additional jitter, empirical dilation, and a positive Gaussian halo improve the fitted mean only modestly and leave gross known-ERR failures. No covariance rescaling/floor applied.",
+  "halo_results": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "standard_chi2": 13608.666803228274,
+      "standard_dof": 265,
+      "candidates": {
+        "isotropic_halo": {
+          "chi2": 13142.092197063605,
+          "dof": 263,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.03428510763846371,
+          "halo_fraction": 0.12496467641011955,
+          "sigma_x_native_pixel": 0.7287620411747773,
+          "sigma_y_native_pixel": 0.7287620411747773,
+          "correlation": 0,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        },
+        "elliptic_halo": {
+          "chi2": 12975.529151546352,
+          "dof": 261,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.04652459060366798,
+          "halo_fraction": 0.4999999999999992,
+          "sigma_x_native_pixel": 0.4010431956156095,
+          "sigma_y_native_pixel": 0.10000000000074001,
+          "correlation": -0.6557682021179909,
+          "active_bound_indices": [
+            6,
+            8
+          ],
+          "known_ERR_adequacy_pass": false
+        }
+      }
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "standard_chi2": 14089.97086271468,
+      "standard_dof": 267,
+      "candidates": {
+        "isotropic_halo": {
+          "chi2": 13582.635092730903,
+          "dof": 265,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.03600687147808823,
+          "halo_fraction": 0.16935534234875538,
+          "sigma_x_native_pixel": 0.6249018433981385,
+          "sigma_y_native_pixel": 0.6249018433981385,
+          "correlation": 0,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        },
+        "elliptic_halo": {
+          "chi2": 13539.478990296004,
+          "dof": 263,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.03906976655824068,
+          "halo_fraction": 0.03818085865646478,
+          "sigma_x_native_pixel": 1.6694584666100336,
+          "sigma_y_native_pixel": 0.9459601139788874,
+          "correlation": 0.4283784758268601,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        }
+      }
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "standard_chi2": 12962.997152358646,
+      "standard_dof": 265,
+      "candidates": {
+        "isotropic_halo": {
+          "chi2": 12451.77542669572,
+          "dof": 263,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.03943700053732624,
+          "halo_fraction": 0.16877479922831642,
+          "sigma_x_native_pixel": 0.6155858444339586,
+          "sigma_y_native_pixel": 0.6155858444339586,
+          "correlation": 0,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        },
+        "elliptic_halo": {
+          "chi2": 12227.00527238642,
+          "dof": 261,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.05677636670916897,
+          "halo_fraction": 0.12867237372210819,
+          "sigma_x_native_pixel": 0.8326708230896318,
+          "sigma_y_native_pixel": 0.43628836104019886,
+          "correlation": -0.7061109388808884,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        }
+      }
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "standard_chi2": 11381.039013650581,
+      "standard_dof": 262,
+      "candidates": {
+        "isotropic_halo": {
+          "chi2": 10738.728026625284,
+          "dof": 260,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.056436937458425374,
+          "halo_fraction": 0.20905854492270803,
+          "sigma_x_native_pixel": 0.5993002334660175,
+          "sigma_y_native_pixel": 0.5993002334660175,
+          "correlation": 0,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        },
+        "elliptic_halo": {
+          "chi2": 10689.221560066828,
+          "dof": 258,
+          "formal_p_value": 0.0,
+          "chi2_reduction_fraction": 0.06078684492285613,
+          "halo_fraction": 0.2765954740415705,
+          "sigma_x_native_pixel": 0.5511788563219525,
+          "sigma_y_native_pixel": 0.42703768970988665,
+          "correlation": 0.21985404211351395,
+          "active_bound_indices": [],
+          "known_ERR_adequacy_pass": false
+        }
+      }
+    }
+  ],
+  "conclusion": "The tested finite mean-response corrections do not supply an adequate same-visit instrumental PSF at native ERR precision. This is not proof that every possible PSF is inadequate, nor a physical rejection of either lens model. Do not transfer these fitted corrections as validated optical response or claim predictive geometry validation. The original fixed independent PSF may be used only under a separately frozen diagnostic protocol that forces validation false and reports the failed calibration.",
+  "physical_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "quasar_target_pixels_inspected": false,
+  "source_sha256": {
+    "field_PSF_mean_response_diagnostic.json": "9c43b6240c64f68bda0938367454e72c5e038fb034ebd1c09d12a722a2213210",
+    "field_PSF_halo_response_diagnostic.json": "826dabb1989b3051b259efb9ce41e26bdf93b006d998ea1f84ab5654b4532136",
+    "fit_field_psf_response.py": "a2a843f85cd7a945da2d312f3f53beb7534b6b3bf5b2f617dd4157d86d3507eb"
+  }
+}

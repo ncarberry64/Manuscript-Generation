@@ -1,0 +1,1101 @@
+{
+  "status": "EXECUTED_ORIGINAL_FROZEN_MACRO_CENTRAL_IMAGE_PIXEL_TEST",
+  "prediction": {
+    "label": "additional_stationary_image",
+    "position_light_centered_arcsec": [
+      0.003735903400556197,
+      -0.027160207164578308
+    ],
+    "position_relative_A_arcsec": [
+      -1.168640436889666,
+      -0.592939714271599
+    ],
+    "signed_magnification_relative_unperturbed_FLRW": 0.700063383043153,
+    "absolute_macro_flux_relative_A": 0.06319717558937626,
+    "image_parity": 1,
+    "normalized_lens_jacobian_singular_values": [
+      2.3021041237714974,
+      1.6967107303278064
+    ],
+    "original_lens_residual_rad": 6.617444900424222e-24,
+    "original_arrival_stationarity_Mpc": 2.710505431213761e-20
+  },
+  "source_data_provenance": "data/strong_lensing_revision_20261020/hst/provenance.json",
+  "conditional_R1_prediction": {
+    "label": "additional_stationary_image",
+    "position_light_centered_arcsec": [
+      0.0037117881081277226,
+      -0.027082923900568476
+    ],
+    "position_relative_A_arcsec": [
+      -1.1686491036936513,
+      -0.5928994258539301
+    ],
+    "signed_magnification_relative_unperturbed_FLRW": 0.6985367621499459,
+    "absolute_macro_flux_relative_A": 0.06313147684181039,
+    "image_parity": 1,
+    "normalized_lens_jacobian_singular_values": [
+      2.3037707636089384,
+      1.6979520055895267
+    ],
+    "original_lens_residual_rad": 1.3234889800848443e-23,
+    "original_arrival_stationarity_Mpc": 1.0842021724855044e-19
+  },
+  "no_lightcurve_targets_consumed": true,
+  "photometric_condition": "Observed central/A ratio equals frozen achromatic macro ratio; no differential extinction/microlensing/intrinsic-delay variability correction is derived here.",
+  "bands": {
+    "F814W": {
+      "pixel_scale_arcsec": 0.05,
+      "exposure_seconds": 1445.0,
+      "background_electrons_per_second": 0.09461291879415512,
+      "blank_sky_sigma_electrons_per_second": 0.01029931112443841,
+      "median_blank_WHT_exposure_like": 1514.608642578125,
+      "weight_formula": "variance = blank_sigma^2 median(WHT_blank)/WHT + max(SCI-sky,0)/WHT; WHT is exposure-like, never inverse variance.",
+      "normalization_nuisance_fraction": 0.05,
+      "centroid_search_square_half_width_arcsec": 0.05,
+      "psf_cases": [
+        {
+          "psf": "field_star_1",
+          "fitted_A_flux_electrons_per_second": 1074.3277306832151,
+          "quasar_fits": [
+            {
+              "xy": [
+                57.660337526551324,
+                91.10197368568396
+              ],
+              "flux": 1074.3277306832151,
+              "background_plane": [
+                0.1286360774230211,
+                -0.020313788222638532,
+                -0.015509466931404736
+              ],
+              "chi2": 16771.043684923545,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.5949997887146266
+            },
+            {
+              "xy": [
+                87.19456751375593,
+                102.14756391071344
+              ],
+              "flux": 662.5372018920347,
+              "background_plane": [
+                0.16442375243775115,
+                -0.019490486578828826,
+                -0.010360502400443117
+              ],
+              "chi2": 13357.869477113554,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.1790045275111602
+            },
+            {
+              "xy": [
+                106.99248594508082,
+                79.03113059382626
+              ],
+              "flux": 656.6614851166081,
+              "background_plane": [
+                0.14921382915182047,
+                -0.023100859626345574,
+                -0.009902016589114248
+              ],
+              "chi2": 12553.475766806208,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.0868634930257741
+            },
+            {
+              "xy": [
+                76.40257726158734,
+                58.800201108418065
+              ],
+              "flux": 549.0261038978884,
+              "background_plane": [
+                0.16175284259236497,
+                -0.009917617540911128,
+                -8.556442321384263e-05
+              ],
+              "chi2": 11455.974536760206,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.2251253680368508
+            }
+          ],
+          "registered_light_center_pixel": [
+            81.07943138427055,
+            79.77305600861392
+          ],
+          "registration_rotation_rad": -0.0008542480118861895,
+          "max_quasar_registration_residual_arcsec": 0.0013471064448185588,
+          "central_pixel": [
+            81.00424931251878,
+            79.22991589127443
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.024154639853865408,
+          "free_centroid_50mas_square_95_upper_ratio": 0.029349159857471028,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            0.010532251963808168,
+            0.013263568229367213
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.041231210761397095,
+          "upper_bound_details": {
+            "npixel": 39,
+            "bonferroni_z": 3.0156722472036894,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 41891.052607913574,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0.8327549886650866,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.02417921502691688
+        },
+        {
+          "psf": "field_star_2",
+          "fitted_A_flux_electrons_per_second": 1069.5233069831468,
+          "quasar_fits": [
+            {
+              "xy": [
+                57.09045412603651,
+                91.13576149534246
+              ],
+              "flux": 1069.5233069831468,
+              "background_plane": [
+                0.14924901918783448,
+                -0.012706520393076712,
+                -0.010837102385318754
+              ],
+              "chi2": 11948.699857982883,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.8333049650329483
+            },
+            {
+              "xy": [
+                86.60976198836151,
+                102.18343720137798
+              ],
+              "flux": 666.6630856381163,
+              "background_plane": [
+                0.16483864304180496,
+                -0.013181057518533677,
+                -0.007585223528508454
+              ],
+              "chi2": 2664.784151270869,
+              "npixel": 109,
+              "rms_electrons_per_second": 0.5745517571147595
+            },
+            {
+              "xy": [
+                106.4196774922431,
+                79.07163294218091
+              ],
+              "flux": 658.98379215381,
+              "background_plane": [
+                0.15311725283088704,
+                -0.017491752079184308,
+                -0.007764988426324087
+              ],
+              "chi2": 3634.001168885834,
+              "npixel": 109,
+              "rms_electrons_per_second": 0.5631705018897941
+            },
+            {
+              "xy": [
+                75.80770175664442,
+                58.84686994038825
+              ],
+              "flux": 548.4395585745632,
+              "background_plane": [
+                0.1703516052498833,
+                -0.0030336297245827696,
+                0.0011484751205532396
+              ],
+              "chi2": 6959.3720826406225,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.1576135433868986
+            }
+          ],
+          "registered_light_center_pixel": [
+            80.49855748107906,
+            79.81235615634058
+          ],
+          "registration_rotation_rad": -0.000947898814622652,
+          "max_quasar_registration_residual_arcsec": 0.001479325779812219,
+          "central_pixel": [
+            80.42332454414907,
+            79.26922308224425
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.023999713150451712,
+          "free_centroid_50mas_square_95_upper_ratio": 0.02874636805175021,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            0.008217488380248786,
+            0.01010360699348455
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.04034201497981504,
+          "upper_bound_details": {
+            "npixel": 39,
+            "bonferroni_z": 3.0156722472036894,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 43508.958461106144,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0.8552867186983198,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.02401974407917305
+        },
+        {
+          "psf": "field_star_3",
+          "fitted_A_flux_electrons_per_second": 1106.7496258626247,
+          "quasar_fits": [
+            {
+              "xy": [
+                56.772039165022,
+                91.89826650424004
+              ],
+              "flux": 1106.7496258626247,
+              "background_plane": [
+                0.16548233252608852,
+                0.026375164558376327,
+                -0.010365368278352313
+              ],
+              "chi2": 30174.765304863966,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.6611186502600594
+            },
+            {
+              "xy": [
+                86.30827454540737,
+                102.94109382292842
+              ],
+              "flux": 688.8242965311348,
+              "background_plane": [
+                0.17136141530904928,
+                0.008592500507451178,
+                -0.007767992626852585
+              ],
+              "chi2": 14671.416284070132,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.2078362716809232
+            },
+            {
+              "xy": [
+                106.11047115008374,
+                79.83210793881457
+              ],
+              "flux": 681.3176262061859,
+              "background_plane": [
+                0.16027599250825042,
+                0.0055253538727367,
+                -0.008393831569163844
+              ],
+              "chi2": 15244.148835251397,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.0757748952411779
+            },
+            {
+              "xy": [
+                75.5019816182765,
+                59.59541984453249
+              ],
+              "flux": 573.8266692466242,
+              "background_plane": [
+                0.16831911703231556,
+                0.016613744973464455,
+                0.0030324199406620155
+              ],
+              "chi2": 10079.993590773867,
+              "npixel": 109,
+              "rms_electrons_per_second": 0.7761174843098594
+            }
+          ],
+          "registered_light_center_pixel": [
+            80.18986929624018,
+            80.56964654339585
+          ],
+          "registration_rotation_rad": -0.000941547193573385,
+          "max_quasar_registration_residual_arcsec": 0.0014326102126574751,
+          "central_pixel": [
+            80.11463980908717,
+            80.02651299145937
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.024949097459070247,
+          "free_centroid_50mas_square_95_upper_ratio": 0.028130395323258388,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            0.0073497390386351195,
+            0.009069261967341228
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.03952721545264639,
+          "upper_bound_details": {
+            "npixel": 39,
+            "bonferroni_z": 3.0156722472036894,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 44054.0693210559,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0.8788045843915927,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.024985745582269413
+        },
+        {
+          "psf": "quasar_A_empirical",
+          "fitted_A_flux_electrons_per_second": 995.9190377593037,
+          "quasar_fits": [
+            {
+              "xy": [
+                56.95863899036894,
+                91.16543263404998
+              ],
+              "flux": 995.9190377593037,
+              "background_plane": [
+                0.27157847583293915,
+                2.7791060785028038e-18,
+                -1.1889044909231748e-17
+              ],
+              "chi2": 2.616662337542132e-23,
+              "npixel": 109,
+              "rms_electrons_per_second": 7.920687768858652e-14
+            },
+            {
+              "xy": [
+                86.48146255743285,
+                102.20883377981927
+              ],
+              "flux": 611.7309275651885,
+              "background_plane": [
+                0.25878871169905426,
+                -0.003297727240809479,
+                0.0002811815149509481
+              ],
+              "chi2": 5688.587679695915,
+              "npixel": 109,
+              "rms_electrons_per_second": 0.9493034409488802
+            },
+            {
+              "xy": [
+                106.28641079836387,
+                79.1002037294795
+              ],
+              "flux": 608.8668422550144,
+              "background_plane": [
+                0.23724283709017177,
+                -0.008084053958739516,
+                -0.0006937955162212656
+              ],
+              "chi2": 1687.7808740579553,
+              "npixel": 109,
+              "rms_electrons_per_second": 0.35543634037960375
+            },
+            {
+              "xy": [
+                75.6935007516769,
+                58.8724062632035
+              ],
+              "flux": 506.2916710609306,
+              "background_plane": [
+                0.2417845575504733,
+                0.0015208458299103718,
+                0.007428860230642078
+              ],
+              "chi2": 6267.298233530272,
+              "npixel": 109,
+              "rms_electrons_per_second": 1.04022163775748
+            }
+          ],
+          "registered_light_center_pixel": [
+            80.37208140456465,
+            79.83951226066442
+          ],
+          "registration_rotation_rad": -0.0008079353656508694,
+          "max_quasar_registration_residual_arcsec": 0.0012659426552551025,
+          "central_pixel": [
+            80.29692448714961,
+            79.29636866202672
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.024026085257411997,
+          "free_centroid_50mas_square_95_upper_ratio": 0.029331642055778328,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            0.00787562317741571,
+            0.011243838603080617
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.04113547370286988,
+          "upper_bound_details": {
+            "npixel": 37,
+            "bonferroni_z": 2.999672234876273,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 44024.965537594806,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0.8334032317521068,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.02405179396823661
+        }
+      ],
+      "smooth_and_nuclear_light_profile_fits": [
+        {
+          "chi2": 1027.4248334814254,
+          "npixel": 532,
+          "parameters": [
+            -0.004700080787514623,
+            -0.007541007192123411,
+            0.762237952762089,
+            1.3268218070327522
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.08,
+          "nuclear_point_allowed": false,
+          "amplitudes": [
+            3.924497548568875,
+            5.0872814283679456e-14,
+            0.5921828956379416,
+            6.329223628989162e-14,
+            1.5694497214765585e-13,
+            0.1342980059280801,
+            0.004179191037383095,
+            0.013597534486571923
+          ],
+          "rms_electrons_per_second": 0.0388860691489733,
+          "model": "smooth_positive_MGE",
+          "fixed_central_A_ratio": 0.0
+        },
+        {
+          "chi2": 46943.640866604124,
+          "npixel": 532,
+          "parameters": [
+            -0.00486647050903352,
+            0.049999999999891166,
+            0.8083156356583242,
+            1.2766515132022567
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.08,
+          "nuclear_point_allowed": false,
+          "amplitudes": [
+            1.1639149618470266e-26,
+            5.415861435922439e-25,
+            0.24773169753266688,
+            0.3836450005162818,
+            3.919286794214039e-18,
+            -0.04215598298967007,
+            0.011100304713895611,
+            -0.04406496486089328
+          ],
+          "rms_electrons_per_second": 0.3925826709415185,
+          "model": "smooth_positive_MGE",
+          "fixed_central_A_ratio": 0.06319717558937626
+        },
+        {
+          "chi2": 617.577542690772,
+          "npixel": 532,
+          "parameters": [
+            -0.003553236756872089,
+            -0.007578571280833862,
+            0.7720892711461598,
+            1.3238742357218427
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.02,
+          "nuclear_point_allowed": true,
+          "amplitudes": [
+            11.667100322244753,
+            1.8427870385555227,
+            0.5660838997742139,
+            0.44471284417741985,
+            0.06376033363532183,
+            1.7097626029346388e-10,
+            5.050229715029403,
+            0.11388081744881516,
+            0.0024682933791949054,
+            0.013588684057265758
+          ],
+          "rms_electrons_per_second": 0.020072510011370875,
+          "model": "flexible_cusp_plus_nucleus",
+          "fixed_central_A_ratio": 0.0
+        },
+        {
+          "chi2": 46943.64091600124,
+          "npixel": 532,
+          "parameters": [
+            -0.004871567522490776,
+            0.049999999999883554,
+            0.8083150179667687,
+            1.2766498380047706
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.02,
+          "nuclear_point_allowed": true,
+          "amplitudes": [
+            7.337295519776044e-17,
+            1.914387725408784e-18,
+            3.2284458125347582e-18,
+            0.2477293329573743,
+            0.3836486288642171,
+            3.1222154732398806e-17,
+            1.4050246693725637e-17,
+            -0.04215757434535446,
+            0.011107375915361747,
+            -0.044065445593950224
+          ],
+          "rms_electrons_per_second": 0.39258263791766634,
+          "model": "flexible_cusp_plus_nucleus",
+          "fixed_central_A_ratio": 0.06319717558937626
+        }
+      ],
+      "worst_psf_and_centroid_95_upper_ratio": 0.029349159857471028,
+      "worst_psf_centroid_and_adversarial_noise_normalization_upper_ratio": 0.041231210761397095,
+      "injection_recovery": [
+        {
+          "injected_ratio": 0.01,
+          "upper_bound_increment_ratio": 0.010000000000000005,
+          "recovery_error_ratio": 5.204170427930421e-18
+        },
+        {
+          "injected_ratio": 0.06319717558937626,
+          "upper_bound_increment_ratio": 0.06319717558937625,
+          "recovery_error_ratio": -1.3877787807814457e-17
+        },
+        {
+          "injected_ratio": 0.1,
+          "upper_bound_increment_ratio": 0.1,
+          "recovery_error_ratio": 0.0
+        }
+      ],
+      "correlated_noise_boundary_simulation": {
+        "seed": 4351223,
+        "simulations": 3000,
+        "coverage": 0.9986666666666667,
+        "noise": "perfectly correlated Gaussian pixel noise; B=0 boundary",
+        "nominal_coverage": 0.95
+      }
+    },
+    "F160W": {
+      "pixel_scale_arcsec": 0.12825000286,
+      "exposure_seconds": 9939.589728000003,
+      "background_electrons_per_second": 0.6418650150299072,
+      "blank_sky_sigma_electrons_per_second": 0.07047792993938036,
+      "median_blank_WHT_exposure_like": 9911.0654296875,
+      "weight_formula": "variance = blank_sigma^2 median(WHT_blank)/WHT + max(SCI-sky,0)/WHT; WHT is exposure-like, never inverse variance.",
+      "normalization_nuisance_fraction": 0.05,
+      "centroid_search_square_half_width_arcsec": 0.05,
+      "psf_cases": [
+        {
+          "psf": "field_star_1",
+          "fitted_A_flux_electrons_per_second": 357.39250145546856,
+          "quasar_fits": [
+            {
+              "xy": [
+                30.87397382599412,
+                44.64037486708066
+              ],
+              "flux": 357.39250145546856,
+              "background_plane": [
+                3.5692334136012285,
+                0.26969095875225363,
+                -0.533301741387653
+              ],
+              "chi2": 6573.057004865808,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.4913770711872718
+            },
+            {
+              "xy": [
+                42.314600056225466,
+                48.97955344390388
+              ],
+              "flux": 254.27187161238405,
+              "background_plane": [
+                4.015582508132793,
+                0.4880458131795132,
+                -0.613469035093995
+              ],
+              "chi2": 5170.562680434612,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.2341764207181463
+            },
+            {
+              "xy": [
+                50.09818150130932,
+                39.972182972966834
+              ],
+              "flux": 281.35627017787306,
+              "background_plane": [
+                4.005893285571498,
+                -0.04252515949434718,
+                -0.47028854804105646
+              ],
+              "chi2": 5211.945487705343,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.3774138649434442
+            },
+            {
+              "xy": [
+                38.13375094226861,
+                32.0605839155313
+              ],
+              "flux": 200.18215980331937,
+              "background_plane": [
+                3.2533239240891345,
+                0.33094613022473185,
+                0.18696089430124407
+              ],
+              "chi2": 2467.0344660237984,
+              "npixel": 21,
+              "rms_electrons_per_second": 0.862321508604716
+            }
+          ],
+          "registered_light_center_pixel": [
+            39.97355339594722,
+            40.244138117771165
+          ],
+          "registration_rotation_rad": 0.0005885882663614192,
+          "max_quasar_registration_residual_arcsec": 0.004390771648559404,
+          "central_pixel": [
+            39.94454819912734,
+            40.03234551922932
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.4315583631037981,
+          "free_centroid_50mas_square_95_upper_ratio": 0.541077772044465,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            0.03731692119711412,
+            0.04364194812320754
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.6691497996365552,
+          "upper_bound_details": {
+            "npixel": 21,
+            "bonferroni_z": 2.8227138814289368,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 8260.868718425623,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.43159352997480466
+        },
+        {
+          "psf": "field_star_2",
+          "fitted_A_flux_electrons_per_second": 370.30057613282446,
+          "quasar_fits": [
+            {
+              "xy": [
+                30.881139679876743,
+                44.64769628107445
+              ],
+              "flux": 370.30057613282446,
+              "background_plane": [
+                3.1061224634542457,
+                0.3657830276019695,
+                -0.1503691565476094
+              ],
+              "chi2": 4465.254509354769,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.3487271033759707
+            },
+            {
+              "xy": [
+                42.36449960158688,
+                48.9235057619862
+              ],
+              "flux": 263.4087403830763,
+              "background_plane": [
+                3.628456527675593,
+                0.25719572004038777,
+                -0.12024142233759733
+              ],
+              "chi2": 8725.126725671213,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.7710631013374158
+            },
+            {
+              "xy": [
+                50.1119397806028,
+                39.91651298489319
+              ],
+              "flux": 292.0031635651628,
+              "background_plane": [
+                3.571794467525789,
+                -0.035163888839856786,
+                0.08912943660152971
+              ],
+              "chi2": 7201.207380200798,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.661119954017346
+            },
+            {
+              "xy": [
+                38.16688647276025,
+                32.003006219948944
+              ],
+              "flux": 202.8677424818514,
+              "background_plane": [
+                3.094700872752358,
+                0.2616785292505412,
+                0.564369557596731
+              ],
+              "chi2": 12326.216616627427,
+              "npixel": 21,
+              "rms_electrons_per_second": 2.122888199757734
+            }
+          ],
+          "registered_light_center_pixel": [
+            39.997326409547846,
+            40.204370516759795
+          ],
+          "registration_rotation_rad": -0.0013082541847748565,
+          "max_quasar_registration_residual_arcsec": 0.0026938786911219763,
+          "central_pixel": [
+            39.967919527957626,
+            39.992633317489556
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.5042380524481855,
+          "free_centroid_50mas_square_95_upper_ratio": 0.5537668688632225,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            -0.02126694108257255,
+            0.036495854777318246
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.6832606218720092,
+          "upper_bound_details": {
+            "npixel": 25,
+            "bonferroni_z": 2.878161739095483,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 8260.868718425623,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.5042605980725466
+        },
+        {
+          "psf": "field_star_3",
+          "fitted_A_flux_electrons_per_second": 373.9403219452619,
+          "quasar_fits": [
+            {
+              "xy": [
+                30.870420303124735,
+                44.63092365027459
+              ],
+              "flux": 373.9403219452619,
+              "background_plane": [
+                2.685964902481006,
+                0.12928534183777182,
+                -0.1447423740329198
+              ],
+              "chi2": 4204.348637327867,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.2212166678158327
+            },
+            {
+              "xy": [
+                42.38714331320577,
+                48.94763753623039
+              ],
+              "flux": 269.9284302682714,
+              "background_plane": [
+                3.270246893032372,
+                -0.21514326460027364,
+                -0.4157438528508963
+              ],
+              "chi2": 2989.4571636845635,
+              "npixel": 21,
+              "rms_electrons_per_second": 0.9839518333547085
+            },
+            {
+              "xy": [
+                50.13715786616508,
+                39.94140076387498
+              ],
+              "flux": 293.90886797327244,
+              "background_plane": [
+                3.3227013701015062,
+                -0.5143130605062863,
+                -0.2462763311343468
+              ],
+              "chi2": 2206.5923522378494,
+              "npixel": 21,
+              "rms_electrons_per_second": 0.8278571547083944
+            },
+            {
+              "xy": [
+                38.19380924576454,
+                32.03288939217034
+              ],
+              "flux": 207.4100637528416,
+              "background_plane": [
+                2.8216132707434913,
+                -0.09823802689443466,
+                0.29509353727051574
+              ],
+              "chi2": 4781.552537907619,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.2856257654286474
+            }
+          ],
+          "registered_light_center_pixel": [
+            40.01512586829737,
+            40.219318778782416
+          ],
+          "registration_rotation_rad": 0.00021763763146735477,
+          "max_quasar_registration_residual_arcsec": 0.0023536730326219253,
+          "central_pixel": [
+            39.98604210887602,
+            40.00753695430829
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.45396442699994904,
+          "free_centroid_50mas_square_95_upper_ratio": 0.5450182699481027,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            -0.03370238171338976,
+            0.04124966734248985
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.6737032422382118,
+          "upper_bound_details": {
+            "npixel": 22,
+            "bonferroni_z": 2.8375969129437872,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 8260.868718425623,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.4539745756266517
+        },
+        {
+          "psf": "quasar_A_empirical",
+          "fitted_A_flux_electrons_per_second": 333.2213031053542,
+          "quasar_fits": [
+            {
+              "xy": [
+                30.8985315884204,
+                44.63209552243807
+              ],
+              "flux": 333.2213031053542,
+              "background_plane": [
+                2.9383813142776445,
+                1.6897647892409549e-15,
+                8.56544407527285e-16
+              ],
+              "chi2": 3.3787622271273224e-24,
+              "npixel": 21,
+              "rms_electrons_per_second": 3.608578620024548e-14
+            },
+            {
+              "xy": [
+                42.38879517796307,
+                48.907731999508805
+              ],
+              "flux": 239.2143886055938,
+              "background_plane": [
+                3.46880588260886,
+                -0.18761636141245783,
+                0.03554900811320125
+              ],
+              "chi2": 9135.164511187764,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.7851064732808515
+            },
+            {
+              "xy": [
+                50.1429414392714,
+                39.90216069971509
+              ],
+              "flux": 263.7508648765441,
+              "background_plane": [
+                3.393936416891116,
+                -0.47948629495727046,
+                0.2115136734561933
+              ],
+              "chi2": 4455.95749391138,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.2528679014182134
+            },
+            {
+              "xy": [
+                38.18948738067312,
+                31.99016927295529
+              ],
+              "flux": 183.7866079742092,
+              "background_plane": [
+                2.944202917476457,
+                -0.019631539810829376,
+                0.6440250908212444
+              ],
+              "chi2": 10059.960257162467,
+              "npixel": 21,
+              "rms_electrons_per_second": 1.883491991601626
+            }
+          ],
+          "registered_light_center_pixel": [
+            40.021222566576334,
+            40.18970538881445
+          ],
+          "registration_rotation_rad": -0.0012452199953600254,
+          "max_quasar_registration_residual_arcsec": 0.002516311720407065,
+          "central_pixel": [
+            39.99182903172725,
+            39.97796633632592
+          ],
+          "fixed_position_positive_light_95_upper_ratio": 0.4781549175020813,
+          "free_centroid_50mas_square_95_upper_ratio": 0.545509101283095,
+          "least_constraining_centroid_offset_pixel_directions_arcsec": [
+            -0.03182715706865756,
+            0.03662077461519049
+          ],
+          "continuous_centroid_search": true,
+          "fivefold_sigma_twenty_percent_lower_A_normalization_upper_ratio": 0.6740548273028582,
+          "upper_bound_details": {
+            "npixel": 21,
+            "bonferroni_z": 2.8227138814289368,
+            "alpha": 0.05,
+            "support_fraction_of_peak": 0.03
+          },
+          "nonnegative_pixel_profile_chi2_at_frozen_ratio": 8260.868718425623,
+          "profile_chi2_is_not_a_detection_significance": true,
+          "minimum_required_extra_dimming_at_free_centroid_mag": 0,
+          "conditional_R1_fixed_position_positive_light_95_upper_ratio": 0.47817503170513087
+        }
+      ],
+      "smooth_and_nuclear_light_profile_fits": [
+        {
+          "chi2": 509.90452817186633,
+          "npixel": 80,
+          "parameters": [
+            -0.0026749019543989344,
+            -0.00348517086129469,
+            0.8178709316607344,
+            1.3362385156715813
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.08,
+          "nuclear_point_allowed": false,
+          "amplitudes": [
+            76.03453201983417,
+            4.949486109832105e-15,
+            11.003169998818676,
+            5e-324,
+            1.0332928453775608e-17,
+            1.9709907433953366,
+            0.04842666937201173,
+            0.011571026166761582
+          ],
+          "rms_electrons_per_second": 0.20688593156235557,
+          "model": "smooth_positive_MGE",
+          "fixed_central_A_ratio": 0.0
+        },
+        {
+          "chi2": 465.4642415784816,
+          "npixel": 80,
+          "parameters": [
+            -0.0020869327906728507,
+            0.0012034183524183063,
+            0.8165999642407781,
+            1.341744332423703
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.08,
+          "nuclear_point_allowed": false,
+          "amplitudes": [
+            52.94065608182553,
+            5.045821653877525,
+            10.311622475261727,
+            1.6421878052309705e-13,
+            3.70514279090164e-13,
+            2.041949186972237,
+            0.03427361862588324,
+            -0.10052550585256248
+          ],
+          "rms_electrons_per_second": 0.1957704179265956,
+          "model": "smooth_positive_MGE",
+          "fixed_central_A_ratio": 0.06319717558937626
+        },
+        {
+          "chi2": 441.7398678375305,
+          "npixel": 80,
+          "parameters": [
+            -0.0029823337523780065,
+            -0.0003652487536652191,
+            0.81262256588257,
+            1.3488532098099122
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.02,
+          "nuclear_point_allowed": true,
+          "amplitudes": [
+            49.57142571856616,
+            25.09523774638227,
+            11.52625600319068,
+            9.493937188051826,
+            8.510549451752364e-10,
+            1.2679265900010159e-09,
+            29.471908914029395,
+            2.1223988783177705,
+            0.05545524513253101,
+            -0.06520711612117788
+          ],
+          "rms_electrons_per_second": 0.19038529467363557,
+          "model": "flexible_cusp_plus_nucleus",
+          "fixed_central_A_ratio": 0.0
+        },
+        {
+          "chi2": 435.28604352739023,
+          "npixel": 80,
+          "parameters": [
+            -0.00224518261426353,
+            0.0006274215132696047,
+            0.8129671921308407,
+            1.3501209332098558
+          ],
+          "success": true,
+          "minimum_intrinsic_width_arcsec": 0.02,
+          "nuclear_point_allowed": true,
+          "amplitudes": [
+            6.99830235094701e-11,
+            23.965939488792927,
+            11.777058881774353,
+            9.443608621502756,
+            6.411011837115545e-12,
+            3.334493257214588e-11,
+            27.41944329693013,
+            2.1276794352640094,
+            0.03909046625062366,
+            -0.08844537424963565
+          ],
+          "rms_electrons_per_second": 0.1887598126122599,
+          "model": "flexible_cusp_plus_nucleus",
+          "fixed_central_A_ratio": 0.06319717558937626
+        }
+      ],
+      "worst_psf_and_centroid_95_upper_ratio": 0.5537668688632225,
+      "worst_psf_centroid_and_adversarial_noise_normalization_upper_ratio": 0.6832606218720092,
+      "injection_recovery": [
+        {
+          "injected_ratio": 0.01,
+          "upper_bound_increment_ratio": 0.009999999999999955,
+          "recovery_error_ratio": -4.5102810375396984e-17
+        },
+        {
+          "injected_ratio": 0.06319717558937626,
+          "upper_bound_increment_ratio": 0.06319717558937624,
+          "recovery_error_ratio": -2.7755575615628914e-17
+        },
+        {
+          "injected_ratio": 0.1,
+          "upper_bound_increment_ratio": 0.10000000000000002,
+          "recovery_error_ratio": 1.3877787807814457e-17
+        }
+      ],
+      "correlated_noise_boundary_simulation": {
+        "seed": 4351223,
+        "simulations": 3000,
+        "coverage": 0.9986666666666667,
+        "noise": "perfectly correlated Gaussian pixel noise; B=0 boundary",
+        "nominal_coverage": 0.95
+      }
+    }
+  },
+  "code_sha256": {
+    "code/strong_lensing_hst_central.py": "6e30c0faa1576d92a06f64ab1b840361c7dda276ac31261209415ccadcc02fa0",
+    "scripts/test_he0435_central_image.py": "8bf5861bddec74bf9c93f1fe4ac8d2f53ec042f04b8292a6deda1a5e17b4e465"
+  },
+  "display_regeneration": "Saved fitted parameters and amplitudes reapplied exactly; no science refit. Positive colour-bar zero tick removed; readable F814W publication panel added."
+}

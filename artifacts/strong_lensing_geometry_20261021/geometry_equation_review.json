@@ -1,0 +1,141 @@
+{
+  "status": "PASS_EQUATIONS_WITH_EXPLICIT_CONDITIONAL_PHYSICAL_SCOPE",
+  "review_role": "Independent read-only source/equation review before fresh JWST pixel exposure",
+  "source_sha256": {
+    "code/strong_lensing_geometry_revision.py": "8e9334a8297e871f525d19f733ea8b30f22d9bdfec97179384b5f0d952461712",
+    "tests/test_strong_lensing_geometry_revision.py": "0d50e824db0bf27246484f93365058f2bb0de7bc2061683de5ff57e15e4b25b3"
+  },
+  "focused_tests": {
+    "command": "python -m pytest tests/test_strong_lensing_geometry_revision.py -q",
+    "passed": 7,
+    "failed": 0,
+    "elapsed_seconds": 1.38
+  },
+  "equation_derivation": {
+    "rear_ray": "x_p=D_op theta-D_lp alpha_l(D_ol theta)",
+    "source_ray": "R=theta-(D_ls/D_os)alpha_l-(D_ps/D_os)[U_rem x_p+alpha_G1(x_p)]-beta0",
+    "action": "ct=(1+zl)DolDop/(2Dlp)|theta-theta_p|\u00b2+(1+zp)DopDos/(2Dps)|theta_p-beta0|\u00b2-(1+zl)psi_l(Dol theta)-(1+zp)[.5 x_p^T U_rem x_p+psi_G1(x_p)]",
+    "ordered_jacobian": "I-(D_ls D_ol/D_os)H_l-(D_ps/D_os)(U_rem+H_G1)(D_op I-D_lp D_ol H_l)",
+    "action_stationarity_relation": "At theta_p=x_p/D_op, partial_theta ct=0 and partial_theta_p ct=kp R; the adopted distance sum identity supplies the D_ls coefficient."
+  },
+  "independent_diagnostics": {
+    "distance_sum_relative_residual": -1.4768479283017753e-16,
+    "rear_action_gradient_minus_kp_ray_residual_max_Mpc": 1.4094628242311558e-18,
+    "foreground_action_gradient_on_ray_max_Mpc": 0.0,
+    "ordered_jacobian_minus_centered_finite_difference_max": 2.1108503833744408e-11,
+    "jacobian_antisymmetry_component": -0.02660318948350332,
+    "foreground_R1_mass_enclosed_fraction_difference_from_original_total_twoPlummer": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "foreground_R1_original_source_sections": [
+      {
+        "radius_kpc": 0.03,
+        "density_over_Mpl2H02": 3737420066.389901,
+        "consumed_reduced_source_J_eff": -171342586.0778244,
+        "scalar_gradient_over_MplH0": -3.599521995445089e-05,
+        "scalar_integrated_lhs": -3.4962112782574316e-17,
+        "scalar_integrated_source": -3.4962112782574334e-17,
+        "metric_Gauss_lhs": 7.626131066892517e-16,
+        "metric_Gauss_source": 7.626131066892515e-16,
+        "scalar_relative_residual": 5.288275219835294e-16,
+        "metric_relative_residual": 2.5860455921276727e-16
+      },
+      {
+        "radius_kpc": 7.711884811603201,
+        "density_over_Mpl2H02": 1010246.3984488694,
+        "consumed_reduced_source_J_eff": -46314.89835533496,
+        "scalar_gradient_over_MplH0": -0.00019111779199909725,
+        "scalar_integrated_lhs": -2.557887119675906e-13,
+        "scalar_integrated_source": -2.5578871196759066e-13,
+        "metric_Gauss_lhs": 5.579406070301087e-12,
+        "metric_Gauss_source": 5.579406070301086e-12,
+        "scalar_relative_residual": 1.9737813113716156e-16,
+        "metric_relative_residual": 1.4478128258958654e-16
+      },
+      {
+        "radius_kpc": 26.557142017639453,
+        "density_over_Mpl2H02": 4879.322046386002,
+        "consumed_reduced_source_J_eff": -223.69325440634097,
+        "scalar_gradient_over_MplH0": -0.00013035562116300156,
+        "scalar_integrated_lhs": -4.258299357709567e-13,
+        "scalar_integrated_source": -4.2582993577095667e-13,
+        "metric_Gauss_lhs": 9.288440096830504e-12,
+        "metric_Gauss_source": 9.288440096830503e-12,
+        "scalar_relative_residual": 1.1856164560797931e-16,
+        "metric_relative_residual": 1.7393524822794727e-16
+      }
+    ],
+    "G1_deprojected_physical_center_shift_R1_minus_conventional_Mpc": [
+      9.274472975023818e-08,
+      1.3074599992599079e-07
+    ],
+    "G1_deprojected_angular_center_shift_mas": [
+      0.01216267832310531,
+      0.01714621998915785
+    ],
+    "rear_expansion_at_origin": {
+      "constant_deflection": [
+        8.318148475179176e-07,
+        1.1702027137302282e-06
+      ],
+      "tidal_hessian": [
+        [
+          1.4652006067752955e-05,
+          -4.2099916678421875e-05
+        ],
+        [
+          -4.2099916678421875e-05,
+          -1.464856817576064e-05
+        ]
+      ],
+      "remainder_U": [
+        [
+          0.0005648698044214275,
+          0.00013973244573331676
+        ],
+        [
+          0.00013973244573331676,
+          0.00021324442647331518
+        ]
+      ],
+      "accounting": "Full rear potential is inserted once. Its constant deflection and Hessian are not separately added again; U is a re-estimated remainder, not the former total environment."
+    }
+  },
+  "G1_identity_and_coordinates": {
+    "Fadely_Keeton_2011_Table1": {
+      "neighbor_label": "G22",
+      "main_lens_label": "G1",
+      "neighbor_west_north_arcsec": [
+        2.585,
+        -3.637
+      ],
+      "source": "https://arxiv.org/html/1109.0548"
+    },
+    "Sluse_H0LiCOW_II_section4_1": {
+      "alias": "Sluse G1 = Morgan/Fadely G22; Sluse G1 is not Fadely main-lens G1",
+      "redshift": 0.7821,
+      "source": "https://arxiv.org/html/1607.00382"
+    },
+    "code_east_north_light_centered_arcsec": [
+      -2.585,
+      -3.637
+    ],
+    "east_sign_check": "Fadely Table1 image A has x=-1.165,y=+.573 about the main light center, whereas adopted east/north NIC2 A is +1.1706,+.5665; x must flip, y must not. G22 is then east=-2.585,north=-3.637.",
+    "center_ray_check": "Physical G1 center is the measured G1 line of sight propagated to z=.7821 through the foreground lens. The rear potential cannot lens its own observed light before that emission plane."
+  },
+  "required_interpretation": [
+    "Gaia is now consumed development data; the small fitted Gaia residual is not held-out validation.",
+    "Finite rear Plummer scale .2kpc and its fitted mass are a conditional positive total-matter surrogate, not a uniquely inferred G1 physical state.",
+    "The R1 branch solves the foreground total two-Plummer radial source equation once. It does not solve an R1 scalar source/state for G1 or a globally coupled nonlinear environmental scalar domain.",
+    "The remaining U is an optical boundary term. Its two-dimensional Hessian does not supply the unresolved three-dimensional scalar environment or microscopic UV/state kernel.",
+    "The same observed G1 centroid is held fixed in the two model applications; its inferred physical center changes with foreground deflection. Do not call that strict fixed physical rear geometry.",
+    "The quadratic remainder and positive G1 are one reparameterized environmental potential with all nuisance coefficients fitted in development; do not add G1 to a retained complete former environment and claim unchanged total optical boundary.",
+    "A nonsymmetric multi-plane image Jacobian is expected from noncommuting Hessians; do not symmetrize it. The independent full action in both plane positions remains scalar and has symmetric full Hessian.",
+    "Provisional optical computation has physical_admission=false and leaves the 2e-10 physical guard unchanged."
+  ],
+  "important_bugs_found": [],
+  "no_unused_pixel_or_catalogue_data_opened": true,
+  "no_source_or_test_file_edits": true
+}

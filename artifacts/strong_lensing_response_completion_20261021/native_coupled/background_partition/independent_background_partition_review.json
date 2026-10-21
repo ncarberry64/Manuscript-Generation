@@ -1,0 +1,166 @@
+{
+  "review": "independent read-only frozen-background carrier/electronic partition comparison",
+  "reviewed_result_sha256": "736551efd8f85a4d86feaea09a259a299ea4b8cd33ad28a65c8c82a2965083e5",
+  "reviewed_maps_sha256": "8d16b9bb9d18203a993c9f1ce8b6b343a0321e94d8c44ce93a7c4c786a3ae9fb",
+  "source_sha256": "ba9e0763a5adaa425c1900d3a053a82dc8c8304cdcc01debc8f301f7b8ffdc48",
+  "all_source_input_hashes_match": true,
+  "rows": 48,
+  "domain_failures": 0,
+  "maximum_original_ERR_Q_replay_difference": 4.547473508864641e-13,
+  "maximum_raw_RMS_replay_difference": 0.0,
+  "maximum_residual_identity_difference": 0.0,
+  "maximum_baseline_full65_group_replay_difference_DN": 0.0,
+  "maximum_near_curvature_RMS_replay_difference_DN_s2": 0.0,
+  "aggregate": [
+    {
+      "body": "all_data",
+      "photon_plane_fraction": 0.0,
+      "completed_patches": 20,
+      "target_original_ERR_Q": 33330.08942389534,
+      "field_original_ERR_Q": 9916.532614791766,
+      "target_sum_replay_difference": 0.0,
+      "field_sum_replay_difference": 0.0
+    },
+    {
+      "body": "all_data",
+      "photon_plane_fraction": 1.0,
+      "completed_patches": 20,
+      "target_original_ERR_Q": 33328.0437839318,
+      "field_original_ERR_Q": 9915.562021468457,
+      "target_sum_replay_difference": -7.275957614183426e-12,
+      "field_sum_replay_difference": 0.0
+    },
+    {
+      "body": "held_target",
+      "photon_plane_fraction": 0.0,
+      "completed_patches": 4,
+      "target_original_ERR_Q": 10974.065419722008,
+      "field_original_ERR_Q": 0,
+      "target_sum_replay_difference": -1.8189894035458565e-12,
+      "field_sum_replay_difference": 0.0
+    },
+    {
+      "body": "held_target",
+      "photon_plane_fraction": 1.0,
+      "completed_patches": 4,
+      "target_original_ERR_Q": 10972.21576494841,
+      "field_original_ERR_Q": 0,
+      "target_sum_replay_difference": -1.8189894035458565e-12,
+      "field_sum_replay_difference": 0.0
+    }
+  ],
+  "target_near_curvature_changes": [
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+      "relative_near_curvature_RMS_change": -0.0004917729015775363
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+      "relative_near_curvature_RMS_change": -3.329664299855928e-05
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+      "relative_near_curvature_RMS_change": -0.00029516144514241116
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+      "relative_near_curvature_RMS_change": -0.0003889604517239853
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+      "relative_near_curvature_RMS_change": -0.0002550136410249815
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+      "relative_near_curvature_RMS_change": -0.0003604629949902627
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+      "relative_near_curvature_RMS_change": -0.00035343669132070765
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+      "relative_near_curvature_RMS_change": -0.0005280803969409664
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+      "relative_near_curvature_RMS_change": -0.0003156196490129437
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+      "relative_near_curvature_RMS_change": -0.00024238372593943236
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+      "relative_near_curvature_RMS_change": -0.0003164801577330012
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+      "relative_near_curvature_RMS_change": -0.0002643880126722564
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "relative_near_curvature_RMS_change": -0.00029301048109009464
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "relative_near_curvature_RMS_change": -0.00020759070181763928
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "relative_near_curvature_RMS_change": -0.00044488231672723533
+    },
+    {
+      "body": "all_data",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "relative_near_curvature_RMS_change": -0.00019691337614835547
+    },
+    {
+      "body": "held_target",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "relative_near_curvature_RMS_change": -0.00030067179049486636
+    },
+    {
+      "body": "held_target",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "relative_near_curvature_RMS_change": -0.00021291120688793352
+    },
+    {
+      "body": "held_target",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "relative_near_curvature_RMS_change": -0.0004480810787964584
+    },
+    {
+      "body": "held_target",
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "relative_near_curvature_RMS_change": -0.00019582875866541727
+    }
+  ],
+  "science_scope": [
+    "Same fittedpoint/sky/response/kappa body frozen; rho0electronic andrho1carrier partitions are specifiedcounterfactuals, notestimatedphotonfraction",
+    "Physicalclockconversion/flat/gainappliedbeforeG; beta andtranslatedceilingrecomputedthroughactualG0equation",
+    "Alltrustednegativecarrierrateswouldberejected; fixedharmonicexteriornotclipped orretuned",
+    "OriginalERRretained; tinyheldQchange doesnotrepairinadequatemeanorvalidateBHSMresponse",
+    "GroupcurvaturemetricremainsconditionalPoisson/CDScomparator, notcompleteboundarylikelihood"
+  ],
+  "no_implementation_error_found": true,
+  "physical_admission": false,
+  "physical_validation": false,
+  "physical_guard": 2e-10,
+  "no_new_fit_native_pipeline_or_mean_application": true
+}

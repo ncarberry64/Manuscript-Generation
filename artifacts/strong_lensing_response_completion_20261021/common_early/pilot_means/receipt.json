@@ -1,0 +1,95 @@
+{
+  "scope": "Saved converged conditional first2GROUP opticalmean rendered on exactmatching65x65target+field history domains. No refit or unusedobservation. Trainingplusheld usesE1\u20133targettraining/all4field andindependentE4pointmeasurement.",
+  "state_separation": "Positivepoint+coherentsky anddetectoroffset plane areseparate. A positive totalmean isnotproofthat thedetectoroffset isphotonillumination; consumers muststate orderive thatpartition beforecomputing \u03bb-dependent noise orcollection. No negativeoffset isclipped into a photonrate.",
+  "domain": "Finite25nativepixel positivePSF zerooutside; fourfinite.55arcsecsky patches/declaredGaussianbasis; largerhost/sourceandbackgroundphotonpartitionunresolved. ExactarchivedGWCS andsinglepixelintegratedPSFconvolution used.",
+  "outputs": {
+    "all_data": [
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/all_data_jw01198007001_02101_00001_nrcb3_pilot.npz",
+        "sha256": "cf01830a87a3eede759c3dc731fd3b4b37a49f823e1fad7c33a262bc253c2d62",
+        "history_sha256": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+        "total_mean_min_SCI": -1.2962579426976641,
+        "offset_min_max_SCI": [
+          -1.2962579426976641,
+          1.6200208606552466
+        ]
+      },
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/all_data_jw01198007001_02101_00002_nrcb3_pilot.npz",
+        "sha256": "cad75aa7c05dbf3c608e404e6de7322a680e9b05aab51bf8c413bac6168b84f7",
+        "history_sha256": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+        "total_mean_min_SCI": -0.4357029404697046,
+        "offset_min_max_SCI": [
+          -0.4357029404697046,
+          0.9210101235370974
+        ]
+      },
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/all_data_jw01198007001_02101_00003_nrcb3_pilot.npz",
+        "sha256": "37481757d4687a97802013ceda0c80df9ae76df58d0af4a5cdc6e9862a417e86",
+        "history_sha256": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+        "total_mean_min_SCI": -0.6950757006130845,
+        "offset_min_max_SCI": [
+          -0.6950757006130845,
+          1.1369524707979544
+        ]
+      },
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/all_data_jw01198007001_02101_00004_nrcb3_pilot.npz",
+        "sha256": "e90154532721648dda8c87a790f2f4704e2b1758765c632f504a1fef89449f55",
+        "history_sha256": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+        "total_mean_min_SCI": -0.7198045648732208,
+        "offset_min_max_SCI": [
+          -0.7198045648732208,
+          0.997118502239634
+        ]
+      }
+    ],
+    "training_plus_held": [
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00001_nrcb3_pilot.npz",
+        "sha256": "967632ab3384b1eac76de1f86fce872860ea32c5ce8daeb0e91d4db6d300be5a",
+        "history_sha256": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+        "total_mean_min_SCI": -1.2148088101242691,
+        "offset_min_max_SCI": [
+          -1.2148088101242691,
+          1.4945094067519955
+        ]
+      },
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00002_nrcb3_pilot.npz",
+        "sha256": "885b965c8c7f6feeaa90248afbdc26974da2e85fa77ccb1559f5c66dc2c2fca7",
+        "history_sha256": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+        "total_mean_min_SCI": -0.3515642420921362,
+        "offset_min_max_SCI": [
+          -0.3515642420921362,
+          0.8547358861329517
+        ]
+      },
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00003_nrcb3_pilot.npz",
+        "sha256": "c7473a1b062fff78f52fad1861328b96f5c6a55dadd8ef017709c992137c3a9c",
+        "history_sha256": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+        "total_mean_min_SCI": -0.6048714561944502,
+        "offset_min_max_SCI": [
+          -0.6048714561944502,
+          1.0010012322084303
+        ]
+      },
+      {
+        "file": "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00004_nrcb3_pilot.npz",
+        "sha256": "372adc656bd5f146a0b4da53f16e3b74c141ee0b5cfa5339145bdfdc8ea766c1",
+        "history_sha256": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+        "total_mean_min_SCI": -0.6393253729423088,
+        "offset_min_max_SCI": [
+          -0.6393253729423088,
+          0.8723459626162039
+        ]
+      }
+    ]
+  },
+  "source_sha256": "d31ea2d4eed30832b48cc1c96327e9291e36f7b785d04b21e0bff9ab0939ffc9",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

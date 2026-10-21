@@ -1,0 +1,98 @@
+{
+  "scope": "Actual E4A direct electronic-intercept noisy-G0 READ+DARK contraction at preserved kappa=0/cap1 mean. Conditional charge history/caps, references, SIRS mapping and masks are held fixed. No mean or source calibration fit.",
+  "exposure": "jw01198007001_02101_00004_nrcb3",
+  "patch": "A",
+  "kappa_e_inverse": 0.0,
+  "ceiling_multiplier": 1.0,
+  "equations": {
+    "B": "sum_j diag(Wpred_j Lnativeprime_j) H diag(mean_read invLprime_j), plus actual ZEROFRAME term when consumed",
+    "anchor": "d beta/d ADCobserved0 = diag(1/mean_read invLprime_0) G, at fixed incident charge history and caps",
+    "K": "PHOTMJSR/flat times B diag(1/mean_read invLprime_0) G",
+    "residual": "R=R_observed-R_predicted(theta,ADCobserved0); J0=diag(Wobs0 Lobsprime0 PHOTMJSR/flat)-K; Jj=diag(Wobsj Lobsprimej PHOTMJSR/flat), j>0",
+    "covariance": "C_R = [I,-K] C_same_realization(observed_native_rate,ADC0_context) [I,-K]^T; shared cross terms retained"
+  },
+  "selected_outputs": 289,
+  "G0_context_pixels": 1225,
+  "combined_source_channels": 1514,
+  "G0_native_bounds_xyxy": [
+    1327,
+    657,
+    1362,
+    692
+  ],
+  "observed_native_values_bitwise_float32": true,
+  "observed_nonunique_branch_count": 0,
+  "predicted_nonunique_branch_count": 0,
+  "zero_weights_proven_zero": true,
+  "replayed_state_groups_bitwise": true,
+  "original_native_ERR_Q": 3385.751258412859,
+  "raw_RMS_SCI": 1.2992770499921562,
+  "conditional_READ_DARK_only_Q": 3422.540250026064,
+  "conditional_READ_DARK_only_Q_per_pixel": 11.842699827079805,
+  "conditional_READ_DARK_only_logdet": -793.3343210970586,
+  "conditional_READ_DARK_only_Gaussian_NLL": 1580.1762005606531,
+  "unanchored_variance_SCI2_range": [
+    0.05853714251476338,
+    0.31514114526195813
+  ],
+  "anchored_variance_SCI2_range": [
+    0.05853718200762107,
+    0.3162722588107822
+  ],
+  "minimum_covariance_eigenvalue_SCI2": 0.041919775473363494,
+  "anchor_K_nonlocal_max_abs_SCI_per_DN": 1.1677453894994187e-05,
+  "full_vs_diagonal_anchor_relative_covariance_Frobenius": 0.00011386859353957368,
+  "anchor_self_term_max_abs_SCI2": 6.831799554168612e-05,
+  "anchor_same_realization_cross_term_max_abs_SCI2": 0.0016259299789922886,
+  "component_identity_max_abs_SCI2": 1.1102230246251565e-16,
+  "cap_derivative_active_nonzeros_on_H_output_support_by_read": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3
+  ],
+  "limits": [
+    "This closes the direct beta-intercept path at a FIXED conditional cap/incident charge state, not the unconditional cap/threshold noise path. Translated caps depend on group0 and reference-control correction; their joint noise and physical full-well stochastic law remain separate.",
+    "Measured source is raw READ+DARK after same-current-channel SIRS, including spatial/time/reference cross terms under the frozen periodic stationary spectral model. Finite epoch, masked spectral-window and calibration uncertainty remain conditional.",
+    "No source photon/IPC/saturation counting covariance, flat/linearity shared calibration covariance, or optical dressed-state statistical kernel is supplied by this component.",
+    "No native ERR or native VAR_RNOISE is added to this component; original ERR scores and raw residuals remain separate. A READ+DARK-only Gaussian score is a component diagnostic, not a full statistical likelihood or validation.",
+    "The optical pilot and E4 native data were already consumed; this is an internal held-channel contraction, not a historically unused science test."
+  ],
+  "input_sha256": {
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00004_nrcb3_histories.npz": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+    "artifacts/strong_lensing_response_completion_20261021/common_early/pilot_means/training_plus_held_jw01198007001_02101_00004_nrcb3_pilot.npz": "372adc656bd5f146a0b4da53f16e3b74c141ee0b5cfa5339145bdfdc8ea766c1",
+    "artifacts/strong_lensing_response_completion_20261021/calibration_order/k0/jw01198007001_02101_00004_nrcb3_A_cap1.npz": "6893aadf61b5e24eb155142943a7b90157ca6df1ce6e899ab8c7aaa0da67e475",
+    "data/strong_lensing_response_completion_20261021/dark_calibration/earliest_epoch_binned_cross_spectrum_512.npz": "311aa6cfabed3fadf0f41c5f75110c45cafb5b53b49fe230d420897bad5dc1f3",
+    "data/strong_lensing_response_completion_20261021/native_cache/jwst_nircam_ipc_0022.fits": "7f288227e4283c65e45a30a774d22bc63df2ec89951bf90dd592bc1deaec252f"
+  },
+  "source_sha256": {
+    "scripts/project_he0435_nonlocal_anchor_covariance.py": "cbd28293675390586e6945392f204a9b66281e9886b380e5eb2d2ebdfb2c3574",
+    "code/strong_lensing_anchor_covariance.py": "d7394000a87660b97de86fbd0a6ade1acc268b6eddf595a3cbc3b9360a46d929",
+    "code/strong_lensing_dark_covariance.py": "b22943a006972a0ea05c3ed6f0448c23e3e2b0f1ba3b66f5a7a2dacd6682f1eb",
+    "code/strong_lensing_native_calibration.py": "036211013a4e5e8b3dda9bffc1994a6c6ded61f9effcff73f4c53449e83d4bcc",
+    "code/strong_lensing_native_ols.py": "8e921f910aedfe9fa59ad2c78864aefce00fa5d17dc5a80aae86a89dd29ea3a6"
+  },
+  "result_file": "artifacts/strong_lensing_response_completion_20261021/dark_calibration/nonlocal_G0_E4A/nonlocal_READ_DARK_component.npz",
+  "result_sha256": "9268b5467e2d71a4736c44b2540deb9eec2461856fdf24b1604a087abe75ec04",
+  "seconds": 3.092893600001844,
+  "noise_rescaling": false,
+  "physical_validation": false,
+  "source_complete_covariance": false,
+  "reserved_observations_opened": false,
+  "physical_guard": 2e-10
+}

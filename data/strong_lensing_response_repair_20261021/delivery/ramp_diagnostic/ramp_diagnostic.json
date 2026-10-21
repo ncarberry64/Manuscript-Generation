@@ -1,0 +1,205 @@
+{
+  "status": "LIMITED_RAW_RAMP_DEVELOPMENT_DIAGNOSTIC",
+  "exposure": "jw01198007001_02101_00001_nrcb3_uncal.fits",
+  "group_time_s": 53.684,
+  "n_groups": 9,
+  "operations": [
+    "recorded superbias subtraction",
+    "diagnostic median upper/lower reference-pixel subtraction, same amplifier and odd/even column",
+    "recorded polynomial linearity correction",
+    "common CAL non-DNU/non-SAT mask",
+    "per-group local annular median subtraction"
+  ],
+  "limitations": [
+    "Not the complete detector1 pipeline: approximate median reference-pixel offsets instead of native SIRS; no dark/cosmic-ray reprocessing.",
+    "No propagated group covariance or formal significance test.",
+    "This check cannot isolate charge migration from wavefront or pointing changes."
+  ],
+  "reference_offsets_dn": [
+    [
+      7060.017290115356,
+      6379.996643066406
+    ],
+    [
+      7048.439392089844,
+      6370.0859375
+    ],
+    [
+      7063.545471191406,
+      6385.986358642578
+    ],
+    [
+      7057.545867919922,
+      6379.603179931641
+    ],
+    [
+      7092.407943725586,
+      6415.645111083984
+    ],
+    [
+      7095.071472167969,
+      6418.826171875
+    ],
+    [
+      7065.6651611328125,
+      6388.006774902344
+    ],
+    [
+      7078.093933105469,
+      6400.457015991211
+    ],
+    [
+      7081.717315673828,
+      6404.652770996094
+    ]
+  ],
+  "annulus_background_dn": [
+    -7.728378031788836,
+    3.099406497924141,
+    -2.1182185093582016,
+    3.1418840072788283,
+    7.482760013005492,
+    21.80654519011088,
+    18.910728997474997,
+    29.66930206591828,
+    32.647945498519505
+  ],
+  "radial_bins": [
+    {
+      "radius_pixel": [
+        0,
+        1
+      ],
+      "n_common_pixels": 0,
+      "group_difference_sum_dn_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_minus_early_dn_s": 0.0,
+      "relative_late_minus_early": null
+    },
+    {
+      "radius_pixel": [
+        1,
+        2
+      ],
+      "n_common_pixels": 0,
+      "group_difference_sum_dn_s": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "late_minus_early_dn_s": 0.0,
+      "relative_late_minus_early": null
+    },
+    {
+      "radius_pixel": [
+        2,
+        3
+      ],
+      "n_common_pixels": 10,
+      "group_difference_sum_dn_s": [
+        80.16810632467303,
+        81.55746328652201,
+        82.78466084687524,
+        84.46803104222714,
+        83.66382114782833,
+        85.63309545480247,
+        86.61725542213247,
+        89.18691158459382
+      ],
+      "late_minus_early_dn_s": 4.030705527264914,
+      "relative_late_minus_early": 0.04783657065307915
+    },
+    {
+      "radius_pixel": [
+        3,
+        4
+      ],
+      "n_common_pixels": 21,
+      "group_difference_sum_dn_s": [
+        43.73886109269902,
+        41.706255585282236,
+        43.34801071620568,
+        46.795992404193946,
+        44.26115005355221,
+        44.66654392524995,
+        49.13503935745985,
+        48.78159278800076
+      ],
+      "late_minus_early_dn_s": 2.8138015814704715,
+      "relative_late_minus_early": 0.062109093145251024
+    },
+    {
+      "radius_pixel": [
+        4,
+        6
+      ],
+      "n_common_pixels": 62,
+      "group_difference_sum_dn_s": [
+        87.12253846818449,
+        86.99808199914774,
+        89.06746481007009,
+        93.05390419884328,
+        94.33220878257366,
+        90.67747917760394,
+        92.69773506809221,
+        92.44451336687526
+      ],
+      "late_minus_early_dn_s": 3.477486729724859,
+      "relative_late_minus_early": 0.038298632253051676
+    },
+    {
+      "radius_pixel": [
+        6,
+        8
+      ],
+      "n_common_pixels": 90,
+      "group_difference_sum_dn_s": [
+        41.78174833012659,
+        36.87783334906543,
+        41.0140861400316,
+        46.38898113457835,
+        51.73072005889702,
+        40.6873855398784,
+        44.14934101934412,
+        44.3405829423953
+      ],
+      "late_minus_early_dn_s": 3.711345151678209,
+      "relative_late_minus_early": 0.08557138413124027
+    },
+    {
+      "radius_pixel": [
+        8,
+        12
+      ],
+      "n_common_pixels": 249,
+      "group_difference_sum_dn_s": [
+        95.66092099192535,
+        81.90357000565314,
+        117.39724330709757,
+        93.3058069314016,
+        1678.1435618283344,
+        68.01888755936099,
+        77.65738966327612,
+        78.24850435970002
+      ],
+      "late_minus_early_dn_s": 378.45020054364846,
+      "relative_late_minus_early": 1.3219028809899431
+    }
+  ],
+  "native_CAL_changed": false,
+  "target_parameters_fitted": false,
+  "physical_validation": false
+}

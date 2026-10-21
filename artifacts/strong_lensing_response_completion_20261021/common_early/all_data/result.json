@@ -1,0 +1,687 @@
+{
+  "scope": "Actual matched first2GROUP temporal-projection diagnostic on consumed F115W targets and matchingfield; same318positivefamily/coherentsky/priors. Independent E4target held from training.",
+  "noise_scope": "Fixed positive nativeillumination pilot gives exact\u03ba0Poisson frame-time contraction plus independent post-correction CDS marginal hypothesis. No SIRS factor or noise multiplier added. This does not establish raw/read/reference crosscovariance, source_complete_noise=false. Objectiveconvergence is conditional mean convergence under this fixed pilot metric, not a completed parameter-dependent statistical likelihood.",
+  "initial": {
+    "objective": 11687.584895556476,
+    "target_raw_chi2": 8648.058807604788,
+    "field_raw_chi2": 2253.890406031491,
+    "scaled_projected_KKT_gradient_max": 6746.083388035505,
+    "scaled_projected_KKT_target_max": 5855.984657849127,
+    "scaled_projected_KKT_eta_max": 1065.3823315847999,
+    "scaled_projected_KKT_field_nuisance_max": 6746.083388035505,
+    "active_lower_indices": [
+      63,
+      64,
+      66,
+      76,
+      77
+    ],
+    "active_upper_indices": [],
+    "function_evaluations": 1,
+    "jacobian_evaluations": 1
+  },
+  "final": {
+    "objective": 9409.145267307867,
+    "target_raw_chi2": 7085.7233977960595,
+    "field_raw_chi2": 1875.8324608897776,
+    "scaled_projected_KKT_gradient_max": 5.6364207448034165e-06,
+    "scaled_projected_KKT_target_max": 5.6364207448034165e-06,
+    "scaled_projected_KKT_eta_max": 4.788935754618251e-07,
+    "scaled_projected_KKT_field_nuisance_max": 1.8137244834903754e-06,
+    "active_lower_indices": [
+      51,
+      56,
+      63,
+      64,
+      66,
+      69,
+      76,
+      77,
+      81
+    ],
+    "active_upper_indices": [],
+    "function_evaluations": 30,
+    "jacobian_evaluations": 15
+  },
+  "converged": true,
+  "convergence_definition": "Projected scaledhalf-objectiveKKT<=1e-3 andlastrelativeobjective<=1e-10; sameoriginalmeanparameters/priors.",
+  "scipy_nfev": 15,
+  "scipy_message": "`ftol` termination condition is satisfied.",
+  "source_complete_noise": false,
+  "joint_rank": 438,
+  "joint_columns": 438,
+  "history": [
+    {
+      "objective": 9638.065853816988,
+      "target_raw_chi2": 7254.768255195886,
+      "field_raw_chi2": 1903.0963357518397,
+      "scaled_projected_KKT_gradient_max": 2168.2245123372086,
+      "scaled_projected_KKT_target_max": 2168.2245123372086,
+      "scaled_projected_KKT_eta_max": 302.63943093206814,
+      "scaled_projected_KKT_field_nuisance_max": 1910.4354614480044,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        76
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 5,
+      "jacobian_evaluations": 3,
+      "seconds": 12.578814100001182,
+      "relative_objective_change": 0.1753586442412665
+    },
+    {
+      "objective": 9421.265508977333,
+      "target_raw_chi2": 7090.194397916797,
+      "field_raw_chi2": 1879.7226315250355,
+      "scaled_projected_KKT_gradient_max": 209.84184869297542,
+      "scaled_projected_KKT_target_max": 209.84184869297542,
+      "scaled_projected_KKT_eta_max": 3.2178195524886526,
+      "scaled_projected_KKT_field_nuisance_max": 33.59409789605749,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        76
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 7,
+      "jacobian_evaluations": 4,
+      "seconds": 19.59831269999995,
+      "relative_objective_change": 0.022494175504496654
+    },
+    {
+      "objective": 9413.015940016363,
+      "target_raw_chi2": 7085.000327988532,
+      "field_raw_chi2": 1878.6574509872423,
+      "scaled_projected_KKT_gradient_max": 162.1232910345588,
+      "scaled_projected_KKT_target_max": 162.1232910345588,
+      "scaled_projected_KKT_eta_max": 1.0622293979687083,
+      "scaled_projected_KKT_field_nuisance_max": 11.51136775655248,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        76
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 9,
+      "jacobian_evaluations": 5,
+      "seconds": 26.383605300001364,
+      "relative_objective_change": 0.0008756327855433761
+    },
+    {
+      "objective": 9409.933623892512,
+      "target_raw_chi2": 7084.84854228483,
+      "field_raw_chi2": 1877.0300542147795,
+      "scaled_projected_KKT_gradient_max": 175.86936300704537,
+      "scaled_projected_KKT_target_max": 175.86936300704537,
+      "scaled_projected_KKT_eta_max": 0.18743521854383774,
+      "scaled_projected_KKT_field_nuisance_max": 2.6786302125144412,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        76
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 11,
+      "jacobian_evaluations": 6,
+      "seconds": 34.832302900002105,
+      "relative_objective_change": 0.0003274525554289016
+    },
+    {
+      "objective": 9409.25412057099,
+      "target_raw_chi2": 7085.556620258782,
+      "field_raw_chi2": 1876.0962388289138,
+      "scaled_projected_KKT_gradient_max": 175.21538530647143,
+      "scaled_projected_KKT_target_max": 175.21538530647143,
+      "scaled_projected_KKT_eta_max": 0.06047526027353181,
+      "scaled_projected_KKT_field_nuisance_max": 0.4196143750613994,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        76
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 13,
+      "jacobian_evaluations": 7,
+      "seconds": 44.38976360000015,
+      "relative_objective_change": 7.22112767933692e-05
+    },
+    {
+      "objective": 9409.168292966493,
+      "target_raw_chi2": 7085.7207848607,
+      "field_raw_chi2": 1875.8822334250083,
+      "scaled_projected_KKT_gradient_max": 171.8546747816522,
+      "scaled_projected_KKT_target_max": 171.8546747816522,
+      "scaled_projected_KKT_eta_max": 0.011868190102701971,
+      "scaled_projected_KKT_field_nuisance_max": 0.11141844556751934,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        69,
+        76
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 15,
+      "jacobian_evaluations": 8,
+      "seconds": 53.92892720000236,
+      "relative_objective_change": 9.121616166025682e-06
+    },
+    {
+      "objective": 9409.150562333332,
+      "target_raw_chi2": 7085.722899661449,
+      "field_raw_chi2": 1875.844916112201,
+      "scaled_projected_KKT_gradient_max": 94.76777851775327,
+      "scaled_projected_KKT_target_max": 94.76777851775327,
+      "scaled_projected_KKT_eta_max": 0.0028852722659782892,
+      "scaled_projected_KKT_field_nuisance_max": 0.026293742326431335,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        69,
+        76,
+        77
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 17,
+      "jacobian_evaluations": 9,
+      "seconds": 63.59721990000253,
+      "relative_objective_change": 1.8843996205207002e-06
+    },
+    {
+      "objective": 9409.146081448655,
+      "target_raw_chi2": 7085.723139051148,
+      "field_raw_chi2": 1875.8348835317952,
+      "scaled_projected_KKT_gradient_max": 66.00733333249407,
+      "scaled_projected_KKT_target_max": 66.00733333249407,
+      "scaled_projected_KKT_eta_max": 0.0009084905638538477,
+      "scaled_projected_KKT_field_nuisance_max": 0.007709429959416703,
+      "active_lower_indices": [
+        51,
+        63,
+        64,
+        66,
+        69,
+        76,
+        77
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 19,
+      "jacobian_evaluations": 10,
+      "seconds": 73.2080812000022,
+      "relative_objective_change": 4.7622627017684475e-07
+    },
+    {
+      "objective": 9409.145302292678,
+      "target_raw_chi2": 7085.723225385692,
+      "field_raw_chi2": 1875.8327168456592,
+      "scaled_projected_KKT_gradient_max": 9.622829091131171,
+      "scaled_projected_KKT_target_max": 9.622829091131171,
+      "scaled_projected_KKT_eta_max": 0.00023739750903538638,
+      "scaled_projected_KKT_field_nuisance_max": 0.0021697039094865644,
+      "active_lower_indices": [
+        51,
+        56,
+        63,
+        64,
+        66,
+        69,
+        76,
+        77
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 21,
+      "jacobian_evaluations": 11,
+      "seconds": 82.87757180000335,
+      "relative_objective_change": 8.280836217693139e-08
+    },
+    {
+      "objective": 9409.145267545673,
+      "target_raw_chi2": 7085.723372886404,
+      "field_raw_chi2": 1875.832498113632,
+      "scaled_projected_KKT_gradient_max": 9.60598180813172,
+      "scaled_projected_KKT_target_max": 9.60598180813172,
+      "scaled_projected_KKT_eta_max": 4.8625355933074046e-05,
+      "scaled_projected_KKT_field_nuisance_max": 0.0005014947773274159,
+      "active_lower_indices": [
+        51,
+        56,
+        63,
+        64,
+        66,
+        69,
+        76,
+        77
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 23,
+      "jacobian_evaluations": 12,
+      "seconds": 92.80129800000213,
+      "relative_objective_change": 3.6928970547587178e-09
+    },
+    {
+      "objective": 9409.145267308348,
+      "target_raw_chi2": 7085.72338738873,
+      "field_raw_chi2": 1875.8324658211566,
+      "scaled_projected_KKT_gradient_max": 0.00026015105272070294,
+      "scaled_projected_KKT_target_max": 0.00026015105272070294,
+      "scaled_projected_KKT_eta_max": 9.507415209109027e-06,
+      "scaled_projected_KKT_field_nuisance_max": 9.744799383426539e-05,
+      "active_lower_indices": [
+        51,
+        56,
+        63,
+        64,
+        66,
+        69,
+        76,
+        77,
+        81
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 25,
+      "jacobian_evaluations": 13,
+      "seconds": 102.66297269999995,
+      "relative_objective_change": 2.5222840090334426e-11
+    },
+    {
+      "objective": 9409.14526730787,
+      "target_raw_chi2": 7085.723397101298,
+      "field_raw_chi2": 1875.8324616535128,
+      "scaled_projected_KKT_gradient_max": 4.896711099799944e-05,
+      "scaled_projected_KKT_target_max": 4.896711099799944e-05,
+      "scaled_projected_KKT_eta_max": 1.8260298416561406e-06,
+      "scaled_projected_KKT_field_nuisance_max": 1.8688553758750004e-05,
+      "active_lower_indices": [
+        51,
+        56,
+        63,
+        64,
+        66,
+        69,
+        76,
+        77,
+        81
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 27,
+      "jacobian_evaluations": 14,
+      "seconds": 112.14783140000145,
+      "relative_objective_change": 5.084353568168614e-14
+    },
+    {
+      "objective": 9409.145267307867,
+      "target_raw_chi2": 7085.7233977960595,
+      "field_raw_chi2": 1875.8324608897776,
+      "scaled_projected_KKT_gradient_max": 5.6364207448034165e-06,
+      "scaled_projected_KKT_target_max": 5.6364207448034165e-06,
+      "scaled_projected_KKT_eta_max": 4.788935754618251e-07,
+      "scaled_projected_KKT_field_nuisance_max": 1.8137244834903754e-06,
+      "active_lower_indices": [
+        51,
+        56,
+        63,
+        64,
+        66,
+        69,
+        76,
+        77,
+        81
+      ],
+      "active_upper_indices": [],
+      "function_evaluations": 30,
+      "jacobian_evaluations": 15,
+      "seconds": 122.1933044000034,
+      "relative_objective_change": 1.9332142844748564e-16
+    }
+  ],
+  "original_full_native_mean_comparator": {
+    "scope": "Uncorrected low-charge optical mean compared with original full-native SCI and unchanged originalERR on matching selectedrows. This is a comparator, not the missing full nonlinear history-forward prediction.",
+    "Q": 45116.259589640904,
+    "records": [
+      {
+        "name": "jw01198007001_02101_00001_nrcb3_cal_A",
+        "Q_original_native_ERR": 2992.7606006600677,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00001_nrcb3_cal_B",
+        "Q_original_native_ERR": 3336.950296960419,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00001_nrcb3_cal_C",
+        "Q_original_native_ERR": 3057.39875099883,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00001_nrcb3_cal_D",
+        "Q_original_native_ERR": 2271.873831826509,
+        "pixels": 288
+      },
+      {
+        "name": "jw01198007001_02101_00002_nrcb3_cal_A",
+        "Q_original_native_ERR": 2994.230703158691,
+        "pixels": 287
+      },
+      {
+        "name": "jw01198007001_02101_00002_nrcb3_cal_B",
+        "Q_original_native_ERR": 4126.4144980400415,
+        "pixels": 288
+      },
+      {
+        "name": "jw01198007001_02101_00002_nrcb3_cal_C",
+        "Q_original_native_ERR": 3273.1311857220385,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00002_nrcb3_cal_D",
+        "Q_original_native_ERR": 2921.746975098327,
+        "pixels": 281
+      },
+      {
+        "name": "jw01198007001_02101_00003_nrcb3_cal_A",
+        "Q_original_native_ERR": 1882.792461419799,
+        "pixels": 288
+      },
+      {
+        "name": "jw01198007001_02101_00003_nrcb3_cal_B",
+        "Q_original_native_ERR": 2602.310609692079,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00003_nrcb3_cal_C",
+        "Q_original_native_ERR": 2582.790727976874,
+        "pixels": 288
+      },
+      {
+        "name": "jw01198007001_02101_00003_nrcb3_cal_D",
+        "Q_original_native_ERR": 1760.0781086211673,
+        "pixels": 288
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+        "Q_original_native_ERR": 2820.0726475428055,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+        "Q_original_native_ERR": 3860.3308694315847,
+        "pixels": 284
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+        "Q_original_native_ERR": 2415.2782180390345,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+        "Q_original_native_ERR": 2218.0991044526404,
+        "pixels": 289
+      }
+    ]
+  },
+  "early_product_receipts": [
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 288,
+      "selected_rows": 288,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 288,
+      "selected_rows": 287,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 288,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 281,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 288,
+      "selected_rows": 288,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 288,
+      "selected_rows": 288,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 288,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 284,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 286,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    },
+    {
+      "original_rows": 289,
+      "selected_rows": 289,
+      "exact_two_group_weights_per_s": [
+        -0.018627524029505998,
+        0.018627524029505998
+      ],
+      "poisson_time_factor_s_inverse": 0.01676472478362745,
+      "conditional_CDS_stage": "Independent post-correction per-read CDS marginals; no SIRS addition; full cross covariance unresolved.",
+      "negative_pilot_not_clipped": true,
+      "source_complete_noise": false
+    }
+  ],
+  "covariance_scope": "UNCONSTRAINED localcurvature under declaredconditionalpilotnoise, fullsharedresponse/sky/fieldnuisance correlations; no physicalcoverage or truncated-boundposterior.",
+  "input_sha256": {
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00001_nrcb3_histories.npz": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00002_nrcb3_histories.npz": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00003_nrcb3_histories.npz": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00004_nrcb3_histories.npz": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836"
+  },
+  "source_sha256": {
+    "code/strong_lensing_early_rate.py": "0733ffed7585032ec74a2a71a5b16bae7a7a1ea2c13858f1d549ca1bd9de778b",
+    "scripts/run_he0435_common_early.py": "89fe28b7c53f2c0beb27c5c4b7096c57b07eb69ea0de1321108656b6473d9e1d",
+    "code/strong_lensing_response_completion.py": "aa298ba071011c7c13b4292836f048811ed3fc10b0093bcbf584e4b0b7195830"
+  },
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

@@ -1,0 +1,492 @@
+{
+  "model": "r1",
+  "status": "CONDITIONAL_TWO_PLUMMER_DEVELOPMENT_FIT",
+  "compact_mass_Msun": 100000000.0,
+  "compact_scale_kpc": 0.03,
+  "compact_matter_scope": "positive finite regular matter surrogate; not an inferred black hole or solved material equation of state",
+  "candidate_compact_masses_Msun": [
+    0.0,
+    100000000.0,
+    316227766.01683795,
+    1000000000.0,
+    3162277660.1683793
+  ],
+  "compact_mass_prior": "fixed discrete development candidate, no continuous fitted prior; select using HST and old development data only",
+  "parameters": {
+    "log10_mass_Msun": 11.689813811251378,
+    "log10_plummer_a_kpc": 0.7541879181069858,
+    "source_x_arcsec": -0.007952196901181418,
+    "source_y_arcsec": 0.04112639808297403,
+    "screen_kappa": 0.25624647172377757,
+    "screen_gamma1": 0.12483021801302649,
+    "screen_gamma2": 0.06541009729336998,
+    "mass_center_x_arcsec": -0.0011291876572568412,
+    "mass_center_y_arcsec": 0.0010014911884385586
+  },
+  "parameter_vector": [
+    11.689813811251378,
+    0.7541879181069858,
+    -0.007952196901181418,
+    0.04112639808297403,
+    0.25624647172377757,
+    0.12483021801302649,
+    0.06541009729336998,
+    -0.0011291876572568412,
+    0.0010014911884385586
+  ],
+  "parameter_lower_bounds": [
+    10.0,
+    -0.7,
+    -0.8,
+    -0.8,
+    -0.4,
+    -0.4,
+    -0.4,
+    -0.03,
+    -0.03
+  ],
+  "parameter_upper_bounds": [
+    13.0,
+    1.3,
+    0.8,
+    0.8,
+    0.4,
+    0.4,
+    0.4,
+    0.03,
+    0.03
+  ],
+  "predicted_delays_days": [
+    6.114561378592256,
+    0.6908791180188025,
+    13.848499183922556
+  ],
+  "predicted_images_light_centered_arcsec": [
+    [
+      1.1721859245848512,
+      0.5660334916537465
+    ],
+    [
+      -0.3047170294368765,
+      1.1171218409285602
+    ],
+    [
+      -1.2961293148987905,
+      -0.03199618035099251
+    ],
+    [
+      0.23960864106454752,
+      -1.0486556991023532
+    ]
+  ],
+  "predicted_relative_astrometry_arcsec": [
+    -1.4769029540217278,
+    0.5510883492748136,
+    -2.4683152394836414,
+    -0.598029672004739,
+    -0.9325772835203037,
+    -1.6146891907560996,
+    -1.1721859245848512,
+    -0.5660334916537465
+  ],
+  "observed_relative_astrometry_arcsec": [
+    -1.4743,
+    0.5518,
+    -2.4664,
+    -0.6022,
+    -0.9378,
+    -1.616,
+    -1.1706,
+    -0.5665
+  ],
+  "chi2_astrometry": 12.756173698221499,
+  "chi2_delay_initializer": 19.28078044858067,
+  "chi2_center_prior": 0.2531165962023633,
+  "standardized_astrometry_residuals": [
+    -1.276203206709138,
+    -0.3408188852400699,
+    -0.9470249749107703,
+    1.748292442753192,
+    2.533389611581397,
+    0.6277637743593711,
+    -0.43985633920765255,
+    0.2287245346923566
+  ],
+  "optimizer_trace": [],
+  "quadratic_initializer_parameters": [
+    11.689817182237041,
+    0.7541853768397996,
+    -0.007952211194155661,
+    0.04112658412493257,
+    0.25625719126715585,
+    0.12482978852293553,
+    0.06540984613892988,
+    -0.0011291968484621834,
+    0.0010014758182217533
+  ],
+  "initial_parameters": [
+    11.689817182237041,
+    0.7541853768397996,
+    -0.007952211194155661,
+    0.04112658412493257,
+    0.25625719126715585,
+    0.12482978852293553,
+    0.06540984613892988,
+    -0.0011291968484621834,
+    0.0010014758182217533
+  ],
+  "skip_quadratic_initializer": true,
+  "exact_training_refinement": [
+    {
+      "iteration": 0,
+      "objective": -19195.40127229525,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "evaluations": 10,
+      "parameters": [
+        11.689813813271002,
+        0.754187919452468,
+        -0.007952198676672484,
+        0.04112639588897737,
+        0.25624646784498406,
+        0.12483023024872018,
+        0.06541008709730026,
+        -0.001129188376473718,
+        0.0010014911457895978
+      ]
+    },
+    {
+      "iteration": 1,
+      "objective": -19195.40127230947,
+      "success": true,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "evaluations": 3,
+      "parameters": [
+        11.689813811251378,
+        0.7541879181069858,
+        -0.007952196901181418,
+        0.04112639808297403,
+        0.25624647172377757,
+        0.12483021801302649,
+        0.06541009729336998,
+        -0.0011291876572568412,
+        0.0010014911884385586
+      ]
+    }
+  ],
+  "optimizer_success": true,
+  "max_lens_residual_rad": 2.456395547037471e-20,
+  "max_arrival_stationarity_Mpc": 6.245004513516506e-17,
+  "astrometry_covariance": "Published internal errors plus required2mas systematic in quadrature; diagonal relative-position covariance approximation; imageA fixes origin.",
+  "total_local_mass_Msun": 489668888631.32715,
+  "physical_admission": false,
+  "original_objective_endpoint_selection": {
+    "selected_index": 2,
+    "original_projection_objective": -19195.401272309504,
+    "checked_endpoints": [
+      {
+        "index": 0,
+        "objective": -19195.400432495513,
+        "parameters": [
+          11.689817182237041,
+          0.7541853768397996,
+          -0.007952211194155661,
+          0.04112658412493257,
+          0.25625719126715585,
+          0.12482978852293553,
+          0.06540984613892988,
+          -0.0011291968484621834,
+          0.0010014758182217533
+        ],
+        "max_lens_residual_rad": 2.625802136488331e-20
+      },
+      {
+        "index": 1,
+        "objective": -19195.401272303476,
+        "parameters": [
+          11.689813813271002,
+          0.754187919452468,
+          -0.007952198676672484,
+          0.04112639588897737,
+          0.25624646784498406,
+          0.12483023024872018,
+          0.06541008709730026,
+          -0.001129188376473718,
+          0.0010014911457895978
+        ],
+        "max_lens_residual_rad": 2.879912020664621e-20
+      },
+      {
+        "index": 2,
+        "objective": -19195.401272309504,
+        "parameters": [
+          11.689813811251378,
+          0.7541879181069858,
+          -0.007952196901181418,
+          0.04112639808297403,
+          0.25624647172377757,
+          0.12483021801302649,
+          0.06541009729336998,
+          -0.0011291876572568412,
+          0.0010014911884385586
+        ],
+        "max_lens_residual_rad": 2.456395547037471e-20
+      }
+    ],
+    "interpretation": "best start/optimizer endpoint selected by original exact total-source projection and original development likelihood; temporary spline objective never determines endpoint acceptance"
+  },
+  "exact_training_log_likelihood": 9604.205281301964,
+  "exact_training_objective": -19195.401272309504,
+  "active_parameter_bounds": {},
+  "two_plane_minus_effective_delay_days": [
+    1.3322676295501878e-14,
+    5.551115123125783e-16,
+    1.2434497875801753e-14
+  ],
+  "coefficients": {
+    "z_l": 0.4546,
+    "H0_km_s_Mpc": 67.4,
+    "H_over_H0": 1.295694395143027,
+    "Tdot_over_MplH0": 0.21411480722868004,
+    "Tddot_over_MplH02": 0.2723664170903265,
+    "lambda_over_MplH02": 1.0,
+    "b": 0.09169030134914963,
+    "C": 4.304680957827201
+  },
+  "rV_kpc": 332.3291351049884,
+  "original_source_checks": {
+    "max_integrated_scalar_equation_relative_residual": 8.835546598154737e-16,
+    "max_independent_alpha_derivative_relative_error": 1.7428088634579697e-12,
+    "max_independent_potential_derivative_relative_error": 3.578659551730996e-09,
+    "finite_matching_tail": [
+      {
+        "impact_Mpc": 0.007742031087027121,
+        "fraction_extra_alpha_beyond_20_Mpc": 5.375678979402387e-06
+      },
+      {
+        "impact_Mpc": 0.006876401874925459,
+        "fraction_extra_alpha_beyond_20_Mpc": 5.143291321951793e-06
+      },
+      {
+        "impact_Mpc": 0.007701259628325283,
+        "fraction_extra_alpha_beyond_20_Mpc": 5.364625358716957e-06
+      },
+      {
+        "impact_Mpc": 0.006402216828691225,
+        "fraction_extra_alpha_beyond_20_Mpc": 5.018556822444786e-06
+      }
+    ]
+  },
+  "original_section_source_applications": [
+    {
+      "radius_kpc": 0.03,
+      "density_over_Mpl2H02": 3734428385.56339,
+      "consumed_reduced_source_J_eff": -171205432.01956278,
+      "scalar_gradient_over_MplH0": -3.598799726914608e-05,
+      "scalar_integrated_lhs": -3.494808483366598e-17,
+      "scalar_integrated_source": -3.494808483366598e-17,
+      "metric_Gauss_lhs": 7.623071212425479e-16,
+      "metric_Gauss_source": 7.623071212425478e-16,
+      "scalar_relative_residual": 0.0,
+      "metric_relative_residual": 1.2935418075577954e-16
+    },
+    {
+      "radius_kpc": 5.677902336392872,
+      "density_over_Mpl2H02": 2685762.637280064,
+      "consumed_reduced_source_J_eff": -123129.19278224796,
+      "scalar_gradient_over_MplH0": -0.00018223282016093905,
+      "scalar_integrated_lhs": -1.7084486108491595e-13,
+      "scalar_integrated_source": -1.708448610849159e-13,
+      "metric_Gauss_lhs": 3.72656341120206e-12,
+      "metric_Gauss_source": 3.726563411202059e-12,
+      "scalar_relative_residual": 2.9551429064671074e-16,
+      "metric_relative_residual": 2.1676635489901674e-16
+    },
+    {
+      "radius_kpc": 6.402216828691224,
+      "density_over_Mpl2H02": 1953910.9294255709,
+      "consumed_reduced_source_J_eff": -89577.34096421381,
+      "scalar_gradient_over_MplH0": -0.00018669697337076716,
+      "scalar_integrated_lhs": -2.0234502416683045e-13,
+      "scalar_integrated_source": -2.023450241668305e-13,
+      "metric_Gauss_lhs": 4.413662539864847e-12,
+      "metric_Gauss_source": 4.413662539864848e-12,
+      "scalar_relative_residual": 2.4950995529555935e-16,
+      "metric_relative_residual": 1.8302114392530151e-16
+    },
+    {
+      "radius_kpc": 6.87640187492546,
+      "density_over_Mpl2H02": 1589804.757176862,
+      "consumed_reduced_source_J_eff": -72884.83863592907,
+      "scalar_gradient_over_MplH0": -0.00018844132139523808,
+      "scalar_integrated_lhs": -2.2152881296251244e-13,
+      "scalar_integrated_source": -2.2152881296251237e-13,
+      "metric_Gauss_lhs": 4.832110042237677e-12,
+      "metric_Gauss_source": 4.832110042237677e-12,
+      "scalar_relative_residual": 3.4185461425296606e-16,
+      "metric_relative_residual": 0.0
+    },
+    {
+      "radius_kpc": 7.701259628325283,
+      "density_over_Mpl2H02": 1118047.7381655597,
+      "consumed_reduced_source_J_eff": -51257.06701756766,
+      "scalar_gradient_over_MplH0": -0.00018979610092174334,
+      "scalar_integrated_lhs": -2.519291109352363e-13,
+      "scalar_integrated_source": -2.519291109352363e-13,
+      "metric_Gauss_lhs": 5.495218299608585e-12,
+      "metric_Gauss_source": 5.495218299608584e-12,
+      "scalar_relative_residual": 0.0,
+      "metric_relative_residual": 1.4699935887967435e-16
+    },
+    {
+      "radius_kpc": 7.7420310870271205,
+      "density_over_Mpl2H02": 1099052.5821486001,
+      "consumed_reduced_source_J_eff": -50386.23122788309,
+      "scalar_gradient_over_MplH0": -0.00018981759312750897,
+      "scalar_integrated_lhs": -2.5333297527971553e-13,
+      "scalar_integrated_source": -2.5333297527971553e-13,
+      "metric_Gauss_lhs": 5.52584017179839e-12,
+      "metric_Gauss_source": 5.52584017179839e-12,
+      "scalar_relative_residual": 0.0,
+      "metric_relative_residual": 0.0
+    }
+  ],
+  "continuation_projection_verification": {
+    "max_image_difference_arcsec": 1.5520917884259688e-13,
+    "max_delay_difference_seconds": 1.3935732567915693e-07
+  },
+  "matched_effective_halo_control": {
+    "pointwise_differences": [
+      {
+        "potential_Mpc": 0.0,
+        "lens_equation_rad": 0.0,
+        "arrival_days": 0.0,
+        "scalar_extra_alpha_rad": 1.6477427521544365e-10,
+        "direct_halo_extra_alpha_rad": 1.6477427521544365e-10
+      },
+      {
+        "potential_Mpc": 0.0,
+        "lens_equation_rad": 0.0,
+        "arrival_days": 0.0,
+        "scalar_extra_alpha_rad": 1.5296354773903805e-10,
+        "direct_halo_extra_alpha_rad": 1.529635477390381e-10
+      },
+      {
+        "potential_Mpc": 0.0,
+        "lens_equation_rad": 0.0,
+        "arrival_days": 0.0,
+        "scalar_extra_alpha_rad": 1.642442565040499e-10,
+        "direct_halo_extra_alpha_rad": 1.6424425650404987e-10
+      },
+      {
+        "potential_Mpc": 0.0,
+        "lens_equation_rad": 0.0,
+        "arrival_days": 0.0,
+        "scalar_extra_alpha_rad": 1.459551262206799e-10,
+        "direct_halo_extra_alpha_rad": 1.459551262206799e-10
+      }
+    ],
+    "interpretation": "independent direct positive-effective-mass projection of the SAME nonlinear total-source scalar field; no halo added on top of the scalar"
+  },
+  "global_image_census": {
+    "images_light_centered_arcsec": [
+      [
+        -0.0005438803319536188,
+        -0.0025369235378098877
+      ],
+      [
+        0.23960864106454877,
+        -1.0486556991023521
+      ],
+      [
+        -0.30471702943688284,
+        1.117121840928563
+      ],
+      [
+        -1.2961293148987907,
+        -0.031996180350992554
+      ],
+      [
+        1.1721859245848514,
+        0.5660334916537458
+      ]
+    ],
+    "image_count": 5,
+    "absolute_magnifications": [
+      0.012365319014797616,
+      3.492928912566432,
+      5.455690119959263,
+      4.8741222667722,
+      4.67693869664046
+    ],
+    "signed_magnifications": [
+      0.012365319014797616,
+      -3.492928912566432,
+      -5.455690119959263,
+      4.8741222667722,
+      4.67693869664046
+    ],
+    "arrival_days": [
+      56.37682903035844,
+      36.91313983534753,
+      29.179202030017212,
+      23.755519769443758,
+      23.06464065142494
+    ],
+    "max_lens_residual_rad": 2.541098841762901e-21,
+    "max_arrival_stationarity_Mpc": 5.204170427930421e-18,
+    "min_jacobian_singular_value": 0.15507755243001953,
+    "conventional_image_count": 5,
+    "scope": "continuation of all conventional roots plus logarithmic-seed audit, verified against original total-source R1 projection; no theorem excluding remote caustic root creation"
+  },
+  "additional_images": [
+    {
+      "position_arcsec": [
+        -0.0005438803319536188,
+        -0.0025369235378098877
+      ],
+      "absolute_magnification": 0.012365319014797616,
+      "flux_ratio_to_image_A_achromatic_no_differential_extinction_or_microlensing": 0.0026438916173264935
+    }
+  ],
+  "fixed_conventional_body_R1_activation": {
+    "image_offsets_microarcsec": [
+      [
+        20.701634801278956,
+        5.171689082983377
+      ],
+      [
+        -4.110623817221715,
+        17.25708732736031
+      ],
+      [
+        -20.752233287346655,
+        -5.190862255130546
+      ],
+      [
+        4.193367874938403,
+        -17.276289903334074
+      ]
+    ],
+    "delay_offsets_seconds": [
+      20.602836784053125,
+      1.0042207041351503,
+      31.2160687075675
+    ],
+    "scope": "same total matter body, source, rear screen, maps, clock and physical state; scalar field switched on once"
+  },
+  "separately_refitted_R1_minus_conventional_delay_seconds": [
+    -6.029185827355832,
+    -1.0652002999336219,
+    -14.18105859024763
+  ],
+  "selected_candidate_index": 1,
+  "target_photometry_consumed": false,
+  "development_sha256": "bba68bf36d1c8e27a3ebb4795a2b057c4030db889df7a1648286dde46b8bdd14",
+  "protocol_sha256": "c1ec4b2410b084d8dc10dbb99d57656377be15d028fd25a423ce591c46cdca29",
+  "source_sha256": {
+    "scripts/fit_he0435_macro_revision.py": "6d91d2cce2a41be2e3778b7a22abf24a99fe5add4366b019c451701d210567f6",
+    "code/strong_lensing_macro_revision.py": "3ffc45db4252527a23af190277cceeb99f78019d4128ca1f779ffaabb370637f"
+  },
+  "source_evolution_audit": "artifacts/strong_lensing_revision_20261020/macro_source_provenance.json"
+}

@@ -1,0 +1,76 @@
+{
+  "status": "EXECUTED_PROVISIONAL_COHERENT_SKY_AND_SHARED_CALIBRATION_UNCERTAINTY_DEVELOPMENT",
+  "scene": "Four disjoint fixed observed-sky patches, each3x3positive Gaussian coefficients shared across four exposures; width.10arcsec/spacing.18arcsec, proper coefficient priorSD10SCI. No unique source/galaxy decomposition or full host inferred.",
+  "operator": "Sky basis sampled through exact archived GWCS on1/4nativepixel grid, convolved once with already pixel-integrated normalized positive field response; no extra pixel integration/PAM/ERR scaling.",
+  "response": "Delivered318coefficient coarse positive field family only: spline(positive base)(u)*exp(B(u)eta), divided by finite-grid normalization (free flux reparameterization), with analytic normalization/moment derivatives and supplied first-order3gauge removal; finite25pixel support declaredzero outside, no spline extrapolation. Canonical17pixel likelihood and padded sky integration.",
+  "calibration": "All4actualfieldstars constrain shared response precision+declared.2coefficientprior. Cut propagation and one re-evaluated nonlinear coupled GN application are distinct. Full covariance retains image/exposure correlations and finite-grid centroid-moment response.",
+  "history": "history_rate accepts actualreadmeans andpixel-specificweights. Target histories are unavailable in current compact inputs; no historyarrays or transferredchargecoefficient fabricated. ChargeexchangeLaplacian helper conserves per-read electron charge (or common-gain units); raw DN with varying gain requires conversion first. It is not fitted or claimed identified.",
+  "no_lens_prediction_loaded": true,
+  "no_reserved_band_opened": true,
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "source_sha256": {
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22"
+  },
+  "input_sha256": {
+    "data/strong_lensing_response_repair_20261021/delivery/audit/positive_field_shape.npz": "5c913900002d0933ce96654f895b84e3dab5dc64ec9a2b4630c86fc7e48dcf0d",
+    "data/strong_lensing_response_repair_20261021/delivery/audit/positive_field_response.py": "8b4d77d793285ebbaa461b1885c34e12b00964887da8ab0a0aaf416e9d818073",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf_convention_diagnostic.json": "5543e097076e6d415a58413f6640cd56615796c58338072b7bbc2f62c1fc6718",
+    "code/strong_lensing_jwst_rate_mask.py": "bd3d4192cebf42dd236009bcd302438e990557b1be21ad51a28cffcb9ebfc6ea",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json": "5dbf995caff516ab3286ea23bd080b2a2828c208df2415562e0cb2468ee4e853",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00001_nrcb3_cal_wcs.asdf": "2c1eb4e7af4ca160a576d61ea90d0849b07f68d34d8400c5e9fe005494972523",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_FIELD_standard_epsf.fits": "2ad224092a6076d49ff09e62e9ad549f968d9670b993abb1660265cf6df68e88",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_A_standard_epsf.fits": "fc3f82823f1d4748e9ec9204d3ec39d4b3da1ff7dfe257313fd116c59e267c8d",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_B_standard_epsf.fits": "a1c60e5e912e0de8d0377825e6a1863630bd149b78802fa68ae9245e5c0772ec",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_C_standard_epsf.fits": "af25ba411978e9fb4420789da7606f611bf3360f54dbf9de9e708a2ad1e7857f",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_D_standard_epsf.fits": "6021954693f73c9021fa241b3acba0daceaed4e20ab3a442bf5fceab2852ccb3",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json": "65407275cfda96d8778dfb57d99611d26524c2565df28e7fa3f41769fc14da94",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00002_nrcb3_cal_wcs.asdf": "df964da5beea8234fb6564eb0176bf38742102f73f30fe4eede8937e576f16d4",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_FIELD_standard_epsf.fits": "bc1e10b3563ec38ac6facc85f09e5bbf2a735179b8b69e91932a6009ad7cd63b",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_A_standard_epsf.fits": "1fc65651bb5780b8bb5e6645b7f81de87a70c2b0d9214b0dd0aa7c53cbdb6886",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_B_standard_epsf.fits": "36c8acac848a6a0e8e17b20aa84890b27efecf281e350eb007c5f05c6627f8fc",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_C_standard_epsf.fits": "c4e69a4cefed11ef24ec487708e216974eadf0447146e8c8f52ed9d2ed0e6458",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_D_standard_epsf.fits": "c0c1d7f005a4fa7b1a2de32d92a59fe7c3aa288fc41b6e3c5f1453de8e09c6d3",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json": "784d7426ffc6ed8c6e1c5573b4778bf88585930a2fdc6edf3fae4e97121ea45b",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00003_nrcb3_cal_wcs.asdf": "616979c7627d66e155178a08ee1d75eee66f918cc3c5dc3505d5f0265d3271ff",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_FIELD_standard_epsf.fits": "db13b2332fe4744c8c27ae886a5e281b46d0fe43de182ab767035bb549308572",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_A_standard_epsf.fits": "19787671400eb3008fb4fc9f3fbf476874f7fd3716d20a81e967f57ec4fbbd0a",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_B_standard_epsf.fits": "f0cb791f23962550a44b0cec1450926fb7e8d48f8ba5be4d5b98b1c917fa0315",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_C_standard_epsf.fits": "f90ce5028601168023eb6cdeba8775e8ff99a5c09e60b7dba1c9c6878396b8b5",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_D_standard_epsf.fits": "04dcecde0aa47109bca982e02f23bf465b89bdee9afa794dd23ca656910eebcf",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json": "22fde10ed590a2f8427598845998aa830c2ea2ba8ef8f92e5e0c810541b87a33",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00004_nrcb3_cal_wcs.asdf": "dcbcc194988ba0315a334cf5a3c0e901fd4f92420966f099add4a64fc9da4996",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_FIELD_standard_epsf.fits": "3ab108ed0374eca15dee1e3302f5b88160f5c2c9acd5a0a4a4613df65d160d0d",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_A_standard_epsf.fits": "e87b938eb0def466d4fb24bebaf49d8f7336c7f400f020630b5288e3a222eaa3",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_B_standard_epsf.fits": "7c142c7f9cc5ca9a8dbf0603f7b2485b48cf0f798b75a367964f6b42d05f57c8",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_C_standard_epsf.fits": "b1d968fab55dcac3f2ee1d17656b7d84a7650bf41426d7c1ba34ceaa7a87b760",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_D_standard_epsf.fits": "605766294acfadf384fdabbd50c7338e63a5b1799eccc4871f12f005d051048b"
+  },
+  "native_input_receipt_hashes": [
+    {
+      "file": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\strong-lensing-first-comparison-20261020\\data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00001_nrcb3_cal.fits",
+      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+      "hash_scope": "Inherited already-consumed native-file hash from this exposure receipt; not recomputed by this application."
+    },
+    {
+      "file": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\strong-lensing-first-comparison-20261020\\data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00002_nrcb3_cal.fits",
+      "sha256": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+      "hash_scope": "Inherited already-consumed native-file hash from this exposure receipt; not recomputed by this application."
+    },
+    {
+      "file": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\strong-lensing-first-comparison-20261020\\data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00003_nrcb3_cal.fits",
+      "sha256": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+      "hash_scope": "Inherited already-consumed native-file hash from this exposure receipt; not recomputed by this application."
+    },
+    {
+      "file": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\strong-lensing-first-comparison-20261020\\data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00004_nrcb3_cal.fits",
+      "sha256": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
+      "hash_scope": "Inherited already-consumed native-file hash from this exposure receipt; not recomputed by this application."
+    }
+  ],
+  "moment_convention": "Full finite-grid moment, raw center, and delivered baseline-relative finite-grid moment are saved separately; none establishes physical centroid accuracy.",
+  "covariance_bound_scope": "Local UNCONSTRAINED curvature with active bound counts/indices reported. Full-column rank and observable null projections are reported; pseudoinverse zeros are not interpreted as known null directions.",
+  "post_execution_documentation_clarification": "Unused generic charge helper now explicitly documents electron/common-gain units. No numerical application rerun or numeric result changed."
+}

@@ -1,0 +1,21 @@
+{
+  "objective": 44420.297986574515,
+  "target_raw_chi2": 33639.00788312202,
+  "field_raw_chi2": 9995.65442153229,
+  "scaled_projected_KKT_gradient_max": 4.895872700494408e-05,
+  "scaled_projected_KKT_target_max": 4.895872700494408e-05,
+  "scaled_projected_KKT_eta_max": 1.7949317788534814e-06,
+  "scaled_projected_KKT_field_nuisance_max": 2.9357819116171413e-05,
+  "active_lower_indices": [
+    63,
+    64,
+    66,
+    76,
+    77
+  ],
+  "active_upper_indices": [],
+  "function_evaluations": 9,
+  "jacobian_evaluations": 5,
+  "seconds": 35.948319099999935,
+  "relative_objective_change": 6.551921480925219e-16
+}

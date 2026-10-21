@@ -1,0 +1,68 @@
+{
+  "status": "PASS for implemented conditional calibration composition and analytic mean-direction chain; not physical instrument-law identification",
+  "focused_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest -q tests/test_strong_lensing_calibration_order.py tests/test_strong_lensing_native_calibration.py",
+    "passed": 5,
+    "seconds": 0.31
+  },
+  "original_executed_applications": {
+    "source_receipt": "artifacts/strong_lensing_response_completion_20261021/calibration_order/k0/result.json",
+    "source_sha256": "b7cd75c27a645f4b4a5a1fab7b3bc4f13b591fabbe9a3f35b651c94d6abb3301",
+    "completed": 40,
+    "domain_failures": 0,
+    "aggregate": [
+      {
+        "ceiling_multiplier": 1.0,
+        "completed_targets": 16,
+        "completed_fields": 4,
+        "target_original_native_ERR_Q": 47398.05711729815,
+        "held_E4_original_native_ERR_Q": 14058.572105834672,
+        "field_original_native_ERR_Q": 15412.923118838109
+      },
+      {
+        "ceiling_multiplier": 1.1,
+        "completed_targets": 16,
+        "completed_fields": 4,
+        "target_original_native_ERR_Q": 47396.84197473736,
+        "held_E4_original_native_ERR_Q": 14058.277430009482,
+        "field_original_native_ERR_Q": 15412.55706070118
+      }
+    ],
+    "independent_no_fit_group0_replay_files": 40,
+    "max_actual_inner17_first_group_residual_DN": 0.0006064597673685057
+  },
+  "reviewed_equations": {
+    "rate": "lambda_pre=diag(g)*G*(lambda_effective/diag(g)); effective ePSF already contains lowchargeIPC, so no second H convolution of that mean",
+    "collection": "declared first-order bounded continuation before nominal native map; internal edge drift conserved, storage completion lost charge explicit; no literal hopping t3 replacement",
+    "group_mean": "L_native(H*mean_read inverseL_cal(beta+mu_read/g+dark_read))-dark_native_group",
+    "read_jacobian": "diag(Lnative_prime)*H*diag(1/Lcal_prime_read)/N",
+    "electronic_boundary": "mean_read inverseL_cal(beta+signal_read)=G*observed_ADC_group0; implicit beta_signal derivative=-invLprime_read/sum_read invLprime",
+    "cap_derivative": "cap=mult*g*(Lcal(G*SATtranslated)-initial_beta-dark0); dcap=mult*mean(t0)*dlambda through fixed harmonic cap action",
+    "direction_chain": "gain/G conversion; fixed harmonic rate/cap derivatives; sorted duplicateZEROFRAME/read support; bounded mu rate/cap/kappa; implicit beta; inverseL; H; nativeL; actual native weights/ZEROFRAME flags",
+    "gain": "exchange and photon rates in electrons; H/G calibrations act on ADC DN, with explicit gain conversions",
+    "dark": "actual zero lowcharge dark inputs supported current application; undocumented nonzero hot reference preIPC assignment remains explicit",
+    "covariance_stage": "H belongs before nativeL in physical-count mean/J; measured postSIRS READ+DARK electronic covariance already contains native electronics/IPC and must not receive H again"
+  },
+  "material_limits": [
+    "Nominal translated SAT ceiling is an explicit storage/readout trial, not measured fullwell/overflow physics; cap multiplier10percent is sensitivity, not uncertainty inflation.",
+    "H inverse finite-context tail and padding are counterfactual domain definitions; same-domain original applications must preserve them.",
+    "Fixed harmonic trustedmask is a continuation initializer; optimizer must backtrack/reject negative initiallytrusted rates instead of silently selecting a new mask.",
+    "G0 is an observed noisy boundary datum. Fullnonlocal covariance requires H diag(ratio) G anchor derivatives; a scalar local G0 formula is not valid with IPC.",
+    "Saved STATIC spectralC can supply fixed weighting continuation; it is not automatically a complete G0-anchored IPC likelihood or parameter-dependent count covariance.",
+    "Observed GROUPDQ/cosmic selection fixed; deposited jump charge and selection law are not reconstructed.",
+    "No microscopic U,V source contraction, dressed-state statistical kernel or physical preparation was executed by this detector composition; no inclusive4point prerequisite was introduced."
+  ],
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "unused_science_observations_opened": false,
+  "code_edited_by_reviewer": false,
+  "file_sha256": {
+    "code/strong_lensing_calibration_order.py": "aa6109377e909dc3fd504f0de42f76e3dd06065046f6dcf9e65f35ec7f218a2a",
+    "code/strong_lensing_native_calibration.py": "036211013a4e5e8b3dda9bffc1994a6c6ded61f9effcff73f4c53449e83d4bcc",
+    "code/strong_lensing_bounded_collection.py": "29e46ee3ebe20a46c75095a1ca8737202214ad92ebf870deedc37b3815473862",
+    "code/strong_lensing_ipc_response.py": "843a889f8380f63808eeb4660b2db4fe6dd1fdf3acdf1be4b18c0560c7462bfa",
+    "tests/test_strong_lensing_calibration_order.py": "d56e6bef50d07f137b7054872d23d84e4e746d519a9a5c6bd7b67a7c982b3bfd",
+    "tests/test_strong_lensing_native_calibration.py": "9c3b9b58567c8a84df0d01437c197af644bb5518fb474899785d4e8679385718",
+    "scripts/apply_he0435_calibration_order.py": "9a3758265d15f78c19623805c704f448424cf1f01829bbbc84040531fd5757b6"
+  }
+}

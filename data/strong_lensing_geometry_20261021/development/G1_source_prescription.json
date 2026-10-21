@@ -1,0 +1,41 @@
+{
+  "status": "NEW_CONSUMED_DEVELOPMENT_INPUT_NOT_UNUSED_VALIDATION",
+  "perturber": "Sluse2017 G1 = Morgan2005/FadelyKeeton2012 G22; distinct from the main lens called G1 by FadelyKeeton",
+  "observed_light_centered_east_north_arcsec": [
+    -2.585,
+    -3.637
+  ],
+  "quoted_coordinate_sigma_arcsec": [
+    0.005,
+    0.005
+  ],
+  "coordinate_source": {
+    "title": "Substructure in the lens HE0435-1223",
+    "authors": "Fadely and Keeton",
+    "publication_year": 2012,
+    "doi": "10.1111/j.1365-2966.2011.19729.x",
+    "primary_url": "https://arxiv.org/html/1109.0548",
+    "table": 1,
+    "PDF_sha256": "ee32d90bafd1237c8a930b16adb2c040af42b3be26d6a82d79431cbcccbc1a64"
+  },
+  "coordinate_conversion": "Table1 x positive west: A=(-1.165,+.573), whereas adopted east-positive NIC2 has A~(+1.1706,+.5665) relative main light center. Apply x_east=-x_table once. G22 table(+2.585,-3.637) ->(-2.585,-3.637).",
+  "rear_redshift": 0.7821,
+  "redshift_source": {
+    "title": "H0LiCOW II. Spectroscopic survey and galaxy-group identification of the strong gravitational lens system HE0435-1223",
+    "authors": "Sluse et al.",
+    "publication_year": 2017,
+    "primary_url": "https://arxiv.org/html/1607.00382",
+    "location": "sections4.1,6; G1=G22 correspondence and measured redshift; G1 flexion shift~8e-4arcsec"
+  },
+  "perturber_regularization_scale_kpc": 0.2,
+  "scale_scope": "Fixed positive regular point-mass surrogate for a distant projected galaxy; not an inferred internal mass profile or material support solution.",
+  "source_plane_center": "c_G = D_op theta_G - D_lp alpha_l(D_ol theta_G), evaluated on matching local conventional/R1 field; observed perturber direction is not its undeflected rear-plane center.",
+  "response": "Full positive projected Plummer potential plus a jointly specified quadratic remainder at the measured rearplane. No sum of independently nonlinear scalar solutions in a common domain; no BHSM empirical interface amplitude.",
+  "new_target_photons_opened": false,
+  "additional_exposed_development_tables": [
+    "Courbin2011Table2 Morgan/Kochanek comparison positions",
+    "FadelyKeeton2012Table1 historical quasar positions and fluxes (not unused targets)"
+  ],
+  "physical_guard": 2e-10,
+  "physical_admission": false
+}

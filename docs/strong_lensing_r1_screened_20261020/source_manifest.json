@@ -1,0 +1,102 @@
+[
+  {
+    "name": "04am_bhsm_los_topographic_transfer.tex",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04am_bhsm_los_topographic_transfer.tex",
+    "git_blob_sha1": "74a8bb917405b3026e6f4e2dd428aa44fc9e5183",
+    "bom_stripped": false,
+    "local_sha256": "d1eae649c543f6491721e248098131e78b265652dbbcb31101f45f3ec340df60",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "manuscript/sections/04am_bhsm_los_topographic_transfer.tex"
+  },
+  {
+    "name": "04ap_bhsm_optical_constitutive.tex",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04ap_bhsm_optical_constitutive.tex",
+    "git_blob_sha1": "7788ecb0af720f6c012f991a83de0495234526bf",
+    "bom_stripped": false,
+    "local_sha256": "14a216e3442ba18a6f7b6153f1d93db33ffa161d18337f9630db57e1c823372a",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "manuscript/sections/04ap_bhsm_optical_constitutive.tex"
+  },
+  {
+    "name": "04aq_bhsm_optical_hessian_projection.tex",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04aq_bhsm_optical_hessian_projection.tex",
+    "git_blob_sha1": "f8d6fa1921211eb379f70219d940123679bea0bf",
+    "bom_stripped": false,
+    "local_sha256": "4d11c757e3e39e8d5312ef087476559973215b94a76bcadbd5b782bce7cb63fe",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "manuscript/sections/04aq_bhsm_optical_hessian_projection.tex"
+  },
+  {
+    "name": "04ar_bhsm_optical_current_gate.tex",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04ar_bhsm_optical_current_gate.tex",
+    "git_blob_sha1": "56cb0caf2720e7ed7409788a6035c3a23fe971b3",
+    "bom_stripped": false,
+    "local_sha256": "a9d7d9de46e7b267a1cec7f34ec86a324af6e3aab1233dfa513b5878b24af000",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "manuscript/sections/04ar_bhsm_optical_current_gate.tex"
+  },
+  {
+    "name": "BHSM_optical_constitutive_reduction_v1.json",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/artifacts/BHSM_optical_constitutive_reduction_v1.json",
+    "git_blob_sha1": "fb4b2fdbd37607dc0ec062533bdad8f6019dac1d",
+    "bom_stripped": false,
+    "local_sha256": "0a0d41f44bc3df18ca8174e3068650b60318e48f4ddcbe1c6d0933c62ca89dc3",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "artifacts/BHSM_optical_constitutive_reduction_v1.json"
+  },
+  {
+    "name": "03_reduced_response.tex",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/03_reduced_response.tex",
+    "git_blob_sha1": "86ddb0334b0c2dbf3b2d8e03af2b1e94bb155b41",
+    "bom_stripped": true,
+    "local_sha256": "da291d20abd2eff807957832b69fcff6cc0684189c7e0872081797ccb077b327",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "manuscript/sections/03_reduced_response.tex"
+  },
+  {
+    "name": "04_scalar_metric_bridge.tex",
+    "source_url": "https://github.com/ncarberry64/Manuscript-Generation/blob/49a1dabbe148f8ba9da4ac079a8d93fe97c5de76/manuscript/sections/04_scalar_metric_bridge.tex",
+    "git_blob_sha1": "bd2e06531f4ba1a027dc717810467612b3f14936",
+    "bom_stripped": false,
+    "local_sha256": "343d0d22253653bb334a5c6ea0cd7d30b98bb087cd6b81222c01bed0eea831a4",
+    "source_repository": "ncarberry64/Manuscript-Generation",
+    "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+    "repository_path": "manuscript/sections/04_scalar_metric_bridge.tex"
+  },
+  {
+    "name": "topographic_action.py",
+    "source_url": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/524ed90689bd5923c249bba2e699abf627e703cd/src/topographic_action.py",
+    "git_blob_sha1": "04e92b2e8e039d8fcc3c6808f16f7f27291ff712",
+    "bom_stripped": false,
+    "local_sha256": "f61d919d06e8591798be85b63b2a8fbc72daa587c769541a282d896b73c262c6",
+    "source_repository": "ncarberry64/Berger-Hopf-Standard-Model",
+    "source_commit": "524ed90689bd5923c249bba2e699abf627e703cd",
+    "repository_path": "src/topographic_action.py"
+  },
+  {
+    "name": "bhsm_scalar_topographic_vacuum_action_derivation_v5_6.md",
+    "source_url": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/524ed90689bd5923c249bba2e699abf627e703cd/docs/bhsm_scalar_topographic_vacuum_action_derivation_v5_6.md",
+    "git_blob_sha1": "1e862439465df0e8af73922f459f8ab6edfb2303",
+    "bom_stripped": false,
+    "local_sha256": "950824cba63f6bc75d9612183b0ffe47856e4e80565426541b263fcf8b590caf",
+    "source_repository": "ncarberry64/Berger-Hopf-Standard-Model",
+    "source_commit": "524ed90689bd5923c249bba2e699abf627e703cd",
+    "repository_path": "docs/bhsm_scalar_topographic_vacuum_action_derivation_v5_6.md"
+  },
+  {
+    "name": "topographic_attractor_boundary_action_bridge.md",
+    "source_url": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/524ed90689bd5923c249bba2e699abf627e703cd/theory/topographic_attractor_boundary_action_bridge.md",
+    "git_blob_sha1": "5ce4ccabecb7bda6485e91519cff3521a469b516",
+    "bom_stripped": false,
+    "local_sha256": "12c9ba360399ec87e846b95c7ff9a3210fe36c0db87d5f045f3ad8a811f47399",
+    "source_repository": "ncarberry64/Berger-Hopf-Standard-Model",
+    "source_commit": "524ed90689bd5923c249bba2e699abf627e703cd",
+    "repository_path": "theory/topographic_attractor_boundary_action_bridge.md"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-10-21T16:16:47.432220+00:00",
+  "sympy_version": "1.14.0",
+  "scope": "Exact component algebra; no evolved physical solution or repeat of numerical lens tests.",
+  "checks": [
+    {
+      "name": "Cubic stress energy-density projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Cubic stress radial-pressure projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Cubic stress tangential-pressure projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Cubic stress mixed temporal-radial projection",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Trace-reversed Ricci contraction with scalar gradient",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Scalar-current temporal component",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Scalar-current radial component",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein tt row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein rr row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein tr row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Einstein angular row from exact Christoffel/Ricci construction",
+      "identity_residual": "0"
+    },
+    {
+      "name": "Perfect-fluid radial Euler acceleration projection",
+      "identity_residual": "0"
+    }
+  ],
+  "verification_script_sha256": "ce764ea54d08564bf874564d728bb917125cc28b842dbc17e59ef53ee1527f48",
+  "physical_admission": false
+}

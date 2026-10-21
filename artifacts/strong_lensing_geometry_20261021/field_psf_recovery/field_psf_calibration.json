@@ -1,0 +1,992 @@
+{
+  "status": "FIELD_CALIBRATION_FAILED_TARGET_MEASUREMENT_BLOCKED",
+  "protocol_sha256": "f8ff238f3f3b4c7d86f98a82d133af4a5396305362c22c0683a9c6a25ef0462d",
+  "algorithm": {
+    "version": 1,
+    "target_center_icrs_deg": [
+      69.562083333,
+      -12.287333333
+    ],
+    "exclude_target_radius_arcsec": 10.0,
+    "stamp_size_native_pixel": 25,
+    "fit_stamp_radius_native_pixel": 8,
+    "oversampling": 4,
+    "dao_fwhm_native_pixel": 1.5,
+    "dao_detection_sigma": 8.0,
+    "dao_sharpness_range": [
+      0.1,
+      1.0
+    ],
+    "dao_roundness_range": [
+      -0.5,
+      0.5
+    ],
+    "minimum_peak_snr": 20.0,
+    "minimum_aperture_snr": 100.0,
+    "aperture_radius_native_pixel": 4.0,
+    "minimum_valid_stamp_fraction": 0.95,
+    "central_valid_square_size": 5,
+    "minimum_isolation_native_pixel": 31.0,
+    "minimum_detector_edge_native_pixel": 13,
+    "sky_match_radius_arcsec": 0.12,
+    "heldout_every_nth_physical_star": 4,
+    "minimum_training_physical_stars": 3,
+    "minimum_heldout_physical_stars": 1,
+    "minimum_training_stamps_per_exposure": 3,
+    "allow_common_pool_for_this_visit": false,
+    "maximum_common_pool_dither_native_pixel": 64.0,
+    "background_annulus_native_pixel": [
+      10.0,
+      12.0
+    ],
+    "epsf_smoothing_kernel": "quartic",
+    "epsf_maxiters": 12,
+    "epsf_refinement_iters": 5,
+    "epsf_fit_shape": [
+      17,
+      17
+    ],
+    "epsf_sigma_clip": 3.0,
+    "epsf_sigma_clip_maxiters": 10,
+    "epsf_center_accuracy_native_pixel": 0.001,
+    "epsf_converged_fraction": 0.95,
+    "heldout_centroid_bound_native_pixel": 2.0,
+    "heldout_minimum_absolute_fit_p_value": 0.001,
+    "negative_wings_policy": "preserve learned finite values; no clipping to zero",
+    "normalization": "sum(epsf_grid)/oversampling**2 = 1",
+    "covariance": "Known ERR inverse information; no residual variance scaling, floor or inflation",
+    "fallback": "No quasar or target pixel may become a calibration source"
+  },
+  "source_sha256": {
+    "scripts/calibrate_he0435_jwst_psf.py": "3dec65954721d5df2b9e0d066caeb6f7dc2b65f472243d5cd47a835e9edb1f5f",
+    "code/strong_lensing_field_psf.py": "0deda8cad111e92e27e204f89951416844ab92263f0f09d8db168842b3e08983",
+    "code/strong_lensing_pixel_geometry.py": "596253591bae93e8a4ad16c0b8e289c180386f66ca6a25c1446dd6e7d74b1434"
+  },
+  "photutils_version": "3.1.1",
+  "native_products": [
+    "jw01198007001_02101_00001_nrcb3_cal.fits",
+    "jw01198007001_02101_00002_nrcb3_cal.fits",
+    "jw01198007001_02101_00003_nrcb3_cal.fits",
+    "jw01198007001_02101_00004_nrcb3_cal.fits"
+  ],
+  "input_sha256": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+    "jw01198007001_02101_00002_nrcb3_cal.fits": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+    "jw01198007001_02101_00003_nrcb3_cal.fits": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+    "jw01198007001_02101_00004_nrcb3_cal.fits": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed"
+  },
+  "selection": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": {
+      "status": "FIELD_SELECTION_EXECUTED",
+      "candidate_count": 12,
+      "accepted_count": 2,
+      "rejected": [
+        {
+          "candidate_index": 0,
+          "xy": [
+            583.4970396855159,
+            209.5003169678314
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 2,
+          "xy": [
+            608.4977675419619,
+            539.9957618265813
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 3,
+          "xy": [
+            1851.2444461292832,
+            576.718307626678
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 4,
+          "xy": [
+            465.97431624429913,
+            626.9540156691124
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 5,
+          "xy": [
+            907.6888397474357,
+            882.3325675773851
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 6,
+          "xy": [
+            119.32773878792398,
+            1164.2706988185173
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 7,
+          "xy": [
+            2033.0427922121855,
+            1189.1321645186401
+          ],
+          "reason": "DQ_or_ERR_mask"
+        },
+        {
+          "candidate_index": 9,
+          "xy": [
+            829.309819236434,
+            1623.1571245971973
+          ],
+          "reason": "target_exclusion_intersection"
+        },
+        {
+          "candidate_index": 10,
+          "xy": [
+            1512.6948703843047,
+            1632.2002314090385
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 11,
+          "xy": [
+            649.4815539642243,
+            1798.913849590313
+          ],
+          "reason": "low_SNR"
+        }
+      ],
+      "field_median_background_SCI": 0.2257932722568512,
+      "protected_pixels": 329974,
+      "catalogue": [
+        {
+          "candidate_index": 1,
+          "xy": [
+            1698.4896953369098,
+            309.54894073625087
+          ],
+          "ra_dec_deg": [
+            69.56795538503168,
+            -12.297237001663023
+          ],
+          "peak_snr": 83.55527017774017,
+          "aperture_snr": 180.8318708604354,
+          "valid_stamp_fraction": 0.9984,
+          "stamp_bounds_xyxy": [
+            1686,
+            298,
+            1711,
+            323
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "xy": [
+            410.7761109904226,
+            1580.1494731756636
+          ],
+          "ra_dec_deg": [
+            69.56067525934186,
+            -12.283446334217272
+          ],
+          "peak_snr": 55.159300573255415,
+          "aperture_snr": 194.53511604455457,
+          "valid_stamp_fraction": 0.9952,
+          "stamp_bounds_xyxy": [
+            399,
+            1568,
+            424,
+            1593
+          ]
+        }
+      ]
+    },
+    "jw01198007001_02101_00002_nrcb3_cal.fits": {
+      "status": "FIELD_SELECTION_EXECUTED",
+      "candidate_count": 18,
+      "accepted_count": 2,
+      "rejected": [
+        {
+          "candidate_index": 1,
+          "xy": [
+            388.8564228561654,
+            169.67287337912032
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 2,
+          "xy": [
+            90.55100948721359,
+            304.99331794174
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 3,
+          "xy": [
+            233.06219607845478,
+            426.54159879597677
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 4,
+          "xy": [
+            1099.5149770446803,
+            693.4241608020085
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 5,
+          "xy": [
+            1934.4539981600406,
+            1067.1772196460493
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 6,
+          "xy": [
+            162.29763666058747,
+            1359.0754867534627
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 7,
+          "xy": [
+            115.37800569716455,
+            1381.1008242675136
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 8,
+          "xy": [
+            1638.3055586264015,
+            1387.1425679714262
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 10,
+          "xy": [
+            1021.6765929981251,
+            1434.1015754017285
+          ],
+          "reason": "target_exclusion_intersection"
+        },
+        {
+          "candidate_index": 11,
+          "xy": [
+            1705.0176944374493,
+            1441.9983190357466
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 12,
+          "xy": [
+            404.8678757729406,
+            1483.3215157890645
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 13,
+          "xy": [
+            1159.6552505625223,
+            1486.1770542288982
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 14,
+          "xy": [
+            842.1359446131253,
+            1610.2834370284386
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 15,
+          "xy": [
+            1987.6683609532356,
+            1663.6442025678773
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 16,
+          "xy": [
+            607.0576752046288,
+            1766.4482362007557
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 17,
+          "xy": [
+            1865.9698327514031,
+            1990.930730592991
+          ],
+          "reason": "low_SNR"
+        }
+      ],
+      "field_median_background_SCI": 0.23143711686134338,
+      "protected_pixels": 329793,
+      "catalogue": [
+        {
+          "candidate_index": 0,
+          "xy": [
+            1888.8932694851496,
+            120.14608746441213
+          ],
+          "ra_dec_deg": [
+            69.56795460000764,
+            -12.297235165181682
+          ],
+          "peak_snr": 90.16819101819812,
+          "aperture_snr": 178.25740152076395,
+          "valid_stamp_fraction": 0.9984,
+          "stamp_bounds_xyxy": [
+            1877,
+            108,
+            1902,
+            133
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "xy": [
+            603.3149043367915,
+            1391.8172486151195
+          ],
+          "ra_dec_deg": [
+            69.56067517044927,
+            -12.283446717669419
+          ],
+          "peak_snr": 53.979965464123765,
+          "aperture_snr": 192.837197090315,
+          "valid_stamp_fraction": 0.9936,
+          "stamp_bounds_xyxy": [
+            591,
+            1380,
+            616,
+            1405
+          ]
+        }
+      ]
+    },
+    "jw01198007001_02101_00003_nrcb3_cal.fits": {
+      "status": "FIELD_SELECTION_EXECUTED",
+      "candidate_count": 17,
+      "accepted_count": 2,
+      "rejected": [
+        {
+          "candidate_index": 0,
+          "xy": [
+            230.22817675569786,
+            265.85207346552824
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 1,
+          "xy": [
+            1922.668171062075,
+            427.88991656833565
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 2,
+          "xy": [
+            757.6911545979361,
+            735.8112160201164
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 3,
+          "xy": [
+            771.5454894513695,
+            930.0610373843275
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 4,
+          "xy": [
+            1581.3244716431532,
+            1077.6256983642097
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 6,
+          "xy": [
+            1214.0354911206841,
+            1244.6339690878558
+          ],
+          "reason": "target_exclusion_intersection"
+        },
+        {
+          "candidate_index": 7,
+          "xy": [
+            1897.1732845272186,
+            1251.568762662681
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 9,
+          "xy": [
+            1034.5005666108289,
+            1421.2928064168552
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 10,
+          "xy": [
+            1168.979616956706,
+            1559.6850163498118
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 11,
+          "xy": [
+            2028.4902408152604,
+            1663.7291803837602
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 12,
+          "xy": [
+            1994.443285696458,
+            1844.0426526693152
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 13,
+          "xy": [
+            1943.9172277897176,
+            1902.5449304685808
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 14,
+          "xy": [
+            2001.2945268775957,
+            1943.8262018849139
+          ],
+          "reason": "DQ_or_ERR_mask"
+        },
+        {
+          "candidate_index": 15,
+          "xy": [
+            1140.375570019419,
+            1964.8640090790875
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 16,
+          "xy": [
+            2021.3397947839674,
+            2007.7734332892248
+          ],
+          "reason": "low_SNR"
+        }
+      ],
+      "field_median_background_SCI": 0.24971701204776764,
+      "protected_pixels": 329550,
+      "catalogue": [
+        {
+          "candidate_index": 5,
+          "xy": [
+            795.5520073202083,
+            1203.1641135864759
+          ],
+          "ra_dec_deg": [
+            69.56067573490981,
+            -12.283445808592228
+          ],
+          "peak_snr": 53.725347080260654,
+          "aperture_snr": 190.79691948192158,
+          "valid_stamp_fraction": 1.0,
+          "stamp_bounds_xyxy": [
+            784,
+            1191,
+            809,
+            1216
+          ]
+        },
+        {
+          "candidate_index": 8,
+          "xy": [
+            44.04314005095985,
+            1366.3870190328234
+          ],
+          "ra_dec_deg": [
+            69.56125245854953,
+            -12.276873636525671
+          ],
+          "peak_snr": 54.87204707781602,
+          "aperture_snr": 257.10711186006307,
+          "valid_stamp_fraction": 0.9504,
+          "stamp_bounds_xyxy": [
+            32,
+            1354,
+            57,
+            1379
+          ]
+        }
+      ]
+    },
+    "jw01198007001_02101_00004_nrcb3_cal.fits": {
+      "status": "FIELD_SELECTION_EXECUTED",
+      "candidate_count": 18,
+      "accepted_count": 2,
+      "rejected": [
+        {
+          "candidate_index": 0,
+          "xy": [
+            1342.7955362698963,
+            100.72352866919083
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 1,
+          "xy": [
+            104.52908063636072,
+            144.38037222301136
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 2,
+          "xy": [
+            1281.0305922972063,
+            204.29575457988977
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 3,
+          "xy": [
+            1327.5326403307827,
+            234.7125523762715
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 4,
+          "xy": [
+            201.2885024084519,
+            312.5826934793109
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 5,
+          "xy": [
+            1482.0023963002463,
+            314.92036443220417
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 6,
+          "xy": [
+            868.5902599294664,
+            888.1004515012423
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 8,
+          "xy": [
+            1406.1830297323147,
+            1055.1240288388155
+          ],
+          "reason": "target_exclusion_intersection"
+        },
+        {
+          "candidate_index": 10,
+          "xy": [
+            231.2436537517178,
+            1200.1680405793818
+          ],
+          "reason": "DQ_or_ERR_mask"
+        },
+        {
+          "candidate_index": 11,
+          "xy": [
+            1226.9465679561433,
+            1231.6188102434967
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 12,
+          "xy": [
+            1849.8590788608115,
+            1241.0238477942635
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 13,
+          "xy": [
+            1381.239147218433,
+            1628.7031570685297
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 14,
+          "xy": [
+            1957.3367948344724,
+            1738.1973695369256
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 15,
+          "xy": [
+            2017.1179219855908,
+            1768.5272757128896
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 16,
+          "xy": [
+            1803.598665287282,
+            1877.175468964529
+          ],
+          "reason": "low_SNR"
+        },
+        {
+          "candidate_index": 17,
+          "xy": [
+            1974.4360747121461,
+            1940.560439536678
+          ],
+          "reason": "low_SNR"
+        }
+      ],
+      "field_median_background_SCI": 0.23891156911849976,
+      "protected_pixels": 329216,
+      "catalogue": [
+        {
+          "candidate_index": 7,
+          "xy": [
+            987.4983034702813,
+            1014.2291246749924
+          ],
+          "ra_dec_deg": [
+            69.56067668684629,
+            -12.283444509192641
+          ],
+          "peak_snr": 48.95792958282993,
+          "aperture_snr": 186.69724021348082,
+          "valid_stamp_fraction": 1.0,
+          "stamp_bounds_xyxy": [
+            975,
+            1002,
+            1000,
+            1027
+          ]
+        },
+        {
+          "candidate_index": 9,
+          "xy": [
+            802.6845136641634,
+            1140.369044224864
+          ],
+          "ra_dec_deg": [
+            69.56010194511127,
+            -12.281610775461735
+          ],
+          "peak_snr": 34.365876441726236,
+          "aperture_snr": 108.27695049477335,
+          "valid_stamp_fraction": 0.9984,
+          "stamp_bounds_xyxy": [
+            791,
+            1128,
+            816,
+            1153
+          ]
+        }
+      ]
+    }
+  },
+  "psf_files_by_exposure": {},
+  "file_sha256": {},
+  "overall_adequacy_pass": false,
+  "target_pixel_values_inspected": false,
+  "conditional_uncertainty_note": "Known native ERR and a fixed fitted field ePSF; finite calibration-star noise, background calibration, spatial/chromatic PSF variation and absolute GWCS uncertainty are not marginalized. No residual variance rescaling, covariance floor or inflation is allowed.",
+  "physical_stars": [
+    {
+      "ra_dec_deg": [
+        69.56010194511127,
+        -12.281610775461735
+      ],
+      "detections": [
+        {
+          "candidate_index": 9,
+          "xy": [
+            802.6845136641634,
+            1140.369044224864
+          ],
+          "ra_dec_deg": [
+            69.56010194511127,
+            -12.281610775461735
+          ],
+          "peak_snr": 34.365876441726236,
+          "aperture_snr": 108.27695049477335,
+          "valid_stamp_fraction": 0.9984,
+          "stamp_bounds_xyxy": [
+            791,
+            1128,
+            816,
+            1153
+          ],
+          "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits"
+        }
+      ],
+      "physical_star_id": "field0001",
+      "split": "heldout"
+    },
+    {
+      "ra_dec_deg": [
+        69.56067525934186,
+        -12.283446334217272
+      ],
+      "detections": [
+        {
+          "candidate_index": 8,
+          "xy": [
+            410.7761109904226,
+            1580.1494731756636
+          ],
+          "ra_dec_deg": [
+            69.56067525934186,
+            -12.283446334217272
+          ],
+          "peak_snr": 55.159300573255415,
+          "aperture_snr": 194.53511604455457,
+          "valid_stamp_fraction": 0.9952,
+          "stamp_bounds_xyxy": [
+            399,
+            1568,
+            424,
+            1593
+          ],
+          "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits"
+        },
+        {
+          "candidate_index": 9,
+          "xy": [
+            603.3149043367915,
+            1391.8172486151195
+          ],
+          "ra_dec_deg": [
+            69.56067517044927,
+            -12.283446717669419
+          ],
+          "peak_snr": 53.979965464123765,
+          "aperture_snr": 192.837197090315,
+          "valid_stamp_fraction": 0.9936,
+          "stamp_bounds_xyxy": [
+            591,
+            1380,
+            616,
+            1405
+          ],
+          "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits"
+        },
+        {
+          "candidate_index": 5,
+          "xy": [
+            795.5520073202083,
+            1203.1641135864759
+          ],
+          "ra_dec_deg": [
+            69.56067573490981,
+            -12.283445808592228
+          ],
+          "peak_snr": 53.725347080260654,
+          "aperture_snr": 190.79691948192158,
+          "valid_stamp_fraction": 1.0,
+          "stamp_bounds_xyxy": [
+            784,
+            1191,
+            809,
+            1216
+          ],
+          "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits"
+        },
+        {
+          "candidate_index": 7,
+          "xy": [
+            987.4983034702813,
+            1014.2291246749924
+          ],
+          "ra_dec_deg": [
+            69.56067668684629,
+            -12.283444509192641
+          ],
+          "peak_snr": 48.95792958282993,
+          "aperture_snr": 186.69724021348082,
+          "valid_stamp_fraction": 1.0,
+          "stamp_bounds_xyxy": [
+            975,
+            1002,
+            1000,
+            1027
+          ],
+          "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits"
+        }
+      ],
+      "physical_star_id": "field0002",
+      "split": "training"
+    },
+    {
+      "ra_dec_deg": [
+        69.56125245854953,
+        -12.276873636525671
+      ],
+      "detections": [
+        {
+          "candidate_index": 8,
+          "xy": [
+            44.04314005095985,
+            1366.3870190328234
+          ],
+          "ra_dec_deg": [
+            69.56125245854953,
+            -12.276873636525671
+          ],
+          "peak_snr": 54.87204707781602,
+          "aperture_snr": 257.10711186006307,
+          "valid_stamp_fraction": 0.9504,
+          "stamp_bounds_xyxy": [
+            32,
+            1354,
+            57,
+            1379
+          ],
+          "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits"
+        }
+      ],
+      "physical_star_id": "field0003",
+      "split": "training"
+    },
+    {
+      "ra_dec_deg": [
+        69.56795538503168,
+        -12.297237001663023
+      ],
+      "detections": [
+        {
+          "candidate_index": 1,
+          "xy": [
+            1698.4896953369098,
+            309.54894073625087
+          ],
+          "ra_dec_deg": [
+            69.56795538503168,
+            -12.297237001663023
+          ],
+          "peak_snr": 83.55527017774017,
+          "aperture_snr": 180.8318708604354,
+          "valid_stamp_fraction": 0.9984,
+          "stamp_bounds_xyxy": [
+            1686,
+            298,
+            1711,
+            323
+          ],
+          "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits"
+        },
+        {
+          "candidate_index": 0,
+          "xy": [
+            1888.8932694851496,
+            120.14608746441213
+          ],
+          "ra_dec_deg": [
+            69.56795460000764,
+            -12.297235165181682
+          ],
+          "peak_snr": 90.16819101819812,
+          "aperture_snr": 178.25740152076395,
+          "valid_stamp_fraction": 0.9984,
+          "stamp_bounds_xyxy": [
+            1877,
+            108,
+            1902,
+            133
+          ],
+          "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits"
+        }
+      ],
+      "physical_star_id": "field0004",
+      "split": "training"
+    }
+  ],
+  "build_diagnostics": {},
+  "common_pool_dither_diagnostic": {
+    "all_exposure_pairs_have_matched_training_star": true,
+    "maximum_dither_native_pixel": 808.0063911541148,
+    "exposure_pairs": {
+      "jw01198007001_02101_00001_nrcb3_cal.fits|jw01198007001_02101_00002_nrcb3_cal.fits": {
+        "matched_stars": 2,
+        "maximum_dither_native_pixel": 269.3329050658292
+      },
+      "jw01198007001_02101_00001_nrcb3_cal.fits|jw01198007001_02101_00003_nrcb3_cal.fits": {
+        "matched_stars": 1,
+        "maximum_dither_native_pixel": 538.6747179337259
+      },
+      "jw01198007001_02101_00001_nrcb3_cal.fits|jw01198007001_02101_00004_nrcb3_cal.fits": {
+        "matched_stars": 1,
+        "maximum_dither_native_pixel": 808.0063911541148
+      },
+      "jw01198007001_02101_00002_nrcb3_cal.fits|jw01198007001_02101_00003_nrcb3_cal.fits": {
+        "matched_stars": 1,
+        "maximum_dither_native_pixel": 269.3419928633343
+      },
+      "jw01198007001_02101_00002_nrcb3_cal.fits|jw01198007001_02101_00004_nrcb3_cal.fits": {
+        "matched_stars": 1,
+        "maximum_dither_native_pixel": 538.6739974329438
+      },
+      "jw01198007001_02101_00003_nrcb3_cal.fits|jw01198007001_02101_00004_nrcb3_cal.fits": {
+        "matched_stars": 1,
+        "maximum_dither_native_pixel": 269.33215671492684
+      }
+    },
+    "small_dither_condition_pass": false
+  },
+  "failure": {
+    "type": "ValueError",
+    "message": "Frozen visit forbids a common pooled PSF: metadata show approximately270-pixel dithers; three training field stars per exposure are required"
+  },
+  "completed_utc": "2026-10-21T13:12:00.193153+00:00"
+}

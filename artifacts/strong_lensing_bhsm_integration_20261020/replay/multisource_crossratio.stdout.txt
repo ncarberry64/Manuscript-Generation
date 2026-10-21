@@ -1,0 +1,200 @@
+{
+  "status": "conditional distance-ratio prediction; not a detection or novelty claim",
+  "lens_redshift": 0.3,
+  "source_redshifts": [
+    0.8,
+    1.2,
+    1.8
+  ],
+  "H0_km_s_Mpc": 67.4,
+  "frozen_R1": {
+    "D_ol_Mpc": 945.16283937304,
+    "sources": [
+      {
+        "z_s": 0.8,
+        "D_os_Mpc": 1585.059604774653,
+        "D_ls_Mpc": 903.8854794506095,
+        "q": 0.5702533057607726
+      },
+      {
+        "z_s": 1.2,
+        "D_os_Mpc": 1748.3443785788393,
+        "D_ls_Mpc": 1192.4094345996348,
+        "q": 0.6820220599610345
+      },
+      {
+        "z_s": 1.8,
+        "D_os_Mpc": 1777.8913502735613,
+        "D_ls_Mpc": 1342.8194711889341,
+        "q": 0.7552877013448075
+      }
+    ],
+    "crossratio": 0.6689319433880573
+  },
+  "comparison_closed_LCDM": {
+    "D_ol_Mpc": 954.1468219233458,
+    "sources": [
+      {
+        "z_s": 0.8,
+        "D_os_Mpc": 1605.898541946078,
+        "D_ls_Mpc": 918.2924513769356,
+        "q": 0.5718246996252454
+      },
+      {
+        "z_s": 1.2,
+        "D_os_Mpc": 1770.858981726391,
+        "D_ls_Mpc": 1209.711491134725,
+        "q": 0.6831213008025013
+      },
+      {
+        "z_s": 1.8,
+        "D_os_Mpc": 1798.667557245582,
+        "D_ls_Mpc": 1359.55271096187,
+        "q": 0.7558665888452686
+      }
+    ],
+    "crossratio": 0.6691331413668755,
+    "Omega_m0": 0.31,
+    "Omega_r0": 9e-05,
+    "Omega_k0": -0.018,
+    "Omega_Lambda0": 0.7079099999999999,
+    "comparison_status": "declared same-H0 same-density/curvature cosmological comparator; not observationally refitted"
+  },
+  "difference": -0.00020119797881823498,
+  "fractional_difference": -0.0003006845220776544,
+  "common_mass_and_sheet_controls": [
+    {
+      "images_arcsec": [
+        [
+          0.7368875913827327,
+          -0.666791216749944
+        ],
+        [
+          0.805872894748257,
+          -0.7292142985155732
+        ],
+        [
+          0.8480540726012199,
+          -0.7673829951165647
+        ]
+      ],
+      "images_unit": "arcsec",
+      "impact_over_R": [
+        [
+          1.1255414513705466,
+          1.0184744086321045
+        ],
+        [
+          1.2309114146882503,
+          1.113821062410966
+        ],
+        [
+          1.2953400530536423,
+          1.1721209315790555
+        ]
+      ],
+      "P_arcsec_squared": [
+        0.4913501736660279,
+        0.5876540376365645,
+        0.6507822742535246
+      ],
+      "angular_invariant": 0.6689319433880575,
+      "mass_Msun": 100000000000.0,
+      "sheet_per_Mpc": 0.0,
+      "convergence_at_middle_source": 0.0
+    },
+    {
+      "images_arcsec": [
+        [
+          0.7641851696334767,
+          -0.6890639582213036
+        ],
+        [
+          0.8419685559064742,
+          -0.7586439947839917
+        ],
+        [
+          0.8904246296492683,
+          -0.8019118576471088
+        ]
+      ],
+      "images_unit": "arcsec",
+      "impact_over_R": [
+        [
+          1.1672364889889575,
+          1.0524943786449452
+        ],
+        [
+          1.2860448751010716,
+          1.1587727530605452
+        ],
+        [
+          1.3600579541730673,
+          1.2248612226373934
+        ]
+      ],
+      "P_arcsec_squared": [
+        0.5265724578016617,
+        0.6387543887353963,
+        0.7140420688567837
+      ],
+      "angular_invariant": 0.6689319433880572,
+      "mass_Msun": 100000000000.0,
+      "sheet_per_Mpc": 0.00012410375627563104,
+      "convergence_at_middle_source": 0.08
+    },
+    {
+      "images_arcsec": [
+        [
+          0.8569742648905783,
+          -0.7767192341806104
+        ],
+        [
+          0.9340986137905258,
+          -0.8468835423726457
+        ],
+        [
+          0.9808680415336046,
+          -0.8894655868504822
+        ]
+      ],
+      "images_unit": "arcsec",
+      "impact_over_R": [
+        [
+          1.30896498892348,
+          1.1863813482143393
+        ],
+        [
+          1.426766744051378,
+          1.2935521544545219
+        ],
+        [
+          1.4982035957466777,
+          1.3585930870260354
+        ]
+      ],
+      "P_arcsec_squared": [
+        0.6656283947383015,
+        0.7910727429722986,
+        0.8724483681855708
+      ],
+      "angular_invariant": 0.6689319433880565,
+      "mass_Msun": 140000000000.0,
+      "sheet_per_Mpc": -6.205187813781552e-05,
+      "convergence_at_middle_source": -0.04
+    }
+  ],
+  "derivative_wrt_independent_source_convergences": [
+    -1.351379189162838,
+    3.412945369152265,
+    -2.0615661797673823
+  ],
+  "assumptions": [
+    "one common spherical finite mass outside all measured rays",
+    "known or independently determined lens centre",
+    "one shared physical sheet at the primary lens plane",
+    "no independent arbitrary per-source-plane convergence",
+    "shared shear and profile uncertainty require additional observables and a joint physical model"
+  ],
+  "invariant": "(1/P1-1/P2)/(1/P1-1/P3)=(1/q1-1/q2)/(1/q1-1/q3), P=-theta_plus*theta_minus, q=Dls/Dos"
+}

@@ -1,0 +1,269 @@
+{
+  "status": "REVIEWED_CONDITIONAL_DEVELOPMENT_ONLY_NOT_CALIBRATED_PHYSICAL_VALIDATION",
+  "reviewed_source_and_result_sha256": {
+    "code/strong_lensing_read_history.py": "6e0f2658f451c564c807653bc64a774858b030e0148cbdec2d820dd08e5f52f9",
+    "scripts/run_he0435_read_history.py": "21d9801c1eb3c87fc0d653cdfd53b01ecf39db4c6c7c19f0b78fa7e416b2fbb2",
+    "tests/test_strong_lensing_read_history.py": "3fbb15db51eed6a0ee5173a521377f386a39a65b22693e6f6c1f98a316f1bd95",
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22",
+    "tests/test_strong_lensing_joint_scene.py": "74f9718cc0d9118b5da159f49bfc69459b6773bb6c669f746d760212fdc0451f",
+    "artifacts/strong_lensing_response_repair_20261021/read_history/results.json": "344d674c09a633ff328963ed6c97e59f40df39ff8170762748886be75cba7cd2",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/all_data.json": "82906d5b46ecda327d59a664e96b611ca66ed336c1296f6f072621fdc76ef268",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/held_exposure_application.json": "211d9c930e61300f2d8698be424f84c63b47a3afdd93b50853067fcde440fc38",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/execution_summary.json": "527a0407b7f095db18f900dc8e765e8526503c2f9db6b842bc3dc88b4f9ce17b",
+    "artifacts/strong_lensing_response_repair_20261021/joint_scene/execution_checks.json": "362154c90114081e23ed73516d6702a49303995a7223aff326a09bf4a18c53dd"
+  },
+  "independently_executed_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_read_history.py tests/test_strong_lensing_joint_scene.py -q",
+    "read_history_tests": 7,
+    "joint_scene_tests": 6,
+    "total_passed": 13,
+    "scope": "Synthetic regressions and operator/covariance checks only; no native or gravity refit by reviewer."
+  },
+  "implementation_review": {
+    "read_history_equations": "E_p=g_p f_DN,p; B(f_DN^2)=g^-1 L((g f_DN)^2); Q_pj=a_p,segment+m_j f_DN,p+kappa_e v_j B(f_DN^2)_p/2. m=mean(read times), v=mean(squared read times). Kappa units electron^-1.",
+    "read_history_covariance": "C_jk=max(f_training,0)/g * mean_rs min(t_jr,t_ks)+delta_jk CDS_DN^2/(2*NFRAMES), with NFRAMES=2. Ideal independent-pixel/independent-read working model only.",
+    "profile_and_hold_derivation": "For Ctt frozen from training only: A=(H^T Ctt^-1 H)^-1, P=A H^T Ctt^-1, R=Cht Ctt^-1, D=Hh-RH. Profiled intercept alpha=P(yt-st). Held predictor=Hh*alpha+sh+R(yt-Halpha-st). Its fitted-parameter derivative is d=Jh-RJt-DPJt; predictive covariance C_hh-RC_th+DAD^T+d Cov(theta)d^T. GLS orthogonality separates profiled intercept and rate-parameter noise under the stated working covariance.",
+    "charge_and_positivity": "No-flux graph exchange conserves electron charge before different pixel histories are selected. Conservative kappa bound uses maximum INDIVIDUAL read time, full-graph maximum gain and bounded rates. Full context and finite ROI boundary exchange are reported separately.",
+    "optical_application": "Dated externally fixed 4000K equal-sampling STPSF is sampled once. Six centroid/flux/positive-plane nuisances plus kappa_e are differentiated through the full electron redistribution operator. SCI to preflat DN/s conversion flat/PHOTMJSR is applied in the mean.",
+    "coherent_scene_application": "Four finite observed-sky Gaussian patches, shared across exposures through exact GWCS, are convolved once with the already pixel-integrated positive response. Point coordinate/flux and per-exposure detector planes remain measurement nuisances; lens predictions are not an objective or input.",
+    "response_family": "Final point evaluation matches delivered spline(positive base)(u)*exp(B(u)eta), with one finite-grid normalization absorbed by flux. Analytic coordinate, response and response-moment derivatives are used; extended-scene response derivatives retain all FFT batches.",
+    "covariance_estimands": "Field-only CUT baseline uses C_point + S C_eta S^T and retains shared image/exposure terms. A separate ACTUAL positive-mean Gauss-Newton continuation updates eta and the sky/point nuisance mean with field-profiled residuals and one coefficient prior. Joint covariance is explicitly local UNCONSTRAINED curvature at a nonstationary provisional iterate, not a converged or truncated posterior.",
+    "rank_and_bounds": "One dimensionless-column SVD threshold is used. Full right nullspace is retained for wide matrices. Actual joint rank414/414 with centroid null projection0; positive-sky active bounds are recorded and their truncated uncertainty is not claimed.",
+    "generic_joint_scene_charge_helper": "Unused generic Laplacian now explicitly requires physical electron/common-gain input; it is not an application of a detector coefficient to quasar pixels."
+  },
+  "resolved_findings": [
+    "Delivered legacy-source hash disagreed with its stated immutable Git source; supplied files preserved and explicit Git-bound integration manifest/runner verified the actual source and all ten unchanged JSON identities.",
+    "Individual-read positivity bound strengthened from group moment v/m to maximum individual read time.",
+    "General charge exchange converted from DN-conserving to electron-conserving form using the measured gain map; nonuniform-gain regression added. Actual supplied gain is uniform2.05e/DN, so prior DN fit is equivalent here after coefficient conversion and did not exhibit an actual electron leak.",
+    "Fixed-response CUT covariance distinguished from target-updated joint mean; one actual joint mean step is evaluated separately.",
+    "Delivered positive response evaluation, full FFT mode batches, raw field objective comparison, active-bound reporting and nullspace semantics verified in final implementation."
+  ],
+  "read_history_quantitative_results": {
+    "constant_response": {
+      "rate_model": "free pixel rates",
+      "training_Q": 1621.4020396713765,
+      "training_dof": 1648,
+      "held_Q": 272.94245434786876,
+      "held_dof": 257,
+      "held_raw_RMS_DN": 10.208838798592025,
+      "kappa": 0.0,
+      "kappa_local_curvature_standard_error": 0.0,
+      "kappa_units": "electron^-1",
+      "profile_parameter_rank": 289,
+      "profile_parameter_count": 289,
+      "relative_electron_charge_conservation_residual": 1.8956157825310214e-16,
+      "gain_map_e_per_DN_min_max": [
+        2.049999952316284,
+        2.049999952316284
+      ],
+      "positive_individual_read_source_verified": true,
+      "physical_calibration_pass": false,
+      "independently_recomputed_held_Q": 272.9424543478687,
+      "held_covariance_minimum_eigenvalue_DN2": 41.26759899352009
+    },
+    "history_dependent": {
+      "rate_model": "free pixel rates",
+      "training_Q": 1566.5243340007091,
+      "training_dof": 1647,
+      "held_Q": 260.74730711427196,
+      "held_dof": 257,
+      "held_raw_RMS_DN": 9.67245302222465,
+      "kappa": 2.3627143931782105e-07,
+      "kappa_local_curvature_standard_error": 3.3517555491188394e-08,
+      "kappa_units": "electron^-1",
+      "profile_parameter_rank": 290,
+      "profile_parameter_count": 290,
+      "relative_electron_charge_conservation_residual": 3.176786550817035e-16,
+      "gain_map_e_per_DN_min_max": [
+        2.049999952316284,
+        2.049999952316284
+      ],
+      "positive_individual_read_source_verified": true,
+      "physical_calibration_pass": false,
+      "independently_recomputed_held_Q": 260.747307114272,
+      "held_covariance_minimum_eigenvalue_DN2": 41.26627313022394
+    },
+    "optical_constant_response": {
+      "rate_model": "flat/PHOTMJSR * (F*dated_STPSF(cx,cy)+b0+bx*dx+by*dy)",
+      "training_Q": 11909.17730169003,
+      "training_dof": 1931,
+      "held_Q": 1542.4130470865184,
+      "held_dof": 257,
+      "held_raw_RMS_DN": 25.23790640254951,
+      "kappa": 0.0,
+      "kappa_local_curvature_standard_error": 0.0,
+      "kappa_units": "electron^-1",
+      "profile_parameter_rank": 6,
+      "profile_parameter_count": 6,
+      "relative_electron_charge_conservation_residual": 4.3366823334022204e-16,
+      "gain_map_e_per_DN_min_max": [
+        2.049999952316284,
+        2.049999952316284
+      ],
+      "positive_individual_read_source_verified": true,
+      "physical_calibration_pass": false,
+      "independently_recomputed_held_Q": 1542.4130470865184,
+      "held_covariance_minimum_eigenvalue_DN2": 33.109655337046966
+    },
+    "optical_history_dependent": {
+      "rate_model": "flat/PHOTMJSR * (F*dated_STPSF(cx,cy)+b0+bx*dx+by*dy)",
+      "training_Q": 11569.456287552417,
+      "training_dof": 1930,
+      "held_Q": 1573.9093249836806,
+      "held_dof": 257,
+      "held_raw_RMS_DN": 25.58810951832193,
+      "kappa": 2.366526244836021e-07,
+      "kappa_local_curvature_standard_error": 1.2815994958042931e-08,
+      "kappa_units": "electron^-1",
+      "profile_parameter_rank": 7,
+      "profile_parameter_count": 7,
+      "relative_electron_charge_conservation_residual": 1.7115820823579064e-16,
+      "gain_map_e_per_DN_min_max": [
+        2.049999952316284,
+        2.049999952316284
+      ],
+      "positive_individual_read_source_verified": true,
+      "physical_calibration_pass": false,
+      "independently_recomputed_held_Q": 1573.9093249836806,
+      "held_covariance_minimum_eigenvalue_DN2": 33.10979815576965
+    }
+  },
+  "joint_scene_quantitative_results": {
+    "baseline_target_chi2": 50121.53207379593,
+    "one_GN_target_chi2": 34712.08143651598,
+    "baseline_full_nonlinear_objective": 57432.27880330943,
+    "updated_full_nonlinear_objective": 45065.90218774088,
+    "accepted_GN_factor": 1.0,
+    "joint_rank": 414,
+    "joint_columns": 414,
+    "post_step_dimensionless_gradient_max": 14477.342423336839,
+    "positive_sky_active_bound_count": 13,
+    "centroid_null_projection_max": 0.0,
+    "centroid_curvature_covariance_minimum_eigenvalue_pixel2": 2.1596838684228484e-06,
+    "held_target_exposure_chi2": 10906.483291781296,
+    "held_target_exposure_dof": 1141,
+    "held_target_exposure_adequacy_pass": false,
+    "execution_checks": {
+      "scope": "Post-application arithmetic checks on saved new development arrays only; no refit, old solver or unused observation access.",
+      "synthetic_focused_tests": {
+        "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_joint_scene.py -q",
+        "passed": 6,
+        "first_run": "One zero-integral derivative sum was4.25e-15 vs2e-15 roundoff threshold; threshold changed to1e-14 then all6passed. No observed ERR or science acceptance threshold changed."
+      },
+      "applications": {
+        "all_data": {
+          "updated_sky_min": 0.0,
+          "updated_sky_max": 1.599937203928807,
+          "positive_sky_coefficients": 36,
+          "zero_bound_count": 13,
+          "response_log_grid_range": [
+            -1.3086977223382865,
+            0.6703903225374678
+          ],
+          "delivered_exp_clip_inactive": true,
+          "moment_centroid_covariance_min_eigenvalue_pixel2": 2.1596838684228484e-06,
+          "maximum_abs_centroid_correlation_off_diagonal": 0.3327539436862917,
+          "reported_joint_full_column_rank": true,
+          "field_nuisance_all_interior": true
+        },
+        "held_exposure_training": {
+          "updated_sky_min": 0.0,
+          "updated_sky_max": 1.1555228325928595,
+          "positive_sky_coefficients": 36,
+          "zero_bound_count": 14,
+          "response_log_grid_range": [
+            -1.2349020650738203,
+            0.6601001284919918
+          ],
+          "delivered_exp_clip_inactive": true,
+          "moment_centroid_covariance_min_eigenvalue_pixel2": 2.149465341864738e-06,
+          "maximum_abs_centroid_correlation_off_diagonal": 0.42485171491641205,
+          "reported_joint_full_column_rank": true,
+          "field_nuisance_all_interior": true
+        }
+      },
+      "physical_validation_pass": false,
+      "physical_admission": false,
+      "physical_guard": 2e-10,
+      "reviewed_source_sha256": {
+        "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+        "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22",
+        "tests/test_strong_lensing_joint_scene.py": "b8e462f38250ab9b9bd00fe7b63571f7998b22a3fc1b7dfd3853401439e5d106"
+      }
+    },
+    "gradient_scope": "14477.342 is the unconstrained scaled local-gradient maximum, not a KKT statistic. Saved no-fit necessary-condition check independently finds free-plane12254.320 and projected-sky7605.238."
+  },
+  "remaining_scientific_dependencies": [
+    "The electron-redistribution candidate fails when coupled to the fixed optical mean: training improves but the held ninth-group statistic and raw residual RMS worsen. It is not an adequate telescope/detector response or an identified universal charge coefficient.",
+    "The shared-scene mean remains inadequate and the joint continuation remains nonstationary with active positivity bounds. Local unconstrained curvature is neither fully calibrated precision nor coverage validation.",
+    "Native per-read linearity Jacobians/Jensen corrections, SIRS spatial and reference covariance, gain uncertainty, dark/reference covariance, signal-dependent selection and padded-context uncertainty remain outside the working read covariance.",
+    "The deterministic electron-transport mean does not specify a stochastic transport law. Transfer-induced interpixel/time noise covariance is absent from the frozen ideal Poisson/CDS working covariance; mean conservation alone does not supply that statistical relation.",
+    "Actual quasar read histories and a jointly adequate optical/extended-light/history operator are still required before transferring this field coefficient. No such histories or transfer are fabricated.",
+    "All F115W photons and internal holdout groups/exposures here are already consumed development data. Re-reduction does not create genuinely unused observations.",
+    "This classical optical measurement calculation does not solve the microscopic U,V preparation or supply an inclusive statistical state kernel. Separate physical admission and downstream statistics are unchanged."
+  ],
+  "blocking_implementation_findings_remaining": [],
+  "review_decision": "Approve publication as substantive conditional development/repair results with the stated failures and limitations; do not label successful response calibration, physical lens rejection or observational validation.",
+  "physical_admission": false,
+  "unchanged_physical_guard": 2e-10,
+  "primary_sources_checked": [
+    "https://raw.githubusercontent.com/spacetelescope/stcal/1.18.0/src/stcal/ramp_fitting/ramp_fit.py",
+    "https://jwst-pipeline.readthedocs.io/en/2.0.1/jwst/references_general/readnoise_reffile.html",
+    "https://raw.githubusercontent.com/spacetelescope/jwst/2.0.1/jwst/linearity/linearity.py",
+    "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html"
+  ],
+  "saved_mean_exporter_review": {
+    "status": "PASS_READ_ONLY_SOURCE_AND_RECEIPT_REVIEW",
+    "source_sha256": "daa60b1aa829bb5ae5918efbcba31252ef64955554ef1ba5ab2f48a82783cff3",
+    "receipt_sha256": "6e2a0db7308a4a0a7741319a4111cd1d8607e0908dd7cf1d073e948fed74b6cd",
+    "reviewer_reran_exporter": false,
+    "findings": "Source loads saved parameters/response coefficients and recomputes means only. No optimizer or field nuisance fit is called. Full17x17 SCI/ERR/DQ and mask are retained, with model/residual NaN only at excluded pixels. Row ordering and unchanged original result hashes are checked. Mean-minus-SCI sign is explicit; plot clip\u00b110 is display only.",
+    "maximum_absolute_saved_Q_replay_difference": 1.4551915228366852e-11,
+    "original_results_byte_identical": true,
+    "all_final_stamp_Q_range": [
+      1400.4813816227986,
+      2881.606090213706
+    ],
+    "field_residual_map_limit": "Only target maps exported; original field nuisance means were not stored. Additional field refits are not represented as a no-refit export."
+  },
+  "saved_mean_stationarity_review": {
+    "status": "PASS_NO_FIT_SOURCE_AND_RECEIPT_REVIEW",
+    "source_sha256": "ed8dc2922f31da1a121a4badb3b3236b1e525157d380eab0f2d58227b6422887",
+    "receipt_sha256": "f31025420e16c438da3ddc332fd615f8fc17f3af2544d884a865a64bfda13650",
+    "correct_lower_and_upper_bound_KKT_signs": true,
+    "scope": "Necessary target-nuisance stationarity only at fixed saved response; no field refit or missing full eta gradient inference.",
+    "all_data_group_gradients": {
+      "point_coordinate": {
+        "parameters": 32,
+        "lower_bound_count": 0,
+        "upper_bound_count": 0,
+        "unconstrained_scaled_gradient_max_abs": 368.51113508458195,
+        "projected_KKT_scaled_gradient_max_abs": 368.51113508458195
+      },
+      "log_flux": {
+        "parameters": 16,
+        "lower_bound_count": 0,
+        "upper_bound_count": 0,
+        "unconstrained_scaled_gradient_max_abs": 646.5038347350743,
+        "projected_KKT_scaled_gradient_max_abs": 646.5038347350743
+      },
+      "detector_plane": {
+        "parameters": 12,
+        "lower_bound_count": 0,
+        "upper_bound_count": 0,
+        "unconstrained_scaled_gradient_max_abs": 12254.319520288325,
+        "projected_KKT_scaled_gradient_max_abs": 12254.319520288325
+      },
+      "shared_sky": {
+        "parameters": 36,
+        "lower_bound_count": 13,
+        "upper_bound_count": 0,
+        "unconstrained_scaled_gradient_max_abs": 14477.342423336842,
+        "projected_KKT_scaled_gradient_max_abs": 7605.238235555595
+      }
+    },
+    "original_results_byte_identical": true,
+    "reviewer_reran_stationarity_application": false
+  }
+}

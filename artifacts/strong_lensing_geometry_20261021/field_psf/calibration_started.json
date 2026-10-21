@@ -1,0 +1,12 @@
+{
+  "started_utc": "2026-10-21T13:08:56.384386+00:00",
+  "protocol_sha256": "7e882eb6c68dc379e3eca32702ab048c753335d5bdfbfd529cb046b68e4ac706",
+  "native_products": [
+    "jw01198007001_02101_00001_nrcb3_cal.fits",
+    "jw01198007001_02101_00002_nrcb3_cal.fits",
+    "jw01198007001_02101_00003_nrcb3_cal.fits",
+    "jw01198007001_02101_00004_nrcb3_cal.fits"
+  ],
+  "target_pixels_authorized": false,
+  "field_only_authorized": true
+}

@@ -1,0 +1,152 @@
+{
+  "status": "PASS_FINAL_SOURCE_SOURCE_APPLICATION_AND_CONTINUATION_REVIEWED",
+  "reviewed_at_utc": "2026-10-20T17:38:21.010945+00:00",
+  "review_type": "Fresh researcher review of scientific claims, action/source derivation, retained approximations, optical application and numerical evidence, in the same AI-assisted research session; not external peer review.",
+  "not_just_framing": true,
+  "no_new_numerical_or_sign_error_found_in_retained_R1_solution": true,
+  "new_computational_tests_run": false,
+  "findings": [
+    {
+      "id": "RC01",
+      "severity": "normalization clarification",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:861",
+      "finding": "The printed kappa-weighted integral is the phase energy second variation, while the quadratic energy coefficient itself carries one half.",
+      "source": "F(X)=kappa_eta X/2+X^4/8 and docs/STRONG_LENSING_LOCAL_FAMILY_20261020.md physical Hessian definition",
+      "requested_correction": "Call the existing expression the positive second variation of gradient energy; retain its formula.",
+      "concrete_equation_or_numeric_change_required": false,
+      "disposition": "Corrected by root and verified in current source"
+    },
+    {
+      "id": "RC02",
+      "severity": "normalization clarification",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:849",
+      "finding": "The meridian eta=(cos q,sin q e1/sqrt2) requires the inherited weighted target norm s^2+2 z_dagger z=1 and metric ds^2+2 Re(dz_dagger dz); the focused text did not state them.",
+      "source": "docs/STRONG_LENSING_LOCAL_FAMILY_20261020.md original Path-B target normalization",
+      "requested_correction": "State the inherited target norm and inner product explicitly before the meridian.",
+      "concrete_equation_or_numeric_change_required": false,
+      "disposition": "Corrected by root and verified in current source"
+    },
+    {
+      "id": "RC03",
+      "severity": "accuracy clarification",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:800",
+      "finding": "Rank-zero absorption was computed for the first-order B=response_vector(linear) and local nuisance Jacobian, rather than a new nonlinear nuisance refit.",
+      "source": "scripts/run_strong_lensing_r1_screened.py B and N construction",
+      "requested_correction": "Call the conclusion the linearized single-source response.",
+      "concrete_equation_or_numeric_change_required": false,
+      "disposition": "Corrected by root and verified in current source"
+    },
+    {
+      "id": "RC04",
+      "severity": "evidence attribution clarification",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:455",
+      "finding": "Original numerical diagnostics are retained values; current replay diagnostics differ at platform-rounding level, including the finite-difference alpha derivative diagnostic.",
+      "source": "Original results.json versus current integration validation.json",
+      "requested_correction": "Attribute the retained diagnostic numbers explicitly to the supplied reference-run outputs, with current replay evidence reported separately.",
+      "concrete_equation_or_numeric_change_required": false,
+      "disposition": "Corrected by root and verified in current source"
+    },
+    {
+      "id": "RC05",
+      "severity": "preparation wording",
+      "location": "manuscript/sections/strong_lensing_galaxies_20261020.tex:65",
+      "finding": "Its amplitude followed the source displacement, making the test-light backreaction assumption ambiguous.",
+      "source": "Declared incoming test-light protocol",
+      "requested_correction": "State directly that light intensity is in the test-field limit and its gravitational backreaction is neglected.",
+      "concrete_equation_or_numeric_change_required": false,
+      "disposition": "Corrected by root and verified in current source"
+    }
+  ],
+  "claims_checked": [
+    {
+      "claim": "Action and parameter ownership",
+      "assessment": "R1 cubic action, Planck normalization, frozen branch, b_T and constrained C are explicit; no target-phase or metric-coordinate identification is used. Covariant scalar equation reproduces the stored homogeneous current sign."
+    },
+    {
+      "claim": "Local source and regular branch",
+      "assessment": "Metric elimination gives C and the same-action density source. Spherical Hessian identity integrates to the stated flux; selected quadratic root has regular origin and weak-source decay, with no added charge."
+    },
+    {
+      "claim": "Matter and material equilibrium",
+      "assessment": "Prescribed density and leading pressure adjustment are explicit; no common fixed EOS, exact modified TOV sequence or radial stability is claimed."
+    },
+    {
+      "claim": "Optical potential and clocks",
+      "assessment": "Potential, gradient and Hessian come from one radial primitive. Same emission marker, physical source, measured redshifts, observer clock and three compatible maps are declared. Finite-distance/global physical accuracy remains outside the thin-plane calculation."
+    },
+    {
+      "claim": "Effective-mass equivalence",
+      "assessment": "Derivative of ln(f_M F) proves nonnegative effective density. Equal retained Phi and Psi imply equality of leading dynamics and full projected optical field; no all-order equivalence or normalized BHSM microscopic source derivation is claimed."
+    },
+    {
+      "claim": "Common GR2 control",
+      "assessment": "Finite-body coefficient includes central pressure and optical-radius conversion; exterior limit agrees with stated invariant-impact coefficient. Common primitive is composed consistently. Full scalar-metric field cross terms and finite-distance 2PM clocks are explicitly omitted."
+    },
+    {
+      "claim": "Nuisance/environment",
+      "assessment": "One-column template and local ranks are scoped to the finite profile, source design and numerical weighting. Tidal columns are not described as a solved nonlinear scalar environment. General flexible halo equivalence is retained."
+    },
+    {
+      "claim": "Principal coefficients",
+      "assessment": "K_r,K_Omega,K_t and positive leading bounds are consistent with the debraided scalar principal tensor; superluminal radial scalar characteristic is explicitly reported. No full coupled stability or causal ultraviolet completion is asserted."
+    },
+    {
+      "claim": "Global matching",
+      "assessment": "Local projection to infinity and overlap matching are explicitly conditional; no global closed-cosmology solution is claimed. The derivation follow-up will formulate the actual missing field and matching equations."
+    }
+  ],
+  "reviewed_files_sha256": {
+    "manuscript/strong_lensing_main.tex": "b26e34e436c76d90b5433bdb7ce17ff8841d8655aaea2e89bb1945a99b453d28",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "1ad0a1d6260daa504e75672799f88df935d203940f3c6b59c1fa724b4e54cc7a",
+    "docs/strong_lensing_r1_screened_20261020/R1_LOCAL_COUPLING_DERIVATION_20261020.md": "c5ac9a69ac0f0aaf9443d8411a82367198353bc366815ec753c058e5c0e991d4",
+    "docs/strong_lensing_r1_screened_20261020/FINITE_BODY_GR_2PM_DERIVATION_20261020.md": "b10002ec233391cd6a076800b4ab69828d410953df3fd1d3365e4b4fa0ad02c1",
+    "docs/strong_lensing_r1_screened_20261020/COMMON_GR_2PM_COMPOSITION_REVIEW_20261020.md": "8a80dffc7f1958f203011487e2fbdf9fbc4ec983f6b1d2277617b4b23572a5df",
+    "docs/STRONG_LENSING_LOCAL_FAMILY_20261020.md": "2fdecf6f5edbaeef41afa9de180a07878fb2aac4974d5ce8725806acd8ce0aea",
+    "code/strong_lensing_r1_screened.py": "3b60951d7d10c44b9f250991ce07a1264b6e0a9c1559ef63dff350950706094c",
+    "code/strong_lensing_gr2.py": "5edd7987ec568fde047b3e033cdf86ed1ac53cf2587f30f8244c9fa024b9ff11",
+    "scripts/run_strong_lensing_r1_screened.py": "53e3cfdd7dfd673e245b9cdeaa914dedb80e6dbdb8834130e4a58a192409671b",
+    "scripts/r1_screened_review/shared_lens_rank.py": "fadf9030ca12d16f21e6e899ac7513b074933194f2ec565c6b9c8b75722c7f5f",
+    "artifacts/strong_lensing_r1_screened_20261020/results.json": "0f842378f5b203b3b6eaeb849e41c02aec488ea5ad858deb7c435f49c2711302",
+    "artifacts/strong_lensing_r1_screened_20261020/gr2_control.json": "5f4b2518966180f88bee2dedb09f04196d8bc5f38c6ef533bf3d2c2ba460d621",
+    "artifacts/strong_lensing_bhsm_integration_20261020/validation.json": "74f7b7668b74a38e5b6958d98c848671bbbc97cf18667ff880c7f72cec727c7d",
+    "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md": "6a8820fbe57d98f017273e1a81d83d26a71264a9c342e9ac5d999c0c83934a36",
+    "scripts/r1_screened_review/check_remaining_field_algebra.py": "ce764ea54d08564bf874564d728bb917125cc28b842dbc17e59ef53ee1527f48",
+    "docs/strong_lensing_r1_screened_20261020/BHSM_COMMON_SOURCE_DERIVATION_20261020.md": "2e86b4514b473153fb68b91c88492ee0367e52d3e963a0aec7d8bd3855e16266",
+    "code/strong_lensing_surface_source.py": "02c503fb0e6b13fcbaab62d6b43d35befbfe534670c82c7d7b1a2579ec4eb5b7",
+    "scripts/run_strong_lensing_surface_source.py": "4e76d7136528817b67ffc0abedef2ce084402fdbcabf383a424c8ca218447ed2",
+    "tests/test_strong_lensing_surface_source.py": "2ddc288d0159c42a4e167af1535eb053ca521c142e411816fffc855a73e89941",
+    "artifacts/strong_lensing_bhsm_integration_20261020/source_application.json": "16933844859dc6c9a2a9d8842b70459a18cbcca9ebc878df82569a966899db05",
+    "artifacts/strong_lensing_bhsm_integration_20261020/remaining_field_algebra_check.json": "12e4924536a972104f930e28b658e9044bd204c62d7db12fca330711436bb59c"
+  },
+  "resolved_at_utc": "2026-10-20T17:43:36.702264+00:00",
+  "continuation_derivation": "docs/strong_lensing_r1_screened_20261020/R1_REMAINING_FIELD_DERIVATION_20261020.md",
+  "continuation_algebra_receipt": "artifacts/strong_lensing_bhsm_integration_20261020/remaining_field_algebra_check.json",
+  "continuation_appendix_review": {
+    "status": "PASS",
+    "reviewed_at_utc": "2026-10-20T17:47:40.746217+00:00",
+    "source_label": "app:continuation",
+    "content": "Exact bulk stress/current applications, rolling/static obstruction, retained environmental cross-Hessian and material/global defining data, with natural-unit/current-sign conventions explicit.",
+    "new_evolved_physical_solution_claimed": false,
+    "original_32_displayed_blocks_preserved": true,
+    "original_benchmark_values_changed": false,
+    "declarations_and_data_availability_edited_by_this_subtask": false,
+    "reproducible_symbolic_checker": "scripts/r1_screened_review/check_remaining_field_algebra.py",
+    "checker_extraction_math_unchanged": true,
+    "checker_syntax": "AST parse passed; identity failures raise AssertionError and therefore a nonzero process exit.",
+    "existing_twelve_identity_execution_evidence_reused": true
+  },
+  "final_reviewed_at_utc": "2026-10-20T17:54:13.960415+00:00",
+  "final_science_calculation_commit": "0a329fa13f6c90bb2e3b5999b0155aa1e81fe8bd",
+  "final_additions_review": {
+    "original_32_displayed_blocks_preserved": true,
+    "original_numeric_literals_missing": {},
+    "new_numbered_blocks": 12,
+    "source_application": "Original reduced source, nonlinear flux, original Gauss residuals and material-boundary matching are evaluated conditionally; no layer is silently equated with the volume source.",
+    "source_nonuniqueness": "The canonical cap sum and source Schur pullback are explicit; positive same-domain lifts have equal leading C,D and distinct higher-order coefficients/cutoffs. This proves underdetermination without selecting either witness as a physical state.",
+    "continuation": "Exact bulk/current/environment/material/global equations remain distinct from an unevolved physical continuation.",
+    "author_facts": "Author-confirmed sole-author declarations and correspondence are complete in the current sources. AI package labels are attributed; no unsupported current-model assertion.",
+    "archive": "The immutable calculation commit archives source applications and checks; final PDF is a later manuscript revision.",
+    "new_scientific_blocking_findings": [],
+    "new_numerical_reruns_for_final_review": false
+  }
+}

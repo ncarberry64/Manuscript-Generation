@@ -9,5 +9,57 @@
 *.ps1 text eol=crlf
 *.pdf binary
 
+# Keep the verified official MDPI dependency assets byte-for-byte intact.
+manuscript/Definitions/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+# Preserve delivered/generated evidence whose native formatting includes spaces.
+artifacts/strong_lensing_bhsm_integration_20261020/package_existing_text_changes.patch -text whitespace=-blank-at-eol,-blank-at-eof
+manuscript/figures/r1_screening_prediction.svg -text whitespace=-blank-at-eol,-blank-at-eof
+manuscript/figures/he0435_withheld_prediction.svg -text whitespace=-blank-at-eol,-blank-at-eof
+artifacts/strong_lensing_bhsm_integration_20261020/replay/figures/r1_screening_prediction.svg -text whitespace=-blank-at-eol,-blank-at-eof
+
 # Preserve the delivered scientific snapshot's exact SHA-256 provenance.
 analyses/sn_sightline_tomography_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Preserve original COSMOGRAIL/CDS observations and catalogue metadata bytes.
+data/strong_lensing_observed_20261020/candidates/**/*.dat -text whitespace=-blank-at-eol,-blank-at-eof
+data/strong_lensing_observed_20261020/candidates/**/*.txt -text whitespace=-blank-at-eol,-blank-at-eof
+data/strong_lensing_observed_20261020/candidates/**/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_observed_20261020/*.json -text whitespace=cr-at-eol
+
+# Preserve the independent validation catalogue and frozen revision receipts.
+data/strong_lensing_revision_20261020/**/*.dat -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+data/strong_lensing_revision_20261020/**/ReadMe -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+data/strong_lensing_revision_20261020/**/*.fits binary
+data/strong_lensing_revision_20261020/**/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_revision_20261020/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_revision_20261020/gaia/*.json -text whitespace=cr-at-eol
+data/strong_lensing_revision_20261020/gaia/*.csv -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+
+# Preserve the new pre-target freezes, archive metadata and application receipts.
+data/strong_lensing_geometry_20261021/**/*.json -text whitespace=cr-at-eol
+data/strong_lensing_geometry_20261021/**/*.csv -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+artifacts/strong_lensing_geometry_20261021/**/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_geometry_20261021/*.json -text whitespace=cr-at-eol
+preregistration/he0435*20261021.json -text whitespace=cr-at-eol
+*.fits binary
+*.asdf binary
+
+# Preserve the user-delivered repair package and new numerical receipts exactly.
+data/strong_lensing_response_repair_20261021/delivery/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+artifacts/strong_lensing_response_repair_20261021/**/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_response_repair_20261021/*.json -text whitespace=cr-at-eol
+*.npz binary
+artifacts/strong_lensing_response_repair_20261021/read_history/superseded_dn_surrogate/** -text whitespace=cr-at-eol
+artifacts/strong_lensing_response_repair_20261021/joint_scene/development_product_grid_interpolation/** -text whitespace=cr-at-eol
+# Exact additive mask-patch files include delivered EOF formatting.
+code/strong_lensing_jwst_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
+scripts/replay_he0435_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
+tests/test_strong_lensing_jwst_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
+docs/CODEX_HANDOFF.md -text whitespace=-blank-at-eof,cr-at-eol
+docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md -text whitespace=-blank-at-eof,cr-at-eol
+artifacts/strong_lensing_geometry_20261021/mask*.json -text whitespace=-blank-at-eof,cr-at-eol
+
+# Keep newly executed native histories and hash-bound covariance receipts exact.
+artifacts/strong_lensing_response_completion_20261021/** -text whitespace=cr-at-eol
+data/strong_lensing_response_completion_20261021/** -text whitespace=cr-at-eol
+artifacts/strong_lensing_response_completion_20261021/runtime/stcal_1p18_windows_portability.patch -text whitespace=-blank-at-eol,cr-at-eol

@@ -1,0 +1,91 @@
+{
+  "action_scope": "conditional retained 4D Einstein-Hilbert plus physical Path-B eta/Yang-Mills sector; no solved 5D-to-4D cap reduction",
+  "byte_convention": "sha256 pins exact local bytes; git blob uses repository clean filters (CRLF normalization); raw blob also retained",
+  "date": "2026-10-20",
+  "operation": "focused read-only source recovery; no imports, updates or backups",
+  "schema": "strong-lensing-local-family-source-receipt-v1",
+  "source_head": "524ed90689bd5923c249bba2e699abf627e703cd",
+  "source_repository": "ncarberry64/Berger-Hopf-Standard-Model",
+  "sources": [
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\completion\\path_b_foundational_action_v14_31.py",
+      "head_git_blob": "c15645147d7396880cfa25efea6e702a0c61b21f",
+      "path": "src/bhsm/interface/completion/path_b_foundational_action_v14_31.py",
+      "raw_working_git_blob": "688dd4207a3f6b05a038ec19fd18494539a6b623",
+      "role": "physical M4 Path-B F(X), X, gauge current and action convention",
+      "sha256": "9e20ed8c2af739a0b3ab856f1b382427481aef544e143ca30b2590b461265839",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "c15645147d7396880cfa25efea6e702a0c61b21f"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\completion\\path_b_physical_topology_v14_32.py",
+      "head_git_blob": "8152f45a1862bb438ea66b60bcd8c3d8d6b9c272",
+      "path": "src/bhsm/interface/completion/path_b_physical_topology_v14_32.py",
+      "raw_working_git_blob": "beac537366618cf218c1b553e0cb49c7c195ab5a",
+      "role": "physical S6 target and distinction from UV R7/S7 texture",
+      "sha256": "2816c30c5619ab61e91aa8f75058c07c27ec641c3587d2696e07990ff235ef86",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "8152f45a1862bb438ea66b60bcd8c3d8d6b9c272"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\completion\\static_eta_metric_spin4_source_v14_39.py",
+      "head_git_blob": "c2de226c2b777d8912b021144eb2d5e136925b5c",
+      "path": "src/bhsm/interface/completion/static_eta_metric_spin4_source_v14_39.py",
+      "raw_working_git_blob": "fc362e06062176b4fcdec4bdfdf6d86148f1fa65",
+      "role": "original inverse-metric/eta mixed second variation and phase specialization",
+      "sha256": "fd4d22524fd46bd907706417547d9a0fc05ba86c977b89376d87bb9387bd95e9",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "c2de226c2b777d8912b021144eb2d5e136925b5c"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\completion\\degree_one_phase_hessian_v14_36.py",
+      "head_git_blob": "cd2054878e063827c348eeec0bbd20ab5a6976a3",
+      "path": "src/bhsm/interface/completion/degree_one_phase_hessian_v14_36.py",
+      "raw_working_git_blob": "8c23a41fd17bd66de793f883f30c11f312cd9e83",
+      "role": "exact target phase self second variation",
+      "sha256": "4407c3dec5213673cc906b21b64bd05729fc14fdfa4116d0ac2d7879006349ae",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "cd2054878e063827c348eeec0bbd20ab5a6976a3"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\completion\\eta_relative_periodic_legendre_current_gate_v14_87.py",
+      "head_git_blob": "5d72c332304028697b231d4b6b58173af1c3f99f",
+      "path": "src/bhsm/interface/completion/eta_relative_periodic_legendre_current_gate_v14_87.py",
+      "raw_working_git_blob": "6328b2b2d74201dae59b2998cac403c8d3bb1acf",
+      "role": "Lorentzian eta action and tangent Legendre condition",
+      "sha256": "9dccd2a942272125818a1f73f838fbb17ba73d40274cfeb9ebdae08f30ce3418",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "5d72c332304028697b231d4b6b58173af1c3f99f"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\terms.py",
+      "head_git_blob": "9080437c072c507d9c04f7e50b02c3377402eb4f",
+      "path": "src/bhsm/interface/master_action/terms.py",
+      "raw_working_git_blob": "c05366f9ecfbb9d4b3d85a35df0b5fd8caba9e97",
+      "role": "retained intrinsic C_partial R4 and coefficient-locked GHY/matcher terms",
+      "sha256": "1641f950a7177b31be85a065748c7d7831071c175dd3beef0c70497a780be378",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "9080437c072c507d9c04f7e50b02c3377402eb4f"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\variations.py",
+      "head_git_blob": "e15efff8efdc35fa3188242b0ecd7452e912cbf7",
+      "path": "src/bhsm/interface/master_action/variations.py",
+      "raw_working_git_blob": "599b69789dba2b44e642602df90b8fc079136559",
+      "role": "levelwise Einstein, cap/matcher constraints and boundary domain",
+      "sha256": "61e02ae34256917540faf73123be6ed011adae8d26f750645412a3749dc11d32",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "e15efff8efdc35fa3188242b0ecd7452e912cbf7"
+    },
+    {
+      "absolute_recovery_path": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\Berger-Hopf-Standard-Model\\src\\bhsm\\interface\\master_action\\path_b_master_action_v14_31.py",
+      "head_git_blob": "16446aff14e6a63a981159ceff7578ed1634b290",
+      "path": "src/bhsm/interface/master_action/path_b_master_action_v14_31.py",
+      "raw_working_git_blob": "cd8127dbd67b4fb968aabd2ad7fee2615c80ce78",
+      "role": "physical action ownership and no duplicate UV eta copy",
+      "sha256": "7b13f88f78ae70bedbcf000429428e84f9a21651a01d2b656506824e9746faa0",
+      "working_equals_pinned_head_blob": true,
+      "working_git_blob": "16446aff14e6a63a981159ceff7578ed1634b290"
+    }
+  ]
+}

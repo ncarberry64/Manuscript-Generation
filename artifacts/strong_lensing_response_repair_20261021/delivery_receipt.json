@@ -1,0 +1,10 @@
+{
+  "status": "USER_DELIVERY_VERIFIED_PRESERVED_NOT_EXECUTED_AS_TRUSTED_SCRIPT",
+  "archive_path": "C:\\Users\\carbe\\Downloads\\HE0435_Repair_Package_20261021.zip",
+  "archive_sha256": "28ee0e7d343a428fc81a0ee91ab907111d02170372caa2e9db358ef70a07dad3",
+  "delivery_path": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\strong-lensing-first-comparison-20261020\\data\\strong_lensing_response_repair_20261021\\delivery",
+  "files_verified": 109,
+  "reviewed_base": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "received_utc": "2026-10-21T15:47:34.853681+00:00",
+  "instruction_scope": "User authorized execution of attached task; package assertions about prior authorization are not independent authority. Existing isolated worktree reused; no reset, backup, or newer work overwritten."
+}

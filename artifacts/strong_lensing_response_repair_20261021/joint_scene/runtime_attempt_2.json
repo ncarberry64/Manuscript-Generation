@@ -1,0 +1,6 @@
+{
+  "status": "FAILED_AFTER_BASELINE_FIT_BEFORE_COVARIANCE",
+  "baseline_fit_nfev": 13,
+  "baseline_objective": 50120.5832084025,
+  "reason": "FFT same mode cropped a calibration batch to one mode per batch; corrected explicit broadcasting, all318derivatives retained. No physical inference/validation or outputs published."
+}

@@ -1,0 +1,137 @@
+{
+  "status": "executed synthetic/source application; no native data fitted",
+  "scope": "conditional detector counting/readout law; no BHSM dressed-state statistical closure",
+  "source_mean": "G_j=a_segment+m_j*f_DN+(kappa_e/2)*v_j*diag(1/g)*L((g*f_DN)^2)",
+  "same_leading_mean_derivation": {
+    "incident_electron_rate": "lambda=g*f_DN, strictly nonnegative physical carrier rate; detector plane offset is not a rate",
+    "boundary": "A_pq=kappa_e*(lambda_p+lambda_q) for adjacent p!=q; A_pp=-sum_q A_pq",
+    "identity": "A*lambda=kappa_e*L(lambda^2); row/column sums of A are zero",
+    "positive_completion": "a_p(N)=Lambda*softmax(log(lambda_p)+(A*N)_p/lambda_p); lambda_p>0; value/Jacobian at N=0 are lambda/A",
+    "completion_domain": "positive rates; higher orders are a new explicit conditional assumption, not fixed by the mean",
+    "local_moments": "mu'=lambda+A*mu; C'=A*C+C*A^T+diag(lambda+A*mu); mu(0)=C(0)=0",
+    "cross_time": "K(t,s)=exp(A*(t-s))*C(s), t>=s",
+    "projected": "Cov(sum_t H_t*N(t))=integral_0^T B(u)*diag(exp(A*u)*lambda)*B(u)^T du; B=sum_{t>=u}H_t exp(A*(t-u))",
+    "approximation": "resummed local affine/linear-noise moments, not exact nonlinear softmax CME; agrees with leading original mean and leading covariance in kappa",
+    "non_identification": "A2=kappa_e*L*diag(lambda) also has A2*lambda=kappa_e*L(lambda^2), but its covariance differs; the source mean does not determine the boundary law",
+    "naive_hopping": "propensity kappa*N*(N-1) would first alter the mean at order t^3 and does not reproduce the prescribed t^2 term",
+    "gain": "charge conservation is in electron units, not a sum of nonuniform-gain DN",
+    "dark": "physical dark births before the map require their own readwise rate/law; native subtracted group-dark and its reference ERR are not that stochastic law"
+  },
+  "observation_chain": {
+    "mean": "H_j=L(mean_r inverseL(q_jr))-dark_j, with q_jr including physical dark and intercept before inverseL",
+    "photon_map": "H_t contains native dH/dq_read divided by gain, then actual estimator/flat/photometric derivatives",
+    "ADC_noise_map": "read noise enters raw ADC after inverseL: native L'(mean ADC)/N, not dH/dq_read",
+    "CDS": "CONDITIONAL independent single ADC read variance=CDS_DN^2/2; actual0282 CDS marginals were measured after reference/IPC correction and do not identify raw ADC independence",
+    "shared_references": "sum_named J_ref*C_ref*J_ref^T, preserving same physical reference columns across groups/exposures",
+    "parameter_score": "full Gaussian score includes -.5*r^T C^-1 C_theta C^-1*r + .5*tr(C^-1 C_theta), in addition to mean derivative",
+    "no_estimator_substitution": "native rate covariance requires its producing adaptive derivative, including actual DQ/segmentation/ZEROFRAME branch"
+  },
+  "synthetic_parameters": {
+    "shape": [
+      3,
+      3
+    ],
+    "kappa_e_inverse": 2e-07,
+    "electronic_gain_range_e_per_DN": [
+      1.8,
+      2.2
+    ],
+    "maximum_time_s": 128.84124,
+    "charge_ceiling_e": 80000.0,
+    "readnoise_CDS_DN": 12.0,
+    "shared_bias_sigma_DN": 0.3
+  },
+  "synthetic_result": {
+    "number_of_group_pixels": 27,
+    "poisson_covariance_min_eigenvalue_DN2": 11.765526854885243,
+    "largest_interpixel_boundary_covariance_DN2": 6.1832681256099855,
+    "same_pixel_cross_group_covariance_DN2": 501.27326020564664,
+    "max_resummed_minus_original_mean_DN": 0.24129309857926273,
+    "total_electron_mean": 25124.041800000006,
+    "total_electron_variance": 25124.041800000003,
+    "expected_conserved_Poisson_total": 25124.0418,
+    "projection_diagnostics": {
+      "scope": "conditional detector counting/readout law; not BHSM dressed-state statistics",
+      "projection_provenance": "synthetic equal two-read group averages / individual pixel electronic gain",
+      "closure": "local affine drift / linear-noise; not exact nonlinear softmax law",
+      "counts_unit": "electron",
+      "time_unit": "s",
+      "kappa_unit": "electron^-1",
+      "finite_context_pixels": 9,
+      "no_exterior_edges": true,
+      "initial_random_charge": "not included",
+      "small_signal_domain_source": "synthetic declared unsaturated 3x3 no-exterior-edge context",
+      "declared_maximum_time_s": 128.84124,
+      "charge_ceiling_check": "necessary mean-domain check only; no random overflow law",
+      "charge_ceiling_supplied": true,
+      "post_saturation_collection_or_overflow_law": "not supplied",
+      "exponential_degree": 5,
+      "generator_norm_times_max_time": 0.027108196895999994,
+      "shared_spatial_powers_across_reads": true,
+      "exponential_remainder_norm_bound": 5.662969627227747e-13,
+      "covariance_exponential_absolute_2norm_error_bound": 4.864160192363783e-08,
+      "quadrature_order": 6,
+      "quadrature_check_frobenius_difference": 9.4417773638803e-13,
+      "minimum_deterministic_birth_rate_e_s": 6.00001580760252,
+      "noise_rescaling": false,
+      "physical_validation": false
+    },
+    "fixed_residual_application": {
+      "number_of_observations": 27,
+      "raw_residual_rms": 1.5791104279276178,
+      "native_ERR_chi2": 0.3900700652598301,
+      "conditional_stochastic_chi2": 0.46917064107470696,
+      "conditional_gaussian_logdet": 136.82214197167005,
+      "covariance_scope": "synthetic conditional boundary LNA + independent ADC + shared bias",
+      "mean_was_changed": false,
+      "error_rescaling": false,
+      "physical_validation": false
+    }
+  },
+  "actual_available_input_relations": [
+    "native CAL metadata: SHALLOW2, 9 groups, 2 frames, gap3, TFRAME10.73677s; actual five-patch histories recovered separately",
+    "gain0094, CDS-readnoise0282, linearity0054, saturation0100, bias0180, flat0667, dark0337, SIRSkernel0002 native identities",
+    "per-read native polynomial derivative and actual adaptive slope-map Jacobian are recovered by separate source-trail applications"
+  ],
+  "individually_unresolved_relations": [
+    "actual NRCB3 wavelength/illumination/position-dependent collection-boundary Jacobian; kappa and isotropy not uniquely fixed by one mean fit",
+    "IPC/NLIPC charge-to-voltage spatial kernel and its signal dependence, separated from already IPC-broadened effective optical PSF",
+    "post-saturation stored-charge/overflow/collection response of influential cores; no constant-lambda extrapolation physically admitted",
+    "initial/reset charge state and persistence/trapping history law",
+    "full raw-ADC temporal/interpixel read covariance and SIRS reference/control covariance/Jacobian",
+    "actual0282 HISTORY says CDS was measured after reference/bias/IPC corrections: its marginals cannot uniquely identify the raw covariance needed before another SIRS projection",
+    "full shared spatial/temporal calibration covariance: CRDS ERR provides marginals only",
+    "physical dark-current photon/carrier counting law before native readwise/group dark mapping",
+    "signal-dependent masking and adaptive rate-estimator selection law beyond a local fixed-branch Jacobian",
+    "BHSM prepared U,V contractions and dressed optical statistical kernel remain separate from this detector counting approximation"
+  ],
+  "domain": "time/charge-ceiling checks include unobserved context cores; mean below ceiling is necessary, not a random-overflow law",
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "no_reserved_observations_consumed": true,
+  "no_native_fit_by_this_script": true,
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/1906.01846",
+      "use": "primary infrared moving-boundary counting, unequal-time moments, IPC/BFE distinction; NOT an NRCB3 calibration"
+    },
+    {
+      "url": "https://jwst-pipeline.readthedocs.io/en/2.0.1/jwst/references_general/readnoise_reffile.html",
+      "use": "native READNOISE is CDS-DN noise"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/spacetelescope/stcal/1.18.0/src/stcal/ramp_fitting/ramp_fit.py",
+      "use": "producing ramp-fit noise scaling and adaptive-estimator source; actual recovered mapping must be used"
+    },
+    {
+      "url": "https://jwst-docs.stsci.edu/jwst-near-infrared-camera/nircam-instrumentation/nircam-detector-overview/nircam-detector-readout",
+      "use": "nondestructive NIRCam readout with accumulated charge in place"
+    }
+  ],
+  "file_sha256": {
+    "code/strong_lensing_stochastic_response.py": "35a670e1fdb2cf73231fc3f373a718a053006a801e1af9ab49f78fd7ccb0fad1",
+    "scripts/run_he0435_stochastic_response.py": "e116dc29c0ca0508c55b5c7a0832dc619b80435c1c33c438f65f120f52cd0123",
+    "tests/test_strong_lensing_stochastic_response.py": "f39139f0138c388747347e75712cf37982bc32bc40686d72633538b1d341537d",
+    "artifacts/strong_lensing_response_completion_20261021/stochastic/synthetic_application.npz": "5c9c61b5fb04a1406297289a9c47a5e7ba269dd659ce14d9353d6b5000280c22"
+  }
+}

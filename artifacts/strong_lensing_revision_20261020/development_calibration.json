@@ -1,0 +1,97 @@
+{
+  "development_only": true,
+  "independent_validation": false,
+  "modes": {
+    "primary_C_driver": {
+      "per_image_scale": [
+        1.0,
+        3.613209500763347,
+        1.0,
+        1.0
+      ],
+      "by_image": {
+        "0": {
+          "count": 901,
+          "quantile_abs_z_97_5": 1.0106533741818422,
+          "unscaled_95_moment_coverage": 1.0,
+          "scaled_95_moment_coverage": 1.0,
+          "maximum_abs_z": 1.615412538186215,
+          "scale": 1.0
+        },
+        "1": {
+          "count": 901,
+          "quantile_abs_z_97_5": 7.081760490093914,
+          "unscaled_95_moment_coverage": 0.6714761376248612,
+          "scaled_95_moment_coverage": 0.9755826859045506,
+          "maximum_abs_z": 8.139813585740578,
+          "scale": 3.613209500763347
+        },
+        "2": {
+          "count": 0,
+          "scale": 1.0,
+          "reason": "Image C is the allowed primary driver"
+        },
+        "3": {
+          "count": 901,
+          "quantile_abs_z_97_5": 1.6693098092953362,
+          "unscaled_95_moment_coverage": 0.9844617092119867,
+          "scaled_95_moment_coverage": 0.9844617092119867,
+          "maximum_abs_z": 3.678724657410966,
+          "scale": 1.0
+        }
+      }
+    },
+    "secondary_forecast": {
+      "per_image_scale": [
+        1.610123403235433,
+        1.9072587333396998,
+        1.8775403905136396,
+        1.9247902264282406
+      ],
+      "by_image": {
+        "0": {
+          "count": 901,
+          "quantile_abs_z_97_5": 3.1557838810064247,
+          "unscaled_95_moment_coverage": 0.8179800221975583,
+          "scaled_95_moment_coverage": 0.9755826859045506,
+          "maximum_abs_z": 3.8021433367638906,
+          "scale": 1.610123403235433
+        },
+        "1": {
+          "count": 901,
+          "quantile_abs_z_97_5": 3.7381584265451915,
+          "unscaled_95_moment_coverage": 0.5416204217536071,
+          "scaled_95_moment_coverage": 0.9755826859045506,
+          "maximum_abs_z": 4.683152810380624,
+          "scale": 1.9072587333396998
+        },
+        "2": {
+          "count": 901,
+          "quantile_abs_z_97_5": 3.679911544925901,
+          "unscaled_95_moment_coverage": 0.7125416204217536,
+          "scaled_95_moment_coverage": 0.9755826859045506,
+          "maximum_abs_z": 4.663360856384324,
+          "scale": 1.8775403905136396
+        },
+        "3": {
+          "count": 901,
+          "quantile_abs_z_97_5": 3.7725195215939435,
+          "unscaled_95_moment_coverage": 0.7469478357380688,
+          "scaled_95_moment_coverage": 0.9755826859045506,
+          "maximum_abs_z": 5.352977459860236,
+          "scale": 1.9247902264282406
+        }
+      }
+    }
+  },
+  "protocol_sha256": "6b9b668c4570a35cc4520e8d3227d3ed3707a3f99d1d901c755ae9a76eff5feb",
+  "fold_paths": [
+    "artifacts/strong_lensing_revision_20261020/development_fold_56000.json",
+    "artifacts/strong_lensing_revision_20261020/development_fold_56800.json",
+    "artifacts/strong_lensing_revision_20261020/development_fold_57600.json",
+    "artifacts/strong_lensing_revision_20261020/development_long_fold_54800.json",
+    "artifacts/strong_lensing_revision_20261020/development_long_fold_55600.json",
+    "artifacts/strong_lensing_revision_20261020/development_long_fold_56400.json"
+  ],
+  "overlapping_temporal_folds_are_not_independent": true
+}

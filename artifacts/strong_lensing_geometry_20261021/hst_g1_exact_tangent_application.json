@@ -1,0 +1,457 @@
+{
+  "status": "DEVELOPMENT_HST_CONSTRAINT_NOT_UNUSED_VALIDATION",
+  "input_file": "artifacts/strong_lensing_geometry_20261021/g1_hst_central_input.json",
+  "input_sha256": "210ef31199f3c673fefa922b1d95731f21cdf2f00c4c6d191a28e2f4db1bb23a",
+  "original_HST_receipt_sha256": "c53d34fcef8832ba16345606271c36b378e9c0e0553638022b6f0c54ac413b60",
+  "photometric_condition": "Observed central/A ratio equals frozen achromatic macro ratio; no differential extinction/microlensing/intrinsic-delay variability correction is derived here.",
+  "models": {
+    "conventional": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            2.1604310777802773e-05,
+            0.003493821185053561
+          ],
+          "absolute_macro_flux_relative_A": 0.0016505405890480925
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.5863084851996256,
+            -3.640365887866161
+          ],
+          "absolute_macro_flux_relative_A": 2.387365093271706e-07
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.64413518426954,
+            -3.7925271558175964
+          ],
+          "absolute_macro_flux_relative_A": 0.0004569559363325601
+        }
+      ],
+      "number_additional_images": 3,
+      "bands": {
+        "F814W": {
+          "cases": [
+            {
+              "psf": "field_star_1",
+              "fixed_position": {
+                "upper_scale_95": 4.6953141768708395,
+                "profile_excess_chi2": 1.557710675234303e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 55,
+                "upper_bound_details": {
+                  "npixel": 55,
+                  "bonferroni_z": 3.1184286123025298,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.4035180936513925,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 11.238110615719275,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.030000000000000002,
+                0.039999999999999994
+              ]
+            },
+            {
+              "psf": "field_star_2",
+              "fixed_position": {
+                "upper_scale_95": 4.768822292903094,
+                "profile_excess_chi2": 2.1206907890168546e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 53,
+                "upper_bound_details": {
+                  "npixel": 53,
+                  "bonferroni_z": 3.107496459773552,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.4610979476285575,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 11.108640881389647,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.030000000000000002,
+                0.039999999999999994
+              ]
+            },
+            {
+              "psf": "field_star_3",
+              "fixed_position": {
+                "upper_scale_95": 4.4430926530873895,
+                "profile_excess_chi2": 1.398524498897988e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 50,
+                "upper_bound_details": {
+                  "npixel": 50,
+                  "bonferroni_z": 3.090232306167813,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.271674757909228,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 12.858379362939482,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.04,
+                0.03
+              ]
+            },
+            {
+              "psf": "quasar_A_empirical",
+              "fixed_position": {
+                "upper_scale_95": 4.584042533730896,
+                "profile_excess_chi2": 1.7290299103594124e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 53,
+                "upper_bound_details": {
+                  "npixel": 53,
+                  "bonferroni_z": 3.107496459773552,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.3162426474413635,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 13.50990371806152,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.04,
+                0.039999999999999994
+              ]
+            }
+          ],
+          "worst_psf_centroid_upper_scale_95": 7.4610979476285575,
+          "worst_adversarial_upper_scale_95": 13.50990371806152
+        },
+        "F160W": {
+          "cases": [
+            {
+              "psf": "field_star_1",
+              "fixed_position": {
+                "upper_scale_95": 203.1121486228163,
+                "profile_excess_chi2": 1.952568350723566e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 35,
+                "upper_bound_details": {
+                  "npixel": 35,
+                  "bonferroni_z": 2.9827038754885775,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 289.6444300729341,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 385.7180304463913,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.024036814897961528,
+                0.020127197928695075
+              ]
+            },
+            {
+              "psf": "field_star_2",
+              "fixed_position": {
+                "upper_scale_95": 191.65750223398553,
+                "profile_excess_chi2": 1.8968550685721377e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 40,
+                "upper_bound_details": {
+                  "npixel": 40,
+                  "bonferroni_z": 3.023341439739154,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 268.8931045316046,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 354.5453063035242,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.03205527771320703,
+                0.04121436157860068
+              ]
+            },
+            {
+              "psf": "field_star_3",
+              "fixed_position": {
+                "upper_scale_95": 185.00997065683796,
+                "profile_excess_chi2": 1.941700691900619e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 38,
+                "upper_bound_details": {
+                  "npixel": 38,
+                  "bonferroni_z": 3.0077865564732638,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 273.7576357044972,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 363.2655484626978,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.029926559731965566,
+                0.03156121291115231
+              ]
+            },
+            {
+              "psf": "quasar_A_empirical",
+              "fixed_position": {
+                "upper_scale_95": 188.42714206226992,
+                "profile_excess_chi2": 1.5434901862662437e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 36,
+                "upper_bound_details": {
+                  "npixel": 36,
+                  "bonferroni_z": 2.991316115183781,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.0021077352618899797,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 258.6229738739858,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 325.4813304848144,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.03026723416726486,
+                0.03999999999199549
+              ]
+            }
+          ],
+          "worst_psf_centroid_upper_scale_95": 289.6444300729341,
+          "worst_adversarial_upper_scale_95": 385.7180304463913
+        }
+      }
+    },
+    "r1": {
+      "images": [
+        {
+          "position_light_centered_arcsec": [
+            2.1553348416501635e-05,
+            0.0034939538699713707
+          ],
+          "absolute_macro_flux_relative_A": 0.001650377396334806
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.58630849922716,
+            -3.640365893698264
+          ],
+          "absolute_macro_flux_relative_A": 2.387341447071914e-07
+        },
+        {
+          "position_light_centered_arcsec": [
+            -2.644135740109032,
+            -3.792527158182935
+          ],
+          "absolute_macro_flux_relative_A": 0.0004569496439617718
+        }
+      ],
+      "number_additional_images": 3,
+      "bands": {
+        "F814W": {
+          "cases": [
+            {
+              "psf": "field_star_1",
+              "fixed_position": {
+                "upper_scale_95": 4.6953908679623595,
+                "profile_excess_chi2": 1.8121681883662683e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 55,
+                "upper_bound_details": {
+                  "npixel": 55,
+                  "bonferroni_z": 3.1184286123025298,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.403556780263566,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 11.238265446620836,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.030000000000000002,
+                0.039999999999999994
+              ]
+            },
+            {
+              "psf": "field_star_2",
+              "fixed_position": {
+                "upper_scale_95": 4.768891281332887,
+                "profile_excess_chi2": 1.549821840937424e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 53,
+                "upper_bound_details": {
+                  "npixel": 53,
+                  "bonferroni_z": 3.107496459773552,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.461153575993791,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 11.108791788271898,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.030000000000000002,
+                0.039999999999999994
+              ]
+            },
+            {
+              "psf": "field_star_3",
+              "fixed_position": {
+                "upper_scale_95": 4.4431620051521215,
+                "profile_excess_chi2": 2.3733839224607344e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 50,
+                "upper_bound_details": {
+                  "npixel": 50,
+                  "bonferroni_z": 3.090232306167813,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.271806058590972,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 12.858555140707791,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.04,
+                0.03
+              ]
+            },
+            {
+              "psf": "quasar_A_empirical",
+              "fixed_position": {
+                "upper_scale_95": 4.58412077358153,
+                "profile_excess_chi2": 1.443190457767519e-28,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 53,
+                "upper_bound_details": {
+                  "npixel": 53,
+                  "bonferroni_z": 3.107496459773552,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 7.316390126028277,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 13.51008875098946,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.04,
+                0.039999999999999994
+              ]
+            }
+          ],
+          "worst_psf_centroid_upper_scale_95": 7.461153575993791,
+          "worst_adversarial_upper_scale_95": 13.51008875098946
+        },
+        "F160W": {
+          "cases": [
+            {
+              "psf": "field_star_1",
+              "fixed_position": {
+                "upper_scale_95": 203.11436440237858,
+                "profile_excess_chi2": 1.7898943218334923e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 35,
+                "upper_bound_details": {
+                  "npixel": 35,
+                  "bonferroni_z": 2.9827038754885775,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 289.66120213467053,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 387.49687631589404,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.024037563219163775,
+                0.020131342612683473
+              ]
+            },
+            {
+              "psf": "field_star_2",
+              "fixed_position": {
+                "upper_scale_95": 191.6596627508256,
+                "profile_excess_chi2": 2.780173257228845e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 40,
+                "upper_bound_details": {
+                  "npixel": 40,
+                  "bonferroni_z": 3.023341439739154,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 268.911974781503,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 354.5983235981785,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.032055452522619,
+                0.041220491046125705
+              ]
+            },
+            {
+              "psf": "field_star_3",
+              "fixed_position": {
+                "upper_scale_95": 185.01199833042082,
+                "profile_excess_chi2": 1.2527586643408282e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 38,
+                "upper_bound_details": {
+                  "npixel": 38,
+                  "bonferroni_z": 3.0077865564732638,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 273.7752899541059,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 363.28820145945645,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.029928563641401222,
+                0.03156754745059506
+              ]
+            },
+            {
+              "psf": "quasar_A_empirical",
+              "fixed_position": {
+                "upper_scale_95": 188.42913586516107,
+                "profile_excess_chi2": 1.9643995270831317e-27,
+                "profile_chi2_is_not_a_detection_significance": true,
+                "n_support_pixel": 36,
+                "upper_bound_details": {
+                  "npixel": 36,
+                  "bonferroni_z": 2.991316115183781,
+                  "alpha": 0.05,
+                  "support_fraction_of_peak": 0.03
+                },
+                "summed_macro_flux_relative_A": 0.002107565774441285,
+                "number_of_additional_images": 3
+              },
+              "free_centroid_upper_scale_95": 258.63865349994643,
+              "fivefold_sigma_twenty_percent_lower_A_upper_scale_95": 325.49647140823924,
+              "centroid_offset_pixel_directions_arcsec": [
+                -0.030255004249192557,
+                0.039999992469062856
+              ]
+            }
+          ],
+          "worst_psf_centroid_upper_scale_95": 289.66120213467053,
+          "worst_adversarial_upper_scale_95": 387.49687631589404
+        }
+      }
+    }
+  }
+}

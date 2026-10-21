@@ -1,0 +1,24 @@
+{
+  "scope": "Numerical provenance reconciliation of missing native stcal version",
+  "input_corrected_ramp": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/first_exposure_native_corrected_ramp.fits",
+  "output_rate": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/first_exposure_stcal118_rate.fits",
+  "jwst_version": "2.0.1",
+  "stcal_version": "1.18.0",
+  "ramp_fit_settings": {
+    "skip": false,
+    "algorithm": "OLS_C",
+    "int_name": "",
+    "save_opt": false,
+    "opt_name": "",
+    "suppress_one_group": false,
+    "firstgroup": null,
+    "lastgroup": null,
+    "maximum_cores": "1",
+    "override_gain": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_gain_0094.fits",
+    "override_readnoise": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_readnoise_0282.fits"
+  },
+  "native_version_inferred_not_recorded": true,
+  "original_stcal1191_replay_retained": true,
+  "physical_models_changed": false,
+  "errors_rescaled": false
+}

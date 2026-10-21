@@ -1,0 +1,91 @@
+{
+  "images_light_centered_arcsec": [
+    [
+      2.1553348416501635e-05,
+      0.0034939538699713707
+    ],
+    [
+      0.23295486446216665,
+      -1.0505616619178593
+    ],
+    [
+      -0.30520565419416923,
+      1.1163320484833787
+    ],
+    [
+      -1.2953253094811426,
+      -0.03950263038709228
+    ],
+    [
+      1.171080566065426,
+      0.5635523389402618
+    ],
+    [
+      -2.58630849922716,
+      -3.640365893698264
+    ],
+    [
+      -2.644135740109032,
+      -3.792527158182935
+    ]
+  ],
+  "image_count": 7,
+  "signed_magnifications": [
+    0.013789600114934958,
+    -6.456293851881807,
+    -9.117750956567445,
+    8.24796000056788,
+    8.355422308593905,
+    1.994724598509552e-06,
+    -0.0038180072490622287
+  ],
+  "absolute_magnifications": [
+    0.013789600114934958,
+    6.456293851881807,
+    9.117750956567445,
+    8.24796000056788,
+    8.355422308593905,
+    1.994724598509552e-06,
+    0.0038180072490622287
+  ],
+  "arrival_days": [
+    -397.7488248814687,
+    -419.1451029363017,
+    -426.21238168749676,
+    -432.14073812172313,
+    -432.63618109739826,
+    931.4860886968819,
+    840.0907143117895
+  ],
+  "max_lens_residual_rad": 2.1659161856884494e-18,
+  "max_arrival_stationarity_Mpc": 2.4841240175987878e-14,
+  "min_jacobian_singular_value": 0.10121628623448131,
+  "seeds_count": 1126,
+  "model": "r1",
+  "scope": "Finite 20-angle,28-log-radius search at both observed galaxy centers to12arcsec; R1 continues all found conventional roots and interpolated-field seeds with final original-projection verification. No theorem excludes additional remote/critical branches.",
+  "physical_admission": false,
+  "additional_images": [
+    {
+      "position_light_centered_arcsec": [
+        2.1553348416501635e-05,
+        0.0034939538699713707
+      ],
+      "absolute_macro_flux_relative_A": 0.001650377396334806
+    },
+    {
+      "position_light_centered_arcsec": [
+        -2.58630849922716,
+        -3.640365893698264
+      ],
+      "absolute_macro_flux_relative_A": 2.387341447071914e-07
+    },
+    {
+      "position_light_centered_arcsec": [
+        -2.644135740109032,
+        -3.792527158182935
+      ],
+      "absolute_macro_flux_relative_A": 0.0004569496439617718
+    }
+  ],
+  "source_fit_file": "positive_g1_development_fit.json"
+}

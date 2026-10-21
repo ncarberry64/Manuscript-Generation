@@ -1,0 +1,2994 @@
+{
+  "approximation": "linear cosmological amplitudes; exact ray and paraxial angular integration in declared first-order-metric completion for derivative checks; thin static galaxy, axial isotropic screen, geometric optics; no nonlinear/UV or arbitrary-sky claim",
+  "benchmark": {
+    "arrival_days": [
+      -29.915431090290674,
+      -12.820899038695993
+    ],
+    "images_arcsec": [
+      [
+        1.067883053198649,
+        0.0
+      ],
+      [
+        -0.7119220354657658,
+        0.0
+      ]
+    ],
+    "images_rad": [
+      [
+        5.177243140157275e-06,
+        0.0
+      ],
+      [
+        -3.4514954267715153e-06,
+        0.0
+      ]
+    ],
+    "inverse_magnification_determinants": [
+      0.16666666666666652,
+      -0.25000000000000044
+    ],
+    "max_lens_residual_rad": 8.470329472543003e-22,
+    "max_stationarity_Mpc": 0.0,
+    "minimum_image_Jacobian_singular_value": 0.16666666666666652,
+    "relative_delays_days": [
+      17.094532051594683
+    ]
+  },
+  "dependencies": {
+    "conditional": [
+      "six unit response columns",
+      "small finite zeta probe",
+      "synthetic nuisance-prior control"
+    ],
+    "derived": [
+      "current reduced ADM Hessian and complete six-anchor evolution",
+      "axial null-geodesic/angular Jacobi equations and measured-redshift event remapping",
+      "original lens/arrival equations and complete stationary-image response",
+      "static spatial phase mixed-current null under ji=0 or constant texture"
+    ],
+    "specified": [
+      "frozen R1 background and H0 conversion",
+      "normalized n2 profile and positive axial ray",
+      "illustrative galaxy and physical source",
+      "light/clock protocol and covariance"
+    ],
+    "unresolved": [
+      "realized six-coordinate state and independently selected spatial profile",
+      "same-domain local Newtonian metric/phase Hessian and normalized envelope source",
+      "seam state/source normalization and action-derived moving-seam response",
+      "observational lens/environment likelihood and independent degeneracy-breaking information"
+    ]
+  },
+  "envelope_action_projection": {
+    "adm_native_projection": {
+      "N": -0.262364264467491,
+      "a_ADM": -7.96725027661529,
+      "analytic_vs_projected_max": 5.551115123125783e-17,
+      "b_ADM": 0.5695448002713244,
+      "background_phi_v_H": [
+        0.09074930116451298,
+        0.2377644263710765,
+        1.1836105771853052
+      ],
+      "c_ADM": 0.48267978497855984,
+      "c_zeta_before_metric_elimination": 0.30111541199999997,
+      "common_domain": "same N, R1 background, normalized n=2 harmonic, endpoint-vanishing temporal variations",
+      "determinant": -4.1700119299031435,
+      "explicit_inverse_vs_solve_norm": 4.849413209257403e-16,
+      "kinetic_eigenvalues": [
+        0.004182113778467213,
+        0.17251064482078457,
+        0.4338635425190717
+      ],
+      "legendre_gate": true,
+      "local_phase_extraction_dependency": "ADM lapse/shift entries cannot be renamed local Phi/Psi entries. Phi=alpha+chi_dot; Psi=-zeta-H chi is a derivative/state map, not an instantaneous invertible 2x2 change of metric coordinates.",
+      "metric_basis_normalization": "unit lapse harmonic amplitude alpha; unit covariant shift potential harmonic amplitude chi with N_i=D_i chi; chi measured in H0^-1",
+      "metric_block": [
+        [
+          -7.96725027661529,
+          0.5695448002713244
+        ],
+        [
+          0.5695448002713244,
+          0.48267978497855984
+        ]
+      ],
+      "metric_condition_number": 15.368657973059397,
+      "metric_coordinates": [
+        "alpha_ADM_lapse",
+        "chi_ADM_shift"
+      ],
+      "mixed_columns": [
+        [
+          7.021015782437431,
+          0.0,
+          0.0,
+          6.436914587999999,
+          -2.0432099999999997,
+          -0.0010281959999999997
+        ],
+        [
+          -0.48671999999999993,
+          2.0432099999999997,
+          0.0010281959999999999,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "normalization": "one real closed-S3 n=2 harmonic: integral sqrt(gamma) Q^2=1",
+      "original_constraints_by_unit_column": [
+        [
+          4.440892098500626e-16,
+          -1.8388068845354155e-16,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          5.273559366969494e-16,
+          0.0,
+          0.0
+        ],
+        [
+          -1.0842021724855044e-19,
+          -3.3881317890172014e-19,
+          0.0,
+          0.0
+        ],
+        [
+          4.440892098500626e-16,
+          -2.220446049250313e-16,
+          0.0,
+          0.0
+        ],
+        [
+          -2.220446049250313e-16,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "original_constraints_max": 5.273559366969494e-16,
+      "response_columns": [
+        [
+          0.8791608501396269,
+          -0.27906386142866546,
+          -0.00014043213671894133,
+          0.7450742591360788,
+          -0.23650200048443268,
+          -0.00011901390992119837
+        ],
+        [
+          -0.02900782513558868,
+          -3.9037695122520266,
+          -0.0019644775610042457,
+          -0.879160850139627,
+          0.27906386142866546,
+          0.0001404321367189413
+        ]
+      ],
+      "response_residual_norm": 1.41621372581761e-15,
+      "schur_state_block": [
+        [
+          0.18672089278142323,
+          -0.05926907839528635,
+          -2.9825729773111976e-05,
+          5.659083301462245,
+          -1.796310240613787,
+          -0.0009039496694701636
+        ],
+        [
+          -0.0592690783952863,
+          0.41961242820487055,
+          -0.004013840197419485,
+          -1.796310240613787,
+          0.5701860723096636,
+          0.00028693234606550806
+        ],
+        [
+          -2.9825729773111817e-05,
+          -0.004013840197419485,
+          0.004222980132029685,
+          -0.0009039496694701638,
+          0.0002869323460655081,
+          1.443917612458686e-07
+        ],
+        [
+          5.659083301462245,
+          -1.7963102406137872,
+          -0.0009039496694701639,
+          5.0970947797763175,
+          -1.5223431770094276,
+          0.0002621136270533201
+        ],
+        [
+          -1.796310240613787,
+          0.5701860723096636,
+          0.0002869323460655081,
+          -1.5223431770094276,
+          0.4832232524097977,
+          0.0002431704108900917
+        ],
+        [
+          -0.0009039496694701636,
+          0.00028693234606550806,
+          1.443917612458686e-07,
+          0.0002621136270533201,
+          0.0002431704108900917,
+          -0.00034260963037387453
+        ]
+      ],
+      "schur_vs_native_reduction_norm": 4.154655943942955e-16,
+      "simultaneous_aux_reconstruction_max_norm": 1.4657992515888388e-15,
+      "source_coordinates": [
+        "zeta_dot",
+        "D_m_dot",
+        "D_r_dot",
+        "zeta",
+        "D_m",
+        "D_r"
+      ],
+      "source_state_self_block": [
+        [
+          -6.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.395833333333334,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.004225,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.30111541199999997,
+          0.0,
+          0.0010281959999999997
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0010281959999999997,
+          0.0,
+          -0.0003427319999999999
+        ]
+      ],
+      "status": "EXECUTED_ACTION_NATIVE_ADM_PROJECTION_NOT_LOCAL_PHASE_EXTRACTION",
+      "units": "H0=Mpl=1; action density divided by a^3",
+      "z": 0.3,
+      "zeta_schur_curvature": 5.0970947797763175
+    },
+    "local_static_phase": {
+      "applications": {
+        "constant_local_texture": {
+          "pointwise_source_tensor": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "scope": "exact static spatial phase bilinear identity, conditional on stated channel",
+          "source_norm": 0.0,
+          "u": 0.0,
+          "v": 0.0
+        },
+        "zero_spatial_current": {
+          "pointwise_source_tensor": [
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ]
+          ],
+          "scope": "exact static spatial phase bilinear identity, conditional on stated channel",
+          "source_norm": 0.0,
+          "u": 0.0,
+          "v": 0.0
+        }
+      },
+      "constant_texture_FX_sector_self_entry": 0.0,
+      "constant_texture_self_entry_scope": "only the phase-invariant F(X) sector on a domain admitting the constant; additional action and boundary terms must be included before claiming a full c_phi",
+      "metric_response": "zero if the same-domain physical metric block is invertible",
+      "not_inferred": "D0 eta=0 and j0=0 alone do not imply ji=0 or zero full lensing",
+      "phase_invariant_FX_sector_self_entry": "integral dmu*w*[4 F''(X)(j.dphi)^2+2 F'(X)|T eta|^2 (dphi)^2]",
+      "schur_curvature": "c_phi (because u=v=0); not determined by the current-null condition",
+      "status": "DERIVED_EXACT_ZERO_IN_SPECIFIED_STATIC_SPATIAL_PHASE_CHANNELS"
+    },
+    "moving_seam_status": "kinematic proposal only; not selected as an action-derived source",
+    "muon_input_consumed": false,
+    "realized_physical_envelope_amplitude_claimed": false,
+    "schema": "strong-lensing-envelope-action-projection-v1",
+    "seam_used": "no seam amplitude inserted; static export remains symbolic"
+  },
+  "experiment": {
+    "H0_km_s_Mpc": 67.4,
+    "double_counting": "smooth environment enters Jacobi maps once; main galaxy enters encounter potential once; external convergence used only as a nuisance alternative",
+    "envelope_role": "conditional smooth metric correction plus a separately derived static-phase encounter null; a galaxy-replacement amplitude is not established",
+    "fixed": "physical source displacement, physical galaxy potential, observed lens/source redshifts, observer event and conditional normalized profile axis",
+    "galaxy_sigma_km_s": 220.0,
+    "incoming_light_distinct_from": "cosmological delta_r/v_r and muon/reference covariance",
+    "light": "common narrowband transient point source in geometric optics; same emission phase and observer proper-clock protocol",
+    "observer_wavelength_nm": 550.0,
+    "physical_deflection_strength_rad": 6.767274916733322e-06,
+    "reference_Einstein_angle_arcsec": 0.8899025443322076,
+    "reference_beta_arcsec": [
+      0.17798050886644154,
+      0.0
+    ],
+    "source_rest_wavelength_nm": 275.0,
+    "source_transverse_Mpc": [
+      0.0014576633674174603,
+      0.0
+    ],
+    "varied": "six harmonic anchor amplitudes; inferred angular source position and image positions re-solved",
+    "z_l": 0.3,
+    "z_s": 1.0
+  },
+  "finite_conditional_example": {
+    "anchor": [
+      0.001,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "classification": "specified numerical probe, not an action-derived or fitted amplitude",
+    "first_order_difference": [
+      4.07443308297159e-08,
+      0.0,
+      -5.5614479238918376e-08,
+      0.0,
+      -1.9882084720679643e-07
+    ],
+    "maps": {
+      "D_ls": [
+        [
+          0.24213226212358963,
+          0.0
+        ],
+        [
+          0.0,
+          0.24213226212358963
+        ]
+      ],
+      "D_ol": [
+        [
+          0.21249359547065239,
+          0.0
+        ],
+        [
+          0.0,
+          0.21249359547065239
+        ]
+      ],
+      "D_os": [
+        [
+          0.379794910363921,
+          0.0
+        ],
+        [
+          0.0,
+          0.379794910363921
+        ]
+      ],
+      "assumptions": [
+        "conditional normalized n=2 observer dipole; positive axial ray mu=1",
+        "full six-coordinate physical anchor, linear action-native evolution",
+        "measured endpoint redshifts; matter observer/lens/source tetrads",
+        "cosmological propagation only; main galaxy encounter excluded",
+        "axial isotropic screen, paraxial thin-plane application",
+        "finite amplitudes test only the declared truncated-metric completion"
+      ],
+      "lens": {
+        "N": -0.262363115761804,
+        "Phi": -8.744229975123588e-07,
+        "Psi": -8.744229975118691e-07,
+        "a": 0.769231652851036,
+        "affine": 0.21410585210214306,
+        "areal_screen_radius": 0.21249286405546547,
+        "chi": 0.2763034420462508,
+        "observed_z": 0.30000000000000004,
+        "omega": 1.3,
+        "peculiar_velocity": 4.5950801638277905e-06,
+        "static_frequency": 1.2999940264095116
+      },
+      "observer": {
+        "N": 0.0,
+        "Phi": -0.0,
+        "Psi": -0.0,
+        "a": 1.0,
+        "affine": 0.0,
+        "areal_screen_radius": 0.0,
+        "chi": 0.0,
+        "observed_z": 0.0,
+        "omega": 1.0,
+        "peculiar_velocity": 4.305435588600765e-06,
+        "static_frequency": 0.9999956945736796
+      },
+      "perturbation_diagnostics": {
+        "lens_redshift_residual": 5.551115123125783e-17,
+        "max_abs_Phi_on_ray": 1.9753266956582415e-06,
+        "max_abs_Psi_on_ray": 1.9753266956652507e-06,
+        "max_abs_matter_peculiar_velocity": 5.157695261074588e-06,
+        "max_relative_metric_perturbation": 3.950653391330501e-06,
+        "metric_check_sampling_points": 201,
+        "source_redshift_residual": 0.0
+      },
+      "reciprocity": {
+        "D_lo": 0.27624167411184836,
+        "D_sl": 0.37251117249782983,
+        "D_so": 0.7595898207278413,
+        "checked": true,
+        "omega_s_over_omega_l": 1.5384615384615383,
+        "relative_residual": -8.881784197001252e-16,
+        "relative_residual_ol": 8.881784197001252e-16,
+        "relative_residual_os": -8.881784197001252e-16
+      },
+      "source": {
+        "N": -0.6931437007338128,
+        "Phi": -1.9753266956582415e-06,
+        "Psi": -1.9753266956652507e-06,
+        "a": 0.5000017399160935,
+        "affine": 0.406028831799844,
+        "areal_screen_radius": 0.3797941749735915,
+        "chi": 0.7609051567566493,
+        "observed_z": 1.0,
+        "omega": 2.0,
+        "peculiar_velocity": 5.157695261074588e-06,
+        "static_frequency": 1.9999896846360796
+      },
+      "units": "c/H0"
+    },
+    "observable_difference": [
+      4.073932102777178e-08,
+      0.0,
+      -5.5617343286407106e-08,
+      0.0,
+      -1.9883137269971485e-07
+    ],
+    "solution": {
+      "arrival_days": [
+        -29.915432792304845,
+        -12.820900939541536
+      ],
+      "images_arcsec": [
+        [
+          1.06788309393797,
+          0.0
+        ],
+        [
+          -0.7119220910831091,
+          0.0
+        ]
+      ],
+      "images_rad": [
+        [
+          5.177243337667077e-06,
+          0.0
+        ],
+        [
+          -3.451495696412005e-06,
+          0.0
+        ]
+      ],
+      "inverse_magnification_determinants": [
+        0.1666666533422698,
+        -0.249999970020109
+      ],
+      "max_lens_residual_rad": 8.470329472543003e-22,
+      "max_stationarity_Mpc": 3.469446951953614e-18,
+      "minimum_image_Jacobian_singular_value": 0.16666665334226982,
+      "relative_delays_days": [
+        17.09453185276331
+      ]
+    }
+  },
+  "identifiability": {
+    "covariance": [
+      [
+        1e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1e-06,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1e-06,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1e-06,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.010000000000000002
+      ]
+    ],
+    "covariance_status": "declared illustrative measurement covariance, no observed-system likelihood",
+    "delay_only_unrestricted": {
+      "Fisher": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "absolute_rank_threshold": 6.705229435398562e-09,
+      "nuisance_rank": 1,
+      "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+      "null_directions": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projected_signal_singular_values": [
+        0.0
+      ],
+      "raw_signal_singular_values": [
+        0.6705229435398562
+      ],
+      "relative_rank_tolerance": 1e-08,
+      "signal_rank": 0
+    },
+    "fixed_nuisance_control": {
+      "Fisher": [
+        [
+          0.004757023768705822,
+          0.36677135718358994,
+          -0.03206601128959701,
+          -2.4613956037353216e-05,
+          0.316000659569395,
+          0.00024443283018168744
+        ],
+        [
+          0.36677135718358994,
+          47.78844392335581,
+          -2.315450302544607,
+          -0.0020072503369991867,
+          22.778741256354515,
+          0.021331504009431786
+        ],
+        [
+          -0.03206601128959701,
+          -2.315450302544607,
+          0.2182832821267062,
+          0.00016523646516492289,
+          -2.1511009976880686,
+          -0.001624346195069121
+        ],
+        [
+          -2.4613956037353216e-05,
+          -0.0020072503369991867,
+          0.00016523646516492289,
+          1.2801857688357697e-07,
+          -0.0016280583803924239,
+          -1.2779374482855117e-06
+        ],
+        [
+          0.316000659569395,
+          22.778741256354515,
+          -2.1511009976880686,
+          -0.0016280583803924239,
+          21.19850828503809,
+          0.016003683450677656
+        ],
+        [
+          0.00024443283018168744,
+          0.021331504009431786,
+          -0.001624346195069121,
+          -1.2779374482855117e-06,
+          0.016003683450677656,
+          1.2889219696567201e-05
+        ]
+      ],
+      "absolute_rank_threshold": 7.812035636183455e-08,
+      "nuisance_rank": 0,
+      "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+      "null_directions": [
+        [
+          0.2962625773666381,
+          -0.000503283208986229,
+          -0.9493621545055131,
+          0.0011956483895535365,
+          -0.10018849688412121,
+          -0.03000944964120134
+        ],
+        [
+          -0.0031525378718494975,
+          -1.0310310889014656e-05,
+          -0.002653002985400874,
+          -0.9998939568296685,
+          -0.00029847324601844243,
+          0.013964561684988308
+        ],
+        [
+          -0.05565687235457331,
+          -0.00012002964462292456,
+          -0.048374862634756974,
+          0.01423168139368349,
+          -0.004701869594511952,
+          0.99716474189809
+        ]
+      ],
+      "projected_signal_singular_values": [
+        7.812035636183455,
+        2.860435029097435,
+        0.004024281266789655,
+        5.580987833088052e-17,
+        0.0
+      ],
+      "raw_signal_singular_values": [
+        7.812035636183455,
+        2.8604350290974354,
+        0.004024281266789654,
+        5.580987833088052e-17,
+        0.0
+      ],
+      "relative_rank_tolerance": 1e-08,
+      "signal_rank": 3
+    },
+    "nuisance_columns": [
+      [
+        1.0,
+        0.0,
+        0.8899025443320773,
+        0.0,
+        0.0,
+        0.0,
+        1.0678830536237083,
+        0.17798050886644154
+      ],
+      [
+        0.0,
+        6.000000000000005,
+        0.0,
+        0.0,
+        -4.9999999684314105,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        -0.8899025443293017,
+        0.0,
+        0.0,
+        0.0,
+        -0.7119220357509891,
+        0.17798050886644154
+      ],
+      [
+        -0.0,
+        -3.999999999999993,
+        0.0,
+        0.0,
+        4.99999996843141,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        96.04721416108879,
+        0.0,
+        17.094532051409317,
+        -96.04721416121008,
+        0.0,
+        17.094532051594683,
+        17.09453205824829,
+        -1.0658141036401503e-14
+      ]
+    ],
+    "nuisance_names": [
+      "source_transverse_0_per_arcsec",
+      "source_transverse_1_per_arcsec",
+      "log_galaxy_deflection_strength",
+      "lens_centre_0_per_arcsec",
+      "lens_centre_1_per_arcsec",
+      "independent_mass_sheet_log_scale",
+      "independent_external_convergence_nuisance_only",
+      "log_H0_fixed_physical_source_and_galaxy"
+    ],
+    "synthetic_prior_control": {
+      "information": {
+        "Fisher": [
+          [
+            4.9337603497368926e-06,
+            0.00013247272964129325,
+            -3.531727340298013e-05,
+            -2.4152306022762315e-08,
+            0.00034851524748641865,
+            2.2167555589138966e-07
+          ],
+          [
+            0.00013247272964129325,
+            0.09812393608761304,
+            -0.0007964217277431945,
+            -1.3185607508283155e-06,
+            0.007440807490841982,
+            1.5672915900891393e-05
+          ],
+          [
+            -3.531727340298013e-05,
+            -0.0007964217277431945,
+            0.0002581579861005033,
+            1.729817938464472e-07,
+            -0.0025462105747682756,
+            -1.5516974462357097e-06
+          ],
+          [
+            -2.4152306022762315e-08,
+            -1.3185607508283155e-06,
+            1.729817938464472e-07,
+            1.232485787106978e-10,
+            -1.7035841745707285e-06,
+            -1.149581703526406e-09
+          ],
+          [
+            0.00034851524748641865,
+            0.007440807490841982,
+            -0.0025462105747682756,
+            -1.7035841745707285e-06,
+            0.02511588392895139,
+            1.5276969331323512e-05
+          ],
+          [
+            2.2167555589138966e-07,
+            1.5672915900891393e-05,
+            -1.5516974462357097e-06,
+            -1.149581703526406e-09,
+            1.5276969331323512e-05,
+            1.103379356017781e-08
+          ]
+        ],
+        "absolute_rank_threshold": 7.812035636183455e-08,
+        "nuisance_rank": 8,
+        "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+        "null_directions": [
+          [
+            -0.2935458372291228,
+            0.0005080620729678735,
+            0.950572104552691,
+            0.0008545792466328708,
+            0.10029866010462657,
+            -0.013516872425959978
+          ],
+          [
+            0.06846815463460486,
+            9.832914008382856e-05,
+            0.0069111907204510645,
+            0.11153021745781629,
+            0.00033200965466742116,
+            -0.9913754273425075
+          ],
+          [
+            0.004700418029987729,
+            3.422976566654508e-06,
+            0.0007587201028041418,
+            -0.9937565977255083,
+            1.107554144013601e-05,
+            -0.11146817822494126
+          ]
+        ],
+        "projected_signal_singular_values": [
+          0.31446144141754095,
+          0.15689750502204222,
+          0.00031256922021161723,
+          9.224379774096084e-17,
+          6.532632722894186e-19,
+          2.0058032029059427e-20
+        ],
+        "raw_signal_singular_values": [
+          7.812035636183455,
+          2.8604350290974363,
+          0.0040242812667895655,
+          5.4540685331822e-18,
+          0.0,
+          0.0
+        ],
+        "relative_rank_tolerance": 1e-08,
+        "signal_rank": 3
+      },
+      "prior_standard_deviations": [
+        0.01,
+        0.01,
+        0.02,
+        0.005,
+        0.005,
+        0.05,
+        0.02,
+        0.02
+      ],
+      "source": "explicit synthetic independent nuisance measurements only"
+    },
+    "unrestricted": {
+      "Fisher": [
+        [
+          6.96313716069774e-34,
+          3.253744698437088e-32,
+          -3.277003932852034e-33,
+          -1.6708449781439837e-36,
+          3.687575650125688e-32,
+          3.1732212202318e-35
+        ],
+        [
+          3.253744698437088e-32,
+          1.8383915228634017e-30,
+          -1.3884814003759016e-31,
+          -7.436602730733468e-35,
+          1.5349780702891188e-30,
+          1.493927239080354e-33
+        ],
+        [
+          -3.277003932852034e-33,
+          -1.3884814003759016e-31,
+          1.6072953652840218e-32,
+          8.033161138516609e-36,
+          -1.8177042525003657e-31,
+          -1.491218053608694e-34
+        ],
+        [
+          -1.6708449781439837e-36,
+          -7.436602730733468e-35,
+          8.033161138516609e-36,
+          4.085082448271878e-39,
+          -9.166172862355119e-35,
+          -7.445210755217472e-38
+        ],
+        [
+          3.687575650125688e-32,
+          1.5349780702891188e-30,
+          -1.8177042525003657e-31,
+          -9.166172862355119e-35,
+          2.105352922496053e-30,
+          1.611064078061324e-33
+        ],
+        [
+          3.1732212202318e-35,
+          1.493927239080354e-33,
+          -1.491218053608694e-34,
+          -7.445210755217472e-38,
+          1.611064078061324e-33,
+          1.542996934645296e-36
+        ]
+      ],
+      "absolute_rank_threshold": 7.812035636183455e-08,
+      "nuisance_rank": 5,
+      "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+      "null_directions": [
+        [
+          -0.013968860203898127,
+          -0.6739810243923217,
+          0.06473978195587017,
+          3.3475967088647926e-05,
+          -0.7357736197716985,
+          -0.0006242302449568427
+        ],
+        [
+          -0.0021257120711495547,
+          0.7386551648936686,
+          0.04728845185392731,
+          1.640391692380733e-05,
+          -0.6724193853999366,
+          3.024301524810047e-05
+        ],
+        [
+          -0.1327976589089579,
+          0.00971174352733682,
+          0.9875696399702959,
+          0.0001595615265484562,
+          0.08053886118951162,
+          -0.0221390246694508
+        ],
+        [
+          -0.9672377441935083,
+          0.006509157827958109,
+          -0.13499942194955472,
+          -0.006561286435447074,
+          0.0007042842860752616,
+          -0.21480313463510553
+        ],
+        [
+          -0.21556263010956883,
+          0.0011966351118194484,
+          -0.007237219562382326,
+          -0.027270326969185178,
+          0.0015302357104050334,
+          0.9760803915986246
+        ],
+        [
+          0.012207898623177147,
+          -8.426994386307574e-05,
+          0.0012441417911877928,
+          -0.9996065485668334,
+          -6.918840295024988e-05,
+          -0.025222123151213423
+        ]
+      ],
+      "projected_signal_singular_values": [
+        1.878327419595988e-15,
+        6.573230063114275e-16,
+        1.8101788252130986e-17,
+        3.9392570488340695e-19,
+        7.910791399439799e-21
+      ],
+      "raw_signal_singular_values": [
+        7.812035636183455,
+        2.8604350290974354,
+        0.004024281266789654,
+        5.580987833088052e-17,
+        0.0
+      ],
+      "relative_rank_tolerance": 1e-08,
+      "signal_rank": 0
+    }
+  },
+  "physical_BHSM_amplitude_or_detection": false,
+  "physical_maps_Mpc": {
+    "D_ls": [
+      [
+        1076.9943480596019,
+        0.0
+      ],
+      [
+        0.0,
+        1076.9943480596019
+      ]
+    ],
+    "D_ol": [
+      [
+        945.16283937304,
+        0.0
+      ],
+      [
+        0.0,
+        945.16283937304
+      ]
+    ],
+    "D_os": [
+      [
+        1689.3122396872932,
+        0.0
+      ],
+      [
+        0.0,
+        1689.3122396872932
+      ]
+    ]
+  },
+  "schema": "strong-lensing-first-matched-comparison-v1",
+  "smooth_check": {
+    "delay_ratio": 0.5648860340544778,
+    "delay_ratio_nuisance_response": [
+      2.0958098420944986,
+      0.0,
+      -0.3824044412853519,
+      -2.095809842102801,
+      0.0,
+      0.0,
+      -0.009391139127736182,
+      0.38240444129236395,
+      0.009391139114415945
+    ],
+    "delay_ratio_response": [
+      -3.6568999431451775e-05,
+      0.003495614653134883,
+      0.0002890164648486944,
+      1.518837795674471e-07,
+      -0.0028640137051916853,
+      -1.1061236289443454e-06
+    ],
+    "galaxy_core_kpc": 0.05,
+    "note": "a ratio removes the common mass-sheet scaling but can remain degenerate with source and galaxy structure",
+    "nuisance_names": [
+      "source_transverse_0_per_arcsec",
+      "source_transverse_1_per_arcsec",
+      "log_galaxy_deflection_strength",
+      "lens_centre_0_per_arcsec",
+      "lens_centre_1_per_arcsec",
+      "independent_mass_sheet_log_scale",
+      "independent_external_convergence_nuisance_only",
+      "log_H0_fixed_physical_source_and_galaxy",
+      "log_galaxy_core_radius"
+    ],
+    "response": [
+      [
+        4.074816145403852e-05,
+        0.006677340788587207,
+        -0.00024917370837455427,
+        -2.3135284373209334e-07,
+        0.00244730051022277,
+        2.533012289025367e-06
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.9638265244851315e-07,
+        -4.6912654446958087e-05,
+        -2.087542876425495e-06,
+        -1.034117853937058e-09,
+        2.0890682019842103e-05,
+        8.143290486464035e-09
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -5.563145813881608e-05,
+        -0.0017174633751676142,
+        0.0003924351771014478,
+        2.7267493704579995e-07,
+        -0.003873734178635592,
+        -2.543306201867037e-06
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        0.0016073902699622116,
+        -0.10146992426932731,
+        -0.007032888135077424,
+        -5.766268867714e-06,
+        0.0718821802500787,
+        7.534424044390622e-05
+      ],
+      [
+        -0.000198568905814872,
+        0.04845675975116734,
+        0.0047727259369028715,
+        1.3386490476704824e-06,
+        -0.04605850691393744,
+        9.090113362556615e-06
+      ]
+    ],
+    "solution": {
+      "arrival_days": [
+        -29.91810826180842,
+        0.34143500695997825,
+        -12.82491487241397
+      ],
+      "images_arcsec": [
+        [
+          1.067836596767818,
+          0.0
+        ],
+        [
+          -0.0022567635962401655,
+          0.0
+        ],
+        [
+          -0.7118174971252293,
+          0.0
+        ]
+      ],
+      "images_rad": [
+        [
+          5.177017913024851e-06,
+          0.0
+        ],
+        [
+          -1.0941098664871893e-08,
+          0.0
+        ],
+        [
+          -3.45098861059459e-06,
+          0.0
+        ]
+      ],
+      "inverse_magnification_determinants": [
+        0.16665941630686695,
+        5961.373231504699,
+        -0.2499632868672964
+      ],
+      "max_lens_residual_rad": 0.0,
+      "max_stationarity_Mpc": 1.734723475976807e-18,
+      "minimum_image_Jacobian_singular_value": 0.16667391753116745,
+      "relative_delays_days": [
+        30.2595432687684,
+        17.09319338939445
+      ]
+    },
+    "unrestricted": {
+      "Fisher": [
+        [
+          1.3596352686104288e-33,
+          9.374612968100794e-32,
+          -9.976652515696516e-33,
+          -8.431255997164271e-36,
+          8.303063445422143e-32,
+          6.310783416238604e-35
+        ],
+        [
+          9.374612968100794e-32,
+          1.0719304165378503e-29,
+          -7.118101455551475e-31,
+          -6.830824325798698e-34,
+          6.351365237038592e-30,
+          5.631082353530598e-33
+        ],
+        [
+          -9.976652515696516e-33,
+          -7.118101455551475e-31,
+          7.474127111916185e-32,
+          6.228971472853529e-35,
+          -6.183379016661991e-31,
+          -4.719992662618005e-34
+        ],
+        [
+          -8.431255997164271e-36,
+          -6.830824325798698e-34,
+          6.228971472853529e-35,
+          5.549610778826201e-38,
+          -5.239041690075328e-34,
+          -4.309646112156102e-37
+        ],
+        [
+          8.303063445422143e-32,
+          6.351365237038592e-30,
+          -6.183379016661991e-31,
+          -5.239041690075328e-34,
+          5.2862476084391344e-30,
+          4.0688496160556485e-33
+        ],
+        [
+          6.310783416238604e-35,
+          5.631082353530598e-33,
+          -4.719992662618005e-34,
+          -4.309646112156102e-37,
+          4.0688496160556485e-33,
+          3.5403101443561174e-36
+        ]
+      ],
+      "absolute_rank_threshold": 7.828494851569068e-08,
+      "nuisance_rank": 7,
+      "null_direction_interpretation": "unconstrained without declared independent information; no finite zero-uncertainty estimate",
+      "null_directions": [
+        [
+          0.008308114756389238,
+          0.8326581093931555,
+          -0.0626336700587876,
+          -5.7512373159510624e-05,
+          0.5501711117190033,
+          0.0004647452846090644
+        ],
+        [
+          -0.015987491044636377,
+          0.5536917882296226,
+          0.11227786058181062,
+          5.509857163028776e-05,
+          -0.8249626737562078,
+          -0.00026395739758923334
+        ],
+        [
+          -0.09618668035409587,
+          -0.01024206654275443,
+          0.9868740062241621,
+          0.0007372464235297539,
+          0.12930453267350914,
+          -0.0016470374198135202
+        ],
+        [
+          -0.9950982640895334,
+          -0.0009502135860722818,
+          -0.0977250298561453,
+          0.00648898945634313,
+          0.005350924877965721,
+          -0.012554722559278532
+        ],
+        [
+          0.012950590251143021,
+          0.0002707984064880683,
+          -0.00046159549013490535,
+          0.04640071228825992,
+          0.0001906412986138408,
+          -0.9988387924810544
+        ],
+        [
+          0.0059350568570642895,
+          1.8552510076440068e-05,
+          -8.189279913985094e-05,
+          0.9989015552291242,
+          -6.186934022395003e-05,
+          0.04648061082321397
+        ]
+      ],
+      "projected_signal_singular_values": [
+        3.8691590361150274e-15,
+        1.053164810344128e-15,
+        4.5656731799313426e-17,
+        4.873770089380781e-18,
+        4.698054231167543e-19,
+        1.8172454620863746e-21
+      ],
+      "raw_signal_singular_values": [
+        7.828494851569068,
+        3.077419348822103,
+        0.008290013030353769,
+        7.579538508356475e-17,
+        3.3542616852008403e-19,
+        3.502632907685047e-20
+      ],
+      "relative_rank_tolerance": 1e-08,
+      "signal_rank": 0
+    }
+  },
+  "state_response": {
+    "anchor_coordinates": [
+      "zeta",
+      "Pi2_reference",
+      "delta_m_ADM",
+      "delta_r_ADM",
+      "v_m_ADM",
+      "v_r_ADM"
+    ],
+    "arrival_term_order": [
+      "map_T",
+      "physical_source_remapping",
+      "physical_galaxy_impact",
+      "intrinsic_encounter"
+    ],
+    "complete_arrival_response_terms": [
+      [
+        [
+          -0.0005127527618385684,
+          0.00035705908221646114,
+          -0.001545891951678374,
+          0.0
+        ],
+        [
+          -0.000512752761838568,
+          -0.0003570590822164611,
+          -0.0010305946344522487,
+          0.0
+        ]
+      ],
+      [
+        [
+          -0.33786523650001526,
+          -0.11905624808572564,
+          0.5689015309510205,
+          0.0
+        ],
+        [
+          -0.3378652365000151,
+          0.11905624808572561,
+          0.37926768730068017,
+          0.0
+        ]
+      ],
+      [
+        [
+          0.005075057462153966,
+          -0.003437879406265479,
+          0.0063038391903231395,
+          0.0
+        ],
+        [
+          0.005075057462153964,
+          0.0034378794062654783,
+          0.004202559460215424,
+          0.0
+        ]
+      ],
+      [
+        [
+          5.247382061928622e-06,
+          -9.910686198450364e-07,
+          1.9274399369670846e-06,
+          0.0
+        ],
+        [
+          5.24738206192862e-06,
+          9.910686198450362e-07,
+          1.284959957978056e-06,
+          0.0
+        ]
+      ],
+      [
+        [
+          -0.04789430579869897,
+          0.03423034245971831,
+          -0.06715413981236165,
+          0.0
+        ],
+        [
+          -0.04789430579869894,
+          -0.0342303424597183,
+          -0.04476942654157441,
+          0.0
+        ]
+      ],
+      [
+        [
+          -4.899321936439841e-05,
+          2.369513934191647e-07,
+          -2.8665821382323855e-05,
+          0.0
+        ],
+        [
+          -4.899321936439839e-05,
+          -2.3695139341916464e-07,
+          -1.9110547588215896e-05,
+          0.0
+        ]
+      ]
+    ],
+    "d_observable_d_anchor": [
+      [
+        4.07443308297159e-05,
+        0.0066780096593333695,
+        -0.00024915735345001287,
+        -2.3134237777790095e-07,
+        0.0024471308895549016,
+        2.532872460343074e-06
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -5.561447923891837e-05,
+        -0.0017197711877397427,
+        0.0003923319134325449,
+        2.726166043549604e-07,
+        -0.0038726940465375797,
+        -2.5427405817868355e-06
+      ],
+      [
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      [
+        -0.0001988208472067964,
+        0.04847865252111111,
+        0.00477447908242324,
+        1.3396572607010413e-06,
+        -0.046075971648649336,
+        9.081371007269641e-06
+      ]
+    ],
+    "d_physical_maps_Mpc_d_anchor": [
+      [
+        0.028490974423913545,
+        -10.484923574673614,
+        -0.11618051374739746,
+        -3.552294963961611e-05,
+        1.2376588659877914,
+        0.0005283145325632581
+      ],
+      [
+        0.07057043457630195,
+        -23.530702858134255,
+        -0.6794747866796842,
+        -0.00019587834809646422,
+        6.765407360828632,
+        4.6831921213849573e-05
+      ],
+      [
+        0.10329963879653022,
+        -9.919969133192057,
+        -0.8213659369329895,
+        -0.00042983443749178453,
+        8.137426476360792,
+        0.0031012081882280324
+      ]
+    ],
+    "observable_order": [
+      "theta_plus_x_arcsec",
+      "theta_plus_y_arcsec",
+      "theta_minus_x_arcsec",
+      "theta_minus_y_arcsec",
+      "delay_minus_relative_plus_days"
+    ],
+    "relative_delay_fractional_response": [
+      -1.1630669187475605e-05,
+      0.0028359157404714524,
+      0.0002792986124459515,
+      7.836758892596126e-08,
+      -0.00269536314358199,
+      5.312442001840276e-07
+    ],
+    "relative_delay_response_days": [
+      -0.0001988208472067964,
+      0.04847865252111111,
+      0.00477447908242324,
+      1.3396572607010413e-06,
+      -0.046075971648649336,
+      9.081371007269641e-06
+    ]
+  },
+  "status": "EXECUTED_ILLUSTRATIVE_BENCHMARK_AND_CONDITIONAL_SIX_STATE_RESPONSE",
+  "time_delay_matrix_Mpc": [
+    [
+      1927.28745764109,
+      0.0
+    ],
+    [
+      0.0,
+      1927.28745764109
+    ]
+  ],
+  "time_delay_matrix_symmetry_relative": 0.0,
+  "transport": {
+    "anchor_coordinates": [
+      "zeta",
+      "Pi2_reference",
+      "delta_m_ADM",
+      "delta_r_ADM",
+      "v_m_ADM",
+      "v_r_ADM"
+    ],
+    "anchor_to_canonical": [
+      [
+        1.0,
+        -0.0,
+        -0.0,
+        -1.3877787807814457e-17,
+        -0.0,
+        -0.0
+      ],
+      [
+        3.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.0,
+        0.0,
+        0.0,
+        0.75,
+        0.0,
+        0.0
+      ],
+      [
+        0.01848411339522232,
+        0.9999999999996723,
+        -0.29605388288014356,
+        -0.0002664484945921417,
+        -0.0021895475755041084,
+        -2.627457090604934e-06
+      ],
+      [
+        -2.341063351040151e-14,
+        -6.20770252181574e-14,
+        6.0766047565094594e-15,
+        2.0146702811962727e-17,
+        0.9299999999999998,
+        9.94662975357326e-20
+      ],
+      [
+        -2.877833736776679e-17,
+        -7.29057690628468e-17,
+        7.564672200967755e-18,
+        2.4853776397874404e-20,
+        -5.431425828184755e-18,
+        0.0011159999999999996
+      ]
+    ],
+    "background": {
+      "D_ls": [
+        [
+          0.24213223889447272,
+          0.0
+        ],
+        [
+          0.0,
+          0.24213223889447272
+        ]
+      ],
+      "D_ol": [
+        [
+          0.2124935890606791,
+          0.0
+        ],
+        [
+          0.0,
+          0.2124935890606791
+        ]
+      ],
+      "D_os": [
+        [
+          0.3797948944897192,
+          0.0
+        ],
+        [
+          0.0,
+          0.3797948944897192
+        ]
+      ],
+      "assumptions": [
+        "conditional normalized n=2 observer dipole; positive axial ray mu=1",
+        "full six-coordinate physical anchor, linear action-native evolution",
+        "measured endpoint redshifts; matter observer/lens/source tetrads",
+        "cosmological propagation only; main galaxy encounter excluded",
+        "axial isotropic screen, paraxial thin-plane application",
+        "finite amplitudes test only the declared truncated-metric completion"
+      ],
+      "lens": {
+        "N": -0.262364264467491,
+        "Phi": 0.0,
+        "Psi": 0.0,
+        "a": 0.7692307692307693,
+        "affine": 0.21410584542240851,
+        "areal_screen_radius": 0.2124935890606791,
+        "chi": 0.27630494445496395,
+        "observed_z": 0.30000000000000004,
+        "omega": 1.3,
+        "peculiar_velocity": 0.0,
+        "static_frequency": 1.3
+      },
+      "observer": {
+        "N": 0.0,
+        "Phi": 0.0,
+        "Psi": 0.0,
+        "a": 1.0,
+        "affine": 0.0,
+        "areal_screen_radius": 0.0,
+        "chi": 0.0,
+        "observed_z": 0.0,
+        "omega": 1.0,
+        "peculiar_velocity": 0.0,
+        "static_frequency": 1.0
+      },
+      "perturbation_diagnostics": {
+        "lens_redshift_residual": 5.551115123125783e-17,
+        "max_abs_Phi_on_ray": 0.0,
+        "max_abs_Psi_on_ray": 0.0,
+        "max_abs_matter_peculiar_velocity": 0.0,
+        "max_relative_metric_perturbation": 0.0,
+        "metric_check_sampling_points": 201,
+        "source_redshift_residual": 0.0
+      },
+      "reciprocity": {
+        "D_lo": 0.27624166577888287,
+        "D_sl": 0.3725111367607269,
+        "D_so": 0.7595897889794384,
+        "checked": true,
+        "omega_s_over_omega_l": 1.5384615384615383,
+        "relative_residual": -8.881784197001252e-16,
+        "relative_residual_ol": 0.0,
+        "relative_residual_os": 0.0
+      },
+      "source": {
+        "N": -0.6931471805599453,
+        "Phi": 0.0,
+        "Psi": 0.0,
+        "a": 0.5,
+        "affine": 0.40602880363979205,
+        "areal_screen_radius": 0.3797948944897192,
+        "chi": 0.7609107686624644,
+        "observed_z": 1.0,
+        "omega": 2.0,
+        "peculiar_velocity": 0.0,
+        "static_frequency": 2.0
+      },
+      "units": "c/H0"
+    },
+    "classification": "conditional six-coordinate unit response; no action-derived amplitude",
+    "d_events_d_anchor": [
+      [
+        -0.0015024214545106274,
+        -0.02053972329249335,
+        0.004451781641653319,
+        4.09130790357537e-06,
+        -0.04660698930155876,
+        -5.3071961755857266e-05
+      ],
+      [
+        -0.005611965495588844,
+        -0.08221606463904198,
+        0.0196026207075569,
+        1.8008107227629466e-05,
+        -0.2021125504748334,
+        -0.00023311441479934025
+      ],
+      [
+        0.0011487148603717134,
+        0.020901107713895715,
+        -0.005121761557916639,
+        -4.660084110263973e-06,
+        0.05181653398980051,
+        5.95840354833399e-05
+      ],
+      [
+        0.0034798620530407387,
+        0.1180835158978966,
+        -0.03187484171552652,
+        -2.8872757851239328e-05,
+        0.3110206284433492,
+        0.00036482685572547524
+      ]
+    ],
+    "d_maps_d_anchor": [
+      [
+        6.405403651932318e-06,
+        -0.0023572435817724247,
+        -2.6119960117147477e-05,
+        -7.986340755383736e-09,
+        0.0002782531919640582,
+        1.1877682865035766e-07
+      ],
+      [
+        1.586580002099769e-05,
+        -0.005290224370011603,
+        -0.00015276101913289526,
+        -4.4037620772208186e-08,
+        0.001521013787629794,
+        1.052893883191075e-08
+      ],
+      [
+        2.3224051459713735e-05,
+        -0.002230229271167326,
+        -0.00018466129922234834,
+        -9.663633782075465e-08,
+        0.001829474166656643,
+        6.972204966149143e-07
+      ]
+    ],
+    "event_order": [
+      "chi_l",
+      "chi_s",
+      "N_l",
+      "N_s"
+    ],
+    "finite_trials": [
+      {
+        "anchor_coordinate": "zeta",
+        "minus_endpoints": {
+          "lens": {
+            "N": -0.26236656193390445,
+            "Phi": 1.7488743246619136e-06,
+            "Psi": 1.7488743246609378e-06,
+            "a": 0.7692290019509429,
+            "affine": 0.21410583209078304,
+            "areal_screen_radius": 0.21249503909974507,
+            "chi": 0.2763079493488375,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": -9.190191367957754e-06,
+            "static_frequency": 1.3000119473036778
+          },
+          "source": {
+            "N": -0.693154140427726,
+            "Phi": 3.950693758263117e-06,
+            "Psi": 3.950693758277114e-06,
+            "a": 0.49999652007821954,
+            "affine": 0.4060287473697994,
+            "areal_screen_radius": 0.37979633353589864,
+            "chi": 0.760921992832166,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": -1.0315489874738917e-05,
+            "static_frequency": 2.0000206310861603
+          }
+        },
+        "minus_maps": [
+          0.21249357626815044,
+          0.37979486279172414,
+          0.24213219246662962
+        ],
+        "minus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 3.950693758263117e-06,
+          "max_abs_Psi_on_ray": 3.950693758277114e-06,
+          "max_abs_matter_peculiar_velocity": 1.0315489874738917e-05,
+          "max_relative_metric_perturbation": 7.901387516554228e-06,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "minus_reciprocity": {
+          "D_lo": 0.2762416491485961,
+          "D_sl": 0.37251106533327616,
+          "D_so": 0.7595897255834482,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -4.440892098500626e-16,
+          "relative_residual_ol": 1.9984014443252818e-15,
+          "relative_residual_os": -1.1102230246251565e-16
+        },
+        "plus_endpoints": {
+          "lens": {
+            "N": -0.26236196707446297,
+            "Phi": -1.748836552125291e-06,
+            "Psi": -1.74883655212431e-06,
+            "a": 0.7692325364582054,
+            "affine": 0.21410585879115876,
+            "areal_screen_radius": 0.21249213905979805,
+            "chi": 0.27630193966301947,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": 9.190149980795719e-06,
+            "static_frequency": 1.2999880528599228
+          },
+          "source": {
+            "N": -0.6931402209795139,
+            "Phi": -3.95063993543552e-06,
+            "Psi": -3.950639935449545e-06,
+            "a": 0.5000034798023247,
+            "affine": 0.40602885997659854,
+            "areal_screen_radius": 0.3797934554621047,
+            "chi": 0.7608995449701836,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": 1.0315357405431624e-05,
+            "static_frequency": 1.9999793693915946
+          }
+        },
+        "plus_maps": [
+          0.21249360188976504,
+          0.3797949262549242,
+          0.24213228536283546
+        ],
+        "plus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 3.95063993543552e-06,
+          "max_abs_Psi_on_ray": 3.950639935449545e-06,
+          "max_abs_matter_peculiar_velocity": 1.0315357405431624e-05,
+          "max_relative_metric_perturbation": 7.90127987089909e-06,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624168245669434,
+          "D_sl": 0.3725112082505157,
+          "D_so": 0.759589852509849,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -8.881784197001252e-16,
+          "relative_residual_ol": -7.771561172376096e-16,
+          "relative_residual_os": 6.661338147750939e-16
+        },
+        "step": 0.002
+      },
+      {
+        "anchor_coordinate": "Pi2_reference",
+        "minus_endpoints": {
+          "lens": {
+            "N": -0.26236636532245267,
+            "Phi": -1.2485402122004069e-06,
+            "Psi": -1.248540212201266e-06,
+            "a": 0.7692291531901886,
+            "affine": 0.21410604577980377,
+            "areal_screen_radius": 0.2124949949547132,
+            "chi": 0.27630700898252786,
+            "observed_z": 0.2999999999999998,
+            "omega": 1.2999999999999998,
+            "peculiar_velocity": -7.2312907698734294e-06,
+            "static_frequency": 1.3000094007119904
+          },
+          "source": {
+            "N": -0.6931590497481008,
+            "Phi": -1.0737092861563068e-05,
+            "Psi": -1.0737092860790135e-05,
+            "a": 0.4999940654411415,
+            "affine": 0.40602918033843793,
+            "areal_screen_radius": 0.37979857486977314,
+            "chi": 0.760919032471678,
+            "observed_z": 1.0000000000000009,
+            "omega": 2.000000000000001,
+            "peculiar_velocity": -1.5944666929740104e-05,
+            "static_frequency": 2.000031889588097
+          }
+        },
+        "minus_maps": [
+          0.21249382599697225,
+          0.37979542620443296,
+          0.24213246302815816
+        ],
+        "minus_perturbation_diagnostics": {
+          "lens_redshift_residual": 1.6653345369377348e-16,
+          "max_abs_Phi_on_ray": 1.0737092861563068e-05,
+          "max_abs_Psi_on_ray": 1.0737092860790135e-05,
+          "max_abs_matter_peculiar_velocity": 1.5944666929740104e-05,
+          "max_relative_metric_perturbation": 2.1474185723126136e-05,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 8.881784197001252e-16
+        },
+        "minus_reciprocity": {
+          "D_lo": 0.2762419737960639,
+          "D_sl": 0.37251148158178216,
+          "D_so": 0.7595908524088656,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615394,
+          "relative_residual": 2.220446049250313e-16,
+          "relative_residual_ol": 0.0,
+          "relative_residual_os": -8.881784197001252e-16
+        },
+        "plus_endpoints": {
+          "lens": {
+            "N": -0.262362163641289,
+            "Phi": 1.2485026036504586e-06,
+            "Psi": 1.248502603651336e-06,
+            "a": 0.7692323852526222,
+            "affine": 0.21410564506752633,
+            "areal_screen_radius": 0.2124921831821222,
+            "chi": 0.2763028799492897,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": 7.231258223648252e-06,
+            "static_frequency": 1.2999905993982983
+          },
+          "source": {
+            "N": -0.6931353118060128,
+            "Phi": 1.073627560249105e-05,
+            "Psi": 1.0736275601717214e-05,
+            "a": 0.5000059344121832,
+            "affine": 0.4060284268929678,
+            "areal_screen_radius": 0.37979121415454975,
+            "chi": 0.7609025048457324,
+            "observed_z": 1.0000000000000009,
+            "omega": 2.000000000000001,
+            "peculiar_velocity": 1.594427581955526e-05,
+            "static_frequency": 1.9999681117025776
+          }
+        },
+        "plus_maps": [
+          0.21249335212802276,
+          0.3797943627279708,
+          0.24213201469247914
+        ],
+        "plus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 1.073627560249105e-05,
+          "max_abs_Psi_on_ray": 1.0736275601717214e-05,
+          "max_abs_matter_peculiar_velocity": 1.594427581955526e-05,
+          "max_relative_metric_perturbation": 2.14725512049821e-05,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 8.881784197001252e-16
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624135776642983,
+          "D_sl": 0.3725107918345831,
+          "D_so": 0.7595887254559411,
+          "checked": true,
+          "omega_s_over_omega_l": 1.538461538461539,
+          "relative_residual": -8.881784197001252e-16,
+          "relative_residual_ol": 8.881784197001252e-16,
+          "relative_residual_os": -9.992007221626409e-16
+        },
+        "step": 0.00010051336085094368
+      },
+      {
+        "anchor_coordinate": "delta_m_ADM",
+        "minus_endpoints": {
+          "lens": {
+            "N": -0.26236253867573484,
+            "Phi": 1.6533136031118886e-06,
+            "Psi": 1.653313603111826e-06,
+            "a": 0.7692320967640349,
+            "affine": 0.21410585423953576,
+            "areal_screen_radius": 0.21249245137372064,
+            "chi": 0.27630344441073873,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": 6.89708344398071e-06,
+            "static_frequency": 1.2999910338224432
+          },
+          "source": {
+            "N": -0.6931364403793322,
+            "Phi": 1.0748097239174418e-05,
+            "Psi": 1.0748097239174608e-05,
+            "a": 0.5000053701191445,
+            "affine": 0.40602886310142466,
+            "areal_screen_radius": 0.3797916060318009,
+            "chi": 0.7609041634590585,
+            "observed_z": 0.9999999999999993,
+            "omega": 1.9999999999999993,
+            "peculiar_velocity": 1.5823208739538154e-05,
+            "static_frequency": 1.9999683538328903
+          }
+        },
+        "minus_maps": [
+          0.21249359785849684,
+          0.3797949459350358,
+          0.24213230108460115
+        ],
+        "minus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 1.0748097239174418e-05,
+          "max_abs_Psi_on_ray": 1.0748097239174608e-05,
+          "max_abs_matter_peculiar_velocity": 1.5823208739538154e-05,
+          "max_relative_metric_perturbation": 2.1496194478349215e-05,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 6.661338147750939e-16
+        },
+        "minus_reciprocity": {
+          "D_lo": 0.276241677216046,
+          "D_sl": 0.3725112324378476,
+          "D_so": 0.7595898918700714,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615379,
+          "relative_residual": -4.440892098500626e-16,
+          "relative_residual_ol": 2.220446049250313e-16,
+          "relative_residual_os": 0.0
+        },
+        "plus_endpoints": {
+          "lens": {
+            "N": -0.26236599026824675,
+            "Phi": -1.6533418650034915e-06,
+            "Psi": -1.6533418650034286e-06,
+            "a": 0.7692294416928719,
+            "affine": 0.21410583659841578,
+            "areal_screen_radius": 0.21249472675016667,
+            "chi": 0.276306444498893,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": -6.897106673891843e-06,
+            "static_frequency": 1.3000089662695968
+          },
+          "source": {
+            "N": -0.6931579210679077,
+            "Phi": -1.0748786943623263e-05,
+            "Psi": -1.0748786943623454e-05,
+            "a": 0.4999946297748583,
+            "affine": 0.4060287441224585,
+            "areal_screen_radius": 0.37979818296861706,
+            "chi": 0.7609173738082876,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": -1.5823531730242557e-05,
+            "static_frequency": 2.0000316473138486
+          }
+        },
+        "plus_maps": [
+          0.212493580256065,
+          0.3797948429882696,
+          0.24213217664000325
+        ],
+        "plus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 1.0748786943623263e-05,
+          "max_abs_Psi_on_ray": 1.0748786943623454e-05,
+          "max_abs_matter_peculiar_velocity": 1.5823531730242557e-05,
+          "max_relative_metric_perturbation": 2.149757388724691e-05,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.2762416543328842,
+          "D_sl": 0.3725110409846203,
+          "D_so": 0.7595896859765388,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -1.1102230246251565e-16,
+          "relative_residual_ol": -9.992007221626409e-16,
+          "relative_residual_os": -5.551115123125783e-16
+        },
+        "step": 0.00033695365089585124
+      },
+      {
+        "anchor_coordinate": "delta_r_ADM",
+        "minus_endpoints": {
+          "lens": {
+            "N": -0.2623642551473231,
+            "Phi": 8.632466847044341e-09,
+            "Psi": 8.632466847044262e-09,
+            "a": 0.7692307764001293,
+            "affine": 0.21410584544354008,
+            "areal_screen_radius": 0.21249358291681578,
+            "chi": 0.27630493627234837,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": 3.70995406610556e-08,
+            "static_frequency": 1.2999999517705982
+          },
+          "source": {
+            "N": -0.6931471228144344,
+            "Phi": 5.716549462332278e-08,
+            "Psi": 5.7165494623327305e-08,
+            "a": 0.5000000288727563,
+            "affine": 0.4060288038355925,
+            "areal_screen_radius": 0.3797948767956541,
+            "chi": 0.7609107326462495,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": 8.458218063387034e-08,
+            "static_frequency": 1.999999830835646
+          }
+        },
+        "minus_maps": [
+          0.21249358907665175,
+          0.3797948945777938,
+          0.24213223908774437
+        ],
+        "minus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 5.716549462332278e-08,
+          "max_abs_Psi_on_ray": 5.7165494623327305e-08,
+          "max_abs_matter_peculiar_velocity": 8.458218063387034e-08,
+          "max_relative_metric_perturbation": 1.1433098924665461e-07,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "minus_reciprocity": {
+          "D_lo": 0.2762416657996469,
+          "D_sl": 0.372511137058068,
+          "D_so": 0.7595897891555878,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -5.551115123125783e-16,
+          "relative_residual_ol": -1.4432899320127035e-15,
+          "relative_residual_os": 2.220446049250313e-16
+        },
+        "plus_endpoints": {
+          "lens": {
+            "N": -0.26236427378765953,
+            "Phi": -8.632467658936178e-09,
+            "Psi": -8.632467658936102e-09,
+            "a": 0.769230762061409,
+            "affine": 0.2141058454012767,
+            "areal_screen_radius": 0.21249359520454275,
+            "chi": 0.27630495263758,
+            "observed_z": 0.30000000000000027,
+            "omega": 1.3000000000000003,
+            "peculiar_velocity": -3.7099541338447754e-08,
+            "static_frequency": 1.300000048229405
+          },
+          "source": {
+            "N": -0.6931472383054658,
+            "Phi": -5.716551457831894e-08,
+            "Psi": -5.716551457832344e-08,
+            "a": 0.4999999711272406,
+            "affine": 0.4060288034439901,
+            "areal_screen_radius": 0.37979491218378536,
+            "chi": 0.7609108046786784,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": -8.45821899687906e-08,
+            "static_frequency": 2.000000169164387
+          }
+        },
+        "plus_maps": [
+          0.2124935890447064,
+          0.3797948944016433,
+          0.24213223870119902
+        ],
+        "plus_perturbation_diagnostics": {
+          "lens_redshift_residual": 2.7755575615628914e-16,
+          "max_abs_Phi_on_ray": 5.716551457831894e-08,
+          "max_abs_Psi_on_ray": 5.716551457832344e-08,
+          "max_abs_matter_peculiar_velocity": 8.45821899687906e-08,
+          "max_relative_metric_perturbation": 1.1433102915664688e-07,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624166575811876,
+          "D_sl": 0.3725111364633829,
+          "D_so": 0.7595897888032866,
+          "checked": true,
+          "omega_s_over_omega_l": 1.538461538461538,
+          "relative_residual": -3.3306690738754696e-16,
+          "relative_residual_ol": 1.3322676295501878e-15,
+          "relative_residual_os": 0.0
+        },
+        "step": 0.002
+      },
+      {
+        "anchor_coordinate": "v_m_ADM",
+        "minus_endpoints": {
+          "lens": {
+            "N": -0.2623661563042245,
+            "Phi": -1.5876713208440681e-06,
+            "Psi": -1.5876713208441386e-06,
+            "a": 0.7692293139731201,
+            "affine": 0.21410583527644955,
+            "areal_screen_radius": 0.212494832473969,
+            "chi": 0.2763066460856653,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": -7.56325653491398e-06,
+            "static_frequency": 1.3000098322706777
+          },
+          "source": {
+            "N": -0.6931585361667273,
+            "Phi": -1.074144118182678e-05,
+            "Psi": -1.0741441181827329e-05,
+            "a": 0.4999943222288463,
+            "affine": 0.40602873881717055,
+            "areal_screen_radius": 0.3797983315522121,
+            "chi": 0.7609181478121292,
+            "observed_z": 1.0000000000000004,
+            "omega": 2.0000000000000004,
+            "peculiar_velocity": -1.673640835679737e-05,
+            "static_frequency": 2.0000334730968263
+          }
+        },
+        "minus_maps": [
+          0.21249357889878942,
+          0.3797948389328705,
+          0.24213217207057355
+        ],
+        "minus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 1.074144118182678e-05,
+          "max_abs_Psi_on_ray": 1.0741441181827329e-05,
+          "max_abs_matter_peculiar_velocity": 1.673640835679737e-05,
+          "max_relative_metric_perturbation": 2.1482882363654658e-05,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 4.440892098500626e-16
+        },
+        "minus_reciprocity": {
+          "D_lo": 0.2762416525684261,
+          "D_sl": 0.3725110339547288,
+          "D_so": 0.7595896778657419,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615388,
+          "relative_residual": 4.440892098500626e-16,
+          "relative_residual_ol": -5.551115123125783e-16,
+          "relative_residual_os": 8.881784197001252e-16
+        },
+        "plus_endpoints": {
+          "lens": {
+            "N": -0.2623623726445434,
+            "Phi": 1.5876402336010605e-06,
+            "Psi": 1.5876402336011317e-06,
+            "a": 0.769232224480567,
+            "affine": 0.2141058555625878,
+            "areal_screen_radius": 0.2124923456525283,
+            "chi": 0.27630324282858304,
+            "observed_z": 0.2999999999999998,
+            "omega": 1.2999999999999998,
+            "peculiar_velocity": 7.563228611704402e-06,
+            "static_frequency": 1.299990167839986
+          },
+          "source": {
+            "N": -0.6931358253421849,
+            "Phi": 1.074068457510148e-05,
+            "Psi": 1.0740684575102028e-05,
+            "a": 0.5000056776411156,
+            "affine": 0.40602886841098457,
+            "areal_screen_radius": 0.37979145746304266,
+            "chi": 0.7609033894898448,
+            "observed_z": 0.9999999999999996,
+            "omega": 1.9999999999999996,
+            "peculiar_velocity": 1.6736047722012875e-05,
+            "static_frequency": 1.9999665281846464
+          }
+        },
+        "plus_maps": [
+          0.2124935992169254,
+          0.3797949499977778,
+          0.24213230565935515
+        ],
+        "plus_perturbation_diagnostics": {
+          "lens_redshift_residual": 1.6653345369377348e-16,
+          "max_abs_Phi_on_ray": 1.074068457510148e-05,
+          "max_abs_Psi_on_ray": 1.0740684575102028e-05,
+          "max_abs_matter_peculiar_velocity": 1.6736047722012875e-05,
+          "max_relative_metric_perturbation": 2.1481369150204057e-05,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 4.440892098500626e-16
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.2762416789820028,
+          "D_sl": 0.3725112394759305,
+          "D_so": 0.7595898999955549,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -1.2212453270876722e-15,
+          "relative_residual_ol": -5.551115123125783e-16,
+          "relative_residual_os": -5.551115123125783e-16
+        },
+        "step": 3.6510157953321004e-05
+      },
+      {
+        "anchor_coordinate": "v_r_ADM",
+        "minus_endpoints": {
+          "lens": {
+            "N": -0.26236438363558795,
+            "Phi": -1.0439860766686127e-07,
+            "Psi": -1.0439860766686591e-07,
+            "a": 0.7692306775630079,
+            "affine": 0.21410584512191005,
+            "areal_screen_radius": 0.21249366751533577,
+            "chi": 0.27630505059889365,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": -4.7451836059765085e-07,
+            "static_frequency": 1.3000006168740152
+          },
+          "source": {
+            "N": -0.6931479102144529,
+            "Phi": -7.060890011957491e-07,
+            "Psi": -7.060890011957844e-07,
+            "a": 0.4999996351728793,
+            "affine": 0.406028801758567,
+            "areal_screen_radius": 0.379795117440171,
+            "chi": 0.7609112348912238,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": -1.065984388559802e-06,
+            "static_frequency": 2.0000021319699135
+          }
+        },
+        "minus_maps": [
+          0.21249358882311306,
+          0.3797948944685561,
+          0.24213223749990445
+        ],
+        "minus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 7.060890011957491e-07,
+          "max_abs_Psi_on_ray": 7.060890011957844e-07,
+          "max_abs_matter_peculiar_velocity": 1.065984388559802e-06,
+          "max_relative_metric_perturbation": 1.4121780023915688e-06,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "minus_reciprocity": {
+          "D_lo": 0.276241665470047,
+          "D_sl": 0.37251113461523705,
+          "D_so": 0.7595897889371117,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -1.4432899320127035e-15,
+          "relative_residual_ol": 2.220446049250313e-16,
+          "relative_residual_os": -5.551115123125783e-16
+        },
+        "plus_endpoints": {
+          "lens": {
+            "N": -0.262364145299446,
+            "Phi": 1.0439847971901785e-07,
+            "Psi": 1.043984797190225e-07,
+            "a": 0.7692308608985017,
+            "affine": 0.21410584572288158,
+            "areal_screen_radius": 0.21249351060604102,
+            "chi": 0.27630483831104663,
+            "observed_z": 0.30000000000000004,
+            "omega": 1.3,
+            "peculiar_velocity": 4.745182498620846e-07,
+            "static_frequency": 1.2999993831264216
+          },
+          "source": {
+            "N": -0.69314645090703,
+            "Phi": 7.060858200390839e-07,
+            "Psi": 7.060858200391193e-07,
+            "a": 0.5000003648265907,
+            "affine": 0.40602880552079496,
+            "areal_screen_radius": 0.37979467153940993,
+            "chi": 0.7609103024335646,
+            "observed_z": 1.0,
+            "omega": 2.0,
+            "peculiar_velocity": 1.0659828991120268e-06,
+            "static_frequency": 1.999997868035338
+          }
+        },
+        "plus_maps": [
+          0.21249358929822038,
+          0.37979489451067183,
+          0.24213224028878644
+        ],
+        "plus_perturbation_diagnostics": {
+          "lens_redshift_residual": 5.551115123125783e-17,
+          "max_abs_Phi_on_ray": 7.060858200390839e-07,
+          "max_abs_Psi_on_ray": 7.060858200391193e-07,
+          "max_abs_matter_peculiar_velocity": 1.0659828991120268e-06,
+          "max_relative_metric_perturbation": 1.4121716400782386e-06,
+          "metric_check_sampling_points": 201,
+          "source_redshift_residual": 0.0
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624166608768624,
+          "D_sl": 0.3725111389058249,
+          "D_so": 0.7595897890213427,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -9.992007221626409e-16,
+          "relative_residual_ol": -9.992007221626409e-16,
+          "relative_residual_os": -1.3322676295501878e-15
+        },
+        "step": 0.002
+      }
+    ],
+    "map_order": [
+      "D_ol",
+      "D_os",
+      "D_ls"
+    ],
+    "max_no_slip_row_residual": 9.816652379868174e-09,
+    "max_relative_no_slip_row_residual": 2.384191289142197e-10,
+    "profile": "N_Q sin(2 sqrt(K) chi) mu; mu=1 for executed ray",
+    "profile_normalization": 0.027093501352896836,
+    "profile_volume": "dimensional S3 dV_gamma; H0=1"
+  },
+  "verification": {
+    "analytic_SIS_delay_days": 17.094532051594673,
+    "baseline_reciprocity": {
+      "D_lo": 0.27624166577888287,
+      "D_sl": 0.3725111367607269,
+      "D_so": 0.7595897889794384,
+      "checked": true,
+      "omega_s_over_omega_l": 1.5384615384615383,
+      "relative_residual": -8.881784197001252e-16,
+      "relative_residual_ol": 0.0,
+      "relative_residual_os": 0.0
+    },
+    "derivative_checks": [
+      {
+        "analytic_observable_derivative": [
+          4.07443308297159e-05,
+          0.0,
+          -5.561447923891837e-05,
+          -0.0,
+          -0.0001988208472067964
+        ],
+        "analytic_vs_half_step_whitened_relative": 3.75288836034308e-09,
+        "coarse_vs_half_step_whitened_relative": 2.657582137011341e-08,
+        "coordinate": "zeta",
+        "half_step": 0.001,
+        "independently_resolved_observable_derivative": [
+          4.0744330576103494e-05,
+          0.0,
+          -5.561447918855933e-05,
+          0.0,
+          -0.00019882084600908456
+        ],
+        "map_derivative_half_step_absolute_max": 6.106226635438361e-13,
+        "measured_redshift_errors": [
+          5.551115123125783e-17,
+          0.0,
+          2.7755575615628914e-16,
+          4.440892098500626e-16
+        ],
+        "minus_reciprocity": {
+          "D_lo": 0.27624165745779933,
+          "D_sl": 0.37251110103920865,
+          "D_so": 0.7595897572646398,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615385,
+          "relative_residual": 4.440892098500626e-16,
+          "relative_residual_ol": 1.3322676295501878e-15,
+          "relative_residual_os": -1.2212453270876722e-15
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624167411184836,
+          "D_sl": 0.37251117249782983,
+          "D_so": 0.7595898207278413,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -8.881784197001252e-16,
+          "relative_residual_ol": 8.881784197001252e-16,
+          "relative_residual_os": -8.881784197001252e-16
+        }
+      },
+      {
+        "analytic_observable_derivative": [
+          0.0066780096593333695,
+          0.0,
+          -0.0017197711877397427,
+          -0.0,
+          0.04847865252111111
+        ],
+        "analytic_vs_half_step_whitened_relative": 2.9844330475546845e-10,
+        "coarse_vs_half_step_whitened_relative": 2.984954408040241e-09,
+        "coordinate": "Pi2_reference",
+        "half_step": 5.025668042547184e-05,
+        "independently_resolved_observable_derivative": [
+          0.006678009657285671,
+          0.0,
+          -0.0017197711879453844,
+          0.0,
+          0.048478652535630606
+        ],
+        "map_derivative_half_step_absolute_max": 1.7948980843285334e-11,
+        "measured_redshift_errors": [
+          5.551115123125783e-17,
+          0.0,
+          2.7755575615628914e-16,
+          0.0
+        ],
+        "minus_reciprocity": {
+          "D_lo": 0.27624181978688234,
+          "D_sl": 0.37251130918439146,
+          "D_so": 0.7595903207059114,
+          "checked": true,
+          "omega_s_over_omega_l": 1.538461538461538,
+          "relative_residual": 4.440892098500626e-16,
+          "relative_residual_ol": -1.4432899320127035e-15,
+          "relative_residual_os": -1.3322676295501878e-15
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624151177206496,
+          "D_sl": 0.37251096431078945,
+          "D_so": 0.7595892572294468,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -8.881784197001252e-16,
+          "relative_residual_ol": 2.220446049250313e-16,
+          "relative_residual_os": 2.220446049250313e-16
+        }
+      },
+      {
+        "analytic_observable_derivative": [
+          -0.00024915735345001287,
+          0.0,
+          0.0003923319134325449,
+          -0.0,
+          0.00477447908242324
+        ],
+        "analytic_vs_half_step_whitened_relative": 2.268974497136697e-09,
+        "coarse_vs_half_step_whitened_relative": 3.88039739710749e-09,
+        "coordinate": "delta_m_ADM",
+        "half_step": 0.00016847682544792562,
+        "independently_resolved_observable_derivative": [
+          -0.0002491573538717044,
+          0.0,
+          0.00039233191440347063,
+          0.0,
+          0.004774479076717729
+        ],
+        "map_derivative_half_step_absolute_max": 2.6359067923156787e-12,
+        "measured_redshift_errors": [
+          -1.6653345369377348e-16,
+          0.0,
+          2.7755575615628914e-16,
+          0.0
+        ],
+        "minus_reciprocity": {
+          "D_lo": 0.2762416714985685,
+          "D_sl": 0.3725111846116597,
+          "D_so": 0.7595898404387877,
+          "checked": true,
+          "omega_s_over_omega_l": 1.538461538461538,
+          "relative_residual": -1.7763568394002505e-15,
+          "relative_residual_ol": 6.661338147750939e-16,
+          "relative_residual_os": 4.440892098500626e-16
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.2762416600569878,
+          "D_sl": 0.37251108888504775,
+          "D_so": 0.7595897374920224,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615388,
+          "relative_residual": -3.3306690738754696e-16,
+          "relative_residual_ol": -1.2212453270876722e-15,
+          "relative_residual_os": -7.771561172376096e-16
+        }
+      },
+      {
+        "analytic_observable_derivative": [
+          -2.3134237777790095e-07,
+          0.0,
+          2.726166043549604e-07,
+          -0.0,
+          1.3396572607010413e-06
+        ],
+        "analytic_vs_half_step_whitened_relative": 1.4475532264362185e-07,
+        "coarse_vs_half_step_whitened_relative": 1.4658536482601016e-06,
+        "coordinate": "delta_r_ADM",
+        "half_step": 0.001,
+        "independently_resolved_observable_derivative": [
+          -2.313423896893596e-07,
+          0.0,
+          2.7261665147548797e-07,
+          0.0,
+          1.3396590503589323e-06
+        ],
+        "map_derivative_half_step_absolute_max": 1.8041124150158794e-13,
+        "measured_redshift_errors": [
+          2.7755575615628914e-16,
+          0.0,
+          5.551115123125783e-17,
+          0.0
+        ],
+        "minus_reciprocity": {
+          "D_lo": 0.27624166578926507,
+          "D_sl": 0.3725111369093979,
+          "D_so": 0.7595897890675135,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -3.3306690738754696e-16,
+          "relative_residual_ol": -7.771561172376096e-16,
+          "relative_residual_os": -1.2212453270876722e-15
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624166576850095,
+          "D_sl": 0.3725111366120551,
+          "D_so": 0.7595897888913637,
+          "checked": true,
+          "omega_s_over_omega_l": 1.538461538461538,
+          "relative_residual": -9.992007221626409e-16,
+          "relative_residual_ol": 6.661338147750939e-16,
+          "relative_residual_os": 6.661338147750939e-16
+        }
+      },
+      {
+        "analytic_observable_derivative": [
+          0.0024471308895549016,
+          0.0,
+          -0.0038726940465375797,
+          -0.0,
+          -0.046075971648649336
+        ],
+        "analytic_vs_half_step_whitened_relative": 2.3167354382835598e-10,
+        "coarse_vs_half_step_whitened_relative": 3.309713217448953e-08,
+        "coordinate": "v_m_ADM",
+        "half_step": 1.8255078976660502e-05,
+        "independently_resolved_observable_derivative": [
+          0.002447130889007944,
+          0.0,
+          -0.0038726940466735946,
+          0.0,
+          -0.04607597173920966
+        ],
+        "map_derivative_half_step_absolute_max": 4.2572048967667864e-11,
+        "measured_redshift_errors": [
+          2.7755575615628914e-16,
+          0.0,
+          5.551115123125783e-17,
+          0.0
+        ],
+        "minus_reciprocity": {
+          "D_lo": 0.2762416591745713,
+          "D_sl": 0.3725110853690782,
+          "D_so": 0.7595897334347878,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615383,
+          "relative_residual": -3.3306690738754696e-16,
+          "relative_residual_ol": -9.992007221626409e-16,
+          "relative_residual_os": -4.440892098500626e-16
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.27624167238136027,
+          "D_sl": 0.37251118812967693,
+          "D_so": 0.7595898444996937,
+          "checked": true,
+          "omega_s_over_omega_l": 1.538461538461538,
+          "relative_residual": -4.440892098500626e-16,
+          "relative_residual_ol": 1.5543122344752192e-15,
+          "relative_residual_os": -3.3306690738754696e-16
+        }
+      },
+      {
+        "analytic_observable_derivative": [
+          2.532872460343074e-06,
+          0.0,
+          -2.5427405817868355e-06,
+          -0.0,
+          9.081371007269641e-06
+        ],
+        "analytic_vs_half_step_whitened_relative": 3.630731882283086e-08,
+        "coarse_vs_half_step_whitened_relative": 4.8055873773601206e-08,
+        "coordinate": "v_r_ADM",
+        "half_step": 0.001,
+        "independently_resolved_observable_derivative": [
+          2.532872578342449e-06,
+          0.0,
+          -2.542740629163376e-06,
+          0.0,
+          9.081373875119425e-06
+        ],
+        "map_derivative_half_step_absolute_max": 8.326672684688674e-14,
+        "measured_redshift_errors": [
+          2.7755575615628914e-16,
+          4.440892098500626e-16,
+          2.7755575615628914e-16,
+          4.440892098500626e-16
+        ],
+        "minus_reciprocity": {
+          "D_lo": 0.2762416656244692,
+          "D_sl": 0.3725111356880312,
+          "D_so": 0.7595897889583286,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615385,
+          "relative_residual": -9.992007221626409e-16,
+          "relative_residual_ol": 1.1102230246251565e-15,
+          "relative_residual_os": 2.220446049250313e-16
+        },
+        "plus_reciprocity": {
+          "D_lo": 0.2762416659332883,
+          "D_sl": 0.37251113783332496,
+          "D_so": 0.7595897890004434,
+          "checked": true,
+          "omega_s_over_omega_l": 1.5384615384615385,
+          "relative_residual": -8.881784197001252e-16,
+          "relative_residual_ol": -1.2212453270876722e-15,
+          "relative_residual_os": -5.551115123125783e-16
+        }
+      }
+    ],
+    "lens_to_source_not_observer_difference": 0.07483093346543263,
+    "seven_state_control": {
+      "anchor_coordinates": [
+        "zeta",
+        "Pi2_reference",
+        "delta_m_ADM",
+        "delta_r_ADM",
+        "v_m_ADM",
+        "v_r_ADM"
+      ],
+      "classification": "inherited seven-state conformal Jacobi control; full frequency from metric ray",
+      "d_maps_d_anchor": [
+        [
+          6.405403467836479e-06,
+          -0.002357243580483839,
+          -2.6119960279779886e-05,
+          -7.986353262379812e-09,
+          0.00027825319539715067,
+          1.187768434518006e-07
+        ],
+        [
+          1.5865799703767747e-05,
+          -0.005290224331534628,
+          -0.00015276102909519634,
+          -4.403764184305921e-08,
+          0.0015210138848029966,
+          1.0528972742352015e-08
+        ]
+      ],
+      "difference": [
+        [
+          -1.8409583905730888e-13,
+          1.2885855577016159e-12,
+          -1.626324095738759e-13,
+          -1.250699607592121e-14,
+          3.4330924604877855e-12,
+          1.4801442945195797e-14
+        ],
+        [
+          -3.172299425371287e-13,
+          3.847697421094365e-11,
+          -9.962301084987316e-12,
+          -2.1070851027170626e-14,
+          9.717320264418516e-11,
+          3.391044126517878e-14
+        ]
+      ],
+      "forcing": "(psi*q)''+2H_K(psi*q)'-q*(phi+psi)/S_K^2; derivatives along background chi",
+      "frequency_slot": "unused zero in this control; not the physical frequency perturbation",
+      "full_metric_d_maps_d_anchor": [
+        [
+          6.405403651932318e-06,
+          -0.0023572435817724247,
+          -2.6119960117147477e-05,
+          -7.986340755383736e-09,
+          0.0002782531919640582,
+          1.1877682865035766e-07
+        ],
+        [
+          1.586580002099769e-05,
+          -0.005290224370011603,
+          -0.00015276101913289526,
+          -4.4037620772208186e-08,
+          0.001521013787629794,
+          1.052893883191075e-08
+        ]
+      ],
+      "initial_kappa": [
+        -0.004305435588640669,
+        -0.0496184993267864,
+        0.0123499469416224,
+        1.1308810697605803e-05,
+        -0.12976305551962694,
+        -0.00014696096764025895
+      ],
+      "initial_p_kappa": [
+        -9.080173229348375e-18,
+        -8.180227171506292e-15,
+        1.6868944043856092e-16,
+        2.9084929875256513e-19,
+        -6.005021229009058e-16,
+        -6.936243439085564e-19
+      ],
+      "lens_seven_state_unit_columns": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.004316486341233201,
+          -0.04230874647274865,
+          0.011105620757373771,
+          1.0177935839841321e-05,
+          -0.11809519289337501,
+          -0.0001329644345085207
+        ],
+        [
+          1.5367202870432815e-05,
+          0.054132865661834124,
+          -0.010442979183129353,
+          -9.498151179014978e-06,
+          0.09829427796175304,
+          0.00011791546905621433
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "map_order": [
+        "D_ol",
+        "D_os"
+      ],
+      "max_absolute_difference": 9.717320264418516e-11,
+      "source_seven_state_unit_columns": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.0039116002337504984,
+          0.024338744719551667,
+          -0.00580012995751601,
+          -5.172562834732996e-06,
+          0.04231992448767859,
+          5.9501794030999336e-05
+        ],
+        [
+          0.002377843350804125,
+          0.2718060167064044,
+          -0.07591143011431757,
+          -6.879657258577821e-05,
+          0.7221958432538133,
+          0.0008665565570772716
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_order": [
+        "zeta_gamma_unused",
+        "kappa",
+        "p_kappa",
+        "gamma1",
+        "p_gamma1",
+        "gamma2",
+        "p_gamma2"
+      ]
+    }
+  }
+}

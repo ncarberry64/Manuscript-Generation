@@ -1,0 +1,78 @@
+{
+  "source_commit": "49a1dabbe148f8ba9da4ac079a8d93fe97c5de76",
+  "all_match": true,
+  "files": [
+    {
+      "path": "code/strong_lensing_transport.py",
+      "blob_sha1": "8a7fb04614a4b7cc0065caacc79c2ef7c0ce098f",
+      "pinned_sha1": "8a7fb04614a4b7cc0065caacc79c2ef7c0ce098f",
+      "match": true
+    },
+    {
+      "path": "code/strong_lensing_local_family.py",
+      "blob_sha1": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+      "pinned_sha1": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+      "match": true
+    },
+    {
+      "path": "code/strong_lensing_comparison.py",
+      "blob_sha1": "39cf10de8b72347da3a7e0556cb22666a1214123",
+      "pinned_sha1": "39cf10de8b72347da3a7e0556cb22666a1214123",
+      "match": true
+    },
+    {
+      "path": "code/strong_lensing_local_hessian.py",
+      "blob_sha1": "9a99ccbc67bfbd49b521ee1139fafd3e341abddd",
+      "pinned_sha1": "9a99ccbc67bfbd49b521ee1139fafd3e341abddd",
+      "match": true
+    },
+    {
+      "path": "code/bhsm_optical_transfer.py",
+      "blob_sha1": "d6905c9f7a8ce1d9ea74daeb109cb9848e17ed16",
+      "pinned_sha1": "d6905c9f7a8ce1d9ea74daeb109cb9848e17ed16",
+      "match": true
+    },
+    {
+      "path": "code/background.py",
+      "blob_sha1": "69c33ad47d0650088551b3892b3cd7baf9a18d8e",
+      "pinned_sha1": "69c33ad47d0650088551b3892b3cd7baf9a18d8e",
+      "match": true
+    },
+    {
+      "path": "code/strong_lensing_degeneracy.py",
+      "blob_sha1": "0de0b2eb14e9ac47699937adc73d1d7a8bb3ea6e",
+      "pinned_sha1": "0de0b2eb14e9ac47699937adc73d1d7a8bb3ea6e",
+      "match": true
+    },
+    {
+      "path": "code/closed_horndeski_n2.py",
+      "blob_sha1": "7031f8e9678180731288f070508bf52f0242c5f5",
+      "pinned_sha1": "7031f8e9678180731288f070508bf52f0242c5f5",
+      "match": true
+    },
+    {
+      "path": "code/action_native_matter_n2.py",
+      "blob_sha1": "61b9fb32071627d18b3402fee7e7c32cee336f52",
+      "pinned_sha1": "61b9fb32071627d18b3402fee7e7c32cee336f52",
+      "match": true
+    },
+    {
+      "path": "preregistration/prediction_manifest.json",
+      "blob_sha1": "a8a0fa3c1ab2004f5a09b9a1b82082dee4d0263c",
+      "pinned_sha1": "a8a0fa3c1ab2004f5a09b9a1b82082dee4d0263c",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_first_comparison_20261020/results.json",
+      "blob_sha1": "994535459ce69f70e3318d0a907af131a7d58341",
+      "pinned_sha1": "994535459ce69f70e3318d0a907af131a7d58341",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_local_family_20261020/results.json",
+      "blob_sha1": "ee54424fccbed89f08878284fe0be8cc8b6c9f78",
+      "pinned_sha1": "ee54424fccbed89f08878284fe0be8cc8b6c9f78",
+      "match": true
+    }
+  ]
+}

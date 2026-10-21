@@ -1,0 +1,110 @@
+{
+  "status": "PUBLICATION_INTEGRITY_PASS_SCIENTIFIC_VALIDATION_FAILED",
+  "created_utc": "2026-10-21T13:54:23.786710+00:00",
+  "starting_worktree_commit": "2fc7162c34d7825ce819e0a50e1db262a622df2e",
+  "physical_prediction_freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "diagnostic_freeze_commit": "287b28454b8f04fcba54c9253e06163db6bf2eb1",
+  "immutable_numerical_result_commit": "7ad3cf1756667d2f24902cf9898600977d49a70e",
+  "inherited_math": [
+    {
+      "path": "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "inherited_display_blocks": 41,
+      "missing_or_changed_indices": []
+    },
+    {
+      "path": "manuscript/sections/he0435_revision_20261020.tex",
+      "inherited_display_blocks": 3,
+      "missing_or_changed_indices": []
+    }
+  ],
+  "physical_frozen_files_unchanged": {
+    "code/strong_lensing_geometry_revision.py": true,
+    "scripts/fit_he0435_geometry_revision.py": true,
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": true,
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": true
+  },
+  "source_and_output_sha256": {
+    "manuscript/strong_lensing_main.tex": "7c33a52e61b576f371e5ba6e6d4420e979d557e388e18f31f40c47959c4521c0",
+    "manuscript/strong_lensing_main.pdf": "ec7bf53ef718619433b9a62220f29b236e9458536b38c388e9f5a3e1591d7548",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "56524437464e835383e0f73d4f374d28510255e3f1e835c31da69805dd550d15",
+    "manuscript/sections/he0435_revision_20261020.tex": "a246b755dfcc4222615a3209ffdd2b0352573aa0505f8d12dbd44b9ce45fb707",
+    "manuscript/sections/he0435_revision_results_20261020.tex": "b73fa749a6cce6f66a1d9ec76da4c7fc895234d55263859d874435c30e2b2084",
+    "manuscript/sections/he0435_geometry_20261021.tex": "84bbe58dccabc3155c74fbad39081b945642f983b239bd465b4b09cdf334fdd6",
+    "docs/STRONG_LENSING_GEOMETRY_20261021.md": "46bd4b8e9ad9100740771ce6c64528eaaa7c22aec1f269742934ad49b7143b7b",
+    "docs/strong_lensing_geometry_20261021/UNUSED_OBSERVATION_DESIGN.md": "e0041e9807af618e9c05b0c5fc8fd6d17b4f0dc50f8bfcaa0b52beaf08be9eca",
+    ".github/workflows/strong-lensing-manuscript.yml": "cc844a533be86e28b7e605912c3b6ce3357d8566c12cdc0109c25efc4d2f2b78",
+    "requirements-strong-lensing-geometry.txt": "b2f9af657952eff4d3f83b54f328b9674efd40174798b3bb43c149f9eeec516c",
+    "artifacts/strong_lensing_geometry_20261021/field_psf_implementation_review.json": "37095d1fbae92f8490ec869be03f770b229afd191e55a79667e5e85cc4cee486",
+    "artifacts/strong_lensing_geometry_20261021/field_psf_serialization_review.json": "e03b982efdb74e022f3e20a99c8502f0d1d90193444ef294ca3c9ff17396d023",
+    "artifacts/strong_lensing_geometry_20261021/final_research_review.json": "8d5ce56e0ef0e6a9d70c0a10b187cc433336da7636d33b1230eace7fce9f6289",
+    "artifacts/strong_lensing_geometry_20261021/geometry_equation_review.json": "06d18fa59f4eb8194f471273e5d7572d434c399602f1c7aec7895ffd98ab2016",
+    "artifacts/strong_lensing_geometry_20261021/jwst_diagnostic_preopening_review.json": "d18798970dd5a6fb1fb743728d77b995ad7841161d78fb4e344664ced9f0cd4f",
+    "artifacts/strong_lensing_geometry_20261021/physical_pretest_review.json": "ebbf9dfc863e842197c447a4f296c6815052182a81e6754612454c60a6d92599",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf_implementation_review.json": "383eed2857cddb600fcd3c4b5923d2aa131e741c6fc4e062f9131036ac918bbe",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/postopening_target_review.json": "ab6be7998a687cba91b49073327eca4f68317fa808fa7f06c8c1660788116634",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "66b87f25245fd603c1c6adc1940d1b779b65769faf67e9096406fdac0de4db43",
+    "artifacts/strong_lensing_geometry_20261021/pdf_contact_sheet.png": "533d8c88456aeea2184e6c37018ac811422cf2180aa945beb4f545206c7b1761",
+    "artifacts/strong_lensing_geometry_20261021/new_pages_contact_sheet.png": "28ab7fb837c068f14ef5c4b8c64d6a7f922b9d57b13d2de7b0857a9cd46877b8"
+  },
+  "focused_tests": {
+    "full_suite_passed": 123,
+    "full_suite_elapsed_s": 25.98,
+    "full_suite_scope": "New+inherited focused applications before final diagnostic-only amendment; 29dcff9 source",
+    "final_amended_runner_tests_passed": 15,
+    "final_amended_runner_elapsed_s": 4.6,
+    "independent_final_amended_runner_tests_passed": 15,
+    "independent_saved_result_reproduction_checks_passed": 181,
+    "symbolic_identities": {
+      "passed": 12,
+      "scope": "Existing unchanged field-algebra check retained, not repeated as a new scientific solve"
+    }
+  },
+  "runtime_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "astropy": "7.2.0",
+    "photutils": "3.1.1",
+    "stdatamodels": "6.0.0",
+    "gwcs": "1.0.3",
+    "asdf": "6.0.0"
+  },
+  "PDF": {
+    "pages": 37,
+    "bytes": 638698,
+    "build": "Real unmodified official MDPI Galaxies6.5a with latexmk/pdfLaTeX",
+    "latex_warnings": [],
+    "visual_review": "All37Poppler80dpi pages/contactsheet and enlarged new-method/result pages reviewed; independent figure PDF rendered/checked",
+    "artifact_operation_marker": "Existing once-only edit marker from this turn retained; not rerun"
+  },
+  "science_result": {
+    "development_Gaia_RMS_mas": [
+      0.010551209236,
+      0.0105059067542
+    ],
+    "new_JWST_old_q_RMS_mas": [
+      3.3133139495357518,
+      3.3131564968561995
+    ],
+    "new_JWST_G1_q_RMS_mas": [
+      0.7794000614133585,
+      0.7794540670689476
+    ],
+    "field_calibration_pass": false,
+    "target_pixel_adequacy_pass": false,
+    "exposure_consistency_Q": 432.2620079577963,
+    "exposure_consistency_dof": 15,
+    "geometry_validation_pass": false,
+    "meaning": "Raw diagnostic improvement under inadequate instrumental response; no precision validation or physical-model rejection"
+  },
+  "once_only_target_markers": 1,
+  "no_error_inflation": true,
+  "reserve_bands_unopened": true,
+  "remaining_dependencies": [
+    "Adequate spectral/visit/field-dependent instrumental PSF mean, diffuse light, distortion/noise treatment; failed response families do not identify unique missing response",
+    "Physical microscopic U,V/source-state pairing is distinct from applied classical R1 J_eff",
+    "G1 total optical prescription does not solve its BHSM scalar environmental state; material support/global matching remain conditional"
+  ],
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "review_scope": "Internal collaborating-agent computational and scientific reviews, not external human peer review"
+}

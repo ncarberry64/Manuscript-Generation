@@ -1,0 +1,2 @@
+artifacts\strong_lensing_bhsm_integration_20261020\replay\figures\r1_screening_prediction.png
+artifacts\strong_lensing_bhsm_integration_20261020\replay\figures\r1_screening_prediction.svg

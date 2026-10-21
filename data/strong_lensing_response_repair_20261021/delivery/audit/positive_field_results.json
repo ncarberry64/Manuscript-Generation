@@ -1,0 +1,846 @@
+{
+  "status": "DEVELOPMENT_FIELD_CALIBRATION_NO_PHYSICAL_VALIDATION",
+  "mask": "Reject DNU/nonfinite/ERR<=0; SAT alone retained for valid calibrated early-group slope.",
+  "positive_psf": "A constant pedestal makes the signed empirical template positive; baseline free flux/background absorbs this reparameterization. Shared smooth log-response keeps response positive.",
+  "gauge": "Training log-shape removes first-order flux and two moments. Final reported centroids add the exact grid-moment difference and flux normalizes the positive grid; covariance here remains conditional on learned shape.",
+  "shape_parameters": 318,
+  "shape_prior_sd": 0.2,
+  "baseline": {
+    "fits": [
+      {
+        "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+        "chi2": 15861.154837443204,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 0.0,
+        "centroid_raw_pixel": [
+          899.8275309291189,
+          875.9437279423726
+        ],
+        "centroid_gauge_pixel": [
+          899.8275309291189,
+          875.9437279423726
+        ],
+        "moment_gauge_offset_pixel": [
+          0.0,
+          0.0
+        ],
+        "flux_normalization_grid_integral": 1.1537742005479736,
+        "min_response_grid": 2.193552600696525e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            3.2806229773413265e-06,
+            1.6960317754480045e-08
+          ],
+          [
+            1.696031775448005e-08,
+            2.83398839853683e-06
+          ]
+        ],
+        "restored_sat_pixels": 18
+      },
+      {
+        "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+        "chi2": 16192.426974484832,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 0.0,
+        "centroid_raw_pixel": [
+          1091.4525534949062,
+          687.118805490813
+        ],
+        "centroid_gauge_pixel": [
+          1091.4525534949062,
+          687.118805490813
+        ],
+        "moment_gauge_offset_pixel": [
+          0.0,
+          0.0
+        ],
+        "flux_normalization_grid_integral": 1.1705743245647766,
+        "min_response_grid": 2.4331030763796968e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            2.7722364447446635e-06,
+            1.3672459335560062e-08
+          ],
+          [
+            1.3672459335560062e-08,
+            2.400602863709665e-06
+          ]
+        ],
+        "restored_sat_pixels": 16
+      },
+      {
+        "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+        "chi2": 14832.914860876332,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 0.0,
+        "centroid_raw_pixel": [
+          1282.8899441917133,
+          498.0372560459626
+        ],
+        "centroid_gauge_pixel": [
+          1282.8899441917133,
+          498.0372560459626
+        ],
+        "moment_gauge_offset_pixel": [
+          0.0,
+          0.0
+        ],
+        "flux_normalization_grid_integral": 1.1562295296844898,
+        "min_response_grid": 2.2285627745513646e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            3.219321659261099e-06,
+            -1.0482324865427134e-08
+          ],
+          [
+            -1.0482324865427134e-08,
+            2.8511974817639085e-06
+          ]
+        ],
+        "restored_sat_pixels": 18
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+        "chi2": 13783.103956193898,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 0.0,
+        "centroid_raw_pixel": [
+          1474.0125243981565,
+          308.8033403407463
+        ],
+        "centroid_gauge_pixel": [
+          1474.0125243981565,
+          308.8033403407463
+        ],
+        "moment_gauge_offset_pixel": [
+          0.0,
+          0.0
+        ],
+        "flux_normalization_grid_integral": 1.1546009878987935,
+        "min_response_grid": 2.2053416388595547e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            3.3472375272502336e-06,
+            -2.029621709745191e-08
+          ],
+          [
+            -2.029621709745191e-08,
+            3.2392961575266842e-06
+          ]
+        ],
+        "restored_sat_pixels": 21
+      }
+    ],
+    "success": true,
+    "nfev": 4,
+    "message": "`ftol` termination condition is satisfied.",
+    "shape_penalty": null
+  },
+  "folds": [
+    {
+      "held_exposure": 1,
+      "train": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+            "chi2": 2074.248172108696,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.4681102811832709e-269,
+            "centroid_raw_pixel": [
+              1091.4390644328746,
+              687.1115059620471
+            ],
+            "centroid_gauge_pixel": [
+              1091.4339815231529,
+              687.1200499603905
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.00508290972177558,
+              0.008543998343371627
+            ],
+            "flux_normalization_grid_integral": 1.1828672694680589,
+            "min_response_grid": 2.4331030763796968e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.549955518818862e-06,
+                3.563825318321629e-08
+              ],
+              [
+                3.563825318321629e-08,
+                2.162561984781488e-06
+              ]
+            ],
+            "restored_sat_pixels": 16
+          },
+          {
+            "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+            "chi2": 836.6383616559767,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 4.185626927010147e-56,
+            "centroid_raw_pixel": [
+              1282.865494557431,
+              498.03941827045674
+            ],
+            "centroid_gauge_pixel": [
+              1282.86312937819,
+              498.0496823451931
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.002365179241060819,
+              0.010264074736395512
+            ],
+            "flux_normalization_grid_integral": 1.172287766283623,
+            "min_response_grid": 2.2285627745513646e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.9537141268471773e-06,
+                1.4819828827774255e-08
+              ],
+              [
+                1.4819828827774255e-08,
+                2.5832061734464833e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          },
+          {
+            "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+            "chi2": 1541.810817778449,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 5.100140008946378e-172,
+            "centroid_raw_pixel": [
+              1473.988172468228,
+              308.803325095533
+            ],
+            "centroid_gauge_pixel": [
+              1473.986281648711,
+              308.8138892060356
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0018908195170327102,
+              0.010564110502575386
+            ],
+            "flux_normalization_grid_integral": 1.1734674680567445,
+            "min_response_grid": 2.2053416388595547e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.0402005447072755e-06,
+                9.561286318866751e-09
+              ],
+              [
+                9.561286318866751e-09,
+                2.922606326083249e-06
+              ]
+            ],
+            "restored_sat_pixels": 21
+          }
+        ],
+        "success": true,
+        "nfev": 8,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": 529.620691233423
+      },
+      "test": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+            "chi2": 3106.5675311689993,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 0.0,
+            "centroid_raw_pixel": [
+              899.8106739866028,
+              875.9444484269536
+            ],
+            "centroid_gauge_pixel": [
+              899.809477590047,
+              875.9502837782603
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0011963965557665046,
+              0.005835351306682071
+            ],
+            "flux_normalization_grid_integral": 1.1633901558900406,
+            "min_response_grid": 2.193552600696525e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.036668616668541e-06,
+                -2.585275563915596e-08
+              ],
+              [
+                -2.585275563915596e-08,
+                2.535415928209541e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          }
+        ],
+        "success": true,
+        "nfev": 5,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": null
+      }
+    },
+    {
+      "held_exposure": 2,
+      "train": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+            "chi2": 1901.8362373777284,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 2.0731171236436267e-237,
+            "centroid_raw_pixel": [
+              899.8149781267336,
+              875.936554727172
+            ],
+            "centroid_gauge_pixel": [
+              899.8138819901453,
+              875.9422021347685
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0010961365883468133,
+              0.0056474075965101045
+            ],
+            "flux_normalization_grid_integral": 1.1633695653982494,
+            "min_response_grid": 2.193552600696525e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.9912924444993574e-06,
+                -1.3734552911899403e-08
+              ],
+              [
+                -1.3734552911899402e-08,
+                2.530614547110929e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          },
+          {
+            "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+            "chi2": 825.991829375458,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.4287987779269295e-54,
+            "centroid_raw_pixel": [
+              1282.8674749403945,
+              498.0325793630665
+            ],
+            "centroid_gauge_pixel": [
+              1282.8661562658795,
+              498.0421485633108
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0013186745149203344,
+              0.00956920024431046
+            ],
+            "flux_normalization_grid_integral": 1.172019831099024,
+            "min_response_grid": 2.2285627745513646e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.9333395993730152e-06,
+                2.2195304899600387e-08
+              ],
+              [
+                2.2195304899600383e-08,
+                2.5897682754956527e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          },
+          {
+            "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+            "chi2": 1744.685474018762,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.5336589986411217e-208,
+            "centroid_raw_pixel": [
+              1473.989808663046,
+              308.796312523108
+            ],
+            "centroid_gauge_pixel": [
+              1473.9889587979699,
+              308.8061543022372
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0008498650761906146,
+              0.009841779129226527
+            ],
+            "flux_normalization_grid_integral": 1.1730912410492733,
+            "min_response_grid": 2.2053416388595547e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.057323494964707e-06,
+                7.875347371322442e-09
+              ],
+              [
+                7.875347371322442e-09,
+                2.9372783781154446e-06
+              ]
+            ],
+            "restored_sat_pixels": 21
+          }
+        ],
+        "success": true,
+        "nfev": 8,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": 540.2753647329571
+      },
+      "test": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+            "chi2": 2847.874089601716,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 0.0,
+            "centroid_raw_pixel": [
+              1091.4454908539687,
+              687.104283580895
+            ],
+            "centroid_gauge_pixel": [
+              1091.441400681825,
+              687.1116165910656
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.004090172143742854,
+              0.007333010170724363
+            ],
+            "flux_normalization_grid_integral": 1.1827721869494396,
+            "min_response_grid": 2.4331030763796968e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.5620665238250577e-06,
+                3.5470541559502124e-08
+              ],
+              [
+                3.5470541559502124e-08,
+                2.1600002277621947e-06
+              ]
+            ],
+            "restored_sat_pixels": 16
+          }
+        ],
+        "success": true,
+        "nfev": 5,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": null
+      }
+    },
+    {
+      "held_exposure": 3,
+      "train": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+            "chi2": 1522.7688485056983,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.2173272098219886e-168,
+            "centroid_raw_pixel": [
+              899.8160802896052,
+              875.9364360232541
+            ],
+            "centroid_gauge_pixel": [
+              899.8150363380676,
+              875.9420417371016
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0010439515376891306,
+              0.005605713847480739
+            ],
+            "flux_normalization_grid_integral": 1.163830162705406,
+            "min_response_grid": 2.193552600696525e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.0130696691001777e-06,
+                -2.8000265089193755e-08
+              ],
+              [
+                -2.8000265089193755e-08,
+                2.5339649869296005e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          },
+          {
+            "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+            "chi2": 1723.011482759384,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.3503678096688922e-204,
+            "centroid_raw_pixel": [
+              1091.4461747403875,
+              687.1055462750364
+            ],
+            "centroid_gauge_pixel": [
+              1091.4423972432696,
+              687.1129432011537
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0037774971177728656,
+              0.0073969261173080225
+            ],
+            "flux_normalization_grid_integral": 1.1830769614098549,
+            "min_response_grid": 2.4331030763796968e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.5167865422748028e-06,
+                2.9877093060336853e-08
+              ],
+              [
+                2.9877093060336853e-08,
+                2.158891304308052e-06
+              ]
+            ],
+            "restored_sat_pixels": 16
+          },
+          {
+            "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+            "chi2": 2258.8477024861227,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.8973749918394534e-304,
+            "centroid_raw_pixel": [
+              1473.9915819441221,
+              308.79367578770973
+            ],
+            "centroid_gauge_pixel": [
+              1473.9907430245246,
+              308.80316839077017
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0008389195975663788,
+              0.009492603060416258
+            ],
+            "flux_normalization_grid_integral": 1.1735990042035267,
+            "min_response_grid": 2.2053416388595547e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.080416712382273e-06,
+                4.06043500584525e-09
+              ],
+              [
+                4.0604350058452504e-09,
+                2.9683068687342572e-06
+              ]
+            ],
+            "restored_sat_pixels": 21
+          }
+        ],
+        "success": true,
+        "nfev": 9,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": 566.6635121310198
+      },
+      "test": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+            "chi2": 1620.3232861777688,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 4.839893967858123e-186,
+            "centroid_raw_pixel": [
+              1282.8680614568252,
+              498.0319645383112
+            ],
+            "centroid_gauge_pixel": [
+              1282.866825057849,
+              498.0414304167776
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0012363989762818328,
+              0.009465878466429142
+            ],
+            "flux_normalization_grid_integral": 1.1725844112237893,
+            "min_response_grid": 2.2285627745513646e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.9661856628052687e-06,
+                1.495170366272517e-08
+              ],
+              [
+                1.495170366272517e-08,
+                2.6150378299381574e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          }
+        ],
+        "success": true,
+        "nfev": 5,
+        "message": "Both `ftol` and `xtol` termination conditions are satisfied.",
+        "shape_penalty": null
+      }
+    },
+    {
+      "held_exposure": 4,
+      "train": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+            "chi2": 1215.6552295251493,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 1.13636445329925e-115,
+            "centroid_raw_pixel": [
+              899.8200228552381,
+              875.9477568234538
+            ],
+            "centroid_gauge_pixel": [
+              899.8168866296824,
+              875.9532184928513
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0031362255557062513,
+              0.005461669397508398
+            ],
+            "flux_normalization_grid_integral": 1.1629528684767765,
+            "min_response_grid": 2.193552600696525e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.002935945176868e-06,
+                -5.110682290659939e-08
+              ],
+              [
+                -5.110682290659939e-08,
+                2.536451497423754e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          },
+          {
+            "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+            "chi2": 1585.95025186192,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 6.957699065683157e-180,
+            "centroid_raw_pixel": [
+              1091.4532774709664,
+              687.1155869438977
+            ],
+            "centroid_gauge_pixel": [
+              1091.4474736493296,
+              687.1234898845046
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.005803821636909817,
+              0.007902940606895316
+            ],
+            "flux_normalization_grid_integral": 1.182352206027698,
+            "min_response_grid": 2.4331030763796968e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.5007862715369042e-06,
+                2.0132117841175227e-08
+              ],
+              [
+                2.0132117841175227e-08,
+                2.1542904009026976e-06
+              ]
+            ],
+            "restored_sat_pixels": 16
+          },
+          {
+            "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+            "chi2": 1230.6965338594784,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 3.452261526639276e-118,
+            "centroid_raw_pixel": [
+              1282.8713628125736,
+              498.0432600102024
+            ],
+            "centroid_gauge_pixel": [
+              1282.8677752653257,
+              498.05212393667665
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.003587547247916517,
+              0.008863926474257808
+            ],
+            "flux_normalization_grid_integral": 1.1715693822794169,
+            "min_response_grid": 2.2285627745513646e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                2.9866958355078292e-06,
+                -1.1904071200762364e-08
+              ],
+              [
+                -1.1904071200762363e-08,
+                2.603478580899562e-06
+              ]
+            ],
+            "restored_sat_pixels": 18
+          }
+        ],
+        "success": true,
+        "nfev": 9,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": 513.0756374442811
+      },
+      "test": {
+        "fits": [
+          {
+            "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+            "chi2": 3705.0011283094605,
+            "dof_conditional_on_shape": 283,
+            "p_conditional_on_shape": 0.0,
+            "centroid_raw_pixel": [
+              1473.9939190610846,
+              308.8058687513629
+            ],
+            "centroid_gauge_pixel": [
+              1473.9905788625706,
+              308.8149099040693
+            ],
+            "moment_gauge_offset_pixel": [
+              -0.0033401985141253004,
+              0.009041152706403849
+            ],
+            "flux_normalization_grid_integral": 1.172836283719107,
+            "min_response_grid": 2.2053416388595547e-05,
+            "covariance_pixel2_conditional_on_shape": [
+              [
+                3.1620929859427384e-06,
+                -7.949807604165595e-09
+              ],
+              [
+                -7.949807604165595e-09,
+                2.993573321952848e-06
+              ]
+            ],
+            "restored_sat_pixels": 21
+          }
+        ],
+        "success": true,
+        "nfev": 5,
+        "message": "`ftol` termination condition is satisfied.",
+        "shape_penalty": null
+      }
+    }
+  ],
+  "all_field_fit": {
+    "fits": [
+      {
+        "name": "jw01198007001_02101_00001_nrcb3_cal.fits",
+        "chi2": 1760.4967488022187,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 2.004928522369959e-211,
+        "centroid_raw_pixel": [
+          899.8130893084464,
+          875.9402241340812
+        ],
+        "centroid_gauge_pixel": [
+          899.811939183474,
+          875.9457457992759
+        ],
+        "moment_gauge_offset_pixel": [
+          -0.0011501249723120943,
+          0.005521665194677317
+        ],
+        "flux_normalization_grid_integral": 1.163544528519262,
+        "min_response_grid": 2.193552600696525e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            3.005040240292239e-06,
+            -2.7500185514073005e-08
+          ],
+          [
+            -2.7500185514073005e-08,
+            2.5323387210822342e-06
+          ]
+        ],
+        "restored_sat_pixels": 18
+      },
+      {
+        "name": "jw01198007001_02101_00002_nrcb3_cal.fits",
+        "chi2": 1909.0528218413872,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 9.558217623190236e-239,
+        "centroid_raw_pixel": [
+          1091.4438606986075,
+          687.108129668629
+        ],
+        "centroid_gauge_pixel": [
+          1091.4395208210074,
+          687.1159397824225
+        ],
+        "moment_gauge_offset_pixel": [
+          -0.004339877600256642,
+          0.007810113793517079
+        ],
+        "flux_normalization_grid_integral": 1.1827984550597064,
+        "min_response_grid": 2.4331030763796968e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            2.5308285228361887e-06,
+            3.033474699888224e-08
+          ],
+          [
+            3.033474699888224e-08,
+            2.158309794044353e-06
+          ]
+        ],
+        "restored_sat_pixels": 16
+      },
+      {
+        "name": "jw01198007001_02101_00003_nrcb3_cal.fits",
+        "chi2": 961.7375600155472,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 8.556522978567132e-75,
+        "centroid_raw_pixel": [
+          1282.86603467648,
+          498.035561433814
+        ],
+        "centroid_gauge_pixel": [
+          1282.8643141809218,
+          498.04533303630274
+        ],
+        "moment_gauge_offset_pixel": [
+          -0.001720495558278426,
+          0.009771602488757677
+        ],
+        "flux_normalization_grid_integral": 1.1722897798990304,
+        "min_response_grid": 2.2285627745513646e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            2.9541444113733777e-06,
+            1.066867211785202e-08
+          ],
+          [
+            1.066867211785202e-08,
+            2.5963442899335824e-06
+          ]
+        ],
+        "restored_sat_pixels": 18
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+        "chi2": 2115.2801470619183,
+        "dof_conditional_on_shape": 283,
+        "p_conditional_on_shape": 2.823073537579993e-277,
+        "centroid_raw_pixel": [
+          1473.9887662577203,
+          308.79827202582265
+        ],
+        "centroid_gauge_pixel": [
+          1473.9874180342376,
+          308.80811045074074
+        ],
+        "moment_gauge_offset_pixel": [
+          -0.0013482234825436673,
+          0.00983842491810362
+        ],
+        "flux_normalization_grid_integral": 1.1734594241237266,
+        "min_response_grid": 2.2053416388595547e-05,
+        "covariance_pixel2_conditional_on_shape": [
+          [
+            3.077510581563278e-06,
+            4.132979654115721e-09
+          ],
+          [
+            4.1329796541157205e-09,
+            2.957496480191798e-06
+          ]
+        ],
+        "restored_sat_pixels": 21
+      }
+    ],
+    "success": true,
+    "nfev": 8,
+    "message": "`ftol` termination condition is satisfied.",
+    "shape_penalty": 564.0737802342817
+  }
+}

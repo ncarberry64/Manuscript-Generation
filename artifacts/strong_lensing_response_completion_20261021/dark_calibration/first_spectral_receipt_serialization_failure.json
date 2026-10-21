@@ -1,0 +1,12 @@
+{
+  "status": "allfour fullspectralcovariances and unchanged residual scores executed/saved; JSON receipt failed",
+  "exception": "ValueError noncompliant NaN in native_J_h1_h2_max_difference_per_s",
+  "cause": "diagnostic incorrectly pooled DNU/nonconsumed native pixels; all actually consumed derivative entries finite",
+  "correction": "restrict h1/h2 diagnostic to exact consumed masks; no covariance, mean, pixel mask or noise change",
+  "original_stdout_Q": [
+    3521.1869985487265,
+    4121.490846946806,
+    2615.6447341871244,
+    4204.149760253591
+  ]
+}

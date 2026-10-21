@@ -1,0 +1,943 @@
+{
+  "status": "EXECUTED_CONTROLLED_SECOND_ORDER_REAR_POTENTIAL_COUNTERFACTUAL_ON_FINAL_FROZEN_BODY",
+  "created_utc": "2026-10-21T13:25:58.146521+00:00",
+  "first_physical_freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "source_sha256": {
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "code/strong_lensing_macro_revision.py": "3ffc45db4252527a23af190277cceeb99f78019d4128ca1f779ffaabb370637f",
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90"
+  },
+  "scope": "Consumed-development counterfactual using final frozen conventional/R1 bodies only; no physical parameter, source position, quadratic remainder, observed G1 direction, G1 mass/scale, distance or clock refitted. No new observation opened.",
+  "method": {
+    "declared_rear_expansion_origin_Mpc": [
+      0.0,
+      0.0
+    ],
+    "Taylor_potential": "psiG_T(xp)=psiG(x0)+alphaG(x0).(xp-x0)+.5(xp-x0)^T HG(x0)(xp-x0), x0=(0,0)Mpc",
+    "derivatives": "alphaG_T=alphaG(x0)+HG(x0)(xp-x0); HG_T=HG(x0)",
+    "retained_terms": "Constant potential, constant deflection and full Hessian match at x0; quadratic U_rem is retained separately and unchanged. Only spatial derivatives of HG and higher are removed.",
+    "original_applications": "geometry.ray_application(theta, system) and geometry.arrival_action(theta,xp/Dop,system) used unchanged with full G1 or its matching second-order potential.",
+    "branches": "Seed the four requested Taylor branches at the final frozen full-G1 A/B/C/D images. Solve the original full two-plane ray residual with its ordered exact Jacobian; root tolerance2e-11.",
+    "source_accounting": "The exact same local lens object and total two-Plummer scalar field enter full and Taylor systems. No independent scalar field is added, and the original local source is applied once.",
+    "interpretation": "This isolates nonlinear spatial variation of the prescribed rear optical potential on the same body. The Taylor potential is a local counterfactual, not a new global finite-mass material model or proof of unique omitted physics."
+  },
+  "models": {
+    "conventional": {
+      "frozen_local_parameter_vector": [
+        11.6707876884678,
+        0.733131182839563,
+        -0.07718623912700052,
+        -0.05566349648219425,
+        0.25625719126715585,
+        0.11313029929930034,
+        0.08988670474372182,
+        -0.00045199552371968314,
+        0.0064374659093008905
+      ],
+      "frozen_G1_mass_Msun": 235148467073.52893,
+      "G1_rear_center_Mpc": [
+        -0.018635695713206123,
+        -0.026216794618959247
+      ],
+      "matching_Taylor_terms": {
+        "origin_Mpc": [
+          0.0,
+          0.0
+        ],
+        "constant_potential_Mpc": 2.1307342305322969e-07,
+        "linear_deflection_rad": [
+          8.107261756524857e-07,
+          1.140533842492044e-06
+        ],
+        "Hessian_per_Mpc": [
+          [
+            1.4298983091558902e-05,
+            -4.108568584204189e-05
+          ],
+          [
+            -4.108568584204189e-05,
+            -1.4295619329018042e-05
+          ]
+        ],
+        "Hessian_trace_per_Mpc": 3.36376254085964e-09,
+        "positive_G1_surface_density_Msun_per_Mpc2": 2796828183.2128625,
+        "Poisson_8piG_over_c2_Sigma_per_Mpc": 3.3637625408639237e-09,
+        "Poisson_relative_difference": 1.2734414959641288e-12,
+        "G1_kappa_at_origin": 1.1077915125895778e-06,
+        "G1_gamma1_at_origin": 0.009417090975539916,
+        "G1_gamma2_at_origin": -0.027061585657056617,
+        "unchanged_quadratic_remainder_U_per_Mpc": [
+          [
+            0.0005608148237771935,
+            0.0001364686075412556
+          ],
+          [
+            0.0001364686075412556,
+            0.00021729940711754934
+          ]
+        ]
+      },
+      "original_full_G1_on_frozen_images": {
+        "images_arcsec": [
+          [
+            1.1710806988550886,
+            0.5635522955639285
+          ],
+          [
+            -0.3052058047614328,
+            1.1163318510097036
+          ],
+          [
+            -1.2953252108671178,
+            -0.039502815801101245
+          ],
+          [
+            0.23295505805328318,
+            -1.0505614524210416
+          ]
+        ],
+        "relative_delays_days": [
+          6.423926074988515,
+          0.4954612293732339,
+          13.491351395601782
+        ],
+        "source_ray_residual_rad": [
+          [
+            -2.6469779601696886e-22,
+            3.1763735522036263e-22
+          ],
+          [
+            2.117582368135751e-22,
+            -7.411538288475128e-22
+          ],
+          [
+            -2.6469779601696886e-22,
+            0.0
+          ],
+          [
+            4.235164736271502e-22,
+            0.0
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            3.469446951953614e-18,
+            8.673617379884035e-19
+          ],
+          [
+            4.336808689942018e-19,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            4.336808689942018e-19,
+            0.0
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            -1.0408340855860843e-17,
+            1.734723475976807e-18
+          ],
+          [
+            -6.505213034913027e-19,
+            -2.6020852139652106e-18
+          ],
+          [
+            -9.540979117872439e-18,
+            -6.505213034913027e-19
+          ],
+          [
+            3.0357660829594124e-18,
+            -8.023096076392733e-18
+          ]
+        ],
+        "max_source_ray_residual_rad": 7.411538288475128e-22,
+        "max_foreground_arrival_gradient_Mpc": 3.469446951953614e-18,
+        "max_rear_arrival_gradient_Mpc": 1.0408340855860843e-17
+      },
+      "Taylor_counterfactual_evaluated_on_frozen_full_G1_images": {
+        "source_ray_residual_rad": [
+          [
+            -4.477466062508031e-09,
+            1.3852407417890935e-08
+          ],
+          [
+            6.893311159738897e-09,
+            -6.0649112088184136e-09
+          ],
+          [
+            -1.7917754497164873e-08,
+            3.3956870374828645e-09
+          ],
+          [
+            5.209481923130548e-09,
+            -5.466344361812011e-09
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            3.469446951953614e-18,
+            8.673617379884035e-19
+          ],
+          [
+            4.336808689942018e-19,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            4.336808689942018e-19,
+            0.0
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            -2.9968981163855032e-05,
+            9.271818729278403e-05
+          ],
+          [
+            4.6138934258503714e-05,
+            -4.0594212717640944e-05
+          ],
+          [
+            -0.00011992873637175269,
+            2.2728319867518394e-05
+          ],
+          [
+            3.486857598653664e-05,
+            -3.658783091312046e-05
+          ]
+        ],
+        "max_source_ray_residual_rad": 1.7917754497164873e-08,
+        "max_foreground_arrival_gradient_Mpc": 3.469446951953614e-18,
+        "max_rear_arrival_gradient_Mpc": 0.00011992873637175269
+      },
+      "solved_matching_Taylor_branches": {
+        "images_arcsec": [
+          [
+            1.1799473505068925,
+            0.5451767620481512
+          ],
+          [
+            -0.29516308394438917,
+            1.1205191402204437
+          ],
+          [
+            -1.2908702102981182,
+            -0.04330048443273313
+          ],
+          [
+            0.23774344178733156,
+            -1.0481648627463818
+          ]
+        ],
+        "relative_delays_days": [
+          6.3539596436903025,
+          0.6374336305012775,
+          13.514733164085158
+        ],
+        "root_solver_reports": [
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 8.735654337515763e-17
+          },
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 5.459783960947352e-16
+          },
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 5.459783960947352e-17
+          },
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 3.275870376568411e-17
+          }
+        ],
+        "source_ray_residual_rad": [
+          [
+            -2.6469779601696886e-22,
+            -4.235164736271502e-22
+          ],
+          [
+            2.276401045745932e-21,
+            -2.6469779601696886e-21
+          ],
+          [
+            -2.6469779601696886e-22,
+            -2.117582368135751e-22
+          ],
+          [
+            1.0587911840678754e-22,
+            1.5881867761018131e-22
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            0.0,
+            8.673617379884035e-19
+          ],
+          [
+            0.0,
+            -1.734723475976807e-18
+          ],
+          [
+            1.734723475976807e-18,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            -3.469446951953614e-18,
+            -1.734723475976807e-18
+          ],
+          [
+            1.3227266504323154e-17,
+            -1.1275702593849246e-17
+          ],
+          [
+            -1.0408340855860843e-17,
+            -1.734723475976807e-18
+          ],
+          [
+            1.734723475976807e-18,
+            -2.3852447794681098e-18
+          ]
+        ],
+        "max_source_ray_residual_rad": 2.6469779601696886e-21,
+        "max_foreground_arrival_gradient_Mpc": 1.734723475976807e-18,
+        "max_rear_arrival_gradient_Mpc": 1.3227266504323154e-17
+      },
+      "original_full_G1_evaluated_on_Taylor_images": {
+        "source_ray_residual_rad": [
+          [
+            4.888267056829346e-09,
+            -1.3737041621036804e-08
+          ],
+          [
+            -7.034992161294377e-09,
+            5.968806673474364e-09
+          ],
+          [
+            1.763879971598491e-08,
+            -3.478208022023955e-09
+          ],
+          [
+            -5.1205968604451054e-09,
+            5.479665957109666e-09
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            0.0,
+            8.673617379884035e-19
+          ],
+          [
+            0.0,
+            -1.734723475976807e-18
+          ],
+          [
+            1.734723475976807e-18,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            3.271859156603156e-05,
+            -9.194601049800598e-05
+          ],
+          [
+            -4.708724636352758e-05,
+            3.9950957142001475e-05
+          ],
+          [
+            0.00011806161097848312,
+            -2.3280656791307627e-05
+          ],
+          [
+            -3.427364243881485e-05,
+            3.667699622066827e-05
+          ]
+        ],
+        "max_source_ray_residual_rad": 1.763879971598491e-08,
+        "max_foreground_arrival_gradient_Mpc": 1.734723475976807e-18,
+        "max_rear_arrival_gradient_Mpc": 0.00011806161097848312
+      },
+      "full_minus_Taylor_image_offsets_mas": [
+        [
+          -8.866651651803892,
+          18.375533515777253
+        ],
+        [
+          -10.042720817043605,
+          -4.187289210740186
+        ],
+        [
+          -4.455000568999612,
+          3.7976686316318826
+        ],
+        [
+          -4.788383734048384,
+          -2.3965896746598325
+        ]
+      ],
+      "full_minus_Taylor_relative_offsets_mas": [
+        [
+          -1.1760691652398236,
+          -22.56282272651744
+        ],
+        [
+          4.41165108280428,
+          -14.577864884145363
+        ],
+        [
+          4.0782679177555625,
+          -20.772123190436975
+        ]
+      ],
+      "full_minus_Taylor_relative_delay_seconds": [
+        6045.0996641655365,
+        -12266.415457462972,
+        -2020.184796963622
+      ],
+      "maximum_absolute_image_coordinate_difference_mas": 18.375533515777253,
+      "maximum_image_displacement_norm_mas": 20.402885666098552,
+      "maximum_absolute_relative_coordinate_difference_mas": 22.56282272651744,
+      "maximum_absolute_relative_delay_difference_seconds": 12266.415457462972,
+      "full_G1_consumed_Gaia_point_comparison": {
+        "residual_mas": [
+          0.0056086894102413964,
+          0.008820792556152313,
+          0.007006898819383878,
+          -0.003960327740859526,
+          -0.0218718816415997,
+          0.0039426243003681805
+        ],
+        "Q": 0.026511601826968118,
+        "coordinate_RMS_mas": 0.010551209235733208,
+        "scope": "Already consumed Gaia development coordinates; fixed frozen physical parameters, no refit and no uncertainty alteration. Not a new validation."
+      },
+      "Taylor_consumed_Gaia_point_comparison": {
+        "residual_mas": [
+          -1.1704604758295822,
+          -22.55400193396129,
+          4.418657981623664,
+          -14.581825211886223,
+          4.056396036113963,
+          -20.768180566136607
+        ],
+        "Q": 38003.60038376648,
+        "coordinate_RMS_mas": 14.08296144673077,
+        "scope": "Already consumed Gaia development coordinates; fixed frozen physical parameters, no refit and no uncertainty alteration. Not a new validation."
+      },
+      "identical_local_lens_object_full_and_Taylor": true
+    },
+    "r1": {
+      "frozen_local_parameter_vector": [
+        11.670781912814304,
+        0.7331345153440547,
+        -0.07718570188174453,
+        -0.05566372069405284,
+        0.25625719126715585,
+        0.1131279398267895,
+        0.08988537970674937,
+        -0.0004520322871494417,
+        0.0064375020291465345
+      ],
+      "frozen_G1_mass_Msun": 235146069816.55292,
+      "G1_rear_center_Mpc": [
+        -0.018635616700113565,
+        -0.026216683197587454
+      ],
+      "matching_Taylor_terms": {
+        "origin_Mpc": [
+          0.0,
+          0.0
+        ],
+        "constant_potential_Mpc": 2.1307105970737796e-07,
+        "linear_deflection_rad": [
+          8.107213585767322e-07,
+          1.1405270542613364e-06
+        ],
+        "Hessian_per_Mpc": [
+          [
+            1.4298958374288569e-05,
+            -4.108561604523969e-05
+          ],
+          [
+            -4.108561604523969e-05,
+            -1.4295594588904027e-05
+          ]
+        ],
+        "Hessian_trace_per_Mpc": 3.3637853845420166e-09,
+        "positive_G1_surface_density_Msun_per_Mpc2": 2796847176.774048,
+        "Poisson_8piG_over_c2_Sigma_per_Mpc": 3.363785384537345e-09,
+        "Poisson_relative_difference": 1.38876354325909e-12,
+        "G1_kappa_at_origin": 1.1077990357239089e-06,
+        "G1_gamma1_at_origin": 0.00941707468768667,
+        "G1_gamma2_at_origin": -0.027061539684545693,
+        "unchanged_quadratic_remainder_U_per_Mpc": [
+          [
+            0.0005608112415574535,
+            0.00013646659583161415
+          ],
+          [
+            0.00013646659583161415,
+            0.00021730298933728928
+          ]
+        ]
+      },
+      "original_full_G1_on_frozen_images": {
+        "images_arcsec": [
+          [
+            1.171080566065426,
+            0.5635523389402617
+          ],
+          [
+            -0.3052056541941684,
+            1.116332048483379
+          ],
+          [
+            -1.2953253094811426,
+            -0.03950263038709239
+          ],
+          [
+            0.23295486446216643,
+            -1.0505616619178595
+          ]
+        ],
+        "relative_delays_days": [
+          6.423799409901505,
+          0.4954429756751324,
+          13.491078161096539
+        ],
+        "source_ray_residual_rad": [
+          [
+            -1.2176098616780567e-21,
+            -8.999725064576941e-22
+          ],
+          [
+            1.0587911840678754e-22,
+            1.5881867761018131e-22
+          ],
+          [
+            5.293955920339377e-23,
+            -5.293955920339377e-23
+          ],
+          [
+            2.117582368135751e-22,
+            -1.5352472168984194e-21
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            1.734723475976807e-18,
+            0.0
+          ],
+          [
+            4.336808689942018e-19,
+            -1.734723475976807e-18
+          ],
+          [
+            1.734723475976807e-18,
+            -1.0842021724855044e-19
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            -1.0408340855860843e-17,
+            -3.469446951953614e-18
+          ],
+          [
+            -1.951563910473908e-18,
+            8.673617379884035e-18
+          ],
+          [
+            -6.938893903907228e-18,
+            -4.336808689942018e-19
+          ],
+          [
+            3.0357660829594124e-18,
+            -1.431146867680866e-17
+          ]
+        ],
+        "max_source_ray_residual_rad": 1.5352472168984194e-21,
+        "max_foreground_arrival_gradient_Mpc": 1.734723475976807e-18,
+        "max_rear_arrival_gradient_Mpc": 1.431146867680866e-17
+      },
+      "Taylor_counterfactual_evaluated_on_frozen_full_G1_images": {
+        "source_ray_residual_rad": [
+          [
+            -4.4774516369237934e-09,
+            1.3852380276468364e-08
+          ],
+          [
+            6.893341897379501e-09,
+            -6.064929741922434e-09
+          ],
+          [
+            -1.7917739571169452e-08,
+            3.3956700192688946e-09
+          ],
+          [
+            5.209527803979013e-09,
+            -5.4663941784299295e-09
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            1.734723475976807e-18,
+            0.0
+          ],
+          [
+            4.336808689942018e-19,
+            -1.734723475976807e-18
+          ],
+          [
+            1.734723475976807e-18,
+            -1.0842021724855044e-19
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            -2.9968884609222687e-05,
+            9.271800562736e-05
+          ],
+          [
+            4.613913999446193e-05,
+            -4.0594336765085136e-05
+          ],
+          [
+            -0.00011992863646772926,
+            2.272820595966801e-05
+          ],
+          [
+            3.4868883080386125e-05,
+            -3.6588164350213285e-05
+          ]
+        ],
+        "max_source_ray_residual_rad": 1.7917739571169452e-08,
+        "max_foreground_arrival_gradient_Mpc": 1.734723475976807e-18,
+        "max_rear_arrival_gradient_Mpc": 0.00011992863646772926
+      },
+      "solved_matching_Taylor_branches": {
+        "images_arcsec": [
+          [
+            1.1799473870790909,
+            0.545176443407355
+          ],
+          [
+            -0.29516270427545793,
+            1.120519432427425
+          ],
+          [
+            -1.2908702431338313,
+            -0.043300382442850886
+          ],
+          [
+            0.23774337750400787,
+            -1.048165002337335
+          ]
+        ],
+        "relative_delays_days": [
+          6.3538327978429265,
+          0.6374150040765016,
+          13.514460418541717
+        ],
+        "root_solver_reports": [
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 2.0747179051599936e-16
+          },
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 3.494261735006305e-16
+          },
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 1.4195438298463114e-16
+          },
+          {
+            "success": true,
+            "message": "The solution converged.",
+            "lens_residual_arcsec": 2.729891980473676e-16
+          }
+        ],
+        "source_ray_residual_rad": [
+          [
+            -1.0058516248644817e-21,
+            -4.764560328305439e-22
+          ],
+          [
+            1.6940658945086007e-21,
+            -4.764560328305439e-22
+          ],
+          [
+            6.88214269644119e-22,
+            -3.1763735522036263e-22
+          ],
+          [
+            2.6469779601696886e-22,
+            1.3234889800848443e-21
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            1.734723475976807e-18,
+            8.673617379884035e-19
+          ],
+          [
+            0.0,
+            1.734723475976807e-18
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            -4.336808689942018e-19,
+            3.469446951953614e-18
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            -1.214306433183765e-17,
+            -6.071532165918825e-18
+          ],
+          [
+            9.974659986866641e-18,
+            -7.806255641895632e-18
+          ],
+          [
+            2.6020852139652106e-18,
+            -2.3852447794681098e-18
+          ],
+          [
+            3.0357660829594124e-18,
+            0.0
+          ]
+        ],
+        "max_source_ray_residual_rad": 1.6940658945086007e-21,
+        "max_foreground_arrival_gradient_Mpc": 3.469446951953614e-18,
+        "max_rear_arrival_gradient_Mpc": 1.214306433183765e-17
+      },
+      "original_full_G1_evaluated_on_Taylor_images": {
+        "source_ray_residual_rad": [
+          [
+            4.88825975411838e-09,
+            -1.3737012294727155e-08
+          ],
+          [
+            -7.035026104544722e-09,
+            5.968822209133766e-09
+          ],
+          [
+            1.7638783097399548e-08,
+            -3.478193424335381e-09
+          ],
+          [
+            -5.12063982840407e-09,
+            5.479716559964001e-09
+          ]
+        ],
+        "foreground_arrival_gradient_Mpc": [
+          [
+            1.734723475976807e-18,
+            8.673617379884035e-19
+          ],
+          [
+            0.0,
+            1.734723475976807e-18
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            -4.336808689942018e-19,
+            3.469446951953614e-18
+          ]
+        ],
+        "rear_arrival_gradient_Mpc": [
+          [
+            3.2718542686860017e-05,
+            -9.194581420849876e-05
+          ],
+          [
+            -4.7087473555562946e-05,
+            3.9951061126672176e-05
+          ],
+          [
+            0.000118061499745469,
+            -2.3280559084737362e-05
+          ],
+          [
+            -3.4273930035846976e-05,
+            3.6677334920267885e-05
+          ]
+        ],
+        "max_source_ray_residual_rad": 1.7638783097399548e-08,
+        "max_foreground_arrival_gradient_Mpc": 3.469446951953614e-18,
+        "max_rear_arrival_gradient_Mpc": 0.000118061499745469
+      },
+      "full_minus_Taylor_image_offsets_mas": [
+        [
+          -8.866821013664872,
+          18.37589553290664
+        ],
+        [
+          -10.042949918710464,
+          -4.1873839440460525
+        ],
+        [
+          -4.455066347311298,
+          3.7977520557584965
+        ],
+        [
+          -4.788513041841441,
+          -2.396659580524485
+        ]
+      ],
+      "full_minus_Taylor_relative_offsets_mas": [
+        [
+          -1.1761289050455925,
+          -22.56327947695269
+        ],
+        [
+          4.411754666353573,
+          -14.578143477148142
+        ],
+        [
+          4.078307971823403,
+          -20.77255511343101
+        ]
+      ],
+      "full_minus_Taylor_relative_delay_seconds": [
+        6045.115281861217,
+        -12266.383253878303,
+        -2020.2270432633668
+      ],
+      "maximum_absolute_image_coordinate_difference_mas": 18.37589553290664,
+      "maximum_image_displacement_norm_mas": 20.40328531204392,
+      "maximum_absolute_relative_coordinate_difference_mas": 22.56327947695269,
+      "maximum_absolute_relative_delay_difference_seconds": 12266.383253878303,
+      "full_G1_consumed_Gaia_point_comparison": {
+        "residual_mas": [
+          0.005325332483208101,
+          0.008666695213932485,
+          0.0069727231815086554,
+          -0.004102365416591702,
+          -0.02181108018739497,
+          0.004195497451453534
+        ],
+        "Q": 0.026279970748485534,
+        "coordinate_RMS_mas": 0.01050590675422826,
+        "scope": "Already consumed Gaia development coordinates; fixed frozen physical parameters, no refit and no uncertainty alteration. Not a new validation."
+      },
+      "Taylor_consumed_Gaia_point_comparison": {
+        "residual_mas": [
+          -1.1708035725623844,
+          -22.554612781738758,
+          4.418727389535082,
+          -14.582245842564735,
+          4.056496891636008,
+          -20.76835961597956
+        ],
+        "Q": 38005.393963059636,
+        "coordinate_RMS_mas": 14.08325431417413,
+        "scope": "Already consumed Gaia development coordinates; fixed frozen physical parameters, no refit and no uncertainty alteration. Not a new validation."
+      },
+      "identical_local_lens_object_full_and_Taylor": true,
+      "original_total_local_source_and_Gauss_sections_applied_once_for_shared_field": [
+        {
+          "radius_kpc": 0.030000000000000002,
+          "density_over_Mpl2H02": 3736053052.348633,
+          "consumed_reduced_source_J_eff": -171279915.11312822,
+          "scalar_gradient_over_MplH0": -3.5991919806817106e-05,
+          "scalar_integrated_lhs": -3.495570286398091e-17,
+          "scalar_integrated_source": -3.495570286398091e-17,
+          "metric_Gauss_lhs": 7.624732899692909e-16,
+          "metric_Gauss_source": 7.624732899692909e-16,
+          "scalar_relative_residual": 0.0,
+          "metric_relative_residual": 0.0
+        },
+        {
+          "radius_kpc": 0.2,
+          "density_over_Mpl2H02": 18271743.011113375,
+          "consumed_reduced_source_J_eff": -837670.811431602,
+          "scalar_gradient_over_MplH0": -2.566831453951925e-05,
+          "scalar_integrated_lhs": -1.1872490700906853e-16,
+          "scalar_integrated_source": -1.1872490700906848e-16,
+          "metric_Gauss_lhs": 2.589693899182927e-15,
+          "metric_Gauss_source": 2.5896938991829276e-15,
+          "scalar_relative_residual": 4.1527770219729295e-16,
+          "metric_relative_residual": 3.0461550126441765e-16
+        },
+        {
+          "radius_kpc": 1.0,
+          "density_over_Mpl2H02": 15463161.718113845,
+          "consumed_reduced_source_J_eff": -708910.9788722463,
+          "scalar_gradient_over_MplH0": -5.642550208266809e-05,
+          "scalar_integrated_lhs": -2.875466285356208e-15,
+          "scalar_integrated_source": -2.875466285356208e-15,
+          "metric_Gauss_lhs": 6.272127461783887e-14,
+          "metric_Gauss_source": 6.272127461783887e-14,
+          "scalar_relative_residual": 0.0,
+          "metric_relative_residual": 0.0
+        },
+        {
+          "radius_kpc": 6.0,
+          "density_over_Mpl2H02": 2263767.1806671335,
+          "consumed_reduced_source_J_eff": -103782.74748984216,
+          "scalar_gradient_over_MplH0": -0.00018667285305774565,
+          "scalar_integrated_lhs": -1.894859613889067e-13,
+          "scalar_integrated_source": -1.8948596138890683e-13,
+          "metric_Gauss_lhs": 4.133173489469925e-12,
+          "metric_Gauss_source": 4.133173489469924e-12,
+          "scalar_relative_residual": 6.661060476998013e-16,
+          "metric_relative_residual": 1.9544148558107463e-16
+        }
+      ],
+      "source_equations": {
+        "scalar": "C x^2 p-4 x p^2/lambda_hat=-b_hat m_total(x)",
+        "metric_Gauss": "2 x^2 Phi_prime+b_hat x^2 p=2 m_total(x)",
+        "consumed_reduced_source": "J_eff/(Mpl H0^2)=-b_hat rho_total/(2Mpl^2 H0^2)"
+      }
+    }
+  },
+  "physical_guard": 2e-10,
+  "physical_admission": false,
+  "unused_observations_opened": false,
+  "physical_parameters_refitted": false,
+  "uncertainty_floor_or_rescaling": false
+}
