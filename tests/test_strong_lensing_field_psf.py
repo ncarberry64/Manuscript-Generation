@@ -180,3 +180,13 @@ def test_frozen_binding_includes_transitively_consumed_pixel_geometry(tmp_path):
     path.write_text(json.dumps({'field_psf_calibration':binding}),encoding='utf-8')
     with pytest.raises(ValueError,match='source changed'):
         module.validate_execution(path,module.sha(path),True)
+
+
+def test_field_receipt_numpy_encoding_preserves_finite_json_guard(tmp_path):
+    spec=importlib.util.spec_from_file_location('field_calibration_runner_json',ROOT/'scripts/calibrate_he0435_jwst_psf.py')
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    path=tmp_path/'receipt.json'
+    module.dump(path,{'bounds':[np.int64(12),np.int64(25)],'grid':np.array([[np.float64(.2)]])})
+    assert json.loads(path.read_text())=={'bounds':[12,25],'grid':[[.2]]}
+    with pytest.raises(ValueError,match='Out of range'):
+        module.dump(path,{'invalid':np.array([np.nan])})

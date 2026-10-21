@@ -39,6 +39,5 @@ data/strong_lensing_revision_20261020/gaia/*.csv -text whitespace=-blank-at-eol,
 data/strong_lensing_geometry_20261021/**/*.json -text whitespace=cr-at-eol
 artifacts/strong_lensing_geometry_20261021/**/*.json -text whitespace=cr-at-eol
 artifacts/strong_lensing_geometry_20261021/*.json -text whitespace=cr-at-eol
-preregistration/he0435_geometry_jwst_20261021.json -text whitespace=cr-at-eol
-preregistration/he0435_field_psf_algorithm_20261021.json -text whitespace=cr-at-eol
+preregistration/he0435*20261021.json -text whitespace=cr-at-eol
 *.fits binary

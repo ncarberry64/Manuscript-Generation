@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-21T13:06:12.175167+00:00",
+  "freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "freeze_sha256": "9f6559302914ec27f56a17ecad2cff483dede900b222eda7488aa21b8df5badb",
+  "products": [
+    "jw01198007001_02101_00001_nrcb3_cal.fits",
+    "jw01198007001_02101_00002_nrcb3_cal.fits",
+    "jw01198007001_02101_00003_nrcb3_cal.fits",
+    "jw01198007001_02101_00004_nrcb3_cal.fits"
+  ],
+  "science_arrays_opened": false
+}

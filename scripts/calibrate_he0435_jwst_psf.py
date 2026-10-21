@@ -32,7 +32,11 @@ def sha(path):
 
 
 def dump(path,value):
-    Path(path).write_text(json.dumps(value,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    def encode_numpy(item):
+        if isinstance(item,np.generic):return item.item()
+        if isinstance(item,np.ndarray):return item.tolist()
+        raise TypeError(f'Unsupported JSON value: {type(item).__name__}')
+    Path(path).write_text(json.dumps(value,indent=2,allow_nan=False,default=encode_numpy)+'\n',encoding='utf-8')
 
 
 def validate_execution(protocol_path,expected_protocol_sha256,authorized):
