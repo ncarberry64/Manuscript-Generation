@@ -1,8 +1,8 @@
 {
   "status": "CLEAN_WHEEL_INSTALL_PASSED",
-  "created_utc": "2026-10-21T22:32:36.229325+00:00",
+  "created_utc": "2026-10-21T22:56:04.941057+00:00",
   "dependency_scope": "Clean noneditable package installation with --system-site-packages; existing scientific dependencies reused.",
-  "outside_checkout_working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm",
+  "outside_checkout_working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x",
   "commands": [
     {
       "command": [
@@ -11,11 +11,11 @@
         "build",
         "--wheel",
         "--outdir",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\build.log",
-      "log_sha256": "fd3a038f2b982df3aeaa371a9384deb61b01ef87b9b2003b2af7097223f8fe9d"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\build.log",
+      "log_sha256": "9be09ad38adb1ad738cfea3454aef8927d5b5689ed62b6903e9ddef12cb160d8"
     },
     {
       "command": [
@@ -23,81 +23,81 @@
         "-m",
         "venv",
         "--system-site-packages",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\venv.log",
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\venv.log",
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv\\Scripts\\python.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Scripts\\python.exe",
         "-m",
         "pip",
         "install",
         "--no-deps",
         "--force-reinstall",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\bhsm_blackhole_tracker-0.1.0-py3-none-any.whl"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\bhsm_blackhole_tracker-0.1.1-py3-none-any.whl"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\install.log",
-      "log_sha256": "4eb0afa638098a4b90db05466f74f21ceb712d955e9306e50d34032ecf1ad7fb"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\install.log",
+      "log_sha256": "f948f5cef089de8f4b5070ce8a4e605adda4fbd16aad1e3cedfff0aa960823f8"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv\\Scripts\\python.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Scripts\\python.exe",
         "-I",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\probe_install.py"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\probe_install.py"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\api_probe.log",
-      "log_sha256": "26219284c8a4dd9ffc3183348c687f9ec89a0624bf769e34bbbc6b4c10ae4660"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\api_probe.log",
+      "log_sha256": "8d32408edada73c699637cea475d8cbafd008ba7955fa72683b43236d6597841"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Scripts\\blackhole-tracker.exe",
         "example",
         "nearby_motion",
         "--output",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_nearby.json"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_nearby.json"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_example.log",
-      "log_sha256": "9665d3a94cbe480e52d994e608ba282ae5415f797ac81e303505b3dc0044a9fe"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_example.log",
+      "log_sha256": "674b08eace53b2101a699f153a8891ec192832f705d357bebfb78c5c1d05724b"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Scripts\\blackhole-tracker.exe",
         "validate",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_nearby.json"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_nearby.json"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_validate.log",
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_validate.log",
       "log_sha256": "87f84202f5b466cf9d801750536f62062ffde3b5b1b76fd11cf9dc5d251a8bb5"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Scripts\\blackhole-tracker.exe",
         "fit",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_nearby.json",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_nearby.json",
         "--family",
         "gr",
         "--starts",
         "1",
         "--output",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_fit"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_fit"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\cli_fit.log",
-      "log_sha256": "039c6a93a50b10f4c72005bac3b33691c28b3d5af1408601d832b95b3534b261"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\cli_fit.log",
+      "log_sha256": "6d14ea3ed194f56ea9695b6e6e5d61d7e1f874876056aa3a6dc9d415eef8fe6d"
     }
   ],
   "wheel": {
-    "filename": "bhsm_blackhole_tracker-0.1.0-py3-none-any.whl",
-    "sha256": "835c03130d929921af32914c3ca35a6d66203f16decbe272c9fcc2b72de5aa44",
-    "bytes": 131688,
+    "filename": "bhsm_blackhole_tracker-0.1.1-py3-none-any.whl",
+    "sha256": "f5d78313d0ca41653bd36080fdf2b8eae6decbafbfb9241a123ae0d99714a70e",
+    "bytes": 155426,
     "contents": {
-      "file_count": 41,
+      "file_count": 46,
       "provider_files": {
         "code/strong_lensing_transport.py": "eb67bf7c112257df80f2b9d2185c5ede3ae20f2f3a13c6bd348699d39cf419ed",
         "code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
@@ -107,17 +107,17 @@
         "preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113"
       },
       "web_files": {
-        "bhtracker/web/index.html": "cc7bf2fe89ed38f6c7fbbf7f36319dbb5544636c1c4473cb1ca5bed37db0cb38",
-        "bhtracker/web/app.js": "88fe73209f710ec8481cfe168384198507f067993d55d94ea4e9b221c5ee27f6",
-        "bhtracker/web/style.css": "d493cc89c02f3c0b23a8df93cddbcae21123df96f6e2ea49a0febc95705c992b"
+        "bhtracker/web/index.html": "e3410b1d77ab03ce668f9f5eb13636de24a84f05b253c65628f17b6ec9dcd54e",
+        "bhtracker/web/app.js": "5d39632d89ad025c89abc654c66fe81e58366bcc51038797e5c2ca0076a420f2",
+        "bhtracker/web/style.css": "fef963c532fa0df698f98d3c4e70745ed5008143a6e6421dab5a06758492d6b7"
       }
     }
   },
   "installed_api": {
     "passed": true,
     "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
-    "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv",
-    "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_product_20261021\\package_install_twb354vm\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
+    "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv",
+    "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
     "editable": false,
     "dependency_versions": {
       "numpy": "2.4.3",
@@ -434,26 +434,26 @@
       "preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113"
     },
     "web_files": {
-      "index.html": "cc7bf2fe89ed38f6c7fbbf7f36319dbb5544636c1c4473cb1ca5bed37db0cb38",
-      "app.js": "88fe73209f710ec8481cfe168384198507f067993d55d94ea4e9b221c5ee27f6",
-      "style.css": "d493cc89c02f3c0b23a8df93cddbcae21123df96f6e2ea49a0febc95705c992b"
+      "index.html": "e3410b1d77ab03ce668f9f5eb13636de24a84f05b253c65628f17b6ec9dcd54e",
+      "app.js": "5d39632d89ad025c89abc654c66fe81e58366bcc51038797e5c2ca0076a420f2",
+      "style.css": "fef963c532fa0df698f98d3c4e70745ed5008143a6e6421dab5a06758492d6b7"
     },
     "loopback_resource_checks": {
       "/": {
         "status": 200,
-        "bytes": 11065
+        "bytes": 12471
       },
       "/app.js": {
         "status": 200,
-        "bytes": 38362
+        "bytes": 43905
       },
       "/style.css": {
         "status": 200,
-        "bytes": 19383
+        "bytes": 22036
       },
       "/api/health": {
         "status": 200,
-        "bytes": 71
+        "bytes": 76
       },
       "/api/examples": {
         "status": 200,
@@ -465,24 +465,24 @@
     "status": "TRACKED",
     "mass_msun": 99947.19893016141,
     "exports": {
-      "manifest.json": "b2e1672f40a36bf96174a1fe5e6c23b45eea033d3817db86b458a7d020aca6b7",
+      "manifest.json": "346c0141805de1a011ffb21d55d40692530781e27e5650e5ce93b2f55015826b",
       "predictions.csv": "c17d1c6446f2be2da3a83750cb611b72b9db79a838fbbf15ba0eaf1e79a18114",
-      "report.html": "4bf1a9f749770301e4ff66343f2329d01260f9adf71d2eee31dc8ef46064fe04",
-      "result.json": "26ca326768c0d809f9c4ff110314b341638578c5817432f475d4bc77840a3e8f",
+      "report.html": "b781003b19a1c1a3e0013a62bba44653f6e60293eea0ea9c1885ad7eaac82c66",
+      "result.json": "5b6c302358ee715c665b013c5985f0b3298624e8b0c7305b3f823d0fef05377b",
       "track_and_residuals.png": "d40c53d0ceb55bf80ce54f20e2a37ea581b2b763ba87a39532059aee27460d9e"
     }
   },
   "package_source_sha256": {
-    "bhtracker/__init__.py": "9cff589ac85d9c1336b61da5df1c7a23cb95be2a45b99b08d06d06d31c9443c3",
+    "bhtracker/__init__.py": "602e46f2eefd1987e45396f940d19987cb84c43f60c0df28ece81307dd95046b",
     "bhtracker/__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
-    "bhtracker/cli.py": "e54bcc818d36ed8da26dad946344d3f7c134510d1696b958bd9dd1316d1f2f30",
+    "bhtracker/cli.py": "2912a3a2abffe0e5ad0ef303ef834712446c8bc2e94f48ea300cd1b8e6b0c950",
     "bhtracker/data.py": "832b6c210cf4eb4f18383ff7a3f47a12e6e7d9c87a767488e5db31affd633d04",
     "bhtracker/envelope.py": "c08bbf41cf58878db0a825247812f19b642280c1cd908f4a8a099c7d16f7c285",
     "bhtracker/examples/cosmological_short_track.json": "9585f83e2ba1f9a8ad845107d3451235ad4c229b4dc22547b07750dc80d1bed8",
     "bhtracker/examples/cosmological_short_track.truth.json": "cb7850b81d9cf527cbb6bc277c9999b1d54f9b91696327dc1ab23b7b609eb0d9",
     "bhtracker/examples/nearby_motion.json": "dc0a6e871e4da6a37d4be74a8fc1fe966ebfe6abd17698122611339c30d84c26",
-    "bhtracker/examples/nearby_motion.r1.result.json": "deef91fb3a761f961db3504e20820d83c75744b042da342ad692ae8507e2e936",
-    "bhtracker/examples/nearby_motion.result.json": "2855d207f53302e32773aff88a9e02997ab6f5e6d90ddda81d4db1768d080517",
+    "bhtracker/examples/nearby_motion.r1.result.json": "dd568febed6a36c258bdb450a15fdde98801b8cb90652c3436dc6648d49c4948",
+    "bhtracker/examples/nearby_motion.result.json": "a88ac046d1661cc51ca80d59dccf9483e83a4a5325c94f4ff9331ce37131733a",
     "bhtracker/examples/nearby_motion.truth.json": "bea9c83f8cb4432e3a220c687d14abe7bc600fd7553f4e723c08d6ab082cb99b",
     "bhtracker/examples/ordinary_shear.json": "22ab8120ee2686569b16a5699a8b206f3f1dcd8a3e62506aa475ae4d62c4ec6f",
     "bhtracker/examples/ordinary_shear.truth.json": "6daf30e9be75e61205d5febd39a75c2a977055fb3c3ff7897fc246bc3ce9ff0f",
@@ -491,13 +491,18 @@
     "bhtracker/examples.py": "6694293c27930087cbc0866d83aa657ea70c6dd6cb2a6b1d6a59a693a6bf8f26",
     "bhtracker/forward.py": "3dc51c57e56ff00633ca3d5e0766a37cd0eb7639d58a294373ac1e30df810e5d",
     "bhtracker/importers.py": "12c2c97700432f675f9c69eb74f2b3010ac318972dc2f04f7c172fa53a492396",
-    "bhtracker/inference.py": "4868c6a1d872f14b85ee1d7ceafee1b74044a5a0454ce4a721ad6e6fefa052da",
+    "bhtracker/inference.py": "f5be57d250e63c81458505da31c6f0816eb409e591072f52effb273dacbc9e67",
+    "bhtracker/interpretation.py": "cfbc6faff975d5254dc7fd59c5b735a33d89ab4de4fc1f26757b2dee898f1314",
     "bhtracker/physics_admission.py": "6dce22bee33a77414f61775197a1f61119eb3508112ee9855d74cd0cb6766655",
     "bhtracker/r1_runtime.py": "f3cc2074d915ad02ba6549209d0b0cd532304fa71d2930bb7cbc3d5fc2a39250",
-    "bhtracker/report.py": "996ce8f1cf8fdde881f7108e653a767202b5236407ab9fe6ad1f6ddbde32ff79",
-    "bhtracker/server.py": "7dc0fc55fce61517c23f3476d612315d3aae1e3b7d008de9b5133b53cb6bfbb8",
+    "bhtracker/report.py": "49e9f45f3598a9fda810f2034543c11401f792f828f01ad97d1b015081ae2ca2",
+    "bhtracker/server.py": "5469b838736f7231e76c4649e06718921ecbc9799de5badc2f4b819ca5eee9d0",
     "bhtracker/theory/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "bhtracker/theory/ADAPTATION.json": "e35a9530a932522ee3ca5b8a85166c89e22f2f24e0b3c717cff948c2b216118b",
+    "bhtracker/theory/BHSM_INTERPRETATION_MANIFEST.json": "e7db8ecfd93c6fb894938c1d71278be5a79df860d1ca68441c8473d4628f7a96",
+    "bhtracker/theory/bhsm_sources/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md": "6dba2dd7837b77ff24e7ea2c1a3733edf0b6ab8ac024a9a0d4481cadaf90046a",
+    "bhtracker/theory/bhsm_sources/BHSM_Galaxy_Gravity_Loaded_Schur_Hessian_v0_5.md": "718cdac692ae6030eb70c327771343267c4517c1a69a01454a32872579013816",
+    "bhtracker/theory/bhsm_sources/BHSM_Topographic_Galaxy_Encapsulation_Solution_v0_3.md": "c9eaee920746c024b695c722fc783aea53dfc9da5660a92150de4b05d9c7ba0a",
     "bhtracker/theory/provider/code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
     "bhtracker/theory/provider/code/background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
     "bhtracker/theory/provider/code/bhsm_optical_transfer.py": "63e660f0e97e42c5363740bcafe6407a9bd5e4eb2bcd7f9d36c059de64dd9c5d",
@@ -506,12 +511,41 @@
     "bhtracker/theory/provider/preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
     "bhtracker/theory/provider/SOURCE_MANIFEST.json": "39e65bbe5dc57a371f4bf3221d7294f561fb2c0f9f6c5917028c1b235de9e4d3",
     "bhtracker/theory/radial_response.py": "d7a90db765d89c9b56d5129a2bbb937238c364ddf09d8683c7b5bbfca0c17514",
-    "bhtracker/web/app.js": "88fe73209f710ec8481cfe168384198507f067993d55d94ea4e9b221c5ee27f6",
-    "bhtracker/web/index.html": "cc7bf2fe89ed38f6c7fbbf7f36319dbb5544636c1c4473cb1ca5bed37db0cb38",
-    "bhtracker/web/style.css": "d493cc89c02f3c0b23a8df93cddbcae21123df96f6e2ea49a0febc95705c992b"
+    "bhtracker/web/app.js": "5d39632d89ad025c89abc654c66fe81e58366bcc51038797e5c2ca0076a420f2",
+    "bhtracker/web/index.html": "e3410b1d77ab03ce668f9f5eb13636de24a84f05b253c65628f17b6ec9dcd54e",
+    "bhtracker/web/style.css": "fef963c532fa0df698f98d3c4e70745ed5008143a6e6421dab5a06758492d6b7"
   },
   "source_archive": {
     "filename": "Blackhole_Tracker_Product_Source.zip",
     "hash_location": "external release_manifest.json; regenerate with --source-only after final edits"
+  },
+  "bhsm_interpretation_install_check": {
+    "status": "INSTALLED_BHSM_INTERPRETATION_PASSED",
+    "version": "0.1.1",
+    "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_blackhole_tracker_bhsm_interpretation_20261021\\package_install_py_kou9x\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
+    "manifest_sha256": "e7db8ecfd93c6fb894938c1d71278be5a79df860d1ca68441c8473d4628f7a96",
+    "three_packaged_source_hashes": {
+      "bhsm_sources/BHSM_Galaxy_Gravity_Loaded_Schur_Hessian_v0_5.md": "718cdac692ae6030eb70c327771343267c4517c1a69a01454a32872579013816",
+      "bhsm_sources/BHSM_Topographic_Galaxy_Encapsulation_Solution_v0_3.md": "c9eaee920746c024b695c722fc783aea53dfc9da5660a92150de4b05d9c7ba0a",
+      "bhsm_sources/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md": "6dba2dd7837b77ff24e7ea2c1a3733edf0b6ab8ac024a9a0d4481cadaf90046a"
+    },
+    "ordinary_spherical_boundary": {
+      "status": "AVAILABLE",
+      "radius_pc": 0.0001,
+      "curvature_deficit_pc_inverse": 0.47855303480914035,
+      "curvature_deficit_sigma_pc_inverse": 0.00018525557957899878,
+      "boundary_energy_over_Msun_c2": 100002.39282242866,
+      "boundary_energy_sigma_over_Msun_c2": 38.712535276250804,
+      "mixed_curvature_velocity2_km2_s2": 4300917.270036279,
+      "reconstructed_monopole_msun": 100000.0,
+      "geometry": "Static spherical Schwarzschild equivalent of the fitted ordinary monopole; flat reference subtraction.",
+      "qualification": "The radius is supplied, and errors condition on it. These are alternative representations of the same monopole, not a second mass or the full nonspherical/environmental boundary energy. Changing the enclosing radius is not physical mass drift."
+    },
+    "r1_spherical_boundary": {
+      "status": "NOT_ASSUMED_FOR_R1_METRIC",
+      "reason": "The Schwarzschild boundary identity is not substituted into the modified R1 metric. Its total boundary energy needs the corresponding metric and reference subtraction."
+    },
+    "one_potential_interpretation_returned_by_both_fits": true,
+    "scope": "Inspects the existing clean-install GR/R1 fit outputs; no additional scientific fit or broad calibration repeated."
   }
 }

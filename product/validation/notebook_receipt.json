@@ -3,12 +3,12 @@
     "notebook": "01_compact_mass_and_motion.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 6,
-    "sha256": "5a6aa92e7efb6bd967ac9bd90b9796ebb5ec3a6cf521f5365227f820436d74b7"
+    "sha256": "dbecce64d8d0e72a1d60f4ed3c9412302a26e72873ea48cd18fe94ca95f108d4"
   },
   {
     "notebook": "02_conditional_boundary_response.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 5,
-    "sha256": "6c5b35d7d5f0e8dc84333f3ec868fb8488b84fd2d2ca023b6ee17ad0bab78502"
+    "sha256": "90d387bcd879e6c3734e9f9ba16389d938e8d01be482aa8dc0312d22f016d775"
   }
 ]

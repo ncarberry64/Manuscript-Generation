@@ -84,5 +84,5 @@
   },
   "source_unchanged_during_run": true,
   "output": "C:\\Users\\carbe\\Manuscript-Generation\\.worktrees\\bhsm-state-rotation-20261021\\product\\validation\\product_calibration_receipt.json",
-  "runtime_seconds": 5.4193169999998645
+  "runtime_seconds": 5.291408600000068
 }

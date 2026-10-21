@@ -81,7 +81,7 @@
     state.result = null;
     $('result-content').hidden = true; $('empty-results').hidden = false;
     $('raw-result-details').hidden = true; $('raw-result').textContent = '';
-    $('empty-results').querySelector('h2').textContent = state.dataset ? 'Ready for inference.' : 'Start with the ordinary lens.';
+    $('empty-results').querySelector('h2').textContent = state.dataset ? 'Ready for inference.' : 'Start with the ordinary lens response.';
     $('empty-results').querySelector('.empty-footnote').textContent = state.dataset ? 'No completed fit for this input and configuration.' : 'No fit has been run. No example results are displayed.';
   }
   function setDataset(dataset, name) {
@@ -236,6 +236,7 @@
     $('result-status-label').textContent = human(result.status || 'Status not provided');
     $('result-status-description').textContent = description;
     renderModelContext(result.model);
+    renderBHSMInterpretation(result.bhsm_interpretation, result.model);
     renderEnvelope(result.conditional_envelope); renderDiagnostics(result.diagnostics);
     $('raw-result-details').hidden = false; $('raw-result').textContent = JSON.stringify(result, null, 2);
     renderCharts();
@@ -252,6 +253,76 @@
     value.textContent = treatments[model.flux_policy] || (model.flux_policy ? human(model.flux_policy) : 'Not specified in this result');
     container.append(label, value); container.hidden = false;
   }
+  function renderBHSMInterpretation(interpretation, model) {
+    const dictionary = $('bhsm-parameter-dictionary'); dictionary.replaceChildren();
+    const available = interpretation && typeof interpretation === 'object';
+    $('bhsm-one-potential').textContent = available && typeof interpretation.one_potential_rule === 'string'
+      ? interpretation.one_potential_rule
+      : 'Equivalent gravity and envelope descriptions represent one fitted optical potential and are counted once.';
+    $('bhsm-inference-scope').textContent = available && typeof interpretation.inference_scope === 'string'
+      ? interpretation.inference_scope
+      : 'This result has no structured interpretation record. Its compact-lens estimates remain available; rerun the fit to record their BHSM interpretation.';
+    $('bhsm-model-role').textContent = available && typeof interpretation.model_role === 'string' ? interpretation.model_role : '';
+    const meanings = available && Array.isArray(interpretation.parameter_meanings) ? interpretation.parameter_meanings : [];
+    for (const entry of meanings) {
+      if (!entry || typeof entry !== 'object') continue;
+      const row = document.createElement('div'), term = document.createElement('dt'), definition = document.createElement('dd');
+      term.textContent = String(entry.parameter || 'Model parameter');
+      const meaning = document.createElement('p');
+      meaning.textContent = typeof entry.interpretation === 'string' ? entry.interpretation : '';
+      definition.append(meaning);
+      if (typeof entry.qualification === 'string' && entry.qualification) {
+        const qualification = document.createElement('p'); qualification.className = 'dictionary-qualification';
+        qualification.textContent = entry.qualification; definition.append(qualification);
+      }
+      row.append(term, definition); dictionary.append(row);
+    }
+    $('bhsm-conditional-extension').textContent = available && typeof interpretation.conditional_extension === 'string' ? interpretation.conditional_extension : '';
+    const weyl = available && typeof interpretation.weyl_convention === 'string' ? interpretation.weyl_convention : '';
+    $('bhsm-weyl-convention').textContent = weyl; $('bhsm-weyl-convention').hidden = !weyl;
+    $('bhsm-dictionary-details').hidden = !available;
+    renderSphericalBoundary(available ? interpretation.spherical_boundary : null, model);
+  }
+  function renderSphericalBoundary(boundary, model) {
+    const container = $('bhsm-spherical-boundary'); container.replaceChildren();
+    if (!boundary || typeof boundary !== 'object') { container.hidden = true; return; }
+    container.hidden = false;
+    if (boundary.status !== 'AVAILABLE') {
+      const note = document.createElement('p'); note.className = 'boundary-unavailable';
+      note.textContent = typeof boundary.reason === 'string' ? boundary.reason
+        : boundary.status === 'NOT_REPORTED_FOR_REJECTED_FIT' ? 'A spherical boundary value is not reported for a rejected fit.'
+        : boundary.status === 'NOT_REPORTED_FOR_UNRESOLVED_MASS' ? 'The mass is unresolved, so a spherical boundary value is not reported.'
+        : 'A spherical boundary representation was not evaluated for this result.';
+      container.append(note); return;
+    }
+    const heading = document.createElement('h4'); heading.textContent = 'Spherical boundary representation';
+    const radius = document.createElement('p'); radius.className = 'boundary-radius';
+    const supplied = model?.worldtube_policy === 'supplied';
+    radius.textContent = `${supplied ? 'Declared representation radius' : 'Model representation radius'}: ${number(boundary.radius_pc)} pc · fixed for these derived values`;
+    container.append(heading, radius);
+    if (!supplied) {
+      const choice = document.createElement('p'); choice.className = 'boundary-radius-policy';
+      choice.textContent = model?.worldtube_policy
+        ? `Radius policy: ${model.worldtube_policy}. The radius is not measured by this fit.`
+        : 'The radius comes from the model configuration and is not measured by this fit.';
+      container.append(choice);
+    }
+    const cards = document.createElement('div'); cards.className = 'boundary-measures';
+    for (const [label, value, sigma, units] of [
+      ['Curvature deficit δk', boundary.curvature_deficit_pc_inverse, boundary.curvature_deficit_sigma_pc_inverse, 'pc⁻¹'],
+      ['Boundary energy E / c²', boundary.boundary_energy_over_Msun_c2, boundary.boundary_energy_sigma_over_Msun_c2, 'M☉']
+    ]) {
+      const card = document.createElement('div'), title = document.createElement('div'), estimate = document.createElement('strong'), error = document.createElement('p');
+      card.className = 'boundary-measure'; title.className = 'boundary-measure-label'; title.textContent = label;
+      estimate.textContent = `${number(value)} ${units}`; error.textContent = uncertainty(sigma, units);
+      card.append(title, estimate, error); cards.append(card);
+    }
+    container.append(cards);
+    for (const text of [boundary.geometry, boundary.qualification]) {
+      if (typeof text !== 'string' || !text) continue;
+      const note = document.createElement('p'); note.className = 'boundary-qualification'; note.textContent = text; container.append(note);
+    }
+  }
   function renderEnvelope(envelope) {
     const status = envelope?.status || 'NOT_REQUESTED';
     $('envelope-status').textContent = human(status);
@@ -261,11 +332,13 @@
       p.textContent = 'No conditional envelope was requested for this fit.'; container.append(p); return;
     }
     const description = document.createElement('p'); description.className = 'field-help';
-    description.textContent = status === 'NOT_ADMITTED'
+    description.textContent = status === 'NOT_EVALUATED'
+      ? 'Envelope information was not evaluated because the baseline fit did not pass its checks.'
+      : status === 'NOT_ADMITTED'
       ? 'This response is outside the model’s admitted approximation domain for the supplied configuration.'
       : 'Sensitivity is assessed only for boundary states inside the declared model-admission bound.';
     container.append(description);
-    if (status === 'NOT_ADMITTED' && Array.isArray(envelope.reasons)) {
+    if (['NOT_ADMITTED', 'NOT_EVALUATED'].includes(status) && Array.isArray(envelope.reasons)) {
       for (const reason of envelope.reasons) {
         const p = document.createElement('p'); p.className = 'envelope-explanation';
         p.textContent = typeof reason === 'string' ? reason : reason.message || JSON.stringify(reason);
@@ -520,7 +593,7 @@
     $('source-json').value = ''; $('loaded-file').hidden = true; $('dataset-summary').hidden = true;
     validationMessage('Load an example or import a dataset to begin.');
     runMessage('Validate a dataset to enable the fit.');
-    $('empty-results').querySelector('h2').textContent = 'Start with the ordinary lens.';
+    $('empty-results').querySelector('h2').textContent = 'Start with the ordinary lens response.';
     $('empty-results').querySelector('.empty-footnote').textContent = 'No fit has been run. No example results are displayed.';
     syncControls();
   });

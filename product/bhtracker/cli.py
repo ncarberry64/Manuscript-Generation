@@ -36,7 +36,8 @@ def main(argv=None):
         elif args.command=='fit':
             result=fit(args.dataset,family=args.family,nuisance=args.nuisance,starts=args.starts)
             export_result(result,args.output)
-            print(json.dumps({'status':result['status'],'estimates':result['estimates'],'output':str(args.output.resolve())},indent=2))
+            print(json.dumps({'status':result['status'],'estimates':result['estimates'],
+                  'bhsm_interpretation':result['bhsm_interpretation'],'output':str(args.output.resolve())},indent=2))
         elif args.command=='profile':
             r=profile(args.dataset,json.loads(args.result.read_text()),parameter=args.parameter)
             args.output.write_text(json.dumps(r,indent=2)+'\n');print(str(args.output.resolve()))

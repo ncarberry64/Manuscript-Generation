@@ -19,13 +19,23 @@ def report_html(result):
            ('Proper motion (mas / observer year)',e['proper_motion_mas_yr'],u['proper_motion_mas_yr'])]
     rows=''.join(f'<tr><th>{label}</th><td>{fmt(value)}</td><td>{fmt(err)}</td></tr>' for label,value,err in items)
     diagnostics=''.join(f"<li><strong>{escape(item['code'])}</strong>: {escape(item['message'])}</li>" for item in r['diagnostics'])
+    from .interpretation import bhsm_interpretation
+    interpretation=r.get('bhsm_interpretation') or bhsm_interpretation(r['model']['family'],e,u,r['model'],r['status'])
+    meanings=''.join(f"<tr><th>{escape(item['parameter'])}</th><td>{escape(item['interpretation'])}<br><small>{escape(item['qualification'])}</small></td></tr>" for item in interpretation['parameter_meanings'])
+    boundary=interpretation.get('spherical_boundary',{})
+    boundary_html=''
+    if boundary.get('status')=='AVAILABLE':
+        boundary_html=f"<h3>Spherical boundary representation of the same monopole</h3><p>Declared radius {fmt(boundary['radius_pc'])} pc. Curvature deficit {fmt(boundary['curvature_deficit_pc_inverse'])} ± {fmt(boundary['curvature_deficit_sigma_pc_inverse'])} pc⁻¹; Brown–York E/c² {fmt(boundary['boundary_energy_over_Msun_c2'])} ± {fmt(boundary['boundary_energy_sigma_over_Msun_c2'])} solar masses (local 1σ, fixed radius).</p><p><small>{escape(boundary['geometry'])} {escape(boundary['qualification'])} Radius policy: {escape(r['model'].get('worldtube_policy','not recorded'))}.</small></p>"
+    elif boundary.get('reason'):
+        boundary_html=f"<p>{escape(boundary['reason'])}</p>"
     return f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <title>Blackhole Tracker research report</title><style>body{{font:16px/1.55 system-ui;max-width:1050px;margin:3rem auto;padding:0 1.5rem;color:#172b40}}h1{{font-size:2.2rem}}table{{border-collapse:collapse;width:100%}}th,td{{padding:.7rem;border-bottom:1px solid #dce3e9;text-align:left}}pre{{background:#f1f5f8;padding:1rem;overflow:auto;white-space:pre-wrap}}small{{color:#4f657a}}.status{{padding:1rem;background:#edf6fa;border-left:4px solid #167e9b}}</style>
-<h1>Blackhole Tracker</h1><p class="status">{escape(r['status'])} · {escape(r['data_summary']['provenance']['kind'])} measurements</p>
+<h1>BHSM Blackhole Tracker</h1><p class="status">{escape(r['status'])} · {escape(r['data_summary']['provenance']['kind'])} measurements</p>
 <p>Reference epoch {fmt(r['reference_epoch_yr'])}; family {escape(r['model']['family'])}; nuisance {escape(r['model']['nuisance'])}.</p>
 <table><tr><th>Quantity</th><th>Estimate</th><th>Local 1σ</th></tr>{rows}</table>
 <p>χ² {fmt(r['chi2'])} for {r['dof']} degrees of freedom; goodness-of-fit p={fmt(r['goodness_of_fit_p'])}. Uncertainties are local known-covariance approximations; active bounds and nulls require the stated qualification.</p>
-<h2>Interpretation</h2><ul>{diagnostics}</ul><h2>Conditional envelope</h2><pre>{escape(json.dumps(r['conditional_envelope'],indent=2))}</pre>
+<h2>BHSM interpretation</h2><p>{escape(interpretation['model_role'])}</p><p>{escape(interpretation['one_potential_rule'])}</p><p>{escape(interpretation['inference_scope'])}</p>{boundary_html}<details><summary>Parameter interpretation</summary><table>{meanings}</table><p>{escape(interpretation['conditional_extension'])}</p></details>
+<h2>Fit diagnostics</h2><ul>{diagnostics}</ul><h2>Conditional envelope</h2><pre>{escape(json.dumps(r['conditional_envelope'],indent=2))}</pre>
 <h2>Model and domain</h2><pre>{escape(json.dumps(r['model'],indent=2))}</pre><pre>{escape(json.dumps(r.get('physics_admission'),indent=2))}</pre>
 <h2>Reproduction</h2><pre>{escape(json.dumps(r['data_summary'],indent=2))}</pre><pre>{escape(json.dumps(r['runtime'],indent=2))}</pre>
 <p><small>Product {escape(r['product_version'])}. A compact exterior fit does not identify a horizon. Synthetic examples and supplied uncertainties are not empirical detections or instrument forecasts. Full measurements, covariance, predictions and parameter covariance accompany the JSON export.</small></p></html>'''

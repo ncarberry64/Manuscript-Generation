@@ -7,9 +7,9 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black,
-pdftitle={Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Boundary Responses in a Conditional BHSM Realization},pdfauthor={Norman P. Carberry}}
+pdftitle={Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, Motion, and Conditional Response},pdfauthor={Norman P. Carberry}}
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small Blackhole Tracker: inference and boundary response}
+\fancyhead[L]{\small Blackhole Tracker: BHSM boundary interpretation}
 \fancyhead[R]{\small Author review draft}\fancyfoot[C]{\thepage}
 \setlength{\parskip}{.3em}\setlength{\parindent}{1em}
 \setlength{\emergencystretch}{3em}
@@ -18,7 +18,7 @@ pdftitle={Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Bo
 \newtheorem{corollary}{Corollary}\newtheorem{lemma}{Lemma}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\asinh}{\operatorname{asinh}}
-\title{\textbf{Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Boundary Responses in a Conditional BHSM Realization}}
+\title{\textbf{Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, Motion, and Conditional Response}}
 \author{Norman P. Carberry\\\small Independent Researcher, Oconomowoc, Wisconsin, USA\\
 \small ORCID: \href{https://orcid.org/0009-0000-6650-3485}{0009-0000-6650-3485}}
 \date{}
@@ -26,8 +26,12 @@ pdftitle={Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Bo
 \maketitle
 \begin{center}\small Research article draft for \emph{Galaxies}: Strong Gravitational Lens Modeling\end{center}
 \begin{abstract}
-We present Blackhole Tracker, a runnable research toolkit for mass,
-center and proper-motion inference from resolved compact-lens image pairs,
+We present Blackhole Tracker with an explicit BHSM interpretation of
+ordinary compact-lens mass, center and proper motion. In the program's
+adopted Einstein/GHY boundary sector, the fitted monopole determines a
+curvature deficit and a radius-dependent boundary energy of the same
+exterior. These quantities enter one optical potential; a departure from
+GR is not required. The runnable toolkit fits resolved image pairs,
 flux ratios and delays with a full supplied covariance. A local app,
 command line, Python package and executed notebooks share nonlinear
 inference, nuisance profiling and explicit rejection or unresolved
@@ -43,10 +47,10 @@ exposes exact information losses: two projected quadrupole modes vanish,
 the leading screened primary-pair delay perturbation vanishes, and a
 standard apparent-mass statistic confounds its leading response with
 external shear. At an admitted state cap the nearby example's conditional
-envelope remains far below the supplied noise. The contribution is a
-validated specialist workflow and its action-specific admission and
-blind-direction results, not a first compact-lens tracker or empirical
-black-hole detection. Distances and calibrations are supplied; neither a
+envelope remains far below the supplied noise. The contribution combines the explicit BHSM boundary interpretation with a
+validated specialist workflow, action-specific admission and blind-direction
+results. The boundary identities and ordinary mass/motion inference are
+established ingredients; no first tracker or empirical detection is claimed. Distances and calibrations are supplied; neither a
 microscopic BHSM-to-action map nor a horizon flux or physical deformation
 state is selected.
 \end{abstract}
@@ -78,7 +82,10 @@ domain does not establish a horizon or identify the compact interior.
 
 The central deliverable is a usable research product with an ordinary
 compact-lens tracking mode and an optional conditional boundary-response
-mode. The new theoretical result is a uniform sufficient admission bound
+mode. The ordinary fit is interpreted in the recovered BHSM Einstein/GHY
+sector through the same exterior mass and its boundary representation;
+this interpretation does not add another gravitational contribution.
+The new theoretical result is a uniform sufficient admission bound
 on the normalized quadrupole throughout the retained R1 exterior. The
 optical calculation identifies exact blind directions and demonstrates
 why a working compact-mass track need not detect an envelope. A separate
@@ -137,6 +144,7 @@ mass identity for the missing horizon problem. The spherical flux is
 kept as an exterior matching datum; the physical state remains free.
 The mathematical chain, and the place where it stops, are made explicit.
 
+\input{bhsm_interpretation}
 \input{exterior_derivation}
 \input{admission_bound}
 
@@ -513,7 +521,10 @@ outcomes. The finite harmonic control makes a cause ambiguity exact
 rather than assigning every structured residual to BHSM.
 
 The result supports a theoretical and computational lens-modeling methods
-paper with a usable specialist research tool. It does not yet establish
+paper with a usable BHSM-interpreted research tool. Ordinary mass/motion
+recovery remains useful within that interpretation when no independent
+scalar deformation is resolved. Agreement with the Einstein-sector
+response is allowed; it does not uniquely select the underlying theory. It does not yet establish
 a detectable BHSM deformation, horizon classification or a decisive new
 astrophysical discovery. Further R1 prediction needs a normalized
 black-hole/homogeneous-background boundary map selecting exterior flux

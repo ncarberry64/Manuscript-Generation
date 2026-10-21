@@ -30,7 +30,7 @@ def make_server(port=8765):
             return origin is None or origin in {f'http://{h}' for h in hosts}
         def do_GET(self):
             if not self.local_request():self.send_json({'error':'Local origin required'},403);return
-            if self.path=='/api/health':self.send_json({'status':'ready','product':'Blackhole Tracker','version':'0.1.0'});return
+            if self.path=='/api/health':self.send_json({'status':'ready','product':'BHSM Blackhole Tracker','version':'0.1.1'});return
             if self.path=='/api/examples':self.send_json(example_names());return
             if self.path.startswith('/api/examples/'):
                 try:self.send_json(make_example(self.path.rsplit('/',1)[1])[0])

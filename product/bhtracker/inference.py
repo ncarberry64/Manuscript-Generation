@@ -177,7 +177,7 @@ def fit(dataset,family='gr',starts=2,nuisance='shear',initial=None,max_nfev=160)
         if not physics['allowed_physics_models']['r1_spherical_conditional']:
             note('error','R1_DOMAIN','The fitted state is outside the declared conditional R1 exterior domain.')
             status='FIT_REJECTED'
-    result={'schema_version':1,'product_version':'0.1.0','status':status,'model':{'family':family,'nuisance':nuisance,
+    result={'schema_version':1,'product_version':'0.1.1','status':status,'model':{'family':family,'nuisance':nuisance,
             'source_policy':'free_per_epoch','distance_and_frame':'supplied and fixed','fitted_parameters':mapping.names,
             'reference_mass_msun':e.ref_mass,'theta_reference_mas':e.theta,'time_reference_seconds':e.time,
             'r0_pc':e.r0,'worldtube_policy':'supplied' if 'r0_pc' in d.analysis else '0.001 times the computational reference Einstein radius; supply r0_pc for a fixed physical worldtube',
@@ -202,6 +202,8 @@ def fit(dataset,family='gr',starts=2,nuisance='shear',initial=None,max_nfev=160)
     elif family=='r1':
         from .envelope import assess_envelope
         result['conditional_envelope']=assess_envelope(d,e,pars,solved.jac,pred,physics)
+    from .interpretation import bhsm_interpretation
+    result['bhsm_interpretation']=bhsm_interpretation(family,result['estimates'],unc,result['model'],status)
     return result
 
 def profile(dataset,result,parameter='mass_msun',points=17):

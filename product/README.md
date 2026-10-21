@@ -1,8 +1,26 @@
-# Blackhole Tracker 0.1.0
+# BHSM Blackhole Tracker 0.1.1
 
-Blackhole Tracker fits a resolved compact lens's mass, center and proper motion from two image positions, their magnification ratio and their delay. It provides a local browser app, command-line tools, a Python API, executed notebooks and reproducible synthetic validation. An optional conditional R1 scalar exterior adds action-normalized response and physical-admission checks.
+BHSM Blackhole Tracker reconstructs the effective gravitational mass, location and motion of a BHSM-described compact configuration from resolved image pairs, their magnification ratio and their delay. The ordinary lens response and the BHSM boundary/envelope interpretation use the **same optical potential, counted once**. Agreement with ordinary gravity is an allowed result; a non-GR deviation is not required to use this interpretation.
 
-The fitted object is a **compact exterior**. A successful track does not establish a black-hole horizon, distinguish every possible cause of the same lensing potential, or establish an R1 detection. All bundled measurement sets are explicitly synthetic.
+The product provides a local browser app, command-line tools, a Python API, notebooks and reproducible synthetic validation. It also reports a spherical boundary representation of an ordinary fitted monopole at a fixed declared radius. The optional conditional R1 response evaluates a specific adopted scalar–tensor exterior and its normalized state-admission bound.
+
+The fitted object is a **compact exterior**. Its BHSM interpretation does not uniquely identify the microscopic theory, establish a horizon or select an R1 deformation state. All bundled measurement sets are explicitly synthetic.
+
+## What the fitted quantities mean in BHSM
+
+The recovered BHSM source records admit an Einstein/GHY gravitational sector and a boundary representation of its mass. The ordinary response reconstructs that effective exterior; the boundary description is an interpretation of its gravitational response, rather than a second force added to it.
+
+| Optical fit quantity | BHSM interpretation |
+|---|---|
+| Ordinary `mass_msun` | Effective gravitational monopole of the represented configuration, conditional on the supplied geometry and lens model. It does not separately measure a microscopic constituent mass or a topological charge. |
+| `center_mas` | Location of that same optical configuration in the supplied tangent-plane frame. |
+| `proper_motion_mas_yr` | Translation of that configuration per observer year; internal deformation dynamics are separate. |
+| `compact_quad` | Projected compact structure, which may represent an envelope when it produces that potential. The coefficient does not uniquely select a physical surface mode. |
+| `shear` / `convergence` | Admitted tidal/focusing response of the surrounding environment; not automatically intrinsic structure of the tracked object. |
+
+An equivalent envelope quadrupole already represented by `compact_quad` is not added again under another name. A separate R1 term is included only as a distinct response of the adopted common action and its supplied matching data. The tracker uses `W_full = Phi + Psi`; a BHSM convention `W_topo = (Phi_topo + Psi_topo)/2` contributes `2*W_topo` to that same full Weyl potential. This notation conversion creates no additional physical contribution.
+
+The result's `bhsm_interpretation` dictionary records these meanings and the one-potential rule. Its `source_provenance` points to packaged, hash-checked BHSM source records. This is a traceable interpretation within the declared sector, not an exclusive test distinguishing every theory that produces the same exterior. No microscopic or horizon identification is required to retain the ordinary mass/motion fit.
 
 ## Start on Windows
 
@@ -34,7 +52,7 @@ python -m bhtracker serve --port 8766 --open
 For development and notebook replay, use `python -m pip install -e ".[dev]"`. To install a supplied wheel, replace the path below with its actual location:
 
 ```text
-python -m pip install path/to/bhsm_blackhole_tracker-0.1.0-py3-none-any.whl
+python -m pip install path/to/bhsm_blackhole_tracker-0.1.1-py3-none-any.whl
 python -m bhtracker serve --open
 ```
 
@@ -46,8 +64,8 @@ The commands below use `python` to mean the interpreter with this package instal
 
 1. Choose a built-in example and **Load**, or **Import your dataset** from a JSON file.
 2. Select **Validate dataset**. Inspect the dataset summary and the input JSON under **Inspect dataset & configuration**.
-3. Start with **GR compact lens** and **Shear** nuisance parameters. Select 1–8 optimization starts, then **Run inference**.
-4. Read the status, uncertainties, residuals and diagnostics before interpreting the fitted track. The conditional R1 family additionally requires declared scalar-flux provenance and an admitted physical domain.
+3. Start with **Ordinary lens response** and **Shear** nuisance parameters. Select 1–8 optimization starts, then **Run inference**. Its API/CLI family name remains `gr`.
+4. Read the fit status, BHSM interpretation, uncertainties, residuals and diagnostics. The spherical boundary cards describe the same fitted monopole at the displayed fixed radius. **Conditional R1 response** additionally requires declared scalar-flux provenance and an admitted physical domain.
 5. Use **Export JSON** to retain the complete fit or **Export report** for a self-contained HTML report. Download the input separately if you edited or constructed it elsewhere.
 
 The server binds only to `127.0.0.1`. Inputs and jobs remain in that local process until you export them; it uses no remote fitting service. Closing the process clears its in-memory jobs. The server accepts JSON requests up to 10 MB and retains at most 64 jobs per session; restart it to clear a full session. It runs one fit worker at a time. This is a local research tool, not an authenticated network deployment.
@@ -107,8 +125,8 @@ Supply 3–80 finite numeric rows. `metadata.json` is the version-1 JSON skeleto
 
 | File | Contents |
 |---|---|
-| `result.json` | Estimates, local uncertainty, model and bounds, source positions, measurements, full covariance, predictions, admission and diagnostics. |
-| `report.html` | Portable research report. |
+| `result.json` | Estimates, local uncertainty, BHSM interpretation and derived boundary dictionary, model/bounds, source positions, measurements, full covariance, predictions, admission and diagnostics. |
+| `report.html` | Portable research report, including the BHSM same-response interpretation. |
 | `predictions.csv` | Observer epoch and the six predicted observables, with a header. |
 | `track_and_residuals.png` | Fitted center track and full-covariance whitened residuals. |
 | `manifest.json` | Dataset hash and SHA-256 hashes of exported files. |
@@ -228,6 +246,8 @@ data = load_dataset(raw)                         # also accepts a JSON path
 result = fit(data, family="gr", nuisance="shear", starts=3)
 parameters = result["_internal"]["parameters"]   # includes fitted source rows and reference basis
 predicted = predict(data, parameters, family=result["model"]["family"])
+interpretation = result["bhsm_interpretation"]
+spherical_boundary = interpretation["spherical_boundary"]
 curve = profile(data, result, parameter="mass_msun", points=11)
 export_result(result, "user_runs/python_fit")
 ```
@@ -236,7 +256,30 @@ export_result(result, "user_runs/python_fit")
 
 Shear uses the potential `0.5*gamma_plus*(x*x-y*y) + gamma_cross*x*y`; `compact_quad` multiplies the two ordinary `r^-2` harmonics in the reference lens coordinates. `fit` always fits mass, center, proper motion and all source positions. It fits the requested finite nuisance family, not arbitrary environmental structure. Inspect `model.fitted_parameters`, `model.bounds_internal`, the numerical reference scales and diagnostics for the actual fit domain.
 
-Result schema version 1 includes `status`, `estimates`, `uncertainty`, `chi2`, `dof`, `diagnostics`, `model`, `predictions`, `physics_admission` and `conditional_envelope`. Local coordinate uncertainties are 1σ; the mass interval named `mass_68pct_interval_msun` is a local log-Gaussian interval. Null directions return JSON `null`, not zero uncertainty. The parameter covariance uses the supplied known measurement covariance without reduced-χ² rescaling. The full result also retains measurements, source positions, covariance, branch checks, singular values, runtime and dataset hash.
+Result schema version 1 includes `status`, `estimates`, `uncertainty`, `chi2`, `dof`, `diagnostics`, `model`, `predictions`, `physics_admission`, `bhsm_interpretation` and `conditional_envelope`. Local coordinate uncertainties are 1σ; the mass interval named `mass_68pct_interval_msun` is a local log-Gaussian interval. Null directions return JSON `null`, not zero uncertainty. The parameter covariance uses the supplied known measurement covariance without reduced-χ² rescaling. The full result also retains measurements, source positions, covariance, branch checks, singular values, runtime and dataset hash.
+
+### BHSM interpretation and fixed-radius boundary output
+
+`bhsm_interpretation` contains `framework`, `model_role`, `one_potential_rule`, a `parameter_meanings` list, `inference_scope`, `conditional_extension`, `weyl_convention`, `source_provenance` and `spherical_boundary`. Each parameter entry gives its `parameter`, `interpretation` and `qualification`. These metadata explain the fitted physical configuration without changing the likelihood, adding a second mass or requiring a non-GR residual.
+
+For an admitted ordinary fit with supported mass, `spherical_boundary.status` is `AVAILABLE`. It is the **static spherical Schwarzschild equivalent of the ordinary monopole**, with flat reference subtraction, evaluated at `model.r0_pc`. It is not the boundary energy of the complete nonspherical lens/environment. At fixed radius `R`, write `m = G*M_opt/c²` and `f = 1 - 2m/R > 0`. The principal curvature deficit is `delta_k = (1 - sqrt(f))/R`, and Brown–York energy satisfies `E_BY/c² = (c²*R/G)*(1 - sqrt(f))`. Its inverse gives the same optical mass: `M_opt = E_BY/c² - G*E_BY²/(2*c^6*R)`.
+
+| `spherical_boundary` field | Units / meaning |
+|---|---|
+| `radius_pc` | Fixed enclosing radius `R` in pc; not inferred from the lens fit. |
+| `curvature_deficit_pc_inverse` | Principal spatial-curvature deficit `delta_k`, pc⁻¹. |
+| `curvature_deficit_sigma_pc_inverse` | Local propagated 1σ error on `delta_k`, conditional on fixed `R`, or `null`. |
+| `boundary_energy_over_Msun_c2` | `E_BY/(M_sun*c²)`, equivalently `E_BY/c²` in solar masses. |
+| `boundary_energy_sigma_over_Msun_c2` | Local propagated 1σ error on that mass-equivalent boundary energy, conditional on fixed `R`, or `null`. |
+| `mixed_curvature_velocity2_km2_s2` | Same spherical monopole's `G*M_opt/R`, in km²/s². |
+| `reconstructed_monopole_msun` | Optical monopole recovered from the inverse boundary-energy identity, in solar masses. |
+| `geometry`, `qualification` | Reference subtraction, spherical-equivalent interpretation and its limitations. |
+
+For the seeded noisy `nearby_motion` example with the supplied `R = 0.0001 pc`, an ordinary shear fit gives approximately `M_opt = 99947.20 ± 38.70 M_sun`, `delta_k = 0.478300 ± 0.000185 pc⁻¹`, and `E_BY/c² = 99949.59 ± 38.70 M_sun`. These are one synthetic realization's outputs. The boundary energy is radius dependent; its small difference from the conserved monopole is the standard gravitational boundary relation, not a new source of mass.
+
+The propagated errors use `sigma(E_BY/c²) = sigma(M_opt)/sqrt(f)` and `sigma(delta_k) = G*sigma(M_opt)/(c²*R²*sqrt(f))`. They add no independent information and do not include uncertainty in `R`. Set `analysis.r0_pc` for an explicitly declared physical representation radius. If it is omitted, the computational radius policy in `model.worldtube_policy` remains explicit; it is not a measured surface. Changing the enclosing radius is not physical mass drift.
+
+Rejected fits and unresolved masses suppress this numeric representation. R1 returns `NOT_ASSUMED_FOR_R1_METRIC` with its reason: the Schwarzschild identity is not inserted into a modified metric. Its boundary energy would require the appropriate R1 metric and reference subtraction.
 
 ### Interpret statuses before using estimates
 
@@ -252,6 +295,8 @@ The motion threshold concerns the **joint two-component** Mahalanobis SNR, not a
 ## Conditional R1 policy
 
 R1 is an adopted weak-metric, frozen-background, quasistatic scalar–tensor exterior outside a supplied worldtube. Its pinned background covers lens redshifts `0 <= z_l <= 2.1`. The code computes admission information, the normalized boundary/conormal pairing and a sufficient state-norm cap; it does not derive a black-hole horizon charge or a preferred deformation amplitude.
+
+In an R1 fit, `mass_msun` is the adopted action's **metric/source mass parameter**. The optical response also includes the action-derived scalar term. Its relation to the ordinary model's effective point-exterior monopole must therefore be evaluated through that total response; the two mass labels are not interchangeable by relabeling. The R1 term supplements the reference configuration only once, with its fixed scalar-to-metric normalization and stated matching assumptions.
 
 | `analysis.flux_provenance` | Fit policy |
 |---|---|
@@ -271,8 +316,8 @@ Both notebooks are saved with executed outputs; their cell counts and SHA-256 ha
 
 | Notebook | Walkthrough |
 |---|---|
-| `notebooks/01_compact_mass_and_motion.ipynb` | Full-covariance baseline fit, center track, reoptimized mass profile, weak-motion control and portable exports. Six executed code cells. |
-| `notebooks/02_conditional_boundary_response.ipynb` | Conditional R1 fit, physical admission, Dirichlet/conormal cap, unresolved envelope and rejection of an inadmissible state. Five executed code cells. |
+| `notebooks/01_compact_mass_and_motion.ipynb` | Full-covariance ordinary fit, BHSM interpretation and fixed-radius spherical boundary output, center track, reoptimized mass profile, weak-motion control and portable exports. Six code cells. |
+| `notebooks/02_conditional_boundary_response.ipynb` | Same-potential BHSM reporting contract, conditional R1 fit, physical admission, Dirichlet/conormal cap, unresolved envelope and rejection of an inadmissible state. Five code cells. |
 
 Open them in an editor with Jupyter support and select the environment in which this product is installed. With development dependencies installed, replay them and the product checks from this source directory:
 
@@ -287,7 +332,9 @@ The fixed ordinary-lens calibration retains all 64 draws and failures, uses know
 
 ## Attribution and limits
 
-The BHSM/R1 research and companion manuscript are by **Norman P. Carberry**. The adopted provider is pinned to Manuscript-Generation commit `06cf7c1b85d6605bfee0cc0d07fb2af86a66cae9`. `bhtracker/theory/provider/SOURCE_MANIFEST.json` gives original paths, source URLs and hashes; `bhtracker/theory/ADAPTATION.json` records the product adaptation and consistent nominal solar gravitational parameter. Provider files are verified on loading. NumPy, SciPy and Matplotlib supply the numerical and plotting libraries; the development tools include pytest, nbformat, nbclient and ipykernel.
+The BHSM/R1 research and companion manuscript are by **Norman P. Carberry**. `bhtracker/theory/BHSM_INTERPRETATION_MANIFEST.json` identifies the packaged, hash-checked BHSM boundary/source records used for the ordinary interpretation. The Brown–York construction is established gravitational theory: [Brown and York, Physical Review D 47, 1407–1419 (1993)](https://arxiv.org/abs/gr-qc/9209012); its use here represents the same ordinary gravitational monopole.
+
+The adopted R1 provider is pinned to Manuscript-Generation commit `06cf7c1b85d6605bfee0cc0d07fb2af86a66cae9`. `bhtracker/theory/provider/SOURCE_MANIFEST.json` gives original paths, source URLs and hashes; `bhtracker/theory/ADAPTATION.json` records the product adaptation and consistent nominal solar gravitational parameter. Runtime-used provider inputs are checked on loading; release checks verify all six pinned provider files. NumPy, SciPy and Matplotlib supply the numerical and plotting libraries; the development tools include pytest, nbformat, nbclient and ipykernel.
 
 Ordinary point-lens inference, astrometric tracking and Galileon multipoles have established predecessors. The package does not claim that a software tracker is itself a new physical discovery. The companion paper separates its conditional boundary-to-lensing transfer and blind-direction results from the practical inference product and from earlier information experiments.
 

@@ -2,5 +2,5 @@
 from .data import Dataset, load_dataset
 from .forward import predict
 from .inference import fit
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __all__ = ['Dataset', 'load_dataset', 'predict', 'fit']

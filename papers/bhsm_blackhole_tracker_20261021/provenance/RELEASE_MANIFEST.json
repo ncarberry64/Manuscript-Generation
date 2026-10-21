@@ -794,8 +794,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/CHAIN_AND_FREEDOMS.md",
-      "sha256": "c366edb0e23eb03280cafb4d928f3f8933e26c9f457d810615c603a1413d6038",
-      "bytes": 2980
+      "sha256": "38f123e51b8ec9fcdb30d57a09a675586939ecaa3c8d7708754bae47a3910c4e",
+      "bytes": 6503
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/code/radial_response.py",
@@ -854,13 +854,18 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/LAY_REPORT.md",
-      "sha256": "0da85b627f379d0dece0a3b3944cfa70bcb54a1eb80f6a4e4895560c0d7979aa",
-      "bytes": 4464
+      "sha256": "6a563bf7a6bf59744f6c5e971f46fd084af83a44c5e6c4b6252995227ff31b0d",
+      "bytes": 6024
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/admission_bound.tex",
       "sha256": "fc02af5357582789a72e891024df4400be911b985f52645d9120e89d278c66a7",
       "bytes": 6031
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/bhsm_interpretation.tex",
+      "sha256": "b56aae687f8b4f5dffc55f15fb725868e127575eb8c57df446bfdbde552e05dd",
+      "bytes": 6416
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/estimator_derivation.tex",
@@ -874,18 +879,18 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/main.bbl",
-      "sha256": "4b072cf81d7d3c337a3822bc20e5598353506ac4e51c3aa01d08c60b064901fd",
-      "bytes": 9379
+      "sha256": "c0ea5c66331143d1b8b7909fd59e5dcda6adba13c33a919ff426571d4909531e",
+      "bytes": 9725
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/main.pdf",
-      "sha256": "d76771c14a11e93b042a156389d319a907d9afd3dbccbed6508c58625d6fc75a",
-      "bytes": 756273
+      "sha256": "ffe436090a7795b06499647d47800f4ad3735ab821560719163e2fc763637fd7",
+      "bytes": 780114
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/main.tex",
-      "sha256": "a083abef512dd8b564333ffc4a947d3c8b5076d0f05f2a45c91ee85f1d73943d",
-      "bytes": 30078
+      "sha256": "5a4cf7067db5c1170caf3fdb42383843383d59173fe017456bb34180ae3977c8",
+      "bytes": 30918
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/numerical_table.tex",
@@ -899,8 +904,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/product_workflow.tex",
-      "sha256": "e700f84ed4e741d20c91b430fb12188113a7d57ff37d07a86ae4f781318122b6",
-      "bytes": 7369
+      "sha256": "8a86f9408ccc012c2a5b6bb14f35ae37f339f2fd7e74d6d8715c25e8f8701eaa",
+      "bytes": 7560
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/projection_theorem.tex",
@@ -909,13 +914,23 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/refs.bib",
-      "sha256": "279fe496abe81a59c90ce3b3d7b0501c47692bea813a5a3dcf67febf001fb2fb",
-      "bytes": 11528
+      "sha256": "1f54896a40c60b962ff436b74da59ec5dac8f4e0cf7bfb3ce6ad087162a714fe",
+      "bytes": 12090
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/PR_DESCRIPTION.md",
       "sha256": "2d0990d7b190600c5d7f8ea1ec667414fdee3305f1c2942c6d20499b0feef77c",
       "bytes": 1596
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/provenance/bhsm_boundary_mass_interpretation.md",
+      "sha256": "28f3854cfbffd4a8339d41878138b1031c3dad09e25df1f72260dac423c0c398",
+      "bytes": 8649
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/provenance/bhsm_boundary_mass_interpretation_sources.json",
+      "sha256": "eb3b5b9a26d6b5606719c45113db69cc8ca9dc000cfa9bb7e174cde50f2ca3a5",
+      "bytes": 11065
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/provenance/blackhole_surface_recovery.md",
@@ -929,8 +944,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/README.md",
-      "sha256": "6f07be8f4e5d04a60a3d0b50febd75e0c1fd2e3b165ca3201fb54c01bd84150e",
-      "bytes": 4459
+      "sha256": "55c64a026e2f9c66ad7e5aa5069612bd72c02c166fb61d53f597b5e6a095bd8e",
+      "bytes": 6506
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/requirements.txt",
@@ -939,8 +954,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/RESULT_STATEMENT.md",
-      "sha256": "4bb4908815e574a2032d996f45a49ede687569789d3bf9ea8587fa576ebdd80b",
-      "bytes": 3132
+      "sha256": "291d505bbb6f40b32ca8d721f6b0bb1ba9664e9b54074f3c9feb76f0431da4be",
+      "bytes": 4418
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/results/design_arrays.npz",
@@ -949,8 +964,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/results/product_example.json",
-      "sha256": "d90df6ce27d70fbceb89dfc5b36502ca24195952c070baf99cab2fe325912bd8",
-      "bytes": 115348
+      "sha256": "a88ac046d1661cc51ca80d59dccf9483e83a4a5325c94f4ff9331ce37131733a",
+      "bytes": 120513
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/results/replay/check_blackhole_point_lens_invariant.txt",
@@ -1006,6 +1021,26 @@
       "path": "papers/bhsm_blackhole_tracker_20261021/results/tracker_response.json",
       "sha256": "d3a42b295bfd79c9b7d3f5221ed40882748211594bc16588ebbad3f5f0814430",
       "bytes": 48136
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/BHSM_INTERPRETATION_CHECK.md",
+      "sha256": "9785ac6dee07ca6fa4263c5a655ecf27b59fbb0476b0009671568b7391942c40",
+      "bytes": 16789
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/bhsm_interpretation_pdf_01_08.json",
+      "sha256": "4f479162196213cacb0053a26619390b4ad5552f4bacf005be15e6e81abbf88c",
+      "bytes": 8312
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/bhsm_interpretation_pdf_09_17.json",
+      "sha256": "8db47c196fa795c257e9b310a38de43e0a3d26872405009ae9577fec8fcaa3e1",
+      "bytes": 7390
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/bhsm_interpretation_pdf_18_26.json",
+      "sha256": "07e31d4626ca1132562d2ad5b74cb95361487f40be082b3b82fbe3a97728e459",
+      "bytes": 1237
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/blackhole_point_lens_invariant_check.md",
@@ -1114,8 +1149,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/product_calibration_receipt.json",
-      "sha256": "a302df306239aa3488f78a9c69e7a768fde6c8d4bee964816705746c87ed7aa3",
-      "bytes": 224164
+      "sha256": "aa95fd1a6f1f5918f2a31044cd565dd590ab71794ba39ec70a140a92beb028c7",
+      "bytes": 224163
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/product_calibration_receipt.md",
@@ -1169,8 +1204,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/PRODUCT_RELEASE_REVIEW.md",
-      "sha256": "8af38ec16af1ee94f62d7ffa35fb515c013e4c46b61d8ffadcb4a5877f1ad66c",
-      "bytes": 3438
+      "sha256": "93fee6816eeff83298e94c66bdd1cda5cd82b533028fc6d8b0d715226064db80",
+      "bytes": 4007
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/product_scope_prior_art.md",
@@ -1229,13 +1264,13 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/VALIDATION.md",
-      "sha256": "fb79841ada5891bb0a5205f5b7a66cab97f1aee4d339397218ad04b7130d8fa4",
-      "bytes": 9153
+      "sha256": "62b5b95cf3fbd08759c2ebda4fb2332f6ce639146f98c87fa98ae5a57fd6034f",
+      "bytes": 10769
     },
     {
       "path": "product/.gitattributes",
-      "sha256": "0ef732ecd0041148fb59c3f1ad9544de20d327febaf3f24041440afc7a1ee5a8",
-      "bytes": 71
+      "sha256": "41e1b61b5f04bb785e23117848cdb98ea2a6e6843b485d9fdc954331469e982a",
+      "bytes": 116
     },
     {
       "path": "product/.gitignore",
@@ -1244,7 +1279,7 @@
     },
     {
       "path": "product/bhtracker/__init__.py",
-      "sha256": "9cff589ac85d9c1336b61da5df1c7a23cb95be2a45b99b08d06d06d31c9443c3",
+      "sha256": "602e46f2eefd1987e45396f940d19987cb84c43f60c0df28ece81307dd95046b",
       "bytes": 258
     },
     {
@@ -1254,8 +1289,8 @@
     },
     {
       "path": "product/bhtracker/cli.py",
-      "sha256": "e54bcc818d36ed8da26dad946344d3f7c134510d1696b958bd9dd1316d1f2f30",
-      "bytes": 3495
+      "sha256": "2912a3a2abffe0e5ad0ef303ef834712446c8bc2e94f48ea300cd1b8e6b0c950",
+      "bytes": 3566
     },
     {
       "path": "product/bhtracker/data.py",
@@ -1284,13 +1319,13 @@
     },
     {
       "path": "product/bhtracker/examples/nearby_motion.r1.result.json",
-      "sha256": "deef91fb3a761f961db3504e20820d83c75744b042da342ad692ae8507e2e936",
-      "bytes": 116400
+      "sha256": "dd568febed6a36c258bdb450a15fdde98801b8cb90652c3436dc6648d49c4948",
+      "bytes": 121289
     },
     {
       "path": "product/bhtracker/examples/nearby_motion.result.json",
-      "sha256": "2855d207f53302e32773aff88a9e02997ab6f5e6d90ddda81d4db1768d080517",
-      "bytes": 109778
+      "sha256": "a88ac046d1661cc51ca80d59dccf9483e83a4a5325c94f4ff9331ce37131733a",
+      "bytes": 120513
     },
     {
       "path": "product/bhtracker/examples/nearby_motion.truth.json",
@@ -1334,8 +1369,13 @@
     },
     {
       "path": "product/bhtracker/inference.py",
-      "sha256": "4868c6a1d872f14b85ee1d7ceafee1b74044a5a0454ce4a721ad6e6fefa052da",
-      "bytes": 15928
+      "sha256": "f5be57d250e63c81458505da31c6f0816eb409e591072f52effb273dacbc9e67",
+      "bytes": 16089
+    },
+    {
+      "path": "product/bhtracker/interpretation.py",
+      "sha256": "cfbc6faff975d5254dc7fd59c5b735a33d89ab4de4fc1f26757b2dee898f1314",
+      "bytes": 6682
     },
     {
       "path": "product/bhtracker/physics_admission.py",
@@ -1349,13 +1389,13 @@
     },
     {
       "path": "product/bhtracker/report.py",
-      "sha256": "996ce8f1cf8fdde881f7108e653a767202b5236407ab9fe6ad1f6ddbde32ff79",
-      "bytes": 4713
+      "sha256": "49e9f45f3598a9fda810f2034543c11401f792f828f01ad97d1b015081ae2ca2",
+      "bytes": 6257
     },
     {
       "path": "product/bhtracker/server.py",
-      "sha256": "7dc0fc55fce61517c23f3476d612315d3aae1e3b7d008de9b5133b53cb6bfbb8",
-      "bytes": 5219
+      "sha256": "5469b838736f7231e76c4649e06718921ecbc9799de5badc2f4b819ca5eee9d0",
+      "bytes": 5224
     },
     {
       "path": "product/bhtracker/theory/__init__.py",
@@ -1366,6 +1406,26 @@
       "path": "product/bhtracker/theory/ADAPTATION.json",
       "sha256": "e35a9530a932522ee3ca5b8a85166c89e22f2f24e0b3c717cff948c2b216118b",
       "bytes": 338
+    },
+    {
+      "path": "product/bhtracker/theory/BHSM_INTERPRETATION_MANIFEST.json",
+      "sha256": "e7db8ecfd93c6fb894938c1d71278be5a79df860d1ca68441c8473d4628f7a96",
+      "bytes": 1597
+    },
+    {
+      "path": "product/bhtracker/theory/bhsm_sources/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md",
+      "sha256": "6dba2dd7837b77ff24e7ea2c1a3733edf0b6ab8ac024a9a0d4481cadaf90046a",
+      "bytes": 5574
+    },
+    {
+      "path": "product/bhtracker/theory/bhsm_sources/BHSM_Galaxy_Gravity_Loaded_Schur_Hessian_v0_5.md",
+      "sha256": "718cdac692ae6030eb70c327771343267c4517c1a69a01454a32872579013816",
+      "bytes": 9708
+    },
+    {
+      "path": "product/bhtracker/theory/bhsm_sources/BHSM_Topographic_Galaxy_Encapsulation_Solution_v0_3.md",
+      "sha256": "c9eaee920746c024b695c722fc783aea53dfc9da5660a92150de4b05d9c7ba0a",
+      "bytes": 9423
     },
     {
       "path": "product/bhtracker/theory/provider/code/action_native_matter_n2.py",
@@ -1409,38 +1469,38 @@
     },
     {
       "path": "product/bhtracker/web/app.js",
-      "sha256": "88fe73209f710ec8481cfe168384198507f067993d55d94ea4e9b221c5ee27f6",
-      "bytes": 38362
+      "sha256": "5d39632d89ad025c89abc654c66fe81e58366bcc51038797e5c2ca0076a420f2",
+      "bytes": 43905
     },
     {
       "path": "product/bhtracker/web/index.html",
-      "sha256": "cc7bf2fe89ed38f6c7fbbf7f36319dbb5544636c1c4473cb1ca5bed37db0cb38",
-      "bytes": 11065
+      "sha256": "e3410b1d77ab03ce668f9f5eb13636de24a84f05b253c65628f17b6ec9dcd54e",
+      "bytes": 12471
     },
     {
       "path": "product/bhtracker/web/style.css",
-      "sha256": "d493cc89c02f3c0b23a8df93cddbcae21123df96f6e2ea49a0febc95705c992b",
-      "bytes": 19383
+      "sha256": "fef963c532fa0df698f98d3c4e70745ed5008143a6e6421dab5a06758492d6b7",
+      "bytes": 22036
     },
     {
       "path": "product/notebooks/01_compact_mass_and_motion.ipynb",
-      "sha256": "5a6aa92e7efb6bd967ac9bd90b9796ebb5ec3a6cf521f5365227f820436d74b7",
-      "bytes": 80936
+      "sha256": "dbecce64d8d0e72a1d60f4ed3c9412302a26e72873ea48cd18fe94ca95f108d4",
+      "bytes": 83283
     },
     {
       "path": "product/notebooks/02_conditional_boundary_response.ipynb",
-      "sha256": "6c5b35d7d5f0e8dc84333f3ec868fb8488b84fd2d2ca023b6ee17ad0bab78502",
-      "bytes": 11470
+      "sha256": "90d387bcd879e6c3734e9f9ba16389d938e8d01be482aa8dc0312d22f016d775",
+      "bytes": 13729
     },
     {
       "path": "product/pyproject.toml",
-      "sha256": "4210962b42d6a0f46f649fea6a7f8c6050df273fd96323385e9c73f1a204d74e",
-      "bytes": 774
+      "sha256": "90544368a4fee60196c3b1403d2b8620de0242b03fddcb88651a343ccc31a817",
+      "bytes": 799
     },
     {
       "path": "product/README.md",
-      "sha256": "c5616f1a183fd058843146cca3894d4ad36a649e1d646f430b427533f306c3ed",
-      "bytes": 26321
+      "sha256": "ea94a544e5f6d8e816c1c40946bd8fc7e4908f8f45c6a249310d4e8ed3b38d25",
+      "bytes": 33465
     },
     {
       "path": "product/scripts/execute_notebooks.py",
@@ -1449,8 +1509,8 @@
     },
     {
       "path": "product/scripts/make_notebooks.py",
-      "sha256": "e80dba82babfdd5c240c10fa974272bbbe57633f4f2f940efe671d07dd3de2fc",
-      "bytes": 6475
+      "sha256": "76ef95d208615749db21826b295b7789af14b077ac9c87cd78d545ea54779dd2",
+      "bytes": 8682
     },
     {
       "path": "product/scripts/package_product.py",
@@ -1483,6 +1543,16 @@
       "bytes": 6671
     },
     {
+      "path": "product/tests/fixtures/pre_interpretation_fit.json",
+      "sha256": "dfd06d5db4317b5f6b1eff3faf13dbd45df9bc1d734e3c65dd22c63d1d52a5a1",
+      "bytes": 2325
+    },
+    {
+      "path": "product/tests/test_bhsm_interpretation.py",
+      "sha256": "60912091ddcb69167cbade03b76caa91ecfc934a8ef4391dd135b23060319851",
+      "bytes": 3452
+    },
+    {
       "path": "product/tests/test_csv_import.py",
       "sha256": "53798612f4bb924fd48bec220c24fcdd6ec322ffecd11293faa40a6e58e8d446",
       "bytes": 7284
@@ -1513,24 +1583,29 @@
       "bytes": 859
     },
     {
+      "path": "product/validation/bhsm_interpretation_ui_receipt.json",
+      "sha256": "22fa94831de6265dad1219385cc615cd9977422ab9e03a9c048628dd284cc51d",
+      "bytes": 1914
+    },
+    {
       "path": "product/validation/csv_cli_receipt.json",
       "sha256": "e02110e1877deb6864284d931c5d3ace4e7c2a6fd2c9d74ce647666b2ec7a3ac",
       "bytes": 164
     },
     {
       "path": "product/validation/notebook_receipt.json",
-      "sha256": "423502ae81b48b2763963ad1450d7e94d74e6af0dc3e5e09bd88df70acb3e529",
+      "sha256": "35b4eeb25a5f62a781a899efd3337420ac58b64d27727605c13afb993b3f45b3",
       "bytes": 421
     },
     {
       "path": "product/validation/package_install_receipt.json",
-      "sha256": "7400268048e7300acf9f55ba7815e9c0684dc84abfa8b7ba95ff4d33612ba26d",
-      "bytes": 22114
+      "sha256": "8b65ba40b58518a02040a8842200cb4037e7d74459852957271e69e59a22bca4",
+      "bytes": 25306
     },
     {
       "path": "product/validation/product_calibration_receipt.json",
-      "sha256": "a302df306239aa3488f78a9c69e7a768fde6c8d4bee964816705746c87ed7aa3",
-      "bytes": 224164
+      "sha256": "aa95fd1a6f1f5918f2a31044cd565dd590ab71794ba39ec70a140a92beb028c7",
+      "bytes": 224163
     },
     {
       "path": "product/validation/product_finite_degeneracy_receipt.json",
@@ -1539,18 +1614,18 @@
     },
     {
       "path": "product/validation/product_replay_receipt.json",
-      "sha256": "330a3130849d328169796c3286526f73bbd5a84c8d34ed9413981a02949223d3",
-      "bytes": 2595
+      "sha256": "9605148f0faacda335f665fd99e4de00a2390cd3179d8fe991f2b6651d3fd7f1",
+      "bytes": 2699
     },
     {
       "path": "product/validation/stage_1.txt",
-      "sha256": "5dc99f98be7712784fa97dd60b0958637e797dcad9505d5c22177fecf88583a8",
+      "sha256": "b9b4609c6dbf6e6220328caa4b9a15f51ebbc6b2ac287964f578db34a7511e0e",
       "bytes": 183
     },
     {
       "path": "product/validation/stage_2.txt",
-      "sha256": "0615cc8cc4b2b08b9ef68cfe7313a908b2122b7456c733a53cbad8d1607a1256",
-      "bytes": 2634
+      "sha256": "3d0f2af928bfcc0026303717d3c0742d1d1b78a0d9199abcb1b546327720fb78",
+      "bytes": 2633
     },
     {
       "path": "product/validation/stage_3.txt",

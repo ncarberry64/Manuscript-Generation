@@ -50,7 +50,7 @@
     "product/bhtracker/examples.py": "6694293c27930087cbc0866d83aa657ea70c6dd6cb2a6b1d6a59a693a6bf8f26",
     "product/bhtracker/data.py": "832b6c210cf4eb4f18383ff7a3f47a12e6e7d9c87a767488e5db31affd633d04",
     "product/bhtracker/forward.py": "3dc51c57e56ff00633ca3d5e0766a37cd0eb7639d58a294373ac1e30df810e5d",
-    "product/bhtracker/inference.py": "4868c6a1d872f14b85ee1d7ceafee1b74044a5a0454ce4a721ad6e6fefa052da",
+    "product/bhtracker/inference.py": "f5be57d250e63c81458505da31c6f0816eb409e591072f52effb273dacbc9e67",
     "product/bhtracker/physics_admission.py": "6dce22bee33a77414f61775197a1f61119eb3508112ee9855d74cd0cb6766655"
   },
   "runtime": {
@@ -7532,5 +7532,5 @@
   },
   "pass": true,
   "source_unchanged_during_run": true,
-  "runtime_seconds": 5.4193169999998645
+  "runtime_seconds": 5.291408600000068
 }

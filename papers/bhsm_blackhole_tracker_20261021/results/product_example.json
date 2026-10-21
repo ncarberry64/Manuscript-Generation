@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "product_version": "0.1.0",
+  "product_version": "0.1.1",
   "status": "TRACKED",
   "model": {
     "family": "gr",
@@ -3748,7 +3748,7 @@
     36.392905730009396,
     36.39290573001412
   ],
-  "runtime_seconds": 0.15799640000113868,
+  "runtime_seconds": 0.15524209999966843,
   "runtime": {
     "python": "3.14.3",
     "numpy": "2.4.6",
@@ -6009,5 +6009,73 @@
       false,
       false
     ]
+  },
+  "bhsm_interpretation": {
+    "framework": "BHSM",
+    "model_role": "One compact-configuration optical response described in BHSM boundary/envelope language.",
+    "one_potential_rule": "Equivalent ordinary-gravity and BHSM envelope descriptions represent the same fitted lens potential and are counted once. A separately derived response is added only when it is a distinct term of the same physical model.",
+    "parameter_meanings": [
+      {
+        "parameter": "mass_msun",
+        "interpretation": "Effective gravitational monopole of the compact configuration in the adopted BHSM exterior description.",
+        "qualification": "It is the mass coefficient of the fitted optical model. It does not by itself determine a microscopic state, a surface energy, a horizon radius or a topological charge."
+      },
+      {
+        "parameter": "center_mas / proper_motion_mas_yr",
+        "interpretation": "Reference position and observer-frame translation of that same boundary/envelope optical response.",
+        "qualification": "This tracks the center of the adopted exterior template in the supplied frame; source freedom and environmental structure remain in the inference."
+      },
+      {
+        "parameter": "compact_quad",
+        "interpretation": "Projected compact angular structure, which can represent a coarse boundary/envelope deformation when its physical source is specified.",
+        "qualification": "A coefficient alone does not select a BHSM surface mode. An equivalent envelope quadrupole is not added again as an independent force."
+      },
+      {
+        "parameter": "shear / convergence",
+        "interpretation": "Tidal and focusing terms of the surrounding optical environment.",
+        "qualification": "They are fitted environmental freedoms, not automatically intrinsic deformations of the compact configuration."
+      }
+    ],
+    "inference_scope": "The ordinary fit is usable with this BHSM interpretation. Agreement with the ordinary lens response is allowed; a non-GR residual is not required. The fit alone does not uniquely identify the microscopic theory or a horizon.",
+    "conditional_extension": "No separate scalar deformation was requested. The ordinary monopole, motion and admitted shape terms retain their BHSM interpretation without an additional envelope force.",
+    "weyl_convention": "The tracker propagates W_full=Phi+Psi. A BHSM source using W_topo=(Phi_topo+Psi_topo)/2 contributes 2*W_topo to that same full Weyl response, not a second copy of an already represented term.",
+    "spherical_boundary": {
+      "status": "AVAILABLE",
+      "radius_pc": 0.0001,
+      "curvature_deficit_pc_inverse": 0.47830034764385354,
+      "curvature_deficit_sigma_pc_inverse": 0.0001852101390208438,
+      "boundary_energy_over_Msun_c2": 99949.5892263251,
+      "boundary_energy_sigma_over_Msun_c2": 38.703039642086665,
+      "mixed_curvature_velocity2_km2_s2": 4298646.339704827,
+      "reconstructed_monopole_msun": 99947.19893016141,
+      "geometry": "Static spherical Schwarzschild equivalent of the fitted ordinary monopole; flat reference subtraction.",
+      "qualification": "The radius is supplied, and errors condition on it. These are alternative representations of the same monopole, not a second mass or the full nonspherical/environmental boundary energy. Changing the enclosing radius is not physical mass drift."
+    },
+    "source_provenance": {
+      "scope": "BHSM adopted gravitational-sector interpretation of one ordinary optical response; no microscopic or horizon identification claimed",
+      "weyl_convention": "Tracker W_full=Phi+Psi; the separate BHSM optical contract defines W_topo=(Phi_topo+Psi_topo)/2",
+      "primary_reference": "https://arxiv.org/abs/gr-qc/9209012",
+      "sources": [
+        {
+          "path": "bhsm_sources/BHSM_Galaxy_Gravity_Loaded_Schur_Hessian_v0_5.md",
+          "sha256": "718cdac692ae6030eb70c327771343267c4517c1a69a01454a32872579013816",
+          "original_path": "C:\\Users\\carbe\\Downloads\\BHSM_Galaxy_Gravity_Loaded_Schur_Hessian_v0_5.md",
+          "role": "Explicit adopted Einstein/GHY boundary interpretation; extra topographic export remains conditional"
+        },
+        {
+          "path": "bhsm_sources/BHSM_Topographic_Galaxy_Encapsulation_Solution_v0_3.md",
+          "sha256": "c9eaee920746c024b695c722fc783aea53dfc9da5660a92150de4b05d9c7ba0a",
+          "original_path": "C:\\Users\\carbe\\Downloads\\BHSM_Topographic_Galaxy_Encapsulation_Solution_v0_3.md",
+          "role": "Explicit adopted Einstein/GHY boundary interpretation; extra topographic export remains conditional"
+        },
+        {
+          "path": "bhsm_sources/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md",
+          "sha256": "6dba2dd7837b77ff24e7ea2c1a3733edf0b6ab8ac024a9a0d4481cadaf90046a",
+          "archive": "C:\\Users\\carbe\\Downloads\\BHSM_v14_25_seam_threshold_Brown_York_package.zip",
+          "member": "docs/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md",
+          "role": "Same constrained gravitational boundary charge; no separate gravity addition"
+        }
+      ]
+    }
   }
 }
