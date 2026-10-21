@@ -51,7 +51,12 @@ followed by a frozen test on unused LCO catalogue targets. This sequence tests t
 ordinary source and predictive uncertainty before any residual is assigned
 to an additional state or interface response.
 The shared LCO reduction also motivates a separately frozen Gaia
-astrometric test of the same physical predictions.
+astrometric test of the same physical predictions. Its failure leads to
+an explicit diagnosis of the circular-deflector/constant-tide geometry,
+followed by a positive nearby G1 perturber in the full two-plane
+equations. Gaia is consumed in that revision. A further, separately
+frozen native JWST experiment tests its predictions without fitting
+the new target geometry or enlarging the errors.
 
 BHSM determines the research question and interpretation. The R1 action
 is an effective representation with its own independent rolling scalar;
@@ -1066,6 +1071,20 @@ handling and the exclusive query lock. No real target row enters those tests.
 The full focused application suite contains 81 tests; the 12 exact
 continuation identities retain their separate symbolic audit.
 
+The subsequent geometry application is separately archived at calculation
+revision \texttt{7ad3cf175666}. It preserves the pre-acquisition physical
+freeze \texttt{fc3a449}, independent-library calibration freeze
+\texttt{29dcff9}, pre-opening diagnostic amendment \texttt{287b284},
+the once-only target marker, failed field diagnostics and original
+per-pixel residuals. Sixteen exact native SCI/ERR/DQ windows and four
+serialized official GWCS maps support portable inspection; public
+native product identities and full-file hashes recover the larger
+archive inputs. The fixed predictions are byte-identical to their
+pre-acquisition freeze. The additional geometry, pixel, calibration and
+guard checks bring the focused suite to 123 passing tests; internal
+post-opening checks reproduce the saved extraction and scores without
+refitting. Reproduction checks are not observational validation.
+
 \section{Discussion: State Inference and Physical Scope}
 \label{sec:discussion}
 The calculation answers one forward and inverse modeling question.
@@ -1120,16 +1139,36 @@ scalar Hessian. The positive conventional representation remains available.
 This is the same transfer-to-identifiability question tested first in the
 controlled finite-body calculation.
 
-The unused Gaia geometry gives a separate adequacy failure: both frozen
+The compact-source model's unused Gaia geometry gives a separate adequacy failure: both frozen
 point predictions have about $3.26$ mas coordinate RMS and fail the
 catalogue-error-only precision check. The predeclared 2 and 5 mas floor
 controls expose uncertainty sensitivity; they are not an empirically
 justified replacement for training, frame, photocentre and macro-parameter
 uncertainty. Source-quality flags do not justify discarding the discrepant
-images. The present restricted source/screen family therefore remains a
-conditional baseline rather than a precision reconstruction. Its failure
-does not identify which missing conventional freedom or physical-state
-dependency is responsible.
+images. Development diagnosis finds that the old model already misses
+its fitted NIC2 geometry and that the small coordinate-map correction
+cannot explain the discrepancy. An explicitly positive G1 perturber
+supplies spatially varying tidal deflection absent from the quadratic
+screen. It reduces consumed-Gaia RMS to about $0.011$ mas under unchanged
+errors. Nine free parameters and six relative coordinates make that
+fit underidentified. The frozen-body Taylor comparison isolates the
+nonlinear contribution within this model, without establishing a unique
+physical cause. Only the subsequent unused-observation application can
+test the revised prediction; the old LCO scores cannot validate it.
+
+That new F115W application reduces raw five-coordinate RMS from
+$3.31$ to $0.779$ mas without changing errors or refitting lens parameters.
+The instrumental field-star response, all sixteen native pixel fits
+and exposure consistency nevertheless fail. The scatter identity in
+Equation~\eqref{eq:he0435-scatter-decomposition} shows why a common lens
+correction cannot repair the exposure-dependent part. This result
+shows a smaller raw diagnostic residual for G1. Uncalibrated centroid
+bias prevents inferring that the true physical geometry is correspondingly
+improved; neither precision validation nor a BHSM preference follows.
+An adequate response in Equation~\eqref{eq:he0435-instrument-response}
+must precede a physical interpretation of the remaining sub-mas
+residual. The unused bands remain reserved, rather than replacing
+the primary outcome.
 
 The approximation controls have separate meanings. The common GR2 term
 moves absolute image coordinates by up to $1.72$ microarcsec, while its
@@ -1166,6 +1205,24 @@ assigned to this transfer. This result supplies the defining conditions
 and their nonuniqueness; it does not select an extra optical amplitude.
 The present calculation is a reproducible effective benchmark against
 which that physical source construction can be tested.
+The original microscopic current remains
+\begin{equation}
+ j_c=\frac{\mu}{2}\sum_s\left[
+ U_s^\dagger(iG_c)U_s-V_s^\dagger(iG_c)V_s\right].
+ \label{eq:he0435-microscopic-current-scope}
+\end{equation}
+The classical density and reduced $J_{\rm eff}$ evaluated here do not
+compute these sections or an achieved microscopic current. Their
+identification consumes the cap-to-canonical-field source pairing and
+same-domain state/Cauchy prescription; those are not fixed by this
+optical fit. The exclusive chronological two-point, inclusive contour
+four-point and complete matched-occupation constructions remain distinct.
+Neither a classical variability process nor inherited retarded arrays
+or a native heat functional supplies the statistical state kernel.
+No vacuum, dressed-state factorization or Wick replacement is selected,
+and the later four-point is not imposed as a prerequisite for the
+conditional classical optics used here.
+
 
 \section{Conclusions}
 For the prescribed $10^{11}M_\odot$, $3$ kpc body at $z_l=0.3$ and
@@ -1210,12 +1267,22 @@ R1-minus-conventional joint score is about $-3.46\times10^{-5}$.
 These applications constrain source and predictive adequacy without
 identifying a unique BHSM envelope state or establishing sharp nominal
 probability calibration.
-The separate unused Gaia test leaves a $3.26$ mas coordinate RMS and
+The compact-source model's separate unused Gaia test leaves a $3.26$ mas coordinate RMS and
 rejects the exact frozen point predictions under catalogue errors alone.
 Sensitivity to prespecified uncertainty floors does not establish precision
-validity. Thus the revisions address the observed brightness undercoverage
-and conditional central-light tension, while a precise measured geometry
-and unique underlying state remain unestablished.
+validity. Diagnosing the old geometry motivates the explicit positive
+rear G1 and separately specified quadratic remainder. Full ordered
+two-plane propagation reduces consumed-Gaia RMS to about $0.011$ mas
+without changing catalogue errors. Its revised central/A prediction is
+about $0.00165$ and remains permitted by the consumed conditional HST
+test. These development fits establish neither a unique geometry nor
+an envelope-state measurement. The separately frozen JWST experiment
+in Section~\ref{sec:he0435-jwst-geometry} improves raw geometry RMS from
+$3.31$ to $0.779$ mas on previously unused photons, but fails its
+instrumental and exposure-consistency gates. Neither conventional nor
+R1 receives a validation pass. The remaining precision-inference task
+requires an adequate instrumental mean response and its uncertainty,
+with the physical-state and global-matching dependencies still explicit.
 
 Prepared light constrains an envelope encounter transfer. Identifying
 that transfer with a particular underlying state consumes the specified
@@ -1255,12 +1322,23 @@ The observed photometry comprises the public COSMOGRAIL and LCO/CDS
 releases cited above. Exact HST science/weight/context cutouts and original
 MAST product URLs are also retained. Original files, attribution, hashes
 and reduction caveats accompany the data. The Gaia DR3 query, raw catalogue
-rows and separate pre-query prediction freeze are preserved as well.}
+rows and separate pre-query prediction freeze are preserved as well.
+The later G1 geometry, field calibrations and first JWST application are
+preserved at immutable revision
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/7ad3cf1756667d2f24902cf9898600977d49a70e}{\texttt{7ad3cf175666}}.
+This includes the separate pretarget protocols, independent LMC PSF
+file, exact native target windows, embedded official GWCS exports,
+raw residuals and failed adequacy diagnostics. Full native JWST files
+remain available from MAST under the recorded product URLs and hashes;
+the complete 470~MB native streams are not duplicated in the repository.}
 % Numerical Gaia quasar targets were queried only after their separate freeze.
 \acknowledgments{The author acknowledges COSMOGRAIL, the original LCO
 investigators and CDS/VizieR for the public photometry, and NASA/ESA HST
 investigators and MAST at STScI for the archival imaging, and ESA Gaia and
 the Gaia Data Processing and Analysis Consortium for the DR3 catalogue.
+The author also acknowledges NASA/ESA/CSA JWST program 1198 and its
+investigators, MAST, and STScI's independent standard-PSF calibration
+library used for the explicitly limited instrumental diagnostic.
 Original data
 publications are cited above. OpenAI ChatGPT and
 OpenAI Codex materially assisted mathematical derivation, code generation

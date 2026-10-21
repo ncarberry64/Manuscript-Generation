@@ -1,5 +1,11 @@
 # HE 0435: unused geometry observations identified before new target exposure
 
+> Historical metadata-stage design. The later frozen G1 application and first
+> JWST diagnostic are complete; see [the current result](../STRONG_LENSING_GEOMETRY_20261021.md)
+> and `artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/`.
+> Raw geometry residuals improve, but calibration and exposure-consistency gates
+> fail. The text below preserves what was known before pixel acquisition.
+
 Status: candidate inventory and proposed protocol, not a completed validation. On
 2026-10-21 only MAST observation and product metadata were requested. No new
 science pixels, target centroids, numerical target fluxes, image previews or

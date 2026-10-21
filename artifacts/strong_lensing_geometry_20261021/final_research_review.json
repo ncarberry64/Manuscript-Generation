@@ -1,0 +1,163 @@
+{
+  "status": "PASS_RESEARCH_REPORTING_WITH_EXPLICIT_FAILED_VALIDATION_AND_REMAINING_DEPENDENCIES",
+  "created_utc": "2026-10-21T13:51:41.729021+00:00",
+  "review_role": "Independent internal research review by a collaborating agent; not external human peer review or a journal acceptance assessment",
+  "head_at_review": "7ad3cf1756667d2f24902cf9898600977d49a70e",
+  "reviewed_file_sha256": {
+    "manuscript/strong_lensing_main.tex": "7c33a52e61b576f371e5ba6e6d4420e979d557e388e18f31f40c47959c4521c0",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "56524437464e835383e0f73d4f374d28510255e3f1e835c31da69805dd550d15",
+    "manuscript/sections/he0435_geometry_20261021.tex": "84bbe58dccabc3155c74fbad39081b945642f983b239bd465b4b09cdf334fdd6",
+    "docs/STRONG_LENSING_GEOMETRY_20261021.md": "46bd4b8e9ad9100740771ce6c64528eaaa7c22aec1f269742934ad49b7143b7b",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "66b87f25245fd603c1c6adc1940d1b779b65769faf67e9096406fdac0de4db43",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/target_exposure_started.json": "a45a2bda88bdb4609ec516faa7dc4dacf9c9630e61960ebe5d2267447514d3be",
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+    "code/strong_lensing_geometry_revision.py": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+    "scripts/fit_he0435_geometry_revision.py": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+    "artifacts/strong_lensing_geometry_20261021/nonlinear_G1_frozen_body_response.json": "3966b4780785cfea81a0cec9bd6ff3a95de49b1d66b43f1f6ff46ab5bd7ec19c",
+    "artifacts/strong_lensing_geometry_20261021/physical_pretest_review.json": "ebbf9dfc863e842197c447a4f296c6815052182a81e6754612454c60a6d92599",
+    "artifacts/strong_lensing_geometry_20261021/geometry_scope_audit.json": "da95d5c87562eeb2101747f8fced5744a7bc7188a1952048485694c6ee82350f",
+    "artifacts/strong_lensing_geometry_20261021/frame_audit.json": "91175cca4de1cd0e3114df89647cf65e8f569236c596ad9698ab82c5a647621f"
+  },
+  "scope": "Review current abstract, main-body integration, new geometry section and research report against final frozen equations/fit, frame diagnosis, frozen-body Taylor counterfactual, actual diagnostic summaries and previous source/inheritance audits. No fits, tests, CI or native FITS/ASDF arrays executed/opened.",
+  "important_findings_and_resolutions": [
+    {
+      "finding": "Chronology wording could imply forecasts preceded the2022observations rather than2026archival access.",
+      "resolution": "Abstract now explicitly states freezing before archival JWST target files were downloaded; full section discloses physical, external-calibration and preopening diagnostic freezes.",
+      "resolved": true
+    },
+    {
+      "finding": "Inadequate extraction cannot establish that the actual physical geometry improved even though raw diagnostic residuals shrink.",
+      "resolution": "Discussion and geometry section now state raw diagnostic improvement and explicitly retain uncalibrated centroid bias, failed precision validation and no BHSM preference.",
+      "resolved": true
+    },
+    {
+      "finding": "Classical reduced effective source must not be conflated with the original microscopic bilinear current.",
+      "resolution": "Main Discussion now writes the original j_c bilinear in U,V, explicitly says classical density/J_eff do not compute its sections or achieved microscopic current, and identifies source pairing/state/Cauchy dependencies.",
+      "resolved": true
+    },
+    {
+      "finding": "Report called scatter between the four exposures within-exposure scatter.",
+      "resolution": "Corrected to between-exposure scatter; weighted scatter decomposition remains correct.",
+      "resolved": true
+    },
+    {
+      "finding": "New report contained encoding corruption in numeric ranges and the bilinear minus sign.",
+      "resolution": "Report is now verified ASCII with the intended minus sign and readable ranges.",
+      "resolved": true
+    }
+  ],
+  "verified_scientific_accounting": {
+    "geometry_diagnosis": "The old model already misses its NIC2 development geometry; scale/rotation/exact-map corrections are insufficient. Bounded/local radial-plus-constant-tide fits retain a large residual. These are not a theorem excluding all circular profiles or all conventional lens models.",
+    "constructed_response": "Positive regular G1 total optical potential and separately specified quadratic remainder, exact foreground-deflected G1 center, full original two-plane action and ordered nonsymmetric image Jacobian; no image-specific correction or extra BHSM optical amplitude.",
+    "conditional_development_fit": "Final Gaia Q/RMS values match the final exact-gnomonic fit. Gaia has been consumed as development; nine free parameters versus six coordinate values are explicitly not identified by those positions alone.",
+    "counterfactual": "The final-body G1 Taylor control preserves value/gradient/Hessian at the declared origin and changes only higher spatial variation; reported22.56mas and1.23e4s are fixed-body counterfactual differences, not a refit or unused test.",
+    "classical_local_source": "Original total local two-Plummer scalar/Gauss applications retain once-only accounting. Section residuals and separately less precise derivative checks are correctly distinguished.",
+    "prior_LCO_scores": "Old and compact-source LCO coverage/scores remain associated with their original frozen geometries. They are not assigned to the new G1 model or counted as a fresh test.",
+    "prior_HST_scope": "Updated central-image ratios and approximately7.46conditional upper multipliers match the final application; consumed HST is not counted as unused validation.",
+    "new_photon_independence": "The once-only JWST diagnostic uses different2022photons after final point prediction freeze. Physical forecasts were unchanged through calibration failures and the pretarget diagnostic amendment.",
+    "new_extraction_scope": "Independent field PSF calibration fails; original validation is blocked. The later diagnostic uses fixed independent PSFs, predeclared quadratic backgrounds and field-only association corrections, with all validation flags forced false.",
+    "reported_result_meaning": "The76.48percent raw residual decrease is descriptive under the same inadequate extraction/errors. Formal Q5 and conditional p-values are not calibrated physical-model rejection or evidence for BHSM.",
+    "microscopic_state_scope": "Original j_c bilinear is not replaced by J_eff or an achieved current target. No U/V solution, vacuum, dressed-state factorization, Wick closure or quantum statistical kernel is inferred from the classical GP, retarded arrays or heat functional. Exclusive2pt/inclusivecontour4pt/complete matched occupations remain distinct.",
+    "physical_admission": false,
+    "unchanged_physical_guard": 2e-10
+  },
+  "actual_unused_target_diagnostic_summary": {
+    "measurement_status": "CALIBRATION_INADEQUATE_DIAGNOSTIC_ONLY",
+    "diagnostic_mode": true,
+    "complete_exposures": 4,
+    "point_fits": 16,
+    "all16_point_adequacy_gates_failed": true,
+    "all_optimizers_interior": true,
+    "target_pixel_chi2_per_dof_range": [
+      24.721955165548287,
+      79.96592329087211
+    ],
+    "model_summaries": {
+      "old_frozen_conventional": {
+        "intrinsic_coordinate_rms_mas": 3.3133139495357518,
+        "chi2": 18667.775118865164,
+        "conditional_geometry_validation_pass": false
+      },
+      "old_frozen_R1": {
+        "intrinsic_coordinate_rms_mas": 3.3131564968561995,
+        "chi2": 18667.225196851854,
+        "conditional_geometry_validation_pass": false
+      },
+      "revised_G1_conventional": {
+        "intrinsic_coordinate_rms_mas": 0.7794000614133585,
+        "chi2": 958.4342431306987,
+        "conditional_geometry_validation_pass": false
+      },
+      "revised_G1_R1": {
+        "intrinsic_coordinate_rms_mas": 0.7794540670689476,
+        "chi2": 958.4283740781915,
+        "conditional_geometry_validation_pass": false
+      }
+    },
+    "between_exposure_scatter": {
+      "exposure_consistency_chi2": 432.2620079577963,
+      "exposure_consistency_dof": 15,
+      "exposure_consistency_p_value": 1.1277782075130665e-82,
+      "covariance_rescaled": false
+    },
+    "all_validation_flags_false": true,
+    "physical_freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+    "target_diagnostic_freeze_commit": "287b28454b8f04fcba54c9253e06163db6bf2eb1",
+    "unchanged_frozen_point_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90"
+  },
+  "remaining_conceptual_and_empirical_limits": [
+    "An adequate source/visit-dependent instrumental mean, diffuse-host model and calibrated distortion/noise uncertainty have not been established. PSF/ERR failures leave centroid bias and sub-mas residual interpretation unresolved.",
+    "The single reference-star wings and tested finite response corrections do not uniquely identify wavefront, SED, image-motion, detector or illumination-history contributions or their transfer to quasar light.",
+    "The conditional nine-parameter development model is not a converged full posterior, uniquely measured G1 mass profile or complete galaxy/environment reconstruction.",
+    "Anchored quadratic-remainder convergence and positive G1 scale are declared conditional prescriptions; neither is an independently derived BHSM environmental state.",
+    "Finite image searches/projections and isolated-field matching do not complete globally constrained scalar/Cauchy domains or material support.",
+    "Canonical-field/cap embedding, microscopic source pairing and state contractions remain unresolved by this classical optical fit. The current manuscript states rather than hides that boundary.",
+    "No conventional or R1 model is precision-validated on this diagnostic, no BHSM preference or unique envelope-state map is established, and no unused band is substituted for the failed primary experiment."
+  ],
+  "test_and_publication_scope": {
+    "focused_tests": "123 passes are reported by root and separately documented; this research review performs no test rerun.",
+    "final_guard_file": "Root reports15focusedguard checks; no independent rerun in this receipt.",
+    "source_pin_note": "Future bibliography/archive-hash and data-availability metadata updates may change file hashes without changing reviewed scientific content; final build/layout/CI are separate publication checks.",
+    "journal_acceptance_claim": false
+  },
+  "no_native_or_stored_pixel_value_analysis": true,
+  "no_numerical_source_or_prediction_edits": true,
+  "unresolved_material_reporting_errors": [],
+  "post_review_text_and_metadata_refreshes": [
+    {
+      "refreshed_utc": "2026-10-21T13:56:53.962562+00:00",
+      "head_at_refresh": "7ad3cf1756667d2f24902cf9898600977d49a70e",
+      "reason": "Refresh final authored-text hashes after repository LF normalization and a source-domain clarification in the instrumental-response paragraph. No formula, computed number or scientific conclusion changed.",
+      "clarification_verified": "The instrumental pupil is evaluated at the source field position; integration coordinate u is relative to the trial centroid and the native pixel domain is shifted accordingly. This correctly states the domain of the existing spectral/pupil/pixel response formula.",
+      "changed_reviewed_text_hashes": {
+        "manuscript/strong_lensing_main.tex": {
+          "previous_sha256": "1fd7be7cbbcacf4413a2ec585a7fecc11d007e9530c5e2b535c67853bc1549d2",
+          "current_sha256": "7c33a52e61b576f371e5ba6e6d4420e979d557e388e18f31f40c47959c4521c0"
+        },
+        "manuscript/sections/strong_lensing_galaxies_20261020.tex": {
+          "previous_sha256": "09cf7784d46ce7d855abb4bd56afb469d3f9c080a1ebca59c0b58ad6dd1a591e",
+          "current_sha256": "56524437464e835383e0f73d4f374d28510255e3f1e835c31da69805dd550d15"
+        },
+        "manuscript/sections/he0435_geometry_20261021.tex": {
+          "previous_sha256": "b92f785180cf35162a73a55878021137615b7abfd92ed79c090225bcd50723a5",
+          "current_sha256": "84bbe58dccabc3155c74fbad39081b945642f983b239bd465b4b09cdf334fdd6"
+        },
+        "docs/STRONG_LENSING_GEOMETRY_20261021.md": {
+          "previous_sha256": "0262e28f31df269c3a9a2f340a24c789060a770ec2932554343a801be77e135c",
+          "current_sha256": "46bd4b8e9ad9100740771ce6c64528eaaa7c22aec1f269742934ad49b7143b7b"
+        }
+      },
+      "reviewed_authored_text_has_LF_only": [
+        "manuscript/strong_lensing_main.tex",
+        "manuscript/sections/strong_lensing_galaxies_20261020.tex",
+        "manuscript/sections/he0435_geometry_20261021.tex",
+        "docs/STRONG_LENSING_GEOMETRY_20261021.md"
+      ],
+      "report_ASCII_check_pass": true,
+      "all_reviewed_numerical_sources_predictions_results_and_prior_audits_unchanged": true,
+      "physical_admission_and_failed_validation_interpretation_unchanged": true,
+      "no_solvers_tests_or_pixel_access": true
+    }
+  ]
+}
