@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local compact-lens inference workspace for mass, motion, uncertainty, and conditional deformation analysis.">
+  <meta name="color-scheme" content="light">
+  <title>Blackhole Tracker · Research workspace</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <aside class="rail" aria-label="Workspace navigation">
+    <a class="brand" href="#main" aria-label="Blackhole Tracker workspace">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><ellipse cx="20" cy="20" rx="18" ry="6" transform="rotate(-32 20 20)"/><circle class="brand-core" cx="20" cy="20" r="5"/></svg>
+      <span>BLACKHOLE<br><strong>TRACKER</strong></span>
+    </a>
+    <div class="rail-label">RESEARCH WORKSPACE</div>
+    <nav>
+      <a href="#data-panel"><span class="nav-index">01</span> Dataset</a>
+      <a href="#model-panel"><span class="nav-index">02</span> Model & fit</a>
+      <a href="#results-panel"><span class="nav-index">03</span> Inference</a>
+      <a href="#source-panel"><span class="nav-index">{ }</span> Inspect source</a>
+    </nav>
+    <div class="rail-note"><span class="local-dot"></span> LOCAL APPLICATION<br><p>Reproducible fits.<br>Explicit uncertainty.<br>Declared model limits.</p></div>
+    <div class="rail-footer">COMPACT LENSING<br><span>BHSM research program</span></div>
+  </aside>
+
+  <main id="main" tabindex="-1">
+    <header class="page-header">
+      <div><div class="eyebrow">LENSING / INVERSE PROBLEMS</div><h1>Compact lens inference</h1><p>Follow the mass. Test what the data can identify.</p></div>
+      <div class="workspace-badge"><span class="local-dot"></span> Research edition</div>
+    </header>
+    <div id="global-message" class="global-message" role="alert" hidden></div>
+
+    <div class="workspace-grid">
+      <div class="setup-column">
+        <section id="data-panel" class="panel">
+          <div class="panel-heading"><div><div class="section-kicker">01 / INPUT</div><h2>Choose a dataset</h2></div><span id="data-badge" class="badge neutral">No data</span></div>
+          <p class="panel-intro">Resolved image positions, flux ratios and delays, with a declared covariance.</p>
+          <label class="field-label" for="example-select">Built-in example</label>
+          <div class="load-row"><select id="example-select" disabled><option>Loading examples…</option></select><button id="load-example" class="button secondary" disabled>Load</button></div>
+          <p id="example-description" class="field-help"></p>
+          <label class="upload-zone" for="file-input"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 15v5h16v-5"/></svg><span><strong>Import your dataset</strong><small>Choose a JSON file</small></span><span class="upload-arrow">↗</span></label>
+          <input id="file-input" type="file" accept=".json,application/json" class="visually-hidden">
+          <div id="loaded-file" class="loaded-file" hidden><span id="loaded-name"></span><button id="clear-data" class="text-button">Clear</button></div>
+          <button id="validate-data" class="button secondary full-width" disabled><span>Validate dataset</span><span aria-hidden="true">→</span></button>
+          <div id="validation-state" class="validation-state" aria-live="polite"><span class="status-mark">○</span><span>Load an example or import a dataset to begin.</span></div>
+          <dl id="dataset-summary" class="summary-grid" hidden></dl>
+        </section>
+
+        <section id="model-panel" class="panel">
+          <div class="panel-heading"><div><div class="section-kicker">02 / ANALYSIS</div><h2>Set the lens model</h2></div></div>
+          <fieldset><legend class="field-label">Response family</legend><div class="model-options">
+            <label class="model-option"><input type="radio" name="family" value="gr" checked><span class="radio-indicator"></span><span><strong>GR compact lens</strong><small>Mass, center and proper motion</small></span></label>
+            <label class="model-option"><input type="radio" name="family" value="r1"><span class="radio-indicator"></span><span><strong>Conditional R1</strong><small>Test a normalized exterior response</small></span></label>
+          </div></fieldset>
+          <div id="r1-note" class="model-note" hidden>R1 fits a supplied exterior response. A fitted state does not establish a horizon or select a physical black-hole amplitude.</div>
+          <label class="field-label" for="nuisance-select">Nuisance family</label>
+          <select id="nuisance-select"><option value="shear">Shear</option><option value="full">Full nuisance family</option></select>
+          <p class="field-help">Profile the selected source and lens freedoms before interpreting a deformation.</p>
+          <div class="run-controls"><label for="fit-starts">Optimization starts</label><input id="fit-starts" type="number" value="2" min="1" max="8" step="1"></div>
+          <button id="run-fit" class="button primary full-width" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 8 6-8 6Z"/></svg><span>Run inference</span></button>
+          <div id="run-state" class="run-state" role="status" aria-live="polite">Validate a dataset to enable the fit.</div>
+          <button id="retry-job" class="text-button" hidden>Retry job status</button>
+        </section>
+
+        <details id="source-panel" class="panel source-panel">
+          <summary><span><span class="section-kicker">AUDIT</span><strong>Inspect dataset & configuration</strong></span><span class="details-chevron">⌄</span></summary>
+          <p class="field-help">The complete input is shown below. Editing it requires validation again.</p>
+          <label class="visually-hidden" for="source-json">Dataset JSON</label><textarea id="source-json" spellcheck="false" placeholder="Load a dataset to inspect its JSON." disabled></textarea>
+          <div class="source-actions"><button id="copy-input" class="text-button" disabled>Copy input</button><button id="download-input" class="text-button" disabled>Download input</button></div>
+          <div class="field-label config-label">Run configuration</div><pre id="config-json"></pre>
+          <details id="raw-result-details" hidden><summary>Complete result JSON</summary><pre id="raw-result"></pre></details>
+        </details>
+      </div>
+
+      <div id="results-panel" class="results-column">
+        <section id="empty-results" class="empty-results panel">
+          <div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="24"/><path d="M40 5v16m0 38v16M5 40h16m38 0h16"/><circle cx="40" cy="40" r="5"/></svg></div>
+          <div class="section-kicker">FROM DATA TO A DEFENSIBLE TRACK</div><h2>Start with the ordinary lens.</h2><p>Load and validate a dataset, then fit the compact mass and its motion. The workspace will show the fitted track, uncertainty and the information retained after nuisance profiling.</p>
+          <div class="empty-steps"><span><b>01</b> Validate input</span><span><b>02</b> Fit the model</span><span><b>03</b> Inspect the evidence</span></div>
+          <div class="empty-footnote">No fit has been run. No example results are displayed.</div>
+        </section>
+
+        <div id="result-content" hidden>
+          <div class="results-toolbar"><div><div class="section-kicker">03 / INFERENCE</div><h2>Fit results</h2></div><div class="export-actions"><button id="export-json" class="button secondary compact">Export JSON</button><button id="export-html" class="button secondary compact">Export report <span aria-hidden="true">↗</span></button></div></div>
+          <section id="result-status" class="result-status" aria-live="polite"><span id="result-status-label" class="badge"></span><p id="result-status-description"></p></section>
+          <div id="model-context" class="model-context" hidden></div>
+          <div class="metric-grid">
+            <article class="metric-card"><div class="metric-label">LENS MASS <span>M☉</span></div><div id="mass-value" class="metric-value"></div><div id="mass-uncertainty" class="metric-detail"></div></article>
+            <article class="metric-card"><div class="metric-label">REFERENCE CENTER <span>mas</span></div><div id="center-value" class="metric-value vector-value"></div><div id="center-uncertainty" class="metric-detail"></div></article>
+            <article class="metric-card"><div class="metric-label">PROPER MOTION <span>mas / yr</span></div><div id="motion-value" class="metric-value vector-value"></div><div id="motion-uncertainty" class="metric-detail"></div></article>
+            <article class="metric-card"><div class="metric-label">FIT QUALITY <span>χ² / dof</span></div><div id="quality-value" class="metric-value"></div><div id="quality-detail" class="metric-detail"></div></article>
+          </div>
+
+          <section class="panel chart-panel"><div class="panel-heading"><div><div class="section-kicker">ASTROMETRY</div><h3 id="track-title">Observed and fitted track</h3></div><div class="plot-legend"><span><i class="legend-dot"></i>Observed</span><span><i class="legend-line"></i>Fit</span></div></div><div id="track-chart" class="chart-container"></div><p id="track-caption" class="chart-caption"></p></section>
+          <section class="panel chart-panel"><div class="panel-heading"><div><div class="section-kicker">EPOCH BY EPOCH</div><h3>Observed versus model</h3></div><label class="visually-hidden" for="series-select">Observable to plot</label><select id="series-select" class="chart-select"><option value="5">Time delay · s</option><option value="4">Log flux ratio</option><option value="0">Positive-parity image · x</option><option value="1">Positive-parity image · y</option><option value="2">Negative-parity image · x</option><option value="3">Negative-parity image · y</option></select></div><div id="series-chart" class="chart-container series-chart"></div><p id="series-caption" class="chart-caption"></p></section>
+
+          <div class="evidence-grid"><section class="panel admission-panel"><div class="section-kicker">CONDITIONAL RESPONSE</div><h3>Envelope admission</h3><div id="envelope-status" class="admission-value"></div><div id="envelope-detail"></div><p class="field-help">Information about a conditional exterior state is not a black-hole or horizon identification.</p></section><section class="panel diagnostics-panel"><div class="section-kicker">MODEL & DATA CHECKS</div><h3>Fit diagnostics</h3><div id="diagnostics-list"></div></section></div>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer"><span>Blackhole Tracker</span><span>Local research software · Declared compact-lens assumptions apply</span></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

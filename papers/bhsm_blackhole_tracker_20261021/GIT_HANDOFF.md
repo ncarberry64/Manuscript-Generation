@@ -8,7 +8,7 @@ Branch: codex/bhsm-state-rotation-20261021. The branch name reflects its earlier
 
 Worktree: C:/Users/carbe/Manuscript-Generation/.worktrees/bhsm-state-rotation-20261021
 
-Existing unrelated dirty checkouts and PR23 were preserved. The first commit preserved the angular source and completed Hopf support result; subsequent commits make the Blackhole Tracker central. The complete source archive contains all three paper directories because the tracker imports the pinned theoretical provider from the angular directory.
+Existing unrelated dirty checkouts and PR23 were preserved. The first commit preserved the angular source and completed Hopf support result; subsequent commits make the Blackhole Tracker central. The complete source archive contains product/ and all three paper directories under papers/. The paper theory replay imports the preserved angular provider; the independently installable product carries its own six hash-pinned provider inputs. A separate product source ZIP and wheel are also delivered.
 
 The final external delivery receipt records exact commits, remote draft-PR status and patch/archive hashes without creating a self-referential commit identifier. The supplied cumulative binary patch applies to the stated base:
 

@@ -1,0 +1,296 @@
+# Blackhole Tracker 0.1.0
+
+Blackhole Tracker fits a resolved compact lens's mass, center and proper motion from two image positions, their magnification ratio and their delay. It provides a local browser app, command-line tools, a Python API, executed notebooks and reproducible synthetic validation. An optional conditional R1 scalar exterior adds action-normalized response and physical-admission checks.
+
+The fitted object is a **compact exterior**. A successful track does not establish a black-hole horizon, distinguish every possible cause of the same lensing potential, or establish an R1 detection. All bundled measurement sets are explicitly synthetic.
+
+## Start on Windows
+
+Install Python **3.11 or newer**, with the `python` command available on PATH. Unpack the complete product folder and double-click **`Start_Blackhole_Tracker.cmd`**.
+
+On first launch the script creates `.venv`, installs the source package and development dependencies, and opens the local app. Dependency installation needs access to your configured package index; fitting uses no remote service or API key. Keep the console open while using the app. Press **Ctrl+C** there to stop it.
+
+The default address is **http://127.0.0.1:8765/**. If the browser does not open, enter that address manually. If the port is occupied, use the explicit command below with another port.
+
+For an explicit PowerShell installation, start in this `product` directory:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m bhtracker serve --open
+```
+
+This does not require activating the environment or changing PowerShell's execution policy. If an existing `.venv` is missing dependencies, rerun the installation command. After changing source dependencies, rerun it before restarting the app.
+
+### Other installation options
+
+Use the interpreter/environment in which you want the package installed:
+
+```text
+python -m pip install .
+python -m bhtracker serve --port 8766 --open
+```
+
+For development and notebook replay, use `python -m pip install -e ".[dev]"`. To install a supplied wheel, replace the path below with its actual location:
+
+```text
+python -m pip install path/to/bhsm_blackhole_tracker-0.1.0-py3-none-any.whl
+python -m bhtracker serve --open
+```
+
+The wheel contains the browser assets, example JSON files and pinned R1 provider inputs. The source distribution also supplies the launcher, notebooks, tests and validation scripts. To build a wheel from source with the development dependencies installed, run `python -m build --wheel`; output goes to `dist/`.
+
+The commands below use `python` to mean the interpreter with this package installed. With the Windows environment above, substitute `.\.venv\Scripts\python.exe`. The installed `blackhole-tracker` executable is equivalent to `python -m bhtracker`.
+
+## Use the local app
+
+1. Choose a built-in example and **Load**, or **Import your dataset** from a JSON file.
+2. Select **Validate dataset**. Inspect the dataset summary and the input JSON under **Inspect dataset & configuration**.
+3. Start with **GR compact lens** and **Shear** nuisance parameters. Select 1–8 optimization starts, then **Run inference**.
+4. Read the status, uncertainties, residuals and diagnostics before interpreting the fitted track. The conditional R1 family additionally requires declared scalar-flux provenance and an admitted physical domain.
+5. Use **Export JSON** to retain the complete fit or **Export report** for a self-contained HTML report. Download the input separately if you edited or constructed it elsewhere.
+
+The server binds only to `127.0.0.1`. Inputs and jobs remain in that local process until you export them; it uses no remote fitting service. Closing the process clears its in-memory jobs. The server accepts JSON requests up to 10 MB and retains at most 64 jobs per session; restart it to clear a full session. It runs one fit worker at a time. This is a local research tool, not an authenticated network deployment.
+
+### Bundled examples
+
+| Example ID | Purpose |
+|---|---|
+| `nearby_motion` | A synthetic, identifiable compact-mass track from three source positions sampled over ten years. |
+| `cosmological_short_track` | A mass measurement with deliberately weak ten-year proper-motion information. An unresolved motion is a useful result. |
+| `ordinary_shear` | Conventional external shear; compare fits that omit and admit shear. |
+| `stellar_benchmark` | A synthetic stellar-lens variation inspired by the Lu et al. arXiv:2512.03364 Table 2 parameters, with explicitly synthetic observer factors. It is neither observed data nor BAGLE output. |
+
+The example `seed` controls generated Gaussian noise. Example uncertainties are declared test inputs, not an instrument forecast. The synthetic truth is used for validation and is not supplied to the ordinary example fit.
+
+## Command-line workflow
+
+Run these commands in a working directory where you want `user_runs` created:
+
+```text
+python -m bhtracker example nearby_motion --output user_runs/nearby_motion.json
+python -m bhtracker validate user_runs/nearby_motion.json
+python -m bhtracker fit user_runs/nearby_motion.json --family gr --nuisance shear --starts 3 --output user_runs/nearby_fit
+python -m bhtracker profile user_runs/nearby_motion.json user_runs/nearby_fit/result.json --parameter mass_msun --output user_runs/mass_profile.json
+```
+
+`validate` checks the versioned measurement schema and covariance. A valid measurement file can still fail the physical model or contain insufficient information; those checks occur during prediction/inference.
+
+### Import CSV measurements with their full covariance
+
+```text
+python -m bhtracker import-csv measurements.csv --metadata metadata.json --covariance covariance.csv --output user_runs/imported.json
+python -m bhtracker validate user_runs/imported.json
+```
+
+The measurement CSV has one header with exactly these seven names, each once. Their column order may differ; extra or missing columns are rejected:
+
+```csv
+epoch_yr,x_plus_mas,y_plus_mas,x_minus_mas,y_minus_mas,ln_flux_ratio,delay_seconds
+```
+
+Supply 3–80 finite numeric rows. `metadata.json` is the version-1 JSON skeleton containing `schema_version`, `geometry`, `reference_epoch_yr`, `analysis` and `provenance`, with optional `title` and `fields`. It must **not** contain `epochs_yr`, `observations` or `covariance`; the importer obtains them from the CSV files. For example, a local synthetic metadata file is:
+
+```json
+{
+  "schema_version": 1,
+  "geometry": {"D_l_pc": 1000, "D_s_pc": 8000, "D_ls_pc": 7000, "z_l": 0, "z_s": 0},
+  "reference_epoch_yr": 2026,
+  "analysis": {"source_policy": "free_per_epoch", "r0_pc": 0.00000001},
+  "provenance": {"kind": "synthetic", "description": "Replace with the actual origin of these measurements"}
+}
+```
+
+`covariance.csv` is a required **headerless, dense `6N × 6N` numeric matrix**. It uses the canonical six-observable order within each measurement row, regardless of the order of columns in `measurements.csv`; it never includes an epoch covariance column. Keep cross-row correlations. The importer preserves measurement row order and does not infer errors, sort epochs or diagonalize the covariance. UTF-8 with an optional BOM is accepted. Set observed provenance accurately when importing real data.
+
+`fit --output` takes a **directory**, not a JSON filename. It writes:
+
+| File | Contents |
+|---|---|
+| `result.json` | Estimates, local uncertainty, model and bounds, source positions, measurements, full covariance, predictions, admission and diagnostics. |
+| `report.html` | Portable research report. |
+| `predictions.csv` | Observer epoch and the six predicted observables, with a header. |
+| `track_and_residuals.png` | Fitted center track and full-covariance whitened residuals. |
+| `manifest.json` | Dataset hash and SHA-256 hashes of exported files. |
+
+Use a fresh output directory for each analysis. Available nuisance options are `none`, `shear` (default) and `full`. Every option still fits two independent source coordinates per row. `full` adds two ordinary compact-quadrupole coefficients and convergence to shear. The number of starts must be 1–8.
+
+For the conditional family:
+
+```text
+python -m bhtracker fit user_runs/nearby_motion.json --family r1 --nuisance shear --starts 2 --output user_runs/nearby_r1
+```
+
+Profile parameters are `mass_msun`, `motion_x` and `motion_y`. A profile reoptimizes the other parameters; its reference levels Δχ² = 1 and 3.84146 are not automatically calibrated confidence limits at a bound or other nonregular point. Inspect convergence and truncation. Use the same original dataset and full, unstripped `result.json`; profiles require its saved internal fit state. The CLI output file's parent directory must already exist.
+
+Run `python -m bhtracker --help` or append `--help` to a subcommand for the installed interface.
+
+## Measurement JSON: schema version 1
+
+JSON numbers must be finite. There are **3–80 epoch/source rows**. Repeated epoch values are allowed, for example several sources observed at one epoch; 3 rows do not imply 3 distinct times or an identifiable proper motion. Row order is preserved.
+
+| Field | Type and meaning |
+|---|---|
+| `schema_version` | Required integer `1`. |
+| `title` | Optional descriptive string. |
+| `fields` | Optional exact array shown below. If present, its order must match exactly. |
+| `geometry` | Required object with the five distance/redshift fields below. |
+| `geometry.D_l_pc` | Positive angular-diameter lens distance, pc. |
+| `geometry.D_s_pc` | Positive angular-diameter source distance, pc. |
+| `geometry.D_ls_pc` | Positive lens-to-source angular-diameter distance, pc. |
+| `geometry.z_l`, `geometry.z_s` | Finite nonnegative redshifts, with `z_s > z_l`; equal zero values are also allowed for a supplied local geometry. |
+| `reference_epoch_yr` | Required finite observer-year reference epoch. |
+| `epochs_yr` | Required length-`N` array of finite observer-year epochs. |
+| `observations` | Required `N × 6` numeric array in the exact order below. |
+| `covariance` | Required `6N × 6N` full covariance in the flattened order below; finite, symmetric, positive definite, with positive variances. |
+| `analysis` | Optional object; scientific choices should be supplied explicitly. See the next table. |
+| `provenance` | Required object containing `kind: "synthetic"` or `kind: "observed"`. Other provenance metadata is preserved. |
+
+The exact column-name array is:
+
+```json
+["x_plus_mas", "y_plus_mas", "x_minus_mas", "y_minus_mas", "ln_flux_ratio", "delay_seconds"]
+```
+
+The `+` image is the continued positive-parity point-lens branch and `−` the continued negative-parity branch. **These labels do not mean bright and faint.**
+
+```text
+ln_flux_ratio = ln(|mu_plus| / |mu_minus|)
+delay_seconds = arrival_time_minus - arrival_time_plus
+```
+
+`ln_flux_ratio` may be negative when the positive-parity image is fainter. Model predictions retain positive delay on the admitted time-ordered primary branches. The fluxes must correspond to the same source emission; an observed flux ratio with extinction, microlensing, source variability or calibration effects needs a justified treatment of those effects and its uncertainty. The input loader does not establish those physical conditions.
+
+Both image coordinates use **mas in the same absolute tangent-plane frame**. Center/source coordinates use that same frame. No automatic RA/Dec conversion, reference-frame fit or epoch-timescale conversion is performed.
+
+### Full covariance order and units
+
+Flatten observations **row first**, exactly as `numpy.asarray(observations).ravel(order="C")`:
+
+```text
+[x+_0, y+_0, x-_0, y-_0, lnR_0, delay_0,
+ x+_1, y+_1, x-_1, y-_1, lnR_1, delay_1, ...]
+```
+
+`covariance[6*i+j][6*k+l]` is the covariance of column `j` in row `i` with column `l` in row `k`. Supply **variances**, not standard deviations, on its diagonal. Off-diagonal units are products of the corresponding observable units: mas², mas·seconds, seconds², and so on. Image, cross-observable and cross-epoch correlations are supported. If you reorder rows, permute both covariance axes in the same six-element blocks. The product does not silently sort epochs or discard off-diagonal covariance.
+
+A safe starting file is a generated example rather than a manually shortened covariance matrix:
+
+```python
+import json
+from pathlib import Path
+from bhtracker.examples import make_example
+
+raw, truth = make_example("nearby_motion", noise=False)
+Path("dataset.json").write_text(json.dumps(raw, indent=2), encoding="utf-8")
+```
+
+### Analysis options
+
+| Key in `analysis` | Meaning/default |
+|---|---|
+| `source_policy` | Only `"free_per_epoch"` is supported; this is the default. Two source coordinates are fitted independently per row. |
+| `r0_pc` | Positive unresolved-worldtube radius in pc. Supply this for a physically fixed worldtube. If omitted, the engine uses `0.001` times its computational reference Einstein radius; the result records `model.r0_pc` and its `worldtube_policy`. This default is not a selected physical surface. |
+| `reference_mass_msun` | Optional positive numerical normalization. Fit initialization supplies one if omitted; it is not a physical mass prior. Compact-quadrupole coefficients are expressed in this reference lens basis. |
+| `mass_bounds_msun` | Two increasing positive finite physical masses; default `[0.001, 1000000000000]`. Active bounds are diagnosed. |
+| `lens_parallax_factors` | Optional `N × 2` finite, dimensionless supplied observer factors; defaults to zero. Their angular contribution is `(1000 / D_l_pc) * factors` mas. |
+| `flux_ratio` | R1 scalar-source flux relative to the declared regular-body normalization; default `1`. **This is not the image flux ratio.** It has no effect on the GR family. |
+| `flux_provenance` | R1 provenance and fixed/fitted policy, described below. |
+| `H0` | R1 scale in km/s/Mpc; default `67.4`. An explicitly supplied `geometry.H0` takes precedence. |
+| `eta_cap` | Retained-action boundary admission budget, default `0.001`. This bounds possible states; it does not select one. |
+| `weak_metric_cap`, `hessian_fraction_cap`, `principal_fraction_cap` | Positive approximation budgets, each default `0.01`; the principal fraction must be below 1. |
+| `quasistatic_speed_ratio_cap`, `background_drift_cap`, `spatial_gradient_ratio_cap` | Positive approximation budgets, each default `0.01`. They define model scope, not measurement precision. |
+| `intrinsic_timescale_observer_yr` | Optional supplied positive intrinsic boundary-evolution timescale for its additional quasistatic check. Without it, fixed boundary coefficients are assumed; no relaxation time is derived. |
+
+Supplied cosmological distances need not satisfy the Euclidean identity `D_ls = D_s - D_l`. The code does not infer distances or redshifts and does not propagate their uncertainty. The supplied parallax factors must match your observer, time convention and tangent-plane frame; the tool does not calculate an Earth ephemeris or a fitted parallax. The center track is
+
+```text
+center(t_i) = center_mas + (t_i - reference_epoch_yr) * proper_motion_mas_yr
+              + (1000 / D_l_pc) * lens_parallax_factors[i]
+```
+
+Thus `center_mas` is the linear-track reference center before the supplied parallax offset. Proper motion is **mas per observer year**. A physical transverse velocity requires the corresponding distance/redshift conversion. A drifting or uncertain astrometric frame affects the inferred motion and is not estimated implicitly.
+
+### Observed versus synthetic provenance
+
+For real measurements set `provenance.kind` to `"observed"` and retain their origin, citation/data release, instrument, reduction, coordinate/time conventions, image identification, flux treatment and covariance construction in that object. These extra keys are metadata, not a substitute for validated reduction. Setting the label does not verify an observation or establish a detection. Keep simulated modifications labeled synthetic, with a seed and an explanation of what was simulated. None of the bundled examples is an observed object.
+
+## Python API
+
+```python
+from bhtracker import load_dataset, predict, fit
+from bhtracker.examples import make_example
+from bhtracker.inference import profile
+from bhtracker.report import export_result
+
+raw, _ = make_example("nearby_motion")
+data = load_dataset(raw)                         # also accepts a JSON path
+result = fit(data, family="gr", nuisance="shear", starts=3)
+parameters = result["_internal"]["parameters"]   # includes fitted source rows and reference basis
+predicted = predict(data, parameters, family=result["model"]["family"])
+curve = profile(data, result, parameter="mass_msun", points=11)
+export_result(result, "user_runs/python_fit")
+```
+
+`predict` returns an `N × 6` NumPy array in the documented physical-unit order. Its parameters include positive `mass_msun`, `center_mas[2]`, `proper_motion_mas_yr[2]`, and `source_mas[N,2]`. Optional fields are `shear[2]`, `compact_quad[2]`, scalar `convergence`, R1 `flux_ratio`, and R1 `boundary_amplitudes[2 or 3]` in the plus/cross/axial harmonic basis. Alternatively supply `conormal_coefficients[2 or 3]`; the exact impedance maps them to amplitudes. If both are supplied they must agree. `reference_mass_msun` preserves the numerical basis when replaying fitted parameters; the saved `_internal.parameters` carries it. Public prediction checks physical admission. A formal potential-operator test with nonadmitted coefficients is not a public physical prediction.
+
+Shear uses the potential `0.5*gamma_plus*(x*x-y*y) + gamma_cross*x*y`; `compact_quad` multiplies the two ordinary `r^-2` harmonics in the reference lens coordinates. `fit` always fits mass, center, proper motion and all source positions. It fits the requested finite nuisance family, not arbitrary environmental structure. Inspect `model.fitted_parameters`, `model.bounds_internal`, the numerical reference scales and diagnostics for the actual fit domain.
+
+Result schema version 1 includes `status`, `estimates`, `uncertainty`, `chi2`, `dof`, `diagnostics`, `model`, `predictions`, `physics_admission` and `conditional_envelope`. Local coordinate uncertainties are 1σ; the mass interval named `mass_68pct_interval_msun` is a local log-Gaussian interval. Null directions return JSON `null`, not zero uncertainty. The parameter covariance uses the supplied known measurement covariance without reduced-χ² rescaling. The full result also retains measurements, source positions, covariance, branch checks, singular values, runtime and dataset hash.
+
+### Interpret statuses before using estimates
+
+| Status | Interpretation |
+|---|---|
+| `TRACKED` | The fit converged, passed the declared goodness-of-fit/domain checks, has sufficiently identified mass and a two-component motion SNR of at least 5, and is not downgraded by an active global bound. It remains conditional on the supplied model/calibration. |
+| `PARTIALLY_IDENTIFIED` | Motion is weak or unresolved, or a global modeling bound qualifies the result. A mass can still be informative. Inspect diagnostics and profiles. |
+| `INSUFFICIENT_INFORMATION` | Mass is unidentified or its local log uncertainty exceeds the product's 0.5 threshold. Do not force a track from this input. |
+| `FIT_REJECTED` | Optimizer, physical-domain or goodness-of-fit checks failed; the predeclared goodness-of-fit rejection threshold is `p < 0.001`. Treat the parameter estimates as a failed model fit. |
+
+The motion threshold concerns the **joint two-component** Mahalanobis SNR, not a requirement that each component separately exceeds five standard deviations. An optimizer success flag alone is not a scientific acceptance. Rank truncation, active bounds, approximation budgets and residual mismatch can qualify the result. Local errors and profile reference levels have a finite tested domain; they are not universal interval-coverage guarantees.
+
+## Conditional R1 policy
+
+R1 is an adopted weak-metric, frozen-background, quasistatic scalar–tensor exterior outside a supplied worldtube. Its pinned background covers lens redshifts `0 <= z_l <= 2.1`. The code computes admission information, the normalized boundary/conormal pairing and a sufficient state-norm cap; it does not derive a black-hole horizon charge or a preferred deformation amplitude.
+
+| `analysis.flux_provenance` | Fit policy |
+|---|---|
+| `"regular_body_proxy"` | Hold `analysis.flux_ratio` fixed (normally 1); report `fixed_regular_body_proxy`. This is an explicitly adopted proxy, not a horizon matching result. |
+| `"supplied_conditional_flux"` or `"supplied_worldtube_flux"` | Fit the scalar flux as a conditional matching nuisance over the declared ratio interval `[0.05, 20]`; report `fitted_conditional_flux`. |
+| Missing/other value | Conditional R1 inference is not admitted. Baseline GR does not require scalar provenance. |
+
+`flux_ratio` in parameters or analysis always means **scalar-source normalization**, whereas the measurement `ln_flux_ratio` means image magnification ratio. Changing the R1 policy changes the statistical model; retain it in a comparison.
+
+The nonlinear R1 fit estimates its spherical exterior and ordinary nuisances. The boundary envelope is then a **local GLS information assessment** after source/lens and axial profiling, with an admitted amplitude cap. It is not an unconstrained nonlinear measurement of a surface deformation. Read `physics_admission.reasons`, `allowed_physics_models`, `model.flux_policy` and `conditional_envelope` together.
+
+Envelope status `UNRESOLVED` means the admitted design has weak or rank-deficient information. `NOT_EVALUATED` means the baseline fit was rejected; no envelope sensitivity is interpreted. `NOT_ADMITTED` means the domain checks disallow that inference; `NOT_REQUESTED` is the GR default. `INFORMATION_AVAILABLE` describes local information under the declared model and cap; it is not a detection claim. An unconstrained amplitude estimate outside the admitted ball is not a physical R1 state measurement. The exact zero-flux harmonic/ordinary-compact degeneracy remains a cause ambiguity.
+
+## Executed notebooks and validation
+
+Both notebooks are saved with executed outputs; their cell counts and SHA-256 hashes are recorded in `validation/notebook_receipt.json`:
+
+| Notebook | Walkthrough |
+|---|---|
+| `notebooks/01_compact_mass_and_motion.ipynb` | Full-covariance baseline fit, center track, reoptimized mass profile, weak-motion control and portable exports. Six executed code cells. |
+| `notebooks/02_conditional_boundary_response.ipynb` | Conditional R1 fit, physical admission, Dirichlet/conormal cap, unresolved envelope and rejection of an inadmissible state. Five executed code cells. |
+
+Open them in an editor with Jupyter support and select the environment in which this product is installed. With development dependencies installed, replay them and the product checks from this source directory:
+
+```text
+python scripts/execute_notebooks.py
+python scripts/validate_product.py
+```
+
+Notebook replay uses the `python3` kernel through `nbclient`, updates the notebooks and writes its receipt. Ensure that kernel can import this installation. Validation runs pytest, the frozen 64-draw calibration and the exact finite harmonic/compact operator control, and writes stage logs, full calibration/operator receipts and code hashes under `validation/`. The companion paper's `review` directory contains the detailed preregistered protocol and a delivery snapshot of these receipts.
+
+The fixed ordinary-lens calibration retains all 64 draws and failures, uses known full covariance and local 95% intervals, and applies exact binomial gross-miscalibration tests at α = 0.01. Its observed coverage is 61/64 for mass and both motion components, 59/64 for center x and 61/64 for center y; no fit failures were excluded. The receipts report bias, scatter, small-sample uncertainty and negative controls. Passing this bounded test does not prove universal coverage or observational performance.
+
+## Attribution and limits
+
+The BHSM/R1 research and companion manuscript are by **Norman P. Carberry**. The adopted provider is pinned to Manuscript-Generation commit `06cf7c1b85d6605bfee0cc0d07fb2af86a66cae9`. `bhtracker/theory/provider/SOURCE_MANIFEST.json` gives original paths, source URLs and hashes; `bhtracker/theory/ADAPTATION.json` records the product adaptation and consistent nominal solar gravitational parameter. Provider files are verified on loading. NumPy, SciPy and Matplotlib supply the numerical and plotting libraries; the development tools include pytest, nbformat, nbclient and ipykernel.
+
+Ordinary point-lens inference, astrometric tracking and Galileon multipoles have established predecessors. The package does not claim that a software tracker is itself a new physical discovery. The companion paper separates its conditional boundary-to-lensing transfer and blind-direction results from the practical inference product and from earlier information experiments.
+
+The primary-pair model continues two noncritical point-lens image branches, checks stationarity/parity/time ordering and keeps rays outside the worldtube. It does not enumerate every image of a general lens, solve full caustic-crossing events, model arbitrary macro lenses, propagate unknown calibration, provide an Earth ephemeris, derive causal horizon/surface evolution, or select a microscopic BHSM-to-action map. Source variability, extinction, small-scale microlensing and other causes of a changed flux/delay pattern require their own measurement/model treatment. Equivalent exterior potentials remain indistinguishable by these observables alone.
+
+Use the estimates, uncertainty, physical-admission result, residual diagnostics, provenance and declared bounds as one research result. A valid outcome can be an identifiable compact-mass track, a rejected model, an unresolved motion, or a conditional envelope limit.

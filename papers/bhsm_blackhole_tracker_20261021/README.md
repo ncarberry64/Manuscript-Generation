@@ -1,27 +1,45 @@
-# Blackhole Tracker — central paper
+# Blackhole Tracker: research paper and usable product
 
-The central manuscript is **Blackhole Tracker: Boundary-to-Lensing Transfer and Blind Directions in a Conditional BHSM Realization**. It supersedes the Hopf-charge paper as the priority of this branch, following Norman's explicit request. The two earlier paper directories remain preserved supporting research.
+The current manuscript is **Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Boundary Responses in a Conditional BHSM Realization**. It accompanies a runnable specialist product for inference from resolved image pairs, flux ratios and delays. The earlier boundary-transfer and broad information experiment remain in the paper as distinct theoretical results; the preserved angular and Hopf papers remain supporting research.
 
-The checkable contribution is a normalized conditional boundary-to-metric-to-lensing transfer and its information losses. The adopted cubic R1 action fixes the response operator and metric coefficient. It does not select a microscopic BHSM identification, black-hole scalar flux or physical state. Deep screened quadrupoles can alter images and fluxes with a vanishing leading pair-delay contribution; their apparent-mass statistic is exactly shear-degenerate at first order. Joint data retain two transverse directions in a restricted synthetic information experiment. The tiny supplied physical state and unrealistic broad motion scan prevent a practical detection claim.
+The package establishes three connected results:
 
-Read `RESULT_STATEMENT.md`, `CHAIN_AND_FREEDOMS.md`, `LAY_REPORT.md`, `VALIDATION.md`, the compact provenance map and the internal reviews before interpreting the curves.
+- A local GUI, CLI, Python API and two executed notebooks fit compact-lens mass, center and observer proper motion with the full supplied covariance and source positions free at every row. Negative or unresolved results are explicit outputs.
+- A uniform sufficient bound controls all five normalized quadrupole coordinates throughout the retained R1 exterior, preserving its scalar principal signs within declared budgets. The exact Dirichlet/conormal pairing gives the corresponding source bound. This is a conditional local-action result, not full-system or horizon stability.
+- The normalized boundary-to-metric-to-lensing transfer has explicit information losses: two line-of-sight modes vanish; the leading screened primary-pair delay response vanishes; and its first-order apparent-mass response is degenerate with external shear. The old joint-response experiment retains information discarded by the scalar statistic within its declared finite nuisance family.
 
-## Reproduce
+## Use the product
 
-Keep the sibling `bhsm_angular_lensing_20261021` directory: its exact archived provider is the theoretical input, not an observational data set. From this directory, using Python with the requirements installed:
+Read `product/README.md` in the delivery bundle for the Windows double-click launcher, installation, local app, CSV/JSON import, exact covariance order, CLI fitting/profiles, Python API and notebooks. The canonical source-checkout package is the repository's top-level `product/`; the delivery includes a self-contained copy. It needs no private research archive, remote fitting service or API key.
 
-    python scripts/reproduce.py
+The ordinary compact-lens mode is useful within its validated synthetic domain even when no BHSM-specific envelope can be measured. It can identify a supported mass/motion track, reject an inadequate model or report unresolved motion. It does not establish that a compact dark source has a horizon. All bundled data are synthetic, including the published-parameter stellar variation.
 
-The nine-stage replay verifies all pinned provider hashes and checks the source branch, radial equation, projection/derivative/normalization controls, estimator nulls, full primary-image responses, nuisance projection and figures. Logs and machine-readable receipts are under `results/` and `review/`. Random data are not needed. Source positions, matching fluxes and the state are supplied synthetic inputs.
+The frozen 64-draw full-covariance calibration completes without excluded fit failures. Nominal local 95% coverage is 61/64 for mass and both motion components, 59/64 for center x and 61/64 for center y. Exact binomial tests at the fixed alpha=0.01 reject none; finite-sample uncertainty and bias remain reported. The short cosmological control stays motion unresolved, and omitting conventional shear rejects the fit. The optional R1 envelope stays far below the nearby example's supplied noise at its admitted state cap.
 
-To compile, from `manuscript/`:
+## Reproduce the separate calculations
 
-    latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+From the self-contained source product directory, install its development dependencies and run:
 
-No terminal TeX installation is needed to read the compiled PDF. The build uses standard LaTeX article packages; this is an author-review research draft for Galaxies, not a submitted or accepted journal article.
+```text
+python -m pip install -e ".[dev]"
+python scripts/validate_product.py
+python scripts/execute_notebooks.py
+```
 
-## Key numerical interpretation
+Product stage logs, hashes and machine receipts are under `product/validation/`; the paper's `review/` contains the protocol and delivery snapshots. The notebooks replay the workflow rather than replace calibration.
 
-The final experiment has 54 dimensionless observable components and 30 nuisance coordinates, including the open scalar flux and axial scalar quadrupole. Equal dimensionless errors are a design metric. The actual small-state example has optical amplitude about −8.89e−13. Large optical amplitudes used to test lens derivatives do not establish scalar admissibility at those enlarged states. The 70-digit projection refines arithmetic of fixed double-input response columns, not physical accuracy. Full line integrals approximate an isolated frozen local exterior; tail bounds cover tails only.
+The original theory replay remains independent. Keep the sibling `bhsm_angular_lensing_20261021` directory containing its exact archived provider. From this paper directory, with `requirements.txt` installed, run:
 
-No observations, horizon evolution or empirical forecasts are included. Journal submission and external contact have not been performed.
+```text
+python scripts/reproduce.py
+```
+
+Its nine stages check pinned inputs, the source/radial/projection equations, estimator nulls, nonlinear image derivatives, nuisance projection and figures. Logs are under `results/` and `review/`. The old 54-component, 30-nuisance scan uses equal dimensionless errors, not a telescope covariance; its broad trajectory would require millions of years for the cosmological example. It is not the product's ten-year calibration fixture.
+
+From `manuscript/`, compile with:
+
+```text
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+```
+
+Read `RESULT_STATEMENT.md`, `LAY_REPORT.md`, `VALIDATION.md`, `CHAIN_AND_FREEDOMS.md`, the provenance map and internal reviews for scope and evidence. This is an author-review draft for *Galaxies*, not a submitted or accepted article. No journal submission or external contact has occurred.

@@ -7,9 +7,9 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black,
-pdftitle={Blackhole Tracker: Boundary-to-Lensing Transfer and Blind Directions in a Conditional BHSM Realization},pdfauthor={Norman P. Carberry}}
+pdftitle={Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Boundary Responses in a Conditional BHSM Realization},pdfauthor={Norman P. Carberry}}
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small Blackhole Tracker: transfer and blind directions}
+\fancyhead[L]{\small Blackhole Tracker: inference and boundary response}
 \fancyhead[R]{\small Author review draft}\fancyfoot[C]{\thepage}
 \setlength{\parskip}{.3em}\setlength{\parindent}{1em}
 \setlength{\emergencystretch}{3em}
@@ -18,7 +18,7 @@ pdftitle={Blackhole Tracker: Boundary-to-Lensing Transfer and Blind Directions i
 \newtheorem{corollary}{Corollary}\newtheorem{lemma}{Lemma}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\asinh}{\operatorname{asinh}}
-\title{\textbf{Blackhole Tracker: Boundary-to-Lensing Transfer and Blind Directions in a Conditional BHSM Realization}}
+\title{\textbf{Blackhole Tracker: Calibrated Compact-Lens Inference and Admissible Boundary Responses in a Conditional BHSM Realization}}
 \author{Norman P. Carberry\\\small Independent Researcher, Oconomowoc, Wisconsin, USA\\
 \small ORCID: \href{https://orcid.org/0009-0000-6650-3485}{0009-0000-6650-3485}}
 \date{}
@@ -26,28 +26,29 @@ pdftitle={Blackhole Tracker: Boundary-to-Lensing Transfer and Blind Directions i
 \maketitle
 \begin{center}\small Research article draft for \emph{Galaxies}: Strong Gravitational Lens Modeling\end{center}
 \begin{abstract}
-Can a compact dark object be tracked through the lensing response of a
-surrounding deformation? We construct a conditional Blackhole Tracker in
-the cubic scalar--tensor realization used by the Berger--Hopf Standard
-Model (BHSM) program. A supplied scalar flux and normalized worldtube
-quadrupole determine a unique decaying exterior response. Its action-owned
-metric coupling fixes one potential for image positions, magnifications
-and Fermat delays. In the deep screened region the transverse quadrupole
-projects to a radially constant spin-two phase. Its leading primary-pair
-delay perturbation vanishes, although its astrometric and flux responses
-need not. Moreover, its first-order delay--flux apparent-mass response is
-identical to that of an external shear; we derive the resulting blind
-direction explicitly. A symmetric line-of-sight projection also erases two
-of five three-dimensional quadrupole coordinates. A reproducible
-54-observable response experiment retains two transverse envelope
-directions after profiling 30 source and lens nuisance parameters, while
-the apparent-mass statistic alone does not. This is an information
-experiment: the broad trajectory is not a feasible observing campaign,
-and a small controlled boundary state gives an extremely faint response.
-Relative to known Galileon multipoles and compact-lens inference, the
-contribution is their normalized optical composition and its demonstrated
-information losses. Neither the microscopic BHSM-to-action map, a
-black-hole horizon flux, nor a physical deformation amplitude is selected.
+We present Blackhole Tracker, a runnable research toolkit for mass,
+center and proper-motion inference from resolved compact-lens image pairs,
+flux ratios and delays with a full supplied covariance. A local app,
+command line, Python package and executed notebooks share nonlinear
+inference, nuisance profiling and explicit rejection or unresolved
+outcomes. In a fixed synthetic ten-year, three-source validation, all 64
+noise realizations complete; nominal local 95\% interval coverage is
+59--61 of 64 across five tested mass, center and motion components.
+Short cosmological tracks remain motion unresolved, and an omitted
+ordinary shear produces a rejected fit. The optional scalar--tensor
+realization used by the Berger--Hopf Standard Model (BHSM) program
+supplies a normalized boundary-to-lensing response and a uniform
+sufficient amplitude bound throughout its retained exterior. It also
+exposes exact information losses: two projected quadrupole modes vanish,
+the leading screened primary-pair delay perturbation vanishes, and a
+standard apparent-mass statistic confounds its leading response with
+external shear. At an admitted state cap the nearby example's conditional
+envelope remains far below the supplied noise. The contribution is a
+validated specialist workflow and its action-specific admission and
+blind-direction results, not a first compact-lens tracker or empirical
+black-hole detection. Distances and calibrations are supplied; neither a
+microscopic BHSM-to-action map nor a horizon flux or physical deformation
+state is selected.
 \end{abstract}
 \noindent\textbf{Keywords:} strong gravitational lensing; compact objects;
 Vainshtein screening; scalar--tensor gravity; boundary response; identifiability
@@ -60,7 +61,8 @@ black-hole candidate's properties \cite{Sahu2022}; joint astrometry and
 parallax separate familiar mass, distance and proper-motion combinations.
 Moving dark structures also motivate multi-source astrometric templates
 \cite{VanTilburg2018}, and repeated lensed bursts carry motion-dependent
-delays \cite{Dai2017}. The new question here is narrower: can a specified
+delays \cite{Dai2017}. The product makes this measurement workflow reproducible under an explicit
+data contract. Its action-specific question is narrower: can a specified
 envelope deformation supply a calculable linked pattern in images, fluxes
 and delays, and which parts survive an ordinary lens fit?
 
@@ -74,15 +76,16 @@ compact dark source. All rays in this paper lie far outside a declared
 worldtube, itself far outside the gravitational radius. Lensing on that
 domain does not establish a horizon or identify the compact interior.
 
-The central result is a \emph{boundary-to-lensing transfer family with
-explicit blind directions}. Under the stated R1 effective action and
-local approximations, the normalized exterior multipole is determined
-once its flux and boundary state are supplied. Its screened phase has a
-leading delay null and an exact first-order degeneracy in a standard
-delay--flux statistic. Resolved primary-pair data can retain information
-lost by that statistic, as a declared numerical experiment demonstrates.
-These statements do not require a departure from GR to be valuable, but
-their action-specific application remains conditional.
+The central deliverable is a usable research product with an ordinary
+compact-lens tracking mode and an optional conditional boundary-response
+mode. The new theoretical result is a uniform sufficient admission bound
+on the normalized quadrupole throughout the retained R1 exterior. The
+optical calculation identifies exact blind directions and demonstrates
+why a working compact-mass track need not detect an envelope. A separate
+nonlinear product validation tests mass/motion recovery, full covariance,
+limited interval calibration and unsuccessful controls. These statements
+are independent of accepting a departure from GR; their action-specific
+application remains conditional.
 
 \subsection{Recovered record and scope of the new calculation}
 
@@ -135,6 +138,7 @@ kept as an exterior matching datum; the physical state remains free.
 The mathematical chain, and the place where it stops, are made explicit.
 
 \input{exterior_derivation}
+\input{admission_bound}
 
 \begin{figure}[t]
 \centering\includegraphics[width=\linewidth]{../figures/screened_transfer.pdf}
@@ -428,11 +432,15 @@ quadrupole phase tail below $8\times10^{-11}$ pc per unit boundary
 amplitude. These bound omitted tails only. They do not bound every
 weak-field, cosmological or effective-theory correction.
 
+\input{product_workflow}
+\input{product_validation}
+
 \section{What could actually be tracked?}
 
-The positive result is a calculable conditional response and a demonstrated
-way to avoid discarding its information. It is not a practical detector
-demonstration. For the illustrative cosmological mass and transverse
+The product demonstrates compact-lens inference under its declared synthetic
+measurement and covariance model. It does not demonstrate observational
+acquisition or a detectable BHSM envelope. The earlier broad information
+scan has a distinct limitation. For the illustrative cosmological mass and transverse
 speed $300$ km s$^{-1}$, ten observer years move the center only
 $0.00236$ pc, or $6.95\times10^{-6}r_E$. Traversing the broad synthetic
 $3.6r_E$ scan at that speed would take about $5.2$ million observer years.
@@ -495,32 +503,37 @@ General STF gravitational multipole projection is also established
 and ordinary radial multipole separation and profiled linear inference
 are standard methods. We do not claim priority for those ingredients.
 
-The addition is their explicit composition on the same normalized R1
-exterior, with a physical boundary datum, fixed metric coefficient,
-line-of-sight nulls, a delay-blind leading response, an exact
-apparent-mass/shear degeneracy, and a released joint-data information
-experiment that includes ordinary compact and external quadrupoles.
-The zero-flux harmonic control and short-track conditioning expose
-where the proposed tracker fails. This is a narrower and more
-independently checkable contribution than assigning a deformation
-template and calling its recovered center a BHSM black-hole detection.
+The addition combines their normalized R1 optical composition with an
+exterior-wide sufficient state cap and a runnable compact-lens inference
+workflow. Its theory exposes a delay-blind leading response, an exact
+apparent-mass/shear degeneracy and line-of-sight nulls. Its product retains
+full covariance and source freedom, and reports calibrated synthetic
+recovery together with weak-motion, mismatch and physically unresolved
+outcomes. The finite harmonic control makes a cause ambiguity exact
+rather than assigning every structured residual to BHSM.
 
-The result warrants a conditional theoretical methods paper and further
-physical matching work. It does not yet establish the sought decisive
-astrophysical advance. The next necessary object is a normalized
-black-hole/homogeneous-background boundary map that selects the
-exterior flux and the physically allowed deformation dynamics. An
-observational proposal would then need a source configuration and noise
-model capable of retaining the nondegenerate response at its derived
-amplitude. No telescope detection or journal submission is reported.
+The result supports a theoretical and computational lens-modeling methods
+paper with a usable specialist research tool. It does not yet establish
+a detectable BHSM deformation, horizon classification or a decisive new
+astrophysical discovery. Further R1 prediction needs a normalized
+black-hole/homogeneous-background boundary map selecting exterior flux
+and deformation dynamics. Observational use additionally requires actual
+resolved pairs, calibrated geometric fluxes and delays, and a model
+adequate for their environment. No telescope detection or journal
+submission is reported.
 
 \paragraph{Data and code availability.}
-The complete source package contains the archived angular paper and
-its pinned R1 provider, this manuscript, calculation scripts, numerical
-receipts, scientific figures, a compact provenance map and internal
-skeptical reviews. The entry point is \texttt{scripts/reproduce.py}.
-All inputs for this paper are synthetic or theoretical; no fresh
-observational validation set is used.
+The complete source package contains the three preserved research
+projects, this manuscript, the \texttt{product/} package, executed
+notebooks, synthetic examples, source pins and numerical/review receipts.
+The paper's theoretical replay entry point is
+\texttt{scripts/reproduce.py}; the product's is
+\texttt{product/scripts/validate\_product.py}. Its README documents app,
+command-line and Python use and the data contract. All validation inputs
+are synthetic or theoretical; no fresh observational validation set is
+used. The released source and draft revision are available in the
+\href{https://github.com/ncarberry64/Manuscript-Generation/pull/24}{author's
+repository draft}.
 
 \paragraph{Author and AI disclosure.}
 The manuscript was prepared for Norman P. Carberry with AI assistance
