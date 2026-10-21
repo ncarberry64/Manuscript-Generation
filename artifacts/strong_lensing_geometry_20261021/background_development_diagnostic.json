@@ -1,0 +1,190 @@
+{
+  "status": "CONSUMED_HST_ONLY_BACKGROUND_FAMILY_DEVELOPMENT_DIAGNOSTIC",
+  "data_sha256": {
+    "data/strong_lensing_revision_20261020/hst/F814W_lens_cutout.fits": "12fe51cbb4fa126bcd2a9d147983f8055e135ff9b139d60e64b65d3ad3053fa1",
+    "data/strong_lensing_revision_20261020/hst/F814W_star2_cutout.fits": "477cd5788c7bc54205164fdaac4558f1101af209be2980b67de611302e27a484",
+    "artifacts/strong_lensing_revision_20261020/hst_central_image.json": "c53d34fcef8832ba16345606271c36b378e9c0e0553638022b6f0c54ac413b60"
+  },
+  "new_JWST_quasar_values_opened": false,
+  "band": "ACS F814W",
+  "stamp_radius_pixels": 5,
+  "stamp_angular_width_arcsec": 0.55,
+  "fixed_PSF": "same consumed field-star2 empirical positive native response for both fits; no noise or PSF retuning",
+  "known_noise": "Original declared WHT-exposure-like marginal-error formula, no residual scaling",
+  "models_evaluated": "d_i=F*P_i(cx,cy)+b0+bx*dx+by*dy (+bxx*dx^2+bxy*dx*dy+byy*dy^2), identical free point parameters and same fixed PSF/ERR; original nuisance covariance profiled",
+  "per_image": [
+    {
+      "image": "A",
+      "fits": [
+        {
+          "background_degree": 1,
+          "chi2": 12029.104241467854,
+          "dof": 115,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            57.089987865244254,
+            91.13535717818907
+          ],
+          "background_polynomial_SCI": [
+            0.14700949716971018,
+            -0.010007556042471577,
+            -0.0084492962561153
+          ],
+          "jacobian_rank": 6,
+          "valid_measurement_fit": true
+        },
+        {
+          "background_degree": 2,
+          "chi2": 11937.705000565838,
+          "dof": 112,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            57.089902812369395,
+            91.13552522546163
+          ],
+          "background_polynomial_SCI": [
+            0.12449144933641397,
+            -0.009479506263650928,
+            -0.009093415374549487,
+            0.002223100565253986,
+            0.001081321492867752,
+            -0.0008160595859113884
+          ],
+          "jacobian_rank": 9,
+          "valid_measurement_fit": true
+        }
+      ],
+      "chi2_reduction_with_fixed_noise": 91.39924090201566
+    },
+    {
+      "image": "B",
+      "fits": [
+        {
+          "background_degree": 1,
+          "chi2": 2746.8242315136017,
+          "dof": 115,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            86.60847934634289,
+            102.18371528331825
+          ],
+          "background_polynomial_SCI": [
+            0.16802301450514875,
+            -0.00784916379268291,
+            -0.00810064754520247
+          ],
+          "jacobian_rank": 6,
+          "valid_measurement_fit": true
+        },
+        {
+          "background_degree": 2,
+          "chi2": 2565.58313747942,
+          "dof": 112,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            86.60940799328996,
+            102.18336350896952
+          ],
+          "background_polynomial_SCI": [
+            0.10078402711549021,
+            -0.010810702151443193,
+            -0.007165568497623183,
+            0.003494746427312835,
+            -0.0012620664663498078,
+            0.0010816109653311963
+          ],
+          "jacobian_rank": 9,
+          "valid_measurement_fit": true
+        }
+      ],
+      "chi2_reduction_with_fixed_noise": 181.24109403418151
+    },
+    {
+      "image": "C",
+      "fits": [
+        {
+          "background_degree": 1,
+          "chi2": 3744.125285372416,
+          "dof": 115,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            106.41878921866181,
+            79.07096141658633
+          ],
+          "background_polynomial_SCI": [
+            0.14976893528910232,
+            -0.014102187961630179,
+            -0.005216483289476242
+          ],
+          "jacobian_rank": 6,
+          "valid_measurement_fit": true
+        },
+        {
+          "background_degree": 2,
+          "chi2": 3715.633401701094,
+          "dof": 112,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            106.41861677906455,
+            79.07099926932291
+          ],
+          "background_polynomial_SCI": [
+            0.11533495873245612,
+            -0.013001857697036759,
+            -0.005220474175399009,
+            0.001600537022038995,
+            -3.727118918156785e-05,
+            0.0006973713468153817
+          ],
+          "jacobian_rank": 9,
+          "valid_measurement_fit": true
+        }
+      ],
+      "chi2_reduction_with_fixed_noise": 28.49188367132183
+    },
+    {
+      "image": "D",
+      "fits": [
+        {
+          "background_degree": 1,
+          "chi2": 6988.1156434007835,
+          "dof": 115,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            75.80760288475024,
+            58.84625554106343
+          ],
+          "background_polynomial_SCI": [
+            0.1703189936989256,
+            -0.002600236322510475,
+            0.0029395980635224827
+          ],
+          "jacobian_rank": 6,
+          "valid_measurement_fit": true
+        },
+        {
+          "background_degree": 2,
+          "chi2": 6913.963869833116,
+          "dof": 112,
+          "p_value": 0.0,
+          "centroid_xy_pixel": [
+            75.80791240889234,
+            58.84608979171806
+          ],
+          "background_polynomial_SCI": [
+            0.1438823732379578,
+            -0.003231135789248779,
+            0.003327213246954607,
+            0.0018489803417201503,
+            -0.0008624404318804277,
+            -8.642170324603681e-05
+          ],
+          "jacobian_rank": 9,
+          "valid_measurement_fit": true
+        }
+      ],
+      "chi2_reduction_with_fixed_noise": 74.15177356766708
+    }
+  ],
+  "interpretation": "Absolute fits are descriptive and not accepted instrumental/galaxy models; PSF mismatch and diffuse light are not uniquely separated. Improvement by smooth curvature motivates a pre-target degree2 diffuse-background nuisance, not an F115W background amplitude prediction or PSF-tail modification."
+}

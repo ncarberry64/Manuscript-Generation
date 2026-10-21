@@ -37,7 +37,9 @@ data/strong_lensing_revision_20261020/gaia/*.csv -text whitespace=-blank-at-eol,
 
 # Preserve the new pre-target freezes, archive metadata and application receipts.
 data/strong_lensing_geometry_20261021/**/*.json -text whitespace=cr-at-eol
+data/strong_lensing_geometry_20261021/**/*.csv -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 artifacts/strong_lensing_geometry_20261021/**/*.json -text whitespace=cr-at-eol
 artifacts/strong_lensing_geometry_20261021/*.json -text whitespace=cr-at-eol
 preregistration/he0435*20261021.json -text whitespace=cr-at-eol
 *.fits binary
+*.asdf binary

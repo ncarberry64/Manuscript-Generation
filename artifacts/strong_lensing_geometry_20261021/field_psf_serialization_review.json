@@ -1,0 +1,19 @@
+{
+  "status": "SERIALIZATION_ONLY_CORRECTION_REVIEWED_BEFORE_FIELD_RECOVERY",
+  "preserved_first_freeze": "fc3a449db48c2956627f6174884122e71391eee5",
+  "change": "JSON default encodes numpy scalars with item() and ndarray with tolist(); unsupported values still raise; allow_nan=False remains. Selection, target guard, ePSF construction, errors and adequacy gates unchanged.",
+  "source_sha256": {
+    "scripts/calibrate_he0435_jwst_psf.py": "3dec65954721d5df2b9e0d066caeb6f7dc2b65f472243d5cd47a835e9edb1f5f",
+    "tests/test_strong_lensing_field_psf.py": "0ed32f9e36fcc78959755df903a99cbc9496fadb13e90684817269213472e8ed"
+  },
+  "tests": {
+    "passed": 11,
+    "failed": 0,
+    "seconds": 2.06,
+    "new_case": "NumPy pixel bounds and arrays encode exactly; NaN is rejected."
+  },
+  "field_recovery_executed": false,
+  "quasar_target_values_inspected": false,
+  "physical_predictions_unchanged": true,
+  "first_failure_receipt": "artifacts/strong_lensing_geometry_20261021/field_psf/field_psf_runtime_failure.json"
+}

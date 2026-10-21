@@ -79,12 +79,44 @@ old development-light likelihood. There are nine free parameters: eight of
 the old local/source/screen/center parameters plus G1 log mass, with kappa
 fixed. It is not a validation using Gaia and not a complete posterior.
 
-The conventional solution has G1 mass 2.4157771e11 solar masses,
-Q_Gaia=.01038592, and coordinate RMS=.00661347 mas. R1 reaches Q=.01271245 and
-RMS=.00751532 mas. The new six-coordinate whitened derivative has six strong
-directions (smallest singular value 3.675 versus .002 in the first old-family
-trial). All physical predictions must now be frozen before any new data are
-opened. The unusually small in-sample Q is not evidence of predictive success.
+The first exploratory G1 fit used the previous small-field Gaia coordinate
+map. It reached G1 mass 2.4157771e11 solar masses, Q_Gaia=.01038592 and
+RMS=.00661347 mas for the conventional model, and Q=.01271245 and
+RMS=.00751532 mas for R1. Those exploratory figures are preserved under
+`diagnosis/`; they are not the final frozen prediction.
+
+The final fit uses exact gnomonic coordinates centered on A and the analytic
+six-by-eight covariance pushforward from all eight catalogue alpha-star and
+declination perturbations, including the uncertain reference origin. Gaia's
+RA errors already describe alpha-star; each catalogue row's own local tangent
+basis is used. The largest coordinate correction is .00321176 mas, far too
+small to explain the original approximately 3.26 mas failure. The old frozen
+Gaia arrays and results remain unchanged.
+
+The final `positive_g1_development_fit.json` and matching image censuses give:
+
+| Model | G1 mass, solar masses | Gaia Q | Coordinate RMS, mas | Central/A |
+| --- | ---: | ---: | ---: | ---: |
+| Conventional | 235148467074 | 0.026511601827 | 0.0105512092357 | 0.00165054058905 |
+| R1 | 235146069817 | 0.0262799707485 | 0.0105059067542 | 0.00165037739633 |
+
+The final conventional six-coordinate whitened derivative has six strong
+directions (smallest singular value 3.77491 versus .002 in the exploratory
+old-family trial). Both finite searches find seven stationary images, with
+all three additional-image contributions individually retained.
+
+The precision rerun also reached a better weak-nuisance optimum: the
+conventional exact development objective changed from -19200.5925683 in the
+exploratory fit to -19201.1919554 in the final fit. The parameter and delay
+changes cannot be attributed physically to the tiny coordinate correction;
+these fits contain weak nuisance directions and are not a converged complete
+posterior. The final R1 objective is -19201.1918397. The tiny conventional/R1
+objective difference does not establish a state preference.
+
+The physical point predictions were frozen at commit `fc3a449` before the
+new native-file acquisition and target application. The unusually small
+in-sample Gaia Q is not evidence of predictive success. No uncertainty floor
+or wider-error validation is used.
 
 The local R1 calculation retains the original nonlinear scalar equation on
 the TOTAL local two-Plummer density once. Its section residuals remain near

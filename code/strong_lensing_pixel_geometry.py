@@ -147,8 +147,13 @@ def empirical_psf_values(grid,oversampling,origin,x,y,center):
 
 
 def fit_empirical_point(data,error,dq,guess,psf_grid,oversampling,psf_origin,
-                        stamp_radius=8,centroid_bound=5.):
-    """Known-ERR six-parameter ePSF/affine-plane fit with a field-frozen PSF."""
+                        stamp_radius=8,centroid_bound=5.,background_degree=1):
+    """Known-ERR ePSF fit with a fixed affine or quadratic diffuse background.
+
+    Degree1 is the original six-parameter API. A separately frozen degree2
+    application adds x²,xy,y² smooth nuisance terms; no PSF or ERR is modified.
+    """
+    if background_degree not in [1,2]:raise ValueError('Background degree must be1 or2')
     data,error,dq=np.asarray(data,float),np.asarray(error,float),np.asarray(dq)
     good=native_pixel_mask(data,error,dq)
     cx,cy=np.asarray(guess,float)
@@ -166,15 +171,19 @@ def fit_empirical_point(data,error,dq,guess,psf_grid,oversampling,psf_origin,
     if grid.ndim!=2 or min(grid.shape)<4 or not np.all(np.isfinite(grid)) or oversampling<=0:
         raise ValueError('Invalid field-calibrated empirical PSF')
     interp=RectBivariateSpline(np.arange(grid.shape[1]),np.arange(grid.shape[0]),grid.T,kx=3,ky=3,s=0)
+    dx,dy=x-cx,y-cy
+    background=np.column_stack([np.ones_like(x),dx,dy] +
+                               ([dx*dx,dx*dy,dy*dy] if background_degree==2 else []))
     def predict(p):
         px=(x-p[0])*oversampling+psf_origin[0]
         py=(y-p[1])*oversampling+psf_origin[1]
         profile=interp.ev(px,py)
         profile=np.where((px>=0)&(py>=0)&(px<=grid.shape[1]-1)&(py<=grid.shape[0]-1),profile,0.)
-        return np.exp(p[2])*profile+p[3]+p[4]*(x-cx)+p[5]*(y-cy)
-    lo=[cx-centroid_bound,cy-centroid_bound,np.log(1e-8),-np.inf,-np.inf,-np.inf]
-    hi=[cx+centroid_bound,cy+centroid_bound,np.log(max(flux0*1e4,1e8)),np.inf,np.inf,np.inf]
-    result=least_squares(lambda p:(predict(p)-d)/err,[cx,cy,np.log(flux0),bg,0.,0.],
+        return np.exp(p[2])*profile+background@p[3:]
+    nbackground=background.shape[1]
+    lo=[cx-centroid_bound,cy-centroid_bound,np.log(1e-8)]+[-np.inf]*nbackground
+    hi=[cx+centroid_bound,cy+centroid_bound,np.log(max(flux0*1e4,1e8))]+[np.inf]*nbackground
+    result=least_squares(lambda p:(predict(p)-d)/err,[cx,cy,np.log(flux0),bg]+[0.]*(nbackground-1),
                          bounds=(lo,hi),jac='3-point',x_scale='jac',
                          ftol=1e-10,xtol=1e-10,gtol=1e-8,max_nfev=350)
     j=result.jac;jc,jn=j[:,:2],j[:,2:]
@@ -189,7 +198,10 @@ def fit_empirical_point(data,error,dq,guess,psf_grid,oversampling,psf_origin,
             if np.any(flags&(np.uint64(1)<<np.uint64(b)))}
     return {'centroid_xy_pixel':result.x[:2].tolist(),'centroid_covariance_pixel2':covariance.tolist(),
             'flux_in_SCI_pixel_units':float(np.exp(result.x[2])*unit),
-            'background_plane_SCI':(result.x[3:]*unit).tolist(),
+            'background_plane_SCI':(result.x[3:6]*unit).tolist(),
+            'background_polynomial_SCI':(result.x[3:]*unit).tolist(),
+            'background_polynomial_basis':['1','dx','dy']+(['dx2','dxdy','dy2'] if background_degree==2 else []),
+            'background_degree':int(background_degree),
             'chi2':statistic,'dof':int(dof),'p_value':float(chi2.sf(statistic,dof)),
             'usable_pixels':int(len(d)),'jacobian_rank':rank,
             'optimizer_success':bool(result.success),'optimizer_message':str(result.message),

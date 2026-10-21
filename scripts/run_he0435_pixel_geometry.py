@@ -48,6 +48,19 @@ def reference_sky(protocol):
     return r
 
 
+def reference_pixel_guesses(protocol,native_filename,wcs,guesses_sky):
+    """Frozen field-registration association only; it never modifies geometry."""
+    mapping=protocol.get('reference_guesses_xy_pixel_by_exposure')
+    if mapping is not None:
+        guesses=np.asarray(mapping[native_filename],float)
+    else:
+        guesses=np.array([wcs.invert(float(a),float(d),with_bounding_box=False)[:2]
+                          for a,d in guesses_sky],float)
+    if guesses.shape!=(4,2) or not np.all(np.isfinite(guesses)):
+        raise ValueError('Four finite frozen initial A/B/C/D pixel associations required')
+    return guesses
+
+
 def score_models(observed,covariance,models,alpha,required_reduction=.25):
     scores={}
     for name,model in models.items():
@@ -82,12 +95,60 @@ def frozen_psf_calibration(protocol,commit):
     calibration=json.loads(path.read_text(encoding='utf-8'))
     if calibration.get('overall_adequacy_pass') is not True:
         raise RuntimeError('Field-only PSF calibration failed; quasar targets must remain sealed')
-    for native,relative in calibration['psf_files_by_exposure'].items():
-        psf=ROOT/relative
-        expected=calibration['file_sha256'].get(relative)
-        if expected!=sha(psf):raise RuntimeError(f'Field PSF grid hash changed: {relative}')
-        verify_frozen(psf,commit)
+    checked=set()
+    for native in calibration['psf_files_by_exposure']:
+        for relative in psf_paths_by_label(calibration,native).values():
+            if relative in checked:continue
+            psf=ROOT/relative
+            expected=calibration['file_sha256'].get(relative)
+            if expected!=sha(psf):raise RuntimeError(f'Field PSF grid hash changed: {relative}')
+            verify_frozen(psf,commit)
+            checked.add(relative)
     return calibration
+
+
+def psf_paths_by_label(calibration,native_filename):
+    """Resolve flat legacy or position-dependent A/B/C/D field-frozen PSFs."""
+    entry=calibration['psf_files_by_exposure'][native_filename]
+    if isinstance(entry,str):return {label:entry for label in 'ABCD'}
+    if not isinstance(entry,dict) or set(entry)!=set('ABCD'):
+        raise ValueError('Position-dependent PSF mapping requires exactly A/B/C/D')
+    if not all(isinstance(value,str) and value for value in entry.values()):
+        raise ValueError('Each position-dependent PSF must name a frozen grid file')
+    return dict(entry)
+
+
+def verify_native_inputs(paths,protocol,calibration):
+    """Check exact declared files against frozen field receipt before exposure."""
+    declared=protocol['primary_observation']['products']
+    basenames=[Path(path).name for path in paths]
+    if len(declared)!=4 or len(set(declared))!=4 or len(basenames)!=4 or set(basenames)!=set(declared):
+        raise RuntimeError('Exactly the four declared native CAL files are required')
+    expected=(calibration or {}).get('input_sha256',protocol.get('native_sha256',{}))
+    for path in paths:
+        if expected.get(Path(path).name)!=sha(path):
+            raise RuntimeError(f'Native CAL hash missing or changed before target opening: {Path(path).name}')
+
+
+def archive_native_windows(model,guesses,path,out,source_sha):
+    """Exact native copies, called only inside the explicitly exposed application."""
+    from astropy.io import fits
+    paths={}
+    for label,guess in zip('ABCD',guesses):
+        ix,iy=np.rint(guess).astype(int)
+        x0,x1=max(0,ix-14),min(model.data.shape[1],ix+15)
+        y0,y1=max(0,iy-14),min(model.data.shape[0],iy+15)
+        primary=fits.PrimaryHDU()
+        for key,value in [('X0',x0),('Y0',y0),('LABEL',label),('CALFILE',path.name),('CAL_SHA',source_sha)]:
+            primary.header[key]=value
+        primary.header['HISTORY']='Exact SCI/ERR/DQ native copies, no resampling or error modification.'
+        hdus=[primary]+[fits.ImageHDU(np.array(array[y0:y1,x0:x1]),name=name)
+                        for name,array in [('SCI',model.data),('ERR',model.err),('DQ',model.dq)]]
+        output=out/'native_stamps'/f'{path.stem}_{label}.fits';output.parent.mkdir(parents=True,exist_ok=True)
+        fits.HDUList(hdus).writeto(output,overwrite=False)
+        paths[label]={'path':f'native_stamps/{output.name}','sha256':sha(output),
+                      'native_bounds_xyxy':[int(v) for v in [x0,y0,x1,y1]]}
+    return paths
 
 
 def apply_native_files(paths,protocol,models,out,calibration=None):
@@ -107,6 +168,7 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
     bound=float(protocol.get('centroid_bound_pixels',5.))
     quadrature=int(protocol.get('quadrature_order',7))
     psf_model=protocol.get('psf_model','moffat')
+    background_degree=int(protocol.get('background_degree',1))
     exposures=[];non_target=[]
     for path in sorted(set(Path(p).resolve() for p in paths)):
         with datamodels.open(path) as model:
@@ -115,8 +177,7 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
                 raise ValueError(f'Unexpected filter {filter_name}; unopened reserve bands prohibited')
             wcs=model.meta.wcs
             try:
-                guesses=np.array([wcs.invert(float(a),float(d),with_bounding_box=False)[:2]
-                                  for a,d in guesses_sky],float)
+                guesses=reference_pixel_guesses(protocol,path.name,wcs,guesses_sky)
             except Exception as exc:
                 non_target.append({'file':str(path),'reason':'inverse WCS failure','message':str(exc)});continue
             shape=tuple(model.data.shape)
@@ -131,24 +192,45 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
             item={'file':str(path),'sha256':sha(path),'filter':filter_name,
                   'detector':str(model.meta.instrument.detector),
                   'measurement_errors':[], 'points':[]}
+            item['native_stamp_archives']=archive_native_windows(model,guesses,path,out,item['sha256'])
+            try:
+                import asdf,copy
+                wcs_path=out/'wcs'/f'{path.stem}_wcs.asdf';wcs_path.parent.mkdir(parents=True,exist_ok=True)
+                asdf.AsdfFile({'wcs':copy.deepcopy(wcs),'native_CAL_SHA256':item['sha256']}).write_to(wcs_path)
+                item['official_GWCS_archive']={'path':f'wcs/{wcs_path.name}','sha256':sha(wcs_path)}
+            except Exception as error:
+                item['official_GWCS_archive_error']={'type':type(error).__name__,'message':str(error),
+                    'replay':'Recover official GWCS from public native CAL URL and retained SHA256'}
             for key in ['filename','telescope','date','observation','exposure','wcsinfo','ref_file','cal_step']:
                 try:item[key]=model.meta[key].instance
                 except Exception:pass
             points=[];covariance=np.zeros((8,8))
-            psf_grid=None
+            psfs_by_label={}
             if psf_model=='field_empirical':
                 from astropy.io import fits
-                relative=calibration['psf_files_by_exposure'][path.name]
-                with fits.open(ROOT/relative) as psf:
-                    psf_grid=np.array(psf[0].data,float)
-                    oversampling=int(psf[0].header['OVERSMP'])
-                    psf_origin=[float(psf[0].header['ORIGINX']),float(psf[0].header['ORIGINY'])]
-                item['field_psf_path']=relative;item['field_psf_sha256']=sha(ROOT/relative)
+                paths_by_label=psf_paths_by_label(calibration,path.name)
+                loaded={}
+                for label,relative in paths_by_label.items():
+                    if relative not in loaded:
+                        with fits.open(ROOT/relative) as psf:
+                            grid=np.array(psf[0].data,float)
+                            over=int(psf[0].header['OVERSMP'])
+                            psf_origin=[float(psf[0].header['ORIGINX']),float(psf[0].header['ORIGINY'])]
+                        loaded[relative]=(grid,over,psf_origin)
+                    psfs_by_label[label]=loaded[relative]
+                item['field_psf_paths_by_label']=paths_by_label
+                item['field_psf_sha256_by_label']={label:sha(ROOT/relative) for label,relative in paths_by_label.items()}
+                if len(set(paths_by_label.values()))==1:
+                    relative=next(iter(paths_by_label.values()))
+                    item['field_psf_path']=relative;item['field_psf_sha256']=sha(ROOT/relative)
             for i,(label,guess) in enumerate(zip('ABCD',guesses)):
                 try:
                     if psf_model=='field_empirical':
+                        psf_grid,oversampling,psf_origin=psfs_by_label[label]
                         fit=fit_empirical_point(model.data,model.err,model.dq,guess,psf_grid,
-                                                oversampling,psf_origin,radius,bound)
+                                                oversampling,psf_origin,radius,bound,background_degree)
+                        fit['field_psf_path']=item['field_psf_paths_by_label'][label]
+                        fit['field_psf_sha256']=item['field_psf_sha256_by_label'][label]
                     else:
                         fit=fit_moffat_point(model.data,model.err,model.dq,guess,radius,bound,quadrature)
                     skyxy,skycov,jac=gwcs_centroid(wcs,fit['centroid_xy_pixel'],fit['centroid_covariance_pixel2'],origin)
@@ -174,7 +256,8 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
     complete=[x for x in exposures if 'intrinsic_q_arcsec' in x]
     count_ok=len(complete)==expected and len(exposures)==expected
     fit_ok=count_ok and all(p['pixel_model_adequate_at_frozen_threshold'] for x in exposures for p in x['points'])
-    result={'measurement_family':('Field-frozen pixel-integrated empirical ePSF plus affine background, fixed known ERR'
+    result={'measurement_family':('Field-frozen pixel-integrated empirical ePSF plus '+
+                                  ('quadratic' if background_degree==2 else 'affine')+' background, fixed known ERR'
                                    if psf_model=='field_empirical' else 'Pixel-integrated elliptical Moffat plus affine background, fixed known ERR'),
             'target_filter':primary,'exposures_found':len(exposures),'complete_exposures':len(complete),
             'expected_target_exposures':expected,'exposure_count_matches_protocol':count_ok,
@@ -225,6 +308,7 @@ def main():
         print(json.dumps({'frozen_inputs_verified':True,'target_arrays_opened':False,
                           'note':'--execute required; no SCI planes opened'},indent=2));return
     if not args.cal:raise ValueError('Explicit native CAL filenames required')
+    verify_native_inputs(args.cal,protocol,calibration)
     args.output.mkdir(parents=True,exist_ok=True)
     marker=args.output/'target_exposure_started.json'
     with marker.open('x',encoding='utf-8') as stream:

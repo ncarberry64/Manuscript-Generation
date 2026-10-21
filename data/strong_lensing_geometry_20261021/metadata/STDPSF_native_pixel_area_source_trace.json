@@ -1,0 +1,26 @@
+{
+  "status": "PRIMARY_CONSUMER_SOURCE_TRACE_NO_NEW_HE0435_SCI_VALUES",
+  "source_url": "https://www.stsci.edu/~jayander/JWST1PASS/CODE/jwst1pass.2025.09.30_v1f.F",
+  "retrieved_utc": "2026-10-21T13:26:59.032027+00:00",
+  "source_bytes": 907848,
+  "source_sha256": "637b667dd7136769ec8ce8c04ba034da9c614a55e59c2f6cc43a8895f581b01c",
+  "NIRCam_CAL_read_branch_lines_one_based": [
+    13614,
+    13945
+  ],
+  "native_SCI_and_ERR_read_calls_lines_one_based": [
+    13641,
+    13642
+  ],
+  "post_fit_pixel_area_photometric_correction_lines_one_based": [
+    16638,
+    16645
+  ],
+  "findings": [
+    "The NIRCam single-CAL detector branch loads SCI and ERR directly; the original consumer does not multiply the two-dimensional image by a separate AREA/PAM array in that read/measurement path.",
+    "The fitted stellar flux is converted to an instrumental magnitude before the geometric-distortion pixel-area magnitude correction is requested for output.",
+    "An arbitrary global flux-unit conversion is absorbed by the free point flux and does not change the normalized residual or centroid when SCI and ERR use the same units."
+  ],
+  "scope": "Inference about the supplied STDPSF consumer convention from its original source. This is not a complete independent derivation of the historical LMC PSF-construction calibration. No additional PAM shape correction is silently introduced.",
+  "comparison": "Other packages such as DOLPHOT can require PAM preprocessing under their own PSF convention; that does not establish that the same operation belongs before this independent STDPSF consumer."
+}

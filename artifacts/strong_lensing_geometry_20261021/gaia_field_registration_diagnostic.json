@@ -1,0 +1,125 @@
+{
+  "scope": "Field-only catalogue association diagnostic, before PSF library array open; protected circle still masked; no quasar target pixel use",
+  "rows": [
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "catalogue_projected_xy": [
+        918.0539172698426,
+        904.2478939887649
+      ],
+      "local_peak_xy": [
+        902,
+        877
+      ],
+      "local_peak_snr": 84.21629251048026,
+      "peak_displacement_pixel": [
+        -16.0539172698426,
+        -27.247893988764872
+      ],
+      "saturated_pixel_count_121square": 18,
+      "saturated_pixel_bounds": [
+        898,
+        874,
+        901,
+        878
+      ]
+    },
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "catalogue_projected_xy": [
+        1301.1527818966556,
+        526.2554112033794
+      ],
+      "local_peak_xy": [
+        1285,
+        497
+      ],
+      "local_peak_snr": 87.7663781245439,
+      "peak_displacement_pixel": [
+        -16.152781896655597,
+        -29.255411203379367
+      ],
+      "saturated_pixel_count_121square": 18,
+      "saturated_pixel_bounds": [
+        1281,
+        496,
+        1284,
+        500
+      ]
+    },
+    {
+      "source_id": "3178020716640422912",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "catalogue_projected_xy": [
+        62.08522676639782,
+        1406.146404692603
+      ],
+      "local_peak_xy": [
+        48,
+        1378
+      ],
+      "local_peak_snr": 103.21431184591808,
+      "peak_displacement_pixel": [
+        -14.085226766397817,
+        -28.146404692603028
+      ],
+      "saturated_pixel_count_121square": 51,
+      "saturated_pixel_bounds": [
+        40,
+        1375,
+        47,
+        1381
+      ]
+    },
+    {
+      "source_id": "3178020716638520576",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "catalogue_projected_xy": [
+        1492.2721213722311,
+        337.0342033722637
+      ],
+      "local_peak_xy": [
+        1474,
+        306
+      ],
+      "local_peak_snr": 85.60128825938448,
+      "peak_displacement_pixel": [
+        -18.27212137223114,
+        -31.034203372263676
+      ],
+      "saturated_pixel_count_121square": 21,
+      "saturated_pixel_bounds": [
+        1472,
+        307,
+        1476,
+        311
+      ]
+    },
+    {
+      "source_id": "3178020716640422912",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "catalogue_projected_xy": [
+        254.4273560229897,
+        1218.4163340151363
+      ],
+      "local_peak_xy": [
+        231,
+        1189
+      ],
+      "local_peak_snr": 102.22092395521935,
+      "peak_displacement_pixel": [
+        -23.4273560229897,
+        -29.41633401513627
+      ],
+      "saturated_pixel_count_121square": 61,
+      "saturated_pixel_bounds": [
+        232,
+        1186,
+        240,
+        1194
+      ]
+    }
+  ]
+}

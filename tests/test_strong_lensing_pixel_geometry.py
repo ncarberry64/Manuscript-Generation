@@ -4,6 +4,8 @@ import unittest
 from unittest.mock import patch
 import tempfile
 import types
+import json
+import hashlib
 
 import numpy as np
 from scipy.special import ndtr
@@ -16,6 +18,7 @@ from strong_lensing_pixel_geometry import (
     fit_empirical_point)
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from run_he0435_pixel_geometry import score_models,apply_native_files
+import run_he0435_pixel_geometry as pixel_runner
 
 
 class PixelGeometryTests(unittest.TestCase):
@@ -120,6 +123,97 @@ class PixelGeometryTests(unittest.TestCase):
         result=score_models(truth,np.eye(5),models,.05,.25)['revised']
         self.assertTrue(result['meets_declared_baseline_raw_q_RMS_reduction'])
 
+    def test_quadratic_background_recovers_centroid_bias_without_changing_PSF_or_ERR(self):
+        over=8;origin=[76.,76.];yyg,xxg=np.indices((153,153));sigma=.9
+        profile=lambda z:ndtr((z+.5)/sigma)-ndtr((z-.5)/sigma)
+        grid=profile((xxg-76)/over)*profile((yyg-76)/over)
+        yy,xx=np.indices((25,25));dx,dy=xx-12,yy-12;center=[12.34,11.73]
+        # Independent analytic native-pixel PRF plus smooth diffuse curvature.
+        data=1000*profile(xx-center[0])*profile(yy-center[1])+5+.04*dx-.06*dy+.5*dx*dx+.3*dx*dy+.2*dy*dy
+        err=np.full_like(data,.2);dq=np.zeros(data.shape,dtype='uint32')
+        affine=fit_empirical_point(data,err,dq,[12,12],grid,over,origin)
+        curved=fit_empirical_point(data,err,dq,[12,12],grid,over,origin,background_degree=2)
+        self.assertGreater(np.linalg.norm(np.asarray(affine['centroid_xy_pixel'])-center),.004)
+        self.assertLess(affine['p_value'],.001)
+        np.testing.assert_allclose(curved['centroid_xy_pixel'],center,atol=2e-6)
+        self.assertGreater(curved['p_value'],.999)
+        self.assertEqual(curved['jacobian_rank'],9)
+        np.testing.assert_allclose(curved['background_polynomial_SCI'],[5,.04,-.06,.5,.3,.2],atol=1e-5)
+        self.assertTrue(np.all(np.linalg.eigvalsh(curved['centroid_covariance_pixel2'])>0))
+
+    def test_nested_per_label_PSF_hashes_and_all_sixteen_measurement_routes(self):
+        from astropy.io import fits
+        origin=np.array([69.562,-12.287]);scale=.031
+        positions=np.array([[35.,35.],[75.,35.],[35.,75.],[75.,75.]])
+        class FakeWCS:
+            def __call__(self,x,y):return (origin[0]+np.asarray(x)*scale/3600/np.cos(np.deg2rad(origin[1])),origin[1]+np.asarray(y)*scale/3600)
+            def invert(self,ra,dec,with_bounding_box=False):return ((ra-origin[0])*3600*np.cos(np.deg2rad(origin[1]))/scale,(dec-origin[1])*3600/scale)
+        class FakeImage:
+            def __init__(self):
+                self.meta=types.SimpleNamespace(wcs=FakeWCS(),instrument=types.SimpleNamespace(filter='F115W',detector='NRCB3'))
+                self.data=np.zeros((120,120));self.err=np.ones((120,120));self.dq=np.zeros((120,120),np.uint32)
+            def __enter__(self):return self
+            def __exit__(self,*args):pass
+        refs=np.array([FakeWCS()(*p) for p in positions]);sky=tangent_plane_arcsec(refs,origin)
+        truth=(sky[1:]-sky[0]).ravel();old=truth.copy();old[0]+=.005
+        models={'old':{'relative_B_C_D_to_A_east_north_arcsec':old.tolist()},
+                'revised':{'relative_B_C_D_to_A_east_north_arcsec':truth.tolist(),'baseline_model':'old'}}
+        fake=types.ModuleType('stdatamodels.jwst');fake.datamodels=types.SimpleNamespace(open=lambda f:FakeImage())
+        seen=[]
+        def extract(data,error,dq,guess,grid,*args):
+            seen.append(float(grid[0,0]))
+            return {'centroid_xy_pixel':np.asarray(guess).tolist(),'centroid_covariance_pixel2':(np.eye(2)*1e-4).tolist(),
+                    'p_value':.5,'valid_measurement_fit':True}
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);mapping={};hashes={};native=[]
+            for i in range(4):
+                path=root/f'cal{i}';path.write_bytes(b'SYNTHETICONLY');native.append(path);mapping[path.name]={}
+                for k,label in enumerate('ABCD'):
+                    relative=f'psf{i}{label}.fits';hdu=fits.PrimaryHDU(np.ones((9,9))*(i*4+k+1))
+                    hdu.header['OVERSMP']=4;hdu.header['ORIGINX']=4.;hdu.header['ORIGINY']=4.;hdu.writeto(root/relative)
+                    mapping[path.name][label]=relative;hashes[relative]=hashlib.sha256((root/relative).read_bytes()).hexdigest()
+            calibration={'overall_adequacy_pass':True,'psf_files_by_exposure':mapping,'file_sha256':hashes}
+            calpath=root/'calibration.json';calpath.write_text(json.dumps(calibration),encoding='utf-8')
+            protocol={'psf_model':'field_empirical','background_degree':2,
+                      'psf_calibration':{'path':'calibration.json','sha256':hashlib.sha256(calpath.read_bytes()).hexdigest()},
+                      'reference_image_radec_deg':refs.tolist(),'tangent_origin_radec_deg':origin.tolist()}
+            with patch.object(pixel_runner,'ROOT',root),patch.object(pixel_runner,'verify_frozen') as verified:
+                checked=pixel_runner.frozen_psf_calibration(protocol,'synthetic-commit')
+                self.assertEqual(verified.call_count,17) # Manifest and every distinct grid.
+                with patch.dict(sys.modules,{'stdatamodels':types.ModuleType('stdatamodels'),'stdatamodels.jwst':fake,'asdf':types.ModuleType('asdf')}),patch.object(pixel_runner,'fit_empirical_point',side_effect=extract):
+                    result=apply_native_files(native,protocol,models,root/'result',checked)
+                self.assertEqual(seen,list(np.arange(1,17,dtype=float)))
+                self.assertTrue(result['models']['revised']['conditional_geometry_validation_pass'])
+                (root/'psf3D.fits').write_bytes(b'CORRUPTED')
+                with self.assertRaisesRegex(RuntimeError,'grid hash changed'):
+                    pixel_runner.frozen_psf_calibration(protocol,'synthetic-commit')
+            with self.assertRaises(ValueError):pixel_runner.psf_paths_by_label({'psf_files_by_exposure':{'cal0':{'A':'a'}}},'cal0')
+            self.assertEqual(pixel_runner.psf_paths_by_label({'psf_files_by_exposure':{'cal0':'legacy.fits'}},'cal0'),{x:'legacy.fits' for x in 'ABCD'})
+
+    def test_frozen_field_registered_initial_association_does_not_use_sky_fit(self):
+        class WrongPointing:
+            def invert(self,*args,**kwargs):raise AssertionError('No Gaia inverse WCS call after frozen field registration')
+        reference=np.array([[30.,40.],[50.,40.],[30.,60.],[50.,60.]])
+        protocol={'reference_guesses_xy_pixel_by_exposure':{'native.fits':reference.tolist()}}
+        actual=pixel_runner.reference_pixel_guesses(protocol,'native.fits',WrongPointing(),np.zeros((4,2)))
+        np.testing.assert_array_equal(actual,reference)
+        np.testing.assert_allclose(intrinsic_geometry(actual+[17.,-23.]),intrinsic_geometry(actual))
+        with self.assertRaises(KeyError):pixel_runner.reference_pixel_guesses(protocol,'not-frozen.fits',WrongPointing(),np.zeros((4,2)))
+
+    def test_native_identity_guard_checks_exact_four_hashes_before_array_application(self):
+        with tempfile.TemporaryDirectory() as temp:
+            paths=[];hashes={}
+            for i in range(4):
+                path=Path(temp)/f'cal{i}.fits';path.write_bytes(f'NOTANIMAGE{i}'.encode())
+                paths.append(path);hashes[path.name]=hashlib.sha256(path.read_bytes()).hexdigest()
+            protocol={'primary_observation':{'products':[p.name for p in paths]}}
+            pixel_runner.verify_native_inputs(paths,protocol,{'input_sha256':hashes})
+            with self.assertRaisesRegex(RuntimeError,'four declared'):
+                pixel_runner.verify_native_inputs(paths[:3],protocol,{'input_sha256':hashes})
+            paths[3].write_bytes(b'CHANGED')
+            with self.assertRaisesRegex(RuntimeError,'hash missing or changed'):
+                pixel_runner.verify_native_inputs(paths,protocol,{'input_sha256':hashes})
+
     def test_synthetic_native_runner_preserves_full_covariance_and_gates(self):
         origin=np.array([69.562,-12.287]);scale=.031
         relative=np.array([[0.,0.],[-1.474,.552],[-2.466,-.602],[-.938,-1.616]])
@@ -156,7 +250,7 @@ class PixelGeometryTests(unittest.TestCase):
             for i in range(4):
                 path=Path(temp)/f'fakecal{i}';path.write_bytes(b'SYNTHETICONLY');paths.append(path)
             protocol={'reference_image_radec_deg':refs.tolist(),'tangent_origin_radec_deg':origin.tolist()}
-            with patch.dict(sys.modules,{'stdatamodels':types.ModuleType('stdatamodels'),'stdatamodels.jwst':fake}):
+            with patch.dict(sys.modules,{'stdatamodels':types.ModuleType('stdatamodels'),'stdatamodels.jwst':fake,'asdf':types.ModuleType('asdf')}):
                 result=apply_native_files(paths,protocol,models,out)
             self.assertEqual(result['complete_exposures'],4)
             self.assertTrue(result['all_pixel_models_adequate'])

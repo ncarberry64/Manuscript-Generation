@@ -1,0 +1,70 @@
+{
+  "status": "PROPOSED_INDEPENDENT_LIBRARY_FIELD_CALIBRATION_BEFORE_PSF_ARRAY_AND_QUASAR_TARGET_OPENING",
+  "chronology": "Original field-training method failed insufficient training stars; preserved. Gaia field-only identity and DQ association diagnosed saturation and absolute pointing. This calibration protocol changes instrumental response calibration, not frozen physical lens predictions.",
+  "input_sha256": {
+    "data/strong_lensing_geometry_20261021/metadata/independent_psf_library_headers.json": "5b7a6cacf6241fc0af0b97abbf26d57d0991291746e0b5ada6d762e466522632",
+    "data/strong_lensing_geometry_20261021/metadata/gaia_external_psf_field_rows.csv": "22aaedf9363cc8211d7d3060ec2efc2bbd6301f23a5c909096661d459ce1934e",
+    "data/strong_lensing_geometry_20261021/metadata/gaia_external_psf_field_request.json": "98acf24c36ca20c5c548363b063a5477ae7e007b0e7b15187eb44a28b8cf23ec",
+    "artifacts/strong_lensing_geometry_20261021/jwst/native_acquisition_complete.json": "92e8b44a8dea71eea09a199f8b3000374b733d4b393cdbdcc28e1ee1bb168368",
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+    "preregistration/he0435_geometry_jwst_20261021.json": "7e882eb6c68dc379e3eca32702ab048c753335d5bdfbfd529cb046b68e4ac706"
+  },
+  "source_sha256": {
+    "scripts/calibrate_he0435_standard_psf.py": "1af4ce6b84161285be278fb30e3fde7d1e4f36c4203e550555040f033e36144e",
+    "code/strong_lensing_standard_psf.py": "9b2f81c27be866d177896d416473025123126666289efc576db9c4f0186d44d0",
+    "code/strong_lensing_field_psf.py": "0deda8cad111e92e27e204f89951416844ab92263f0f09d8db168842b3e08983",
+    "code/strong_lensing_pixel_geometry.py": "41fa74373d8e7caf658af50fa7fd55d714f0c2d36af3e9e6660a75a6ded15f0a"
+  },
+  "physical_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "reference_geometry_protocol": "preregistration/he0435_geometry_jwst_20261021.json",
+  "native_acquisition_receipt": "artifacts/strong_lensing_geometry_20261021/jwst/native_acquisition_complete.json",
+  "native_data_directory": "data/strong_lensing_geometry_20261021/native",
+  "native_products": [
+    "jw01198007001_02101_00001_nrcb3_cal.fits",
+    "jw01198007001_02101_00002_nrcb3_cal.fits",
+    "jw01198007001_02101_00003_nrcb3_cal.fits",
+    "jw01198007001_02101_00004_nrcb3_cal.fits"
+  ],
+  "gaia_field_catalogue": "data/strong_lensing_geometry_20261021/metadata/gaia_external_psf_field_rows.csv",
+  "selected_field_source_id": "3178020716638520576",
+  "identity_selection": "Independent Gaia FIELD stellar classification and proper motion; source lies outside10arcsec lens guard, is available in all4nativefootprints and has saturated DQ cores. It was selected before any external PSF-fit agreement. Original compact candidate field0002 has no Gaia counterpart and is not used.",
+  "minimum_star_probability": 0.9,
+  "minimum_astrometric_significance": 5.0,
+  "maximum_ruwe": 1.4,
+  "proper_motion": "First-order ICRS alpha-star/declination Gaia2016 to native2022-10-12 epoch; explicit cosine once. Less than0.1arcsec transport; used for association only.",
+  "field_center_icrs_deg": [
+    69.562083333,
+    -12.287333333
+  ],
+  "target_guard_radius_arcsec": 10.0,
+  "association_search_radius_pixel": 60.0,
+  "minimum_saturated_component_pixels": 2,
+  "association": "Nearest8-connected SAT-pixel component within60pixels of Gaia-GWCS expected location; center from DQ-pixel center-of-mass, without SCI weighting; guarded target pixels unavailable.",
+  "star_fit_stamp_radius_pixel": 8,
+  "star_centroid_bound_pixel": 2.0,
+  "star_background_degree": 1,
+  "minimum_valid_native_pixels": 50,
+  "minimum_field_fit_p_value": 0.001,
+  "star_fit": "Fixed17x17native wings fit; exclude DNU|SAT, nonfinite SCI, nonpositive/nonfiniteERR. Freecentroid2/positiveflux1/affinebackground3, no shape/width fit; knownERRinverseinformationcovariance no rescaling. Finite external PSF calibration uncertainty remains conditional.",
+  "field_gate": "All4prespecified star applications must have optimizer success, interior parameters, rank6 and knownERR p>=.001. Saturated core values do not enter fit. No disagreement-based clipping or star substitution.",
+  "library_url": "https://www.stsci.edu/~jayander/JWST1PASS/LIB/PSFs/STDPSFs/NIRCam/SWC/F115W/STDPSF_NRCB3_F115W.fits",
+  "library_expected_bytes": 1025280,
+  "library_primary_header_sha256": "2458c77138a22015bfba7a16e924b6528b47f5c2fc6da8a3080f2ae629dbdf87",
+  "library_local_path": "data/strong_lensing_geometry_20261021/calibration/STDPSF_NRCB3_F115W.fits",
+  "library": "Official STScI empirical LMC COM1074/CAL1476 ePSF, NRCB3 F115W;25spatialfiducials5x5,101x101samples; officialPhotutilsSTDPSFreader supplies FITS-origin and spatialinterpolation conventions. No HE0435photons used in library training.",
+  "oversampling": 4,
+  "grid_shape": [
+    101,
+    101
+  ],
+  "grid_normalization": "sum(grid)/16=1 once after spatial interpolation; freeflux absorbs normalization. ePSF is pixel-integrated and is evaluated without a second pixel integral. Preserve negative learned wings.",
+  "native_pixel_area": "Native SCI/ERR directly, matching official JWST1PASS consumer convention; no unprescribed PAM multiplication. Flux pixel-area correction is distinct from centroid geometry.",
+  "field_registration": "Translation=fitted field-star native centroid minus Gaia-epoch nominal GWCS pixel position. Add only to frozen NIC2-reference association guesses; no target centroids, scale, shear, affine geometry or lens parameters fit. Sample quasar PSFs at those field-registered detector positions before target opening.",
+  "target_psf_files": "Perexposure nested A/B/C/D fixed grids, full filehash table. Field registration guesses/derivation and all PSF grids must be committed before root authorizes any target SCI access.",
+  "uncertainty_scope": "Conditional known native ERR and fixed independent empirical PSF at spatial position; unmodeled epoch/color/calibration-star noise and absolute distortion covariance remain explicit. No residual floor, covariance inflation or chi2-rescaling; no physical admission. One field star per exposure gives limited spatial and spectral validation coverage.",
+  "output_directory": "artifacts/strong_lensing_geometry_20261021/standard_psf",
+  "quasar_target_pixels_opened": false,
+  "external_PSF_array_opened": false,
+  "physical_guard": 2e-10,
+  "physical_admission": false
+}
