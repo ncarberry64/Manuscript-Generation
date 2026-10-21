@@ -1,0 +1,1298 @@
+{
+  "status": "PASS_REPRODUCTION_WITH_KNOWN_SCIENTIFIC_FAILURES",
+  "reviewed_utc": "2026-10-21T13:46:24.244458+00:00",
+  "review_scope": "Independent saved-artifact applications only. No target refitting, source changes, native full CAL access or additional observation exposure. Field/calibration originals are not reused as fresh targets.",
+  "checks": [
+    {
+      "check": "protocol SHA matches pre-opening marker",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "physical prediction SHA unchanged from pre-opening marker",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "prediction bytes were committed before target exposure",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source unchanged: code/strong_lensing_geometry_revision.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source unchanged: scripts/fit_he0435_geometry_revision.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source unchanged: code/strong_lensing_pixel_geometry.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source unchanged: scripts/run_he0435_pixel_geometry.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source unchanged: tests/test_strong_lensing_pixel_geometry.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen source unchanged: scripts/acquire_he0435_jwst_geometry.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known failed calibration hash retained",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "official GWCS archive SHA jw01198007001_02101_00001_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "every exposure diagnostic and nonvalidated jw01198007001_02101_00001_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all ordered A/B/C/D present jw01198007001_02101_00001_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "archived GWCS binds native source jw01198007001_02101_00001_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": 1.0270262423807954e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00001_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": 1.5375409037522062e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00001_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": 6.2035510963068114e-12
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00001_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": 1.441631211614151e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00001_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "independent intrinsic q5 and full shared-reference covariance jw01198007001_02101_00001_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "official GWCS archive SHA jw01198007001_02101_00002_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "every exposure diagnostic and nonvalidated jw01198007001_02101_00002_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all ordered A/B/C/D present jw01198007001_02101_00002_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "archived GWCS binds native source jw01198007001_02101_00002_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": 1.868393216742304e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00002_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": 1.7090152414262306e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00002_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": 8.879806147048155e-12
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00002_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": 2.019476451083987e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00002_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "independent intrinsic q5 and full shared-reference covariance jw01198007001_02101_00002_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "official GWCS archive SHA jw01198007001_02101_00003_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "every exposure diagnostic and nonvalidated jw01198007001_02101_00003_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all ordered A/B/C/D present jw01198007001_02101_00003_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "archived GWCS binds native source jw01198007001_02101_00003_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": 1.36637518099512e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00003_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": 1.0695209949442395e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00003_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": 4.701047831908866e-12
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00003_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": 2.7188904907883448e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00003_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "independent intrinsic q5 and full shared-reference covariance jw01198007001_02101_00003_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "official GWCS archive SHA jw01198007001_02101_00004_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "every exposure diagnostic and nonvalidated jw01198007001_02101_00004_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all ordered A/B/C/D present jw01198007001_02101_00004_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "archived GWCS binds native source jw01198007001_02101_00004_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": 1.2712339011422458e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00004_nrcb3_cal.fits A",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": 1.3020534665514826e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00004_nrcb3_cal.fits B",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": 1.9706087063526236e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00004_nrcb3_cal.fits C",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "native stamp SHA jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stamp original CAL SHA jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact SCI/ERR fit pixels recover from archive jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen native DQ/finite mask recovers all fit pixels jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "known-ERR chi2 and residual reproduction jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "frozen per-label PSF SHA jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed PSF and quadratic background reconstruct saved model jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "formal centroid information without residual rescaling jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": 1.926603385773618e-11
+    },
+    {
+      "check": "official GWCS centroid/covariance reproduce jw01198007001_02101_00004_nrcb3_cal.fits D",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "independent intrinsic q5 and full shared-reference covariance jw01198007001_02101_00004_nrcb3_cal.fits",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unrescaled inverse-covariance mean and scatter reproduce",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "combined score reproduction old_frozen_conventional",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "combined score reproduction old_frozen_R1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "combined score reproduction revised_G1_conventional",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "combined score reproduction revised_G1_R1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all combined validation flags forcibly false",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no physical guard or admission change",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "checked_fits": 16,
+  "fit_reviews": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "image": "A",
+      "chi2": 14357.628355414861,
+      "dof": 265,
+      "chi2_per_dof": 54.17972964307495,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 15,
+      "maximum_abs_pixel_residual_SCI_units": 10.907287059657346,
+      "maximum_abs_standardized_pixel_residual": 33.03025144359104
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "image": "B",
+      "chi2": 11850.7906483076,
+      "dof": 221,
+      "chi2_per_dof": 53.62348709641448,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 59,
+      "maximum_abs_pixel_residual_SCI_units": 5.895931016706106,
+      "maximum_abs_standardized_pixel_residual": 23.859195664533438
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "image": "C",
+      "chi2": 10012.197425754435,
+      "dof": 264,
+      "chi2_per_dof": 37.92499024906983,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 16,
+      "maximum_abs_pixel_residual_SCI_units": 15.942027121303767,
+      "maximum_abs_standardized_pixel_residual": 22.937491815718086
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "image": "D",
+      "chi2": 8016.795797865062,
+      "dof": 267,
+      "chi2_per_dof": 30.025452426460905,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 12,
+      "maximum_abs_pixel_residual_SCI_units": 8.502061687980856,
+      "maximum_abs_standardized_pixel_residual": 19.719866980336537
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "image": "A",
+      "chi2": 13296.727334523886,
+      "dof": 261,
+      "chi2_per_dof": 50.945315457945924,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 18,
+      "maximum_abs_pixel_residual_SCI_units": 8.31775914444121,
+      "maximum_abs_standardized_pixel_residual": 26.188986624025244
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "image": "B",
+      "chi2": 20631.208209045006,
+      "dof": 258,
+      "chi2_per_dof": 79.96592329087211,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 22,
+      "maximum_abs_pixel_residual_SCI_units": 11.491994311119749,
+      "maximum_abs_standardized_pixel_residual": 32.59317757794823
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "image": "C",
+      "chi2": 11492.87290461243,
+      "dof": 264,
+      "chi2_per_dof": 43.53360948716829,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 16,
+      "maximum_abs_pixel_residual_SCI_units": 16.195624073449558,
+      "maximum_abs_standardized_pixel_residual": 26.027950067777812
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "image": "D",
+      "chi2": 9041.727343137554,
+      "dof": 268,
+      "chi2_per_dof": 33.73778859379684,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 12,
+      "maximum_abs_pixel_residual_SCI_units": 9.65836600756117,
+      "maximum_abs_standardized_pixel_residual": 19.454247605391924
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "image": "A",
+      "chi2": 12700.843247545517,
+      "dof": 264,
+      "chi2_per_dof": 48.1092547255512,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 15,
+      "maximum_abs_pixel_residual_SCI_units": 9.661344541683132,
+      "maximum_abs_standardized_pixel_residual": 24.479036907866405
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "image": "B",
+      "chi2": 18398.51742787004,
+      "dof": 258,
+      "chi2_per_dof": 71.31208305375985,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 22,
+      "maximum_abs_pixel_residual_SCI_units": 12.090092155986913,
+      "maximum_abs_standardized_pixel_residual": 28.799612152985556
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "image": "C",
+      "chi2": 10376.653575847606,
+      "dof": 263,
+      "chi2_per_dof": 39.454956562158195,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 16,
+      "maximum_abs_pixel_residual_SCI_units": 13.282314240835909,
+      "maximum_abs_standardized_pixel_residual": 22.143238787626277
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "image": "D",
+      "chi2": 6600.762029201391,
+      "dof": 267,
+      "chi2_per_dof": 24.72195516554828,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 12,
+      "maximum_abs_pixel_residual_SCI_units": 5.136440186633134,
+      "maximum_abs_standardized_pixel_residual": 18.56033528677451
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "image": "A",
+      "chi2": 10332.636636900077,
+      "dof": 264,
+      "chi2_per_dof": 39.13877513977302,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 16,
+      "maximum_abs_pixel_residual_SCI_units": 9.224068350841115,
+      "maximum_abs_standardized_pixel_residual": 26.011363361668224
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "image": "B",
+      "chi2": 16356.446041981093,
+      "dof": 258,
+      "chi2_per_dof": 63.39707768209726,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 22,
+      "maximum_abs_pixel_residual_SCI_units": 10.106455188789827,
+      "maximum_abs_standardized_pixel_residual": 36.51881863823987
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "image": "C",
+      "chi2": 7735.55220972299,
+      "dof": 262,
+      "chi2_per_dof": 29.525008434057213,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 18,
+      "maximum_abs_pixel_residual_SCI_units": 9.60924098872627,
+      "maximum_abs_standardized_pixel_residual": 22.583949224705123
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "image": "D",
+      "chi2": 6859.232369719938,
+      "dof": 268,
+      "chi2_per_dof": 25.594150633283352,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bounds": [],
+      "formal_centroid_fit_interior": true,
+      "pixel_adequacy_pass": false,
+      "saturated_pixels_in_stamp": 12,
+      "maximum_abs_pixel_residual_SCI_units": 7.0312083895261,
+      "maximum_abs_standardized_pixel_residual": 20.588161449500593
+    }
+  ],
+  "archive_counts": {
+    "native_stamps": 16,
+    "GWCS": 4
+  },
+  "max_relative_formal_centroid_covariance_difference": 2.7188904907883448e-11,
+  "max_GWCS_centroid_difference_arcsec": 0.0,
+  "max_q5_difference_arcsec": 0.0,
+  "combined_reproduction": {
+    "mean_q_arcsec": [
+      1.5761428813816263,
+      2.098946162621937,
+      1.4282054732919138,
+      0.3118754280961449,
+      1.8402926947695017
+    ],
+    "known_formal_covariance_arcsec2": [
+      [
+        3.1581071012900534e-09,
+        1.6340578035800968e-09,
+        -1.245107320194057e-10,
+        1.654485798900974e-09,
+        -4.8167598014895206e-11
+      ],
+      [
+        1.6340578035800972e-09,
+        6.655396656784156e-09,
+        -2.9574576648998575e-09,
+        5.502427314101627e-09,
+        9.2030393176409e-10
+      ],
+      [
+        -1.24510732019406e-10,
+        -2.9574576648998575e-09,
+        5.678019110220422e-09,
+        -3.781153048018042e-09,
+        4.1658030750082773e-11
+      ],
+      [
+        1.6544857989009738e-09,
+        5.502427314101625e-09,
+        -3.781153048018041e-09,
+        8.962015001524414e-09,
+        1.2103917968236107e-09
+      ],
+      [
+        -4.816759801489522e-11,
+        9.203039317640898e-10,
+        4.165803075008297e-11,
+        1.2103917968236103e-09,
+        3.791862068598433e-09
+      ]
+    ],
+    "exposure_consistency_Q": 432.26200795779624,
+    "exposure_consistency_dof": 15,
+    "exposure_consistency_p_value": 1.1277782075131305e-82,
+    "covariance_rescaled": false,
+    "maximum_absolute_per_exposure_q_deviation_from_combined_mas": 2.0101536588799096
+  },
+  "model_scores": {
+    "old_frozen_conventional": {
+      "intrinsic_coordinate_RMS_mas": 3.3133139495355532,
+      "maximum_absolute_q_residual_mas": 5.004418203783834,
+      "Q5_formal_known_ERR": 18667.77511886368,
+      "p_value_formal_known_ERR": 0.0,
+      "normalized_logdensity_arcsec_minus5": -9290.15446754114,
+      "raw_q_residual_mas": [
+        -0.22655644518110307,
+        -4.555125362638801,
+        5.004418203783834,
+        2.6266170107328013,
+        1.4650710799453126
+      ],
+      "conditional_geometry_validation_pass": false
+    },
+    "old_frozen_R1": {
+      "intrinsic_coordinate_RMS_mas": 3.313156496856001,
+      "maximum_absolute_q_residual_mas": 5.003867684015839,
+      "Q5_formal_known_ERR": 18667.225196850362,
+      "p_value_formal_known_ERR": 0.0,
+      "normalized_logdensity_arcsec_minus5": -9289.879506534482,
+      "raw_q_residual_mas": [
+        -0.22658809706954663,
+        -4.554918875379954,
+        5.003867684015839,
+        2.627023075814361,
+        1.46508009892643
+      ],
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_conventional": {
+      "intrinsic_coordinate_RMS_mas": 0.7794000614135954,
+      "maximum_absolute_q_residual_mas": 1.4338970817915353,
+      "Q5_formal_known_ERR": 958.4342431311015,
+      "p_value_formal_known_ERR": 5.986451066086453e-205,
+      "normalized_logdensity_arcsec_minus5": -435.4840296748522,
+      "raw_q_residual_mas": [
+        -0.24129694519325895,
+        0.6218670151811878,
+        -1.4338970817915353,
+        -0.6709352435371185,
+        -0.2935379637067914
+      ],
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_R1": {
+      "intrinsic_coordinate_RMS_mas": 0.7794540670691845,
+      "maximum_absolute_q_residual_mas": 1.4340764351254975,
+      "Q5_formal_known_ERR": 958.4283740785942,
+      "p_value_formal_known_ERR": 6.003989230775933e-205,
+      "normalized_logdensity_arcsec_minus5": -435.4810951485985,
+      "raw_q_residual_mas": [
+        -0.24108561719238253,
+        0.6220702050101501,
+        -1.4340764351254975,
+        -0.6706189956892095,
+        -0.29384441361646196
+      ],
+      "conditional_geometry_validation_pass": false
+    }
+  },
+  "maximum_abs_pixel_residual_SCI_units": 16.195624073449558,
+  "maximum_abs_standardized_pixel_residual": 36.51881863823987,
+  "independence_chronology": {
+    "physical_predictions_before_native_acquisition_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+    "native_byte_acquisition_started_UTC": "2026-10-21T13:06:12.175167+00:00",
+    "field_calibration_attempt_one_started_UTC": "2026-10-21T13:08:56.384386+00:00",
+    "independent_external_field_PSF_started_UTC": "2026-10-21T13:31:07.257425+00:00",
+    "failed_field_manifest_SHA256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7",
+    "explicit_preopening_diagnostic_commit": "287b28454b8f04fcba54c9253e06163db6bf2eb1",
+    "diagnostic_protocol_created_UTC": "2026-10-21T13:39:26.203954+00:00",
+    "single_target_opening_started_UTC": "2026-10-21T13:41:34.999304+00:00",
+    "target_marker_SHA256": "a45a2bda88bdb4609ec516faa7dc4dacf9c9630e61960ebe5d2267447514d3be",
+    "physical_prediction_SHA256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+    "observations": "Previously unused 2022-10-12 JWST/NIRCam F115W photons; this application consumes them. Instrument fields were calibration, not quasar targets. Complete independence of every astrometric/calibration reference is not certified.",
+    "earlier_experiment": "Original precision validation remains blocked by failed calibration. This is the separately frozen diagnostic amendment, not a reclassified original success.",
+    "reserved_bands": "No reserve band or new native exposure opened by this review."
+  },
+  "limits": [
+    "Every formal covariance and score is conditional on the fixed inadequate instrumental PSF and declared ERR; the astronomical likelihood and centroid bias are not calibrated.",
+    "True centroid bias cannot be measured from these observations without an adequate response or independent truth. Raw pixel residuals and exposure disagreement are diagnostics, not an empirically measured physical-bias correction.",
+    "The raw G1 improvement is an out-of-fit descriptive comparison of frozen predictions, not precision validation, a unique G1 mass inference, BHSM preference or physical admission.",
+    "Exact fit SCI/ERR/DQ values recover from the saved native cutouts and official GWCS maps recover from their serialized archives; complete original117MB CAL byte streams require public native product URLs plus the inherited full-file hashes, not reconstruction from the small cutouts."
+  ]
+}

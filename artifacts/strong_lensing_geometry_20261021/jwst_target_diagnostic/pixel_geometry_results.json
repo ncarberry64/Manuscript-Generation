@@ -1,0 +1,223 @@
+{
+  "measurement_family": "Field-frozen pixel-integrated empirical ePSF plus quadratic background, fixed known ERR",
+  "target_filter": "F115W",
+  "exposures_found": 4,
+  "complete_exposures": 4,
+  "expected_target_exposures": 4,
+  "exposure_count_matches_protocol": true,
+  "pixel_fit_familywise_alpha": 0.016,
+  "pixel_fit_bonferroni_threshold": 0.001,
+  "all_pixel_models_adequate": false,
+  "non_target_files": [],
+  "calibration_adequacy_pass": false,
+  "diagnostic_mode": true,
+  "calibration_manifest_sha256": "73930a7bd35ac4f3ca19dfeeb04cac9e32599c634af586436456a5900849d9d7",
+  "exposure_result_files": [
+    "exposures/jw01198007001_02101_00001_nrcb3_cal.json",
+    "exposures/jw01198007001_02101_00002_nrcb3_cal.json",
+    "exposures/jw01198007001_02101_00003_nrcb3_cal.json",
+    "exposures/jw01198007001_02101_00004_nrcb3_cal.json"
+  ],
+  "conditional_covariance_scope": "Known ERR, disjoint point stamps, independent exposures; instrument distortion/reference common covariance and instrumental PSF uncertainty are not supplied by ERR. No arbitrary floor or residual scale inferred.",
+  "physical_admission": false,
+  "unchanged_physical_guard": 2e-10,
+  "exposure_consistency_alpha": 0.001,
+  "geometry_alpha": 0.05,
+  "combined": {
+    "mean": [
+      1.5761428813816265,
+      2.098946162621937,
+      1.4282054732919143,
+      0.31187542809614494,
+      1.8402926947695024
+    ],
+    "covariance": [
+      [
+        3.1581071012900534e-09,
+        1.6340578035800968e-09,
+        -1.245107320194057e-10,
+        1.654485798900974e-09,
+        -4.8167598014895206e-11
+      ],
+      [
+        1.6340578035800972e-09,
+        6.655396656784156e-09,
+        -2.9574576648998575e-09,
+        5.502427314101627e-09,
+        9.2030393176409e-10
+      ],
+      [
+        -1.24510732019406e-10,
+        -2.9574576648998575e-09,
+        5.678019110220422e-09,
+        -3.781153048018042e-09,
+        4.1658030750082773e-11
+      ],
+      [
+        1.6544857989009738e-09,
+        5.502427314101625e-09,
+        -3.781153048018041e-09,
+        8.962015001524414e-09,
+        1.2103917968236107e-09
+      ],
+      [
+        -4.816759801489522e-11,
+        9.203039317640898e-10,
+        4.165803075008297e-11,
+        1.2103917968236103e-09,
+        3.791862068598433e-09
+      ]
+    ],
+    "exposure_consistency_chi2": 432.2620079577963,
+    "exposure_consistency_dof": 15,
+    "exposure_consistency_p_value": 1.1277782075130665e-82,
+    "covariance_rescaled": false
+  },
+  "exposures_consistent": false,
+  "models": {
+    "old_frozen_conventional": {
+      "residual": [
+        -0.00022655644518088103,
+        -0.004555125362638801,
+        0.005004418203784278,
+        0.002626617010732857,
+        0.0014650710799459787
+      ],
+      "chi2": 18667.775118865164,
+      "dof": 5,
+      "p_value": 0.0,
+      "gaussian_logdensity": -9290.154467541883,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763694378268074,
+        2.103501287984576,
+        1.42320105508813,
+        0.3092488110854121,
+        1.8388276236895564
+      ],
+      "intrinsic_residual_mas": [
+        -0.22655644518088103,
+        -4.555125362638801,
+        5.004418203784278,
+        2.626617010732857,
+        1.4650710799459787
+      ],
+      "intrinsic_coordinate_rms_mas": 3.3133139495357518,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": null,
+      "improves_declared_baseline_raw_q_RMS": null,
+      "raw_q_RMS_reduction_fraction": null,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": false,
+      "conditional_geometry_validation_pass": false
+    },
+    "old_frozen_R1": {
+      "residual": [
+        -0.0002265880970693246,
+        -0.004554918875379954,
+        0.005003867684016283,
+        0.0026270230758144164,
+        0.0014650800989270962
+      ],
+      "chi2": 18667.225196851854,
+      "dof": 5,
+      "p_value": 0.0,
+      "gaussian_logdensity": -9289.879506535228,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763694694786958,
+        2.103501081497317,
+        1.423201605607898,
+        0.3092484050203305,
+        1.8388276146705753
+      ],
+      "intrinsic_residual_mas": [
+        -0.2265880970693246,
+        -4.554918875379954,
+        5.003867684016283,
+        2.6270230758144164,
+        1.4650800989270962
+      ],
+      "intrinsic_coordinate_rms_mas": 3.3131564968561995,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": null,
+      "improves_declared_baseline_raw_q_RMS": null,
+      "raw_q_RMS_reduction_fraction": null,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": false,
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_conventional": {
+      "residual": [
+        -0.0002412969451930369,
+        0.0006218670151811878,
+        -0.0014338970817910912,
+        -0.000670935243537063,
+        -0.0002935379637061253
+      ],
+      "chi2": 958.4342431306987,
+      "dof": 5,
+      "p_value": 5.98645106728816e-205,
+      "gaussian_logdensity": -435.4840296746508,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763841783268195,
+        2.098324295606756,
+        1.4296393703737054,
+        0.312546363339682,
+        1.8405862327332085
+      ],
+      "intrinsic_residual_mas": [
+        -0.2412969451930369,
+        0.6218670151811878,
+        -1.4338970817910912,
+        -0.670935243537063,
+        -0.2935379637061253
+      ],
+      "intrinsic_coordinate_rms_mas": 0.7794000614133585,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": "old_frozen_conventional",
+      "improves_declared_baseline_raw_q_RMS": true,
+      "raw_q_RMS_reduction_fraction": 0.7647672169663956,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": true,
+      "conditional_geometry_validation_pass": false
+    },
+    "revised_G1_R1": {
+      "residual": [
+        -0.00024108561719216048,
+        0.0006220702050101501,
+        -0.0014340764351250535,
+        -0.000670618995689154,
+        -0.00029384441361579583
+      ],
+      "chi2": 958.4283740781915,
+      "dof": 5,
+      "p_value": 6.003989231980817e-205,
+      "gaussian_logdensity": -435.4810951483972,
+      "predicted_intrinsic_q_arcsec": [
+        1.5763839669988187,
+        2.098324092416927,
+        1.4296395497270393,
+        0.3125460470918341,
+        1.8405865391831182
+      ],
+      "intrinsic_residual_mas": [
+        -0.24108561719216048,
+        0.6220702050101501,
+        -1.4340764351250535,
+        -0.670618995689154,
+        -0.29384441361579583
+      ],
+      "intrinsic_coordinate_rms_mas": 0.7794540670689476,
+      "formal_geometry_compatible_at_alpha": false,
+      "baseline_model": "old_frozen_R1",
+      "improves_declared_baseline_raw_q_RMS": true,
+      "raw_q_RMS_reduction_fraction": 0.764739737525662,
+      "required_raw_q_RMS_reduction_fraction": 0.25,
+      "meets_declared_baseline_raw_q_RMS_reduction": true,
+      "conditional_geometry_validation_pass": false
+    }
+  },
+  "measurement_status": "CALIBRATION_INADEQUATE_DIAGNOSTIC_ONLY",
+  "diagnostic_extraction_status": "FAILED_MEASUREMENT_ADEQUACY_OR_EXPOSURE_CONSISTENCY",
+  "interpretation": "First numerical target application under a known inadequate or explicitly diagnostic instrumental response. Raw residuals and formal conditional scores do not validate physical geometry; the original field calibration failure remains preserved.",
+  "freeze_commit": "287b28454b8f04fcba54c9253e06163db6bf2eb1"
+}
