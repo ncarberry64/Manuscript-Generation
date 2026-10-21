@@ -18,6 +18,9 @@ on:
       - "tests/test_strong_lensing_gaia_runner.py"
       - "tests/test_strong_lensing_*psf.py"
       - "tests/test_strong_lensing_pixel_geometry.py"
+      - "tests/test_strong_lensing_*mask*.py"
+      - "tests/test_strong_lensing_read_history.py"
+      - "tests/test_strong_lensing_joint_scene.py"
       - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
       - "data/strong_lensing_revision_20261020/**"
@@ -44,6 +47,9 @@ on:
       - "tests/test_strong_lensing_gaia_runner.py"
       - "tests/test_strong_lensing_*psf.py"
       - "tests/test_strong_lensing_pixel_geometry.py"
+      - "tests/test_strong_lensing_*mask*.py"
+      - "tests/test_strong_lensing_read_history.py"
+      - "tests/test_strong_lensing_joint_scene.py"
       - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
       - "data/strong_lensing_revision_20261020/**"
@@ -97,6 +103,10 @@ jobs:
           tests/test_strong_lensing_pixel_geometry.py
           tests/test_strong_lensing_field_psf.py
           tests/test_strong_lensing_standard_psf.py
+          tests/test_strong_lensing_jwst_rate_mask.py
+          tests/test_strong_lensing_rate_mask_integration.py
+          tests/test_strong_lensing_read_history.py
+          tests/test_strong_lensing_joint_scene.py
 
       - name: Check the exact continuation component identities
         run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json

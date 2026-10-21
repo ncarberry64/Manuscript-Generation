@@ -1,0 +1,10 @@
+{
+  "status": "SUPERSEDED_DN_CONSERVING_SURROGATE",
+  "reason": "L(f_DN^2) conserves DN but does not generally conserve physical electrons when gain varies spatially.",
+  "replacement": "diag(1/g) L diag(g^2) f_DN^2, with kappa in electron^-1",
+  "preserved": "All initial source files, focused tests, four actual fits and residual/covariance arrays, results JSON and original README are retained here.",
+  "actual_delivered_gain": "Uniform 2.05 electron/DN on the full 66x66 field; corrected fits have identical mean scores and kappa_e=kappa_DN/g.",
+  "physical_validation_pass": false,
+  "lensing_validation_pass": false,
+  "canonical_results": "../results.json"
+}

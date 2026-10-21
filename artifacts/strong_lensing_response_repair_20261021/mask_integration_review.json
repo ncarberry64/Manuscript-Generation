@@ -161,7 +161,7 @@
   "unchanged_physical_guard": 2e-10,
   "artifact_sha256": {
     "scripts/replay_he0435_verified_rate_mask.py": "5e3c1ed83aa2f227c13bd3ec43feac477f5e0b2eb1d154fd2aef7282e06b25da",
-    "tests/test_strong_lensing_rate_mask_integration.py": "53e244969741f4fb792cf5f0c7654f7c422a60886e70a90f8385624396f73e9c",
+    "tests/test_strong_lensing_rate_mask_integration.py": "c0c2315e0463490448bb7d8f2aadebe304f5bad3ff15321b9430cd77b4ae9197",
     "artifacts\\strong_lensing_response_repair_20261021\\mask_verified_baseline_manifest.json": "fb888bb629c900f09c41dcf174b1817888f6463e22dc4313b176c3e47abf7190",
     "artifacts\\strong_lensing_response_repair_20261021\\mask_verified_native_replay.json": "c8ae376e3698aaf68acd6fc8b5f905cd30440415956e44ac77d9330dd7a73c2e"
   },
@@ -170,5 +170,6 @@
     "current_source_sha256": "5e3c1ed83aa2f227c13bd3ec43feac477f5e0b2eb1d154fd2aef7282e06b25da",
     "change": "CRLF to LF and removal of one extra blank EOF line only; replay calculations unchanged",
     "replay_repeated_after_normalization": true
-  }
+  },
+  "integration_guard_test_scope": "Six hermetic unit tests use exact41fa SHA-bound Git-response fixture, check requested immutable commit/path, default rejection and source/manifest tampering. Actual canonical replay separately used REAL git-show7ec9 source object; no CI fetch-depth change required."
 }

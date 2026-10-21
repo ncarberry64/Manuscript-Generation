@@ -49,6 +49,8 @@ data/strong_lensing_response_repair_20261021/delivery/** -text whitespace=-blank
 artifacts/strong_lensing_response_repair_20261021/**/*.json -text whitespace=cr-at-eol
 artifacts/strong_lensing_response_repair_20261021/*.json -text whitespace=cr-at-eol
 *.npz binary
+artifacts/strong_lensing_response_repair_20261021/read_history/superseded_dn_surrogate/** -text whitespace=cr-at-eol
+artifacts/strong_lensing_response_repair_20261021/joint_scene/development_product_grid_interpolation/** -text whitespace=cr-at-eol
 # Exact additive mask-patch files include delivered EOF formatting.
 code/strong_lensing_jwst_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
 scripts/replay_he0435_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol

@@ -1,10 +1,12 @@
 """Provenance guards for the additive repository-verified replay runner."""
 from copy import deepcopy
+import hashlib
 import importlib.util
 import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -19,6 +21,16 @@ FITTER = ROOT / "code/strong_lensing_pixel_geometry.py"
 
 
 class IntegrationGuardTests(unittest.TestCase):
+    def setUp(self):
+        # Unit guards must run in a shallow CI checkout. The native integration
+        # receipt separately exercises the real immutable Git object locally.
+        frozen = FITTER.read_bytes()
+        self.assertEqual(hashlib.sha256(frozen).hexdigest(),
+                         "41fa74373d8e7caf658af50fa7fd55d714f0c2d36af3e9e6660a75a6ded15f0a")
+        self.git_patch = patch.object(MODULE.subprocess, "check_output", return_value=frozen)
+        self.git_show = self.git_patch.start()
+        self.addCleanup(self.git_patch.stop)
+
     def test_delivered_default_still_rejects_source_hash_discrepancy(self):
         with self.assertRaisesRegex(RuntimeError, "Legacy fitter no longer matches"):
             MODULE.verified_baseline(SUPPLIED, FITTER, ROOT)
@@ -30,6 +42,9 @@ class IntegrationGuardTests(unittest.TestCase):
         self.assertEqual(len(value["json_semantic_sha256"]), 10)
         self.assertEqual(audit["mode"], "EXPLICIT_REPOSITORY_VERIFIED_CORRECTION")
         self.assertFalse(audit["original_fitter_changed"])
+        self.git_show.assert_called_once_with(
+            ["git", "show", MODULE.REVIEWED_COMMIT + ":" + MODULE.REVIEWED_FITTER], cwd=ROOT
+        )
 
     def test_current_source_tamper_rejected_against_immutable_git_object(self):
         with tempfile.TemporaryDirectory() as tmp:

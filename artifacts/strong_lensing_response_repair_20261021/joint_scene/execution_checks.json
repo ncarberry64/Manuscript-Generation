@@ -1,0 +1,48 @@
+{
+  "scope": "Post-application arithmetic checks on saved new development arrays only; no refit, old solver or unused observation access.",
+  "synthetic_focused_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_joint_scene.py -q",
+    "passed": 6,
+    "first_run": "One zero-integral derivative sum was4.25e-15 vs2e-15 roundoff threshold; threshold changed to1e-14 then all6passed. No observed ERR or science acceptance threshold changed."
+  },
+  "applications": {
+    "all_data": {
+      "updated_sky_min": 0.0,
+      "updated_sky_max": 1.599937203928807,
+      "positive_sky_coefficients": 36,
+      "zero_bound_count": 13,
+      "response_log_grid_range": [
+        -1.3086977223382865,
+        0.6703903225374678
+      ],
+      "delivered_exp_clip_inactive": true,
+      "moment_centroid_covariance_min_eigenvalue_pixel2": 2.1596838684228484e-06,
+      "maximum_abs_centroid_correlation_off_diagonal": 0.3327539436862917,
+      "reported_joint_full_column_rank": true,
+      "field_nuisance_all_interior": true
+    },
+    "held_exposure_training": {
+      "updated_sky_min": 0.0,
+      "updated_sky_max": 1.1555228325928595,
+      "positive_sky_coefficients": 36,
+      "zero_bound_count": 14,
+      "response_log_grid_range": [
+        -1.2349020650738203,
+        0.6601001284919918
+      ],
+      "delivered_exp_clip_inactive": true,
+      "moment_centroid_covariance_min_eigenvalue_pixel2": 2.149465341864738e-06,
+      "maximum_abs_centroid_correlation_off_diagonal": 0.42485171491641205,
+      "reported_joint_full_column_rank": true,
+      "field_nuisance_all_interior": true
+    }
+  },
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "reviewed_source_sha256": {
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22",
+    "tests/test_strong_lensing_joint_scene.py": "74f9718cc0d9118b5da159f49bfc69459b6773bb6c669f746d760212fdc0451f"
+  }
+}

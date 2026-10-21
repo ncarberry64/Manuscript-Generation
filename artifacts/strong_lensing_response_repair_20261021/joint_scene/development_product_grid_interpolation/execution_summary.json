@@ -1,0 +1,17 @@
+{
+  "status": "EXECUTED_PROVISIONAL_COHERENT_SKY_AND_SHARED_CALIBRATION_UNCERTAINTY_DEVELOPMENT",
+  "scene": "Four disjoint fixed observed-sky patches, each3x3positive Gaussian coefficients shared across four exposures; width.10arcsec/spacing.18arcsec, proper coefficient priorSD10SCI. No unique source/galaxy decomposition or full host inferred.",
+  "operator": "Sky basis sampled through exact archived GWCS on1/4nativepixel grid, convolved once with already pixel-integrated normalized positive field response; no extra pixel integration/PAM/ERR scaling.",
+  "response": "Delivered318coefficient coarse positive field family only, with exact normalization/moment derivatives and its supplied first-order3gauge removal; finite25pixel support declaredzero outside, no spline extrapolation. Canonical17pixel likelihood and padded sky integration.",
+  "calibration": "All4actualfieldstars constrain shared response precision+declared.2coefficientprior. Cut propagation and one re-evaluated nonlinear coupled GN application are distinct. Full covariance retains image/exposure correlations and finite-grid centroid-moment response.",
+  "history": "history_rate accepts actualreadmeans andpixel-specificweights. Target histories are unavailable in current compact inputs; no historyarrays or transferredchargecoefficient fabricated. ChargeexchangeLaplacian helper conserves per-read flux but is not fitted or claimed identified.",
+  "no_lens_prediction_loaded": true,
+  "no_reserved_band_opened": true,
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "source_sha256": {
+    "code/strong_lensing_joint_scene.py": "eb23217a331f3aa4e5104b25f542aab9553540c55c96beade9e60ba114c6700d",
+    "scripts/run_he0435_joint_scene.py": "0c7b0c9958d3868e6c2ebd84d0c53934bf88bd39e9e3019052d9fd67240f869a"
+  }
+}

@@ -21,6 +21,9 @@ the immutable reviewed Git commit. The delivered default guard still rejects
 the mismatch. The numerical replay body is identical to the supplied runner;
 the original fitter, selection policy, observations, predictions and protocol
 are unchanged. Six additional regressions exercise these provenance guards.
+Those unit tests use an exact SHA-bound Git-response fixture so they also run
+in shallow CI checkouts; the actual native replay uses the real immutable Git
+object and records that separate integration check.
 
 Executed in the existing Windows geometry environment:
 

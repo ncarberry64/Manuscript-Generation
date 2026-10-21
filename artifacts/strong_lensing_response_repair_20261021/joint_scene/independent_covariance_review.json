@@ -1,0 +1,83 @@
+{
+  "status": "READ_ONLY_ARRAY_AND_MODEL_DERIVATIVE_REVIEW",
+  "native_science_arrays_opened": false,
+  "fit_or_measurement_reexecuted": false,
+  "source_sha256": {
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22"
+  },
+  "cases": {
+    "all_data": {
+      "joint_shape": [
+        414,
+        414
+      ],
+      "joint_rank": 414,
+      "joint_min_eigenvalue": 1.9330893517260946e-06,
+      "joint_max_eigenvalue": 0.0382519543237655,
+      "centroid_shape": [
+        32,
+        32
+      ],
+      "centroid_min_eigenvalue": 2.1596838684228467e-06,
+      "centroid_max_eigenvalue": 2.111679832277741e-05,
+      "centroid_max_asymmetry": 3.0704944337968387e-21,
+      "full_moment_transform_replay_max_abs_error_pixel2": 0.0,
+      "raw_center_subblock_replay_max_abs_error_pixel2": 0.0,
+      "nonzero_sky_response_cross_covariance_max": 0.0005417945928527173,
+      "nonzero_sky_response_cross_covariance_Frobenius": 0.005060501921041466,
+      "between_exposure_centroid_cross_covariance_max_pixel2": 1.1029538107104176e-06,
+      "independent_geometry_GLS_Q": 170.25399908700905,
+      "reported_geometry_GLS_Q": 170.25399908700913,
+      "geometry_GLS_Q_abs_difference": 8.526512829121202e-14,
+      "mean_geometry_replay_max_abs_difference_arcsec": 8.881784197001252e-16,
+      "mean_covariance_replay_max_abs_difference_arcsec2": 3.1019272970738538e-24,
+      "derivative_check": {
+        "moment_directional_derivative_max_abs_error": 6.637076630476579e-12,
+        "point_calibration_derivative_max_abs_error": 4.084681377858335e-12,
+        "pass": true
+      },
+      "physical_validation_pass": false,
+      "checks_pass": true
+    },
+    "held_exposure_training": {
+      "joint_shape": [
+        399,
+        399
+      ],
+      "joint_rank": 399,
+      "joint_min_eigenvalue": 2.035727568810296e-06,
+      "joint_max_eigenvalue": 0.03829880817847259,
+      "centroid_shape": [
+        24,
+        24
+      ],
+      "centroid_min_eigenvalue": 2.1494653418647396e-06,
+      "centroid_max_eigenvalue": 2.2217929452314773e-05,
+      "centroid_max_asymmetry": 4.870439446712227e-21,
+      "full_moment_transform_replay_max_abs_error_pixel2": 0.0,
+      "raw_center_subblock_replay_max_abs_error_pixel2": 0.0,
+      "nonzero_sky_response_cross_covariance_max": 0.0005128345274009195,
+      "nonzero_sky_response_cross_covariance_Frobenius": 0.0055516272132023585,
+      "between_exposure_centroid_cross_covariance_max_pixel2": 1.6047861909753806e-06,
+      "independent_geometry_GLS_Q": 145.71239728477155,
+      "reported_geometry_GLS_Q": 145.7123972847717,
+      "geometry_GLS_Q_abs_difference": 1.4210854715202004e-13,
+      "mean_geometry_replay_max_abs_difference_arcsec": 1.3322676295501878e-15,
+      "mean_covariance_replay_max_abs_difference_arcsec2": 3.308722450212111e-24,
+      "derivative_check": {
+        "moment_directional_derivative_max_abs_error": 1.6895473193244415e-12,
+        "point_calibration_derivative_max_abs_error": 1.1936233251796935e-12,
+        "pass": true
+      },
+      "physical_validation_pass": false,
+      "checks_pass": true
+    }
+  },
+  "all_checks_pass": true,
+  "limits": [
+    "Covariance is unconstrained local curvature at a nonconverged one-step iterate; positive sky coefficient bounds are active.",
+    "No adequate physical mean or calibrated astrometric coverage follows from covariance PSD or formal full rank.",
+    "This review used saved covariance/geometry arrays and fixed PSF model derivatives only, with no native target SCI or fit reruns."
+  ]
+}
