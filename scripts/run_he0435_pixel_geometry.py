@@ -93,8 +93,12 @@ def frozen_psf_calibration(protocol,commit):
     if sha(path)!=receipt['sha256']:raise RuntimeError('Field PSF calibration receipt hash changed')
     verify_frozen(path,commit)
     calibration=json.loads(path.read_text(encoding='utf-8'))
-    if calibration.get('overall_adequacy_pass') is not True:
+    diagnostic_mode=protocol.get('allow_inadequate_field_calibration_for_diagnostic') is True
+    if calibration.get('overall_adequacy_pass') is not True and not diagnostic_mode:
         raise RuntimeError('Field-only PSF calibration failed; quasar targets must remain sealed')
+    declared=protocol.get('primary_observation',{}).get('products')
+    if declared is not None and set(calibration['psf_files_by_exposure'])!=set(declared):
+        raise RuntimeError('A complete frozen PSF response for every declared native file is required, including diagnostics')
     checked=set()
     for native in calibration['psf_files_by_exposure']:
         for relative in psf_paths_by_label(calibration,native).values():
@@ -169,6 +173,9 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
     quadrature=int(protocol.get('quadrature_order',7))
     psf_model=protocol.get('psf_model','moffat')
     background_degree=int(protocol.get('background_degree',1))
+    diagnostic_mode=protocol.get('allow_inadequate_field_calibration_for_diagnostic') is True
+    calibration_pass=(bool(calibration.get('overall_adequacy_pass') is True) if calibration is not None
+                      else psf_model!='field_empirical')
     exposures=[];non_target=[]
     for path in sorted(set(Path(p).resolve() for p in paths)):
         with datamodels.open(path) as model:
@@ -191,6 +198,10 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
                                    'shape':list(shape)});continue
             item={'file':str(path),'sha256':sha(path),'filter':filter_name,
                   'detector':str(model.meta.instrument.detector),
+                  'calibration_adequacy_pass':calibration_pass,'diagnostic_mode':diagnostic_mode,
+                  'calibration_manifest_sha256':protocol.get('psf_calibration',{}).get('sha256'),
+                  'measurement_status':('CALIBRATION_INADEQUATE_DIAGNOSTIC_ONLY' if diagnostic_mode and not calibration_pass
+                                         else 'DIAGNOSTIC_ONLY' if diagnostic_mode else 'PER_EXPOSURE_MEASUREMENT_ONLY'),
                   'measurement_errors':[], 'points':[]}
             item['native_stamp_archives']=archive_native_windows(model,guesses,path,out,item['sha256'])
             try:
@@ -251,6 +262,9 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
                 item['intrinsic_q_arcsec']=q.tolist();item['intrinsic_covariance_arcsec2']=qcov.tolist()
                 item['relative_B_C_D_to_A_east_north_arcsec']=(points[1:]-points[0]).tolist()
                 item['model_scores']=score_models(q,qcov,models,geometry_alpha,required_reduction)
+                for score in item['model_scores'].values():
+                    score['conditional_geometry_validation_pass']=False
+                    score['validation_scope']='Per-exposure diagnostic; the separate aggregate gates are required'
             dump(out/'exposures'/f'{path.stem}.json',item)
             exposures.append(item)
     complete=[x for x in exposures if 'intrinsic_q_arcsec' in x]
@@ -263,6 +277,8 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
             'expected_target_exposures':expected,'exposure_count_matches_protocol':count_ok,
             'pixel_fit_familywise_alpha':family_alpha,'pixel_fit_bonferroni_threshold':pixel_threshold,
             'all_pixel_models_adequate':fit_ok,'non_target_files':non_target,
+            'calibration_adequacy_pass':calibration_pass,'diagnostic_mode':diagnostic_mode,
+            'calibration_manifest_sha256':protocol.get('psf_calibration',{}).get('sha256'),
             'exposure_result_files':[f'exposures/{Path(x["file"]).stem}.json' for x in exposures],
             'conditional_covariance_scope':'Known ERR, disjoint point stamps, independent exposures; instrument distortion/reference common covariance and instrumental PSF uncertainty are not supplied by ERR. No arbitrary floor or residual scale inferred.',
             'physical_admission':False,'unchanged_physical_guard':2e-10,
@@ -275,12 +291,17 @@ def apply_native_files(paths,protocol,models,out,calibration=None):
         result['combined']=combined;result['exposures_consistent']=consistent
         result['models']=score_models(combined['mean'],combined['covariance'],models,geometry_alpha,required_reduction)
         for name,s in result['models'].items():
-            s['conditional_geometry_validation_pass']=bool(fit_ok and consistent and s['formal_geometry_compatible_at_alpha']
+            s['conditional_geometry_validation_pass']=bool(calibration_pass and not diagnostic_mode and fit_ok and consistent and s['formal_geometry_compatible_at_alpha']
                     and s['meets_declared_baseline_raw_q_RMS_reduction'])
         result['measurement_status']='ADEQUATE_UNDER_CONDITIONAL_KNOWN_ERR_MODEL' if fit_ok and consistent else 'FAILED_MEASUREMENT_ADEQUACY_OR_EXPOSURE_CONSISTENCY'
     else:
         result['measurement_status']='NO_COMPLETE_FOUR_POINT_MEASUREMENT'
         result['exposures_consistent']=False;result['models']={}
+    if diagnostic_mode:
+        result['diagnostic_extraction_status']=result['measurement_status']
+        result['measurement_status']=('CALIBRATION_INADEQUATE_DIAGNOSTIC_ONLY' if not calibration_pass else 'DIAGNOSTIC_ONLY')
+        result['interpretation']='First numerical target application under a known inadequate or explicitly diagnostic instrumental response. Raw residuals and formal conditional scores do not validate physical geometry; the original field calibration failure remains preserved.'
+        for score in result['models'].values():score['conditional_geometry_validation_pass']=False
     return result
 
 
@@ -304,8 +325,12 @@ def main():
         verify_frozen(ROOT/relative,args.freeze_commit)
     if protocol.get('prediction_sha256')!=sha(args.predictions):raise RuntimeError('Prediction hash missing/mismatch')
     calibration=frozen_psf_calibration(protocol,args.freeze_commit)
+    diagnostic_mode=protocol.get('allow_inadequate_field_calibration_for_diagnostic') is True
+    calibration_pass=(bool(calibration.get('overall_adequacy_pass') is True) if calibration is not None
+                      else protocol.get('psf_model','moffat')!='field_empirical')
     if not args.execute:
         print(json.dumps({'frozen_inputs_verified':True,'target_arrays_opened':False,
+                          'diagnostic_mode':diagnostic_mode,'calibration_adequacy_pass':calibration_pass,
                           'note':'--execute required; no SCI planes opened'},indent=2));return
     if not args.cal:raise ValueError('Explicit native CAL filenames required')
     verify_native_inputs(args.cal,protocol,calibration)
@@ -315,6 +340,9 @@ def main():
         json.dump({'started_utc':datetime.now(timezone.utc).isoformat(),'freeze_commit':args.freeze_commit,
                    'protocol_sha256':sha(args.protocol),'prediction_sha256':sha(args.predictions),
                    'native_filenames':[str(f) for f in args.cal],
+                   'diagnostic_mode':diagnostic_mode,'calibration_adequacy_pass':calibration_pass,
+                   'calibration_manifest_sha256':protocol.get('psf_calibration',{}).get('sha256'),
+                   'known_failed_calibration_sha256':(protocol.get('psf_calibration',{}).get('sha256') if not calibration_pass else None),
                    'note':'Created exclusively before numerical native-array opening; targets consumed even if subsequent measurement fails'},stream,indent=2)
         stream.write('\n')
     result=apply_native_files(args.cal,protocol,prediction['models'],args.output,calibration)

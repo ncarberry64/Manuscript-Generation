@@ -1,0 +1,428 @@
+{
+  "status": "EXTERNAL_STANDARD_PSF_FIELD_INADEQUATE_TARGET_MEASUREMENT_BLOCKED",
+  "overall_adequacy_pass": false,
+  "protocol_sha256": "843ae918c8d2c2d66c0eca564def3e4a7a9b048b0ab8cdc0aef7dc658c1909b8",
+  "physical_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "target_pixel_values_inspected": false,
+  "PSF_trained_on_HE0435": false,
+  "source_sha256": {
+    "scripts/calibrate_he0435_standard_psf.py": "1af4ce6b84161285be278fb30e3fde7d1e4f36c4203e550555040f033e36144e",
+    "code/strong_lensing_standard_psf.py": "9b2f81c27be866d177896d416473025123126666289efc576db9c4f0186d44d0",
+    "code/strong_lensing_field_psf.py": "0deda8cad111e92e27e204f89951416844ab92263f0f09d8db168842b3e08983",
+    "code/strong_lensing_pixel_geometry.py": "41fa74373d8e7caf658af50fa7fd55d714f0c2d36af3e9e6660a75a6ded15f0a"
+  },
+  "input_sha256": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+    "jw01198007001_02101_00002_nrcb3_cal.fits": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+    "jw01198007001_02101_00003_nrcb3_cal.fits": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+    "jw01198007001_02101_00004_nrcb3_cal.fits": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed"
+  },
+  "psf_files_by_exposure": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": {
+      "A": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_A_standard_epsf.fits",
+      "B": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_B_standard_epsf.fits",
+      "C": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_C_standard_epsf.fits",
+      "D": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_D_standard_epsf.fits"
+    },
+    "jw01198007001_02101_00002_nrcb3_cal.fits": {
+      "A": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_A_standard_epsf.fits",
+      "B": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_B_standard_epsf.fits",
+      "C": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_C_standard_epsf.fits",
+      "D": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_D_standard_epsf.fits"
+    },
+    "jw01198007001_02101_00003_nrcb3_cal.fits": {
+      "A": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_A_standard_epsf.fits",
+      "B": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_B_standard_epsf.fits",
+      "C": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_C_standard_epsf.fits",
+      "D": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_D_standard_epsf.fits"
+    },
+    "jw01198007001_02101_00004_nrcb3_cal.fits": {
+      "A": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_A_standard_epsf.fits",
+      "B": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_B_standard_epsf.fits",
+      "C": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_C_standard_epsf.fits",
+      "D": "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_D_standard_epsf.fits"
+    }
+  },
+  "file_sha256": {
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_FIELD_standard_epsf.fits": "2ad224092a6076d49ff09e62e9ad549f968d9670b993abb1660265cf6df68e88",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_A_standard_epsf.fits": "fc3f82823f1d4748e9ec9204d3ec39d4b3da1ff7dfe257313fd116c59e267c8d",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_B_standard_epsf.fits": "a1c60e5e912e0de8d0377825e6a1863630bd149b78802fa68ae9245e5c0772ec",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_C_standard_epsf.fits": "af25ba411978e9fb4420789da7606f611bf3360f54dbf9de9e708a2ad1e7857f",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_D_standard_epsf.fits": "6021954693f73c9021fa241b3acba0daceaed4e20ab3a442bf5fceab2852ccb3",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_FIELD_standard_epsf.fits": "bc1e10b3563ec38ac6facc85f09e5bbf2a735179b8b69e91932a6009ad7cd63b",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_A_standard_epsf.fits": "1fc65651bb5780b8bb5e6645b7f81de87a70c2b0d9214b0dd0aa7c53cbdb6886",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_B_standard_epsf.fits": "36c8acac848a6a0e8e17b20aa84890b27efecf281e350eb007c5f05c6627f8fc",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_C_standard_epsf.fits": "c4e69a4cefed11ef24ec487708e216974eadf0447146e8c8f52ed9d2ed0e6458",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_D_standard_epsf.fits": "c0c1d7f005a4fa7b1a2de32d92a59fe7c3aa288fc41b6e3c5f1453de8e09c6d3",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_FIELD_standard_epsf.fits": "db13b2332fe4744c8c27ae886a5e281b46d0fe43de182ab767035bb549308572",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_A_standard_epsf.fits": "19787671400eb3008fb4fc9f3fbf476874f7fd3716d20a81e967f57ec4fbbd0a",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_B_standard_epsf.fits": "f0cb791f23962550a44b0cec1450926fb7e8d48f8ba5be4d5b98b1c917fa0315",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_C_standard_epsf.fits": "f90ce5028601168023eb6cdeba8775e8ff99a5c09e60b7dba1c9c6878396b8b5",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_D_standard_epsf.fits": "04dcecde0aa47109bca982e02f23bf465b89bdee9afa794dd23ca656910eebcf",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_FIELD_standard_epsf.fits": "3ab108ed0374eca15dee1e3302f5b88160f5c2c9acd5a0a4a4613df65d160d0d",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_A_standard_epsf.fits": "e87b938eb0def466d4fb24bebaf49d8f7336c7f400f020630b5288e3a222eaa3",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_B_standard_epsf.fits": "7c142c7f9cc5ca9a8dbf0603f7b2485b48cf0f798b75a367964f6b42d05f57c8",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_C_standard_epsf.fits": "b1d968fab55dcac3f2ee1d17656b7d84a7650bf41426d7c1ba34ceaa7a87b760",
+    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_D_standard_epsf.fits": "605766294acfadf384fdabbd50c7338e63a5b1799eccc4871f12f005d051048b"
+  },
+  "field_fits": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "epoch_jyear": 2022.7780532184006,
+      "nominal_catalogue_xy": [
+        918.0539172698426,
+        904.2478939887649
+      ],
+      "saturated_component_association": {
+        "center_xy_pixel": [
+          899.6666666666666,
+          876.0
+        ],
+        "pixels": 18,
+        "distance_to_catalogue_pixel": 33.70511088165256,
+        "candidate_components": [
+          {
+            "center_xy_pixel": [
+              899.6666666666666,
+              876.0
+            ],
+            "pixels": 18,
+            "distance_to_catalogue_pixel": 33.70511088165256
+          }
+        ],
+        "association_uses_SCI": false
+      },
+      "centroid_xy_pixel": [
+        899.8226508555404,
+        875.9314449045869
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          7.083406335618909e-06,
+          4.1209068952465204e-07
+        ],
+        [
+          4.1209068952465204e-07,
+          5.573367120924268e-06
+        ]
+      ],
+      "chi2": 13608.66680405211,
+      "dof": 265,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bound_parameter_indices": [],
+      "usable_pixels": 271,
+      "rank": 6,
+      "absolute_adequacy_pass": false,
+      "covariance_rescaled": false,
+      "conditional_on_fixed_empirical_PSF": true,
+      "minimum_usable_pixels_required": 50,
+      "minimum_pixel_count_pass": true,
+      "saturated_pixels_in_star_stamp": 18
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "epoch_jyear": 2022.778070910969,
+      "nominal_catalogue_xy": [
+        1109.7219015837381,
+        715.3433911468427
+      ],
+      "saturated_component_association": {
+        "center_xy_pixel": [
+          1091.5,
+          687.5
+        ],
+        "pixels": 16,
+        "distance_to_catalogue_pixel": 33.2759992770092,
+        "candidate_components": [
+          {
+            "center_xy_pixel": [
+              1091.5,
+              687.5
+            ],
+            "pixels": 16,
+            "distance_to_catalogue_pixel": 33.2759992770092
+          }
+        ],
+        "association_uses_SCI": false
+      },
+      "centroid_xy_pixel": [
+        1091.4464474647582,
+        687.080286051821
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          5.823402226367931e-06,
+          7.367302087910782e-08
+        ],
+        [
+          7.367302087910782e-08,
+          6.154935107610246e-06
+        ]
+      ],
+      "chi2": 14089.97086347977,
+      "dof": 267,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bound_parameter_indices": [],
+      "usable_pixels": 273,
+      "rank": 6,
+      "absolute_adequacy_pass": false,
+      "covariance_rescaled": false,
+      "conditional_on_fixed_empirical_PSF": true,
+      "minimum_usable_pixels_required": 50,
+      "minimum_pixel_count_pass": true,
+      "saturated_pixels_in_star_stamp": 16
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "epoch_jyear": 2022.7780886035694,
+      "nominal_catalogue_xy": [
+        1301.1527818966556,
+        526.2554112033794
+      ],
+      "saturated_component_association": {
+        "center_xy_pixel": [
+          1282.6666666666667,
+          498.0
+        ],
+        "pixels": 18,
+        "distance_to_catalogue_pixel": 33.76543674482062,
+        "candidate_components": [
+          {
+            "center_xy_pixel": [
+              1282.6666666666667,
+              498.0
+            ],
+            "pixels": 18,
+            "distance_to_catalogue_pixel": 33.76543674482062
+          }
+        ],
+        "association_uses_SCI": false
+      },
+      "centroid_xy_pixel": [
+        1282.8935464363637,
+        498.01190172021376
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          7.0537002268348735e-06,
+          4.7991996587954695e-08
+        ],
+        [
+          4.7991996587954695e-08,
+          5.631227235622149e-06
+        ]
+      ],
+      "chi2": 12962.997153466522,
+      "dof": 265,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bound_parameter_indices": [],
+      "usable_pixels": 271,
+      "rank": 6,
+      "absolute_adequacy_pass": false,
+      "covariance_rescaled": false,
+      "conditional_on_fixed_empirical_PSF": true,
+      "minimum_usable_pixels_required": 50,
+      "minimum_pixel_count_pass": true,
+      "saturated_pixels_in_star_stamp": 18
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "epoch_jyear": 2022.7781059533995,
+      "nominal_catalogue_xy": [
+        1492.2721213722311,
+        337.0342033722637
+      ],
+      "saturated_component_association": {
+        "center_xy_pixel": [
+          1474.0,
+          309.0
+        ],
+        "pixels": 21,
+        "distance_to_catalogue_pixel": 33.463218287531554,
+        "candidate_components": [
+          {
+            "center_xy_pixel": [
+              1474.0,
+              309.0
+            ],
+            "pixels": 21,
+            "distance_to_catalogue_pixel": 33.463218287531554
+          }
+        ],
+        "association_uses_SCI": false
+      },
+      "centroid_xy_pixel": [
+        1474.025343636212,
+        308.7738891163647
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          7.555620650651051e-06,
+          -2.2751616700641843e-07
+        ],
+        [
+          -2.2751616700641845e-07,
+          7.92671449784825e-06
+        ]
+      ],
+      "chi2": 11381.03901420627,
+      "dof": 262,
+      "p_value": 0.0,
+      "optimizer_success": true,
+      "active_bound_parameter_indices": [],
+      "usable_pixels": 268,
+      "rank": 6,
+      "absolute_adequacy_pass": false,
+      "covariance_rescaled": false,
+      "conditional_on_fixed_empirical_PSF": true,
+      "minimum_usable_pixels_required": 50,
+      "minimum_pixel_count_pass": true,
+      "saturated_pixels_in_star_stamp": 21
+    }
+  ],
+  "field_reference_guesses_xy_pixel_by_exposure": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": [
+      [
+        768.8939248353055,
+        1241.2785108475468
+      ],
+      [
+        766.0193921954675,
+        1292.148849708665
+      ],
+      [
+        811.358028430803,
+        1311.7053270422352
+      ],
+      [
+        828.0137852419596,
+        1254.6943869409129
+      ]
+    ],
+    "jw01198007001_02101_00002_nrcb3_cal.fits": [
+      [
+        960.9835322217169,
+        1052.4593155984105
+      ],
+      [
+        958.1681627787779,
+        1103.31593295863
+      ],
+      [
+        1003.5219713107572,
+        1122.7913540990264
+      ],
+      [
+        1020.108663543788,
+        1065.7740499454014
+      ]
+    ],
+    "jw01198007001_02101_00003_nrcb3_cal.fits": [
+      [
+        1152.9283656043544,
+        863.3659587993607
+      ],
+      [
+        1150.176061052123,
+        914.2018594969156
+      ],
+      [
+        1195.5418345477792,
+        933.5968042604247
+      ],
+      [
+        1212.05371539361,
+        876.5819656696431
+      ]
+    ],
+    "jw01198007001_02101_00004_nrcb3_cal.fits": [
+      [
+        1344.5792093382772,
+        674.0521871361143
+      ],
+      [
+        1341.8924030830003,
+        724.8604476401048
+      ],
+      [
+        1387.2667799233307,
+        744.1763823576551
+      ],
+      [
+        1403.6998965666587,
+        687.1729868416029
+      ]
+    ]
+  },
+  "field_registration": {
+    "jw01198007001_02101_00001_nrcb3_cal.fits": {
+      "translation_pixel": [
+        -18.23126641430224,
+        -28.316449084177975
+      ],
+      "scope": "Changes association initial guesses only; no target affine/scale/shear or physical lens parameter fitted."
+    },
+    "jw01198007001_02101_00002_nrcb3_cal.fits": {
+      "translation_pixel": [
+        -18.27545411897995,
+        -28.26310509502173
+      ],
+      "scope": "Changes association initial guesses only; no target affine/scale/shear or physical lens parameter fitted."
+    },
+    "jw01198007001_02101_00003_nrcb3_cal.fits": {
+      "translation_pixel": [
+        -18.259235460291848,
+        -28.24350948316561
+      ],
+      "scope": "Changes association initial guesses only; no target affine/scale/shear or physical lens parameter fitted."
+    },
+    "jw01198007001_02101_00004_nrcb3_cal.fits": {
+      "translation_pixel": [
+        -18.246777736019112,
+        -28.260314255898948
+      ],
+      "scope": "Changes association initial guesses only; no target affine/scale/shear or physical lens parameter fitted."
+    }
+  },
+  "conditional_uncertainty_note": "Conditional known native ERR and fixed independent empirical PSF at spatial position; unmodeled epoch/color/calibration-star noise and absolute distortion covariance remain explicit. No residual floor, covariance inflation or chi2-rescaling; no physical admission. One field star per exposure gives limited spatial and spectral validation coverage.",
+  "selected_gaia_field_identity": {
+    "source_id": "3178020716638520576",
+    "ra": "69.56501618029935",
+    "dec": "-12.289311881427105",
+    "ref_epoch": "2016.0",
+    "parallax": "0.38612677889644376",
+    "parallax_error": "0.56320536",
+    "pmra": "6.223825779922148",
+    "pmdec": "-3.871614098607671",
+    "pmra_error": "0.4324651",
+    "pmdec_error": "0.3817852",
+    "pmra_pmdec_corr": "-0.03929594",
+    "ruwe": "0.9401555",
+    "duplicated_source": "false",
+    "ipd_frac_multi_peak": "0",
+    "ipd_frac_odd_win": "0",
+    "phot_g_mean_mag": "20.355795",
+    "bp_rp": "1.7092152",
+    "classprob_dsc_combmod_star": "0.99999106",
+    "classprob_dsc_combmod_quasar": "4.6721103E-11",
+    "classprob_dsc_combmod_galaxy": "3.6705756E-12",
+    "assessment": {
+      "accepted": true,
+      "star_probability": 0.99999106,
+      "proper_motion_significance": 17.289983512553242,
+      "parallax_significance": 0.6855878979852815,
+      "catalogue_quality_accepted": true
+    }
+  },
+  "library": {
+    "path": "data/strong_lensing_geometry_20261021/calibration/STDPSF_NRCB3_F115W.fits",
+    "url": "https://www.stsci.edu/~jayander/JWST1PASS/LIB/PSFs/STDPSFs/NIRCam/SWC/F115W/STDPSF_NRCB3_F115W.fits",
+    "bytes": 1025280,
+    "sha256": "7351eb21aa28b8e02c4f84468e2341e906971b940c768907f87187c1593ef77c",
+    "training": "LMC COM-1074/CAL-1476, independent HE0435 photons"
+  },
+  "completed_utc": "2026-10-21T13:31:13.704820+00:00"
+}

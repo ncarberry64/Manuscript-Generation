@@ -1,0 +1,1225 @@
+{
+  "status": "PASS_EXACT_PATH_INHERITANCE_WITH_TWO_DOCUMENT_LINE_ENDING_EXCEPTIONS",
+  "created_utc": "2026-10-21T13:38:27.080676+00:00",
+  "audit_role": "Independent read-only inheritance/source audit by a collaborating research agent; creates this new receipt only",
+  "starting_worktree_commit": "2fc7162c34d7825ce819e0a50e1db262a622df2e",
+  "first_physical_freeze_commit": "fc3a449db48c2956627f6174884122e71391eee5",
+  "current_head_at_audit": "29dcff984d4d83d7ccaf4c716a8b253ca81e3d01",
+  "method": "Compare actual raw file bytes to starting Git blob content using SHA1(blob header+bytes); inspect CRLF-to-LF-only differences separately. No array parsing, solver application, test rerun, CI execution or native/quasar pixel access. Frozen physical files also compared directly to first-freeze bytes and SHA256.",
+  "exact_inherited_groups": {
+    "all_inherited_code": {
+      "paths": [
+        "code"
+      ],
+      "baseline_files": 41,
+      "all_raw_bytes_identical": true,
+      "all_content_identical": true,
+      "file_checks": {
+        "code/action_native_matter_n2.py": {
+          "baseline_git_blob_sha1": "61b9fb32071627d18b3402fee7e7c32cee336f52",
+          "current_raw_byte_git_blob_sha1": "61b9fb32071627d18b3402fee7e7c32cee336f52",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/background.py": {
+          "baseline_git_blob_sha1": "69c33ad47d0650088551b3892b3cd7baf9a18d8e",
+          "current_raw_byte_git_blob_sha1": "69c33ad47d0650088551b3892b3cd7baf9a18d8e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_los_topographic_transfer.py": {
+          "baseline_git_blob_sha1": "048ed69ea7bab5e263459ae6660452349e895f9e",
+          "current_raw_byte_git_blob_sha1": "048ed69ea7bab5e263459ae6660452349e895f9e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_make_or_break_prediction.py": {
+          "baseline_git_blob_sha1": "348e5245336a1194e323783b9f82ac7f573d7ff4",
+          "current_raw_byte_git_blob_sha1": "348e5245336a1194e323783b9f82ac7f573d7ff4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_optical_constitutive.py": {
+          "baseline_git_blob_sha1": "8beda857d70f56ab0f76562c0478c443095c9548",
+          "current_raw_byte_git_blob_sha1": "8beda857d70f56ab0f76562c0478c443095c9548",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_optical_current_gate.py": {
+          "baseline_git_blob_sha1": "84fec526c000955d47a75a472632a96716318868",
+          "current_raw_byte_git_blob_sha1": "84fec526c000955d47a75a472632a96716318868",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_optical_hessian_projection.py": {
+          "baseline_git_blob_sha1": "6c7a1dfa8bcfd82b20f6217cce03da83fa63048a",
+          "current_raw_byte_git_blob_sha1": "6c7a1dfa8bcfd82b20f6217cce03da83fa63048a",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_optical_low_rank_covariance.py": {
+          "baseline_git_blob_sha1": "31fc7b68b6f82d2ba11836625820eb66cb590772",
+          "current_raw_byte_git_blob_sha1": "31fc7b68b6f82d2ba11836625820eb66cb590772",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bhsm_optical_transfer.py": {
+          "baseline_git_blob_sha1": "d6905c9f7a8ce1d9ea74daeb109cb9848e17ed16",
+          "current_raw_byte_git_blob_sha1": "d6905c9f7a8ce1d9ea74daeb109cb9848e17ed16",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/bianchi_dictionary_n2.py": {
+          "baseline_git_blob_sha1": "ffb9ec091be7d21c230e20b0e5c35a2742c10290",
+          "current_raw_byte_git_blob_sha1": "ffb9ec091be7d21c230e20b0e5c35a2742c10290",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/closed_horndeski_n2.py": {
+          "baseline_git_blob_sha1": "7031f8e9678180731288f070508bf52f0242c5f5",
+          "current_raw_byte_git_blob_sha1": "7031f8e9678180731288f070508bf52f0242c5f5",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/figures.py": {
+          "baseline_git_blob_sha1": "dd86c65e6fc6836c6d266ba952849b5b50c2ab7f",
+          "current_raw_byte_git_blob_sha1": "dd86c65e6fc6836c6d266ba952849b5b50c2ab7f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/growth.py": {
+          "baseline_git_blob_sha1": "ad977cf280e5d2846dc9794067dc93892c2ed7e4",
+          "current_raw_byte_git_blob_sha1": "ad977cf280e5d2846dc9794067dc93892c2ed7e4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/matter_sourced_n2.py": {
+          "baseline_git_blob_sha1": "bb8ec1b1c188571e45d393d8c989bdaa946964d7",
+          "current_raw_byte_git_blob_sha1": "bb8ec1b1c188571e45d393d8c989bdaa946964d7",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/perturbations.py": {
+          "baseline_git_blob_sha1": "ec6dec3ecfe99429b88cce76a7f18b32f1787bdf",
+          "current_raw_byte_git_blob_sha1": "ec6dec3ecfe99429b88cce76a7f18b32f1787bdf",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/preregister.py": {
+          "baseline_git_blob_sha1": "177eea8e00ce75b2b40c92123dfab291269ec909",
+          "current_raw_byte_git_blob_sha1": "177eea8e00ce75b2b40c92123dfab291269ec909",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/r1_2mrs_bhsm_seam_transfer.py": {
+          "baseline_git_blob_sha1": "c66eb712c22958a6047a6ccb0a3e10da2e2efab3",
+          "current_raw_byte_git_blob_sha1": "c66eb712c22958a6047a6ccb0a3e10da2e2efab3",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/r1_2mrs_foreground_transfer.py": {
+          "baseline_git_blob_sha1": "6c41e3e8171975dcffa2865d84917ed4b837f3ab",
+          "current_raw_byte_git_blob_sha1": "6c41e3e8171975dcffa2865d84917ed4b837f3ab",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/r1_2mrs_luminosity_transfer.py": {
+          "baseline_git_blob_sha1": "9327fcbf3a779070680134d0231258dd51afad17",
+          "current_raw_byte_git_blob_sha1": "9327fcbf3a779070680134d0231258dd51afad17",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/r1_n2_growth_lensing_transfer.py": {
+          "baseline_git_blob_sha1": "ffd46a2bca7219df22392c3530beb731eb918bb5",
+          "current_raw_byte_git_blob_sha1": "ffd46a2bca7219df22392c3530beb731eb918bb5",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/r1_n2_luminosity_distance_kernel.py": {
+          "baseline_git_blob_sha1": "6b8843eeaa97268c081cfca98703bb77821325e2",
+          "current_raw_byte_git_blob_sha1": "6b8843eeaa97268c081cfca98703bb77821325e2",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/r1_n2_reduced_propagator.py": {
+          "baseline_git_blob_sha1": "bb081d1129948711b7577af0e645f95c4825790b",
+          "current_raw_byte_git_blob_sha1": "bb081d1129948711b7577af0e645f95c4825790b",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_comparison.py": {
+          "baseline_git_blob_sha1": "39cf10de8b72347da3a7e0556cb22666a1214123",
+          "current_raw_byte_git_blob_sha1": "39cf10de8b72347da3a7e0556cb22666a1214123",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_degeneracy.py": {
+          "baseline_git_blob_sha1": "0de0b2eb14e9ac47699937adc73d1d7a8bb3ea6e",
+          "current_raw_byte_git_blob_sha1": "0de0b2eb14e9ac47699937adc73d1d7a8bb3ea6e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_encounter_accuracy.py": {
+          "baseline_git_blob_sha1": "b9cf903db0915e6a96917b5dbcff5b4b5152775a",
+          "current_raw_byte_git_blob_sha1": "b9cf903db0915e6a96917b5dbcff5b4b5152775a",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_envelope.py": {
+          "baseline_git_blob_sha1": "17c6c329dbd4888ebc37dc3d9be7e3b71fb857c9",
+          "current_raw_byte_git_blob_sha1": "17c6c329dbd4888ebc37dc3d9be7e3b71fb857c9",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_gaia_validation.py": {
+          "baseline_git_blob_sha1": "e1315f9048081b5de30b2ed83491ec2a2b975554",
+          "current_raw_byte_git_blob_sha1": "e1315f9048081b5de30b2ed83491ec2a2b975554",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_gr2.py": {
+          "baseline_git_blob_sha1": "4c3ce6a953763e8f2385f1bc080e15c2f62214c2",
+          "current_raw_byte_git_blob_sha1": "4c3ce6a953763e8f2385f1bc080e15c2f62214c2",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_hst_central.py": {
+          "baseline_git_blob_sha1": "bad6290cce85396699caf409c05e968279097f90",
+          "current_raw_byte_git_blob_sha1": "bad6290cce85396699caf409c05e968279097f90",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_lightcurve_revision.py": {
+          "baseline_git_blob_sha1": "484bee0fcc81ef311ced1ae368e13284a43aa5a8",
+          "current_raw_byte_git_blob_sha1": "484bee0fcc81ef311ced1ae368e13284a43aa5a8",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_local_family.py": {
+          "baseline_git_blob_sha1": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+          "current_raw_byte_git_blob_sha1": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_local_hessian.py": {
+          "baseline_git_blob_sha1": "9a99ccbc67bfbd49b521ee1139fafd3e341abddd",
+          "current_raw_byte_git_blob_sha1": "9a99ccbc67bfbd49b521ee1139fafd3e341abddd",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_macro_revision.py": {
+          "baseline_git_blob_sha1": "e77bec82d85cd95e9864932c70f9b87835c61776",
+          "current_raw_byte_git_blob_sha1": "e77bec82d85cd95e9864932c70f9b87835c61776",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_observed_lightcurve.py": {
+          "baseline_git_blob_sha1": "2388a744bcd67120aca2432fb60619f30b03151e",
+          "current_raw_byte_git_blob_sha1": "2388a744bcd67120aca2432fb60619f30b03151e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_observed_macro.py": {
+          "baseline_git_blob_sha1": "f21f462a099e407f204e78615ac36833294dc6aa",
+          "current_raw_byte_git_blob_sha1": "f21f462a099e407f204e78615ac36833294dc6aa",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_r1_screened.py": {
+          "baseline_git_blob_sha1": "ad57e5843d60a5bf0d899c2510cee372c8b6cdd2",
+          "current_raw_byte_git_blob_sha1": "ad57e5843d60a5bf0d899c2510cee372c8b6cdd2",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_refit.py": {
+          "baseline_git_blob_sha1": "64c13e58b760a6d834a3e10d3406968c8e34bba0",
+          "current_raw_byte_git_blob_sha1": "64c13e58b760a6d834a3e10d3406968c8e34bba0",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_revision_filter.c": {
+          "baseline_git_blob_sha1": "5e2c47d801219230d1108de41b2d0b5a357e9fc1",
+          "current_raw_byte_git_blob_sha1": "5e2c47d801219230d1108de41b2d0b5a357e9fc1",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_robustness.py": {
+          "baseline_git_blob_sha1": "d893b80ada9123e0d457b1eb87e6579b9ae5e12d",
+          "current_raw_byte_git_blob_sha1": "d893b80ada9123e0d457b1eb87e6579b9ae5e12d",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_surface_source.py": {
+          "baseline_git_blob_sha1": "c18af8a4d31aa8d3b175d8488adc32a9c35c2ee3",
+          "current_raw_byte_git_blob_sha1": "c18af8a4d31aa8d3b175d8488adc32a9c35c2ee3",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "code/strong_lensing_transport.py": {
+          "baseline_git_blob_sha1": "8a7fb04614a4b7cc0065caacc79c2ef7c0ce098f",
+          "current_raw_byte_git_blob_sha1": "8a7fb04614a4b7cc0065caacc79c2ef7c0ce098f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    },
+    "old_observed_numerical_artifacts": {
+      "paths": [
+        "artifacts/strong_lensing_observed_20261020"
+      ],
+      "baseline_files": 23,
+      "all_raw_bytes_identical": false,
+      "all_content_identical": true,
+      "file_checks": {
+        "artifacts/strong_lensing_observed_20261020/README.md": {
+          "baseline_git_blob_sha1": "7047dc06384e93ddb36a9b4b75770139c25f8a0d",
+          "current_raw_byte_git_blob_sha1": "0f77fdf307c57b0b55e643b157e7003e50ee331d",
+          "raw_bytes_identical": false,
+          "content_identical_after_CRLF_to_LF_only": true,
+          "exception": "Inherited README working-tree CRLF differs from starting commit LF; no textual change after line-ending normalization and no tracked Git diff. This audit does not rewrite the file."
+        },
+        "artifacts/strong_lensing_observed_20261020/code_normalization_audit.json": {
+          "baseline_git_blob_sha1": "5ba9181a8c3605cb4bd106f7e50474ec4d65d879",
+          "current_raw_byte_git_blob_sha1": "5ba9181a8c3605cb4bd106f7e50474ec4d65d879",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/conventional_training.json": {
+          "baseline_git_blob_sha1": "daa09a100a1b4cf0edb42349a763f3cf1040997a",
+          "current_raw_byte_git_blob_sha1": "daa09a100a1b4cf0edb42349a763f3cf1040997a",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/final_outcome_review.json": {
+          "baseline_git_blob_sha1": "462c0f28bd63fc51438663e3c666dce3254eda6a",
+          "current_raw_byte_git_blob_sha1": "462c0f28bd63fc51438663e3c666dce3254eda6a",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/frozen_predictions.json": {
+          "baseline_git_blob_sha1": "e4dde75845679159e60f7894ef6ac7524280eeea",
+          "current_raw_byte_git_blob_sha1": "e4dde75845679159e60f7894ef6ac7524280eeea",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/independent_data_likelihood_review.json": {
+          "baseline_git_blob_sha1": "f26b451b97ffe324d875d709bb75892d20c6c1cd",
+          "current_raw_byte_git_blob_sha1": "f26b451b97ffe324d875d709bb75892d20c6c1cd",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/independent_macro_review.json": {
+          "baseline_git_blob_sha1": "e585e99b3cdd2037e9f68d49ffadff8ee6393c10",
+          "current_raw_byte_git_blob_sha1": "e585e99b3cdd2037e9f68d49ffadff8ee6393c10",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/known_outcome_replay.json": {
+          "baseline_git_blob_sha1": "92dc3b8d22a1ed8934dcfc6b4c2cce8ea276c028",
+          "current_raw_byte_git_blob_sha1": "92dc3b8d22a1ed8934dcfc6b4c2cce8ea276c028",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/lightcurve_training.json": {
+          "baseline_git_blob_sha1": "691180f2e5f03a95ca799ad25587d8b9a16f8cbe",
+          "current_raw_byte_git_blob_sha1": "691180f2e5f03a95ca799ad25587d8b9a16f8cbe",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/macro_forward_audit.json": {
+          "baseline_git_blob_sha1": "d88010518a03d1688cad36f3929ca631d4c39750",
+          "current_raw_byte_git_blob_sha1": "d88010518a03d1688cad36f3929ca631d4c39750",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/manuscript_researcher_review.json": {
+          "baseline_git_blob_sha1": "26696f28c5af60cecac022b33e5a52c560588afe",
+          "current_raw_byte_git_blob_sha1": "26696f28c5af60cecac022b33e5a52c560588afe",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/pdf_contact_sheet.png": {
+          "baseline_git_blob_sha1": "c5434ed7cecacd2380e1abbfccc59f5e54a1d6cb",
+          "current_raw_byte_git_blob_sha1": "c5434ed7cecacd2380e1abbfccc59f5e54a1d6cb",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/plot_summary.json": {
+          "baseline_git_blob_sha1": "fd20e76362d65694964f1b1482bc7d5f2b75e286",
+          "current_raw_byte_git_blob_sha1": "fd20e76362d65694964f1b1482bc7d5f2b75e286",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/publication_manifest.json": {
+          "baseline_git_blob_sha1": "34c0954e851778f8e5f1f941f592742c850b502f",
+          "current_raw_byte_git_blob_sha1": "34c0954e851778f8e5f1f941f592742c850b502f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/r1_training.json": {
+          "baseline_git_blob_sha1": "b26cdeec22bfc6d0a54313c4b7c81fbbec0ba430",
+          "current_raw_byte_git_blob_sha1": "b26cdeec22bfc6d0a54313c4b7c81fbbec0ba430",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/scoring_started.json": {
+          "baseline_git_blob_sha1": "e009ae4132f536da09bbb59bf76bd6cfc427b16f",
+          "current_raw_byte_git_blob_sha1": "e009ae4132f536da09bbb59bf76bd6cfc427b16f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/training_curvature.json": {
+          "baseline_git_blob_sha1": "3e48e7c42556b4eb764c92ad17d6e93c02995a2c",
+          "current_raw_byte_git_blob_sha1": "3e48e7c42556b4eb764c92ad17d6e93c02995a2c",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/training_diagnostics.json": {
+          "baseline_git_blob_sha1": "b1ddeb927a5b952b3b9e06e27acdefb293b9fdc3",
+          "current_raw_byte_git_blob_sha1": "b1ddeb927a5b952b3b9e06e27acdefb293b9fdc3",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/training_start_0.json": {
+          "baseline_git_blob_sha1": "b6134e4fa5aa0f68f36a73329f47afdb1301e02b",
+          "current_raw_byte_git_blob_sha1": "b6134e4fa5aa0f68f36a73329f47afdb1301e02b",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/training_start_1.json": {
+          "baseline_git_blob_sha1": "af4e27e96cddeb2f9dc811bb4d556938b78cb3f5",
+          "current_raw_byte_git_blob_sha1": "af4e27e96cddeb2f9dc811bb4d556938b78cb3f5",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/training_start_2.json": {
+          "baseline_git_blob_sha1": "491faa27f058c3fa1937bbc32d4aee47e356f319",
+          "current_raw_byte_git_blob_sha1": "491faa27f058c3fa1937bbc32d4aee47e356f319",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/training_start_3.json": {
+          "baseline_git_blob_sha1": "ccb13fc577c4d45d6432b3b20e760c44f1fc0d28",
+          "current_raw_byte_git_blob_sha1": "ccb13fc577c4d45d6432b3b20e760c44f1fc0d28",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_observed_20261020/withheld_scores.json": {
+          "baseline_git_blob_sha1": "0cdb281ed32a603d30081239a5fce279e91e3064",
+          "current_raw_byte_git_blob_sha1": "0cdb281ed32a603d30081239a5fce279e91e3064",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    },
+    "old_revision_numerical_artifacts": {
+      "paths": [
+        "artifacts/strong_lensing_revision_20261020"
+      ],
+      "baseline_files": 55,
+      "all_raw_bytes_identical": true,
+      "all_content_identical": true,
+      "file_checks": {
+        "artifacts/strong_lensing_revision_20261020/development_calibration.json": {
+          "baseline_git_blob_sha1": "d4d5d8091f9c61fb27f541d54649d3b2fb5c74ed",
+          "current_raw_byte_git_blob_sha1": "d4d5d8091f9c61fb27f541d54649d3b2fb5c74ed",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_calibration_short_windows.json": {
+          "baseline_git_blob_sha1": "dfcf46f6fa3fa2d5babd3da70cc6b4996a9ebfc0",
+          "current_raw_byte_git_blob_sha1": "dfcf46f6fa3fa2d5babd3da70cc6b4996a9ebfc0",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_fold_56000.json": {
+          "baseline_git_blob_sha1": "a6dd6746a66b625e08d28d673d534fed9ed6d5a4",
+          "current_raw_byte_git_blob_sha1": "a6dd6746a66b625e08d28d673d534fed9ed6d5a4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_fold_56800.json": {
+          "baseline_git_blob_sha1": "6bea9074d36aa1f09f2364be49f8169090c9862d",
+          "current_raw_byte_git_blob_sha1": "6bea9074d36aa1f09f2364be49f8169090c9862d",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_fold_57600.json": {
+          "baseline_git_blob_sha1": "5a25b23fe685531b7de872a93149568a518d7524",
+          "current_raw_byte_git_blob_sha1": "5a25b23fe685531b7de872a93149568a518d7524",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_long_fold_54800.json": {
+          "baseline_git_blob_sha1": "3e51baa54c658c270b560a920983f3695bb6ab2e",
+          "current_raw_byte_git_blob_sha1": "3e51baa54c658c270b560a920983f3695bb6ab2e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_long_fold_55600.json": {
+          "baseline_git_blob_sha1": "5c73c409a6a17784b4914e4c4c70a7974ff64662",
+          "current_raw_byte_git_blob_sha1": "5c73c409a6a17784b4914e4c4c70a7974ff64662",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_long_fold_56400.json": {
+          "baseline_git_blob_sha1": "aeb073551512ad7acdd58e9ab59480146aa48c37",
+          "current_raw_byte_git_blob_sha1": "aeb073551512ad7acdd58e9ab59480146aa48c37",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/development_long_horizon_amendment.json": {
+          "baseline_git_blob_sha1": "2ea4745b53c9f707bb4d6ecf15fdb307fc782f05",
+          "current_raw_byte_git_blob_sha1": "2ea4745b53c9f707bb4d6ecf15fdb307fc782f05",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/final_scientific_review.json": {
+          "baseline_git_blob_sha1": "6871c997ef09cc1eb60ee5df0b49926a25f15ce5",
+          "current_raw_byte_git_blob_sha1": "6871c997ef09cc1eb60ee5df0b49926a25f15ce5",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/frozen_revision_predictions.json": {
+          "baseline_git_blob_sha1": "0b4b188e3eff27a0497ca00c8f517308d38e86dd",
+          "current_raw_byte_git_blob_sha1": "0b4b188e3eff27a0497ca00c8f517308d38e86dd",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/frozen_astrometry_predictions.json": {
+          "baseline_git_blob_sha1": "32eae5b5c077464e516a6a808b6b9b5f6996b225",
+          "current_raw_byte_git_blob_sha1": "32eae5b5c077464e516a6a808b6b9b5f6996b225",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/gaia_astrometry_score.json": {
+          "baseline_git_blob_sha1": "af0a23e3fa1121fe2eaa9262ea7fff51981de4a9",
+          "current_raw_byte_git_blob_sha1": "af0a23e3fa1121fe2eaa9262ea7fff51981de4a9",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/gaia_protocol.json": {
+          "baseline_git_blob_sha1": "3e55786a151cc28d8736336387958e3d41cabbcc",
+          "current_raw_byte_git_blob_sha1": "3e55786a151cc28d8736336387958e3d41cabbcc",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/gaia_protocol_v0_pre_exposure.json": {
+          "baseline_git_blob_sha1": "c4d0f4ccba6ce2fea728b576c5e83c9e2aef33dd",
+          "current_raw_byte_git_blob_sha1": "c4d0f4ccba6ce2fea728b576c5e83c9e2aef33dd",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/gaia_protocol_v1_pre_exposure.json": {
+          "baseline_git_blob_sha1": "5b5ced0fced9920099499ad7ddcfa5c218d4bf9d",
+          "current_raw_byte_git_blob_sha1": "5b5ced0fced9920099499ad7ddcfa5c218d4bf9d",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/post_exposure_review.json": {
+          "baseline_git_blob_sha1": "9b6b6bec696c49fa494d37bbbc5ab580fad9bc45",
+          "current_raw_byte_git_blob_sha1": "9b6b6bec696c49fa494d37bbbc5ab580fad9bc45",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/gaia/query_started.json": {
+          "baseline_git_blob_sha1": "d10d86701a8a59393d39e1606555e59ea2874214",
+          "current_raw_byte_git_blob_sha1": "d10d86701a8a59393d39e1606555e59ea2874214",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_central_F814W_publication.png": {
+          "baseline_git_blob_sha1": "19082cbfe1ca48de5ecc386bd32b08f5526ddd75",
+          "current_raw_byte_git_blob_sha1": "19082cbfe1ca48de5ecc386bd32b08f5526ddd75",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_central_image.json": {
+          "baseline_git_blob_sha1": "652fbbf21af1617ad9abb43922333d584e7cfa2e",
+          "current_raw_byte_git_blob_sha1": "652fbbf21af1617ad9abb43922333d584e7cfa2e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_central_pixel_test.pdf": {
+          "baseline_git_blob_sha1": "e33e90f664e3c2a7e7e77b1b2d303cabb3b1a590",
+          "current_raw_byte_git_blob_sha1": "e33e90f664e3c2a7e7e77b1b2d303cabb3b1a590",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_central_pixel_test.png": {
+          "baseline_git_blob_sha1": "554ac6330f847c5ee447d155d4a94f9b3f15abe7",
+          "current_raw_byte_git_blob_sha1": "554ac6330f847c5ee447d155d4a94f9b3f15abe7",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_data_integrity.json": {
+          "baseline_git_blob_sha1": "09964bd8345491c732741e9000f1b93790564c5f",
+          "current_raw_byte_git_blob_sha1": "09964bd8345491c732741e9000f1b93790564c5f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_macro_candidates.json": {
+          "baseline_git_blob_sha1": "1bff3bde013e373310eef01c2a5c8e61988d7825",
+          "current_raw_byte_git_blob_sha1": "1bff3bde013e373310eef01c2a5c8e61988d7825",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/hst_revised_r1.json": {
+          "baseline_git_blob_sha1": "aef49cbe793eb689544cc21a7144ae6a5c6248bd",
+          "current_raw_byte_git_blob_sha1": "aef49cbe793eb689544cc21a7144ae6a5c6248bd",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/independent_revision_review.json": {
+          "baseline_git_blob_sha1": "070d4c6f2cdea7c2f5c9661d07e623f91f1622c1",
+          "current_raw_byte_git_blob_sha1": "070d4c6f2cdea7c2f5c9661d07e623f91f1622c1",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_0.json": {
+          "baseline_git_blob_sha1": "3e54b05ee753c8bf9d49e068134645fd6898a1a5",
+          "current_raw_byte_git_blob_sha1": "3e54b05ee753c8bf9d49e068134645fd6898a1a5",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_0_hst_input.json": {
+          "baseline_git_blob_sha1": "4c1ea7becd6eb355a374aecd15332ab9df88f0b2",
+          "current_raw_byte_git_blob_sha1": "4c1ea7becd6eb355a374aecd15332ab9df88f0b2",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_1.json": {
+          "baseline_git_blob_sha1": "1330bfe823449caf9fa0f06cfa72a547a825f77f",
+          "current_raw_byte_git_blob_sha1": "1330bfe823449caf9fa0f06cfa72a547a825f77f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_1_hst_input.json": {
+          "baseline_git_blob_sha1": "9a91f30fc1d99890eb1a20a8c4082533ce685aba",
+          "current_raw_byte_git_blob_sha1": "9a91f30fc1d99890eb1a20a8c4082533ce685aba",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_2.json": {
+          "baseline_git_blob_sha1": "f5775ca93aa9977d099226bb773c95c926e32794",
+          "current_raw_byte_git_blob_sha1": "f5775ca93aa9977d099226bb773c95c926e32794",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_2_hst_input.json": {
+          "baseline_git_blob_sha1": "c2c045caa2a3fc90aeaf93390fe376ea4fc1b5a1",
+          "current_raw_byte_git_blob_sha1": "c2c045caa2a3fc90aeaf93390fe376ea4fc1b5a1",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_3.json": {
+          "baseline_git_blob_sha1": "93e5dd4cd9990e36f24413ce54da9991a57a1ebd",
+          "current_raw_byte_git_blob_sha1": "93e5dd4cd9990e36f24413ce54da9991a57a1ebd",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_3_hst_input.json": {
+          "baseline_git_blob_sha1": "f3a6a19a4fbccfbb4d82f322cb094cb391b45c18",
+          "current_raw_byte_git_blob_sha1": "f3a6a19a4fbccfbb4d82f322cb094cb391b45c18",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_4.json": {
+          "baseline_git_blob_sha1": "b40b4c62ca25a2e47dd158e22eb65c872e348bc4",
+          "current_raw_byte_git_blob_sha1": "b40b4c62ca25a2e47dd158e22eb65c872e348bc4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidate_4_hst_input.json": {
+          "baseline_git_blob_sha1": "999e63431551f8168f679b1946c13c5eaad6945b",
+          "current_raw_byte_git_blob_sha1": "999e63431551f8168f679b1946c13c5eaad6945b",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_candidates_hst_input.json": {
+          "baseline_git_blob_sha1": "31ce90c96319af9e2269132b818e0fc7a2a3af92",
+          "current_raw_byte_git_blob_sha1": "31ce90c96319af9e2269132b818e0fc7a2a3af92",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_selected_r1.json": {
+          "baseline_git_blob_sha1": "f03b45d7b688479889fab1faddd553d6a70a0e80",
+          "current_raw_byte_git_blob_sha1": "f03b45d7b688479889fab1faddd553d6a70a0e80",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_selected_r1_drift_audit.json": {
+          "baseline_git_blob_sha1": "7714af0057c2058e7324f14a3576abcad6a08c4a",
+          "current_raw_byte_git_blob_sha1": "7714af0057c2058e7324f14a3576abcad6a08c4a",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_selected_r1_hst_input.json": {
+          "baseline_git_blob_sha1": "206c525f8a32929ae5983b5004ee4bb76349d7a7",
+          "current_raw_byte_git_blob_sha1": "206c525f8a32929ae5983b5004ee4bb76349d7a7",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_selection.json": {
+          "baseline_git_blob_sha1": "98f6e398ff2080596ed4803b613598982f7c2a14",
+          "current_raw_byte_git_blob_sha1": "98f6e398ff2080596ed4803b613598982f7c2a14",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/macro_source_provenance.json": {
+          "baseline_git_blob_sha1": "7ef3e26db844828337806ba19cbf585afbf50bf1",
+          "current_raw_byte_git_blob_sha1": "7ef3e26db844828337806ba19cbf585afbf50bf1",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/pdf_contact_sheet.png": {
+          "baseline_git_blob_sha1": "3f1645ed9eb91417b29295aae2749eea8959b36b",
+          "current_raw_byte_git_blob_sha1": "3f1645ed9eb91417b29295aae2749eea8959b36b",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/postscore_source_audit.json": {
+          "baseline_git_blob_sha1": "4334f028a2d77063b901bd6f7f1d790ffcc741ca",
+          "current_raw_byte_git_blob_sha1": "4334f028a2d77063b901bd6f7f1d790ffcc741ca",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revised_conventional_training.json": {
+          "baseline_git_blob_sha1": "1330bfe823449caf9fa0f06cfa72a547a825f77f",
+          "current_raw_byte_git_blob_sha1": "1330bfe823449caf9fa0f06cfa72a547a825f77f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revised_r1_training.json": {
+          "baseline_git_blob_sha1": "f03b45d7b688479889fab1faddd553d6a70a0e80",
+          "current_raw_byte_git_blob_sha1": "f03b45d7b688479889fab1faddd553d6a70a0e80",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_development_fit.json": {
+          "baseline_git_blob_sha1": "2cb70c912df6c7606d0bb0404af19cd8222e0c94",
+          "current_raw_byte_git_blob_sha1": "2cb70c912df6c7606d0bb0404af19cd8222e0c94",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_execution_audit.json": {
+          "baseline_git_blob_sha1": "70edeec1da38edf1173a0d57395e9ec6ad268873",
+          "current_raw_byte_git_blob_sha1": "70edeec1da38edf1173a0d57395e9ec6ad268873",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_map_fit.json": {
+          "baseline_git_blob_sha1": "cd4364abf08e2e2d04d55701c15dee896006eaf0",
+          "current_raw_byte_git_blob_sha1": "cd4364abf08e2e2d04d55701c15dee896006eaf0",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_publication_manifest.json": {
+          "baseline_git_blob_sha1": "4c74c5ccda46daf24b4db7e9630ebbff7fba6f85",
+          "current_raw_byte_git_blob_sha1": "4c74c5ccda46daf24b4db7e9630ebbff7fba6f85",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_report_metrics.json": {
+          "baseline_git_blob_sha1": "f2879022f0df5703fbfc088dfbd38144cb1643b8",
+          "current_raw_byte_git_blob_sha1": "f2879022f0df5703fbfc088dfbd38144cb1643b8",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_report_review.json": {
+          "baseline_git_blob_sha1": "b8d87e7bcda57f970c12afcefdc4db54f8b8b888",
+          "current_raw_byte_git_blob_sha1": "b8d87e7bcda57f970c12afcefdc4db54f8b8b888",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_score_progress.json": {
+          "baseline_git_blob_sha1": "4a05d1fdb00856d0c72e976267f2a4711dedfc1e",
+          "current_raw_byte_git_blob_sha1": "4a05d1fdb00856d0c72e976267f2a4711dedfc1e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_scoring_started.json": {
+          "baseline_git_blob_sha1": "652d7e5cbd221357620f810035e8464c23f18602",
+          "current_raw_byte_git_blob_sha1": "652d7e5cbd221357620f810035e8464c23f18602",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "artifacts/strong_lensing_revision_20261020/revision_unused_scores.json": {
+          "baseline_git_blob_sha1": "4a05d1fdb00856d0c72e976267f2a4711dedfc1e",
+          "current_raw_byte_git_blob_sha1": "4a05d1fdb00856d0c72e976267f2a4711dedfc1e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    },
+    "old_observed_data": {
+      "paths": [
+        "data/strong_lensing_observed_20261020"
+      ],
+      "baseline_files": 7,
+      "all_raw_bytes_identical": false,
+      "all_content_identical": true,
+      "file_checks": {
+        "data/strong_lensing_observed_20261020/README.md": {
+          "baseline_git_blob_sha1": "4e8d0859489b76d03011d43303c592595653e7f3",
+          "current_raw_byte_git_blob_sha1": "fd141eca270c17bfc9822009c1d9d90346090003",
+          "raw_bytes_identical": false,
+          "content_identical_after_CRLF_to_LF_only": true,
+          "exception": "Inherited README working-tree CRLF differs from starting commit LF; no textual change after line-ending normalization and no tracked Git diff. This audit does not rewrite the file."
+        },
+        "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_Bonvin2016.rdb.txt": {
+          "baseline_git_blob_sha1": "8ab7d491e3319ad5471412218913a646dd7c51ec",
+          "current_raw_byte_git_blob_sha1": "8ab7d491e3319ad5471412218913a646dd7c51ec",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_observed_20261020/candidates/HE0435-1223/HE0435_all_Millon2020.dat": {
+          "baseline_git_blob_sha1": "e22afa219566fa5c4a623102addb0d78f86c5c4f",
+          "current_raw_byte_git_blob_sha1": "e22afa219566fa5c4a623102addb0d78f86c5c4f",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_observed_20261020/candidates/HE0435-1223/ReadMe_Bonvin2017.txt": {
+          "baseline_git_blob_sha1": "124a0d906cc10bb3a7883691f1a09afaa4403e83",
+          "current_raw_byte_git_blob_sha1": "124a0d906cc10bb3a7883691f1a09afaa4403e83",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_observed_20261020/candidates/HE0435-1223/ReadMe_Millon2020.txt": {
+          "baseline_git_blob_sha1": "86b471c79db0447781140ac325c2c084f7206a84",
+          "current_raw_byte_git_blob_sha1": "86b471c79db0447781140ac325c2c084f7206a84",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_observed_20261020/candidates/HE0435-1223/astrometry_redshifts.json": {
+          "baseline_git_blob_sha1": "7d7b56a9aaa644f05c245a3c6cc358ee0c599310",
+          "current_raw_byte_git_blob_sha1": "7d7b56a9aaa644f05c245a3c6cc358ee0c599310",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_observed_20261020/candidates/HE0435-1223/provenance.json": {
+          "baseline_git_blob_sha1": "0c5cf7fa79c7beb687c141524371aca3c7dd53d8",
+          "current_raw_byte_git_blob_sha1": "0c5cf7fa79c7beb687c141524371aca3c7dd53d8",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    },
+    "old_revision_data": {
+      "paths": [
+        "data/strong_lensing_revision_20261020"
+      ],
+      "baseline_files": 22,
+      "all_raw_bytes_identical": true,
+      "all_content_identical": true,
+      "file_checks": {
+        "data/strong_lensing_revision_20261020/README.md": {
+          "baseline_git_blob_sha1": "1206e02670e32ecc6bfa79c67b749c21a59e0b8b",
+          "current_raw_byte_git_blob_sha1": "1206e02670e32ecc6bfa79c67b749c21a59e0b8b",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/calibration/he0435r_pre2019.dat": {
+          "baseline_git_blob_sha1": "3ca9da1455afa1a1228818e7139ffbecc62bdedf",
+          "current_raw_byte_git_blob_sha1": "3ca9da1455afa1a1228818e7139ffbecc62bdedf",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/gaia/GaiaDR3_schema_only.json": {
+          "baseline_git_blob_sha1": "26cd0e3811227dcaffa0f09322338f98c144df2c",
+          "current_raw_byte_git_blob_sha1": "26cd0e3811227dcaffa0f09322338f98c144df2c",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/gaia/GaiaDR3_target_rows.csv": {
+          "baseline_git_blob_sha1": "eaa5ffff5eec44e5919a6c8ead64b91ffc635331",
+          "current_raw_byte_git_blob_sha1": "eaa5ffff5eec44e5919a6c8ead64b91ffc635331",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/gaia/availability_count_only.json": {
+          "baseline_git_blob_sha1": "f549ba6c735082b113c23512334593c67dd9c309",
+          "current_raw_byte_git_blob_sha1": "f549ba6c735082b113c23512334593c67dd9c309",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/.gitignore": {
+          "baseline_git_blob_sha1": "25d029462e242a82340682cb7f095fe554c9c180",
+          "current_raw_byte_git_blob_sha1": "25d029462e242a82340682cb7f095fe554c9c180",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F160W_lens_cutout.fits": {
+          "baseline_git_blob_sha1": "959f5a81e78811310d0b70673bde1d8bd9f45310",
+          "current_raw_byte_git_blob_sha1": "959f5a81e78811310d0b70673bde1d8bd9f45310",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F160W_star1_cutout.fits": {
+          "baseline_git_blob_sha1": "e63762776f639be59d01e0b785c4703af5882173",
+          "current_raw_byte_git_blob_sha1": "e63762776f639be59d01e0b785c4703af5882173",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F160W_star2_cutout.fits": {
+          "baseline_git_blob_sha1": "d14f15d708060f188b8948ff0495d10e92af9568",
+          "current_raw_byte_git_blob_sha1": "d14f15d708060f188b8948ff0495d10e92af9568",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F160W_star3_cutout.fits": {
+          "baseline_git_blob_sha1": "0835a0136af1b7a1eb6aa2e0b57a89529661cc12",
+          "current_raw_byte_git_blob_sha1": "0835a0136af1b7a1eb6aa2e0b57a89529661cc12",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F814W_lens_cutout.fits": {
+          "baseline_git_blob_sha1": "edc1ce938480fae2b51c5c4586902d02bc5670a4",
+          "current_raw_byte_git_blob_sha1": "edc1ce938480fae2b51c5c4586902d02bc5670a4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F814W_star1_cutout.fits": {
+          "baseline_git_blob_sha1": "ed0d2faf5a1f89052d21dd895004ebefe2cf8bd4",
+          "current_raw_byte_git_blob_sha1": "ed0d2faf5a1f89052d21dd895004ebefe2cf8bd4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F814W_star2_cutout.fits": {
+          "baseline_git_blob_sha1": "3370483db1f00804c399635612291f69f2590b25",
+          "current_raw_byte_git_blob_sha1": "3370483db1f00804c399635612291f69f2590b25",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/F814W_star3_cutout.fits": {
+          "baseline_git_blob_sha1": "c5c5671c398e50eeed60fdfdb80d9c2b1d5d735b",
+          "current_raw_byte_git_blob_sha1": "c5c5671c398e50eeed60fdfdb80d9c2b1d5d735b",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/mast_products.json": {
+          "baseline_git_blob_sha1": "d6238703fb61ed6e61af80a8cd28abc41ea0581c",
+          "current_raw_byte_git_blob_sha1": "d6238703fb61ed6e61af80a8cd28abc41ea0581c",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/hst/provenance.json": {
+          "baseline_git_blob_sha1": "d58e537358c46a9ebe74af27d28b80adb73784f0",
+          "current_raw_byte_git_blob_sha1": "d58e537358c46a9ebe74af27d28b80adb73784f0",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/r_confirmatory_split.json": {
+          "baseline_git_blob_sha1": "7ef193b83996f7d696c2403f189c78b0bef975db",
+          "current_raw_byte_git_blob_sha1": "7ef193b83996f7d696c2403f189c78b0bef975db",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/sealed/ReadMe": {
+          "baseline_git_blob_sha1": "38b7ac805db0f0fb59f85f3e0b313afab9414a76",
+          "current_raw_byte_git_blob_sha1": "38b7ac805db0f0fb59f85f3e0b313afab9414a76",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/sealed/he0435r.dat": {
+          "baseline_git_blob_sha1": "5fd78a867bd04bae345018789c577ddd1a619f03",
+          "current_raw_byte_git_blob_sha1": "5fd78a867bd04bae345018789c577ddd1a619f03",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/sealed/he0435r_2019onward.dat": {
+          "baseline_git_blob_sha1": "4daf5ad5ee2228f396f5acd7dc358de320c6b51a",
+          "current_raw_byte_git_blob_sha1": "4daf5ad5ee2228f396f5acd7dc358de320c6b51a",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/sealed/he0435v.dat": {
+          "baseline_git_blob_sha1": "3b0b713d63f181bf31ac798b281b5d8369d007df",
+          "current_raw_byte_git_blob_sha1": "3b0b713d63f181bf31ac798b281b5d8369d007df",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "data/strong_lensing_revision_20261020/unused_observation_metadata.json": {
+          "baseline_git_blob_sha1": "dafd39ea61d38ead1c1602048a7f8b41ca4e2304",
+          "current_raw_byte_git_blob_sha1": "dafd39ea61d38ead1c1602048a7f8b41ca4e2304",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    },
+    "official_MDPI_Definitions": {
+      "paths": [
+        "manuscript/Definitions"
+      ],
+      "baseline_files": 12,
+      "all_raw_bytes_identical": true,
+      "all_content_identical": true,
+      "file_checks": {
+        "manuscript/Definitions/journalnames.tex": {
+          "baseline_git_blob_sha1": "12457de6ad0f5cf51ef23343cf884a951ce76ca8",
+          "current_raw_byte_git_blob_sha1": "12457de6ad0f5cf51ef23343cf884a951ce76ca8",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/logo-mdpi-eps-converted-to.pdf": {
+          "baseline_git_blob_sha1": "1f296b3bb8eba16f49cae8155fbabda855bd843c",
+          "current_raw_byte_git_blob_sha1": "1f296b3bb8eba16f49cae8155fbabda855bd843c",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/logo-mdpi.eps": {
+          "baseline_git_blob_sha1": "af01219a3abc539e2d4301a628f185e620dc4ee7",
+          "current_raw_byte_git_blob_sha1": "af01219a3abc539e2d4301a628f185e620dc4ee7",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/logo-orcid.pdf": {
+          "baseline_git_blob_sha1": "4ed20a217aa35dec82181b6b06c6a2fd4908a52e",
+          "current_raw_byte_git_blob_sha1": "4ed20a217aa35dec82181b6b06c6a2fd4908a52e",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/logo-updates-eps-converted-to.pdf": {
+          "baseline_git_blob_sha1": "8c2f078b09328b11a737ca7cf378e74001b99202",
+          "current_raw_byte_git_blob_sha1": "8c2f078b09328b11a737ca7cf378e74001b99202",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/logo-updates.eps": {
+          "baseline_git_blob_sha1": "9c104110d37aa6a5a85c91dd52c0a45579e355b7",
+          "current_raw_byte_git_blob_sha1": "9c104110d37aa6a5a85c91dd52c0a45579e355b7",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/mdpi.bst": {
+          "baseline_git_blob_sha1": "b7b4f50db3d7442b41f24ab766bef0321c151f85",
+          "current_raw_byte_git_blob_sha1": "b7b4f50db3d7442b41f24ab766bef0321c151f85",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/mdpi.cls": {
+          "baseline_git_blob_sha1": "3fa87e86b60d1f10c4854ef899a2a163b5db5790",
+          "current_raw_byte_git_blob_sha1": "3fa87e86b60d1f10c4854ef899a2a163b5db5790",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/mdpi_apacite.bst": {
+          "baseline_git_blob_sha1": "114742e6fe621b0db1ce5ce9419039010ea9bbe4",
+          "current_raw_byte_git_blob_sha1": "114742e6fe621b0db1ce5ce9419039010ea9bbe4",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/mdpi_apacite.sty": {
+          "baseline_git_blob_sha1": "59ec5bb8aae26d357e4b1d82b37721f687149737",
+          "current_raw_byte_git_blob_sha1": "59ec5bb8aae26d357e4b1d82b37721f687149737",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/mdpi_chicago.bst": {
+          "baseline_git_blob_sha1": "2c3a8c5ecefbc608ef34d56133ea618b63f46370",
+          "current_raw_byte_git_blob_sha1": "2c3a8c5ecefbc608ef34d56133ea618b63f46370",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        },
+        "manuscript/Definitions/unicode.tex": {
+          "baseline_git_blob_sha1": "292078a80ad5731485cb676541fc7b9eb2f1b580",
+          "current_raw_byte_git_blob_sha1": "292078a80ad5731485cb676541fc7b9eb2f1b580",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    },
+    "inherited_focused_dependencies": {
+      "paths": [
+        "requirements-strong-lensing-review.txt"
+      ],
+      "baseline_files": 1,
+      "all_raw_bytes_identical": true,
+      "all_content_identical": true,
+      "file_checks": {
+        "requirements-strong-lensing-review.txt": {
+          "baseline_git_blob_sha1": "75d8059418ef9639ae3537d35b985f1c560561ff",
+          "current_raw_byte_git_blob_sha1": "75d8059418ef9639ae3537d35b985f1c560561ff",
+          "raw_bytes_identical": true,
+          "content_identical_after_CRLF_to_LF_only": true
+        }
+      }
+    }
+  },
+  "key_inherited_physical_background_and_calibration_sources": {
+    "code/strong_lensing_observed_macro.py": {
+      "baseline_git_blob_sha1": "f21f462a099e407f204e78615ac36833294dc6aa",
+      "current_raw_byte_git_blob_sha1": "f21f462a099e407f204e78615ac36833294dc6aa",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_macro_revision.py": {
+      "baseline_git_blob_sha1": "e77bec82d85cd95e9864932c70f9b87835c61776",
+      "current_raw_byte_git_blob_sha1": "e77bec82d85cd95e9864932c70f9b87835c61776",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/background.py": {
+      "baseline_git_blob_sha1": "69c33ad47d0650088551b3892b3cd7baf9a18d8e",
+      "current_raw_byte_git_blob_sha1": "69c33ad47d0650088551b3892b3cd7baf9a18d8e",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/action_native_matter_n2.py": {
+      "baseline_git_blob_sha1": "61b9fb32071627d18b3402fee7e7c32cee336f52",
+      "current_raw_byte_git_blob_sha1": "61b9fb32071627d18b3402fee7e7c32cee336f52",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_robustness.py": {
+      "baseline_git_blob_sha1": "d893b80ada9123e0d457b1eb87e6579b9ae5e12d",
+      "current_raw_byte_git_blob_sha1": "d893b80ada9123e0d457b1eb87e6579b9ae5e12d",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_r1_screened.py": {
+      "baseline_git_blob_sha1": "ad57e5843d60a5bf0d899c2510cee372c8b6cdd2",
+      "current_raw_byte_git_blob_sha1": "ad57e5843d60a5bf0d899c2510cee372c8b6cdd2",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_local_family.py": {
+      "baseline_git_blob_sha1": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+      "current_raw_byte_git_blob_sha1": "27a2e0e1157ddecbfc4362472b297deb2e1f7ff0",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_gaia_validation.py": {
+      "baseline_git_blob_sha1": "e1315f9048081b5de30b2ed83491ec2a2b975554",
+      "current_raw_byte_git_blob_sha1": "e1315f9048081b5de30b2ed83491ec2a2b975554",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_observed_lightcurve.py": {
+      "baseline_git_blob_sha1": "2388a744bcd67120aca2432fb60619f30b03151e",
+      "current_raw_byte_git_blob_sha1": "2388a744bcd67120aca2432fb60619f30b03151e",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_lightcurve_revision.py": {
+      "baseline_git_blob_sha1": "484bee0fcc81ef311ced1ae368e13284a43aa5a8",
+      "current_raw_byte_git_blob_sha1": "484bee0fcc81ef311ced1ae368e13284a43aa5a8",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    },
+    "code/strong_lensing_hst_central.py": {
+      "baseline_git_blob_sha1": "bad6290cce85396699caf409c05e968279097f90",
+      "current_raw_byte_git_blob_sha1": "bad6290cce85396699caf409c05e968279097f90",
+      "raw_bytes_identical": true,
+      "content_identical_after_CRLF_to_LF_only": true
+    }
+  },
+  "frozen_physical_file_checks": {
+    "code/strong_lensing_geometry_revision.py": {
+      "first_freeze_sha256": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+      "current_sha256": "e3f229b271aeb361b009542ad56883592ba64789ad330cf616cf3659d6435374",
+      "byte_identical": true
+    },
+    "scripts/fit_he0435_geometry_revision.py": {
+      "first_freeze_sha256": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+      "current_sha256": "8690caac336ae78785d3f82631c312fe8b4701d91ef57345c01396e690d1a06b",
+      "byte_identical": true
+    },
+    "tests/test_strong_lensing_geometry_revision.py": {
+      "first_freeze_sha256": "18b2f45fe33d9cd7f19ffc189e51c381816d377d3acf664ccc80ad25e243f34a",
+      "current_sha256": "18b2f45fe33d9cd7f19ffc189e51c381816d377d3acf664ccc80ad25e243f34a",
+      "byte_identical": true
+    },
+    "artifacts/strong_lensing_geometry_20261021/positive_g1_development_fit.json": {
+      "first_freeze_sha256": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+      "current_sha256": "b182f647d6a697fb7fa06216f90f7bcb80d9d2c2fa95071807f84d4f9fadf9cb",
+      "byte_identical": true
+    },
+    "artifacts/strong_lensing_geometry_20261021/jwst_predictions_before_target_pixels.json": {
+      "first_freeze_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+      "current_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+      "byte_identical": true
+    },
+    "artifacts/strong_lensing_geometry_20261021/conventional_g1_census.json": {
+      "first_freeze_sha256": "1a2aebb718bcda6d5f6a9783675a4a0f29e1bfe2d46b9875744f3282c5e547dc",
+      "current_sha256": "1a2aebb718bcda6d5f6a9783675a4a0f29e1bfe2d46b9875744f3282c5e547dc",
+      "byte_identical": true
+    },
+    "artifacts/strong_lensing_geometry_20261021/r1_g1_census.json": {
+      "first_freeze_sha256": "95e19e5849da1992bcd0d69a3a37b366a11565bf4323a544d33bbbf29a187a69",
+      "current_sha256": "95e19e5849da1992bcd0d69a3a37b366a11565bf4323a544d33bbbf29a187a69",
+      "byte_identical": true
+    },
+    "artifacts/strong_lensing_geometry_20261021/g1_hst_central_input.json": {
+      "first_freeze_sha256": "210ef31199f3c673fefa922b1d95731f21cdf2f00c4c6d191a28e2f4db1bb23a",
+      "current_sha256": "210ef31199f3c673fefa922b1d95731f21cdf2f00c4c6d191a28e2f4db1bb23a",
+      "byte_identical": true
+    },
+    "data/strong_lensing_geometry_20261021/development/G1_source_prescription.json": {
+      "first_freeze_sha256": "99f76ee7c079c0000938f858ef79e20f78d1a26b5173b45edf85b684ed55946b",
+      "current_sha256": "99f76ee7c079c0000938f858ef79e20f78d1a26b5173b45edf85b684ed55946b",
+      "byte_identical": true
+    }
+  },
+  "all_frozen_physical_files_match_first_freeze": true,
+  "frozen_point_prediction_sha256": "48865b6fd27635534d0d6e3b574d190ac4f8359181a9de3ce151c629f6ea1e90",
+  "original_numerical_or_source_content_exceptions": [],
+  "inherited_document_line_ending_exceptions": {
+    "paths": [
+      "artifacts/strong_lensing_observed_20261020/README.md",
+      "data/strong_lensing_observed_20261020/README.md"
+    ],
+    "explanation": "These two README.md working-tree files contain CRLF while the starting commit blobs contain LF. Replacing CRLF with LF in memory reproduces the exact original Git blob. Git reports no change. This audit has no saved raw-working-tree snapshot from the starting time and does not claim to date the checkout conversion. No numerical data or source equation differs."
+  },
+  "old_numerical_directory_tracked_content_changes": [],
+  "new_geometry_related_code_only": [
+    "code/strong_lensing_field_psf.py",
+    "code/strong_lensing_geometry_revision.py",
+    "code/strong_lensing_pixel_geometry.py",
+    "code/strong_lensing_standard_psf.py"
+  ],
+  "modified_preexisting_code_paths": [],
+  "declared_nonphysical_publication_or_instrumentation_changes": {
+    "focused_workflow_changed": [
+      ".github/workflows/strong-lensing-manuscript.yml"
+    ],
+    "workflow_scope": "Adds new geometry/pixel/field/standard-PSF focused tests and dependency requirements; old equations and baseline numerical results are unchanged.",
+    "all_changed_preexisting_paths_since_start_snapshot": [
+      "M\t.gitattributes",
+      "M\t.github/workflows/strong-lensing-manuscript.yml",
+      "M\t.gitignore",
+      "M\tmanuscript/sections/he0435_revision_20261020.tex",
+      "M\tmanuscript/sections/he0435_revision_results_20261020.tex",
+      "M\tmanuscript/sections/strong_lensing_galaxies_20261020.tex",
+      "M\tmanuscript/strong_lensing_main.tex",
+      "M\trequirements-dev.txt"
+    ],
+    "scope_note": "Manuscript/report/build/publication text and scoped CI may change. New field-calibration/PSF/WCS measurement sources are later measurement-stage work and do not modify the frozen physical source or predictions."
+  },
+  "scientific_scope_controls": {
+    "local_total_matter_and_scalar_source": "Original source definitions, background coefficients and classical calibration modules are byte-identical to starting worktree. New fitted local body parameters are explicit in the frozen receipt; the total local two-Plummer mass enters once.",
+    "prescribed_rear_G1": "Positive regular total optical Plummer G1 plus quadratic remainder; no sum of separately nonlinear scalar fields in one domain and no empirical BHSM interface amplitude.",
+    "state_and_preparation": "Provisional optical geometry does not complete unresolved microscopic preparation/state/Cauchy or global scalar matching dependencies. No preparation target is substituted for an achieved source/current.",
+    "statistics": "Exclusive chronological two-point, inclusive contour four-point and complete matched-occupation quantities stay distinct. No Wick factorization, Gaussian quantum-state replacement or statistical kernel is inferred from the inherited classical GP, old retarded arrays or native heat functional.",
+    "state_kernel_inference": "The unchanged classical GP supplies its declared development brightness likelihood only; no quantum contraction or state-selection assumption is added.",
+    "physical_guard": 2e-10,
+    "physical_admission": false,
+    "Gaia_scope": "Consumed development, with nine free parameters versus six Gaia coordinate values; fitted Gaia Q is not unused validation.",
+    "fresh_target_status_scope": "This audit does not open or inspect native/quasar arrays and asserts no measurement-stage validation result."
+  },
+  "test_accounting": {
+    "root_reported_current_focused_suite_passes": 123,
+    "root_reported_count_independently_rerun_by_this_audit": false,
+    "root_reported_count_source": "Direct root-agent instruction; not a new test execution log or independent broad-suite confirmation.",
+    "prior_independent_geometry_review": {
+      "path": "artifacts/strong_lensing_geometry_20261021/physical_pretest_review.json",
+      "sha256": "ebbf9dfc863e842197c447a4f296c6815052182a81e6754612454c60a6d92599",
+      "focused_geometry_tests_passed": 8,
+      "rerun_in_this_scope_audit": false
+    }
+  },
+  "no_original_solvers_or_broad_CI_run": true,
+  "no_native_or_quasar_pixel_read": true,
+  "no_numerical_source_or_prediction_edits": true,
+  "important_bugs_found": []
+}

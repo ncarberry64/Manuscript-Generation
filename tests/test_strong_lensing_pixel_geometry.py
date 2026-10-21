@@ -184,9 +184,34 @@ class PixelGeometryTests(unittest.TestCase):
                     result=apply_native_files(native,protocol,models,root/'result',checked)
                 self.assertEqual(seen,list(np.arange(1,17,dtype=float)))
                 self.assertTrue(result['models']['revised']['conditional_geometry_validation_pass'])
+                # A known failed field calibration is rejected by default. Its
+                # explicit diagnostic mode cannot pass, even with perfect q.
+                calibration['overall_adequacy_pass']=False
+                calpath.write_text(json.dumps(calibration),encoding='utf-8')
+                protocol['psf_calibration']['sha256']=hashlib.sha256(calpath.read_bytes()).hexdigest()
+                with self.assertRaisesRegex(RuntimeError,'targets must remain sealed'):
+                    pixel_runner.frozen_psf_calibration(protocol,'synthetic-commit')
+                diagnostic_protocol={**protocol,'allow_inadequate_field_calibration_for_diagnostic':True}
+                failed_calibration=pixel_runner.frozen_psf_calibration(diagnostic_protocol,'synthetic-commit')
+                with patch.dict(sys.modules,{'stdatamodels':types.ModuleType('stdatamodels'),'stdatamodels.jwst':fake,'asdf':types.ModuleType('asdf')}),patch.object(pixel_runner,'fit_empirical_point',side_effect=extract):
+                    diagnostic=apply_native_files(native,diagnostic_protocol,models,root/'diagnostic-result',failed_calibration)
+                self.assertTrue(diagnostic['all_pixel_models_adequate'])
+                self.assertTrue(diagnostic['exposures_consistent'])
+                self.assertTrue(diagnostic['models']['revised']['formal_geometry_compatible_at_alpha'])
+                self.assertTrue(diagnostic['models']['revised']['meets_declared_baseline_raw_q_RMS_reduction'])
+                self.assertFalse(diagnostic['calibration_adequacy_pass'])
+                self.assertTrue(diagnostic['diagnostic_mode'])
+                self.assertEqual(diagnostic['measurement_status'],'CALIBRATION_INADEQUATE_DIAGNOSTIC_ONLY')
+                self.assertTrue(all(not score['conditional_geometry_validation_pass'] for score in diagnostic['models'].values()))
+                for relative in diagnostic['exposure_result_files']:
+                    exposure=json.loads((root/'diagnostic-result'/relative).read_text(encoding='utf-8'))
+                    self.assertTrue(exposure['diagnostic_mode'])
+                    self.assertFalse(exposure['calibration_adequacy_pass'])
+                    self.assertEqual(exposure['measurement_status'],'CALIBRATION_INADEQUATE_DIAGNOSTIC_ONLY')
+                    self.assertTrue(all(not score['conditional_geometry_validation_pass'] for score in exposure['model_scores'].values()))
                 (root/'psf3D.fits').write_bytes(b'CORRUPTED')
                 with self.assertRaisesRegex(RuntimeError,'grid hash changed'):
-                    pixel_runner.frozen_psf_calibration(protocol,'synthetic-commit')
+                    pixel_runner.frozen_psf_calibration(diagnostic_protocol,'synthetic-commit')
             with self.assertRaises(ValueError):pixel_runner.psf_paths_by_label({'psf_files_by_exposure':{'cal0':{'A':'a'}}},'cal0')
             self.assertEqual(pixel_runner.psf_paths_by_label({'psf_files_by_exposure':{'cal0':'legacy.fits'}},'cal0'),{x:'legacy.fits' for x in 'ABCD'})
 
