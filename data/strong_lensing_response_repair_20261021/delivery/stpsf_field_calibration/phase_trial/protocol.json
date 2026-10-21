@@ -1,0 +1,39 @@
+{
+  "status": "FIELD_ONLY_PHASE_DEVELOPMENT_PROTOCOL",
+  "noll_modes": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "coefficient_bounds_nm": [
+    -10.0,
+    10.0
+  ],
+  "assumed_gaussian_regularizer_sigma_nm": 5.0,
+  "regularizer_scope": "Exploratory assumption, not calibrated optical uncertainty",
+  "finite_difference_step_nm": 2.0,
+  "source_blackbody_K": 4000.0,
+  "diffusion_sigma_mas": 6.2,
+  "jitter_sigma_mas": 0.8,
+  "source_and_diffusion_fixed": "Original prescribed values; all-four color fit not reused in LOO",
+  "pupil_mode_definition": "Noll Zernikes on the loaded entrance-pupil grid, piston removed and each normalized to unit RMS on illuminated pixels",
+  "mode_location": "Added to measured global OTE-only pupil OPD in meters; nominal OTE and NIRCam field dependence retained",
+  "WSS_file": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/stpsf_trial/wss_opds/R2022101203-NRCA3_FP1-1.fits",
+  "WSS_sha256": "660ee1db9ebb31033552b71c5a8e07a3fe6426d7a0420ceb3793d4fc7d4a5ea5",
+  "fft_oversample": 5,
+  "detector_oversample": 5,
+  "fov_pixels": 25,
+  "wavelength_bins": 9,
+  "objective": "Native-ERR pixel residuals plus assumed Gaussian phase regularizer; six measurement nuisances per training exposure",
+  "identifiability_gate": "Eight projected phase-Jacobian modes must have full rank at relative1e-10 and max conditional coefficient standard error below10nm, without residual rescaling",
+  "validation": "Four leave-one-exposure-out conditional field-shape checks using exact nonlinear PSFs; all data are already development",
+  "errors_scaled": false,
+  "target_pixels_used": false,
+  "independent_observational_validation": false,
+  "acceptance": "No physical-response acceptance from linear intensity; exact nonlinear per-exposure native-ERR p>=.01 and successful unconstrained measurement fit required"
+}

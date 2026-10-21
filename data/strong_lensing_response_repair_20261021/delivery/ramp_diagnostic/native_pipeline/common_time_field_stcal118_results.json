@@ -1,0 +1,318 @@
+{
+  "status": "COMMON_TIME_FIELD_RESPONSE_DEVELOPMENT_DIAGNOSTIC",
+  "source_observation": "jw01198007001_02101_00001_nrcb3_cal.fits",
+  "fixed_psf": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/stpsf_equal_sampling/jw01198007001_02101_00001_nrcb3_FIELD_stpsf_epsf.fits",
+  "native_pipeline_replay": {
+    "rate_file": "first_exposure_stcal118_rate.fits",
+    "field_rate_RMS_difference_DN_s": 1.178742955448494e-06,
+    "field_rate_max_abs_difference_DN_s": 1.8173968157952913e-05,
+    "field_rate_max_relative_difference": 8.965677344976445e-08,
+    "CAL_ERR_max_relative_replay_difference": 1.6530443325279975e-07,
+    "numerical_replay_gate": {
+      "rate_max_relative_tolerance": 0.0001,
+      "ERR_max_relative_tolerance": 0.001,
+      "pass": true
+    }
+  },
+  "interval_s": 10.73677,
+  "matched_pixels": 289,
+  "same_pixel_support": true,
+  "original_native_CAL_same_support": {
+    "centroid_xy_pixel": [
+      899.7549610151262,
+      875.954999766048
+    ],
+    "centroid_covariance_pixel2": [
+      [
+        2.813097721291761e-06,
+        -6.570176220550905e-08
+      ],
+      [
+        -6.570176220550906e-08,
+        2.632607623157363e-06
+      ]
+    ],
+    "flux_in_SCI_pixel_units": 5257.079011244755,
+    "background_plane_SCI": [
+      0.37240032751108976,
+      0.004527099725301944,
+      -0.0018964709682253967
+    ],
+    "background_polynomial_SCI": [
+      0.37240032751108976,
+      0.004527099725301944,
+      -0.0018964709682253967
+    ],
+    "background_polynomial_basis": [
+      "1",
+      "dx",
+      "dy"
+    ],
+    "background_degree": 1,
+    "chi2": 9866.352790441584,
+    "dof": 283,
+    "p_value": 0.0,
+    "usable_pixels": 289,
+    "jacobian_rank": 6,
+    "optimizer_success": true,
+    "optimizer_message": "`ftol` termination condition is satisfied.",
+    "active_bound_parameter_indices": [],
+    "valid_measurement_fit": true,
+    "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+    "psf_oversampling": 5,
+    "psf_origin_grid_pixel": [
+      62.0,
+      62.0
+    ],
+    "dq_flag_counts_in_stamp": {},
+    "stamp_bounds_xyxy": [
+      892,
+      868,
+      909,
+      885
+    ],
+    "coordinate_frame": "Global native detector pixels, zero-based",
+    "background_reference_xy_pixel": [
+      899.7549609755204,
+      875.9549994961739
+    ],
+    "chi2_per_dof": 34.86343742205507,
+    "residual_RMS_MJy_sr": 7.059584824658969,
+    "residual_RMS_over_fitted_source_peak": 0.005445113916443322,
+    "residual_L2_over_fitted_source_L2": 0.07665300928607109,
+    "source_peak_MJy_sr": 1296.4990141602398,
+    "centroid_sigma_pixel": [
+      0.0016772291797162845,
+      0.0016225312395012192
+    ],
+    "coherent_radial_residuals": [
+      {
+        "radius_pixel": [
+          0,
+          1
+        ],
+        "pixels": 3,
+        "summed_residual_over_bin_source": -0.07753096405897512,
+        "summed_residual_over_total_fitted_flux": -0.03362621693900395
+      },
+      {
+        "radius_pixel": [
+          1,
+          2
+        ],
+        "pixels": 9,
+        "summed_residual_over_bin_source": 0.04983327601404138,
+        "summed_residual_over_total_fitted_flux": 0.011473583290056141
+      },
+      {
+        "radius_pixel": [
+          2,
+          3
+        ],
+        "pixels": 16,
+        "summed_residual_over_bin_source": 0.019501501600253927,
+        "summed_residual_over_total_fitted_flux": 0.0019745265878807284
+      },
+      {
+        "radius_pixel": [
+          3,
+          4
+        ],
+        "pixels": 21,
+        "summed_residual_over_bin_source": 0.07200414163875415,
+        "summed_residual_over_total_fitted_flux": 0.001818927500598127
+      },
+      {
+        "radius_pixel": [
+          4,
+          6
+        ],
+        "pixels": 62,
+        "summed_residual_over_bin_source": 0.13911335454162063,
+        "summed_residual_over_total_fitted_flux": 0.006488045758458809
+      },
+      {
+        "radius_pixel": [
+          6,
+          8
+        ],
+        "pixels": 90,
+        "summed_residual_over_bin_source": -0.011451949831982906,
+        "summed_residual_over_total_fitted_flux": -0.0002728901233253005
+      },
+      {
+        "radius_pixel": [
+          8,
+          12
+        ],
+        "pixels": 88,
+        "summed_residual_over_bin_source": -0.09802271533903156,
+        "summed_residual_over_total_fitted_flux": -0.001719009551564775
+      }
+    ],
+    "physical_response_validated": false
+  },
+  "first_two_reads_same_support": {
+    "centroid_xy_pixel": [
+      899.7691731587345,
+      875.943423519212
+    ],
+    "centroid_covariance_pixel2": [
+      [
+        2.70359571053575e-05,
+        2.3396864939318448e-07
+      ],
+      [
+        2.3396864939318448e-07,
+        2.6750968298251577e-05
+      ]
+    ],
+    "flux_in_SCI_pixel_units": 5058.130535665039,
+    "background_plane_SCI": [
+      0.15593371923338345,
+      -0.005059361162755125,
+      -0.005145091338662989
+    ],
+    "background_polynomial_SCI": [
+      0.15593371923338345,
+      -0.005059361162755125,
+      -0.005145091338662989
+    ],
+    "background_polynomial_basis": [
+      "1",
+      "dx",
+      "dy"
+    ],
+    "background_degree": 1,
+    "chi2": 341.42390358538483,
+    "dof": 283,
+    "p_value": 0.009846530769988048,
+    "usable_pixels": 289,
+    "jacobian_rank": 6,
+    "optimizer_success": true,
+    "optimizer_message": "`ftol` termination condition is satisfied.",
+    "active_bound_parameter_indices": [],
+    "valid_measurement_fit": true,
+    "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+    "psf_oversampling": 5,
+    "psf_origin_grid_pixel": [
+      62.0,
+      62.0
+    ],
+    "dq_flag_counts_in_stamp": {},
+    "stamp_bounds_xyxy": [
+      892,
+      868,
+      909,
+      885
+    ],
+    "coordinate_frame": "Global native detector pixels, zero-based",
+    "background_reference_xy_pixel": [
+      899.7549609755204,
+      875.9549994961739
+    ],
+    "chi2_per_dof": 1.2064448889942927,
+    "residual_RMS_MJy_sr": 4.594862095001805,
+    "residual_RMS_over_fitted_source_peak": 0.0036609322961377645,
+    "residual_L2_over_fitted_source_L2": 0.051787293425787806,
+    "source_peak_MJy_sr": 1255.1070938540229,
+    "centroid_sigma_pixel": [
+      0.0051996112455988,
+      0.005172133824472408
+    ],
+    "coherent_radial_residuals": [
+      {
+        "radius_pixel": [
+          0,
+          1
+        ],
+        "pixels": 3,
+        "summed_residual_over_bin_source": -0.034398482016158485,
+        "summed_residual_over_total_fitted_flux": -0.014942351233199305
+      },
+      {
+        "radius_pixel": [
+          1,
+          2
+        ],
+        "pixels": 9,
+        "summed_residual_over_bin_source": 0.07493061758194344,
+        "summed_residual_over_total_fitted_flux": 0.01721983271346756
+      },
+      {
+        "radius_pixel": [
+          2,
+          3
+        ],
+        "pixels": 16,
+        "summed_residual_over_bin_source": 0.03600972770194769,
+        "summed_residual_over_total_fitted_flux": 0.0036388455925376656
+      },
+      {
+        "radius_pixel": [
+          3,
+          4
+        ],
+        "pixels": 21,
+        "summed_residual_over_bin_source": 0.23042217859869316,
+        "summed_residual_over_total_fitted_flux": 0.005808513567964052
+      },
+      {
+        "radius_pixel": [
+          4,
+          6
+        ],
+        "pixels": 62,
+        "summed_residual_over_bin_source": 0.19100981984035972,
+        "summed_residual_over_total_fitted_flux": 0.008909911012319199
+      },
+      {
+        "radius_pixel": [
+          6,
+          8
+        ],
+        "pixels": 90,
+        "summed_residual_over_bin_source": -0.376339572074639,
+        "summed_residual_over_total_fitted_flux": -0.00896666095742527
+      },
+      {
+        "radius_pixel": [
+          8,
+          12
+        ],
+        "pixels": 88,
+        "summed_residual_over_bin_source": -0.27310153242944746,
+        "summed_residual_over_total_fitted_flux": -0.0047909232989846754
+      }
+    ],
+    "physical_response_validated": false
+  },
+  "noise_model": {
+    "gain_e_per_DN_median": 2.049999952316284,
+    "readnoise_CDS_DN_median": 9.337959289550781,
+    "flat_fractional_error_median": 0.007058961318745584,
+    "dark_reference_ERR_max_DN_on_retained_pixels": 27.68108558654785,
+    "formula": "Var(delta_L/T)/flat^2 + rate^2*ERR_flat^2/flat^4; Poisson=max(rate+dark_rate,0)/(gain*T); read=R_CDS^2*(L1prime^2+L2prime^2)/(2*T^2); bias=ERR_bias^2*(L2prime-L1prime)^2/T^2",
+    "residual_rescaling": false,
+    "limits": [
+      "Conditional diagonal approximation: full SIRS/reference-induced spatial covariance is unavailable",
+      "Photon variance is estimated from observed early counts clipped at zero, so weights are data-dependent",
+      "Dark-reference covariance/error is not propagated into this diagonal calculation",
+      "Onboard averaging reconstruction rounding is not independent photon noise",
+      "This fit does not certify precision astrometry or an adequate PSF",
+      "Lower chi-square at10.73677seconds alone does not demonstrate repaired mean response"
+    ]
+  },
+  "physical_validation": false,
+  "new_observations": false,
+  "lens_parameter_refitting": false,
+  "raw_shape_change": {
+    "residual_fraction_L2_ratio_early_over_full": 0.6756067884108272,
+    "peak_normalized_RMS_ratio_early_over_full": 0.6723334630488389,
+    "centroid_shift_pixel": [
+      0.014212143608233418,
+      -0.011576246835943493
+    ],
+    "interpretation": "Mean-profile diagnostics on identical support; a larger p value alone is not evidence of a repaired response"
+  }
+}

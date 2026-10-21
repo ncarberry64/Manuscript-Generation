@@ -1,0 +1,75 @@
+{
+  "status": "BLOCKED_DELIVERED_LEGACY_HASH_MISMATCH",
+  "command": ".venv-geometry/Scripts/python.exe scripts/replay_he0435_rate_mask.py --root . --native-dir data/strong_lensing_geometry_20261021/native --output artifacts/strong_lensing_response_repair_20261021/mask_verified_native_replay.json",
+  "error": "RuntimeError: Legacy fitter no longer matches the immutable baseline",
+  "expected_legacy_fitter_normalized_text_sha256": "e7333e454051bfb68f769421a8f740b52481c39e0b3743ffd60a46ca52be1f76",
+  "actual_worktree_and_git_show_7ec9cea_normalized_text_sha256": "41fa74373d8e7caf658af50fa7fd55d714f0c2d36af3e9e6660a75a6ded15f0a",
+  "worktree_equals_reviewed_git_object": true,
+  "json_semantic_checks": [
+    {
+      "path": "preregistration/he0435_geometry_jwst_diagnostic_20261021.json",
+      "expected": "7a803ab3d7e134a0172304743ae59ae66c3168a296f77c57dbab0cef36153af5",
+      "actual": "7a803ab3d7e134a0172304743ae59ae66c3168a296f77c57dbab0cef36153af5",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json",
+      "expected": "35f8ed260df2307aaeb9b5f1ad5de2fa62824d4bd5a82553f347190990d565e6",
+      "actual": "35f8ed260df2307aaeb9b5f1ad5de2fa62824d4bd5a82553f347190990d565e6",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json",
+      "expected": "840a755f0101519c3406145618aadf4ddb8dfe07c2338f4f2a178abddddff8b6",
+      "actual": "840a755f0101519c3406145618aadf4ddb8dfe07c2338f4f2a178abddddff8b6",
+      "match": true
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb3_cal_headers_only.json",
+      "expected": "6aca06ee5a10d10472aa71e4fa59521fa4b19356cdc2f4af1cdf55ba3cad2452",
+      "actual": "6aca06ee5a10d10472aa71e4fa59521fa4b19356cdc2f4af1cdf55ba3cad2452",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json",
+      "expected": "a2e061d71fc1747050f76d8d9b936c167062c24eb743c204e99a9a92608ffb7c",
+      "actual": "a2e061d71fc1747050f76d8d9b936c167062c24eb743c204e99a9a92608ffb7c",
+      "match": true
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00002_nrcb3_cal_headers_only.json",
+      "expected": "a4157293fdc4ced05b485ca2ae97e64ebfe5a77900a8a75665412b059a79131c",
+      "actual": "a4157293fdc4ced05b485ca2ae97e64ebfe5a77900a8a75665412b059a79131c",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json",
+      "expected": "8140d73eb9f2fbf65c5dda3fcba4f3356a507a7f2db23866ad00958577f08418",
+      "actual": "8140d73eb9f2fbf65c5dda3fcba4f3356a507a7f2db23866ad00958577f08418",
+      "match": true
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00003_nrcb3_cal_headers_only.json",
+      "expected": "03420c5b52caca5b30109a98ab8c5faf07b6f6e26522da3a911d48c6b8c86001",
+      "actual": "03420c5b52caca5b30109a98ab8c5faf07b6f6e26522da3a911d48c6b8c86001",
+      "match": true
+    },
+    {
+      "path": "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json",
+      "expected": "abc89a1f9709e74f1a64c759a789dd7e88d231c3bdc5b30867d0366792d4f7bf",
+      "actual": "abc89a1f9709e74f1a64c759a789dd7e88d231c3bdc5b30867d0366792d4f7bf",
+      "match": true
+    },
+    {
+      "path": "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00004_nrcb3_cal_headers_only.json",
+      "expected": "a80339b7bd317c51d2fc5e470844d1b36be07e2d09692b3617c1172fe09ba3ed",
+      "actual": "a80339b7bd317c51d2fc5e470844d1b36be07e2d09692b3617c1172fe09ba3ed",
+      "match": true
+    }
+  ],
+  "native_arrays_consumed_in_failed_attempt": false,
+  "mask_regression_groups_passed": 4,
+  "legacy_fitter_changed": false,
+  "guard_relaxed": false,
+  "supplied_receipts_preserved": true
+}

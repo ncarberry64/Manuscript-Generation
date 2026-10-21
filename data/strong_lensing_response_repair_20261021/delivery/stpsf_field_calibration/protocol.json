@@ -1,0 +1,60 @@
+{
+  "status": "FIELD_ONLY_DEVELOPMENT_PROTOCOL",
+  "star_temperature_K_bounds": [
+    2500.0,
+    12000.0
+  ],
+  "charge_diffusion_sigma_mas_bounds": [
+    2.0,
+    12.0
+  ],
+  "fixed_jitter_sigma_mas": 0.8,
+  "fixed_WSS_file": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/stpsf_trial/wss_opds/R2022101203-NRCA3_FP1-1.fits",
+  "WSS_sha256": "660ee1db9ebb31033552b71c5a8e07a3fe6426d7a0420ceb3793d4fc7d4a5ea5",
+  "detector": "NRCB3",
+  "filter": "F115W",
+  "fft_oversample": 5,
+  "detector_oversample": 5,
+  "fov_pixels": 25,
+  "wavelength_bins": 9,
+  "fitted_global_parameters": [
+    "one stellar blackbody temperature",
+    "one charge diffusion width shared by four exposures"
+  ],
+  "exposure_nuisances": [
+    "centroid_x",
+    "centroid_y",
+    "positive flux",
+    "affine background constant",
+    "affine background dx",
+    "affine background dy"
+  ],
+  "baseline": {
+    "temperature_K": 4000.0,
+    "charge_diffusion_sigma_mas": 6.2
+  },
+  "coarse_grid": {
+    "temperature_K": [
+      2500.0,
+      4000.0,
+      6500.0,
+      12000.0
+    ],
+    "diffusion_sigma_mas": [
+      2.0,
+      4.0,
+      6.2,
+      9.0,
+      12.0
+    ]
+  },
+  "optimization": "Bounded Nelder-Mead in log temperature and sigma_mas; profile exposure nuisances with unchanged archived fitter",
+  "mask": "Audited native CAL2.0.1 any-group SAT semantics; no DNU or invalid ERR restoration",
+  "stamp": "Existing isolated-star association; same 17x17 stamp per exposure",
+  "errors_scaled": false,
+  "target_pixels_used": false,
+  "validation": "Four leave-one-exposure-out field checks; held-out exposure fits only its six measurement nuisances",
+  "interpretation": "All four field exposures were already inspected; LOO is an internal development check, never new independent validation",
+  "acceptance": "Pixel chi-square p>=0.01 per held-out exposure with native ERR, successful response optimization, and valid measurement fit; also report boundaries and residual maps",
+  "efficiency": "Nine monochromatic STPSF grids per field position, exact spectral superposition, Gaussian diffusion commuting with pixel/IPC convolutions in the central fitting support; verify against direct broadband STPSF"
+}

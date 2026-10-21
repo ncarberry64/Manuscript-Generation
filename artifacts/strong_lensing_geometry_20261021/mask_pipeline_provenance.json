@@ -1,0 +1,57 @@
+{
+  "scope": "Read-only native provenance; no pipeline rerun or variance modification",
+  "inputs": [
+    {
+      "filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
+      "CAL_VER": "2.0.1",
+      "CRDS_CTX": "jwst_1535.pmap",
+      "NFRAMES": 2,
+      "ZEROFRAM": true,
+      "suppress_one_group": false,
+      "OLS_C_in_configuration": true,
+      "zero_frame_processing_logged": true
+    },
+    {
+      "filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "sha256": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
+      "CAL_VER": "2.0.1",
+      "CRDS_CTX": "jwst_1535.pmap",
+      "NFRAMES": 2,
+      "ZEROFRAM": true,
+      "suppress_one_group": false,
+      "OLS_C_in_configuration": true,
+      "zero_frame_processing_logged": true
+    },
+    {
+      "filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "sha256": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
+      "CAL_VER": "2.0.1",
+      "CRDS_CTX": "jwst_1535.pmap",
+      "NFRAMES": 2,
+      "ZEROFRAM": true,
+      "suppress_one_group": false,
+      "OLS_C_in_configuration": true,
+      "zero_frame_processing_logged": true
+    },
+    {
+      "filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "sha256": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
+      "CAL_VER": "2.0.1",
+      "CRDS_CTX": "jwst_1535.pmap",
+      "NFRAMES": 2,
+      "ZEROFRAM": true,
+      "suppress_one_group": false,
+      "OLS_C_in_configuration": true,
+      "zero_frame_processing_logged": true
+    }
+  ],
+  "jwst_dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
+  "jwst_2.0.1_stcal_dependency": ">=1.18,<2",
+  "upstream_pyproject_sha256": "3ca8beb30edb1e763192b1733657c56581abc77fa54ef86e503c20c6ba7ff9cb",
+  "stcal_flag_change_version": "1.16.0",
+  "stcal_changelog": "https://stcal.readthedocs.io/en/latest/stcal/changes.html",
+  "flag_behavior_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
+  "suppress_one_group_change_needed": false,
+  "zeroframe_variance_adjustment_applied": false
+}

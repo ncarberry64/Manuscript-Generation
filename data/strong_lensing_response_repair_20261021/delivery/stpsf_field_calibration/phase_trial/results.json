@@ -1,0 +1,1075 @@
+{
+  "protocol": {
+    "status": "FIELD_ONLY_PHASE_DEVELOPMENT_PROTOCOL",
+    "noll_modes": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "coefficient_bounds_nm": [
+      -10.0,
+      10.0
+    ],
+    "assumed_gaussian_regularizer_sigma_nm": 5.0,
+    "regularizer_scope": "Exploratory assumption, not calibrated optical uncertainty",
+    "finite_difference_step_nm": 2.0,
+    "source_blackbody_K": 4000.0,
+    "diffusion_sigma_mas": 6.2,
+    "jitter_sigma_mas": 0.8,
+    "source_and_diffusion_fixed": "Original prescribed values; all-four color fit not reused in LOO",
+    "pupil_mode_definition": "Noll Zernikes on the loaded entrance-pupil grid, piston removed and each normalized to unit RMS on illuminated pixels",
+    "mode_location": "Added to measured global OTE-only pupil OPD in meters; nominal OTE and NIRCam field dependence retained",
+    "WSS_file": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/stpsf_trial/wss_opds/R2022101203-NRCA3_FP1-1.fits",
+    "WSS_sha256": "660ee1db9ebb31033552b71c5a8e07a3fe6426d7a0420ceb3793d4fc7d4a5ea5",
+    "fft_oversample": 5,
+    "detector_oversample": 5,
+    "fov_pixels": 25,
+    "wavelength_bins": 9,
+    "objective": "Native-ERR pixel residuals plus assumed Gaussian phase regularizer; six measurement nuisances per training exposure",
+    "identifiability_gate": "Eight projected phase-Jacobian modes must have full rank at relative1e-10 and max conditional coefficient standard error below10nm, without residual rescaling",
+    "validation": "Four leave-one-exposure-out conditional field-shape checks using exact nonlinear PSFs; all data are already development",
+    "errors_scaled": false,
+    "target_pixels_used": false,
+    "independent_observational_validation": false,
+    "acceptance": "No physical-response acceptance from linear intensity; exact nonlinear per-exposure native-ERR p>=.01 and successful unconstrained measurement fit required"
+  },
+  "signatures": {
+    "protocol_sha256": "72bf10e58be3bc5ad013158debe1401975e4ef69efb1006c54ef8a8e027065c6",
+    "stpsf_version": "2.2.0",
+    "source_wavelengths": [
+      1.0165277666444e-06,
+      1.0490109552438213e-06,
+      1.0814941438432422e-06,
+      1.1139773324426632e-06,
+      1.1464605210420844e-06,
+      1.1789437096415054e-06,
+      1.2114268982409266e-06,
+      1.2439100868403475e-06,
+      1.2763932754397685e-06
+    ],
+    "weights": [
+      0.0755442960188918,
+      0.10906187621062396,
+      0.10389380404440472,
+      0.1130877528899252,
+      0.11962544772474598,
+      0.13006012330596337,
+      0.12487993502087619,
+      0.13284600598219268,
+      0.09100075880237622
+    ],
+    "positions": [
+      [
+        899,
+        875
+      ],
+      [
+        1091,
+        687
+      ],
+      [
+        1282,
+        498
+      ],
+      [
+        1474,
+        308
+      ]
+    ]
+  },
+  "baseline_field_fits": [
+    {
+      "centroid_xy_pixel": [
+        899.7549608881218,
+        875.9549998033045
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.8130975576410266e-06,
+          -6.570174131742797e-08
+        ],
+        [
+          -6.570174131742797e-08,
+          2.6326075411836098e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5257.078968830121,
+      "background_plane_SCI": [
+        0.3727514490576345,
+        0.004527103846615129,
+        -0.0018964732969751139
+      ],
+      "background_polynomial_SCI": [
+        0.3727514490576345,
+        0.004527103846615129,
+        -0.0018964732969751139
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 9866.352790451409,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 18,
+        "4": 14
+      },
+      "stamp_bounds_xyxy": [
+        892,
+        868,
+        909,
+        885
+      ],
+      "coordinate_frame": "Global native detector pixels, zero-based",
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits"
+    },
+    {
+      "centroid_xy_pixel": [
+        1091.4022311943872,
+        687.1129607104187
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.5549735040473078e-06,
+          -5.923083507995956e-09
+        ],
+        [
+          -5.923083507995956e-09,
+          2.207516489398995e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5278.585391541635,
+      "background_plane_SCI": [
+        0.369048569252695,
+        0.006937073209309961,
+        -0.00459262117911558
+      ],
+      "background_polynomial_SCI": [
+        0.369048569252695,
+        0.006937073209309961,
+        -0.00459262117911558
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 11071.092058664288,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 16,
+        "4": 27
+      },
+      "stamp_bounds_xyxy": [
+        1083,
+        679,
+        1100,
+        696
+      ],
+      "coordinate_frame": "Global native detector pixels, zero-based",
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits"
+    },
+    {
+      "centroid_xy_pixel": [
+        1282.8452041029618,
+        497.99529805373976
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.952320787636418e-06,
+          4.887532183882289e-09
+        ],
+        [
+          4.887532183882289e-09,
+          2.707281401752429e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5163.650025033518,
+      "background_plane_SCI": [
+        0.3921325825945383,
+        0.0048277517297676716,
+        -0.004673961043442415
+      ],
+      "background_polynomial_SCI": [
+        0.3921325825945383,
+        0.0048277517297676716,
+        -0.004673961043442415
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 16611.422645635786,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 18,
+        "4": 20
+      },
+      "stamp_bounds_xyxy": [
+        1275,
+        490,
+        1292,
+        507
+      ],
+      "coordinate_frame": "Global native detector pixels, zero-based",
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits"
+    },
+    {
+      "centroid_xy_pixel": [
+        1473.989375256478,
+        308.73911583958653
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.953666694174708e-06,
+          1.2514587458049436e-07
+        ],
+        [
+          1.2514587458049433e-07,
+          3.072800697606981e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5123.811039914608,
+      "background_plane_SCI": [
+        0.4221757505141254,
+        0.0064480833692695805,
+        -0.005506676649713811
+      ],
+      "background_polynomial_SCI": [
+        0.4221757505141254,
+        0.0064480833692695805,
+        -0.005506676649713811
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 19789.412058690108,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 21,
+        "4": 19
+      },
+      "stamp_bounds_xyxy": [
+        1466,
+        301,
+        1483,
+        318
+      ],
+      "coordinate_frame": "Global native detector pixels, zero-based",
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits"
+    }
+  ],
+  "all_fields": {
+    "status": "BOUNDED_LINEARIZED_PHASE_PROPOSAL",
+    "identifiability": {
+      "singular_values_per_nm": [
+        9.708893645187242,
+        9.279546330086472,
+        8.732590166580469,
+        7.8429353498662575,
+        5.378213473348355,
+        3.9747592201776523,
+        3.4016121090282803,
+        3.116263791602367
+      ],
+      "rank": 8,
+      "condition_number": 3.115555772701443,
+      "conditional_coefficient_stderr_nm": [
+        0.24981555009021994,
+        0.3124260976101395,
+        0.25812440634426553,
+        0.1258759712745072,
+        0.11404071986230374,
+        0.10621717591180986,
+        0.11569988344864503,
+        0.2422682304089616
+      ],
+      "gate_pass": true
+    },
+    "coefficients_nm": [
+      5.606105555248599,
+      4.97437963029753,
+      2.9595069525741318,
+      -9.999999999890601,
+      0.5407516918608644,
+      4.256780726680465,
+      9.999999999999991,
+      5.012727084759536
+    ],
+    "optimizer_success": true,
+    "optimizer_message": "`ftol` termination condition is satisfied.",
+    "nfev": 10,
+    "active_bound_indices": [
+      3,
+      6
+    ],
+    "linearized_training_chi2": 30340.397106200944,
+    "phase_regularizer_chi2": 12.338863239065006,
+    "linearized_negative_profile_sample_count": 0
+  },
+  "leave_one_out": [
+    {
+      "status": "BOUNDED_LINEARIZED_PHASE_PROPOSAL",
+      "identifiability": {
+        "singular_values_per_nm": [
+          8.334301010001425,
+          7.853176729219249,
+          7.555771176668228,
+          6.68178104794891,
+          4.799715073174389,
+          3.4681866266768004,
+          3.0012864513905995,
+          2.7543264169309802
+        ],
+        "rank": 8,
+        "condition_number": 3.025894446921783,
+        "conditional_coefficient_stderr_nm": [
+          0.2829426761884922,
+          0.352031963249775,
+          0.29488397655791393,
+          0.14722398573332776,
+          0.13433131004105364,
+          0.12352019840913019,
+          0.1347861486877452,
+          0.2753530400887644
+        ],
+        "gate_pass": true
+      },
+      "coefficients_nm": [
+        5.058643791709687,
+        4.434367673283909,
+        2.9103599462753427,
+        -9.999999999999998,
+        -0.7381551994711332,
+        4.551674292922864,
+        9.999999999999998,
+        6.427312591738789
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "nfev": 9,
+      "active_bound_indices": [
+        3,
+        6
+      ],
+      "linearized_training_chi2": 22644.27085675099,
+      "phase_regularizer_chi2": 12.651865912377486,
+      "linearized_negative_profile_sample_count": 0,
+      "held_out_exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "held_out_exact_fit": {
+        "centroid_xy_pixel": [
+          899.7618273536183,
+          875.9747402394628
+        ],
+        "centroid_covariance_pixel2": [
+          [
+            2.7756122542887e-06,
+            -2.2306368481005612e-08
+          ],
+          [
+            -2.2306368481005612e-08,
+            2.6503095165223623e-06
+          ]
+        ],
+        "flux_in_SCI_pixel_units": 5264.835953861105,
+        "background_plane_SCI": [
+          0.38055190855075965,
+          0.00472414859279533,
+          0.0020878622300838
+        ],
+        "background_polynomial_SCI": [
+          0.38055190855075965,
+          0.00472414859279533,
+          0.0020878622300838
+        ],
+        "background_polynomial_basis": [
+          "1",
+          "dx",
+          "dy"
+        ],
+        "background_degree": 1,
+        "chi2": 7297.291489309706,
+        "dof": 283,
+        "p_value": 0.0,
+        "usable_pixels": 289,
+        "jacobian_rank": 6,
+        "optimizer_success": true,
+        "optimizer_message": "`ftol` termination condition is satisfied.",
+        "active_bound_parameter_indices": [],
+        "valid_measurement_fit": true,
+        "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+        "psf_oversampling": 5,
+        "psf_origin_grid_pixel": [
+          62.0,
+          62.0
+        ],
+        "dq_flag_counts_in_stamp": {
+          "2": 18,
+          "4": 14
+        },
+        "stamp_bounds_xyxy": [
+          892,
+          868,
+          909,
+          885
+        ],
+        "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+        "chi2_dof": 25.785482294380586,
+        "coordinate_frame": "Global native detector pixels, zero-based"
+      },
+      "absolute_adequacy_pass": false
+    },
+    {
+      "status": "BOUNDED_LINEARIZED_PHASE_PROPOSAL",
+      "identifiability": {
+        "singular_values_per_nm": [
+          8.560333429189724,
+          8.454284912522988,
+          7.6198573581526805,
+          6.833925769625727,
+          4.6920879686834995,
+          3.481835241457969,
+          2.9226798380080874,
+          2.6488699316621247
+        ],
+        "rank": 8,
+        "condition_number": 3.231692627436126,
+        "conditional_coefficient_stderr_nm": [
+          0.2869787387428442,
+          0.36779235272995836,
+          0.2976011327760994,
+          0.14445289939857162,
+          0.12704535960072216,
+          0.12068315461681932,
+          0.131193702653383,
+          0.2806992774588914
+        ],
+        "gate_pass": true
+      },
+      "coefficients_nm": [
+        5.513346677221027,
+        4.326729548748862,
+        2.577792789326142,
+        -9.999999999999998,
+        0.12555204922990854,
+        3.975935174428657,
+        9.999999999999998,
+        6.236304820369568
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "nfev": 10,
+      "active_bound_indices": [
+        3,
+        6
+      ],
+      "linearized_training_chi2": 23952.700061703166,
+      "phase_regularizer_chi2": 12.419116699073282,
+      "linearized_negative_profile_sample_count": 0,
+      "held_out_exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "held_out_exact_fit": {
+        "centroid_xy_pixel": [
+          1091.4182307519777,
+          687.1289547348459
+        ],
+        "centroid_covariance_pixel2": [
+          [
+            2.554636251991791e-06,
+            -6.04229329642795e-09
+          ],
+          [
+            -6.04229329642795e-09,
+            2.282746145248737e-06
+          ]
+        ],
+        "flux_in_SCI_pixel_units": 5328.883716524879,
+        "background_plane_SCI": [
+          0.3675731447343624,
+          0.006567390851949,
+          -0.0010002486782355676
+        ],
+        "background_polynomial_SCI": [
+          0.3675731447343624,
+          0.006567390851949,
+          -0.0010002486782355676
+        ],
+        "background_polynomial_basis": [
+          "1",
+          "dx",
+          "dy"
+        ],
+        "background_degree": 1,
+        "chi2": 5802.136224056324,
+        "dof": 283,
+        "p_value": 0.0,
+        "usable_pixels": 289,
+        "jacobian_rank": 6,
+        "optimizer_success": true,
+        "optimizer_message": "`ftol` termination condition is satisfied.",
+        "active_bound_parameter_indices": [],
+        "valid_measurement_fit": true,
+        "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+        "psf_oversampling": 5,
+        "psf_origin_grid_pixel": [
+          62.0,
+          62.0
+        ],
+        "dq_flag_counts_in_stamp": {
+          "2": 16,
+          "4": 27
+        },
+        "stamp_bounds_xyxy": [
+          1083,
+          679,
+          1100,
+          696
+        ],
+        "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+        "chi2_dof": 20.50224814154178,
+        "coordinate_frame": "Global native detector pixels, zero-based"
+      },
+      "absolute_adequacy_pass": false
+    },
+    {
+      "status": "BOUNDED_LINEARIZED_PHASE_PROPOSAL",
+      "identifiability": {
+        "singular_values_per_nm": [
+          8.361408795432746,
+          7.854526046559083,
+          7.474978699769063,
+          6.778706661989121,
+          4.633764664217851,
+          3.3963104322447317,
+          2.94828546215571,
+          2.683860971454049
+        ],
+        "rank": 8,
+        "condition_number": 3.115440361615581,
+        "conditional_coefficient_stderr_nm": [
+          0.29119772845325004,
+          0.36278324892194697,
+          0.3020842480690027,
+          0.14610976786909702,
+          0.13428632252687475,
+          0.12334214364323212,
+          0.1351504336750229,
+          0.2771057645604434
+        ],
+        "gate_pass": true
+      },
+      "coefficients_nm": [
+        5.552641007854441,
+        5.581886687951751,
+        3.775140192381498,
+        -9.557414112428408,
+        1.2246109581082294,
+        4.141796757732327,
+        9.999999999999998,
+        4.428933791555958
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "nfev": 10,
+      "active_bound_indices": [
+        6
+      ],
+      "linearized_training_chi2": 23065.747167205554,
+      "phase_regularizer_chi2": 12.234189442355463,
+      "linearized_negative_profile_sample_count": 0,
+      "held_out_exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "held_out_exact_fit": {
+        "centroid_xy_pixel": [
+          1282.8596966200178,
+          498.01796001219935
+        ],
+        "centroid_covariance_pixel2": [
+          [
+            2.7476417640421433e-06,
+            3.144764959902061e-08
+          ],
+          [
+            3.144764959902061e-08,
+            2.6514200821149355e-06
+          ]
+        ],
+        "flux_in_SCI_pixel_units": 5327.698386106955,
+        "background_plane_SCI": [
+          0.3634770510753661,
+          0.0050428077562316535,
+          -0.0017272735386969528
+        ],
+        "background_polynomial_SCI": [
+          0.3634770510753661,
+          0.0050428077562316535,
+          -0.0017272735386969528
+        ],
+        "background_polynomial_basis": [
+          "1",
+          "dx",
+          "dy"
+        ],
+        "background_degree": 1,
+        "chi2": 7017.465739524804,
+        "dof": 283,
+        "p_value": 0.0,
+        "usable_pixels": 289,
+        "jacobian_rank": 6,
+        "optimizer_success": true,
+        "optimizer_message": "`ftol` termination condition is satisfied.",
+        "active_bound_parameter_indices": [],
+        "valid_measurement_fit": true,
+        "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+        "psf_oversampling": 5,
+        "psf_origin_grid_pixel": [
+          62.0,
+          62.0
+        ],
+        "dq_flag_counts_in_stamp": {
+          "2": 18,
+          "4": 20
+        },
+        "stamp_bounds_xyxy": [
+          1275,
+          490,
+          1292,
+          507
+        ],
+        "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+        "chi2_dof": 24.796698726236055,
+        "coordinate_frame": "Global native detector pixels, zero-based"
+      },
+      "absolute_adequacy_pass": false
+    },
+    {
+      "status": "BOUNDED_LINEARIZED_PHASE_PROPOSAL",
+      "identifiability": {
+        "singular_values_per_nm": [
+          8.382431130847046,
+          7.9815791083982,
+          7.58699843324142,
+          6.868935826340857,
+          4.5048493116348105,
+          3.413939247578222,
+          2.9047617310462,
+          2.6950107232394735
+        ],
+        "rank": 8,
+        "condition_number": 3.110351680074632,
+        "conditional_coefficient_stderr_nm": [
+          0.29365918471701746,
+          0.36179815452156805,
+          0.2987636692254573,
+          0.14389521120877613,
+          0.13188659569895275,
+          0.12325549179818453,
+          0.13370445388944885,
+          0.28672210880928306
+        ],
+        "gate_pass": true
+      },
+      "coefficients_nm": [
+        6.577047850769936,
+        5.219499493870382,
+        2.4397952851144926,
+        -8.46331494719863,
+        1.5065119952774562,
+        4.464666390810798,
+        9.999999999999998,
+        3.2351750202432976
+      ],
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "nfev": 9,
+      "active_bound_indices": [
+        6
+      ],
+      "linearized_training_chi2": 20764.239691042298,
+      "phase_regularizer_chi2": 11.230008644453193,
+      "linearized_negative_profile_sample_count": 0,
+      "held_out_exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "held_out_exact_fit": {
+        "centroid_xy_pixel": [
+          1473.9958495106644,
+          308.7739812710443
+        ],
+        "centroid_covariance_pixel2": [
+          [
+            2.8081073824158794e-06,
+            1.0792073442373107e-07
+          ],
+          [
+            1.0792073442373106e-07,
+            2.8690526085200437e-06
+          ]
+        ],
+        "flux_in_SCI_pixel_units": 5325.292257997082,
+        "background_plane_SCI": [
+          0.3839854754342898,
+          0.007484259631562621,
+          -0.003293476099202679
+        ],
+        "background_polynomial_SCI": [
+          0.3839854754342898,
+          0.007484259631562621,
+          -0.003293476099202679
+        ],
+        "background_polynomial_basis": [
+          "1",
+          "dx",
+          "dy"
+        ],
+        "background_degree": 1,
+        "chi2": 9971.019696683703,
+        "dof": 283,
+        "p_value": 0.0,
+        "usable_pixels": 289,
+        "jacobian_rank": 6,
+        "optimizer_success": true,
+        "optimizer_message": "`ftol` termination condition is satisfied.",
+        "active_bound_parameter_indices": [],
+        "valid_measurement_fit": true,
+        "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+        "psf_oversampling": 5,
+        "psf_origin_grid_pixel": [
+          62.0,
+          62.0
+        ],
+        "dq_flag_counts_in_stamp": {
+          "2": 21,
+          "4": 19
+        },
+        "stamp_bounds_xyxy": [
+          1466,
+          301,
+          1483,
+          318
+        ],
+        "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+        "chi2_dof": 35.233285147292236,
+        "coordinate_frame": "Global native detector pixels, zero-based"
+      },
+      "absolute_adequacy_pass": false
+    }
+  ],
+  "target_pixels_used": false,
+  "native_errors_scaled": false,
+  "independent_observational_validation": false,
+  "global_perturbation_pupil_rms_nm": 17.100908367415506,
+  "global_exact_field_fits": [
+    {
+      "centroid_xy_pixel": [
+        899.7643427118863,
+        875.9737987220864
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.771168225021316e-06,
+          -2.8352962363402632e-08
+        ],
+        [
+          -2.8352962363402632e-08,
+          2.640042078468394e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5275.660746144943,
+      "background_plane_SCI": [
+        0.3763209844448604,
+        0.005295822313766736,
+        0.002239746522125833
+      ],
+      "background_polynomial_SCI": [
+        0.3763209844448604,
+        0.005295822313766736,
+        0.002239746522125833
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 6930.689317394923,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 18,
+        "4": 14
+      },
+      "stamp_bounds_xyxy": [
+        892,
+        868,
+        909,
+        885
+      ],
+      "exposure": "jw01198007001_02101_00001_nrcb3_cal.fits",
+      "chi2_dof": 24.490068259346017,
+      "exact_nonlinear_phase": true,
+      "coordinate_frame": "Global native detector pixels, zero-based"
+    },
+    {
+      "centroid_xy_pixel": [
+        1091.418851765034,
+        687.1281610700806
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.5531421953235387e-06,
+          -7.648871618729528e-09
+        ],
+        [
+          -7.64887161872953e-09,
+          2.276033060549551e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5331.25422103319,
+      "background_plane_SCI": [
+        0.36545216017630194,
+        0.0067096387503122,
+        -0.0009542434994331367
+      ],
+      "background_polynomial_SCI": [
+        0.36545216017630194,
+        0.0067096387503122,
+        -0.0009542434994331367
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 5726.666625006604,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 16,
+        "4": 27
+      },
+      "stamp_bounds_xyxy": [
+        1083,
+        679,
+        1100,
+        696
+      ],
+      "exposure": "jw01198007001_02101_00002_nrcb3_cal.fits",
+      "chi2_dof": 20.23557111309754,
+      "exact_nonlinear_phase": true,
+      "coordinate_frame": "Global native detector pixels, zero-based"
+    },
+    {
+      "centroid_xy_pixel": [
+        1282.8584443911354,
+        498.01943912257735
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.7390496405154234e-06,
+          3.1851683085588214e-08
+        ],
+        [
+          3.1851683085588214e-08,
+          2.652326127175973e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5331.187444339296,
+      "background_plane_SCI": [
+        0.36383269732732615,
+        0.004799039392680385,
+        -0.0015382035779110893
+      ],
+      "background_polynomial_SCI": [
+        0.36383269732732615,
+        0.004799039392680385,
+        -0.0015382035779110893
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 6755.577230042903,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 18,
+        "4": 20
+      },
+      "stamp_bounds_xyxy": [
+        1275,
+        490,
+        1292,
+        507
+      ],
+      "exposure": "jw01198007001_02101_00003_nrcb3_cal.fits",
+      "chi2_dof": 23.871297632660433,
+      "exact_nonlinear_phase": true,
+      "coordinate_frame": "Global native detector pixels, zero-based"
+    },
+    {
+      "centroid_xy_pixel": [
+        1473.9954195193582,
+        308.77796283662025
+      ],
+      "centroid_covariance_pixel2": [
+        [
+          2.8205877714537546e-06,
+          9.949158730428285e-08
+        ],
+        [
+          9.949158730428286e-08,
+          2.888196455520177e-06
+        ]
+      ],
+      "flux_in_SCI_pixel_units": 5318.5756100942135,
+      "background_plane_SCI": [
+        0.3846940247245548,
+        0.007167711845063462,
+        -0.0026968892572004754
+      ],
+      "background_polynomial_SCI": [
+        0.3846940247245548,
+        0.007167711845063462,
+        -0.0026968892572004754
+      ],
+      "background_polynomial_basis": [
+        "1",
+        "dx",
+        "dy"
+      ],
+      "background_degree": 1,
+      "chi2": 8946.431594214064,
+      "dof": 283,
+      "p_value": 0.0,
+      "usable_pixels": 289,
+      "jacobian_rank": 6,
+      "optimizer_success": true,
+      "optimizer_message": "`ftol` termination condition is satisfied.",
+      "active_bound_parameter_indices": [],
+      "valid_measurement_fit": true,
+      "centroid_covariance_scale": "Known ERR inverse information conditional on field-frozen ePSF; no chi2/dof scaling",
+      "psf_oversampling": 5,
+      "psf_origin_grid_pixel": [
+        62.0,
+        62.0
+      ],
+      "dq_flag_counts_in_stamp": {
+        "2": 21,
+        "4": 19
+      },
+      "stamp_bounds_xyxy": [
+        1466,
+        301,
+        1483,
+        318
+      ],
+      "exposure": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "chi2_dof": 31.612832488388918,
+      "exact_nonlinear_phase": true,
+      "coordinate_frame": "Global native detector pixels, zero-based"
+    }
+  ],
+  "all_loo_absolute_adequacy_pass": false,
+  "elapsed_seconds": 24.185688018798828
+}

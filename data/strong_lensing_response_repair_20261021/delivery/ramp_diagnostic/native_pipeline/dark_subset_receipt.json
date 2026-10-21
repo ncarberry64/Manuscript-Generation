@@ -1,0 +1,59 @@
+{
+  "source_file": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_dark_0337.fits",
+  "source_sha256": "dbffa4953c5596cbd1fc839731d962a6bfd515d82dc3f79059052274d9a391f2",
+  "purpose": "Exact used-frame subsets to bound memory, not an alternative dark model",
+  "source_group_indices_used_by_SHALLOW2": [
+    [
+      0,
+      1
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      35,
+      36
+    ],
+    [
+      40,
+      41
+    ]
+  ],
+  "products": [
+    {
+      "filename": "derived_jwst_nircam_dark_0337_first42.fits",
+      "frames": 42,
+      "bytes": 1426095360,
+      "sha256": "eaf0cc16ac52ca9fcd73c81a15aefc1c41d03c18e18000d65a6b62f3a1014589",
+      "data_subset_check": true
+    },
+    {
+      "filename": "derived_jwst_nircam_dark_0337_first2.fits",
+      "frames": 2,
+      "bytes": 83917440,
+      "sha256": "5255f032791d90b4782de549abc5a699bc3f4215aa2629c76c7f9dcb889f5fcc",
+      "data_subset_check": true
+    }
+  ]
+}

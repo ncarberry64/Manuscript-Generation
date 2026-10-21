@@ -1,0 +1,33 @@
+{
+  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "astropy": "8.0.2",
+    "asdf": "6.0.0",
+    "asdf-astropy": "0.11.0",
+    "gwcs": "1.0.3",
+    "photutils": "3.1.1",
+    "packaging": "26.3"
+  },
+  "scope": "Observed local execution environment; not a claim to have rerun inherited full suite or journal build",
+  "verification": {
+    "mask_regression_groups": 4,
+    "canonical_point_fits_replayed": 16,
+    "portable_point_fits_replayed": 16,
+    "guard_checks": [
+      {
+        "check": "original_output_protection",
+        "pass": true
+      },
+      {
+        "check": "altered_baseline_prediction_rejected",
+        "pass": true
+      }
+    ],
+    "inherited_123_test_suite_rerun": false,
+    "journal_build_rerun": false
+  }
+}

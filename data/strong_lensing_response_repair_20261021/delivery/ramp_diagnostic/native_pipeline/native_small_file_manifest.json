@@ -1,0 +1,189 @@
+{
+  "scope": "Small scripts, documentation, logs and development receipts; excludes large full-frame FITS/reference files, download chunks, caches and environments",
+  "files": [
+    {
+      "path": "NATIVE_READ_HISTORY_FINDINGS.md",
+      "bytes": 13415,
+      "sha256": "80455684e3ab55fd8595dfdef93b5b5a19ef82b00dd31731cc08cb10f6e7dfd8"
+    },
+    {
+      "path": "archive_corrected_field_stamp.py",
+      "bytes": 3501,
+      "sha256": "8205b06b38aea7fb91afc25aaec2dd940efabc67bb8292c744a29c4f307a848c"
+    },
+    {
+      "path": "audit_compact_field_receipts.py",
+      "bytes": 4562,
+      "sha256": "11bc16ea09c26bff3223f15f99fa620b5b23084a56112b426b601aaeeef78a6c"
+    },
+    {
+      "path": "common_time_comparison.log",
+      "bytes": 9573,
+      "sha256": "cade569e5d29b574391f6f93a68d44294f97fff7387fa6c5dd2d11455a2a7f13"
+    },
+    {
+      "path": "common_time_comparison_stcal118.log",
+      "bytes": 9632,
+      "sha256": "198c5bf5610b27e606218d0505d4711f0454bab02a068a67ceee6eacc1467b21"
+    },
+    {
+      "path": "common_time_field_arrays.npz",
+      "bytes": 26495,
+      "sha256": "ecf6a888e97da62379a79ffbe979b1c9c4e35be04f7b1edd1e1ba607c1f76a94"
+    },
+    {
+      "path": "common_time_field_fit_receipts.json",
+      "bytes": 91505,
+      "sha256": "e796151e3e7f0af53052dd7a5cb9586edd2a1d382957a408e5872ed7ae5bfebd"
+    },
+    {
+      "path": "common_time_field_results.json",
+      "bytes": 9573,
+      "sha256": "cade569e5d29b574391f6f93a68d44294f97fff7387fa6c5dd2d11455a2a7f13"
+    },
+    {
+      "path": "common_time_field_stcal118_arrays.npz",
+      "bytes": 26495,
+      "sha256": "ecf6a888e97da62379a79ffbe979b1c9c4e35be04f7b1edd1e1ba607c1f76a94"
+    },
+    {
+      "path": "common_time_field_stcal118_fit_receipts.json",
+      "bytes": 91505,
+      "sha256": "e796151e3e7f0af53052dd7a5cb9586edd2a1d382957a408e5872ed7ae5bfebd"
+    },
+    {
+      "path": "common_time_field_stcal118_results.json",
+      "bytes": 9632,
+      "sha256": "198c5bf5610b27e606218d0505d4711f0454bab02a068a67ceee6eacc1467b21"
+    },
+    {
+      "path": "compact_field_audit.json",
+      "bytes": 2232,
+      "sha256": "8fee8646244b2ee1bd93f6ef8a6feb999de8c96c0daddc0822db0c92a3c0752c"
+    },
+    {
+      "path": "compare_common_time_field.py",
+      "bytes": 11456,
+      "sha256": "440a0a2870a9eefa61d346a7d0630a0423594c77f57c084e38c962b2cc7f2a47"
+    },
+    {
+      "path": "dark_range_receipt.json",
+      "bytes": 7518,
+      "sha256": "ae97ebfa41627ef3ca680d1e72e22de72424e0b58d09380e71c1be490df59b64"
+    },
+    {
+      "path": "dark_subset_receipt.json",
+      "bytes": 1150,
+      "sha256": "f4cd55079d999c3782d039a35a3a06d8fa1baae2b6b5aa9366d293e7debf4291"
+    },
+    {
+      "path": "download_recorded_refs.py",
+      "bytes": 2123,
+      "sha256": "c8ba8ef7d0baf3c074be83e04dc0eba0fa950c3f2a73fb49ead44d53831da784"
+    },
+    {
+      "path": "environment.txt",
+      "bytes": 1158,
+      "sha256": "45911208c766936c9ec79903cf45f0558187509f5f2a06a6cac832948f32f4f9"
+    },
+    {
+      "path": "environment_stcal118.txt",
+      "bytes": 1159,
+      "sha256": "74f6125052049cf76db1f72ef89953b934767e3fc142237ffade57c72e900134"
+    },
+    {
+      "path": "first_two_reads_field_checkpoints.npz",
+      "bytes": 7321,
+      "sha256": "4690de902fb0cdb5eb74d0e3e4a79ee7246e5e8066e3a18334ce4f1a0c95b209"
+    },
+    {
+      "path": "first_two_reads_receipt.json",
+      "bytes": 6876,
+      "sha256": "f3ff19ff15ddd516c6859a3d9b2927da3fb0546ca8e6e99080608efb43dec43b"
+    },
+    {
+      "path": "native_corrected_field_ramp.npz",
+      "bytes": 363531,
+      "sha256": "3d1432dfaa44fabde5d0fa0d9b9fea0829836b155854d056483b1ce96439bce5"
+    },
+    {
+      "path": "native_corrected_field_stamp_receipt.json",
+      "bytes": 2397,
+      "sha256": "e9fde7302dbe68059ef49b1f48b155add9a399dd044812219c6fffbb2ca18df3"
+    },
+    {
+      "path": "native_input_manifest.json",
+      "bytes": 6952,
+      "sha256": "21c647f15849a86116101256cd135d6a9d254c2220cab0569cd93714b88b796c"
+    },
+    {
+      "path": "native_recorded_detector1_config.json",
+      "bytes": 10474,
+      "sha256": "7ef2f146dda9bde25459dc6ab384a969b170ca8df7611880e1995861e0436759"
+    },
+    {
+      "path": "native_replay.log",
+      "bytes": 876,
+      "sha256": "9f87b5e4e2024b8aab302706a5a9a8245c9337ee68716104e2e3b8fe022ee284"
+    },
+    {
+      "path": "prepare_dark_subsets.py",
+      "bytes": 3373,
+      "sha256": "8d13c474eb579981dbe88a1ee8fbfc4282395b2223b70aaa463043a4a18a9cee"
+    },
+    {
+      "path": "replay_detector1.py",
+      "bytes": 5227,
+      "sha256": "2924677f2221744b66f1d24e8e2ecec4f83d21126cc03cd395d4e017cd310a98"
+    },
+    {
+      "path": "replay_first_two_reads.py",
+      "bytes": 4165,
+      "sha256": "00007887e25a6058a5dcc967cf582c42bd6b19e42143f66254f6caf1a075c263"
+    },
+    {
+      "path": "replay_receipt.json",
+      "bytes": 6341,
+      "sha256": "ee86372ac13ebd65442628bd41a99c6d9efd762d25880040619cd82bebdd35b6"
+    },
+    {
+      "path": "reramp_stcal118.py",
+      "bytes": 1664,
+      "sha256": "68e8cdfce58c46f9bf47e739fb394ea4b30ccf7237076a4a7155aa778d35dd6e"
+    },
+    {
+      "path": "reramp_stcal118_receipt.json",
+      "bytes": 1153,
+      "sha256": "2ca194e684f83c1d7aa96a1ba2229ca3b5964243ed050f2fb3277bdcc2f1b956"
+    },
+    {
+      "path": "resume_dark_ranges.py",
+      "bytes": 2766,
+      "sha256": "b23aeb6abd9e3db2cdc46a20b1c1a7cf30252538250af4e240e729df45fed822"
+    },
+    {
+      "path": "stamp_archive.log",
+      "bytes": 2397,
+      "sha256": "e9fde7302dbe68059ef49b1f48b155add9a399dd044812219c6fffbb2ca18df3"
+    },
+    {
+      "path": "stcal118_install.log",
+      "bytes": 7281,
+      "sha256": "394f48a7dcb04f8b122d4491c6a301cd7caddc0b2f1f3ffab35b8299c76ca65d"
+    },
+    {
+      "path": "stcal118_reramp.log",
+      "bytes": 1153,
+      "sha256": "2ca194e684f83c1d7aa96a1ba2229ca3b5964243ed050f2fb3277bdcc2f1b956"
+    },
+    {
+      "path": "two_read_replay.log",
+      "bytes": 512,
+      "sha256": "4d83f70006726e21a12d1c2ef26b6974b5cd1f229625d66451dbff3ab7d0ee83"
+    }
+  ],
+  "total_bytes": 757143,
+  "original_large_input_hash_manifest": "native_input_manifest.json",
+  "all_science_receipts_complete": true,
+  "physical_validation": false
+}

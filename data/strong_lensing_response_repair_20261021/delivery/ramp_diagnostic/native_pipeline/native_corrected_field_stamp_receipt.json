@@ -1,0 +1,133 @@
+{
+  "status": "EXACT_CORRECTED_FIELD_STAMP",
+  "detector_bounds_xyxy": [
+    867,
+    843,
+    933,
+    909
+  ],
+  "sources": [
+    "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/first_exposure_native_corrected_ramp.fits",
+    "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/first_two_reads_corrected_ramp.fits",
+    "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/repo/data/strong_lensing_geometry_20261021/native/jw01198007001_02101_00001_nrcb3_cal.fits"
+  ],
+  "arrays": {
+    "native_corrected_groups": [
+      9,
+      66,
+      66
+    ],
+    "native_groupdq": [
+      9,
+      66,
+      66
+    ],
+    "native_pixeldq": [
+      66,
+      66
+    ],
+    "native_corrected_zeroframe": [
+      66,
+      66
+    ],
+    "reconstructed_corrected_reads": [
+      2,
+      66,
+      66
+    ],
+    "reconstructed_groupdq": [
+      2,
+      66,
+      66
+    ],
+    "reconstructed_pixeldq": [
+      66,
+      66
+    ],
+    "archived_cal_MJy_sr": [
+      66,
+      66
+    ],
+    "archived_cal_ERR": [
+      66,
+      66
+    ],
+    "archived_cal_DQ": [
+      66,
+      66
+    ],
+    "rate_stcal1191": [
+      66,
+      66
+    ],
+    "rate_stcal1191_ERR": [
+      66,
+      66
+    ],
+    "rate_stcal1191_DQ": [
+      66,
+      66
+    ],
+    "rate_stcal118": [
+      66,
+      66
+    ],
+    "rate_stcal118_ERR": [
+      66,
+      66
+    ],
+    "rate_stcal118_DQ": [
+      66,
+      66
+    ],
+    "gain_e_per_DN": [
+      66,
+      66
+    ],
+    "readnoise_CDS_DN": [
+      66,
+      66
+    ],
+    "flat": [
+      66,
+      66
+    ],
+    "flat_ERR": [
+      66,
+      66
+    ],
+    "flat_DQ": [
+      66,
+      66
+    ],
+    "dark_first2": [
+      2,
+      66,
+      66
+    ],
+    "dark_first2_ERR": [
+      2,
+      66,
+      66
+    ],
+    "x_pixel": [
+      66,
+      66
+    ],
+    "y_pixel": [
+      66,
+      66
+    ],
+    "frame_time_s": [],
+    "native_group_time_header_s": [],
+    "native_read_times_s": [
+      9,
+      2
+    ]
+  },
+  "file": "native_corrected_field_ramp.npz",
+  "bytes": 363531,
+  "sha256": "3d1432dfaa44fabde5d0fa0d9b9fea0829836b155854d056483b1ce96439bce5",
+  "science_scope": "Already consumed isolated field star; no target fit or unused observation",
+  "zero_frame_note": "Native zero frame includes saturation/superbias/SIRS/linearity; native dark step leaves it unchanged"
+}

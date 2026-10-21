@@ -1,0 +1,17 @@
+{
+  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "canonical_json_rule": "UTF8 JSON with sorted keys, compact separators, ensure_ascii=False, allow_nan=False; ignores line endings/indentation only",
+  "json_semantic_sha256": {
+    "preregistration/he0435_geometry_jwst_diagnostic_20261021.json": "7a803ab3d7e134a0172304743ae59ae66c3168a296f77c57dbab0cef36153af5",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "35f8ed260df2307aaeb9b5f1ad5de2fa62824d4bd5a82553f347190990d565e6",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json": "840a755f0101519c3406145618aadf4ddb8dfe07c2338f4f2a178abddddff8b6",
+    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb3_cal_headers_only.json": "6aca06ee5a10d10472aa71e4fa59521fa4b19356cdc2f4af1cdf55ba3cad2452",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json": "a2e061d71fc1747050f76d8d9b936c167062c24eb743c204e99a9a92608ffb7c",
+    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00002_nrcb3_cal_headers_only.json": "a4157293fdc4ced05b485ca2ae97e64ebfe5a77900a8a75665412b059a79131c",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json": "8140d73eb9f2fbf65c5dda3fcba4f3356a507a7f2db23866ad00958577f08418",
+    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00003_nrcb3_cal_headers_only.json": "03420c5b52caca5b30109a98ab8c5faf07b6f6e26522da3a911d48c6b8c86001",
+    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json": "abc89a1f9709e74f1a64c759a789dd7e88d231c3bdc5b30867d0366792d4f7bf",
+    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00004_nrcb3_cal_headers_only.json": "a80339b7bd317c51d2fc5e470844d1b36be07e2d09692b3617c1172fe09ba3ed"
+  },
+  "legacy_fitter_normalized_text_sha256": "e7333e454051bfb68f769421a8f740b52481c39e0b3743ffd60a46ca52be1f76"
+}

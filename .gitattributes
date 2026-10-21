@@ -43,3 +43,16 @@ artifacts/strong_lensing_geometry_20261021/*.json -text whitespace=cr-at-eol
 preregistration/he0435*20261021.json -text whitespace=cr-at-eol
 *.fits binary
 *.asdf binary
+
+# Preserve the user-delivered repair package and new numerical receipts exactly.
+data/strong_lensing_response_repair_20261021/delivery/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+artifacts/strong_lensing_response_repair_20261021/**/*.json -text whitespace=cr-at-eol
+artifacts/strong_lensing_response_repair_20261021/*.json -text whitespace=cr-at-eol
+*.npz binary
+# Exact additive mask-patch files include delivered EOF formatting.
+code/strong_lensing_jwst_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
+scripts/replay_he0435_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
+tests/test_strong_lensing_jwst_rate_mask.py -text whitespace=-blank-at-eof,cr-at-eol
+docs/CODEX_HANDOFF.md -text whitespace=-blank-at-eof,cr-at-eol
+docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md -text whitespace=-blank-at-eof,cr-at-eol
+artifacts/strong_lensing_geometry_20261021/mask*.json -text whitespace=-blank-at-eof,cr-at-eol

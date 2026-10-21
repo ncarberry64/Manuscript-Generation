@@ -1,0 +1,144 @@
+{
+  "status": "PASS_DELIVERY_AND_COMPACT_ARITHMETIC_ONLY",
+  "files_verified": 109,
+  "delivery_manifest_sha256": "eaee14645d176c36d60884764c8bc347174eee431d8d05cf973b06e9d68f82a5",
+  "matched_pixels": 289,
+  "read_times_s": [
+    [
+      10.73677,
+      21.47354
+    ],
+    [
+      64.42062,
+      75.15738999999999
+    ],
+    [
+      118.10446999999999,
+      128.84124
+    ],
+    [
+      171.78832,
+      182.52509
+    ],
+    [
+      225.47217,
+      236.20893999999998
+    ],
+    [
+      279.15602,
+      289.89279
+    ],
+    [
+      332.83987,
+      343.57664
+    ],
+    [
+      386.52372,
+      397.26049
+    ],
+    [
+      440.20757,
+      450.94434
+    ]
+  ],
+  "group_support": [
+    {
+      "radius_pixel": [
+        0,
+        1
+      ],
+      "pixels": 3,
+      "usable_groups": {
+        "2": 3
+      }
+    },
+    {
+      "radius_pixel": [
+        1,
+        2
+      ],
+      "pixels": 9,
+      "usable_groups": {
+        "2": 6,
+        "5": 2,
+        "7": 1
+      }
+    },
+    {
+      "radius_pixel": [
+        2,
+        3
+      ],
+      "pixels": 16,
+      "usable_groups": {
+        "5": 1,
+        "7": 5,
+        "9": 10
+      }
+    },
+    {
+      "radius_pixel": [
+        3,
+        4
+      ],
+      "pixels": 21,
+      "usable_groups": {
+        "9": 21
+      }
+    },
+    {
+      "radius_pixel": [
+        4,
+        6
+      ],
+      "pixels": 62,
+      "usable_groups": {
+        "9": 62
+      }
+    },
+    {
+      "radius_pixel": [
+        6,
+        8
+      ],
+      "pixels": 90,
+      "usable_groups": {
+        "9": 90
+      }
+    },
+    {
+      "radius_pixel": [
+        8,
+        12
+      ],
+      "pixels": 88,
+      "usable_groups": {
+        "9": 88
+      }
+    }
+  ],
+  "diagnostics": {
+    "full": {
+      "normalized_residual_L2": 0.07665300928607109,
+      "chi2": 9866.352790441584,
+      "dof": 283,
+      "p": 0.0
+    },
+    "early": {
+      "normalized_residual_L2": 0.051787293425787806,
+      "chi2": 341.42390358538483,
+      "dof": 283,
+      "p": 0.009846530769988048
+    }
+  },
+  "normalized_L2_reduction_fraction": 0.3243932115891728,
+  "detector_pipeline_rerun": false,
+  "new_independent_observations": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "limitations": [
+    "Arithmetic verification does not repeat or independently validate native detector processing.",
+    "The matching stcal replay establishes numerical compatibility, not an unrecorded archive installation version.",
+    "Shared SIRS, dark/reference and cross-read covariance remain incomplete."
+  ]
+}

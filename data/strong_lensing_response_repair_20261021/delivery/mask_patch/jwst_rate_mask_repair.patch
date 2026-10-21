@@ -1,0 +1,3815 @@
+diff --git a/code/strong_lensing_jwst_rate_mask.py b/code/strong_lensing_jwst_rate_mask.py
+new file mode 100644
+--- /dev/null
++++ b/code/strong_lensing_jwst_rate_mask.py
+@@ -0,0 +1,136 @@
++"""Explicit masking of usable JWST rate/CAL slopes with any-group SAT flags.
++
++This adapter leaves the archived fitter and its default mask byte-for-byte
++unchanged. It selects finite, positive-error slopes whose original DQ lacks
++DO_NOT_USE. SATURATED alone is retained only for a verified native product and
++calibration-software convention. This is not a GROUPDQ/raw-ramp policy.
++"""
++from __future__ import annotations
++
++import numpy as np
++
++from strong_lensing_pixel_geometry import fit_empirical_point
++
++DO_NOT_USE = 1
++SATURATED = 2
++
++# Audited release metadata: JWST 2.0.1 requires stcal>=1.18,<2.
++# stcal 1.16.0 changed rate-product SAT to mean ANY ramp group saturated.
++# Add releases only after checking their actual stcal dependency/semantics.
++_VERIFIED_CAL_VERSIONS = {
++    "2.0.1": {
++        "stcal_requirement": ">=1.18,<2",
++        "dependency_source": (
++            "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml"
++        ),
++    }
++}
++_SATURATION_SEMANTICS_SOURCE = (
++    "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html"
++)
++
++
++def _native_slope_provenance(primary_header):
++    """Check native 2D slope-product provenance, not a filename guess alone."""
++    header = dict(primary_header)
++    for name, expected in (
++        ("TELESCOP", "JWST"),
++        ("INSTRUME", "NIRCAM"),
++        ("DATAMODL", "ImageModel"),
++        ("S_RAMP", "COMPLETE"),
++    ):
++        if str(header.get(name, "")).strip() != expected:
++            raise ValueError(f"Expected native JWST/NIRCam slope {name}={expected}")
++    filename = str(header.get("FILENAME", "")).strip()
++    if filename.endswith("_cal.fits"):
++        product = "cal"
++    elif filename.endswith("_rate.fits"):
++        product = "rate"
++    else:
++        raise ValueError("Only native _cal.fits and _rate.fits products are supported")
++    version = str(header.get("CAL_VER", "")).strip()
++    if version not in _VERIFIED_CAL_VERSIONS:
++        raise ValueError(
++            f"Unverified CAL_VER={version!r}; check its SAT flag semantics first"
++        )
++    return {
++        "policy": "jwst_native_rate_any_group_saturation_v1",
++        "native_filename": filename,
++        "native_product": product,
++        "cal_ver": version,
++        "s_ramp": header["S_RAMP"],
++        "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++        "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++        "saturation_semantics_source": _SATURATION_SEMANTICS_SOURCE,
++        **_VERIFIED_CAL_VERSIONS[version],
++    }
++
++
++def jwst_native_rate_mask(data, error, dq, *, primary_header):
++    """Return a boolean usable-slope mask and its verified provenance receipt.
++
++    Pixel DQ is informational about the ramp history. The pipeline has already
++    fitted unsaturated segments. This function never turns a missing, nonfinite,
++    zero-error or DO_NOT_USE slope into a measurement and never alters its ERR.
++    It is deliberately inapplicable to raw/group arrays and resampled mosaics.
++    """
++    receipt = _native_slope_provenance(primary_header)
++    data, error, dq = np.asarray(data), np.asarray(error), np.asarray(dq)
++    if data.ndim != 2 or data.shape != error.shape or data.shape != dq.shape:
++        raise ValueError("Native SCI, ERR and pixel DQ must have the same 2D shape")
++    if not np.issubdtype(dq.dtype, np.integer):
++        raise ValueError("Pixel DQ must be an integer flag array")
++    if np.issubdtype(dq.dtype, np.signedinteger) and np.any(dq < 0):
++        raise ValueError("Pixel DQ flags cannot be negative")
++    flags = dq.astype(np.uint64, copy=False)
++    good = (
++        np.isfinite(data)
++        & np.isfinite(error)
++        & (error > 0)
++        & ((flags & DO_NOT_USE) == 0)
++    )
++    receipt.update({
++        "input_pixels": int(data.size),
++        "selected_pixels": int(good.sum()),
++        "retained_sat_flagged_slopes": int((good & ((flags & SATURATED) != 0)).sum()),
++        "original_dq_modified": False,
++        "science_or_error_modified": False,
++        "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++    })
++    return good, receipt
++
++
++def fit_jwst_native_rate_point(data, error, dq, guess, psf_grid, oversampling,
++                              psf_origin, *, primary_header, stamp_radius=8,
++                              centroid_bound=5., background_degree=1):
++    """Apply the unchanged point fitter with the verified native-slope selection.
++
++    A private 0/DO_NOT_USE *selection* array bridges the archived fitter's legacy
++    interface. It is not a replacement for the input DQ and is never persisted
++    as an observational product. All reported DQ counts use the original flags.
++    This fixes eligibility, not PSF adequacy, centroid calibration or lens physics.
++    """
++    good, receipt = jwst_native_rate_mask(
++        data, error, dq, primary_header=primary_header
++    )
++    selection_dq = np.where(good, 0, DO_NOT_USE).astype(np.uint32)
++    result = fit_empirical_point(
++        data, error, selection_dq, guess, psf_grid, oversampling, psf_origin,
++        stamp_radius=stamp_radius, centroid_bound=centroid_bound,
++        background_degree=background_degree,
++    )
++    x0, y0, x1, y1 = result["stamp_bounds_xyxy"]
++    original_flags = np.asarray(dq)[y0:y1, x0:x1].astype(np.uint64)
++    selected = good[y0:y1, x0:x1]
++    result["dq_flag_counts_in_stamp"] = {
++        str(1 << bit): int(np.count_nonzero(original_flags & (np.uint64(1) << np.uint64(bit))))
++        for bit in range(64)
++        if np.any(original_flags & (np.uint64(1) << np.uint64(bit)))
++    }
++    receipt["fitted_stamp_selected_pixels"] = int(selected.sum())
++    receipt["fitted_stamp_retained_sat_flagged_slopes"] = int(
++        (selected & ((original_flags & SATURATED) != 0)).sum()
++    )
++    result["pixel_mask_receipt"] = receipt
++    return result
++
+diff --git a/scripts/replay_he0435_rate_mask.py b/scripts/replay_he0435_rate_mask.py
+new file mode 100644
+--- /dev/null
++++ b/scripts/replay_he0435_rate_mask.py
+@@ -0,0 +1,240 @@
++"""Replay the documented native-rate mask correction on consumed F115W stamps.
++
++No download, physical refit, uncertainty rescaling, or new-observation validation.
++This runner requires the archived native stamps, exact GWCS and original headers.
++"""
++from __future__ import annotations
++
++import argparse
++import hashlib
++import json
++from pathlib import Path
++import sys
++
++import asdf
++from astropy.io import fits
++import numpy as np
++from scipy.linalg import block_diag
++
++CODE_ROOT = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(CODE_ROOT / "code"))
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--root", type=Path, default=CODE_ROOT)
++    parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--native-dir", type=Path,
++                        help="Optional full CAL directory for canonical global-coordinate fitting")
++    args = parser.parse_args()
++    root = args.root.resolve()
++    sys.path.append(str(root / "code"))
++    from strong_lensing_jwst_rate_mask import fit_jwst_native_rate_point
++    import strong_lensing_pixel_geometry as pg
++
++    base = root / "artifacts/strong_lensing_geometry_20261021"
++    manifest_path = CODE_ROOT/"artifacts/strong_lensing_geometry_20261021/mask_baseline_manifest.json"
++    baseline_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
++    if baseline_manifest["source_commit"] != "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9":
++        raise RuntimeError("Unexpected baseline manifest source commit")
++    legacy_hash = hashlib.sha256(Path(pg.__file__).read_text(encoding="utf-8").encode("utf-8")).hexdigest()
++    if legacy_hash != baseline_manifest["legacy_fitter_normalized_text_sha256"]:
++        raise RuntimeError("Legacy fitter no longer matches the immutable baseline")
++    output = args.output.resolve()
++    protected = [root/"data",root/"preregistration",base/"jwst_target_diagnostic",
++                 root/"code",root/"scripts",CODE_ROOT/"code",CODE_ROOT/"scripts"]
++    if any(output.is_relative_to(path.resolve()) for path in protected):
++        raise RuntimeError("Output would overwrite protected original input or code")
++    inputs = {}
++    def track(path, expected=None):
++        actual = hashlib.sha256(path.read_bytes()).hexdigest()
++        if expected is not None and actual != expected:
++            raise RuntimeError(f"Archived input hash mismatch: {path}")
++        try:
++            relative = path.resolve().relative_to(root).as_posix()
++        except ValueError:
++            relative = "external_native/"+path.name
++        inputs[relative] = actual
++        return path
++
++    def trusted_json(path):
++        relative = path.resolve().relative_to(root).as_posix()
++        expected = baseline_manifest["json_semantic_sha256"].get(relative)
++        if expected is None:
++            raise RuntimeError(f"Unlisted immutable JSON input: {relative}")
++        value = json.loads(track(path).read_text(encoding="utf-8"))
++        canonical = json.dumps(value,sort_keys=True,separators=(",",":"),ensure_ascii=False,allow_nan=False)
++        if hashlib.sha256(canonical.encode("utf-8")).hexdigest() != expected:
++            raise RuntimeError(f"JSON input differs from immutable baseline: {relative}")
++        return value
++
++    original = trusted_json(base/"jwst_target_diagnostic/pixel_geometry_results.json")
++    protocol = trusted_json(root/"preregistration/he0435_geometry_jwst_diagnostic_20261021.json")
++    origin = protocol["tangent_origin_radec_deg"]
++    rows = []
++    baseline_values, baseline_covariances = [], []
++    largest_original_centroid_error = 0.
++    largest_original_q_error = 0.
++    largest_geometry_crosscheck_error = 0.
++    largest_jacobian_crosscheck_error = 0.
++    total_restored = 0
++
++    def complex_geometry(points):
++        z = np.asarray(points) @ np.array([1,1j])
++        b = z[1]-z[0]
++        rotation = b.conjugate()/abs(b)
++        c,d = (z[2:]-z[0])*rotation
++        return np.array([abs(b),c.real,c.imag,d.real,d.imag])
++
++    exposure_paths = [base/"jwst_target_diagnostic/exposures"/
++                      f"jw01198007001_02101_{i:05d}_nrcb3_cal.json" for i in range(1,5)]
++    for filename in exposure_paths:
++        old = trusted_json(filename)
++        basename = filename.stem
++        header_path = root/"data/strong_lensing_geometry_20261021/metadata"/f"{basename}_headers_only.json"
++        header = trusted_json(header_path)["primary_header"]
++        if header["FILTER"] != "F115W" or header["DETECTOR"] != "NRCB3":
++            raise RuntimeError("Only the already-consumed F115W NRCB3 exposure is allowed")
++        if [point["label"] for point in old["points"]] != list("ABCD"):
++            raise RuntimeError("Expected exactly ordered A/B/C/D point records")
++        if header["FILENAME"] != basename+".fits":
++            raise RuntimeError("Header/native exposure mismatch")
++        native_arrays = None
++        if args.native_dir is not None:
++            native_path = track(args.native_dir/(basename+".fits"),old["sha256"])
++            with fits.open(native_path,memmap=False) as h:
++                if h[0].header["CAL_VER"] != header["CAL_VER"]:
++                    raise RuntimeError("Native/header calibration provenance mismatch")
++                native_arrays = [np.array(h[name].data) for name in ("SCI","ERR","DQ")]
++        positions, covariances, old_positions, old_covariances = [],[],[],[]
++        points = []
++        wcs_archive = old["official_GWCS_archive"]
++        wcs_path = track(base/"jwst_target_diagnostic"/wcs_archive["path"],wcs_archive["sha256"])
++        with asdf.open(wcs_path) as af:
++            wcs = af["wcs"]
++            for point in old["points"]:
++                label = point["label"]
++                archive = old["native_stamp_archives"][label]
++                path = track(base/"jwst_target_diagnostic"/archive["path"],archive["sha256"])
++                with fits.open(path) as h:
++                    if h[0].header["CAL_SHA"] != old["sha256"]:
++                        raise RuntimeError("Native stamp/source provenance mismatch")
++                    data,error,dq = [np.array(h[name].data) for name in ("SCI","ERR","DQ")]
++                    offset = np.array([h[0].header["X0"],h[0].header["Y0"]])
++                path = track(root/point["field_psf_path"],point["field_psf_sha256"])
++                with fits.open(path) as h:
++                    grid = np.array(h[0].data)
++                    oversampling = h[0].header["OVERSMP"]
++                    psf_origin = (h[0].header["ORIGINX"],h[0].header["ORIGINY"])
++                if native_arrays is not None:
++                    data,error,dq = native_arrays
++                    offset = np.zeros(2)
++                guess = np.array(point["initial_guess_xy_pixel"])-offset
++                oldfit = pg.fit_empirical_point(
++                    data,error,dq,guess,grid,oversampling,psf_origin,background_degree=2
++                )
++                fit = fit_jwst_native_rate_point(
++                    data,error,dq,guess,grid,oversampling,psf_origin,
++                    primary_header=header,background_degree=2,
++                )
++                oldxy = np.array(oldfit["centroid_xy_pixel"])+offset
++                xy = np.array(fit["centroid_xy_pixel"])+offset
++                centroid_error = float(np.max(np.abs(oldxy-point["centroid_xy_pixel"])))
++                if centroid_error > 1e-4:
++                    raise RuntimeError("Original centroid replay failed")
++                if abs(oldfit["chi2"]-point["chi2"]) > 1e-4*point["chi2"]:
++                    raise RuntimeError("Original pixel score replay failed")
++                largest_original_centroid_error = max(largest_original_centroid_error,centroid_error)
++                p,c,_ = pg.gwcs_centroid(wcs,xy,fit["centroid_covariance_pixel2"],origin)
++                po,co,_ = pg.gwcs_centroid(wcs,oldxy,oldfit["centroid_covariance_pixel2"],origin)
++                positions.append(p);covariances.append(c)
++                old_positions.append(po);old_covariances.append(co)
++                restored = fit["usable_pixels"]-oldfit["usable_pixels"]
++                total_restored += restored
++                points.append({
++                    "label":label,"restored_pixels":restored,
++                    "centroid_xy_pixel":xy.tolist(),
++                    "centroid_covariance_pixel2":fit["centroid_covariance_pixel2"],
++                    "tangent_east_north_arcsec":p.tolist(),
++                    "tangent_covariance_arcsec2":c.tolist(),
++                    "old_chi2":oldfit["chi2"],"old_dof":oldfit["dof"],
++                    "chi2":fit["chi2"],"dof":fit["dof"],
++                    "p_value":fit["p_value"],
++                    "pixel_model_adequate":bool(fit["p_value"]>=.001),
++                    "pixel_mask_receipt":fit["pixel_mask_receipt"],
++                    "dq_flag_counts_in_stamp":fit["dq_flag_counts_in_stamp"],
++                })
++        q,cov = pg.intrinsic_with_covariance(positions,block_diag(*covariances))
++        oldq,oldcov = pg.intrinsic_with_covariance(old_positions,block_diag(*old_covariances))
++        q_error = float(np.max(np.abs(oldq-old["intrinsic_q_arcsec"])))
++        if q_error > 1e-6:
++            raise RuntimeError("Original GWCS/geometry replay failed")
++        largest_original_q_error = max(largest_original_q_error,q_error)
++        largest_geometry_crosscheck_error = max(
++            largest_geometry_crosscheck_error,float(np.max(np.abs(q-complex_geometry(positions)))))
++        step = 1e-6
++        x = np.array(positions).reshape(-1)
++        jac = np.column_stack([
++            (complex_geometry((x+step*np.eye(8)[i]).reshape(4,2))-
++             complex_geometry((x-step*np.eye(8)[i]).reshape(4,2)))/(2*step)
++            for i in range(8)])
++        largest_jacobian_crosscheck_error = max(
++            largest_jacobian_crosscheck_error,
++            float(np.max(np.abs(jac-pg.intrinsic_jacobian(positions)))))
++        rows.append({"exposure":basename,"points":points,
++                     "intrinsic_q_arcsec":q.tolist(),"intrinsic_covariance_arcsec2":cov.tolist()})
++        baseline_values.append(oldq);baseline_covariances.append(oldcov)
++
++    if len(rows)!=4 or sum(len(row["points"]) for row in rows)!=16:
++        raise RuntimeError("Expected all four exposures and sixteen points")
++    combined = pg.combine_exposures(
++        [row["intrinsic_q_arcsec"] for row in rows],
++        [row["intrinsic_covariance_arcsec2"] for row in rows])
++    baseline_combined = pg.combine_exposures(baseline_values,baseline_covariances)
++    scores = {}
++    for name,model in original["models"].items():
++        prediction = model["predicted_intrinsic_q_arcsec"]
++        residual = np.array(combined["mean"])-prediction
++        score = pg.gaussian_score(residual,combined["covariance"])
++        score["intrinsic_coordinate_rms_mas"] = float(np.sqrt(np.mean(residual**2))*1000)
++        score["conditional_geometry_validation_pass"] = False
++        scores[name] = score
++    result = {
++        "status":"DEVELOPMENT_MASK_REPAIR_REPLAY_NOT_NEW_VALIDATION",
++        "source_commit":"7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
++        "coordinate_mode":"native_global" if args.native_dir is not None else "portable_stamp_local",
++        "replay_tolerance":{"centroid_pixel":1e-4,"relative_pixel_chi2":1e-4,"geometry_arcsec":1e-6},
++        "retained_extra_pixels":total_restored,"exposures":rows,
++        "combined":combined,"models":scores,
++        "baseline_combined_replay":baseline_combined,
++        "audit":{
++            "maximum_original_centroid_replay_error_pixel":largest_original_centroid_error,
++            "maximum_original_geometry_replay_error_arcsec":largest_original_q_error,
++            "independent_complex_geometry_error_arcsec":largest_geometry_crosscheck_error,
++            "independent_finite_difference_jacobian_error":largest_jacobian_crosscheck_error,
++            "original_fitter_modified":False,"original_dq_modified":False,
++            "native_errors_modified":False,"lens_predictions_refitted":False,
++        },
++        "input_sha256":inputs,
++        "code_sha256":{
++            "code/strong_lensing_pixel_geometry.py":hashlib.sha256(Path(pg.__file__).read_bytes()).hexdigest(),
++            "code/strong_lensing_jwst_rate_mask.py":hashlib.sha256((CODE_ROOT/"code/strong_lensing_jwst_rate_mask.py").read_bytes()).hexdigest(),
++            "scripts/replay_he0435_rate_mask.py":hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
++        },
++        "physical_admission":False,"unchanged_physical_guard":2e-10,
++        "interpretation":"Mask eligibility fixed; PSF adequacy and absolute centroid calibration remain open.",
++    }
++    result["baseline_manifest_sha256"] = hashlib.sha256(manifest_path.read_bytes()).hexdigest()
++    if largest_geometry_crosscheck_error > 1e-8 or largest_jacobian_crosscheck_error > 1e-6:
++        raise RuntimeError("Independent geometry/Jacobian crosscheck failed")
++    output.parent.mkdir(parents=True,exist_ok=True)
++    output.write_text(json.dumps(result,indent=2,allow_nan=False)+"\n",encoding="utf-8")
++    print(json.dumps({"retained_extra_pixels":total_restored,
++        "exposure_consistency_chi2":combined["exposure_consistency_chi2"],
++        "models":{name:score["intrinsic_coordinate_rms_mas"] for name,score in scores.items()},
++        "audit":result["audit"]},indent=2))
++
++
++if __name__ == "__main__":
++    main()
++
+diff --git a/tests/test_strong_lensing_jwst_rate_mask.py b/tests/test_strong_lensing_jwst_rate_mask.py
+new file mode 100644
+--- /dev/null
++++ b/tests/test_strong_lensing_jwst_rate_mask.py
+@@ -0,0 +1,101 @@
++"""Eligibility regressions for partially saturated, valid JWST slope products."""
++from pathlib import Path
++import sys
++import numpy as np
++import unittest
++
++HERE = Path(__file__).resolve().parents[1]
++sys.path.insert(0, str(HERE / "code"))
++# Standalone patch test; a real checkout already has the original module.
++ARCHIVE = HERE.parent / "repo"
++if (ARCHIVE / "code").exists():
++    sys.path.insert(1, str(ARCHIVE / "code"))
++
++from strong_lensing_jwst_rate_mask import (
++    jwst_native_rate_mask, fit_jwst_native_rate_point,
++)
++from strong_lensing_pixel_geometry import native_pixel_mask, fit_empirical_point
++
++HEADER = {
++    "TELESCOP": "JWST", "INSTRUME": "NIRCAM", "DATAMODL": "ImageModel",
++    "S_RAMP": "COMPLETE", "CAL_VER": "2.0.1",
++    "FILENAME": "jw01198007001_02101_00001_nrcb3_cal.fits",
++}
++
++
++def test_presaturation_slope_is_retained_but_unusable_slopes_are_rejected():
++    sci = np.array([[10., 11., 12., np.nan, 14., 15., 16.]])
++    err = np.array([[1., 2., 3., 1., 0., np.inf, 1.]])
++    dq = np.array([[0, 2, 3, 2, 2, 2, 4]], dtype=np.uint32)
++    copies = [x.copy() for x in (sci, err, dq)]
++    good, receipt = jwst_native_rate_mask(sci, err, dq, primary_header=HEADER)
++    assert good.tolist() == [[True, True, False, False, False, False, True]]
++    assert receipt["retained_sat_flagged_slopes"] == 1
++    for x, before in zip((sci, err, dq), copies):
++        np.testing.assert_array_equal(x, before)
++    assert native_pixel_mask(sci, err, dq).tolist() == [
++        [True, False, False, False, False, False, True]
++    ]
++
++
++def test_raw_mosaic_or_unverified_semantics_are_not_silently_accepted():
++    changes = [
++        {"CAL_VER": "1.20.2"}, {"CAL_VER": "99.0.0"}, {"CAL_VER": ""},
++        {"DATAMODL": "RampModel"}, {"FILENAME": "jw01198_i2d.fits"},
++        {"FILENAME": "jw01198_uncal.fits"}, {"S_RAMP": "SKIPPED"},
++        {"INSTRUME": "NIRISS"},
++    ]
++    for change in changes:
++        with unittest.TestCase().assertRaises(ValueError):
++            jwst_native_rate_mask(
++                np.ones((3,3)), np.ones((3,3)), np.zeros((3,3), np.uint32),
++                primary_header=HEADER | change,
++            )
++
++
++def test_group_or_invalid_flag_arrays_are_rejected():
++    cases = [np.zeros((1,2,3),np.uint32), np.full((2,3),-1,np.int32),
++             np.zeros((2,3),float)]
++    for dq in cases:
++        with unittest.TestCase().assertRaises(ValueError):
++            jwst_native_rate_mask(
++                np.ones(dq.shape),np.ones(dq.shape),dq,primary_header=HEADER
++            )
++
++
++def test_adapter_preserves_original_dq_and_legacy_behavior_on_synthetic_point():
++    from scipy.special import erf
++    yy, xx = np.mgrid[:21, :21]
++    # Exact pixel-integrated Gaussian grid sampled at quarter pixels.
++    gridcoord = (np.arange(101)-50)/4
++    z1 = erf((gridcoord+.5)/(np.sqrt(2)*.95))
++    z0 = erf((gridcoord-.5)/(np.sqrt(2)*.95))
++    grid = np.outer((z1-z0)/2, (z1-z0)/2)
++    from strong_lensing_pixel_geometry import empirical_psf_values
++    truecenter = (10.12, 9.83)
++    data = 2000*empirical_psf_values(grid,4,(50.,50.),xx,yy,truecenter) + 2.
++    error = np.ones_like(data)*.5
++    dq = np.zeros(data.shape, np.uint32)
++    dq[9:12, 9:12] = 2
++    dq[4, 4] = 1
++    before = dq.copy()
++    old = fit_empirical_point(data,error,dq,(10,10),grid,4,(50,50))
++    new = fit_jwst_native_rate_point(
++        data,error,dq,(10,10),grid,4,(50,50),primary_header=HEADER
++    )
++    np.testing.assert_array_equal(dq,before)
++    assert new["usable_pixels"] == old["usable_pixels"]+9
++    assert new["pixel_mask_receipt"]["fitted_stamp_retained_sat_flagged_slopes"] == 9
++    assert new["dq_flag_counts_in_stamp"]["2"] == 9
++    np.testing.assert_allclose(new["centroid_xy_pixel"],truecenter,atol=2e-6)
++    # More correctly retained information must sharpen this correctly specified test.
++    assert np.trace(new["centroid_covariance_pixel2"]) < np.trace(old["centroid_covariance_pixel2"])
++
++
++
++if __name__ == "__main__":
++    tests = [value for name,value in globals().copy().items()
++             if name.startswith("test_") and callable(value)]
++    suite = unittest.TestSuite(unittest.FunctionTestCase(test) for test in tests)
++    result = unittest.TextTestRunner(verbosity=2).run(suite)
++    raise SystemExit(not result.wasSuccessful())
+diff --git a/docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md b/docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md
+new file mode 100644
+--- /dev/null
++++ b/docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md
+@@ -0,0 +1,115 @@
++# HE 0435 native-rate saturation-mask repair
++
++This is a development correction to the already consumed JWST F115W extraction.
++It changes which existing calibrated slopes are retained. It does not refit the
++lens, alter native SCI/ERR/DQ, supply a new PSF, or validate physical geometry.
++
++## Identified cause
++
++All four native files declare CAL_VER=2.0.1, DATAMODL=ImageModel, and
++S_RAMP=COMPLETE. JWST 2.0.1 requires stcal>=1.18,<2. Since stcal 1.16.0,
++the rate-product SATURATED bit can indicate that **any** group in the ramp
++saturated. The slope may still be valid because the pipeline uses earlier
++unsaturated segments. Invalid slopes remain excluded through DO_NOT_USE,
++nonfinite SCI/ERR, and nonpositive ERR.
++
++The archived point fitter excluded both DO_NOT_USE and SATURATED. This discarded
++303 finite positive-error target slopes across all sixteen point stamps. The new
++adapter retains these valid slopes under an explicit product/version check.
++The original fitter and old protocol are unchanged.
++
++Primary implementation sources:
++
++- JWST 2.0.1 dependency:
++  https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml
++- Rate-product flag propagation:
++  https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html
++- stcal 1.16.0 flag change:
++  https://stcal.readthedocs.io/en/latest/stcal/changes.html
++- Upstream flag-only change:
++  https://github.com/spacetelescope/stcal/pull/421
++
++## Implementation
++
++code/strong_lensing_jwst_rate_mask.py adds an explicit native 2D CAL/rate policy.
++It checks the native-product header and the verified software convention. The
++adapter sends a private boolean selection represented by 0/DO_NOT_USE to the
++unchanged fitter. Original SCI/ERR/DQ arrays are not mutated, original DQ counts
++are restored in the fit receipt, and the selected SAT-flagged count is recorded.
++
++The legacy mask is still the default of the archived fitter. GROUPDQ/raw ramps,
++resampled mosaics, missing provenance and unverified software conventions are
++not silently interpreted as native 2D slope products. Extend the verified-release
++table only after checking the release's actual flag semantics.
++
++## Canonical native-coordinate replay
++
++The replay consumes the four archived native CAL files and their exact saved
++PSFs, GWCS and frozen origin. All 16 original fits are reproduced first.
++
++| Quantity | Archived selection | Corrected selection |
++|---|---:|---:|
++| G1 conventional raw geometry RMS, mas | 0.779400 | 0.448457 |
++| G1 R1 raw geometry RMS, mas | 0.779454 | 0.448563 |
++| Between-exposure statistic, 15 coordinates | 432.262011 | 253.027686 |
++| G1 conventional formal geometry statistic, 5 coordinates | 958.434 | 1033.113139 |
++| G1 R1 formal geometry statistic, 5 coordinates | 958.428 | 1033.268517 |
++
++The original global pixel centroids reproduce to 3.41e-12 pixel and original
++five-coordinate geometry to 1.21e-10 arcsec. An independent complex-number
++construction agrees with the geometry to 8.89e-16 arcsec; an independent finite
++difference checks its Jacobian to 5.94e-10.
++
++All sixteen corrected pixel fits still fail their known-ERR profile check:
++chi2/dof ranges from 27.57 to 83.55. Between-exposure consistency still fails.
++Restoring information reduces the raw geometry residual but also tightens
++formal covariance, so the formal geometry statistic does not improve. These
++scores are conditional diagnostics under the still inadequate PSF, not calibrated
++physical rejection probabilities.
++
++The portable small-stamp replay changes the fitter's numerical coordinate origin
++and reproduces the corrected G1 RMS as 0.448447 mas and the exposure statistic as
++253.133300. Its old-centroid reproduction differs by at most 1.23e-5 pixel and old
++geometry by 0.000530 mas. This is a quantified numerical replay tolerance, not
++byte-identical arithmetic. The native global-coordinate result is canonical.
++
++## Existing early-read setting
++
++Inspection of the native FITS ASDF pipeline configuration shows:
++
++    algorithm: OLS_C
++    suppress_one_group: False
++
++The logs also record zero-frame processing. Therefore merely enabling
++suppress_one_group=False again is not a correction for this dataset.
++
++The current upstream development changelog separately mentions a correction for
++read-noise variance of ZEROFRAME-derived OLS_C slopes (an NFRAMES factor).
++NFRAMES=2 in these inputs, but the saved CAL DQ does not identify which individual
++slopes used ZEROFRAME. No variance adjustment is applied here. That investigation
++requires classifying the actual ramp/zero-frame usage and applying an appropriate
++pipeline correction; it must not be replaced by an arbitrary error multiplier.
++
++## Reproduction
++
++Run the semantic, invalid-pixel, provenance and synthetic-point regressions:
++
++    python tests/test_strong_lensing_jwst_rate_mask.py
++
++Run the canonical replay with the four original CAL files:
++
++    python scripts/replay_he0435_rate_mask.py --root . --native-dir data/strong_lensing_geometry_20261021/native --output artifacts/strong_lensing_geometry_20261021/mask_repair_native_replay.json
++
++Run the portable replay using only the committed small stamps and GWCS:
++
++    python scripts/replay_he0435_rate_mask.py --root . --output artifacts/strong_lensing_geometry_20261021/mask_repair_replay.json
++
++The receipts record exact input SHA256 values, retained pixels, original-fit
++reproduction tolerances, geometry crosschecks and unchanged scientific scope.
++The baseline manifest locks the ten original JSON inputs and the normalized
++legacy fitter text to the reviewed commit. The runner explicitly selects the
++four consumed exposures and protects original inputs/code from output writes.
++Four regression groups and two input/output integrity checks passed; the
++inherited 123-test suite and journal build were not rerun for this package.
++All physical-validation flags remain false. No unused band was opened.
++
+diff --git a/docs/CODEX_HANDOFF.md b/docs/CODEX_HANDOFF.md
+new file mode 100644
+--- /dev/null
++++ b/docs/CODEX_HANDOFF.md
+@@ -0,0 +1,172 @@
++# Codex handoff: integrate the verified HE 0435 rate-mask repair
++
++## Task
++
++Integrate and publish the supplied, tested JWST native-rate mask correction in
++the manuscript Git workflow, then continue the instrumental-response repair
++before making a precision-validation claim. The user has authorized Git work.
++This package was prepared locally after the selected GitHub connector returned
++403 for branch creation; no remote branch, commit, PR comment or merge was made.
++
++Repository: ncarberry64/Manuscript-Generation
++Existing draft PR: https://github.com/ncarberry64/Manuscript-Generation/pull/23
++Existing branch: codex/strong-lensing-first-comparison-20261020
++Immutable reviewed starting point: 7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9
++
++Read the repository's current instructions and inspect its current state first.
++If the branch has advanced, inspect and preserve those changes. Do not reset,
++force-push, or overwrite another session's work. Use an isolated worktree for
++this repair.
++
++The BHSM framing remains primary: the reference and R1-inclusive calculations
++are controls within the specified response calculation. A fully matched
++conventional effective-mass representation describes the same retained optics.
++No requirement that BHSM must beat conventional gravity is introduced.
++
++## Confirmed issue and correction
++
++The old native_pixel_mask excluded DO_NOT_USE | SATURATED. In these native
++CAL_VER=2.0.1 files, SATURATED can mean that a later ramp group saturated while
++earlier unsaturated groups still supplied a valid slope. All 303 restored
++target pixels have finite SCI, finite positive ERR and no DO_NOT_USE flag.
++
++The additive adapter checks native 2D JWST/NIRCam CAL/rate provenance, completed
++ramp fitting and the audited software convention. It retains valid SAT-only
++slopes through a private selection array passed to the unchanged fitter.
++The original SCI/ERR/DQ, original fitter and frozen protocol are preserved.
++
++The strict release guard currently accepts only CAL_VER=2.0.1. Do not remove
++that guard to accommodate another product. Check the other release's actual
++stcal convention first and document the evidence before extending the table.
++This policy is not applicable to GROUPDQ/raw ramps or resampled mosaics.
++
++## Apply the package
++
++The package contains jwst_rate_mask_repair.patch and mask_patch_manifest.json.
++The patch only adds files. Confirm its hashes against the manifest.
++
++A possible worktree sequence, executed from an existing repository checkout:
++
++    git status --short
++    git fetch origin
++    git worktree add -b codex/he0435-jwst-rate-mask-repair ../he0435-jwst-rate-mask-repair 7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9
++
++Inside that worktree, replace the patch path with its actual extracted location:
++
++    git apply --check /path/to/jwst_rate_mask_repair.patch
++    git apply /path/to/jwst_rate_mask_repair.patch
++
++If a branch or worktree already exists, inspect and resume it instead of
++recreating it. These commands do not merge the repair into main.
++
++The original 123-test statement belongs to the published checkpoint. This
++repair package passed four regression groups plus the specified numerical
++replays. It has not rerun the entire inherited 123-test suite or journal build.
++
++## Reproduce using the existing geometry Python environment
++
++The executable below is written as python. In the Windows worktree, use the
++existing .venv-geometry\Scripts\python.exe if that is the established runtime.
++Record the actual package versions; do not silently relabel an old test run.
++
++Run the focused mask regressions:
++
++    python tests/test_strong_lensing_jwst_rate_mask.py
++
++Run the canonical replay against the four original CAL files:
++
++    python scripts/replay_he0435_rate_mask.py --root . --native-dir data/strong_lensing_geometry_20261021/native --output artifacts/strong_lensing_geometry_20261021/mask_repair_native_replay.json
++
++The native files are the same already consumed F115W NRCB3 exposures. Their
++hashes are checked against the archived receipts. Do not substitute a later
++MAST reprocessing with a changed hash, and do not open an unused band.
++
++If the full native inputs are unavailable locally, run the portable replay:
++
++    python scripts/replay_he0435_rate_mask.py --root . --output artifacts/strong_lensing_geometry_20261021/mask_repair_replay.json
++
++The runner checks an immutable baseline manifest for the original predictions,
++exposure results, headers and protocol. It explicitly selects the four consumed
++F115W exposures and refuses outputs inside protected original-input/code paths.
++It cannot relabel a new prediction file as the old baseline.
++
++## Expected result
++
++Canonical global-detector-coordinate calculation:
++
++- Restored slopes: 303 across all sixteen target stamps.
++- G1 reference raw geometry RMS: 0.448457087207 mas.
++- G1 R1 raw geometry RMS: 0.448562686643 mas.
++- Between-exposure statistic: 253.027686060 for 15 coordinates.
++- G1 reference formal geometry statistic: 1033.113139179 for 5 coordinates.
++- All sixteen pixel-profile adequacy checks still fail.
++- Corrected chi2/dof range: approximately 27.57 to 83.55.
++
++The original 0.779400/0.779454 mas extraction and exposure statistic 432.262011
++remain historical results. Report the mask-only correction alongside them.
++Restoring information tightens conditional errors, so the lower raw RMS does
++not imply a lower formal geometry statistic or validated astrometry.
++
++The native-coordinate replay reproduces original centroids within 3.41e-12
++pixel. The small-stamp portable replay gives 0.448446682409 mas and exposure
++statistic 253.133300295 because optimizer coordinates change. Its quantified
++difference is numerical conditioning, not independent validation. Retain the
++native-coordinate values as canonical.
++
++Keep all original failures and original validation flags. This is reanalysis of
++used F115W observations; it does not create another untouched test. The original
++2e-10 guard and physical_admission=false remain unchanged.
++
++## Do not repeat an already active pipeline setting
++
++All four actual native ASDF configurations already have:
++
++    algorithm: OLS_C
++    suppress_one_group: False
++
++Their logs also record zero-frame processing. Merely enabling
++suppress_one_group=False again will repeat the existing setup.
++
++The current upstream development changelog mentions an NFRAMES correction for
++read-noise variance of ZEROFRAME-derived OLS_C slopes. These inputs have
++NFRAMES=2, but which individual slopes used ZEROFRAME has not been established
++from CAL DQ alone. No unreleased variance patch or error multiplier is applied
++in this package. Investigate actual read provenance before any such correction.
++
++## Continue the response repair
++
++Use the corrected eligibility policy consistently for field-star calibration
++and quasar extraction. The remaining task is an adequate instrument/extended-light
++mean and calibrated astrometric error propagation. No additional gravitational
++term is inferred from a PSF-shape residual.
++
++Any accompanying positivity-preserving empirical PSF experiment remains
++development work. A better field or target residual alone does not establish
++transferable calibration. Check that the correction preserves positivity,
++normalization and the chosen position convention; separate its training from
++its assessment; and propagate its uncertainty and shared correlations into
++centroid comparisons. Do not fit PSF/host freedom using agreement with the
++frozen lens coordinates as an objective.
++
++Keep the remaining untouched bands untouched until a concrete measurement
++procedure and its assessment are fixed. The existing F115W observations can
++be used openly for development.
++
++## Git and manuscript integration
++
++Inspect the added code and receipts, rerun the focused checks, and commit the
++repair with the original failed experiment intact. Publish the repair branch
++and a draft PR targeting the existing manuscript branch, or integrate into
++draft PR #23 according to the current authorized repository workflow. Do not
++merge main or submit the manuscript automatically.
++
++Update the manuscript's current-results discussion to distinguish the corrected
++pixel-selection policy from the still unresolved PSF/host/distortion response.
++Do not replace old numerical tables as though the correction existed at the
++original freeze. If the manuscript is rebuilt, report the build and visual
++inspection actually performed on the new commit. Keep the journal Galaxies;
++do not add a target submission date.
++
++Return the published commit/PR, exact reproduction commands, what was corrected,
++and the remaining specific instrumental dependency.
++
+diff --git a/artifacts/strong_lensing_geometry_20261021/mask_repair_native_replay.json b/artifacts/strong_lensing_geometry_20261021/mask_repair_native_replay.json
+new file mode 100644
+--- /dev/null
++++ b/artifacts/strong_lensing_geometry_20261021/mask_repair_native_replay.json
+@@ -0,0 +1,1449 @@
++{
++  "status": "DEVELOPMENT_MASK_REPAIR_REPLAY_NOT_NEW_VALIDATION",
++  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
++  "coordinate_mode": "native_global",
++  "replay_tolerance": {
++    "centroid_pixel": 0.0001,
++    "relative_pixel_chi2": 0.0001,
++    "geometry_arcsec": 1e-06
++  },
++  "retained_extra_pixels": 303,
++  "exposures": [
++    {
++      "exposure": "jw01198007001_02101_00001_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 15,
++          "centroid_xy_pixel": [
++            768.8869512923321,
++            1241.0212278797862
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.6125974076930775e-06,
++              -9.868848199000213e-08
++            ],
++            [
++              -9.868848199000213e-08,
++              3.070042959866149e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0102491664401698,
++            0.27425715671447026
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.923358326641541e-09,
++              6.513948808919962e-11
++            ],
++            [
++              6.513948808919972e-11,
++              3.4419937368128852e-09
++            ]
++          ],
++          "old_chi2": 14357.628355414861,
++          "old_dof": 265,
++          "chi2": 15961.558501353513,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 714,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 15
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 15,
++            "4": 9
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 59,
++          "centroid_xy_pixel": [
++            766.0163391154351,
++            1291.950826417138
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.1752103038107316e-06,
++              -1.4190092232326084e-08
++            ],
++            [
++              -1.4190092232326084e-08,
++              2.7203626837091924e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.466130124725288,
++            0.8264830897287689
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.626479591615557e-09,
++              1.0781497295896959e-10
++            ],
++            [
++              1.0781497295896955e-10,
++              2.986621612269285e-09
++            ]
++          ],
++          "old_chi2": 11850.790648307602,
++          "old_dof": 221,
++          "chi2": 19192.111662301242,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 714,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 59
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 59,
++            "4": 12
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            811.365089794126,
++            1311.4349128489982
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.042108815274645e-06,
++              6.4166258974324044e-09
++            ],
++            [
++              6.4166258974324044e-09,
++              2.9979985016625423e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4563487824136057,
++            -0.3288019600348431
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.866874545776698e-09,
++              1.2747509157386485e-11
++            ],
++            [
++              1.2747509157386454e-11,
++              2.8819404774697142e-09
++            ]
++          ],
++          "old_chi2": 10012.197425754435,
++          "old_dof": 264,
++          "chi2": 12572.89866372285,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 714,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 16,
++            "4": 14
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            827.9203536528589,
++            1254.4434423899127
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.9510715295643793e-06,
++              1.2866215475423958e-08
++            ],
++            [
++              1.2866215475423958e-08,
++              3.423092001578436e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07291030781298241,
++            -1.3395555258881033
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              3.234012495909271e-09,
++              -1.217180459818267e-10
++            ],
++            [
++              -1.2171804598182688e-10,
++              2.8366137016610475e-09
++            ]
++          ],
++          "old_chi2": 8016.795797865063,
++          "old_dof": 267,
++          "chi2": 9421.22810759364,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 714,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 12,
++            "2048": 1,
++            "16384": 1,
++            "262144": 1,
++            "1048576": 1
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.576277035446413,
++        2.0990023793452135,
++        1.4289768196465769,
++        0.3125582966967489,
++        1.8399192432244031
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          5.5441906205205745e-09,
++          2.8011592623332543e-09,
++          8.917314996534639e-11,
++          2.7600054037329793e-09,
++          -8.97304213294513e-11
++        ],
++        [
++          2.8011592623332535e-09,
++          1.0873089345801344e-08,
++          -4.621126151450811e-09,
++          9.501865017908021e-09,
++          1.8477431413912012e-09
++        ],
++        [
++          8.917314996534676e-11,
++          -4.621126151450812e-09,
++          8.607679929543059e-09,
++          -5.96762227317219e-09,
++          -1.1392730207828722e-10
++        ],
++        [
++          2.760005403732979e-09,
++          9.50186501790802e-09,
++          -5.96762227317219e-09,
++          1.4693431993642037e-08,
++          2.4455776338771623e-09
++        ],
++        [
++          -8.973042132945116e-11,
++          1.8477431413912012e-09,
++          -1.139273020782871e-10,
++          2.4455776338771623e-09,
++          5.1228547414766026e-09
++        ]
++      ]
++    },
++    {
++      "exposure": "jw01198007001_02101_00002_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 18,
++          "centroid_xy_pixel": [
++            960.9514253158264,
++            1052.229987235052
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.8667002064998965e-06,
++              -1.8668352949047701e-07
++            ],
++            [
++              -1.8668352949047704e-07,
++              2.783418343553806e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0094075644852516,
++            0.2757859180266723
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.5656658132679305e-09,
++              -1.264365407433324e-10
++            ],
++            [
++              -1.264365407433324e-10,
++              2.819817393667386e-09
++            ]
++          ],
++          "old_chi2": 13296.727334523883,
++          "old_dof": 261,
++          "chi2": 15571.583659291766,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 696,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 18
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 18,
++            "4": 23,
++            "32768": 1
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 22,
++          "centroid_xy_pixel": [
++            958.1409719099355,
++            1103.1331394311842
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.7868689529832235e-06,
++              -1.0277322329959453e-07
++            ],
++            [
++              -1.0277322329959453e-07,
++              2.3029846074493696e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.466620513893187,
++            0.8278753639068553
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.184993489514612e-09,
++              4.814403507557393e-11
++            ],
++            [
++              4.814403507557377e-11,
++              2.6630608392564504e-09
++            ]
++          ],
++          "old_chi2": 20631.208209045002,
++          "old_dof": 258,
++          "chi2": 23395.047042964947,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 696,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 22
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 22,
++            "4": 11
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            1003.5179721353885,
++            1122.563508974724
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.9135777090578056e-06,
++              1.1451921916200722e-08
++            ],
++            [
++              1.1451921916200722e-08,
++              2.8898686720753854e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4577681275432957,
++            -0.32754030596673034
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.76741931821967e-09,
++              1.2140711846721942e-11
++            ],
++            [
++              1.2140711846721893e-11,
++              2.7590899835730506e-09
++            ]
++          ],
++          "old_chi2": 11492.872904612426,
++          "old_dof": 264,
++          "chi2": 14841.719262667702,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 696,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 16,
++            "4": 18
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            1019.991813981194,
++            1065.5507091138295
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.1464938547902993e-06,
++              -5.9124968671980134e-08
++            ],
++            [
++              -5.9124968671980134e-08,
++              3.770409998030074e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.0720685658843513,
++            -1.338077538705219
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              3.5165745472380102e-09,
++              -2.1945372206677826e-10
++            ],
++            [
++              -2.1945372206677808e-10,
++              3.0750416947390294e-09
++            ]
++          ],
++          "old_chi2": 9041.727343137556,
++          "old_dof": 268,
++          "chi2": 11138.153644724498,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155374,
++            "retained_sat_flagged_slopes": 696,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 12,
++            "4": 25,
++            "4194304": 1
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.575900264741977,
++        2.099454279601316,
++        1.4294230149813594,
++        0.3125462380839909,
++        1.8399658976003586
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          4.891907064777455e-09,
++          2.4083191880464667e-09,
++          2.1998975065373736e-10,
++          2.3303377486764644e-09,
++          -1.1942829067343413e-10
++        ],
++        [
++          2.4083191880464663e-09,
++          9.508697863878843e-09,
++          -3.9293538307328165e-09,
++          7.965911511955329e-09,
++          1.3498991858741209e-09
++        ],
++        [
++          2.1998975065373754e-10,
++          -3.9293538307328165e-09,
++          7.745115982953846e-09,
++          -5.090268849354642e-09,
++          -2.4135483311735658e-11
++        ],
++        [
++          2.3303377486764644e-09,
++          7.965911511955329e-09,
++          -5.090268849354642e-09,
++          1.3150478749303913e-08,
++          1.758064387656735e-09
++        ],
++        [
++          -1.1942829067343393e-10,
++          1.3498991858741209e-09,
++          -2.413548331173556e-11,
++          1.7580643876567348e-09,
++          4.8277560554863195e-09
++        ]
++      ]
++    },
++    {
++      "exposure": "jw01198007001_02101_00003_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 15,
++          "centroid_xy_pixel": [
++            1152.8777485483508,
++            863.1007447771582
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.6842020472093353e-06,
++              -2.52919131679616e-08
++            ],
++            [
++              -2.52919131679616e-08,
++              2.484135320332666e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0109039758605527,
++            0.2744145183207051
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.3802514130091344e-09,
++              3.252983130992221e-11
++            ],
++            [
++              3.252983130992214e-11,
++              2.5496490729073777e-09
++            ]
++          ],
++          "old_chi2": 12700.843247545516,
++          "old_dof": 264,
++          "chi2": 13729.975003412987,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155365,
++            "retained_sat_flagged_slopes": 766,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 15
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 15,
++            "4": 8,
++            "1024": 1,
++            "262144": 1,
++            "1048576": 1
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 22,
++          "centroid_xy_pixel": [
++            1150.1212161749918,
++            913.9965765189318
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.8097897005023385e-06,
++              9.554786711161042e-09
++            ],
++            [
++              9.554786711161042e-09,
++              2.2111702050799094e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.46545204090617714,
++            0.8269047958036292
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.1710395777393094e-09,
++              1.6839439475699435e-10
++            ],
++            [
++              1.6839439475699435e-10,
++              2.614629476473296e-09
++            ]
++          ],
++          "old_chi2": 18398.517427870036,
++          "old_dof": 258,
++          "chi2": 21159.903720201564,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155365,
++            "retained_sat_flagged_slopes": 766,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 22
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 22,
++            "4": 10
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            1195.5058724962694,
++            933.3165062903219
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.059170100751404e-06,
++              2.5980868103340425e-08
++            ],
++            [
++              2.5980868103340425e-08,
++              2.739216268104382e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4556817369542232,
++            -0.32865954242634626
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.6599517633992984e-09,
++              1.0473359577725256e-10
++            ],
++            [
++              1.0473359577725256e-10,
++              2.8650949421217763e-09
++            ]
++          ],
++          "old_chi2": 10376.653575847606,
++          "old_dof": 263,
++          "chi2": 12181.107889256597,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155365,
++            "retained_sat_flagged_slopes": 766,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 16,
++            "4": 13,
++            "32768": 1
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            1211.929161845499,
++            876.3089528254084
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.003708960558773e-06,
++              2.6855579611493106e-08
++            ],
++            [
++              2.6855579611493106e-08,
++              3.1651775638761965e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07387285533935715,
++            -1.3398913040589724
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              3.028026277004407e-09,
++              -2.6001683393986484e-11
++            ],
++            [
++              -2.6001683393986697e-11,
++              2.854562221540445e-09
++            ]
++          ],
++          "old_chi2": 6600.762029201391,
++          "old_dof": 267,
++          "chi2": 7691.614280100997,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155365,
++            "retained_sat_flagged_slopes": 766,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 12,
++            "4": 6,
++            "32768": 1
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.5763478660995114,
++        2.0987538182204797,
++        1.4293270486186398,
++        0.3117987288849238,
++        1.8403239284593025
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          4.4946824661198315e-09,
++          2.3346797415969525e-09,
++          3.504400522059954e-11,
++          2.3217331208796874e-09,
++          -2.1246032283781662e-11
++        ],
++        [
++          2.334679741596952e-09,
++          9.232188696123597e-09,
++          -3.968489798268362e-09,
++          7.841965681179446e-09,
++          1.351057961563759e-09
++        ],
++        [
++          3.5044005220599655e-11,
++          -3.968489798268361e-09,
++          7.922891129015278e-09,
++          -5.1275892945057955e-09,
++          2.5349447639530693e-11
++        ],
++        [
++          2.3217331208796866e-09,
++          7.841965681179446e-09,
++          -5.127589294505796e-09,
++          1.2446833071040438e-08,
++          1.7840422805362302e-09
++        ],
++        [
++          -2.124603228378184e-11,
++          1.351057961563759e-09,
++          2.5349447639530683e-11,
++          1.78404228053623e-09,
++          4.604410919093363e-09
++        ]
++      ]
++    },
++    {
++      "exposure": "jw01198007001_02101_00004_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            1344.493816177931,
++            673.8255798211401
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.947052384957205e-06,
++              5.0613618181096766e-08
++            ],
++            [
++              5.0613618181096766e-08,
++              2.7124739360936367e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0115275027302004,
++            0.2739775771834596
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.647078828491339e-09,
++              1.0139535932747955e-10
++            ],
++            [
++              1.0139535932747961e-10,
++              2.7567975299780903e-09
++            ]
++          ],
++          "old_chi2": 10332.636636900073,
++          "old_dof": 264,
++          "chi2": 12203.038343951539,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155356,
++            "retained_sat_flagged_slopes": 1294,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 16,
++            "4": 34
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 22,
++          "centroid_xy_pixel": [
++            1341.8118821847936,
++            724.6804770557501
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.5658418030642472e-06,
++              -5.220098289394067e-09
++            ],
++            [
++              -5.220098289394068e-09,
++              2.920507469325804e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.4645366681924789,
++            0.8260817202222995
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.762941566593712e-09,
++              -1.0380956486360406e-10
++            ],
++            [
++              -1.0380956486360405e-10,
++              2.4743026580355423e-09
++            ]
++          ],
++          "old_chi2": 16356.446041981095,
++          "old_dof": 258,
++          "chi2": 18270.9326678319,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155356,
++            "retained_sat_flagged_slopes": 1294,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 22
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 22,
++            "4": 17
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 18,
++          "centroid_xy_pixel": [
++            1387.1969306475446,
++            743.9325503472483
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.11213474511229e-06,
++              2.460500648762525e-08
++            ],
++            [
++              2.4605006487625254e-08,
++              2.7611380358618036e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4550248266032075,
++            -0.3291366528719313
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.686660430487613e-09,
++              1.1258033292833001e-10
++            ],
++            [
++              1.1258033292833008e-10,
++              2.915068050277285e-09
++            ]
++          ],
++          "old_chi2": 7735.552209722991,
++          "old_dof": 262,
++          "chi2": 9427.986845503388,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155356,
++            "retained_sat_flagged_slopes": 1294,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 18
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 18,
++            "4": 9
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            1403.5438212586016,
++            686.9515952300904
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.3642371257961066e-06,
++              1.0977038986600552e-07
++            ],
++            [
++              1.0977038986600552e-07,
++              2.8659626690114097e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07408218634627323,
++            -1.3402989148614022
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.8483694429409105e-09,
++              2.1949803906837527e-10
++            ],
++            [
++              2.1949803906837524e-10,
++              3.0968617123364837e-09
++            ]
++          ],
++          "old_chi2": 6859.232369719936,
++          "old_dof": 268,
++          "chi2": 7903.552856797895,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 4194304,
++            "selected_pixels": 4155356,
++            "retained_sat_flagged_slopes": 1294,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 12,
++            "4": 35
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.5759392188286667,
++        2.0989436739535057,
++        1.429007565202483,
++        0.3124998087245133,
++        1.8403902258830787
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          5.389645245123528e-09,
++          2.645586849087473e-09,
++          -3.526286452743371e-11,
++          2.6604367895627295e-09,
++          2.9223531221832275e-11
++        ],
++        [
++          2.6455868490874725e-09,
++          9.626158739885497e-09,
++          -3.79771505743566e-09,
++          8.23895414027766e-09,
++          1.6361195973363705e-09
++        ],
++        [
++          -3.526286452743359e-11,
++          -3.797715057435661e-09,
++          7.601480121470656e-09,
++          -4.900007641157205e-09,
++          -1.0276525115122799e-10
++        ],
++        [
++          2.66043678956273e-09,
++          8.238954140277661e-09,
++          -4.900007641157205e-09,
++          1.2585225075826044e-08,
++          2.1818580262479144e-09
++        ],
++        [
++          2.922353122183223e-11,
++          1.63611959733637e-09,
++          -1.0276525115122807e-10,
++          2.181858026247915e-09,
++          5.1124124272707176e-09
++        ]
++      ]
++    }
++  ],
++  "combined": {
++    "mean": [
++      1.5761163487431513,
++      2.0990345113858697,
++      1.4291926199522718,
++      0.3123431929870675,
++      1.8401519914116962
++    ],
++    "covariance": [
++      [
++        1.2605887814041664e-09,
++        6.331485329519764e-10,
++        1.9880984709007748e-11,
++        6.256922234404375e-10,
++        -1.2703644214406826e-11
++      ],
++      [
++        6.331485329519762e-10,
++        2.440661278088247e-09,
++        -1.0137236171669092e-09,
++        2.0839703229237108e-09,
++        3.8226452923173196e-10
++      ],
++      [
++        1.988098470900779e-11,
++        -1.0137236171669096e-09,
++        1.9861556921506656e-09,
++        -1.3093877805397995e-09,
++        -1.1735773398910614e-11
++      ],
++      [
++        6.256922234404375e-10,
++        2.083970322923711e-09,
++        -1.3093877805397992e-09,
++        3.283255741899771e-09,
++        5.056777717386763e-10
++      ],
++      [
++        -1.2703644214406845e-11,
++        3.822645292317318e-10,
++        -1.1735773398910467e-11,
++        5.056777717386762e-10,
++        1.22541582041749e-09
++      ]
++    ],
++    "exposure_consistency_chi2": 253.02768605994706,
++    "exposure_consistency_dof": 15,
++    "exposure_consistency_p_value": 2.952668552957022e-45,
++    "covariance_rescaled": false
++  },
++  "models": {
++    "old_frozen_conventional": {
++      "residual": [
++        -0.0002530890836560662,
++        -0.00446677659870609,
++        0.005991564864141763,
++        0.0030943819016553964,
++        0.0013243677221397299
++      ],
++      "chi2": 67181.025072775,
++      "dof": 5,
++      "p_value": 0.0,
++      "gaussian_logdensity": -33544.18500912422,
++      "intrinsic_coordinate_rms_mas": 3.667264539270936,
++      "conditional_geometry_validation_pass": false
++    },
++    "old_frozen_R1": {
++      "residual": [
++        -0.00025312073554450976,
++        -0.004466570111447243,
++        0.0059910143443737685,
++        0.003094787966736956,
++        0.0013243767411208474
++      ],
++      "chi2": 67178.98343691144,
++      "dof": 5,
++      "p_value": 0.0,
++      "gaussian_logdensity": -33543.164191192445,
++      "intrinsic_coordinate_rms_mas": 3.667103975979149,
++      "conditional_geometry_validation_pass": false
++    },
++    "revised_G1_conventional": {
++      "residual": [
++        -0.00026782958366822207,
++        0.0007102157791138985,
++        -0.000446750421433606,
++        -0.00020317035261452343,
++        -0.00043424132151237416
++      ],
++      "chi2": 1033.1131391790789,
++      "dof": 5,
++      "p_value": 4.0703652575791e-221,
++      "gaussian_logdensity": -470.2290423262605,
++      "intrinsic_coordinate_rms_mas": 0.4484570872071669,
++      "conditional_geometry_validation_pass": false
++    },
++    "revised_G1_R1": {
++      "residual": [
++        -0.00026761825566734565,
++        0.0007104189689428608,
++        -0.00044692977476756823,
++        -0.00020285410476661436,
++        -0.0004345477714220447
++      ],
++      "chi2": 1033.268517300773,
++      "dof": 5,
++      "p_value": 3.7669619290104054e-221,
++      "gaussian_logdensity": -470.3067313871076,
++      "intrinsic_coordinate_rms_mas": 0.4485626866431468,
++      "conditional_geometry_validation_pass": false
++    }
++  },
++  "baseline_combined_replay": {
++    "mean": [
++      1.57614288153222,
++      2.0989461626690926,
++      1.4282054731572635,
++      0.3118754281874541,
++      1.8402926946466158
++    ],
++    "covariance": [
++      [
++        3.1581072598308066e-09,
++        1.6340587068006762e-09,
++        -1.245118189017568e-10,
++        1.654486887287745e-09,
++        -4.816775126910607e-11
++      ],
++      [
++        1.6340587068006766e-09,
++        6.655395993703042e-09,
++        -2.957458715438797e-09,
++        5.502428212134184e-09,
++        9.203037251652938e-10
++      ],
++      [
++        -1.245118189017569e-10,
++        -2.9574587154387966e-09,
++        5.678020337657829e-09,
++        -3.781154148099735e-09,
++        4.1658325557592425e-11
++      ],
++      [
++        1.6544868872877448e-09,
++        5.5024282121341815e-09,
++        -3.781154148099735e-09,
++        8.962016027201597e-09,
++        1.2103914736170552e-09
++      ],
++      [
++        -4.8167751269106075e-11,
++        9.203037251652939e-10,
++        4.165832555759232e-11,
++        1.2103914736170556e-09,
++        3.791862469540388e-09
++      ]
++    ],
++    "exposure_consistency_chi2": 432.262010502198,
++    "exposure_consistency_dof": 15,
++    "exposure_consistency_p_value": 1.1277768156991912e-82,
++    "covariance_rescaled": false
++  },
++  "audit": {
++    "maximum_original_centroid_replay_error_pixel": 3.410605131648481e-12,
++    "maximum_original_geometry_replay_error_arcsec": 1.2034323537690739e-10,
++    "independent_complex_geometry_error_arcsec": 8.881784197001252e-16,
++    "independent_finite_difference_jacobian_error": 5.932812019437961e-10,
++    "original_fitter_modified": false,
++    "original_dq_modified": false,
++    "native_errors_modified": false,
++    "lens_predictions_refitted": false
++  },
++  "input_sha256": {
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "e9987a2847c0d71a83a69d4cddf4b952ae2b3f3860d4a60329da90565a21cf06",
++    "preregistration/he0435_geometry_jwst_diagnostic_20261021.json": "d679fdbaede6a65331de970f727a7e489dc798efc0c9742d1cf00073e8d71d66",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json": "83128dd17e03d07fb4ceb6f239b314b0f999c185615c52980ff85e397c4fb0c4",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb3_cal_headers_only.json": "9464493d58a2c5d6e7b65bef20f83918de2ba4480ea2dba358292d452220ad37",
++    "data/strong_lensing_geometry_20261021/native/jw01198007001_02101_00001_nrcb3_cal.fits": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00001_nrcb3_cal_wcs.asdf": "2c1eb4e7af4ca160a576d61ea90d0849b07f68d34d8400c5e9fe005494972523",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_A.fits": "ead1c9156cc08de8ee2a740b69e4134a2a10432586a39819000a13bbcca897b2",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_A_standard_epsf.fits": "fc3f82823f1d4748e9ec9204d3ec39d4b3da1ff7dfe257313fd116c59e267c8d",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_B.fits": "0edf160326342f9817d99ff9675ab7a63f063e50caff35d638381d9869894aad",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_B_standard_epsf.fits": "a1c60e5e912e0de8d0377825e6a1863630bd149b78802fa68ae9245e5c0772ec",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_C.fits": "4a310bd44d64443f14952e41ed40e66772094573d5d7775322f061041c7e4355",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_C_standard_epsf.fits": "af25ba411978e9fb4420789da7606f611bf3360f54dbf9de9e708a2ad1e7857f",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_D.fits": "2b1f8001b4c80905133ba26a36042dd8dfb7989bd12f719f6b871025aa3a2f11",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_D_standard_epsf.fits": "6021954693f73c9021fa241b3acba0daceaed4e20ab3a442bf5fceab2852ccb3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json": "65407275cfda96d8778dfb57d99611d26524c2565df28e7fa3f41769fc14da94",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00002_nrcb3_cal_headers_only.json": "8ad493369cf160304640277e500fb466d19d2a9eac1934b191a9c6b67c9672b8",
++    "data/strong_lensing_geometry_20261021/native/jw01198007001_02101_00002_nrcb3_cal.fits": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00002_nrcb3_cal_wcs.asdf": "df964da5beea8234fb6564eb0176bf38742102f73f30fe4eede8937e576f16d4",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_A.fits": "b754d840733a3ce36bbf59452b4640a4cc8e1a94e5ffb932591b2f7e5b1080e3",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_A_standard_epsf.fits": "1fc65651bb5780b8bb5e6645b7f81de87a70c2b0d9214b0dd0aa7c53cbdb6886",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_B.fits": "c1a3b78c0fe9010a799127873674ff40e621aaba5a3a726998260e8377b13d66",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_B_standard_epsf.fits": "36c8acac848a6a0e8e17b20aa84890b27efecf281e350eb007c5f05c6627f8fc",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_C.fits": "65a789d3a279df37f7f6c4532ccede332590005dec36a7072ef5b8b4aa5dbb01",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_C_standard_epsf.fits": "c4e69a4cefed11ef24ec487708e216974eadf0447146e8c8f52ed9d2ed0e6458",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_D.fits": "af120de02c6ddd43a26f9c98bdbef4c933d585bad973cc7b44a3514464fdd6ad",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_D_standard_epsf.fits": "c0c1d7f005a4fa7b1a2de32d92a59fe7c3aa288fc41b6e3c5f1453de8e09c6d3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json": "784d7426ffc6ed8c6e1c5573b4778bf88585930a2fdc6edf3fae4e97121ea45b",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00003_nrcb3_cal_headers_only.json": "aacbae22d9d3b94b88a66adf6058a5cb618b48c1911cd53ca177d952e97bcc6e",
++    "data/strong_lensing_geometry_20261021/native/jw01198007001_02101_00003_nrcb3_cal.fits": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00003_nrcb3_cal_wcs.asdf": "616979c7627d66e155178a08ee1d75eee66f918cc3c5dc3505d5f0265d3271ff",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_A.fits": "09111d2cbf4547d699bdcdbfcc38099adde9c6c34b0841d7554f7ab033cd4c17",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_A_standard_epsf.fits": "19787671400eb3008fb4fc9f3fbf476874f7fd3716d20a81e967f57ec4fbbd0a",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_B.fits": "995c325c1e569e1bb8f40d362a13c0e578c6972b92e127d87f7b58ad6256f3bb",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_B_standard_epsf.fits": "f0cb791f23962550a44b0cec1450926fb7e8d48f8ba5be4d5b98b1c917fa0315",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_C.fits": "373172bbcc90e58d792acd7bead5fc4124c9823f8ee9d56b1b0ab7f8c7833a6a",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_C_standard_epsf.fits": "f90ce5028601168023eb6cdeba8775e8ff99a5c09e60b7dba1c9c6878396b8b5",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_D.fits": "53fde2fb6d2eefd99d9b5b125ee0b78c1f9b2caf13fd45f7b398901ccfb02d26",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_D_standard_epsf.fits": "04dcecde0aa47109bca982e02f23bf465b89bdee9afa794dd23ca656910eebcf",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json": "22fde10ed590a2f8427598845998aa830c2ea2ba8ef8f92e5e0c810541b87a33",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00004_nrcb3_cal_headers_only.json": "284a911912dd3a458290b55c04cf23cf0c73c9cfa0c4b6aba2975d011415fefd",
++    "data/strong_lensing_geometry_20261021/native/jw01198007001_02101_00004_nrcb3_cal.fits": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00004_nrcb3_cal_wcs.asdf": "dcbcc194988ba0315a334cf5a3c0e901fd4f92420966f099add4a64fc9da4996",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_A.fits": "2eab74a3139bd52488f3e93d11508fa568c1a814430d73bcdee436532c59ae1f",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_A_standard_epsf.fits": "e87b938eb0def466d4fb24bebaf49d8f7336c7f400f020630b5288e3a222eaa3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_B.fits": "ad32c77dc0b71d976ce9e64b62179715b998c1a4b3c8961711df4bcfdf55fe13",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_B_standard_epsf.fits": "7c142c7f9cc5ca9a8dbf0603f7b2485b48cf0f798b75a367964f6b42d05f57c8",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_C.fits": "5f34587b7b4ad16846bb9cfef70598d475a534e01c3707f283b126b5aaa7aafc",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_C_standard_epsf.fits": "b1d968fab55dcac3f2ee1d17656b7d84a7650bf41426d7c1ba34ceaa7a87b760",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_D.fits": "542dcb21b59eefd94ccf4827af6077be004537f96076fd4bd0df7b8b30faa4a9",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_D_standard_epsf.fits": "605766294acfadf384fdabbd50c7338e63a5b1799eccc4871f12f005d051048b"
++  },
++  "code_sha256": {
++    "code/strong_lensing_pixel_geometry.py": "e7333e454051bfb68f769421a8f740b52481c39e0b3743ffd60a46ca52be1f76",
++    "code/strong_lensing_jwst_rate_mask.py": "bd3d4192cebf42dd236009bcd302438e990557b1be21ad51a28cffcb9ebfc6ea",
++    "scripts/replay_he0435_rate_mask.py": "e0e1936ea3962530632cbf432a4bda9a6b6f6de05fc5defe6a06b7f4b3425259"
++  },
++  "physical_admission": false,
++  "unchanged_physical_guard": 2e-10,
++  "interpretation": "Mask eligibility fixed; PSF adequacy and absolute centroid calibration remain open.",
++  "baseline_manifest_sha256": "08ff73d45de3e27746648e58c83cbfe620d39d9d7e0b36c8428242255a9b32d3"
++}
+diff --git a/artifacts/strong_lensing_geometry_20261021/mask_repair_replay.json b/artifacts/strong_lensing_geometry_20261021/mask_repair_replay.json
+new file mode 100644
+--- /dev/null
++++ b/artifacts/strong_lensing_geometry_20261021/mask_repair_replay.json
+@@ -0,0 +1,1445 @@
++{
++  "status": "DEVELOPMENT_MASK_REPAIR_REPLAY_NOT_NEW_VALIDATION",
++  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
++  "coordinate_mode": "portable_stamp_local",
++  "replay_tolerance": {
++    "centroid_pixel": 0.0001,
++    "relative_pixel_chi2": 0.0001,
++    "geometry_arcsec": 1e-06
++  },
++  "retained_extra_pixels": 303,
++  "exposures": [
++    {
++      "exposure": "jw01198007001_02101_00001_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 15,
++          "centroid_xy_pixel": [
++            768.8869514030891,
++            1241.0212279776686
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.612544839867873e-06,
++              -9.870225803145726e-08
++            ],
++            [
++              -9.870225803145728e-08,
++              3.070018702629099e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0102491625915946,
++            0.2742571543557709
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.9233173080141755e-09,
++              6.512238369070171e-11
++            ],
++            [
++              6.512238369070159e-11,
++              3.441955005864701e-09
++            ]
++          ],
++          "old_chi2": 14357.62835349315,
++          "old_dof": 265,
++          "chi2": 15961.55850135792,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 841,
++            "retained_sat_flagged_slopes": 15,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 15
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 15,
++            "4": 9
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 59,
++          "centroid_xy_pixel": [
++            766.016338978883,
++            1291.9508265535208
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.175185577756668e-06,
++              -1.4183227342742042e-08
++            ],
++            [
++              -1.4183227342742044e-08,
++              2.7201710063534278e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.4661301274998447,
++            0.8264830950014925
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.6263190015511226e-09,
++              1.078601276560521e-10
++            ],
++            [
++              1.0786012765605208e-10,
++              2.986579258146274e-09
++            ]
++          ],
++          "old_chi2": 11850.790647481199,
++          "old_dof": 221,
++          "chi2": 19192.111662282558,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 838,
++            "retained_sat_flagged_slopes": 59,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 59
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 59,
++            "4": 12
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            811.3650871992993,
++            1311.4349082729634
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.0420615800356012e-06,
++              6.477779089247473e-09
++            ],
++            [
++              6.4777790892474735e-09,
++              2.997970044042624e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4563486236377539,
++            -0.3288019257421025
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.8668788802799e-09,
++              1.2790994874506955e-11
++            ],
++            [
++              1.2790994874506975e-11,
++              2.8818626567553494e-09
++            ]
++          ],
++          "old_chi2": 10012.197424508984,
++          "old_dof": 264,
++          "chi2": 12572.898655199575,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 841,
++            "retained_sat_flagged_slopes": 16,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 16,
++            "4": 14
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            827.9203527867021,
++            1254.4434413509832
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.951035298333664e-06,
++              1.2902623820223599e-08
++            ],
++            [
++              1.2902623820223599e-08,
++              3.4230192273552465e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07291034647764967,
++            -1.3395555099668826
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              3.233963367320662e-09,
++              -1.2168446779664745e-10
++            ],
++            [
++              -1.2168446779664753e-10,
++              2.83655604026025e-09
++            ]
++          ],
++          "old_chi2": 8016.795797340634,
++          "old_dof": 267,
++          "chi2": 9421.228107019919,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 839,
++            "retained_sat_flagged_slopes": 12,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 12,
++            "2048": 1,
++            "16384": 1,
++            "262144": 1,
++            "1048576": 1
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.5762770371140205,
++        2.0990022330466016,
++        1.4289767383639929,
++        0.31255825449943586,
++        1.8399192127010193
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          5.5439853973588696e-09,
++          2.801113090000283e-09,
++          8.918396115354928e-11,
++          2.759954432731916e-09,
++          -8.974043832786597e-11
++        ],
++        [
++          2.801113090000283e-09,
++          1.0872936514236616e-08,
++          -4.621013066554133e-09,
++          9.501724697186738e-09,
++          1.847700615257144e-09
++        ],
++        [
++          8.918396115354924e-11,
++          -4.621013066554133e-09,
++          8.60758594637998e-09,
++          -5.967555166115637e-09,
++          -1.13921073054682e-10
++        ],
++        [
++          2.7599544327319164e-09,
++          9.50172469718674e-09,
++          -5.967555166115637e-09,
++          1.4693192525957687e-08,
++          2.4455542669055193e-09
++        ],
++        [
++          -8.974043832786608e-11,
++          1.8477006152571445e-09,
++          -1.139210730546821e-10,
++          2.4455542669055185e-09,
++          5.122786918987739e-09
++        ]
++      ]
++    },
++    {
++      "exposure": "jw01198007001_02101_00002_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 18,
++          "centroid_xy_pixel": [
++            960.9514254507175,
++            1052.2299873582815
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.8666433278601627e-06,
++              -1.8671009577320644e-07
++            ],
++            [
++              -1.8671009577320646e-07,
++              2.7834198617425364e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0094075595626553,
++            0.27578591519279805
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.565655050990293e-09,
++              -1.2647469944403938e-10
++            ],
++            [
++              -1.2647469944403925e-10,
++              2.819781717192007e-09
++            ]
++          ],
++          "old_chi2": 13296.727334324472,
++          "old_dof": 261,
++          "chi2": 15571.583659273165,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 839,
++            "retained_sat_flagged_slopes": 18,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 18
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 18,
++            "4": 23,
++            "32768": 1
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 22,
++          "centroid_xy_pixel": [
++            958.1409717737508,
++            1103.133138999078
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.786831938673625e-06,
++              -1.0279346129105868e-07
++            ],
++            [
++              -1.027934612910587e-07,
++              2.3029585552253014e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.4666204998414128,
++            0.8278753639354803
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.1849606477638075e-09,
++              4.8120386878451064e-11
++            ],
++            [
++              4.812038687845118e-11,
++              2.66303709773562e-09
++            ]
++          ],
++          "old_chi2": 20631.208207972002,
++          "old_dof": 258,
++          "chi2": 23395.04704286865,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 841,
++            "retained_sat_flagged_slopes": 22,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 22
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 22,
++            "4": 11
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            1003.5179770959949,
++            1122.5635116076946
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.9135882388043487e-06,
++              1.1413914685272241e-08
++            ],
++            [
++              1.1413914685272241e-08,
++              2.8898871424288564e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4577682508763647,
++            -0.3275404275485219
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.7674156232698366e-09,
++              1.2108728215957925e-11
++            ],
++            [
++              1.2108728215957855e-11,
++              2.7591207886375867e-09
++            ]
++          ],
++          "old_chi2": 11492.872898684047,
++          "old_dof": 264,
++          "chi2": 14841.719254329157,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 841,
++            "retained_sat_flagged_slopes": 16,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 16,
++            "4": 18
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            1019.991809946891,
++            1065.550710036673
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.1464013754546996e-06,
++              -5.915492670822078e-08
++            ],
++            [
++              -5.9154926708220776e-08,
++              3.7705043421702147e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07206857581903212,
++            -1.338077411541554
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              3.516630040058264e-09,
++              -2.195324199062274e-10
++            ],
++            [
++              -2.195324199062274e-10,
++              3.074986213787525e-09
++            ]
++          ],
++          "old_chi2": 9041.727338052364,
++          "old_dof": 268,
++          "chi2": 11138.15364011564,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 835,
++            "retained_sat_flagged_slopes": 12,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 12,
++            "4": 25,
++            "4194304": 1
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.5759002479729285,
++        2.0994543404449084,
++        1.4294231801143036,
++        0.31254625881913234,
++        1.839965772486478
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          4.891902084854458e-09,
++          2.408292781494613e-09,
++          2.200243688111849e-10,
++          2.3303005984156136e-09,
++          -1.1944068265212825e-10
++        ],
++        [
++          2.4082927814946125e-09,
++          9.508613619846536e-09,
++          -3.929317014948391e-09,
++          7.965776513603658e-09,
++          1.3498481089216546e-09
++        ],
++        [
++          2.2002436881118472e-10,
++          -3.929317014948392e-09,
++          7.74504399936069e-09,
++          -5.090176848842758e-09,
++          -2.4130814138711523e-11
++        ],
++        [
++          2.330300598415613e-09,
++          7.965776513603658e-09,
++          -5.090176848842758e-09,
++          1.3150400885980406e-08,
++          1.7579800718169478e-09
++        ],
++        [
++          -1.1944068265212825e-10,
++          1.3498481089216546e-09,
++          -2.4130814138711623e-11,
++          1.7579800718169474e-09,
++          4.827623850965081e-09
++        ]
++      ]
++    },
++    {
++      "exposure": "jw01198007001_02101_00003_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 15,
++          "centroid_xy_pixel": [
++            1152.8777479088938,
++            863.1007446570607
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.6840983449373777e-06,
++              -2.5297224140113702e-08
++            ],
++            [
++              -2.5297224140113702e-08,
++              2.4841288556329494e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0109039852582495,
++            0.27441453601667526
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.380240517078752e-09,
++              3.2498187464126794e-11
++            ],
++            [
++              3.2498187464126775e-11,
++              2.549562132509629e-09
++            ]
++          ],
++          "old_chi2": 12700.843246930868,
++          "old_dof": 264,
++          "chi2": 13729.975003244763,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 840,
++            "retained_sat_flagged_slopes": 15,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 15
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 15,
++            "4": 8,
++            "1024": 1,
++            "262144": 1,
++            "1048576": 1
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 22,
++          "centroid_xy_pixel": [
++            1150.1212164911415,
++            913.9965780840221
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.8097671108371245e-06,
++              9.54696354472151e-09
++            ],
++            [
++              9.546963544721508e-09,
++              2.2110906935143954e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.4654520899531367,
++            0.8269048010019278
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.1709583002225298e-09,
++              1.6840509161527284e-10
++            ],
++            [
++              1.6840509161527287e-10,
++              2.614608210903978e-09
++            ]
++          ],
++          "old_chi2": 18398.51742634721,
++          "old_dof": 258,
++          "chi2": 21159.903719172387,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 841,
++            "retained_sat_flagged_slopes": 22,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 22
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 22,
++            "4": 10
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            1195.505874312855,
++            933.3165046008637
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.0591860260736044e-06,
++              2.603899533982652e-08
++            ],
++            [
++              2.6038995339826516e-08,
++              2.7392046816197667e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.455681703928013,
++            -0.3286596114870023
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.6599629074826933e-09,
++              1.047924201840958e-10
++            ],
++            [
++              1.0479242018409568e-10,
++              2.8650756750018017e-09
++            ]
++          ],
++          "old_chi2": 10376.653573690985,
++          "old_dof": 263,
++          "chi2": 12181.107887495156,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 840,
++            "retained_sat_flagged_slopes": 16,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 16,
++            "4": 13,
++            "32768": 1
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            1211.929159629256,
++            876.3089518805132
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.0036275282619405e-06,
++              2.686904251369036e-08
++            ],
++            [
++              2.686904251369036e-08,
++              3.165127883833941e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07387290375969562,
++            -1.3398912476620128
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              3.0279833982099038e-09,
++              -2.6000016101276915e-11
++            ],
++            [
++              -2.6000016101276847e-11,
++              2.8544786881367372e-09
++            ]
++          ],
++          "old_chi2": 6600.762029024108,
++          "old_dof": 267,
++          "chi2": 7691.614278285679,
++          "dof": 279,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 840,
++            "retained_sat_flagged_slopes": 12,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 288,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "1": 1,
++            "2": 12,
++            "4": 6,
++            "32768": 1
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.5763479164565934,
++        2.0987537948705377,
++        1.429327078734001,
++        0.3117987434812306,
++        1.840323872169336
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          4.494602073100374e-09,
++          2.3346707363554614e-09,
++          3.5059108813394467e-11,
++          2.3217213751197904e-09,
++          -2.1242854710282197e-11
++        ],
++        [
++          2.334670736355461e-09,
++          9.232061268122371e-09,
++          -3.968379834085857e-09,
++          7.841841072597545e-09,
++          1.3509911341803468e-09
++        ],
++        [
++          3.5059108813394654e-11,
++          -3.968379834085857e-09,
++          7.92286459328323e-09,
++          -5.127517332323122e-09,
++          2.5370007967523645e-11
++        ],
++        [
++          2.3217213751197904e-09,
++          7.841841072597543e-09,
++          -5.127517332323122e-09,
++          1.244662277748933e-08,
++          1.783970492260702e-09
++        ],
++        [
++          -2.12428547102823e-11,
++          1.3509911341803468e-09,
++          2.5370007967523584e-11,
++          1.783970492260702e-09,
++          4.604269313014085e-09
++        ]
++      ]
++    },
++    {
++      "exposure": "jw01198007001_02101_00004_nrcb3_cal",
++      "points": [
++        {
++          "label": "A",
++          "restored_pixels": 16,
++          "centroid_xy_pixel": [
++            1344.493809449923,
++            673.8255807143538
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.9466789848200195e-06,
++              5.065128545359372e-08
++            ],
++            [
++              5.065128545359372e-08,
++              2.7124502628112607e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            1.0115275390681084,
++            0.273977783380728
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.6470537390491687e-09,
++              1.013277430706461e-10
++            ],
++            [
++              1.0132774307064598e-10,
++              2.7564519605156052e-09
++            ]
++          ],
++          "old_chi2": 10332.636615343905,
++          "old_dof": 264,
++          "chi2": 12203.038330141562,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 841,
++            "retained_sat_flagged_slopes": 16,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 16
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 16,
++            "4": 34
++          }
++        },
++        {
++          "label": "B",
++          "restored_pixels": 22,
++          "centroid_xy_pixel": [
++            1341.8118797439695,
++            724.680477383053
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              2.565757538385275e-06,
++              -5.219451051253465e-09
++            ],
++            [
++              -5.219451051253465e-09,
++              2.920481093668972e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -0.4645366551252606,
++            0.826081795042304
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.7629116535589057e-09,
++              -1.0382462871276231e-10
++            ],
++            [
++              -1.0382462871276224e-10,
++              2.474227001009114e-09
++            ]
++          ],
++          "old_chi2": 16356.446041717412,
++          "old_dof": 258,
++          "chi2": 18270.93266559354,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 840,
++            "retained_sat_flagged_slopes": 22,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 22
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 22,
++            "4": 17
++          }
++        },
++        {
++          "label": "C",
++          "restored_pixels": 18,
++          "centroid_xy_pixel": [
++            1387.1969306967985,
++            743.9325504587226
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.1121755992251864e-06,
++              2.4600750814974004e-08
++            ],
++            [
++              2.4600750814974004e-08,
++              2.761101763796033e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            -1.4550248303622755,
++            -0.32913665327268116
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.6866227480869496e-09,
++              1.125999702353336e-10
++            ],
++            [
++              1.1259997023533352e-10,
++              2.9151021114059883e-09
++            ]
++          ],
++          "old_chi2": 7735.552209699592,
++          "old_dof": 262,
++          "chi2": 9427.98684550094,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 840,
++            "retained_sat_flagged_slopes": 18,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 18
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 18,
++            "4": 9
++          }
++        },
++        {
++          "label": "D",
++          "restored_pixels": 12,
++          "centroid_xy_pixel": [
++            1403.543820770273,
++            686.9515956451446
++          ],
++          "centroid_covariance_pixel2": [
++            [
++              3.3641907510870313e-06,
++              1.0979796664661092e-07
++            ],
++            [
++              1.0979796664661092e-07,
++              2.8659403933524846e-06
++            ]
++          ],
++          "tangent_east_north_arcsec": [
++            0.07408217855964054,
++            -1.3402988966330072
++          ],
++          "tangent_covariance_arcsec2": [
++            [
++              2.848364278092793e-09,
++              2.195166851301312e-10
++            ],
++            [
++              2.1951668513013138e-10,
++              3.096803731623213e-09
++            ]
++          ],
++          "old_chi2": 6859.232364228146,
++          "old_dof": 268,
++          "chi2": 7903.552856660426,
++          "dof": 280,
++          "p_value": 0.0,
++          "pixel_model_adequate": false,
++          "pixel_mask_receipt": {
++            "policy": "jwst_native_rate_any_group_saturation_v1",
++            "native_filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++            "native_product": "cal",
++            "cal_ver": "2.0.1",
++            "s_ramp": "COMPLETE",
++            "sat_flag_semantics": "Any ramp group saturated; usable early-group slope may remain",
++            "bad_pixel_rule": "DO_NOT_USE, nonfinite SCI/ERR, or nonpositive ERR excluded",
++            "saturation_semantics_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++            "stcal_requirement": ">=1.18,<2",
++            "dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++            "input_pixels": 841,
++            "selected_pixels": 840,
++            "retained_sat_flagged_slopes": 12,
++            "original_dq_modified": false,
++            "science_or_error_modified": false,
++            "validation_status": "MASK_SEMANTICS_CHECK_ONLY",
++            "fitted_stamp_selected_pixels": 289,
++            "fitted_stamp_retained_sat_flagged_slopes": 12
++          },
++          "dq_flag_counts_in_stamp": {
++            "2": 12,
++            "4": 35
++          }
++        }
++      ],
++      "intrinsic_q_arcsec": [
++        1.57593919459874,
++        2.0989437581022083,
++        1.4290075980085553,
++        0.3124999374213321,
++        1.8403903913807749
++      ],
++      "intrinsic_covariance_arcsec2": [
++        [
++          5.389599563995872e-09,
++          2.6456191953601396e-09,
++          -3.528565616080888e-11,
++          2.6604842219197945e-09,
++          2.9266229016664614e-11
++        ],
++        [
++          2.6456191953601396e-09,
++          9.625841480477387e-09,
++          -3.797540186447039e-09,
++          8.238591340846106e-09,
++          1.6359221595651265e-09
++        ],
++        [
++          -3.528565616080869e-11,
++          -3.797540186447039e-09,
++          7.601338477329527e-09,
++          -4.8997663789514554e-09,
++          -1.0269285200915993e-10
++        ],
++        [
++          2.6604842219197945e-09,
++          8.238591340846106e-09,
++          -4.899766378951455e-09,
++          1.2584722007488827e-08,
++          2.1816228290069285e-09
++        ],
++        [
++          2.926622901666462e-11,
++          1.6359221595651265e-09,
++          -1.0269285200915994e-10,
++          2.1816228290069285e-09,
++          5.112144356510047e-09
++        ]
++      ]
++    }
++  ],
++  "combined": {
++    "mean": [
++      1.5761163541298797,
++      2.099034508682402,
++      1.4291926599370015,
++      0.3123432242950638,
++      1.8401519816125127
++    ],
++    "covariance": [
++      [
++        1.2605687743090367e-09,
++        6.331457125319547e-10,
++        1.9883464924388642e-11,
++        6.256892679205258e-10,
++        -1.2702463417816618e-11
++      ],
++      [
++        6.331457125319545e-10,
++        2.4406184721012884e-09,
++        -1.0136957949744388e-09,
++        2.0839221705903484e-09,
++        3.8224190528393727e-10
++      ],
++      [
++        1.9883464924388816e-11,
++        -1.0136957949744388e-09,
++        1.9861339134229345e-09,
++        -1.309356750083391e-09,
++        -1.1728915228714628e-11
++      ],
++      [
++        6.256892679205255e-10,
++        2.083922170590348e-09,
++        -1.309356750083391e-09,
++        3.283188235350984e-09,
++        5.056517049980603e-10
++      ],
++      [
++        -1.2702463417816713e-11,
++        3.8224190528393737e-10,
++        -1.1728915228714783e-11,
++        5.056517049980602e-10,
++        1.2253777169691244e-09
++      ]
++    ],
++    "exposure_consistency_chi2": 253.1333002950045,
++    "exposure_consistency_dof": 15,
++    "exposure_consistency_p_value": 2.8083372264694556e-45,
++    "covariance_rescaled": false
++  },
++  "models": {
++    "old_frozen_conventional": {
++      "residual": [
++        -0.0002530836969276695,
++        -0.004466779302173762,
++        0.005991604848871512,
++        0.003094413209651703,
++        0.0013243579229562652
++      ],
++      "chi2": 67182.40233707959,
++      "dof": 5,
++      "p_value": 0.0,
++      "gaussian_logdensity": -33544.87360132889,
++      "intrinsic_coordinate_rms_mas": 3.6672827645864206,
++      "conditional_geometry_validation_pass": false
++    },
++    "old_frozen_R1": {
++      "residual": [
++        -0.0002531153488161131,
++        -0.004466572814914915,
++        0.005991054329103518,
++        0.0030948192747332626,
++        0.0013243669419373827
++      ],
++      "chi2": 67180.360670018,
++      "dof": 5,
++      "p_value": 0.0,
++      "gaussian_logdensity": -33543.85276779809,
++      "intrinsic_coordinate_rms_mas": 3.667122201540885,
++      "conditional_geometry_validation_pass": false
++    },
++    "revised_G1_conventional": {
++      "residual": [
++        -0.0002678241969398254,
++        0.0007102130756462266,
++        -0.00044671043670385657,
++        -0.00020313904461821686,
++        -0.0004342511206958388
++      ],
++      "chi2": 1033.0815185212148,
++      "dof": 5,
++      "p_value": 4.1350410074746445e-221,
++      "gaussian_logdensity": -470.2131920496995,
++      "intrinsic_coordinate_rms_mas": 0.4484466824092869,
++      "conditional_geometry_validation_pass": false
++    },
++    "revised_G1_R1": {
++      "residual": [
++        -0.000267612868938949,
++        0.0007104162654751889,
++        -0.0004468897900378188,
++        -0.0002028227967703078,
++        -0.00043455757060550937
++      ],
++      "chi2": 1033.2369130588575,
++      "dof": 5,
++      "p_value": 3.8267854825412896e-221,
++      "gaussian_logdensity": -470.29088931852084,
++      "intrinsic_coordinate_rms_mas": 0.4485522871135063,
++      "conditional_geometry_validation_pass": false
++    }
++  },
++  "baseline_combined_replay": {
++    "mean": [
++      1.5761428951330618,
++      2.0989462076069327,
++      1.4282053590060484,
++      0.31187545433776437,
++      1.8402927979591714
++    ],
++    "covariance": [
++      [
++        3.1580264789703323e-09,
++        1.634038430701061e-09,
++        -1.2450138711993386e-10,
++        1.6544633092123867e-09,
++        -4.817009360009481e-11
++      ],
++      [
++        1.6340384307010607e-09,
++        6.655117227905151e-09,
++        -2.95735967532696e-09,
++        5.50218921152517e-09,
++        9.201826130054065e-10
++      ],
++      [
++        -1.245013871199336e-10,
++        -2.95735967532696e-09,
++        5.677812590341396e-09,
++        -3.7810260025596485e-09,
++        4.169581475197699e-11
++      ],
++      [
++        1.6544633092123865e-09,
++        5.5021892115251705e-09,
++        -3.7810260025596485e-09,
++        8.96157232560875e-09,
++        1.210263746820619e-09
++      ],
++      [
++        -4.817009360009494e-11,
++        9.201826130054065e-10,
++        4.169581475197697e-11,
++        1.2102637468206187e-09,
++        3.791641392386565e-09
++      ]
++    ],
++    "exposure_consistency_chi2": 432.4674812789262,
++    "exposure_consistency_dof": 15,
++    "exposure_consistency_p_value": 1.020800643475606e-82,
++    "covariance_rescaled": false
++  },
++  "audit": {
++    "maximum_original_centroid_replay_error_pixel": 1.226446556756855e-05,
++    "maximum_original_geometry_replay_error_arcsec": 5.298010423704369e-07,
++    "independent_complex_geometry_error_arcsec": 4.440892098500626e-16,
++    "independent_finite_difference_jacobian_error": 3.092509581748004e-10,
++    "original_fitter_modified": false,
++    "original_dq_modified": false,
++    "native_errors_modified": false,
++    "lens_predictions_refitted": false
++  },
++  "input_sha256": {
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "e9987a2847c0d71a83a69d4cddf4b952ae2b3f3860d4a60329da90565a21cf06",
++    "preregistration/he0435_geometry_jwst_diagnostic_20261021.json": "d679fdbaede6a65331de970f727a7e489dc798efc0c9742d1cf00073e8d71d66",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json": "83128dd17e03d07fb4ceb6f239b314b0f999c185615c52980ff85e397c4fb0c4",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb3_cal_headers_only.json": "9464493d58a2c5d6e7b65bef20f83918de2ba4480ea2dba358292d452220ad37",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00001_nrcb3_cal_wcs.asdf": "2c1eb4e7af4ca160a576d61ea90d0849b07f68d34d8400c5e9fe005494972523",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_A.fits": "ead1c9156cc08de8ee2a740b69e4134a2a10432586a39819000a13bbcca897b2",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_A_standard_epsf.fits": "fc3f82823f1d4748e9ec9204d3ec39d4b3da1ff7dfe257313fd116c59e267c8d",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_B.fits": "0edf160326342f9817d99ff9675ab7a63f063e50caff35d638381d9869894aad",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_B_standard_epsf.fits": "a1c60e5e912e0de8d0377825e6a1863630bd149b78802fa68ae9245e5c0772ec",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_C.fits": "4a310bd44d64443f14952e41ed40e66772094573d5d7775322f061041c7e4355",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_C_standard_epsf.fits": "af25ba411978e9fb4420789da7606f611bf3360f54dbf9de9e708a2ad1e7857f",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00001_nrcb3_cal_D.fits": "2b1f8001b4c80905133ba26a36042dd8dfb7989bd12f719f6b871025aa3a2f11",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00001_nrcb3_D_standard_epsf.fits": "6021954693f73c9021fa241b3acba0daceaed4e20ab3a442bf5fceab2852ccb3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json": "65407275cfda96d8778dfb57d99611d26524c2565df28e7fa3f41769fc14da94",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00002_nrcb3_cal_headers_only.json": "8ad493369cf160304640277e500fb466d19d2a9eac1934b191a9c6b67c9672b8",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00002_nrcb3_cal_wcs.asdf": "df964da5beea8234fb6564eb0176bf38742102f73f30fe4eede8937e576f16d4",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_A.fits": "b754d840733a3ce36bbf59452b4640a4cc8e1a94e5ffb932591b2f7e5b1080e3",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_A_standard_epsf.fits": "1fc65651bb5780b8bb5e6645b7f81de87a70c2b0d9214b0dd0aa7c53cbdb6886",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_B.fits": "c1a3b78c0fe9010a799127873674ff40e621aaba5a3a726998260e8377b13d66",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_B_standard_epsf.fits": "36c8acac848a6a0e8e17b20aa84890b27efecf281e350eb007c5f05c6627f8fc",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_C.fits": "65a789d3a279df37f7f6c4532ccede332590005dec36a7072ef5b8b4aa5dbb01",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_C_standard_epsf.fits": "c4e69a4cefed11ef24ec487708e216974eadf0447146e8c8f52ed9d2ed0e6458",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00002_nrcb3_cal_D.fits": "af120de02c6ddd43a26f9c98bdbef4c933d585bad973cc7b44a3514464fdd6ad",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00002_nrcb3_D_standard_epsf.fits": "c0c1d7f005a4fa7b1a2de32d92a59fe7c3aa288fc41b6e3c5f1453de8e09c6d3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json": "784d7426ffc6ed8c6e1c5573b4778bf88585930a2fdc6edf3fae4e97121ea45b",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00003_nrcb3_cal_headers_only.json": "aacbae22d9d3b94b88a66adf6058a5cb618b48c1911cd53ca177d952e97bcc6e",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00003_nrcb3_cal_wcs.asdf": "616979c7627d66e155178a08ee1d75eee66f918cc3c5dc3505d5f0265d3271ff",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_A.fits": "09111d2cbf4547d699bdcdbfcc38099adde9c6c34b0841d7554f7ab033cd4c17",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_A_standard_epsf.fits": "19787671400eb3008fb4fc9f3fbf476874f7fd3716d20a81e967f57ec4fbbd0a",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_B.fits": "995c325c1e569e1bb8f40d362a13c0e578c6972b92e127d87f7b58ad6256f3bb",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_B_standard_epsf.fits": "f0cb791f23962550a44b0cec1450926fb7e8d48f8ba5be4d5b98b1c917fa0315",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_C.fits": "373172bbcc90e58d792acd7bead5fc4124c9823f8ee9d56b1b0ab7f8c7833a6a",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_C_standard_epsf.fits": "f90ce5028601168023eb6cdeba8775e8ff99a5c09e60b7dba1c9c6878396b8b5",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00003_nrcb3_cal_D.fits": "53fde2fb6d2eefd99d9b5b125ee0b78c1f9b2caf13fd45f7b398901ccfb02d26",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00003_nrcb3_D_standard_epsf.fits": "04dcecde0aa47109bca982e02f23bf465b89bdee9afa794dd23ca656910eebcf",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json": "22fde10ed590a2f8427598845998aa830c2ea2ba8ef8f92e5e0c810541b87a33",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00004_nrcb3_cal_headers_only.json": "284a911912dd3a458290b55c04cf23cf0c73c9cfa0c4b6aba2975d011415fefd",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/wcs/jw01198007001_02101_00004_nrcb3_cal_wcs.asdf": "dcbcc194988ba0315a334cf5a3c0e901fd4f92420966f099add4a64fc9da4996",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_A.fits": "2eab74a3139bd52488f3e93d11508fa568c1a814430d73bcdee436532c59ae1f",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_A_standard_epsf.fits": "e87b938eb0def466d4fb24bebaf49d8f7336c7f400f020630b5288e3a222eaa3",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_B.fits": "ad32c77dc0b71d976ce9e64b62179715b998c1a4b3c8961711df4bcfdf55fe13",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_B_standard_epsf.fits": "7c142c7f9cc5ca9a8dbf0603f7b2485b48cf0f798b75a367964f6b42d05f57c8",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_C.fits": "5f34587b7b4ad16846bb9cfef70598d475a534e01c3707f283b126b5aaa7aafc",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_C_standard_epsf.fits": "b1d968fab55dcac3f2ee1d17656b7d84a7650bf41426d7c1ba34ceaa7a87b760",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/native_stamps/jw01198007001_02101_00004_nrcb3_cal_D.fits": "542dcb21b59eefd94ccf4827af6077be004537f96076fd4bd0df7b8b30faa4a9",
++    "artifacts/strong_lensing_geometry_20261021/standard_psf/jw01198007001_02101_00004_nrcb3_D_standard_epsf.fits": "605766294acfadf384fdabbd50c7338e63a5b1799eccc4871f12f005d051048b"
++  },
++  "code_sha256": {
++    "code/strong_lensing_pixel_geometry.py": "e7333e454051bfb68f769421a8f740b52481c39e0b3743ffd60a46ca52be1f76",
++    "code/strong_lensing_jwst_rate_mask.py": "bd3d4192cebf42dd236009bcd302438e990557b1be21ad51a28cffcb9ebfc6ea",
++    "scripts/replay_he0435_rate_mask.py": "e0e1936ea3962530632cbf432a4bda9a6b6f6de05fc5defe6a06b7f4b3425259"
++  },
++  "physical_admission": false,
++  "unchanged_physical_guard": 2e-10,
++  "interpretation": "Mask eligibility fixed; PSF adequacy and absolute centroid calibration remain open.",
++  "baseline_manifest_sha256": "08ff73d45de3e27746648e58c83cbfe620d39d9d7e0b36c8428242255a9b32d3"
++}
+diff --git a/artifacts/strong_lensing_geometry_20261021/mask_pipeline_provenance.json b/artifacts/strong_lensing_geometry_20261021/mask_pipeline_provenance.json
+new file mode 100644
+--- /dev/null
++++ b/artifacts/strong_lensing_geometry_20261021/mask_pipeline_provenance.json
+@@ -0,0 +1,57 @@
++{
++  "scope": "Read-only native provenance; no pipeline rerun or variance modification",
++  "inputs": [
++    {
++      "filename": "jw01198007001_02101_00001_nrcb3_cal.fits",
++      "sha256": "3f65c5001bca7bfbf25bd43881166a2a07c84a843954ad128eb02ece806ce6d3",
++      "CAL_VER": "2.0.1",
++      "CRDS_CTX": "jwst_1535.pmap",
++      "NFRAMES": 2,
++      "ZEROFRAM": true,
++      "suppress_one_group": false,
++      "OLS_C_in_configuration": true,
++      "zero_frame_processing_logged": true
++    },
++    {
++      "filename": "jw01198007001_02101_00002_nrcb3_cal.fits",
++      "sha256": "8ff2c88b642bbf316280ec1524a90971ece456606baada45f3caa201034c9494",
++      "CAL_VER": "2.0.1",
++      "CRDS_CTX": "jwst_1535.pmap",
++      "NFRAMES": 2,
++      "ZEROFRAM": true,
++      "suppress_one_group": false,
++      "OLS_C_in_configuration": true,
++      "zero_frame_processing_logged": true
++    },
++    {
++      "filename": "jw01198007001_02101_00003_nrcb3_cal.fits",
++      "sha256": "39e98c71c70fc8c02a8456013e2c45fb03abd5ea89631c8cb590ed9629bf0417",
++      "CAL_VER": "2.0.1",
++      "CRDS_CTX": "jwst_1535.pmap",
++      "NFRAMES": 2,
++      "ZEROFRAM": true,
++      "suppress_one_group": false,
++      "OLS_C_in_configuration": true,
++      "zero_frame_processing_logged": true
++    },
++    {
++      "filename": "jw01198007001_02101_00004_nrcb3_cal.fits",
++      "sha256": "b733e732d0ee609584d2ff5741a28b5e8efc8890f421a4578be5c76b492682ed",
++      "CAL_VER": "2.0.1",
++      "CRDS_CTX": "jwst_1535.pmap",
++      "NFRAMES": 2,
++      "ZEROFRAM": true,
++      "suppress_one_group": false,
++      "OLS_C_in_configuration": true,
++      "zero_frame_processing_logged": true
++    }
++  ],
++  "jwst_dependency_source": "https://github.com/spacetelescope/jwst/blob/2.0.1/pyproject.toml",
++  "jwst_2.0.1_stcal_dependency": ">=1.18,<2",
++  "upstream_pyproject_sha256": "3ca8beb30edb1e763192b1733657c56581abc77fa54ef86e503c20c6ba7ff9cb",
++  "stcal_flag_change_version": "1.16.0",
++  "stcal_changelog": "https://stcal.readthedocs.io/en/latest/stcal/changes.html",
++  "flag_behavior_source": "https://stcal.readthedocs.io/en/1.17.x/stcal/ramp_fitting/description.html",
++  "suppress_one_group_change_needed": false,
++  "zeroframe_variance_adjustment_applied": false
++}
+diff --git a/artifacts/strong_lensing_geometry_20261021/mask_baseline_manifest.json b/artifacts/strong_lensing_geometry_20261021/mask_baseline_manifest.json
+new file mode 100644
+--- /dev/null
++++ b/artifacts/strong_lensing_geometry_20261021/mask_baseline_manifest.json
+@@ -0,0 +1,17 @@
++{
++  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
++  "canonical_json_rule": "UTF8 JSON with sorted keys, compact separators, ensure_ascii=False, allow_nan=False; ignores line endings/indentation only",
++  "json_semantic_sha256": {
++    "preregistration/he0435_geometry_jwst_diagnostic_20261021.json": "7a803ab3d7e134a0172304743ae59ae66c3168a296f77c57dbab0cef36153af5",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/pixel_geometry_results.json": "35f8ed260df2307aaeb9b5f1ad5de2fa62824d4bd5a82553f347190990d565e6",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00001_nrcb3_cal.json": "840a755f0101519c3406145618aadf4ddb8dfe07c2338f4f2a178abddddff8b6",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00001_nrcb3_cal_headers_only.json": "6aca06ee5a10d10472aa71e4fa59521fa4b19356cdc2f4af1cdf55ba3cad2452",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00002_nrcb3_cal.json": "a2e061d71fc1747050f76d8d9b936c167062c24eb743c204e99a9a92608ffb7c",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00002_nrcb3_cal_headers_only.json": "a4157293fdc4ced05b485ca2ae97e64ebfe5a77900a8a75665412b059a79131c",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00003_nrcb3_cal.json": "8140d73eb9f2fbf65c5dda3fcba4f3356a507a7f2db23866ad00958577f08418",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00003_nrcb3_cal_headers_only.json": "03420c5b52caca5b30109a98ab8c5faf07b6f6e26522da3a911d48c6b8c86001",
++    "artifacts/strong_lensing_geometry_20261021/jwst_target_diagnostic/exposures/jw01198007001_02101_00004_nrcb3_cal.json": "abc89a1f9709e74f1a64c759a789dd7e88d231c3bdc5b30867d0366792d4f7bf",
++    "data/strong_lensing_geometry_20261021/metadata/jw01198007001_02101_00004_nrcb3_cal_headers_only.json": "a80339b7bd317c51d2fc5e470844d1b36be07e2d09692b3617c1172fe09ba3ed"
++  },
++  "legacy_fitter_normalized_text_sha256": "e7333e454051bfb68f769421a8f740b52481c39e0b3743ffd60a46ca52be1f76"
++}
+diff --git a/artifacts/strong_lensing_geometry_20261021/mask_repair_environment.json b/artifacts/strong_lensing_geometry_20261021/mask_repair_environment.json
+new file mode 100644
+--- /dev/null
++++ b/artifacts/strong_lensing_geometry_20261021/mask_repair_environment.json
+@@ -0,0 +1,33 @@
++{
++  "source_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
++  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
++  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
++  "packages": {
++    "numpy": "2.3.5",
++    "scipy": "1.17.0",
++    "astropy": "8.0.2",
++    "asdf": "6.0.0",
++    "asdf-astropy": "0.11.0",
++    "gwcs": "1.0.3",
++    "photutils": "3.1.1",
++    "packaging": "26.3"
++  },
++  "scope": "Observed local execution environment; not a claim to have rerun inherited full suite or journal build",
++  "verification": {
++    "mask_regression_groups": 4,
++    "canonical_point_fits_replayed": 16,
++    "portable_point_fits_replayed": 16,
++    "guard_checks": [
++      {
++        "check": "original_output_protection",
++        "pass": true
++      },
++      {
++        "check": "altered_baseline_prediction_rejected",
++        "pass": true
++      }
++    ],
++    "inherited_123_test_suite_rerun": false,
++    "journal_build_rerun": false
++  }
++}

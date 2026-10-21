@@ -1,0 +1,202 @@
+{
+  "status": "RECONSTRUCTED_COMMON_TIME_READ_PAIR_DEVELOPMENT",
+  "input": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/jw01198007001_02101_00001_nrcb3_uncal.fits",
+  "output": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/first_two_reads_corrected_ramp.fits",
+  "construction": "Read1=raw ZEROFRAME; read2=2*raw group0-read1, before all calibrations",
+  "limitations": [
+    "Read2 contains on-board group-averaging rounding, not bit-exact original ADC samples",
+    "No new independent observation or lens fit",
+    "Pixel-noise assumptions and spatial covariance require separate audit"
+  ],
+  "interval_s": 10.73677,
+  "synthetic_read_pattern": {
+    "nframes": 1,
+    "frame_divisor": 1,
+    "ngroups": 2,
+    "groupgap": 0,
+    "zero_frame": false
+  },
+  "steps": [
+    "group_scale",
+    "dq_init",
+    "saturation",
+    "ipc",
+    "superbias",
+    "refpix",
+    "linearity",
+    "persistence",
+    "dark_current"
+  ],
+  "reference_overrides": {
+    "group_scale": {
+      "skip": false
+    },
+    "dq_init": {
+      "skip": false,
+      "user_supplied_dq": null,
+      "override_mask": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_mask_0075.fits"
+    },
+    "emicorr": {
+      "skip": true,
+      "algorithm": "joint",
+      "nints_to_phase": null,
+      "nbins": null,
+      "scale_reference": true,
+      "onthefly_corr_freq": null,
+      "use_n_cycles": 3,
+      "fit_ints_separately": false,
+      "user_supplied_reffile": null,
+      "save_intermediate_results": false
+    },
+    "saturation": {
+      "skip": false,
+      "n_pix_grow_sat": 1,
+      "use_readpatt": true,
+      "override_saturation": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/jwst_nircam_saturation_0100.fits",
+      "override_superbias": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/jwst_nircam_superbias_0180.fits"
+    },
+    "ipc": {
+      "skip": true
+    },
+    "superbias": {
+      "skip": false,
+      "override_superbias": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/jwst_nircam_superbias_0180.fits"
+    },
+    "refpix": {
+      "skip": false,
+      "odd_even_columns": true,
+      "use_side_ref_pixels": true,
+      "side_smoothing_length": 11,
+      "side_gain": 1.0,
+      "odd_even_rows": true,
+      "ovr_corr_mitigation_ftr": 3.0,
+      "preserve_irs2_refpix": false,
+      "irs2_mean_subtraction": false,
+      "refpix_algorithm": "sirs",
+      "sigreject": 4.0,
+      "gaussmooth": 1.0,
+      "halfwidth": 30,
+      "override_refpix": "N/A",
+      "override_sirskernel": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_sirskernel_0002.asdf"
+    },
+    "rscd": {
+      "skip": false
+    },
+    "firstframe": {
+      "skip": true,
+      "bright_use_group1": true
+    },
+    "lastframe": {
+      "skip": false
+    },
+    "linearity": {
+      "skip": false,
+      "override_linearity": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/jwst_nircam_linearity_0054.fits"
+    },
+    "dark_current": {
+      "skip": false,
+      "dark_output": null,
+      "average_dark_current": null,
+      "override_dark": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/derived_jwst_nircam_dark_0337_first2.fits"
+    },
+    "reset": {
+      "skip": false
+    },
+    "persistence": {
+      "skip": true,
+      "input_trapsfilled": "",
+      "flag_pers_cutoff": 40.0,
+      "save_persistence": false,
+      "save_trapsfilled": true,
+      "modify_input": false
+    },
+    "charge_migration": {
+      "skip": true,
+      "signal_threshold": 25000.0
+    },
+    "jump": {
+      "skip": false,
+      "rejection_threshold": 4.0,
+      "three_group_rejection_threshold": 6.0,
+      "four_group_rejection_threshold": 5.0,
+      "maximum_cores": "1",
+      "flag_4_neighbors": true,
+      "max_jump_to_flag_neighbors": 1000,
+      "min_jump_to_flag_neighbors": 30,
+      "after_jump_flag_dn1": 0,
+      "after_jump_flag_time1": 0,
+      "after_jump_flag_dn2": 0,
+      "after_jump_flag_time2": 0,
+      "expand_large_events": true,
+      "min_sat_area": 1,
+      "min_jump_area": 5,
+      "expand_factor": 2,
+      "use_ellipses": false,
+      "sat_required_snowball": true,
+      "min_sat_radius_extend": 2.5,
+      "sat_expand": 2,
+      "edge_size": 25,
+      "mask_snowball_core_next_int": true,
+      "snowball_time_masked_next_int": 4000,
+      "find_showers": false,
+      "max_shower_amplitude": 4.0,
+      "extend_snr_threshold": 0.0,
+      "extend_min_area": 0,
+      "extend_inner_radius": 0,
+      "extend_outer_radius": 0.0,
+      "extend_ellipse_expand_ratio": 0.0,
+      "time_masked_after_shower": 0,
+      "min_diffs_single_pass": 10,
+      "max_extended_radius": 200,
+      "minimum_groups": 3,
+      "minimum_sigclip_groups": 100,
+      "only_use_ints": true,
+      "override_gain": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_gain_0094.fits",
+      "override_readnoise": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_readnoise_0282.fits"
+    },
+    "picture_frame": {
+      "skip": true,
+      "mask_science_regions": true,
+      "n_sigma": 2.0,
+      "save_mask": false,
+      "save_correction": false
+    },
+    "clean_flicker_noise": {
+      "skip": true,
+      "autoparam": false,
+      "fit_method": "median",
+      "fit_by_channel": false,
+      "background_method": "median",
+      "background_box_size": null,
+      "mask_science_regions": false,
+      "apply_flat_field": false,
+      "n_sigma": 2.0,
+      "fit_histogram": false,
+      "single_mask": true,
+      "user_mask": null,
+      "save_mask": false,
+      "save_background": false,
+      "save_noise": false
+    },
+    "ramp_fit": {
+      "skip": false,
+      "algorithm": "OLS_C",
+      "int_name": "",
+      "save_opt": false,
+      "opt_name": "",
+      "suppress_one_group": false,
+      "firstgroup": null,
+      "lastgroup": null,
+      "maximum_cores": "1",
+      "override_gain": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_gain_0094.fits",
+      "override_readnoise": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_readnoise_0282.fits"
+    },
+    "gain_scale": {
+      "skip": false,
+      "override_gain": "/workspace/scratch/066a80bbfcf1/tmp/he0435_repair_20261021/ramp_diagnostic/native_pipeline/refs/jwst_nircam_gain_0094.fits"
+    }
+  },
+  "original_first_group_DNU_or_JUMP_excluded": 6213,
+  "raw_invalid_reconstruction_pixel_count": 1,
+  "elapsed_seconds": 3.918440580368042
+}
