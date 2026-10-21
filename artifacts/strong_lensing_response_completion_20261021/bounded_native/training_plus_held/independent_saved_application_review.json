@@ -1,0 +1,520 @@
+{
+  "scope": "Read-only final saved bounded/native application audit; no native or physical mean rerun",
+  "amends": "first_saved_application_review.json",
+  "reviewed_result_sha256": "22f37b29c73bd208dc2f8662627e5d6a08104a5616243779949bbe3e9fac5561",
+  "source_sha256": {
+    "scripts\\apply_he0435_bounded_native_history.py": "4e4637a821e8207518138fae988cf37d54d6eb2e41efb646ff8089f0a7ee77e8",
+    "code\\strong_lensing_bounded_collection.py": "29e46ee3ebe20a46c75095a1ca8737202214ad92ebf870deedc37b3815473862",
+    "code\\strong_lensing_group_calibration.py": "fcea16a0e1f35f3bb56e6eab732ffe2e9eb0299e9c09b00fbb1036321232e9a8"
+  },
+  "rows": 240,
+  "domain_failures": 0,
+  "canonical_array_count": 60,
+  "canonical_arrays": {
+    "jw01198007001_02101_00001_nrcb3_A_storage_ceiling_cap1_k0.npz": {
+      "sha256": "70bd05893267de470a631511d18a630ffaa03d5c067b0bf870b1973fcf485c9e",
+      "Q": 2630.760507762505,
+      "raw_RMS_SCI": 1.0272717008419303,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_A_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "871e0eb335ca37f1950500449641332755c3571cdbf5215649dedaa7d4d8300b",
+      "Q": 2663.161243155231,
+      "raw_RMS_SCI": 1.5438854810096863,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_A_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "16a19447199e4ecee1be747abb54808888c1e0315615006123dcf4fc797c4b31",
+      "Q": 2907.583573487731,
+      "raw_RMS_SCI": 2.7148837523980336,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_B_storage_ceiling_cap1_k0.npz": {
+      "sha256": "ac094fc11269b065628031da12e257a48f8a774e9b11e2e6f35cc06f1f9575c4",
+      "Q": 3175.981047951268,
+      "raw_RMS_SCI": 1.3867055983684633,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_B_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "f10b66e7fc990f09714dd174d09f0713794c321bba2ef89415ec91ab6969eb74",
+      "Q": 3187.946090936536,
+      "raw_RMS_SCI": 2.379338054325574,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_B_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "5f528aceb292547621acc58946ba52370c12fe6e9eda962d73eebefc3f277165",
+      "Q": 3361.1346944189927,
+      "raw_RMS_SCI": 5.325265016729801,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_C_storage_ceiling_cap1_k0.npz": {
+      "sha256": "a4ca760fa044a5d4cd53427d29615f043453dcbd5ebd1889c4b0b2659642c5dc",
+      "Q": 2983.2443106034666,
+      "raw_RMS_SCI": 1.2434671478844797,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_C_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "e9a19c81fa839778b3d8a6184c55993ea73ec4c171a5d13a859b9f6eccc797a5",
+      "Q": 2894.939843764694,
+      "raw_RMS_SCI": 1.272393400884695,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_C_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "4eba213639f12f9fb97147e403fa8e0b365b76ccb50e9ec56766e9f8cbf1f1b1",
+      "Q": 3078.4633423982077,
+      "raw_RMS_SCI": 1.969827167070722,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_D_storage_ceiling_cap1_k0.npz": {
+      "sha256": "d3afd63ad15839523ae434479e09fb34c53732d67e4542a4050b88e4df2e5140",
+      "Q": 2100.993215940681,
+      "raw_RMS_SCI": 1.1223660257109793,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00001_nrcb3_D_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "d2d84c598a2686baf64f7dec76cfbe677aa4e758d39763653e1dd4c05b2f85c9",
+      "Q": 2030.522799061173,
+      "raw_RMS_SCI": 0.7924574433252652,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00001_nrcb3_D_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "86f35bf77fe704b319703691495b11c2a0ad537b86373f0f3f7c0b2a20c737d7",
+      "Q": 2098.4313208536514,
+      "raw_RMS_SCI": 1.1303368250345491,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00001_nrcb3_FIELD_storage_ceiling_cap1_k0.npz": {
+      "sha256": "93b094008a02fd0f9eaca2cd37210b41ecf319263613b47eb6a06267c5a414a4",
+      "Q": 2484.689782422154,
+      "raw_RMS_SCI": 0.7492413326818318,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_FIELD_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "c40c630775866f1291c9f0a2a2c4b6816df2d535ab4f93ea90ac84b4ee6d40ed",
+      "Q": 2430.46452515653,
+      "raw_RMS_SCI": 1.2065059199081625,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00001_nrcb3_FIELD_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "6a814e733ff02439ea925ae4b4515fd5eefd9245dde982445e07501c274454f4",
+      "Q": 2479.334269395398,
+      "raw_RMS_SCI": 2.371019779576203,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_A_storage_ceiling_cap1_k0.npz": {
+      "sha256": "8e591a3b7d76af3ef80c70015f247b2206c044b66b1723a04bf4e19b5ed357ae",
+      "Q": 2895.282871344432,
+      "raw_RMS_SCI": 1.2791561302330796,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00002_nrcb3_A_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "798503ed3d71f430ca99d6ee85a45aaa09313b0b79c797e4583cbea67c996647",
+      "Q": 2880.0403871172075,
+      "raw_RMS_SCI": 1.2011205793532325,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00002_nrcb3_A_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "5d40ae5d41c0d571ddfa615db4589458df3aa23559fd354aaee640b6831f5a91",
+      "Q": 3012.161075240494,
+      "raw_RMS_SCI": 2.6936381854504106,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00002_nrcb3_B_storage_ceiling_cap1_k0.npz": {
+      "sha256": "e9045e41572d212351c94393c79ee09cbbc87d46dfe50d882948f98246f461f8",
+      "Q": 4054.0458726863835,
+      "raw_RMS_SCI": 1.5097475970121879,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_B_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "e994367cfa409a60433c7b8cc02e19e7cd5174142e2873a0dace625318300633",
+      "Q": 3987.726136575652,
+      "raw_RMS_SCI": 1.9412413021303199,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_B_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "441c19583ae25f4f9ed8dc0f193048f61b26e14973030924795f57c21370345e",
+      "Q": 4104.884714679931,
+      "raw_RMS_SCI": 4.454392185478472,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_C_storage_ceiling_cap1_k0.npz": {
+      "sha256": "df30a55b4253747eb934915b7bfa005b33ebdba05d04b74ea3163cd3bad8f742",
+      "Q": 3233.4478516690738,
+      "raw_RMS_SCI": 1.4428194617223378,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_C_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "35fbf7126c1ed6dd0faeb0290ce301d71abaa81e232a36995d466609545af872",
+      "Q": 3089.290191970672,
+      "raw_RMS_SCI": 1.180167488743066,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_C_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "06fe3229f6966bb991772856fcb1b483feb837452a8d55f1245468cad8a3c175",
+      "Q": 3270.862265196367,
+      "raw_RMS_SCI": 1.8105856404952498,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_D_storage_ceiling_cap1_k0.npz": {
+      "sha256": "7d2bcb4bdf5fc4007224e7ac954e0127442e9d0f6397b8870437ddb26d9dab9b",
+      "Q": 2910.966582253038,
+      "raw_RMS_SCI": 0.8196637809373911,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_D_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "7ec16d58eb00d3e4094164b0954e29ad6700edf3c3ab329befaa1738d4dc85c1",
+      "Q": 2877.7765814292825,
+      "raw_RMS_SCI": 0.9557539704123229,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_D_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "5344c195f70a851fc6272b817f4dcd6d672fc2d9f2cddad06f632e514c268b12",
+      "Q": 2955.0801429523617,
+      "raw_RMS_SCI": 1.6996295649853383,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_FIELD_storage_ceiling_cap1_k0.npz": {
+      "sha256": "3cc265b45848f05fe4815da5f40038a1c3700b075d7717e2cc9e227418ebe471",
+      "Q": 4083.0436015267733,
+      "raw_RMS_SCI": 1.3850265582942822,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_FIELD_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "b18a14193e9dd18444e786f86ddfd798aa9a0d86ce452d3ca014e67aad823f50",
+      "Q": 4086.9275247673254,
+      "raw_RMS_SCI": 1.0889917694531333,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00002_nrcb3_FIELD_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "2b84958188f6bb89ec9f47b3c2a7f77020ef6b80f96c70460a6f3e0058813e05",
+      "Q": 4283.3029851823085,
+      "raw_RMS_SCI": 1.8053759280254345,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_A_storage_ceiling_cap1_k0.npz": {
+      "sha256": "7257c20e4dab5b214b7d57e32ef9b5023e1a9955deb18c247acf9151da26ad11",
+      "Q": 1951.3201100401466,
+      "raw_RMS_SCI": 1.1599902891665697,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00003_nrcb3_A_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "3bb2b76097ad52590fac9db80710692a931608002ee0ae137321e6442a679a57",
+      "Q": 2002.0597838308304,
+      "raw_RMS_SCI": 1.5905826678048758,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00003_nrcb3_A_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "63c32217be93373c699088a324d27e386b392e419b5fe84714e5e5732b896032",
+      "Q": 2266.5211656153924,
+      "raw_RMS_SCI": 3.2912055824739435,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00003_nrcb3_B_storage_ceiling_cap1_k0.npz": {
+      "sha256": "3f80bf5a27047dc727daafa0de79540aad1396d6079f4046dabaea1d7194e8be",
+      "Q": 2799.2496649895097,
+      "raw_RMS_SCI": 1.018649332797937,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_B_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "65d88fb5c2af9e958da37fbb11512c28d8ab5d613491267a2951ca01b3039f87",
+      "Q": 2795.3979198570364,
+      "raw_RMS_SCI": 2.4830124140920313,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_B_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "703544dc7f92eae9f8f7bd19acb58290a049a10f1e8961a6f29ab8b77eff1671",
+      "Q": 2980.0599201688265,
+      "raw_RMS_SCI": 5.42108311455412,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_C_storage_ceiling_cap1_k0.npz": {
+      "sha256": "6fdb518cd514263108cb2877f23cb5758af8f7cdfad7db4789484afd3c646daa",
+      "Q": 2750.179355379966,
+      "raw_RMS_SCI": 1.397058881388063,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00003_nrcb3_C_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "43dbd1703e6362e6bd53946de52979989abe5e3a79ec90ae968715b06dffac58",
+      "Q": 2637.52893990959,
+      "raw_RMS_SCI": 0.9810084155726856,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00003_nrcb3_C_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "422500ddd271b49f12afb3c26f66bc4d2aa2c18c12ed50dcc2f5097f45224ab7",
+      "Q": 2751.482925516603,
+      "raw_RMS_SCI": 1.327878126995048,
+      "pixels": 288
+    },
+    "jw01198007001_02101_00003_nrcb3_D_storage_ceiling_cap1_k0.npz": {
+      "sha256": "ff61750a4e869967917fefc7be677f777b1be37fc1670e1c6db4f1d82acb75a5",
+      "Q": 1763.662508924479,
+      "raw_RMS_SCI": 0.9598967168187634,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_D_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "12669ccc878430fba48cedee6140c72cd3f0ab7c491bc4ab278c2e6ac9948990",
+      "Q": 1676.1715175825902,
+      "raw_RMS_SCI": 0.8896682983644951,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_D_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "e2090a58bb2a63dba0ab6f5de89f75793348ccd6fbf0feab311edbedba8090af",
+      "Q": 1685.32492468679,
+      "raw_RMS_SCI": 1.7404533029077394,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_FIELD_storage_ceiling_cap1_k0.npz": {
+      "sha256": "e106bf4f9683c3863e497c3b3705dc8025c0e7a6960bf394f4395296294a1ca1",
+      "Q": 3090.4169102934666,
+      "raw_RMS_SCI": 0.9717085151949731,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_FIELD_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "deae59ce263a4e13bf9232a06476bf4a8eccaa7a74bd86b2ae8d9942121d6508",
+      "Q": 3020.263042306526,
+      "raw_RMS_SCI": 1.5777234400680387,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00003_nrcb3_FIELD_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "693e281ea9608d4ce38e2ca529daa077531d24d1453c9ab171b8920da96dc398",
+      "Q": 3062.5757381591598,
+      "raw_RMS_SCI": 2.725440749255943,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_A_storage_ceiling_cap1_k0.npz": {
+      "sha256": "5a2be66cae3696ebb4136948ec551d828c6e8ba53c250da4649b11c868db6d19",
+      "Q": 3382.143383661882,
+      "raw_RMS_SCI": 1.2951930444344197,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_A_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "bddf6902204815ed96d601f127a3f8bf5f39da4ee66b460d2ae678c09979e0a5",
+      "Q": 3359.1033051019695,
+      "raw_RMS_SCI": 1.3580622940846132,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_A_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "770e68935f0d96267e775ecf80ba677b5f4ecf3d0021541f9e11b0ee5a9c798d",
+      "Q": 3437.928619628641,
+      "raw_RMS_SCI": 2.219062631787507,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_B_storage_ceiling_cap1_k0.npz": {
+      "sha256": "7a283f4e4c37a704a111260723bc3f47583c0dba668145ef1856f29d3d2597e8",
+      "Q": 5243.9215125762075,
+      "raw_RMS_SCI": 2.596410380176504,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_B_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "4ebc6ae6c6f864b13c5b0d2a6780a25b50d47a6fad1d1ffc10652147a8b0d001",
+      "Q": 5109.072007915364,
+      "raw_RMS_SCI": 1.8878469536515443,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_B_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "91dc682c74c5b8b60a60c5ebe52bea7d5f5954a43cac7206ee71ff7a1a23eff6",
+      "Q": 5044.571365441249,
+      "raw_RMS_SCI": 2.9576250893333462,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_C_storage_ceiling_cap1_k0.npz": {
+      "sha256": "792c72796f598aa9725fd7228ad00bc550c31b10a88b03077ea4328d755224ea",
+      "Q": 2869.1073562644815,
+      "raw_RMS_SCI": 1.071169515718863,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_C_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "cbed6b65c7d3ba4004f524081d15e7643820463216beca7987bff397c69c8079",
+      "Q": 2859.684817707215,
+      "raw_RMS_SCI": 1.1112030407458418,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_C_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "891daedb1bd01b8e7017a737328abe910720760d2ad807c7c5c3e3b802182d13",
+      "Q": 3009.139263253962,
+      "raw_RMS_SCI": 2.3758534399338602,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_D_storage_ceiling_cap1_k0.npz": {
+      "sha256": "b152c5ceba78cfddb196bb56a8a65ecf125bee2c0eb475ac7e995ba6eb552810",
+      "Q": 2538.9452721224197,
+      "raw_RMS_SCI": 0.8511203931696983,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_D_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "44c9a440d036a85f3713638c7a3311b9e9d657e24fe8d6d6043736e4232be75b",
+      "Q": 2511.324758122273,
+      "raw_RMS_SCI": 0.8609326684363148,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_D_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "4dd3953ee5f470a32dcf28798833217c2b952ae4503cb8b7df30c7503007d9a8",
+      "Q": 2613.5286005554244,
+      "raw_RMS_SCI": 1.4035628311726769,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_FIELD_storage_ceiling_cap1_k0.npz": {
+      "sha256": "72ba54805d8ab8001e4779a1bb30c035e8c3df804fc42f2578154cb62e0c96ee",
+      "Q": 5730.426978559622,
+      "raw_RMS_SCI": 1.2979332704436908,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_FIELD_storage_ceiling_cap1_k1e-07.npz": {
+      "sha256": "24a38d47d027e539926bdeb7535335e3f97c33551a8495ba8f9205efb1f409c8",
+      "Q": 5684.131726929108,
+      "raw_RMS_SCI": 1.824815950831317,
+      "pixels": 289
+    },
+    "jw01198007001_02101_00004_nrcb3_FIELD_storage_ceiling_cap1_k2p3665e-07.npz": {
+      "sha256": "ad8b3c5c14385c380dcaf4dc6ce123bae10dd4b79e27f625e48688722ba1ddd2",
+      "Q": 5681.309075844816,
+      "raw_RMS_SCI": 2.901475621539469,
+      "pixels": 289
+    }
+  },
+  "independent_residual_replay_max_abs_SCI": 0.0,
+  "independent_Q_replay_max_abs": 0.0,
+  "independent_raw_RMS_replay_max_abs_SCI": 0.0,
+  "all_alternative_native_float32_inputs_and_rates_equal_canonical": true,
+  "maximum_float64_group_mean_difference_from_canonical_DN": 0.00028981307514186483,
+  "maximum_group0_intercept_match_DN": 1.8189894035458565e-12,
+  "observed_inner17_ZEROFRAME_slope_jacobian_by_exposure": [
+    {
+      "max_abs_finite_accepted_per_s": 0.0,
+      "accepted_nonfinite_FD_entries": 0
+    },
+    {
+      "max_abs_finite_accepted_per_s": 0.0,
+      "accepted_nonfinite_FD_entries": 0
+    },
+    {
+      "max_abs_finite_accepted_per_s": 0.0,
+      "accepted_nonfinite_FD_entries": 0
+    },
+    {
+      "max_abs_finite_accepted_per_s": 0.0,
+      "accepted_nonfinite_FD_entries": 0
+    }
+  ],
+  "aggregate": [
+    {
+      "prescription": "storage_ceiling",
+      "ceiling_multiplier": 1.0,
+      "kappa_e_inverse": 0.0,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 47283.25142416994,
+      "held_E4_original_ERR_Q": 14034.117524624991,
+      "field_original_ERR_Q": 15388.577272802017
+    },
+    {
+      "prescription": "storage_ceiling",
+      "ceiling_multiplier": 1.0,
+      "kappa_e_inverse": 1e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 46561.74632403732,
+      "held_E4_original_ERR_Q": 13839.184888846823,
+      "field_original_ERR_Q": 15221.78681915949
+    },
+    {
+      "prescription": "storage_ceiling",
+      "ceiling_multiplier": 1.0,
+      "kappa_e_inverse": 2.3665e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 48577.15791409463,
+      "held_E4_original_ERR_Q": 14105.167848879277,
+      "field_original_ERR_Q": 15506.522068581682
+    },
+    {
+      "prescription": "readout_ceiling",
+      "ceiling_multiplier": 1.0,
+      "kappa_e_inverse": 0.0,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 47283.25142416994,
+      "held_E4_original_ERR_Q": 14034.117524624991,
+      "field_original_ERR_Q": 15388.577272802017
+    },
+    {
+      "prescription": "readout_ceiling",
+      "ceiling_multiplier": 1.0,
+      "kappa_e_inverse": 1e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 46561.74632403732,
+      "held_E4_original_ERR_Q": 13839.184888846823,
+      "field_original_ERR_Q": 15221.78681915949
+    },
+    {
+      "prescription": "readout_ceiling",
+      "ceiling_multiplier": 1.0,
+      "kappa_e_inverse": 2.3665e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 48577.15791409463,
+      "held_E4_original_ERR_Q": 14105.167848879277,
+      "field_original_ERR_Q": 15506.522068581682
+    },
+    {
+      "prescription": "storage_ceiling",
+      "ceiling_multiplier": 1.1,
+      "kappa_e_inverse": 0.0,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 47283.25142416994,
+      "held_E4_original_ERR_Q": 14034.117524624991,
+      "field_original_ERR_Q": 15388.577272802017
+    },
+    {
+      "prescription": "storage_ceiling",
+      "ceiling_multiplier": 1.1,
+      "kappa_e_inverse": 1e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 46561.74632403732,
+      "held_E4_original_ERR_Q": 13839.184888846823,
+      "field_original_ERR_Q": 15221.78681915949
+    },
+    {
+      "prescription": "storage_ceiling",
+      "ceiling_multiplier": 1.1,
+      "kappa_e_inverse": 2.3665e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 48577.15791409463,
+      "held_E4_original_ERR_Q": 14105.167848879277,
+      "field_original_ERR_Q": 15506.522068581682
+    },
+    {
+      "prescription": "readout_ceiling",
+      "ceiling_multiplier": 1.1,
+      "kappa_e_inverse": 0.0,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 47283.25142416994,
+      "held_E4_original_ERR_Q": 14034.117524624991,
+      "field_original_ERR_Q": 15388.577272802017
+    },
+    {
+      "prescription": "readout_ceiling",
+      "ceiling_multiplier": 1.1,
+      "kappa_e_inverse": 1e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 46561.74632403732,
+      "held_E4_original_ERR_Q": 13839.184888846823,
+      "field_original_ERR_Q": 15221.78681915949
+    },
+    {
+      "prescription": "readout_ceiling",
+      "ceiling_multiplier": 1.1,
+      "kappa_e_inverse": 2.3665e-07,
+      "completed_target_patches": 16,
+      "target_original_ERR_Q": 48577.15791409463,
+      "held_E4_original_ERR_Q": 14105.167848879277,
+      "field_original_ERR_Q": 15506.522068581682
+    }
+  ],
+  "corrected_source_checks": [
+    "ZEROFRAME adds darkfirstread because native DarkCurrentStep does not darksubtractZEROFRAME",
+    "ceiling explicitly declared frozen at initial group0 intercept before nonlinear intercept refinement",
+    "GROUPDQ/JUMP selections retained; counterfactual cosmic-ray deposited-charge histories not modeled"
+  ],
+  "interpretation": "Distinct latent storage/readout lost-charge histories collapse to identical float32 native input under retained original selections; this is nonidentifiability for this conditional application, not equivalence of physical laws or model validation. IPC-omitted source remains a superseded effective/per-pixel nonlinear conditional model after discovery of calibrated IPC-before-linearity relation.",
+  "error_rescaling": false,
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "no_new_native_pipeline_execution": true
+}

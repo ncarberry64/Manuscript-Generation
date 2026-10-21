@@ -1,0 +1,63 @@
+{
+  "scope": "Execution and focused-test receipt for the actual converged conditional native mean, held exposure measurement and no-fit diagnostics. No original numerical solver rerun or reserved observation used.",
+  "focused_tests": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest tests/test_strong_lensing_native_completion.py tests/test_strong_lensing_native_calibration.py tests/test_strong_lensing_native_ols.py -q",
+    "passed": 10,
+    "failed": 0,
+    "elapsed_seconds_reported": 0.72
+  },
+  "actual_direction_check_relative_L2_errors": [
+    5.490951075053679e-10,
+    6.636915496820398e-10
+  ],
+  "native_runtime": {
+    "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "astropy": "8.0.2",
+    "asdf": "5.4.0",
+    "jwst": "2.0.1",
+    "stcal": "1.18.0+winportable1",
+    "stdatamodels": "5.0.2"
+  },
+  "source_sha256": {
+    "code/strong_lensing_native_completion.py": "dbb703a5ea8a4bc015089ae5d45b65267417f97bb7205268dfd4b4badc113d02",
+    "code/strong_lensing_native_calibration.py": "036211013a4e5e8b3dda9bffc1994a6c6ded61f9effcff73f4c53449e83d4bcc",
+    "code/strong_lensing_native_ols.py": "8e921f910aedfe9fa59ad2c78864aefce00fa5d17dc5a80aae86a89dd29ea3a6",
+    "code/strong_lensing_calibration_order.py": "aa6109377e909dc3fd504f0de42f76e3dd06065046f6dcf9e65f35ec7f218a2a",
+    "code/strong_lensing_ipc_response.py": "843a889f8380f63808eeb4660b2db4fe6dd1fdf3acdf1be4b18c0560c7462bfa",
+    "code/strong_lensing_bounded_collection.py": "29e46ee3ebe20a46c75095a1ca8737202214ad92ebf870deedc37b3815473862",
+    "code/strong_lensing_group_calibration.py": "fcea16a0e1f35f3bb56e6eab732ffe2e9eb0299e9c09b00fbb1036321232e9a8",
+    "code/strong_lensing_stochastic_response.py": "35a670e1fdb2cf73231fc3f373a718a053006a801e1af9ab49f78fd7ccb0fad1",
+    "code/strong_lensing_response_completion.py": "aa298ba071011c7c13b4292836f048811ed3fc10b0093bcbf584e4b0b7195830",
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22",
+    "scripts/run_he0435_native_completion.py": "9dcd5f7a451d4398481e15e28fbf74530a2f001426d91cda0d7c6c4a11a54248",
+    "scripts/finalize_he0435_native_held.py": "d815b5cffde958d41712ecc675ac768762dddfd4a40dcc060c9914bbf12e8d89",
+    "scripts/check_he0435_native_completion_direction.py": "1da288fe1fe9182f06ebbcec5d6101e6ec20e1964984edbe3ad927571c5542fb",
+    "scripts/diagnose_he0435_native_temporal_residuals.py": "1df16509d9b672f68c934a06164821d2a21371184968079bfdb00f33d436618e",
+    "scripts/diagnose_he0435_held_native_temporal.py": "9cbe4645aa620f78b706e2dd6c3ffe7a80173dcbb09fd05e40688034d69fe693",
+    "scripts/diagnose_he0435_native_spatial_residuals.py": "2b69697188efad1a22017c9ff6238d4a99a474169b571afe4f7196477838b97a",
+    "scripts/compare_he0435_native_background_partition.py": "ba9e0763a5adaa425c1900d3a053a82dc8c8304cdcc01debc8f301f7b8ffdc48",
+    "tests/test_strong_lensing_native_completion.py": "1b5b3249b4ef4c171cec7d1b15f4d4b8ef13e0c9ededc01e71a035296e28e03d",
+    "scripts/diagnose_he0435_native_dark_stage.py": "ff59c0070338f5b399041f1d11a8bcddcbd3a117a6c403ba0b5113486d48330f"
+  },
+  "receipt_sha256": {
+    "all_data/result.json": "c304eba83f1411322b13f7d00b8ae7aab17113a3ea641c475c0941ce2f6b0d80",
+    "training/result.json": "bfba3ca64aa42d9e2a1a457426bfe7ae672443d29d71a2e5cebe7e84103ea5d0",
+    "held_target/result.json": "6a8d7496385287b1bda2fdb450479f4390d2af074b2978256571d08b8080f0a0",
+    "all_data/actual_direction_check.json": "11d77eecd66a024fb134252067e1d16c2a3048d9284a63278be80dbf4a82af9e",
+    "all_data/temporal_residuals/result.json": "4051c82f087d937b7eef56a572f25605775585616cd04c7fe7368360809cd7ff",
+    "held_target/temporal_residual_diagnosis.json": "3509b6a5fe162f500f25f85a65e590e24af5ea7dd262eb2c31c91fcad1e4f000",
+    "held_target/spatial_residual_diagnosis.json": "687ad3f1446e6d47acc381402438d1bb625c402a6880074eddfd168ffa157e2c",
+    "background_partition/result.json": "736551efd8f85a4d86feaea09a259a299ea4b8cd33ad28a65c8c82a2965083e5",
+    "independent_final_result_review.json": "3f6698d1e7d9f1760780fd89aa4eb21d35f3f2352a3a04aa5b00a0539f145bca",
+    "dark_stage_support/result.json": "443c420ad505d53b78dd02f1153ece68344e6e966482937e66bdf970f84a15fd",
+    "background_partition/independent_background_partition_review.json": "c7f62026eb04ae732d9544d17be3c7985c05c0e7bc24fca9d176639731cf8b9f"
+  },
+  "numerical_scope": "Original native ERR fixed conditional estimating metric. Converged continuous native source equations and independent official float32 value replay. No full parameter-dependent Gaussian NLL/anchored noise closure claimed.",
+  "physical_admission": false,
+  "physical_validation_pass": false,
+  "physical_guard": 2e-10,
+  "error_rescaling": false
+}

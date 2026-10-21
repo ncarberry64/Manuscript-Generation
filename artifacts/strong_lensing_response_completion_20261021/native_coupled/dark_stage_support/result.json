@@ -1,0 +1,81 @@
+{
+  "scope": "Frozen trained shared state and independently measured E4 point state; nominal RAPID reference assigned before inverseL/IPC versus no preIPC dark-mean assignment. Native post-linearization dark subtraction retained exactly. A bounded stage-sensitivity diagnostic, not a claim of zero physical dark charge or a calibrated alternative detector law.",
+  "equation": "Compare Lnative[H mean Linv(beta+mu/gain+dark_read)]-dark_native with Lnative[H mean Linv(beta+mu/gain)]-dark_native, re-solving the same G0 beta equation in each case.",
+  "support_scope": "Direct17ROI has zero RAPID dark reference, but actual33IPC-support halo contains isolated nonzero entries in A/C/FIELD. Their propagation is explicitly evaluated, not excluded by a local assertion.",
+  "rows": [
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "field": false,
+      "nonzero_RAPID_reference_pixels_direct_ROI": 0,
+      "nonzero_RAPID_reference_pixels_IPC_support33": 1,
+      "maximum_abs_RAPID_reference_DN_in_support33": 21.863210678100586,
+      "max_abs_continuous_native_mean_change_SCI": 0.0,
+      "max_abs_original_float32_native_mean_change_SCI": 0.0,
+      "nominal_original_ERR_Q": 2727.0788095770968,
+      "zero_preIPC_dark_assignment_original_ERR_Q": 2727.0788095770968,
+      "native_dark_subtraction_unchanged": true,
+      "G0_intercept_recomputed": true
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "field": false,
+      "nonzero_RAPID_reference_pixels_direct_ROI": 0,
+      "nonzero_RAPID_reference_pixels_IPC_support33": 0,
+      "maximum_abs_RAPID_reference_DN_in_support33": 0.0,
+      "max_abs_continuous_native_mean_change_SCI": 0.0,
+      "max_abs_original_float32_native_mean_change_SCI": 0.0,
+      "nominal_original_ERR_Q": 3660.5687517559477,
+      "zero_preIPC_dark_assignment_original_ERR_Q": 3660.5687517559477,
+      "native_dark_subtraction_unchanged": true,
+      "G0_intercept_recomputed": true
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "field": false,
+      "nonzero_RAPID_reference_pixels_direct_ROI": 0,
+      "nonzero_RAPID_reference_pixels_IPC_support33": 1,
+      "maximum_abs_RAPID_reference_DN_in_support33": 304.0204772949219,
+      "max_abs_continuous_native_mean_change_SCI": 7.527312106958561e-14,
+      "max_abs_original_float32_native_mean_change_SCI": 0.0,
+      "nominal_original_ERR_Q": 2467.311144901054,
+      "zero_preIPC_dark_assignment_original_ERR_Q": 2467.311144901054,
+      "native_dark_subtraction_unchanged": true,
+      "G0_intercept_recomputed": true
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "field": false,
+      "nonzero_RAPID_reference_pixels_direct_ROI": 0,
+      "nonzero_RAPID_reference_pixels_IPC_support33": 0,
+      "maximum_abs_RAPID_reference_DN_in_support33": 0.0,
+      "max_abs_continuous_native_mean_change_SCI": 0.0,
+      "max_abs_original_float32_native_mean_change_SCI": 0.0,
+      "nominal_original_ERR_Q": 2119.1067134879095,
+      "zero_preIPC_dark_assignment_original_ERR_Q": 2119.1067134879095,
+      "native_dark_subtraction_unchanged": true,
+      "G0_intercept_recomputed": true
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal.fits",
+      "field": true,
+      "nonzero_RAPID_reference_pixels_direct_ROI": 0,
+      "nonzero_RAPID_reference_pixels_IPC_support33": 1,
+      "maximum_abs_RAPID_reference_DN_in_support33": 6846.90869140625,
+      "max_abs_continuous_native_mean_change_SCI": 2.4562385458892777e-09,
+      "max_abs_original_float32_native_mean_change_SCI": 0.0,
+      "nominal_original_ERR_Q": 3872.538301433763,
+      "zero_preIPC_dark_assignment_original_ERR_Q": 3872.538301433763,
+      "native_dark_subtraction_unchanged": true,
+      "G0_intercept_recomputed": true
+    }
+  ],
+  "held_target_Q_nominal": 10974.065419722008,
+  "held_target_Q_alternative": 10974.065419722008,
+  "source_sha256": "ff59c0070338f5b399041f1d11a8bcddcbd3a117a6c403ba0b5113486d48330f",
+  "held_solution_sha256": "94a84b8f3a1ae2cac0ac5dba9cc9feeee7738677943091c9d4ba7044b2fba440",
+  "remaining_scope": "Does not identify a general physical dark/overflow/counting law or dark stochastic covariance. The nominal dark-stage ambiguity is not a demonstrated cure of the broad held profile failure.",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "error_rescaling": false
+}

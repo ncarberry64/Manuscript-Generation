@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-21T17:58:17.583958+00:00",
+  "scope": "Consumed F115W development, exact existing mean and priors; no physical lens objective or error scaling.",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "source_sha256": {
+    "code/strong_lensing_response_completion.py": "aa298ba071011c7c13b4292836f048811ed3fc10b0093bcbf584e4b0b7195830",
+    "scripts/run_he0435_response_completion.py": "1796e0f9cba6e2997fba945a3c2eb703ae2b74ac96947aa57894924b8a95d049",
+    "code/strong_lensing_joint_scene.py": "709c8b3ceeade1805ab0ad61b9d4fd7f679450ae1be59e43cc9e9c5ce844576b",
+    "scripts/run_he0435_joint_scene.py": "eab602dda314d36c9706cffc8ec25f03464c74de3a0d24645fe40b0cdc56cc22"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "status": "EXECUTED_EXACT_CONDITIONAL_SIRS_OPERATOR_AND_UNIT_VARIANCE_SENSITIVITY",
+  "source_complete": false,
+  "ready_for_native_ERR_addition": false,
+  "operator_file": "data\\strong_lensing_response_completion_20261021\\reference_covariance\\jw01198007001_02101_00003_nrcb3_reference_operator.npz",
+  "operator_sha256": "ace5e29d8a0005eb9d1a99950850c05658b90441e1e6c8d38ef3e76ae5c243c2",
+  "early_sensitivity_file": "data\\strong_lensing_response_completion_20261021\\reference_covariance\\jw01198007001_02101_00003_nrcb3_early_reference_sensitivity.npz",
+  "early_sensitivity_sha256": "d916d3c722f9ebf700c0eac99f32622c6ccdbc505c6d7c1ea94c07cdfa59add2",
+  "input_history_sha256": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+  "mapped_reference_dq_sha256": "44129b0fbd3b0e72af5b029ef5172e3e2fd5256f0ca3cbdcb210b79fcfaf006a",
+  "SIRS_reference_sha256": "89081d1c79862bff543fb1f4d706d4dd7d6e2a8b5da21042667651daa75a6541",
+  "source_sha256": {
+    "code/strong_lensing_reference_covariance.py": "c5839dfd81ffb5b0987f7ce01965830c0f485274812b02be2064741bab703141",
+    "scripts/run_he0435_reference_covariance.py": "681c7483ed5fb6714a470f3555bf4d8b3a0cada4bd86f3835c0fb64d57e79f91"
+  },
+  "relation": "corrected_prelinearity_science = raw_post_superbias_science - Jref*r; Jref=D+U*T, conditional on actual native rejection sets",
+  "factor": "Jref*I*Jref^T with unit variance per independent reference control. This is a conditional operator sensitivity, NOT identified raw ADC noise.",
+  "early_map": "Native Lprime, first-two-group difference / exact53.68385s, /flat*PHOTMJSR; all5patch cross terms retained in shared factor columns.",
+  "groups": [
+    {
+      "group": 0,
+      "native_pre_post_replay_max_abs_DN": 0.0,
+      "native_pre_post_bitwise_equal": true,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.00026684744807425886,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -1.5608576218876446e-16,
+      "factor_replay_max_abs": 6.245004513516506e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 1,
+      "native_pre_post_replay_max_abs_DN": 0.00048828125,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 1.928585970745189e-05,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -8.234839583599944e-17,
+      "factor_replay_max_abs": 5.551115123125783e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 2,
+      "native_pre_post_replay_max_abs_DN": 0.00390625,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.0003566528675946756,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -1.2004112052734215e-16,
+      "factor_replay_max_abs": 9.194034422677078e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 3,
+      "native_pre_post_replay_max_abs_DN": 0.00390625,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.0004638675372916623,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -1.4252736620774726e-16,
+      "factor_replay_max_abs": 3.9898639947466563e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 4,
+      "native_pre_post_replay_max_abs_DN": 0.00390625,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.0003629329685281846,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -4.59897433990561e-17,
+      "factor_replay_max_abs": 1.0234868508263162e-16,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 5,
+      "native_pre_post_replay_max_abs_DN": 0.00390625,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.00021751359054178465,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -5.558582121155923e-17,
+      "factor_replay_max_abs": 6.245004513516506e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 6,
+      "native_pre_post_replay_max_abs_DN": 0.001953125,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.00024255447078758152,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -1.2083721704765445e-16,
+      "factor_replay_max_abs": 1.5265566588595902e-16,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 7,
+      "native_pre_post_replay_max_abs_DN": 0.00390625,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.00036692638059321325,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -1.0287789090793992e-16,
+      "factor_replay_max_abs": 5.377642775528102e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    },
+    {
+      "group": 8,
+      "native_pre_post_replay_max_abs_DN": 0.00390625,
+      "native_pre_post_bitwise_equal": false,
+      "float64_Jr_vs_native_float32_correction_max_abs_DN": 0.00038341507206496317,
+      "features": 400,
+      "unit_variance_factor_rank": 201,
+      "minimum_Gram_eigenvalue": -9.736282061215989e-17,
+      "factor_replay_max_abs": 8.673617379884035e-17,
+      "roundoff_eigenvalue_tolerance": 8.881784197001252e-14
+    }
+  ],
+  "all_native_mean_replays_bitwise_equal": false,
+  "reference_only_temporal_Gram": "Descriptive PSD9x9 statistic across nonDNU referencepixels after per-pixel temporal and per-group pixel centering; rank<=8 by construction. Not used as a fully identified covariance or a replacement state kernel.",
+  "unresolved_base_covariance": "READNOISE0282 HISTORY states CDS estimated AFTER UofA ncdhas reference/bias/IPC correction, from disjoint pairs. Its marginal variances do not identify rawSigma or justify adding Jref Cref JrefT to nativeERR. Calibration operator/full correlations or raw calibration darks are required.",
+  "other_limits": [
+    "Rejection masks and native float32 branches conditioned on observed controls; mask uncertainty and quantization derivative omitted.",
+    "Kernel/reference calibration covariance is not supplied by reference ERR marginals.",
+    "The same reference controls create cross-stamp and row correlations; D\u03a3T cross terms retained.",
+    "No target residual was used to fit noise or an error scale."
+  ],
+  "physical_admission": false,
+  "native_processing_rerun": false,
+  "elapsed_s": 1.7831284999847412
+}

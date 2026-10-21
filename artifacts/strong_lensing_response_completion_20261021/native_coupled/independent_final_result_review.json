@@ -1,0 +1,126 @@
+{
+  "review": "Independent saved native coupled results/covariance/rank/guard audit without fitting or nativepipeline replay",
+  "records": [
+    {
+      "label": "all_data",
+      "result_sha256": "c304eba83f1411322b13f7d00b8ae7aab17113a3ea641c475c0941ce2f6b0d80",
+      "solution_sha256": "830c325ed5755086e3968adf113758baf033e1161d94dd2f6ce6dae512fe5740",
+      "all_current_source_input_hashes_match": true,
+      "rank_from_saved_singular_values": 439,
+      "columns": 439,
+      "dimensionless_covariance_symmetry_max_abs": 5.551115123125783e-17,
+      "dimensionless_covariance_min_eigenvalue": 8.477428242538443e-09,
+      "centroid_covariance_min_eigenvalue_pixel2": 2.1289537476495276e-06,
+      "centroid_shared_response_crosscovariance_max_abs": 2.3298108718716246e-05,
+      "kappa_e_inverse": 1.5945309206702011e-07,
+      "local_unconstrained_kappa_SE_e_inverse": 7.637948978879601e-09,
+      "KKT_scaled_max": 0.0001321485680065848,
+      "last_relative_objective_change": 1.1564712715563784e-15,
+      "active_lower_indices": [
+        63,
+        64,
+        66,
+        76,
+        77
+      ],
+      "kappa_active_bound": false,
+      "zero_rejected_domain_trials": true,
+      "native_branch_nonunique_count": 0,
+      "native_SNR_boundary_count": 0,
+      "replay_residual_identity_max_abs_SCI": 0.0,
+      "replay_perrecord_Q_max_abs_difference": 4.547473508864641e-13,
+      "replay_original_ERR_identity_max_abs": 0.0,
+      "official_float32_target_Q": 33330.08942389534,
+      "official_float32_field_Q": 9916.532614791766,
+      "replay_target_sum_difference": 0.0,
+      "replay_field_sum_difference": 0.0,
+      "maximum_float32_vs_continuous_mean_SCI": 9.640262851462467e-05,
+      "covariance_scope": "full prior-supported unconstrained localcurvature at conditionalstationarity, with5active sky bounds; notcoverage/truncatedposterior/noisevalidatedphysicaluncertainty"
+    },
+    {
+      "label": "training",
+      "result_sha256": "bfba3ca64aa42d9e2a1a457426bfe7ae672443d29d71a2e5cebe7e84103ea5d0",
+      "solution_sha256": "9ea0f3f890fcb0a0baa89324be41e69d429469dc7df312d2bfd10a0b0dce83ec",
+      "all_current_source_input_hashes_match": true,
+      "rank_from_saved_singular_values": 424,
+      "columns": 424,
+      "dimensionless_covariance_symmetry_max_abs": 5.551115123125783e-17,
+      "dimensionless_covariance_min_eigenvalue": 8.47743775273151e-09,
+      "centroid_covariance_min_eigenvalue_pixel2": 2.1161338279039997e-06,
+      "centroid_shared_response_crosscovariance_max_abs": 2.797140757302533e-05,
+      "kappa_e_inverse": 1.6540033671374484e-07,
+      "local_unconstrained_kappa_SE_e_inverse": 8.287100991356023e-09,
+      "KKT_scaled_max": 0.00016476599467729613,
+      "last_relative_objective_change": 2.1217946121580364e-15,
+      "active_lower_indices": [
+        51,
+        52,
+        54,
+        64,
+        65
+      ],
+      "kappa_active_bound": false,
+      "zero_rejected_domain_trials": true,
+      "native_branch_nonunique_count": 0,
+      "native_SNR_boundary_count": 0,
+      "replay_residual_identity_max_abs_SCI": 0.0,
+      "replay_perrecord_Q_max_abs_difference": 9.094947017729282e-13,
+      "replay_original_ERR_identity_max_abs": 0.0,
+      "official_float32_target_Q": 23005.302019391227,
+      "official_float32_field_Q": 10532.88380532714,
+      "replay_target_sum_difference": -3.637978807091713e-12,
+      "replay_field_sum_difference": 0.0,
+      "maximum_float32_vs_continuous_mean_SCI": 0.00013573367687058635,
+      "covariance_scope": "full prior-supported unconstrained localcurvature at conditionalstationarity, with5active sky bounds; notcoverage/truncatedposterior/noisevalidatedphysicaluncertainty"
+    }
+  ],
+  "held_target": {
+    "result_sha256": "6a8d7496385287b1bda2fdb450479f4390d2af074b2978256571d08b8080f0a0",
+    "scope": "Already-consumed E4 target pixels absent from nonlinear optical/sky/kappa training; all4 FIELD calibrations retained. Held positions, fluxes and exposure plane measured with frozen shared response. Original E1 anchors retained. No unused validation.",
+    "continuous_original_ERR_Q": 10974.065188512888,
+    "official_float32_original_ERR_Q": 10974.065419722008,
+    "scaled_KKT": 0.00019121949583222886,
+    "last_relative_objective_change": 5.894022801379745e-15,
+    "full32_moment_centroid_covariance_min_eigenvalue_pixel2": 2.1158985192187735e-06,
+    "full32_min_eigenvalue_replay_difference": 1.2705494208814505e-21,
+    "formal_geometry_scatter": {
+      "Q": 114.49264077126071,
+      "dof": 15,
+      "scope": "Formal conditional correlated-centroid diagnostic only; inadequate mean/no physical validation."
+    },
+    "guard_unchanged": true,
+    "physical_admission": false,
+    "physical_validation_pass": false
+  },
+  "directional_sidecar": {
+    "scope": "Saved all-native coupled mean, one actual target and one actual FIELD patch. No optimizer, native read processing, unused data or change of saved parameters.",
+    "records": [
+      "jw01198007001_02101_00001_nrcb3_cal_A",
+      "jw01198007001_02101_00004_nrcb3_cal.fits"
+    ],
+    "direction_includes": "centroids, positive log-flux, shared318eta, electronic planes and kappa; bound sky coefficients held fixed.",
+    "checks": [
+      {
+        "dimensionless_step": 0.0002,
+        "relative_L2_error": 5.490951075053679e-10,
+        "maximum_absolute_whitened_direction_error": 6.633863036675791e-08,
+        "L2_analytic": 333.50930160056345
+      },
+      {
+        "dimensionless_step": 0.0001,
+        "relative_L2_error": 6.636915496820398e-10,
+        "maximum_absolute_whitened_direction_error": 6.760983572995372e-08,
+        "L2_analytic": 333.50930160056345
+      }
+    ],
+    "pass_relative_L2_below_1e-5": true,
+    "solution_sha256": "830c325ed5755086e3968adf113758baf033e1161d94dd2f6ce6dae512fe5740",
+    "source_sha256": "1da288fe1fe9182f06ebbcec5d6101e6ec20e1964984edbe3ad927571c5542fb",
+    "physical_validation_pass": false,
+    "physical_admission": false
+  },
+  "interpretation": "Conditional convergence is established for the declared fullnative mean, but large unchanged-nativeERR residuals and formalgeometryscatter retaininadequacy. Conditional kappa curvature is not detectorlaw or BHSMidentification.",
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "no_new_fit_or_native_pipeline_execution": true
+}

@@ -1,0 +1,313 @@
+{
+  "status": "actual source-calibrated full cross-stamp/amp READ+DARK covariance projected and saved fixed means whitened; no mean or noise refit",
+  "spectral_model": {
+    "file": "data/strong_lensing_response_completion_20261021/dark_calibration/earliest_epoch_binned_cross_spectrum_512.npz",
+    "sha256": "311aa6cfabed3fadf0f41c5f75110c45cafb5b53b49fe230d420897bad5dc1f3",
+    "bytes": 2599865,
+    "spectral_matrix_shape": [
+      22,
+      10,
+      36,
+      36
+    ],
+    "calibration_window_coverage": [
+      0.9796788832720589,
+      0.9868518305759804,
+      0.9861443014705882,
+      0.9785108379289216
+    ],
+    "minimum_Fourier_modes_per_bin": 1,
+    "maximum_Fourier_modes_per_bin": 65024,
+    "protocol_sha256": "c676334a04fa21654fb873ef327371a158cfe3e0b5fb0edd787a01ebfe9cee68"
+  },
+  "exposures": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "file": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01198007001_02101_00001_nrcb3_spectral_rate_covariance.npz",
+      "sha256": "ed1b470a3b186977285282497e12e83dac9085f47ac19c418cd08b4a6897a6e2",
+      "n": 1444,
+      "count_target": 1155,
+      "source_native_history_sha256": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+      "native_DQ_sidecar_sha256": "b36118b1b42f121732cbdcd3b6c91a41f2489048358c3e6b0b4514c2708a0a82",
+      "native_J_h1_h2_max_difference_per_s": 0.0012683868408203125,
+      "raw_original_native_ERR": {
+        "n": 1444,
+        "raw_RMS": 2.360087834998588,
+        "Q": 11022.277620218336,
+        "Q_per_observation": 7.633156246688598,
+        "logdet": -5802.296875,
+        "Gaussian_NLL": 3936.9376145567153,
+        "physical_validation": false
+      },
+      "conditional_full_covariance": {
+        "n": 1444,
+        "raw_RMS": 2.360087834998588,
+        "Q": 3521.1869985487265,
+        "Q_per_observation": 2.4384951513495334,
+        "logdet": -3413.788711333424,
+        "Gaussian_NLL": 1380.6463855551985,
+        "physical_validation": false
+      },
+      "conditional_target_only": {
+        "n": 1155,
+        "raw_RMS": 2.531758581264858,
+        "Q": 3134.07303433249,
+        "Q_per_observation": 2.7134831466082163,
+        "logdet": -2715.5066636020592,
+        "Gaussian_NLL": 1270.6571912166123,
+        "physical_validation": false
+      },
+      "conditional_field_only": {
+        "n": 289,
+        "raw_RMS": 1.4878752388621206,
+        "Q": 387.1915575268062,
+        "Q_per_observation": 1.3397631748332395,
+        "logdet": -698.2231347880878,
+        "Gaussian_NLL": 110.05744746550963,
+        "physical_validation": false
+      },
+      "strict_held_exposure_fixed_mean_target": null,
+      "latest_dark_epoch_fixed_earliest_spectrum": {
+        "n": 1444,
+        "raw_RMS": 1.3475326617157621,
+        "Q": 29848.363594361013,
+        "Q_per_observation": 20.670611907452226,
+        "logdet": -3948.341872985883,
+        "Gaussian_NLL": 14276.958102635113,
+        "physical_validation": false
+      },
+      "max_abs_target_field_electronic_cross_covariance_SCI2": 0.0016934476182472336,
+      "source_READ_DARK_variance_SCI2_range": [
+        0.001247381860493381,
+        1.1114036103789644
+      ],
+      "source_complete_instrument_covariance": false,
+      "physical_validation": false
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "file": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01198007001_02101_00002_nrcb3_spectral_rate_covariance.npz",
+      "sha256": "1f10acb29e9ee27d46fea9ef351b268a123f570b86c1994202727d772bb75188",
+      "n": 1444,
+      "count_target": 1155,
+      "source_native_history_sha256": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+      "native_DQ_sidecar_sha256": "d5f4dd4c3a1c1b0fa255af9ffd2bf54fd5c9e14f8a960b49b9cabe1548d4c731",
+      "native_J_h1_h2_max_difference_per_s": 0.0025618821382522583,
+      "raw_original_native_ERR": {
+        "n": 1444,
+        "raw_RMS": 1.7018730840591492,
+        "Q": 11721.092170147636,
+        "Q_per_observation": 8.117099840822464,
+        "logdet": -5840.85546875,
+        "Gaussian_NLL": 4267.065592646366,
+        "physical_validation": false
+      },
+      "conditional_full_covariance": {
+        "n": 1444,
+        "raw_RMS": 1.7018730840591492,
+        "Q": 4121.490846946806,
+        "Q_per_observation": 2.854218038051805,
+        "logdet": -3432.5313212234078,
+        "Gaussian_NLL": 1671.4270048092467,
+        "physical_validation": false
+      },
+      "conditional_target_only": {
+        "n": 1155,
+        "raw_RMS": 1.7318056170438574,
+        "Q": 3340.9425004203295,
+        "Q_per_observation": 2.8925909094548308,
+        "logdet": -2737.0373178670006,
+        "Gaussian_NLL": 1363.3265971280614,
+        "physical_validation": false
+      },
+      "conditional_field_only": {
+        "n": 289,
+        "raw_RMS": 1.576582641655648,
+        "Q": 781.8577738211944,
+        "Q_per_observation": 2.7053902208345826,
+        "logdet": -695.4015024525688,
+        "Gaussian_NLL": 308.8013717804632,
+        "physical_validation": false
+      },
+      "strict_held_exposure_fixed_mean_target": null,
+      "latest_dark_epoch_fixed_earliest_spectrum": {
+        "n": 1444,
+        "raw_RMS": 1.8484082489223932,
+        "Q": 72680.19866791503,
+        "Q_per_observation": 50.332547553957774,
+        "logdet": -3975.2524936839736,
+        "Gaussian_NLL": 35679.420329063076,
+        "physical_validation": false
+      },
+      "max_abs_target_field_electronic_cross_covariance_SCI2": 0.0020655208847015927,
+      "source_READ_DARK_variance_SCI2_range": [
+        0.001119688077071036,
+        0.8786691793614985
+      ],
+      "source_complete_instrument_covariance": false,
+      "physical_validation": false
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "file": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01198007001_02101_00003_nrcb3_spectral_rate_covariance.npz",
+      "sha256": "dfd0fa249ee91b0559e99345f4cf9564ce5c4b779847f3d25097f119c6b0426a",
+      "n": 1443,
+      "count_target": 1154,
+      "source_native_history_sha256": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+      "native_DQ_sidecar_sha256": "44129b0fbd3b0e72af5b029ef5172e3e2fd5256f0ca3cbdcb210b79fcfaf006a",
+      "native_J_h1_h2_max_difference_per_s": 0.001501724123954773,
+      "raw_original_native_ERR": {
+        "n": 1443,
+        "raw_RMS": 1.8385747813567486,
+        "Q": 8542.348422424622,
+        "Q_per_observation": 5.91985337659364,
+        "logdet": -5862.029296875,
+        "Gaussian_NLL": 2666.1878661891537,
+        "physical_validation": false
+      },
+      "conditional_full_covariance": {
+        "n": 1443,
+        "raw_RMS": 1.8385747813567486,
+        "Q": 2615.6447341871244,
+        "Q_per_observation": 1.8126436134352906,
+        "logdet": -3429.7063784804654,
+        "Gaussian_NLL": 918.9974812676721,
+        "physical_validation": false
+      },
+      "conditional_target_only": {
+        "n": 1154,
+        "raw_RMS": 1.6903587634849104,
+        "Q": 2040.3320991435658,
+        "Q_per_observation": 1.7680520789805596,
+        "logdet": -2732.75733123439,
+        "Gaussian_NLL": 714.24245127278,
+        "physical_validation": false
+      },
+      "conditional_field_only": {
+        "n": 289,
+        "raw_RMS": 2.3385712413950044,
+        "Q": 575.6291368297641,
+        "Q_per_observation": 1.9917963212102563,
+        "logdet": -696.8190955959187,
+        "Gaussian_NLL": 204.9782567130731,
+        "physical_validation": false
+      },
+      "strict_held_exposure_fixed_mean_target": null,
+      "latest_dark_epoch_fixed_earliest_spectrum": {
+        "n": 1443,
+        "raw_RMS": 2.6365057734819732,
+        "Q": 165027.72837606943,
+        "Q_per_observation": 114.36433012894624,
+        "logdet": -3970.931705353036,
+        "Gaussian_NLL": 81854.42663877254,
+        "physical_validation": false
+      },
+      "max_abs_target_field_electronic_cross_covariance_SCI2": 0.00950246541767373,
+      "source_READ_DARK_variance_SCI2_range": [
+        0.00216472219683762,
+        1.0219587853712593
+      ],
+      "source_complete_instrument_covariance": false,
+      "physical_validation": false
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "file": "data/strong_lensing_response_completion_20261021/dark_calibration/jw01198007001_02101_00004_nrcb3_spectral_rate_covariance.npz",
+      "sha256": "98136d97153d96fb52db7b515c94a3ee8b85a0c2d455e50a04da517d3c63baef",
+      "n": 1445,
+      "count_target": 1156,
+      "source_native_history_sha256": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+      "native_DQ_sidecar_sha256": "563133206ee3a4e1acf091d172c7956a92dc535b0ae962f0bbffc75b043ac8e8",
+      "native_J_h1_h2_max_difference_per_s": 0.001977965235710144,
+      "raw_original_native_ERR": {
+        "n": 1445,
+        "raw_RMS": 1.5870792311399144,
+        "Q": 12348.944091863732,
+        "Q_per_observation": 8.545982070493933,
+        "logdet": -5845.416015625,
+        "Gaussian_NLL": 4579.630218600118,
+        "physical_validation": false
+      },
+      "conditional_full_covariance": {
+        "n": 1445,
+        "raw_RMS": 1.5870792311399144,
+        "Q": 4204.149760253591,
+        "Q_per_observation": 2.9094462008675372,
+        "logdet": -3415.1010908116095,
+        "Gaussian_NLL": 1722.3905152017428,
+        "physical_validation": false
+      },
+      "conditional_target_only": {
+        "n": 1156,
+        "raw_RMS": 1.3844096136381665,
+        "Q": 3116.6961253111035,
+        "Q_per_observation": 2.6961039146289822,
+        "logdet": -2727.9454658203726,
+        "Gaussian_NLL": 1256.6682741299671,
+        "physical_validation": false
+      },
+      "conditional_field_only": {
+        "n": 289,
+        "raw_RMS": 2.2198519131336663,
+        "Q": 1088.7245233939022,
+        "Q_per_observation": 3.7672128837159247,
+        "logdet": -687.0012331318236,
+        "Gaussian_NLL": 466.43488122718975,
+        "physical_validation": false
+      },
+      "strict_held_exposure_fixed_mean_target": {
+        "n": 1156,
+        "raw_RMS": 1.5251460047423564,
+        "Q": 3908.6877863226377,
+        "Q_per_observation": 3.381217808237576,
+        "logdet": -2727.9454658203726,
+        "Gaussian_NLL": 1652.6641046357342,
+        "physical_validation": false
+      },
+      "latest_dark_epoch_fixed_earliest_spectrum": {
+        "n": 1445,
+        "raw_RMS": 0.995238601087951,
+        "Q": 13902.810714896901,
+        "Q_per_observation": 9.621322294046298,
+        "logdet": -3957.04560757641,
+        "Gaussian_NLL": 6300.748734140998,
+        "physical_validation": false
+      },
+      "max_abs_target_field_electronic_cross_covariance_SCI2": 0.00951229886633085,
+      "source_READ_DARK_variance_SCI2_range": [
+        0.006224479248917517,
+        0.6959244582845336
+      ],
+      "source_complete_instrument_covariance": false,
+      "physical_validation": false
+    }
+  ],
+  "source_mean_SHA256": {
+    "artifacts/strong_lensing_response_completion_20261021/static_diagnostics/all_target.npz": "78d9ff049d80f0ae7c2304678204c1b42aea76a0e0c69e919f7426b9f37886a9",
+    "artifacts/strong_lensing_response_completion_20261021/static_diagnostics/all_field.npz": "08ff19355e9de9fe7556934538c94351a2898a6f93b9b2e636b5526d2deca55c",
+    "artifacts/strong_lensing_response_completion_20261021/static_diagnostics/held_target_strict.npz": "3605220c7d1a55309bf1e51770ac0c19ca14c8de20d64e91820c69fad90b518b",
+    "artifacts/strong_lensing_response_completion_20261021/static_diagnostics/training_field.npz": "e961bbd892e6f22111c1ff3b8c2bb8383130ecbc161be17f6c05cedee988b02c"
+  },
+  "seconds": 12.61427100000219,
+  "projection": "actual local native OLS_C finite Jacobian h1 \u00d7 native group Lprime \u00d7 gain_scale \u00d7PHOTMJSR/flat; ZEROFRAME derivative proven zero on consumed masks",
+  "components": "source-calibrated postSIRS READ+DARK REPLACES native diagonal VAR_RNOISE; retained native diagonal VAR_POISSON plus explicit diagonal flat-ERR prior; no original ERR added again",
+  "cross_correlations": "within-exposure target A/B/C/D/FIELD plus all four read-clock amplifier channels share source spectra; not five independent noise copies",
+  "conditional_limits": [
+    "native estimator DQ/mask/SNR branch and finite h1 derivative fixed at observed data; h1/h2 diagnostic retained",
+    "stationary periodic log-frequency-bin calibration model; masked spectral window not deconvolved; one difference realization per epoch; calibration uncertainty/state dependence not known exactly",
+    "latest dark epoch is an internal calibration holdout already summarized; no new science validation is claimed",
+    "native diagonal Poisson is a producing-branch comparator, not the complete collection/IPC/fullwell statistical law; matching photon IPC projection is a separate incoming application",
+    "measured READ+DARK includes physical dark shot noise; retaining nativeVAR_POISSON may duplicate its small dark component unless photon-only/dark counting rates are separately identified",
+    "flat ERR supplies marginal uncertainty only; full shared spatial flat/kernel calibration covariance absent",
+    "saved static mean is unchanged; lower Q under calibrated noise is not physical validation or a correction to failed mean residuals",
+    "these scores are conditional fixed-mean Gaussian noise diagnostics; no BHSM optical-state Wick/Gaussian closure or prepared U,V solve is implied"
+  ],
+  "source_sha256": {
+    "scripts/project_he0435_dark_covariance.py": "944fdf2903d78c61805f9fd592b36fd6171054c298aad9ea199c157e8f85fb53",
+    "code/strong_lensing_dark_covariance.py": "2e80f111f5718e9de7860f784ff734490a9d7ce35df706b7cb63a635d618dd43"
+  },
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "reserved_science_observations_unused": true,
+  "noise_rescaling": false
+}

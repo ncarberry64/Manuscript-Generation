@@ -58,3 +58,8 @@ tests/test_strong_lensing_jwst_rate_mask.py -text whitespace=-blank-at-eof,cr-at
 docs/CODEX_HANDOFF.md -text whitespace=-blank-at-eof,cr-at-eol
 docs/STRONG_LENSING_RATE_MASK_REPAIR_20261021.md -text whitespace=-blank-at-eof,cr-at-eol
 artifacts/strong_lensing_geometry_20261021/mask*.json -text whitespace=-blank-at-eof,cr-at-eol
+
+# Keep newly executed native histories and hash-bound covariance receipts exact.
+artifacts/strong_lensing_response_completion_20261021/** -text whitespace=cr-at-eol
+data/strong_lensing_response_completion_20261021/** -text whitespace=cr-at-eol
+artifacts/strong_lensing_response_completion_20261021/runtime/stcal_1p18_windows_portability.patch -text whitespace=-blank-at-eol,cr-at-eol

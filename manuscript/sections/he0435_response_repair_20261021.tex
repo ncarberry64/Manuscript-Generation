@@ -48,7 +48,8 @@ the archived field rate and ERR within $8.97\times10^{-8}$ and
 $1.65\times10^{-7}$ relative, respectively. The archived installation
 version is not recorded; numerical agreement is not proof of that
 installation history. The earlier incompatible replay is retained.
-No completed native detector processing is repeated for this integration.
+That completed field experiment is retained. The new target/exposure
+applications below recover the additional histories on their actual domains.
 On exactly 289 matched field-star pixels, a separately calibrated
 first-two-read difference reduces normalized raw profile residual from
 $7.6653\%$ to $5.1787\%$. Its $p=0.00984653$ still fails the declared
@@ -99,9 +100,9 @@ the group-estimator identities $w_p^TH_p=0$ and $w_p^Tm=1$
 eliminate segment intercepts $H_p a_p$ and return $f_p$;
 different histories alone cannot alter a static linear profile.
 The second line of Equation~\eqref{eq:he0435-read-history-candidate}
-is this linear group-estimator identity. Exact archived OLS\_C weights
-and individual ZEROFRAME branches are not reconstructed or applied;
-the actual new likelihood fits the corrected groups directly.
+is this linear group-estimator identity. Those first direct-group applications did not reconstruct archived OLS\_C
+weights or individual ZEROFRAME branches. The subsequent native applications
+below retain the actual adaptive estimator and ZEROFRAME selection.
 This candidate is a specified leading response hypothesis, not a
 uniquely derived charge-migration law or a measured detector constant.
 In this direct-group application $f_p$ is in corrected DN s$^{-1}$,
@@ -117,8 +118,8 @@ rescaling the coefficient. A nonuniform-gain regression checks the
 general conservation law; no electron leakage is inferred for this
 particular constant-gain data set.
 
-Shared reads also require temporal covariance. With the reference
-CDS read-noise convention \citep{JWSTReadnoise201}, the conditional photon
+Shared reads also require temporal covariance. Under an independent post-correction
+CDS-marginal working assumption \citep{JWSTReadnoise201}, the conditional photon
 term for two two-read groups is
 \begin{equation}
  C^{\rm ph}_{p,jk}=\frac{f_p}{4g_p}
@@ -229,67 +230,247 @@ All ranks use singular values of dimensionless columns above
 $10^{-10}$ times the largest value. Null projections and the
 distinction between data rank and prior-supported rank are recorded.
 
-One actual coupled step lowers target raw $Q$ from $50121.532$ to
-$34712.081$ on 4620 pixels; the complete field-plus-target-plus-prior
-objective falls from $57432.279$ to $45065.902$. It is an executed
-continuation iterate, not a converged fit. The largest unconstrained
-scaled residual gradient is $14477$ and includes active-bound
-directions; it is not a projected convergence statistic. A separate
-saved-mean evaluation gives a free detector-plane scaled
-half-objective gradient of $12254$ and projected nonnegative-sky
-violation $7605$, establishing a remaining stationarity failure.
-Thirteen sky coefficients are on their zero bound.
-The 414-column local joint problem has rank 414, but
-its covariance is unconstrained local curvature at this nonstationary
-iterate, not a truncated or calibrated posterior. The full
-$32\times32$ centroid covariance and $20\times20$ intrinsic-geometry
-covariance include shared-response, sky and cross-exposure terms.
-The largest absolute off-diagonal centroid correlation is $0.333$.
-Raw centers, full finite-grid response moments and baseline-relative
-moments are retained separately; no finite-grid convention establishes
-physical centroid accuracy.
+The continuation is now solved to conditional stationarity with all field
+nuisances included jointly. Convergence requires the largest projected
+half-objective gradient, in the declared dimensionless scales, to be at
+most $10^{-3}$ and the last relative objective change at most $10^{-10}$.
+The all-data objective is $44420.297987$, with target raw
+$Q=33639.007883$ and projected gradient $4.896\times10^{-5}$.
+The joint problem has rank 438/438 including the stated priors; five sky
+coefficients are on their zero bound. Its full centroid covariance
+retains shared sky/response and cross-exposure terms, but remains
+unconstrained local curvature under an inadequate mean.
 
-Figure~\ref{fig:he0435-joint-scene-residuals} retains the actual
-native residual pattern at this saved iterate, rather than displaying
-only a reduced objective.
-\begin{figure}[p]
+Training on E1--E3 target stamps and all four field-star stamps also
+converges: objective $34631.543686$, target $Q=23295.018884$ and
+projected gradient $3.535\times10^{-4}$. With trained sky and response
+fixed, the independent E4 point/flux/plane application converges but
+fails: $Q=11018.981762$ for 1141 nominal conditional degrees of freedom,
+compared with $10906.483$ at the old one-step iterate. Between 72\% and
+85\% of each image's quadratic residual is outside three pixels.
+Thus the earlier failure was not resolved by optimization convergence.
+Figure~\ref{fig:he0435-joint-scene-residuals} compares this persistent
+spatial pattern with the full native application below, using unchanged ERR.
+\begin{figure}[!htbp]
  \begin{adjustwidth}{-\extralength}{0cm}
  \centering
- \includegraphics[width=\fulllength]{figures/he0435_joint_scene_residuals_20261021.png}
- \caption{Native $17\times17$ standardized residuals after the one-step
- coherent-sky/response application. Rows are the four consumed
- exposures; columns are images A--D. Color shows
- $(\mathrm{mean}-\mathrm{SCI})/\mathrm{ERR}$, the opposite sign to
- Equation~\eqref{eq:he0435-scene-original-residual}. Colors alone are
- clipped at $\pm10$; raw arrays, quoted $Q$ and maximum absolute
- residuals are not clipped. Excluded pixels are masked. All profiles
- remain inadequate; this is development evidence, not validation.}
+ \includegraphics[width=\fulllength]{figures/he0435_converged_held_residuals_20261021.png}
+ \caption{Actual held E4 native $17\times17$ target residuals at the
+ converged static and calibration-ordered native sky/response fits.
+ The shared response
+ and coherent sky train on E1--E3 targets and all four field-star stamps;
+ held point/flux/plane nuisances are fitted independently, while the
+ native electronic intercept is conditioned on its observed first group. Color shows
+ $(\mathrm{mean}-\mathrm{SCI})/\mathrm{ERR}$, with colors alone clipped
+ at $\pm10$. Excluded pixels are masked; raw residuals and quoted
+ statistics are not clipped. The native charge response lowers total
+ held $Q$ by 0.41\%, leaving the broad structured
+ failure. These are consumed development observations.}
  \label{fig:he0435-joint-scene-residuals}
  \end{adjustwidth}
 \end{figure}
 
-A second application trains the shared sky and response on three
-target exposures, retaining all four field-star calibrations. The
-fourth target exposure is then evaluated with only its independent
-point/flux and detector-plane nuisances free. Its native residual is
-$Q=10906.483$ for 1141 nominal conditional degrees of freedom, and
-fails absolute adequacy. The full trained sky/response covariance,
-including their cross block, is propagated to its centroids; it is
-not used to inflate ERR or turn the failed profile into a pass.
-This whole-exposure check uses already consumed photons and a
-provisional training iterate. It is neither a fresh physical
-validation nor a definitive rejection of every converged coherent-sky
-model.
+The additional native histories have now been recovered for A--D and a
+field star in each of the four exposures, on matching $65\times65$
+detector domains. These are nine downlinked two-frame group averages
+and the first individual read as ZEROFRAME; the complete later
+individual-read sequence was not downlinked.
+Their known read times are retained, rather than inventing individual
+observations from averages. Full-detector SIRS precedes extraction.
+All twenty rate/ERR replay checks pass the original $10^{-4}/10^{-3}$
+relative gates, with worst discrepancies $1.8394\times10^{-7}$ and
+$1.7881\times10^{-7}$. Compact official OLS\_C exactly reproduces the
+full-detector slopes. The documented runtime is
+\texttt{stcal 1.18.0+winportable1}; its platform/debug portability patch
+changes no slope or variance equations and establishes no archived
+installation history. Reference DQ maps are interpreted through their
+own DQ\_DEF, separately from the global science flags.
 
-The concrete remaining measurement dependency is thus an adequate
-calibrated mean together with its stochastic and reference covariance.
-The compact supplied read-history array covers one field star in one
-exposure, rather than all quasar groups and selections. Those actual
-histories are required for a joint target history/sky application;
-their absence from that compact delivery is not evidence that they
-do not exist. The failed optical transfer already prevents exporting
-the fitted $\kappa_e$ to the target images. Neither substituting an
-unmeasured target history nor assigning the field residual to an
-extra envelope amplitude supplies this dependency. The microscopic
-state/source and domain conditions stated in the Discussion remain
-separate from these instrumental limitations.
+The native group map also matters. If $\ell_p$ is the recorded
+linearity polynomial and $q_{pjr}$ a linearized read mean, the earlier
+conditional per-pixel application evaluates
+\begin{equation}
+ \mathcal H_{pj}(q)=\ell_p\!\left[
+       \frac12\sum_{r=1}^{2}\ell_p^{-1}(q_{pjr})\right]-D_{pj},
+ \qquad q_{pjr}=\beta_p+\frac{\mu_p(t_{jr})}{g_p}+D_{pjr}.
+ \label{eq:he0435-native-read-group-map}
+\end{equation}
+The electronic intercept and individual-read dark contribution enter
+before inverse linearity and averaging; the native group dark is
+subtracted afterwards. The inverse uses the actual anchored monotone
+branch. Its read Jacobian and Hessian are evaluated explicitly.
+Actual data-anchored nonlinear-averaging shifts reach 87.624 DN in a
+bright core, but only 0.004558 DN per group in the 3--6-pixel wings.
+This known correction cannot explain the broad wing failure alone.
+
+The calibration source trail further specifies the operator order.
+The archived-context IPC reference is a ground-derived deconvolution
+kernel $G$, while the linearity reference records IPC correction
+before its coefficient fit. Native science processing skips IPC.
+Writing $H=G^{-1}$, the nominal physical composition is therefore
+\begin{equation}
+ \mathcal R_j=\ell\!\left[H\left\{
+  \frac12\sum_r\ell^{-1}\!\left(\beta+
+        \frac{\mu_{\rm pre}(t_{jr})}{g}+D_{{\rm pre},jr}\right)
+                    \right\}\right]-D_{{\rm native},j}.
+ \label{eq:he0435-calibration-ordered-ipc}
+\end{equation}
+The optical effective profile already includes its low-charge IPC
+mean: the corresponding pre-IPC photon rate is $gG(f_{\rm eff}/g)$,
+not a second convolution of the PSF. A positive Neumann inverse of
+the stored $G$ has omitted kernel mass below $2.076\times10^{-15}$;
+the reference's small normalization discrepancy is retained. All
+twenty central $17\times17$ pre-IPC source domains are positive.
+The finite field-template outer boundary requires an explicit
+harmonic source continuation; its induced central low-charge change
+is below $4.82\times10^{-12}$ electron s$^{-1}$ in the initial
+saved-pilot application.
+This nominal signal-independent reference does not fix nonlinear IPC,
+full well or undocumented nonzero hot-dark calibration stages.
+
+A matched first-two-group sky/response application converges as well,
+with target $Q=7085.723398$, field $Q=1875.832461$ and projected gradient
+$5.636\times10^{-6}$ under a frozen conditional photon/CDS-marginal
+metric. Held E4 gives $Q=2277.353794$ and remains inadequate. Larger
+sampling uncertainty in this shorter temporal projection is not a
+repair, and early/full likelihoods are not summed as independent data.
+The learned means are instead forwarded through
+Equation~\eqref{eq:he0435-native-read-group-map} and actual native OLS\_C,
+with original full-rate ERR retained as a separate comparator.
+
+Actual raw cores plateau above the SAT calibration cutoff but below
+65534 DN. Neither is a physical stored-charge measurement after
+saturation. Two bounded first-order mean continuations are therefore
+kept distinct. For a storage ceiling $Q_p$, define
+$H_p(t)=\int_0^t\min(\lambda_p s,Q_p)\,\dd s$ and
+$D_p(t)=\sum_q(\lambda_p+\lambda_q)[H_q(t)-H_p(t)]$;
+then $\mu_p=\min(\lambda_p t+\kappa_e D_p,Q_p)$ explicitly loses overflow.
+The electronic-ceiling alternative keeps $H_p=\lambda_p t^2/2$ and
+unbounded stored charge, clipping only the readout. Both recover the
+original leading mean before ceilings. Initial-intercept-translated
+SAT-cutoff and 10\% larger ceilings are declared trials, not measured
+full wells. Undefined positive context values receive a recorded
+harmonic continuation. Group0 conditions electronic intercepts;
+observed DQ/jump branches remain fixed without reconstructing deposited
+cosmic-ray charge. These assumptions restrict the application.
+
+The complete native mean is then solved jointly, retaining the same
+318 response and 36 sky coordinates, all point and field nuisances,
+and a nonnegative $\kappa_e$. Its derivative includes the implicit
+first-group electronic intercept, translated ceiling, inverse linearity,
+IPC, native linearity and the source-derived piecewise OLS\_C branches.
+The positive incident-rate boundary is fixed before fitting: the inner
+$33\times33$ target and $17\times17$ field domains are trusted,
+with a harmonic exterior on the full 65-pixel context. An initial
+compact-template-edge prescription blocked optimization and is retained
+as an unsuccessful attempt, rather than a converged result.
+
+The 439-coordinate all-data problem converges with projected gradient
+$1.3215\times10^{-4}$ and $\kappa_e=1.59453\times10^{-7}$ electron$^{-1}$.
+Its original target $Q$ is $33330.090404$; official float32 OLS\_C
+replay gives $33330.089424$. The 424-coordinate training problem
+also converges, with projected gradient $1.6477\times10^{-4}$ and
+$\kappa_e=1.65400\times10^{-7}$ electron$^{-1}$. Held target E4,
+with independent point/flux/plane nuisances and its electronic intercept
+conditioned on observed group0 through the original boundary equation, converges
+to original-ERR $Q=10974.065420$ in native replay. This 0.41\%
+improvement remains grossly inadequate. Approximately 79\% of held
+$Q$ lies outside three pixels; pixels without native jump flags
+alone contribute $Q=9867.84$. The failure is therefore not explained
+by unresolved jump deposits alone. Full train/held sky/response/charge
+cross-covariance is retained as unconstrained local curvature.
+These are converged conditional mean problems with the original ERR
+metric, not optima of a completed illuminated-detector state likelihood.
+
+The missing stochastic term is addressed by an explicit conditional
+collection-boundary law, rather than inferred uniquely from its mean.
+Set $A_{pq}=\kappa_e(\lambda_p+\lambda_q)$ on each neighboring pair and
+$A_{pp}=-\sum_q A_{pq}$. Its local moment equations are
+\begin{align}
+ \dot\mu&=\lambda+A\mu, &
+ \dot C&=AC+CA^T+\operatorname{diag}(\lambda+A\mu),\nonumber\\
+ K(t,s)&=e^{A(t-s)}C(s), && t\geq s .
+ \label{eq:he0435-conditional-counting-covariance}
+\end{align}
+These equations recover the leading mean and the $\kappa_e=0$
+Poisson $\min(t,s)$ covariance. The implementation projects all
+interpixel and unequal-time terms through the actual read maps on the
+finite context, including source births outside selected pixels.
+This is a declared local affine/linear-noise completion, with explicit
+small-signal and charge-domain checks, not an exact stochastic overflow
+law or a microscopic BHSM state kernel. A mean-dependent Gaussian
+instrument likelihood requires $\log\det C$ and covariance derivatives;
+its full score is implemented separately from frozen-$C$ continuation.
+
+Reference noise has an actual source constraint. The observed-mask SIRS
+Jacobian retains top/bottom odd/even offsets, calibrated side kernels,
+rejection masks and shared cross-stamp columns. All 36 native group
+corrections reproduce pre-to-post pixels bitwise. However, READNOISE0282
+was estimated after reference, bias and IPC correction. Its delivered
+CDS diagonal therefore does not identify independent raw ADC noise.
+Adding a second reference variance to that diagonal would omit
+science/reference cross terms and may double count noise. The required
+relation is $C_{\rm post}=C_{ss}+JC_{rr}J^T-C_{sr}J^T-JC_{rs}$.
+
+The reference HISTORY names calibration dark programs 1453 and 4442.
+Two public full-frame NRCB3 RAPID exposures from program 1453, with two
+integrations each, now supply actual matched 18-read supports spanning
+all nine groups. Native bias/SIRS correction is applied without IPC
+deconvolution. Integration differences and declared spatial-frequency
+pooling estimate the joint science/reference covariance independently
+of lens residuals. The cross-covariance identity closes within
+$1.09\times10^{-10}$ DN$^2$. Post-correction nearest-neighbor covariance
+of 20--41 DN$^2$ and horizontal lag-64 covariance of 5--12 DN$^2$ show
+that diagonal-only noise is incomplete. Training the first epoch and
+testing the last gives variance ratios 0.698--0.819; this transfer
+variation remains explicit. Spatial stationarity, independent
+integrations and finite calibration sampling remain conditional inputs.
+No fitted variance multiplier is used to certify a failed mean.
+
+An actual full cross-stamp/amplifier covariance application replaces
+the old native read-variance component with that measured source
+component; it does not add a second copy of read noise. Exact
+source-derived native branch derivatives replace finite-step derivatives
+that crossed adaptive estimator branches. The saved static held target
+mean then has conditional $Q=3901.2783$ on 1156 pixels, with its raw
+RMS unchanged at 1.525146 SCI units: it still fails. A separate actual
+E4A contraction propagates the nonlocal noisy group0 intercept and
+science/reference cross terms. It retains the translated-cap noise
+path as a distinct unresolved boundary contribution. Neither calculation
+turns changed uncertainties into evidence that the optical mean is correct.
+
+Two explicit mean counterfactuals further test this failure. Moving the
+entire fitted electronic plane into photon carriers before collection
+and IPC, with the intercept re-solved from group0, changes held native
+$Q$ only from $10974.065420$ to $10972.215765$ (0.017\%). A separately
+frozen E4A experiment uses sixteen outside-ROI pixels and seven temporal
+contrasts per pixel that remove a constant and linear rate. The independently
+measured dark covariance predicts the target noise mean from these 112
+controls, without fitting target residuals. Under its stated Gaussian
+READ+DARK law, the predicted mean has RMS 0.010565 SCI units; raw target
+RMS changes only from 1.299277 to 1.299070, and original-ERR $Q$ worsens
+from 3385.7513 to 3425.0588. Including nominal Poisson control contamination
+as a best linear predictor leaves the conclusion unchanged. Neither
+background repartition nor this correlated-noise mean repairs the profile.
+
+The remaining illuminated-detector relation is substantive. The measured
+dark law and low-charge IPC reference do not specify signal-dependent
+carrier redistribution, nonlinear IPC or stochastic overflow at a physical
+well boundary. Even a conservative symmetric exchange with rate $h$ on
+an edge changes no mean but adds $2h\,vv^T$ to the covariance rate,
+where $v$ transfers one electron between its endpoints. Thus a mean
+equation alone cannot determine that covariance. This observation proves
+nonuniqueness; it is not an added physical exchange model. The translated
+cutoff additionally consumes the joint raw/group0/reference-control
+noise law. These inputs must be calibrated or declared explicitly before
+a full state-dependent likelihood can be optimized. The conditional
+moment law above, ground IPC and dark data fix specific parts, not that
+complete illuminated boundary law.
+
+These applications recover the histories, converge the declared
+static, early and native conditional means, and evaluate omitted covariance
+relations. They do not identify a unique post-saturation collection or
+source/background photon-partition law. The original native residuals
+remain the adequacy evidence before any reserved observation is opened.
+The microscopic state/source and same-domain Cauchy conditions in the
+Discussion are separate from these instrumental relations.

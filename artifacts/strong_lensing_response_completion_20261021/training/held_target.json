@@ -1,0 +1,104 @@
+{
+  "scope": "Already-consumed wholeE4target exposure held from joint response/scene training. All4separatefieldstarstamps remain in training; inherited targetROI/guesses available. No unused validation.",
+  "fit_success": true,
+  "fit_optimality": 0.06453494755710622,
+  "fit_nfev": 5,
+  "known_ERR_fit": {
+    "chi2": 11018.981761619052,
+    "native_pixels": 1156,
+    "data_jacobian_rank": 15,
+    "nominal_conditional_dof": 1141,
+    "conditional_p_value": 0.0,
+    "absolute_adequacy_pass": false,
+    "physical_validation_pass": false
+  },
+  "records": [
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "chi2": 2738.4148884173264,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1344.4833057048033,
+        673.8234522028764
+      ],
+      "flux": 4893.909583812648,
+      "background": [
+        0.47937112736370535,
+        0.2830393995735067,
+        -0.036460241980395505
+      ],
+      "response_grid_min": 1.8744945323810135e-05,
+      "sampled_point_response_min": 5.913403205699592e-05,
+      "response_moment_pixel": [
+        -0.10116698450176768,
+        -0.06752547950955469
+      ]
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "chi2": 3638.7137138770267,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1341.782800114589,
+        724.6921587010935
+      ],
+      "flux": 7482.491896087469,
+      "background": [
+        0.47937112736370535,
+        0.2830393995735067,
+        -0.036460241980395505
+      ],
+      "response_grid_min": 1.8673169334092598e-05,
+      "sampled_point_response_min": 7.022062868913771e-05,
+      "response_moment_pixel": [
+        -0.10407940564658913,
+        -0.060105903229265
+      ]
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "chi2": 2517.1274592134473,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1387.184144856025,
+        743.9362891917376
+      ],
+      "flux": 4352.995075824352,
+      "background": [
+        0.47937112736370535,
+        0.2830393995735067,
+        -0.036460241980395505
+      ],
+      "response_grid_min": 1.89535530816343e-05,
+      "sampled_point_response_min": 5.4960903002617555e-05,
+      "response_moment_pixel": [
+        -0.09958278150399594,
+        -0.06321055025027444
+      ]
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "chi2": 2124.725700111251,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1403.5330512152166,
+        686.9513959835122
+      ],
+      "flux": 2919.921436983752,
+      "background": [
+        0.47937112736370535,
+        0.2830393995735067,
+        -0.036460241980395505
+      ],
+      "response_grid_min": 1.9229627478727935e-05,
+      "sampled_point_response_min": 5.977854162687845e-05,
+      "response_moment_pixel": [
+        -0.09470742813698992,
+        -0.07358032860453688
+      ]
+    }
+  ],
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

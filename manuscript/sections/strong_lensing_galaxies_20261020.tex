@@ -1202,8 +1202,11 @@ electron-conserving group means: free pixel rates improve an internal
 temporal prediction, but coupling the same term to the dated optical
 profile worsens the held residual. A coherent shared sky and learned
 response covariance remove the assumption of independent fixed-PSF
-centroid errors; the executed nonconverged continuation nevertheless
-fails a held target exposure. Thus the calibrated instrumental
+centroid errors. The coupled conditional mean now converges, but
+still fails a held target exposure. Actual target histories and
+source-calibration darks supply new readout/covariance applications;
+their reduced quadratic noise score does not repair the raw mean.
+Thus the calibrated instrumental
 likelihood remains an empirical dependency of envelope-state
 inference, distinct from the microscopic state-to-source map. No
 field-star residual is assigned to an extra gravitational response.
@@ -1323,8 +1326,11 @@ is sharpened by an explicit valid-rate correction and two new consumed-data
 applications. Restoring 303 valid slopes gives $0.448$ mas raw RMS while
 all profiles still fail. An electron-conserving history term does not
 repair the held optical mean. A coherent sky with shared calibration
-uncertainty lowers training residuals at a provisional coupled iterate,
-but also fails a held-exposure profile. Precision inference therefore
+uncertainty lowers training residuals at a converged conditional optimum,
+but also fails a held-exposure profile. Actual histories and calibration
+darks identify missing temporal/spatial covariance and a noncommuting
+IPC/linearity composition; these are tested instrumental relations,
+not extra gravitational amplitudes. Precision inference therefore
 requires an adequate instrumental mean and stochastic/reference covariance,
 with the physical-state and global-matching dependencies still explicit.
 

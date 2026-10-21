@@ -1,0 +1,55 @@
+{
+  "selection": "metadata-only earliest and latest public program1453 NRCB3 FULL RAPID within actual0282 pedigree",
+  "sources": [
+    "jw01453022001_02301_00001_nrcb3_uncal.fits",
+    "jw01453020001_02201_00001_nrcb3_uncal.fits"
+  ],
+  "individual_RAPID_frame_indices_zero_based": [
+    [
+      0,
+      1
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      20,
+      21
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      35,
+      36
+    ],
+    [
+      40,
+      41
+    ]
+  ],
+  "integrations_zero_based": [
+    0,
+    1
+  ],
+  "pixels": "all2048x2048 science and reference pixels, raw ADC before IPC/refpix/linearity",
+  "program4442": "in-pedigree NRCB3 RAPID archive entries are subarrays; first FULL entry is outside pedigree",
+  "independent_of_HE0435_residuals": true,
+  "no_reserved_science_observations": true,
+  "source_script_sha256_before_acquisition": "6db8978fe13771b042aa3b7056131128cb924631d24f14e5cbd2b697982f545b",
+  "intended_estimator": "raw spatial/temporal summaries and full science-reference cross terms; finite4-realization rank explicit; any stationary pooling must be separately stated"
+}

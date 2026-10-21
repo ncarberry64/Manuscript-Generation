@@ -1,0 +1,46 @@
+{
+  "status": "same previously fixed500DN/DQ calibration screen applied to held dark; no spectrum adjustment",
+  "records": [
+    {
+      "exposure": 1,
+      "original_native_outputs": 1444,
+      "same_fixed_calibration_screen_retained": 1433,
+      "excluded_dark_particle_or_DQ": 11,
+      "conditional_calibration_held_Q": 961.6464284339879,
+      "Q_per_observation": 0.6710721761577026,
+      "projected_covariance_sha256": "ed1b470a3b186977285282497e12e83dac9085f47ac19c418cd08b4a6897a6e2"
+    },
+    {
+      "exposure": 2,
+      "original_native_outputs": 1444,
+      "same_fixed_calibration_screen_retained": 1430,
+      "excluded_dark_particle_or_DQ": 14,
+      "conditional_calibration_held_Q": 1948.3260416965697,
+      "Q_per_observation": 1.3624657634241746,
+      "projected_covariance_sha256": "1f10acb29e9ee27d46fea9ef351b268a123f570b86c1994202727d772bb75188"
+    },
+    {
+      "exposure": 3,
+      "original_native_outputs": 1443,
+      "same_fixed_calibration_screen_retained": 1424,
+      "excluded_dark_particle_or_DQ": 19,
+      "conditional_calibration_held_Q": 1235.854707722352,
+      "Q_per_observation": 0.8678754969960337,
+      "projected_covariance_sha256": "dfd0fa249ee91b0559e99345f4cf9564ce5c4b779847f3d25097f119c6b0426a"
+    },
+    {
+      "exposure": 4,
+      "original_native_outputs": 1445,
+      "same_fixed_calibration_screen_retained": 1433,
+      "excluded_dark_particle_or_DQ": 12,
+      "conditional_calibration_held_Q": 1049.328056460307,
+      "Q_per_observation": 0.732259634654785,
+      "projected_covariance_sha256": "98136d97153d96fb52db7b515c94a3ee8b85a0c2d455e50a04da517d3c63baef"
+    }
+  ],
+  "allnative_unfiltered_held_scores_preserved": "fixed_spectral_projection.json",
+  "interpretation": "Unscreened dark particle events are outside the calibration bulk-noise conditioning; same-screen transfer still varies by detector location/epoch and is not assumed universally calibrated.",
+  "mask_not_selected_by_PSFor_lens_agreement": true,
+  "physical_validation": false,
+  "source_sha256": "dca7c01e6d0366fbbdee2f6ba3f08fe32b39f3b3818ae656fc46d8e197dba7a6"
+}

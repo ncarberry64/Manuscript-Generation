@@ -1,0 +1,121 @@
+{
+  "status": "EXISTING_NATIVE_SEGMENT_AND_REFERENCE_CONTROL_SUPPLEMENT",
+  "file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00004_nrcb3_native_diagnostics.npz",
+  "sha256": "51a27787375cef30a02fc350a26b3504fc3facad60e11dc63cd6f403338a6bb2",
+  "main_history_file": "data\\strong_lensing_response_completion_20261021\\histories\\jw01198007001_02101_00004_nrcb3_histories.npz",
+  "main_history_sha256": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836",
+  "official_optional_file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jw01198007001_02101_00004_nrcb3_fitopt_fitopt.fits",
+  "official_optional_sha256": "0fc9f68b611158a0fc504cfa2852bb5d52a2f4dcedab934c7b6c7798c82efdef",
+  "arrays": {
+    "labels": [
+      5
+    ],
+    "bounds_xyxy": [
+      5,
+      4
+    ],
+    "reference_control_native_xy": [
+      32704,
+      2
+    ],
+    "native_optional_SLOPE": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_SIGSLOPE": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_VAR_POISSON": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_VAR_RNOISE": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_YINT": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_SIGYINT": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_PEDESTAL": [
+      5,
+      1,
+      65,
+      65
+    ],
+    "native_optional_WEIGHTS": [
+      5,
+      1,
+      4,
+      65,
+      65
+    ],
+    "native_optional_CRMAG": [
+      5,
+      1,
+      5,
+      65,
+      65
+    ],
+    "reference_control_mask_DQ": [
+      32704
+    ],
+    "reference_control_saturation_DQ": [
+      32704
+    ],
+    "reference_control_superbias_DQ": [
+      32704
+    ],
+    "reference_control_readnoise_CDS_DN": [
+      32704
+    ],
+    "reference_control_gain_e_per_DN": [
+      32704
+    ],
+    "reference_control_superbias_ERR_DN": [
+      32704
+    ],
+    "reference_control_raw_pixeldq": [
+      32704
+    ],
+    "reference_control_pre_sirs_pixeldq": [
+      32704
+    ],
+    "reference_control_final_pixeldq": [
+      32704
+    ]
+  },
+  "pre_sirs_control_DNU_disagrees_final_count": 32679,
+  "readnoise_reference_control_DN_min_max": [
+    5.349649906158447,
+    22.09040069580078
+  ],
+  "h1_h2_likelihood17_max_abs_J_difference_per_s": 0.001977965235710144,
+  "optional_intercept_scope": "Official post-correction segment YINT/SIGYINT retained with native segment axes. Not an exact noiseless pre-linearity reset state or its full covariance.",
+  "native_processing_rerun": false,
+  "main_history_overwritten": false,
+  "physical_admission": false
+}

@@ -1,0 +1,42 @@
+{
+  "status": "PASS_FOCUSED_APPLICATIONS_BUILD_AND_VISUAL_REVIEW",
+  "basis_commit": "06cf7c1b85d6605bfee0cc0d07fb2af86a66cae9",
+  "source_and_output_sha256": {
+    "manuscript/strong_lensing_main.tex": "39005b3efdec1bdc383a9c45316c7b0d49c1325d0a48d807d9cb024dff2f4104",
+    "manuscript/strong_lensing_main.pdf": "998a220c449e5bc8d8646ca7a89626d53c36984c1baae06bca7c97b20658fb26",
+    "manuscript/sections/he0435_response_repair_20261021.tex": "b7bda111e1161b3876b16402b00b0f559e06f9f1d45d7402026bb2d81378eaf1",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "60276d6048502b482a5778b800d6427ce977692f71a55628ed256dc760aed16e",
+    "docs/HE0435_RESPONSE_COMPLETION_20261021.md": "47c41bbaae06e08a6c82e5d2aa3bf0f0261878e9259e1f1ff53bc91f59c3651f",
+    "manuscript/figures/he0435_converged_held_residuals_20261021.png": "e21b0d6702fc08c82d0720c23b868ba4bab2f4bd34782750e1966c5c9cf18130",
+    ".github/workflows/strong-lensing-manuscript.yml": "19c784d5fc016b65c52f7729c29acfc2e2bb5f96ea7db874d2315f1806b9b0f0"
+  },
+  "focused_tests": {
+    "passed": 210,
+    "failed": 0,
+    "seconds": 27.32,
+    "scope": "Exact explicit list used by strong-lensing-manuscript.yml; no whole-repository pass claimed."
+  },
+  "build": {
+    "real_unmodified_MDPI_class": true,
+    "pages": 46,
+    "abstract_words": 179,
+    "warnings": 0,
+    "overfull": 0,
+    "underfull": 0,
+    "latex_log_sha256": "bc9f81be63775207a20541a377a6d9119448aa495123db28e6dc9dfff7849d28"
+  },
+  "preservation": {
+    "original_main_math_environments": 42,
+    "all_original_main_math_environments_unchanged": true,
+    "original_prediction_and_data_files_unchanged": true,
+    "delivered_package_unchanged": true
+  },
+  "scientific_scope": "Converged conditional native mean; source-calibrated covariance applications and unsuccessful held-exposure mean repairs. Full illuminated-detector likelihood and microscopic BHSM U/V source remain conditional/uncomputed.",
+  "held_original_ERR_Q": 10974.065419722,
+  "physical_admission": false,
+  "physical_validation": false,
+  "physical_guard": 2e-10,
+  "reserved_observations_opened": false,
+  "error_inflation_used_for_validation": false,
+  "review_type": "Internal independent computational/source review, not external peer review."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "INSTALLED_AND_NATIVE_APPLICATION_VERIFIED",
+  "official_sdist_sha256": "7a2eb8c152d4606c0f28fd937230669474e4d71484d2ea5a95c48b4e4b28b59c",
+  "original_source_sha256": "b9a9846168a99b3062924a7f112ab9dcd47caf4ccd02a7c753896dbecd2367fc",
+  "patched_source_sha256": "925ba564bfa717ed4db1a7816274294d6b45b22507f1bbd742f060a31d1ba11b",
+  "scope": "Windows guards for POSIX debug RSS/PID logging and literal-valued enum array dimensions required by MSVC. No numerical slope/segment/variance calculations edited. Not an unmodified official binary; local version suffix records portability patch. Added native pointer-sized ssize_t alias and PATH_MAX only for MSVC platform declarations.",
+  "initial_failure": "Official stcal1.18 source did not compile under Windows: sys/resource.h absent.",
+  "isolated_environment": ".venv-native-history",
+  "patch_file": "stcal_1p18_windows_portability.patch",
+  "short_build_path": "C:\\Users\\carbe\\.codex\\tmp\\h0435native20261021\\stcal-1.18.0",
+  "additional_constant_array": "Debug message-size constant converted to enum; allocation remains exactly1024characters.",
+  "native_version": "jwst2.0.1 / stcal1.18.0+winportable1",
+  "python": "3.13",
+  "numerical_gate_receipt": "../history_recovery.json",
+  "numerical_gate": "All20target/field patches recover native rate/ERR within original1e-4/1e-3 tolerance; actualcompact OLS_C exactly matches full-detector replay slopes.",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "wheel_sha256": "df973d7b9c81a5cb4f0c3e8b2fc151d1090739f68a1f5fa4c53296915a766a3a",
+  "initial_build_failures": [
+    "Officialsource includes POSIXsys/resource.h andunistd.h unavailableinMSVC",
+    "Long localbuild path prevented compiler generatedC++ output; moved build only toshorttaskcache",
+    "MSVCrequiresconstant enum dimensions, native pointer-sizedssize_t andPATH_MAX declarations"
+  ]
+}

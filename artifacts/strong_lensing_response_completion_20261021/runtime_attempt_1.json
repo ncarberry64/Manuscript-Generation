@@ -1,0 +1,9 @@
+{
+  "status": "CORRECTED_EXTRACTION_API_ERROR",
+  "exposure": "jw01198007001_02101_00001_nrcb3",
+  "stage": "After actual detector steps through jump/clean_flicker_noise, before first compact archive or slope application",
+  "error": "This stdatamodels RampModel has no err attribute. The extraction code incorrectly assumed it did.",
+  "correction": "Guard native ERR availability; retain actual covariance references and operation Jacobians. No ERR array is fabricated or copied from CAL.",
+  "effect": "Required one repeat of this new target-history preprocessing after correcting extraction; no scientific fit or previous field result changed.",
+  "physical_admission": false
+}

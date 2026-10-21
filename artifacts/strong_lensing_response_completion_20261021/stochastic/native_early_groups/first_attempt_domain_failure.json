@@ -1,0 +1,6 @@
+{
+  "status": "preserved domain failure before covariance execution",
+  "exception": "ValueError: Context contains undefined/nonpositive native rate pilot",
+  "source": "native_rate_pre_gain_scale_DN_s in actual 49x49 A context",
+  "resolution": "explicit provisional harmonic incident-rate continuation, individually recorded; no silent zero/clipping; no physical validation"
+}

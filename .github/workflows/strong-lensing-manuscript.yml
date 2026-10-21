@@ -21,6 +21,13 @@ on:
       - "tests/test_strong_lensing_*mask*.py"
       - "tests/test_strong_lensing_read_history.py"
       - "tests/test_strong_lensing_joint_scene.py"
+      - "tests/test_strong_lensing_*calibration*.py"
+      - "tests/test_strong_lensing_*covariance.py"
+      - "tests/test_strong_lensing_*response*.py"
+      - "tests/test_strong_lensing_native_*.py"
+      - "tests/test_strong_lensing_bounded_collection.py"
+      - "tests/test_strong_lensing_early_rate.py"
+      - "tests/test_strong_lensing_temporal_*.py"
       - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
       - "data/strong_lensing_revision_20261020/**"
@@ -50,6 +57,13 @@ on:
       - "tests/test_strong_lensing_*mask*.py"
       - "tests/test_strong_lensing_read_history.py"
       - "tests/test_strong_lensing_joint_scene.py"
+      - "tests/test_strong_lensing_*calibration*.py"
+      - "tests/test_strong_lensing_*covariance.py"
+      - "tests/test_strong_lensing_*response*.py"
+      - "tests/test_strong_lensing_native_*.py"
+      - "tests/test_strong_lensing_bounded_collection.py"
+      - "tests/test_strong_lensing_early_rate.py"
+      - "tests/test_strong_lensing_temporal_*.py"
       - "tests/test_he0435*.py"
       - "data/strong_lensing_observed_20261020/**"
       - "data/strong_lensing_revision_20261020/**"
@@ -107,6 +121,22 @@ jobs:
           tests/test_strong_lensing_rate_mask_integration.py
           tests/test_strong_lensing_read_history.py
           tests/test_strong_lensing_joint_scene.py
+          tests/test_strong_lensing_response_completion.py
+          tests/test_strong_lensing_group_calibration.py
+          tests/test_strong_lensing_bounded_collection.py
+          tests/test_strong_lensing_stochastic_response.py
+          tests/test_strong_lensing_reference_covariance.py
+          tests/test_strong_lensing_raw_dark_covariance.py
+          tests/test_strong_lensing_dark_covariance.py
+          tests/test_strong_lensing_early_rate.py
+          tests/test_strong_lensing_temporal_curvature.py
+          tests/test_strong_lensing_ipc_response.py
+          tests/test_strong_lensing_calibration_order.py
+          tests/test_strong_lensing_native_calibration.py
+          tests/test_strong_lensing_native_ols.py
+          tests/test_strong_lensing_native_completion.py
+          tests/test_strong_lensing_anchor_covariance.py
+          tests/test_strong_lensing_temporal_controls.py
 
       - name: Check the exact continuation component identities
         run: .venv-lensing/bin/python scripts/r1_screened_review/check_remaining_field_algebra.py --output /tmp/remaining_field_algebra_check.json

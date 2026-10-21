@@ -1,0 +1,79 @@
+{
+  "same_four_consumed_F115W_only": true,
+  "new_filters_or_observations": false,
+  "products": [
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jw01198007001_02101_00001_nrcb3_uncal.fits",
+      "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01198007001_02101_00001_nrcb3_uncal.fits",
+      "bytes": 83946240,
+      "sha256": "2ce9fa2e9d10a1d0dc802c2cfcc68ca7cff5b5b62f707b94d6f7aa8d068302c8"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jw01198007001_02101_00003_nrcb3_uncal.fits",
+      "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01198007001_02101_00003_nrcb3_uncal.fits",
+      "bytes": 83946240,
+      "sha256": "91a87c73751ba2abe8fd79d78c67ec4c55fc814afaa6d4c31b68dfe2e7c8938e"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jw01198007001_02101_00002_nrcb3_uncal.fits",
+      "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01198007001_02101_00002_nrcb3_uncal.fits",
+      "bytes": 83946240,
+      "sha256": "77cde044bd3f1942f5121cd42a8a6265eb50c07946bf3ffff99ccd99581b51ef"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jw01198007001_02101_00004_nrcb3_uncal.fits",
+      "url": "https://mast.stsci.edu/api/v0.1/Download/file?uri=mast:JWST/product/jw01198007001_02101_00004_nrcb3_uncal.fits",
+      "bytes": 83946240,
+      "sha256": "62175975fc999cd1ff248c2fc29aa67d3503b49f901fc8080224806dc5e9249e"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_gain_0094.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_gain_0094.fits",
+      "bytes": 16787520,
+      "sha256": "6fdf5a66751d5eab49d771c6e5be7ff63b9e759cdcb9422f65c53f26dfcdffc0"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_mask_0075.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_mask_0075.fits",
+      "bytes": 16801920,
+      "sha256": "afea238fcbeac24bf223761fff2bd1c7644bbfaed88e34cb23fb712feb9535b6"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_readnoise_0282.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_readnoise_0282.fits",
+      "bytes": 16787520,
+      "sha256": "30ab5afceb3eb95ba8f076a3bcc5776abd4750f6107273ba0a9f5288314557db"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_sirskernel_0002.asdf",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_sirskernel_0002.asdf",
+      "bytes": 661021,
+      "sha256": "89081d1c79862bff543fb1f4d706d4dd7d6e2a8b5da21042667651daa75a6541"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_flat_0667.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_flat_0667.fits",
+      "bytes": 50359680,
+      "sha256": "e5169ecacf29a9bd8365d3cc7302e6b85dc2ade4e6eebd7cdab8798d2c4f70e2"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_saturation_0100.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_saturation_0100.fits",
+      "bytes": 33580800,
+      "sha256": "1734f8b4ba30d44b6e8473e614ba9f831fd0ad2a6b484bbf9eb4a5d3c893a849"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_superbias_0180.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_superbias_0180.fits",
+      "bytes": 50359680,
+      "sha256": "ecd533f8ae007d38b1e6c58adbd5c5317eebf231e1d5b69baf57da0945773a6e"
+    },
+    {
+      "file": "data\\strong_lensing_response_completion_20261021\\native_cache\\jwst_nircam_linearity_0054.fits",
+      "url": "https://jwst-crds.stsci.edu/unchecked_get/references/jwst/jwst_nircam_linearity_0054.fits",
+      "bytes": 151015680,
+      "sha256": "e21ec1577441b7c581903dcc6b3630c9f02d1085b280245076b5271b73ff69c0"
+    }
+  ],
+  "dark_subset": "data\\strong_lensing_response_completion_20261021\\native_cache\\derived_jwst_nircam_dark_0337_first42.fits"
+}

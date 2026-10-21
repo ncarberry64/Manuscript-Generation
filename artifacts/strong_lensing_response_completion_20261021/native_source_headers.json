@@ -1,0 +1,94 @@
+[
+  {
+    "cal_file": "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00001_nrcb3_cal.fits",
+    "detector_header": {
+      "CAL_VER": "2.0.1",
+      "READPATT": "SHALLOW2",
+      "NINTS": 1,
+      "NGROUPS": 9,
+      "NFRAMES": 2,
+      "GROUPGAP": 3,
+      "TFRAME": 10.73677,
+      "TGROUP": 53.684,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "R_SIRSKL": "crds://jwst_nircam_sirskernel_0002.asdf",
+      "R_DARK": "crds://jwst_nircam_dark_0337.fits",
+      "R_FLAT": "crds://jwst_nircam_flat_0667.fits",
+      "R_GAIN": "crds://jwst_nircam_gain_0094.fits",
+      "R_LINEAR": "crds://jwst_nircam_linearity_0054.fits",
+      "R_MASK": "crds://jwst_nircam_mask_0075.fits",
+      "R_READNO": "crds://jwst_nircam_readnoise_0282.fits",
+      "R_SATURA": "crds://jwst_nircam_saturation_0100.fits",
+      "R_SUPERB": "crds://jwst_nircam_superbias_0180.fits"
+    }
+  },
+  {
+    "cal_file": "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00002_nrcb3_cal.fits",
+    "detector_header": {
+      "CAL_VER": "2.0.1",
+      "READPATT": "SHALLOW2",
+      "NINTS": 1,
+      "NGROUPS": 9,
+      "NFRAMES": 2,
+      "GROUPGAP": 3,
+      "TFRAME": 10.73677,
+      "TGROUP": 53.684,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "R_SIRSKL": "crds://jwst_nircam_sirskernel_0002.asdf",
+      "R_DARK": "crds://jwst_nircam_dark_0337.fits",
+      "R_FLAT": "crds://jwst_nircam_flat_0667.fits",
+      "R_GAIN": "crds://jwst_nircam_gain_0094.fits",
+      "R_LINEAR": "crds://jwst_nircam_linearity_0054.fits",
+      "R_MASK": "crds://jwst_nircam_mask_0075.fits",
+      "R_READNO": "crds://jwst_nircam_readnoise_0282.fits",
+      "R_SATURA": "crds://jwst_nircam_saturation_0100.fits",
+      "R_SUPERB": "crds://jwst_nircam_superbias_0180.fits"
+    }
+  },
+  {
+    "cal_file": "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00003_nrcb3_cal.fits",
+    "detector_header": {
+      "CAL_VER": "2.0.1",
+      "READPATT": "SHALLOW2",
+      "NINTS": 1,
+      "NGROUPS": 9,
+      "NFRAMES": 2,
+      "GROUPGAP": 3,
+      "TFRAME": 10.73677,
+      "TGROUP": 53.684,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "R_SIRSKL": "crds://jwst_nircam_sirskernel_0002.asdf",
+      "R_DARK": "crds://jwst_nircam_dark_0337.fits",
+      "R_FLAT": "crds://jwst_nircam_flat_0667.fits",
+      "R_GAIN": "crds://jwst_nircam_gain_0094.fits",
+      "R_LINEAR": "crds://jwst_nircam_linearity_0054.fits",
+      "R_MASK": "crds://jwst_nircam_mask_0075.fits",
+      "R_READNO": "crds://jwst_nircam_readnoise_0282.fits",
+      "R_SATURA": "crds://jwst_nircam_saturation_0100.fits",
+      "R_SUPERB": "crds://jwst_nircam_superbias_0180.fits"
+    }
+  },
+  {
+    "cal_file": "data\\strong_lensing_geometry_20261021\\native\\jw01198007001_02101_00004_nrcb3_cal.fits",
+    "detector_header": {
+      "CAL_VER": "2.0.1",
+      "READPATT": "SHALLOW2",
+      "NINTS": 1,
+      "NGROUPS": 9,
+      "NFRAMES": 2,
+      "GROUPGAP": 3,
+      "TFRAME": 10.73677,
+      "TGROUP": 53.684,
+      "CRDS_CTX": "jwst_1535.pmap",
+      "R_SIRSKL": "crds://jwst_nircam_sirskernel_0002.asdf",
+      "R_DARK": "crds://jwst_nircam_dark_0337.fits",
+      "R_FLAT": "crds://jwst_nircam_flat_0667.fits",
+      "R_GAIN": "crds://jwst_nircam_gain_0094.fits",
+      "R_LINEAR": "crds://jwst_nircam_linearity_0054.fits",
+      "R_MASK": "crds://jwst_nircam_mask_0075.fits",
+      "R_READNO": "crds://jwst_nircam_readnoise_0282.fits",
+      "R_SATURA": "crds://jwst_nircam_saturation_0100.fits",
+      "R_SUPERB": "crds://jwst_nircam_superbias_0180.fits"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "status": "fixed before spectral projection and target residual whitening",
+  "training": "earliest selected1453 epoch0 integration difference/sqrt2 only",
+  "calibration_holdout": "latest selected1453 epoch1; already summarized separately; not historically unused science",
+  "clock_cell": [
+    2040,
+    504
+  ],
+  "NRCB3_clock": "native rows reversed; odd amplifiers columns reversed",
+  "channels": "fouramplifiers\u00d7ninegroups, same innovation field; cross-amplifier spectra retained",
+  "law": "zero-mean stationary periodic Gaussian electronic/read+dark field with PSD matrices measured from independent dark Fourier outer products",
+  "frequency_bins": "signed powers-of-two Fourier-index bins, DC/Nyquist separate; piecewise constant perbin; no fitted smoothing choice",
+  "mask": "previously fixed mappedDQ/unsaturated/500DN calibration-only screen; masked periodogram normalized by coverage; no window deconvolution",
+  "variance": "spectral sums preserved by bin averaging; no noise multiplier, eigenfloor or additional correctedCDS/reference noise",
+  "limits": "one independent integration-difference realization per epoch; frequency pooling/stationarity/periodic boundary and finite sampling not identified instrument truth",
+  "HE0435_residuals_used_to_calibrate_noise": false,
+  "physical_validation": false
+}

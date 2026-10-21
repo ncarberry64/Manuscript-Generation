@@ -1,0 +1,120 @@
+{
+  "scope": "Alreadyconsumed E4target, trainedeta/skyfixed andindependentheldpoint/flux/plane fit. Sameconditionalpilotnoise; no unusedvalidation.",
+  "early_raw_chi2": 2277.353793741297,
+  "projected_KKT_max": 3.9310637066414245e-05,
+  "records": [
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "chi2": 608.6219775400998,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1344.4733346823941,
+        673.8347185121424
+      ],
+      "flux": 4869.362232270021,
+      "background": [
+        0.46638197733632897,
+        0.3037141846833058,
+        -0.3328548059666972
+      ],
+      "response_grid_min": 1.8764195905089763e-05,
+      "sampled_point_response_min": 7.605833723886355e-05,
+      "response_moment_pixel": [
+        -0.10464331572915883,
+        -0.06559743431972853
+      ]
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "chi2": 732.9080360320883,
+      "pixels": 284,
+      "centroid_xy_pixel": [
+        1341.775118615883,
+        724.7018051735516
+      ],
+      "flux": 7452.281636727286,
+      "background": [
+        0.46638197733632897,
+        0.3037141846833058,
+        -0.3328548059666972
+      ],
+      "response_grid_min": 1.8692297690495007e-05,
+      "sampled_point_response_min": 8.537302785279862e-05,
+      "response_moment_pixel": [
+        -0.10732859593008773,
+        -0.05828652951520241
+      ]
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "chi2": 513.7057282240186,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1387.1778058944765,
+        743.9448598507167
+      ],
+      "flux": 4388.1727428006525,
+      "background": [
+        0.46638197733632897,
+        0.3037141846833058,
+        -0.3328548059666972
+      ],
+      "response_grid_min": 1.8972457569387227e-05,
+      "sampled_point_response_min": 7.231034000104647e-05,
+      "response_moment_pixel": [
+        -0.10292511018186473,
+        -0.061342859511911985
+      ]
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "chi2": 422.11805194509043,
+      "pixels": 289,
+      "centroid_xy_pixel": [
+        1403.5152973382035,
+        686.9595859636493
+      ],
+      "flux": 2918.5222056483453,
+      "background": [
+        0.46638197733632897,
+        0.3037141846833058,
+        -0.3328548059666972
+      ],
+      "response_grid_min": 1.9248419364372902e-05,
+      "sampled_point_response_min": 7.760115639374761e-05,
+      "response_moment_pixel": [
+        -0.09839484657798986,
+        -0.07152588215743018
+      ]
+    }
+  ],
+  "original_full_native_mean_comparator": {
+    "scope": "Uncorrected low-charge optical mean compared with original full-native SCI and unchanged originalERR on matching selectedrows. This is a comparator, not the missing full nonlinear history-forward prediction.",
+    "Q": 13513.708919157853,
+    "records": [
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+        "Q_original_native_ERR": 3382.1432405587398,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+        "Q_original_native_ERR": 4723.290829286571,
+        "pixels": 284
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+        "Q_original_native_ERR": 2869.222996880699,
+        "pixels": 289
+      },
+      {
+        "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+        "Q_original_native_ERR": 2539.0518524318436,
+        "pixels": 289
+      }
+    ]
+  },
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Saved all-native coupled mean, one actual target and one actual FIELD patch. No optimizer, native read processing, unused data or change of saved parameters.",
+  "records": [
+    "jw01198007001_02101_00001_nrcb3_cal_A",
+    "jw01198007001_02101_00004_nrcb3_cal.fits"
+  ],
+  "direction_includes": "centroids, positive log-flux, shared318eta, electronic planes and kappa; bound sky coefficients held fixed.",
+  "checks": [
+    {
+      "dimensionless_step": 0.0002,
+      "relative_L2_error": 5.490951075053679e-10,
+      "maximum_absolute_whitened_direction_error": 6.633863036675791e-08,
+      "L2_analytic": 333.50930160056345
+    },
+    {
+      "dimensionless_step": 0.0001,
+      "relative_L2_error": 6.636915496820398e-10,
+      "maximum_absolute_whitened_direction_error": 6.760983572995372e-08,
+      "L2_analytic": 333.50930160056345
+    }
+  ],
+  "pass_relative_L2_below_1e-5": true,
+  "solution_sha256": "830c325ed5755086e3968adf113758baf033e1161d94dd2f6ce6dae512fe5740",
+  "source_sha256": "1da288fe1fe9182f06ebbcec5d6101e6ec20e1964984edbe3ad927571c5542fb",
+  "physical_validation_pass": false,
+  "physical_admission": false
+}

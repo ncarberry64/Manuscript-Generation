@@ -1,0 +1,16 @@
+{
+  "status": "Frozen before extracting the fixed perimeter-control values or evaluating their conditional mean; histories themselves were already consumed",
+  "scope": "One E4A kappa=0 cap1 saved-pilot diagnostic, no mean/noise fit and no reserved observations",
+  "exposure": "jw01198007001_02101_00004_nrcb3",
+  "patch": "A",
+  "center_context_xy": [32, 32],
+  "offsets_xy": [[-12,-12],[-6,-12],[0,-12],[6,-12],[12,-12],[12,-6],[12,0],[12,6],[12,12],[6,12],[0,12],[-6,12],[-12,12],[-12,6],[-12,0],[-12,-6]],
+  "selection": "All fixed 16 outside17x17 native pixels; omit a control only if any actual group DNU/SAT/JUMP or nonfinite prelinearity ADC, never replace or choose by residual agreement",
+  "contrast": "Seven orthonormal rows from complete QR complement of [constant, actual mean of two read times] over nine groups; no target pixel used to form observed controls",
+  "source_noise": "Unchanged earliest independent calibration READ+DARK spectral law, same-realization target/control covariance; no rescaling, floor, spectrum refit, or addition of original ERR",
+  "target_noise_map": "Existing direct-beta fixed-charge/fixed-cap noisy-G0 residual map with full H diag(ratio) G; original observed/anchor cross terms retained",
+  "conditional_mean": "m=C_target,control C_control,control^-1 z_control; compare original target residual with residual-minus-m and report conditional covariance separately",
+  "control_signal_assumption": "A constant-light affine ADC ramp is removed exactly; native inverse-linearity or cap curvature, variable sources and jumps can contaminate contrasts. Saved kappa0 pilot curvature is reported as a diagnostic, never used to tune controls",
+  "optional_photon_term": "If all control photon-transfer support is unsaturated in the declared state, report a separate fixed-source independent Poisson/read projection using positive preIPC pilot rates and actual inverse-linearity/H group maps; no target photons used to fit the term. Otherwise omit this term with a domain receipt",
+  "admission": "No component/conditional-noise application is physical validation. Raw RMS and original ERR Q remain primary unchanged-error comparisons. Guard2e-10 unchanged"
+}

@@ -1,0 +1,147 @@
+{
+  "status": "implemented conditional stochastic covariance and executed synthetic plus actual unsaturated early-group scan; source limitations explicitly derived",
+  "focused_verification": {
+    "command": ".venv-geometry/Scripts/python.exe -m pytest -q tests/test_strong_lensing_stochastic_response.py",
+    "passed": 12,
+    "seconds": 0.59,
+    "independent_checks": [
+      "original electron t2 mean and nonuniform gain",
+      "exact kappa-zero Poisson min-time kernel",
+      "independent moment ODE and unequal-time covariance",
+      "total count Poisson mean/variance conservation",
+      "positive completion local derivative",
+      "non-identification by same-mean different-noise generator",
+      "read averaging CDS factors",
+      "native photon vs ADC injection stage",
+      "full shared reference JCJ transpose",
+      "parameter-dependent Gaussian likelihood score including logdet",
+      "saturation/full-context domain rejection",
+      "explicit harmonic initializer maximum principle",
+      "first-order native curvature contraction versus resummed small-response kernel"
+    ]
+  },
+  "group_mapper_independent_review": {
+    "status": "pass for declared point-map/local derivative scope",
+    "original_map": "H=L(mean inverseL(q_read))-native_dark_group",
+    "photon_J": "dH/dN_e=Lprime(meanADC)/(N*g*Lprime(ADC_read))",
+    "ADC_J": "dH/dADC_read=Lprime(meanADC)/N",
+    "Hessian": "Lsecond(meanADC)*invLprime_r*invLprime_s/N^2 + delta_rs*Lprime(meanADC)*(-Lsecond_r/Lprime_r^3)/N",
+    "shared_bias_J": "-Lprime(meanADC) for a common group ADC offset before averaging; actual SIRS/reference-induced crosspixel paths must also be propagated",
+    "dark": "actual readwise physical dark before inverseL; native pipeline group dark subtracted afterwards; zero actual first-two group/ROI dark arrays recorded, no generic dark shot-noise law inferred",
+    "domain": "monotone inverse anchored to actual prelinearity branch; no silent extrapolation; native DQ fallback belongs to producing branch, not invented coefficients",
+    "expectation": "point-map H(Eq) differs from E[H(q)]; Hessian contraction actually evaluated separately, max contrast correction <.000921 DN on this early A/FIELD application",
+    "limits": [
+      "read_axis layout used is group/read/pixel (axis1)",
+      "actual readnoise0282 is already reference/IPC corrected; raw-noise stage identification unproven",
+      "shared_reference_factor diagonal ERR assumes a declared spatial covariance; full correlation not supplied by ERR",
+      "unknown post-saturation charge/overflow collection blocks later core context"
+    ]
+  },
+  "actual_scan": {
+    "input_sha256": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+    "records": [
+      {
+        "label": "A",
+        "kappa_e_inverse": 0.0,
+        "n": 289,
+        "raw_RMS_DN": 9.061150523803084,
+        "conditional_Q": 265.69315072198077,
+        "Q_plus_logdet": 1547.5972633997292,
+        "harmonic_context_count": 19,
+        "minimum_inferred_ADC_saturation_margin_DN": 18660.1468696513,
+        "max_resummed_minus_leading_contrast_DN": 0.0
+      },
+      {
+        "label": "A",
+        "kappa_e_inverse": 1e-07,
+        "n": 289,
+        "raw_RMS_DN": 18.784881019670372,
+        "conditional_Q": 279.49112936536324,
+        "Q_plus_logdet": 1561.3515221080884,
+        "harmonic_context_count": 19,
+        "minimum_inferred_ADC_saturation_margin_DN": 18948.06043379258,
+        "max_resummed_minus_leading_contrast_DN": 3.1556895975299994
+      },
+      {
+        "label": "A",
+        "kappa_e_inverse": 2e-07,
+        "n": 289,
+        "raw_RMS_DN": 34.2904266295363,
+        "conditional_Q": 320.7407578056595,
+        "Q_plus_logdet": 1602.5578357560314,
+        "harmonic_context_count": 19,
+        "minimum_inferred_ADC_saturation_margin_DN": 19236.142752890573,
+        "max_resummed_minus_leading_contrast_DN": 12.50497634020212
+      },
+      {
+        "label": "A",
+        "kappa_e_inverse": 4e-07,
+        "n": 289,
+        "raw_RMS_DN": 66.92333937979143,
+        "conditional_Q": 496.11726204955147,
+        "Q_plus_logdet": 1777.8489383439257,
+        "harmonic_context_count": 19,
+        "minimum_inferred_ADC_saturation_margin_DN": 19812.78138661042,
+        "max_resummed_minus_leading_contrast_DN": 49.09799618327088
+      },
+      {
+        "label": "FIELD",
+        "kappa_e_inverse": 0.0,
+        "n": 286,
+        "raw_RMS_DN": 11.446433480043964,
+        "conditional_Q": 291.07007932896005,
+        "Q_plus_logdet": 1535.1883628031305,
+        "harmonic_context_count": 2,
+        "minimum_inferred_ADC_saturation_margin_DN": 20372.69424103425,
+        "max_resummed_minus_leading_contrast_DN": 0.0
+      },
+      {
+        "label": "FIELD",
+        "kappa_e_inverse": 1e-07,
+        "n": 286,
+        "raw_RMS_DN": 19.86670410853363,
+        "conditional_Q": 307.9238693511867,
+        "Q_plus_logdet": 1552.0032006735883,
+        "harmonic_context_count": 2,
+        "minimum_inferred_ADC_saturation_margin_DN": 20657.769421966354,
+        "max_resummed_minus_leading_contrast_DN": 3.048230794236588
+      },
+      {
+        "label": "FIELD",
+        "kappa_e_inverse": 2e-07,
+        "n": 286,
+        "raw_RMS_DN": 34.54065598879385,
+        "conditional_Q": 351.9775060188841,
+        "Q_plus_logdet": 1596.018223333187,
+        "harmonic_context_count": 2,
+        "minimum_inferred_ADC_saturation_margin_DN": 20942.924123605386,
+        "max_resummed_minus_leading_contrast_DN": 12.080033275098685
+      },
+      {
+        "label": "FIELD",
+        "kappa_e_inverse": 4e-07,
+        "n": 286,
+        "raw_RMS_DN": 66.28911840738928,
+        "conditional_Q": 531.575227520947,
+        "Q_plus_logdet": 1775.5397636140578,
+        "harmonic_context_count": 2,
+        "minimum_inferred_ADC_saturation_margin_DN": 21513.442565962705,
+        "max_resummed_minus_leading_contrast_DN": 47.436265279422514
+      }
+    ],
+    "interpretation": "Conditional on the already consumed, response-contaminated native final-slope pilot. Coefficient scan does not identify physical kappa; no unused observations are consumed. Raw residuals worsen over scanned positive kappa. No covariance broadening fixes the mean.",
+    "native_ERR_note": "No RampModel group ERR is fabricated; same-map kappa0 diagonal Poisson/ADC comparator is labeled as derived."
+  },
+  "precise_remaining_relation": "An independently specified NRCB3 collection-boundary/IPC/fullwell response plus raw ADC/reference joint covariance is required. The old source mean and processed CDS marginals alone do not determine these. BHSM U,V contraction/state kernel remains a separate upstream preparation relation; no Wick/vacuum closure is supplied by detector Poisson counting.",
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "all_reserved_data_remain_unused": true,
+  "file_sha256": {
+    "code/strong_lensing_stochastic_response.py": "35a670e1fdb2cf73231fc3f373a718a053006a801e1af9ab49f78fd7ccb0fad1",
+    "scripts/run_he0435_stochastic_response.py": "e116dc29c0ca0508c55b5c7a0832dc619b80435c1c33c438f65f120f52cd0123",
+    "scripts/scan_he0435_early_group_covariance.py": "2097698b01ecde814701c929efd5076097598fe4fe23bbc85b0d54e93599a058",
+    "tests/test_strong_lensing_stochastic_response.py": "f39139f0138c388747347e75712cf37982bc32bc40686d72633538b1d341537d",
+    "code/strong_lensing_group_calibration.py": "fcea16a0e1f35f3bb56e6eab732ffe2e9eb0299e9c09b00fbb1036321232e9a8",
+    "tests/test_strong_lensing_group_calibration.py": "c223e26bee9e5dd83c736efb9869d7af087c5d2ea6099b6a4fdcb04ca14c9bee"
+  }
+}

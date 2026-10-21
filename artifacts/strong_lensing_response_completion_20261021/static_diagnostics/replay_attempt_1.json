@@ -1,0 +1,4 @@
+{
+  "status": "DIAGNOSTIC_EXPORT_STOPPED_BEFORE_FINAL_RECEIPT",
+  "cause": "Q expectation was evaluated before switching from training eta to all-data eta. Original saved all-data mean Q33639.0078831 correctly replayed, but compared against mixed-state34825.7949372. Fixed exporter to set matching eta before both sides. No original solver result changed; strict held nuisance solve will be repeated in corrected diagnostic."
+}

@@ -1,0 +1,77 @@
+{
+  "review": "Independent read-only native full-coupled source/adjoint review",
+  "source_sha256": {
+    "code/strong_lensing_native_completion.py": "dbb703a5ea8a4bc015089ae5d45b65267417f97bb7205268dfd4b4badc113d02",
+    "code/strong_lensing_native_calibration.py": "036211013a4e5e8b3dda9bffc1994a6c6ded61f9effcff73f4c53449e83d4bcc",
+    "code/strong_lensing_native_ols.py": "8e921f910aedfe9fa59ad2c78864aefce00fa5d17dc5a80aae86a89dd29ea3a6",
+    "code/strong_lensing_response_completion.py": "aa298ba071011c7c13b4292836f048811ed3fc10b0093bcbf584e4b0b7195830",
+    "tests/test_strong_lensing_native_completion.py": "f4ba861af5053897c2ad6febe505f08e97a23e534b53d17092d937fa324b47d9"
+  },
+  "focused_tests": "4completion/calibration tests PASS",
+  "additional_composite_stress_case": {
+    "nonuniform_gain_e_per_DN": [
+      1.4,
+      2.2,
+      3.0
+    ],
+    "rate_context_unknown": [
+      1
+    ],
+    "cap_context_unknown": [
+      0
+    ],
+    "storage_cap_active": true,
+    "read_adjoint_vs_forward_max_abs": 1.3877787807814457e-17,
+    "read_adjoint_vs_independent_finite_difference_max_abs": 2.2961237078344965e-11,
+    "finite_difference_step": 0.0001,
+    "finite_difference_scaled_kappa_directions": [
+      -2.2100764461552354e-06,
+      -4.698865900515089e-07,
+      1.0445905982018794e-06,
+      2.1221097386220286e-07,
+      3.3115733518569244e-06
+    ]
+  },
+  "confirmed_source_chains": [
+    "Readwise inverseL,H,nativeL,ZEROFRAME withsource gain on correct side",
+    "Implicit group0 beta derivatives sent to BOTH firstgroup physicalreads",
+    "Initial-intercept-translated cap derivative positivecapmult*mean(t0)*d(rate), through fixedcapmask",
+    "Fixedharmonic adjoint is same Dirichletlinear map, including nonlocal G/H source chain",
+    "Full65 optical source/scene and eta derivative columns sample same convolution; no secondIPCmean",
+    "Training skyanchor remains original E1; targetE4 excluded in training, all4FIELD calibration explicitlyretained",
+    "Value-only then derivative cache recomputesstate/Jac correctly; unchanged input reusesboth"
+  ],
+  "actionable_findings": [
+    {
+      "priority": "convergence correctness",
+      "file": "code/strong_lensing_response_completion.py:projected_gradient inherited by NativeCoupledScene.diagnostics",
+      "problem": "Absolute physical bound atol1e-8 wrongly marks interior kappa<1e-8 active despite scale1e-7",
+      "demonstration": {
+        "kappa_e_inverse": 5e-09,
+        "true_scaled_gradient": 1000.0,
+        "old_projected_gradient": 0.0,
+        "old_marked_at_lower": true,
+        "dimensionless_tolerance_projected_gradient": 1000.0,
+        "dimensionless_tolerance_marked_at_lower": false
+      },
+      "recommendation": "Native-only diagnostics with bound tolerances1e-8*parameter_scales or equivalent scaledcoordinates; preserve oldfrozenstatic diagnostics",
+      "status": "CORRECTED in NativeCoupledScene.diagnostics; oldstatic diagnostics unchanged",
+      "native_only_fix_verified": {
+        "scaled_KKT_kappa": 1000.0,
+        "incorrect_interior_lowerbound_classification": false,
+        "field_nuisance_max_excludes_kappa": true
+      }
+    }
+  ],
+  "manuscript_findings": [
+    "Describe precedingper-pixel Eq(native-read-group-map) as earlierconditionalapplication, notthe nowestablishedfullnominalIPCphysicalordering",
+    "Only convergedstatic/earlyproblemsremove theirstationarityambiguity untilnativefitpassesbothgates",
+    "E4targetsheld fromtraining whileE4FIELD calibratesresponse; avoidunqualifiedindependence ofentireexposure",
+    "Refresh allcontinuation-change numericclaims fromfinalnewinner33/17domain receipts, notearliercompact-edge mask"
+  ],
+  "not_a_new_fit_or_native_pipeline_execution": true,
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "remaining_implementation_blockers_found": [],
+  "domain_amendment_review": "Fixed trusted inner33target and inner17FIELD preIPC domain with positive harmonic exterior is explicitconditionalboundary; initialnativepredictionchange nowrecordedperpatch. Do not transplant oldmask continuation-change numbers tothisnewmask."
+}

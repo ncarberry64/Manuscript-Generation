@@ -22,5 +22,7 @@ data/strong_lensing_revision_20261020/hst/*_drc.fits
 
 # Isolated geometry-test runtime and reproducibly fetched native JWST exposures.
 .venv-geometry/
+.venv-native-history/
+data/strong_lensing_response_completion_20261021/native_cache/
 data/strong_lensing_geometry_20261021/native/
 data/strong_lensing_geometry_20261021/development/*_primary.pdf

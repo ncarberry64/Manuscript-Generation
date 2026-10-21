@@ -1,0 +1,879 @@
+{
+  "scope": "Actualraw-history domain diagnosis for already-consumed4F115Wexposures and matchingfield. No fit, raw\u2192physicalfullwell identification, or unused observation.",
+  "equations": "An observed rawDN>=65534 indicates the upper electronicADCcode. The SATreference is a pipeline calibration cutoff. Neither alone fixes physical Qwell, overflow/bleed fractions, post-thresholdcollection law, or valid nonlinear electron mapping afterSAT.",
+  "rows": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "A",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        769,
+        1241
+      ],
+      "bright_pixel_raw9_DN": [
+        14865.0,
+        35032.0,
+        53166.0,
+        60470.0,
+        60482.0,
+        60489.0,
+        60473.0,
+        60488.0,
+        60495.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 55684.83984375,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 61535.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 3,
+      "central7x7_reference_threshold_range_DN": [
+        55645.28125,
+        57695.9609375
+      ],
+      "likelihood_pixels_any_SAT": 15,
+      "likelihood_pixels_fewer_than9valid_groups": 15,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "B",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        766,
+        1292
+      ],
+      "bright_pixel_raw9_DN": [
+        18365.0,
+        48590.0,
+        61282.0,
+        61279.0,
+        61309.0,
+        61354.0,
+        61341.0,
+        61380.0,
+        61370.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 56612.19921875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 61370.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 6,
+      "central7x7_reference_threshold_range_DN": [
+        55853.19921875,
+        57947.12109375
+      ],
+      "likelihood_pixels_any_SAT": 59,
+      "likelihood_pixels_fewer_than9valid_groups": 59,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "C",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        811,
+        1311
+      ],
+      "bright_pixel_raw9_DN": [
+        12348.0,
+        24710.0,
+        36881.0,
+        48486.0,
+        57853.0,
+        61241.0,
+        61202.0,
+        61224.0,
+        61233.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 56582.76171875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 4,
+      "central7x7_late_ADC_max": 62161.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        54217.44140625,
+        58000.48046875
+      ],
+      "likelihood_pixels_any_SAT": 16,
+      "likelihood_pixels_fewer_than9valid_groups": 16,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "D",
+      "likelihood_valid_pixels": 288,
+      "firstgroup_brightest_native_xy": [
+        828,
+        1255
+      ],
+      "bright_pixel_raw9_DN": [
+        12104.0,
+        21232.0,
+        29991.0,
+        38649.0,
+        47026.0,
+        54411.0,
+        60093.0,
+        61965.0,
+        61950.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57250.6796875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 5,
+      "central7x7_late_ADC_max": 61950.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 2,
+      "central7x7_reference_threshold_range_DN": [
+        51312.078125,
+        57948.0390625
+      ],
+      "likelihood_pixels_any_SAT": 12,
+      "likelihood_pixels_fewer_than9valid_groups": 12,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3_histories.npz",
+      "label": "FIELD",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        900,
+        876
+      ],
+      "bright_pixel_raw9_DN": [
+        14724.0,
+        34837.0,
+        53007.0,
+        61921.0,
+        61949.0,
+        61961.0,
+        61971.0,
+        61986.0,
+        61992.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57204.6796875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 61992.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        54948.83984375,
+        57850.51953125
+      ],
+      "likelihood_pixels_any_SAT": 18,
+      "likelihood_pixels_fewer_than9valid_groups": 18,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "A",
+      "likelihood_valid_pixels": 288,
+      "firstgroup_brightest_native_xy": [
+        961,
+        1052
+      ],
+      "bright_pixel_raw9_DN": [
+        14210.0,
+        33324.0,
+        50875.0,
+        60937.0,
+        60964.0,
+        60974.0,
+        60983.0,
+        60925.0,
+        61016.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 56400.6015625,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 3,
+      "central7x7_late_ADC_max": 61578.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        55932.3203125,
+        58006.0
+      ],
+      "likelihood_pixels_any_SAT": 18,
+      "likelihood_pixels_fewer_than9valid_groups": 18,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "B",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        958,
+        1103
+      ],
+      "bright_pixel_raw9_DN": [
+        18067.0,
+        47144.0,
+        61682.0,
+        61675.0,
+        61674.0,
+        61679.0,
+        61701.0,
+        61720.0,
+        61750.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57036.3203125,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 61854.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 6,
+      "central7x7_reference_threshold_range_DN": [
+        54276.3203125,
+        58000.48046875
+      ],
+      "likelihood_pixels_any_SAT": 22,
+      "likelihood_pixels_fewer_than9valid_groups": 22,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "C",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1004,
+        1123
+      ],
+      "bright_pixel_raw9_DN": [
+        13031.0,
+        24170.0,
+        35028.0,
+        45657.0,
+        55138.0,
+        61859.0,
+        62946.0,
+        62931.0,
+        62964.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58123.76171875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 5,
+      "central7x7_late_ADC_max": 62964.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        55852.28125,
+        58123.76171875
+      ],
+      "likelihood_pixels_any_SAT": 16,
+      "likelihood_pixels_fewer_than9valid_groups": 16,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "D",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1020,
+        1065
+      ],
+      "bright_pixel_raw9_DN": [
+        12386.0,
+        20879.0,
+        29214.0,
+        37386.0,
+        45462.0,
+        52822.0,
+        58786.0,
+        62234.0,
+        62282.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57565.3203125,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 5,
+      "central7x7_late_ADC_max": 62282.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 2,
+      "central7x7_reference_threshold_range_DN": [
+        53245.0,
+        57565.3203125
+      ],
+      "likelihood_pixels_any_SAT": 12,
+      "likelihood_pixels_fewer_than9valid_groups": 12,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3_histories.npz",
+      "label": "FIELD",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1092,
+        687
+      ],
+      "bright_pixel_raw9_DN": [
+        14955.0,
+        28861.0,
+        42154.0,
+        54428.0,
+        63158.0,
+        63613.0,
+        63631.0,
+        63628.0,
+        63635.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58871.71875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 3,
+      "central7x7_late_ADC_max": 63635.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        53889.0,
+        58871.71875
+      ],
+      "likelihood_pixels_any_SAT": 16,
+      "likelihood_pixels_fewer_than9valid_groups": 16,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "A",
+      "likelihood_valid_pixels": 288,
+      "firstgroup_brightest_native_xy": [
+        1153,
+        863
+      ],
+      "bright_pixel_raw9_DN": [
+        13903.0,
+        32842.0,
+        50328.0,
+        61218.0,
+        61313.0,
+        61334.0,
+        61302.0,
+        61298.0,
+        61309.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 56601.16015625,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 3,
+      "central7x7_late_ADC_max": 63209.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 3,
+      "central7x7_reference_threshold_range_DN": [
+        55154.0,
+        58791.6796875
+      ],
+      "likelihood_pixels_any_SAT": 15,
+      "likelihood_pixels_fewer_than9valid_groups": 15,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "B",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1150,
+        914
+      ],
+      "bright_pixel_raw9_DN": [
+        20150.0,
+        50293.0,
+        63105.0,
+        63101.0,
+        63078.0,
+        63159.0,
+        63152.0,
+        63129.0,
+        63135.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58309.6015625,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 63135.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 6,
+      "central7x7_reference_threshold_range_DN": [
+        54354.51953125,
+        58816.51953125
+      ],
+      "likelihood_pixels_any_SAT": 22,
+      "likelihood_pixels_fewer_than9valid_groups": 22,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "C",
+      "likelihood_valid_pixels": 288,
+      "firstgroup_brightest_native_xy": [
+        1196,
+        933
+      ],
+      "bright_pixel_raw9_DN": [
+        12858.0,
+        24774.0,
+        36223.0,
+        47500.0,
+        57076.0,
+        62430.0,
+        62471.0,
+        62456.0,
+        62472.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57784.28125,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 4,
+      "central7x7_late_ADC_max": 62626.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        55845.83984375,
+        58914.9609375
+      ],
+      "likelihood_pixels_any_SAT": 16,
+      "likelihood_pixels_fewer_than9valid_groups": 16,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "D",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1212,
+        876
+      ],
+      "bright_pixel_raw9_DN": [
+        13090.0,
+        23840.0,
+        34209.0,
+        44298.0,
+        53431.0,
+        60318.0,
+        62726.0,
+        62685.0,
+        62685.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57997.71875,
+      "bright_pixel_groupdq": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 5,
+      "central7x7_late_ADC_max": 62685.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 2,
+      "central7x7_reference_threshold_range_DN": [
+        52579.83984375,
+        59179.921875
+      ],
+      "likelihood_pixels_any_SAT": 12,
+      "likelihood_pixels_fewer_than9valid_groups": 12,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3_histories.npz",
+      "label": "FIELD",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1283,
+        498
+      ],
+      "bright_pixel_raw9_DN": [
+        14630.0,
+        34555.0,
+        52635.0,
+        61682.0,
+        61653.0,
+        61657.0,
+        61635.0,
+        61616.0,
+        61639.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 56992.16015625,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 63725.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        54603.83984375,
+        59397.0390625
+      ],
+      "likelihood_pixels_any_SAT": 18,
+      "likelihood_pixels_fewer_than9valid_groups": 18,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "A",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1344,
+        674
+      ],
+      "bright_pixel_raw9_DN": [
+        15076.0,
+        30136.0,
+        44578.0,
+        56885.0,
+        62967.0,
+        63034.0,
+        63050.0,
+        63001.0,
+        63013.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58219.44140625,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 3,
+      "central7x7_late_ADC_max": 63013.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        53358.16015625,
+        59110.921875
+      ],
+      "likelihood_pixels_any_SAT": 16,
+      "likelihood_pixels_fewer_than9valid_groups": 16,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "B",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1342,
+        725
+      ],
+      "bright_pixel_raw9_DN": [
+        17734.0,
+        44551.0,
+        62481.0,
+        62769.0,
+        62777.0,
+        62795.0,
+        62800.0,
+        62763.0,
+        62807.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58055.6796875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 63523.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 6,
+      "central7x7_reference_threshold_range_DN": [
+        56220.28125,
+        58972.0
+      ],
+      "likelihood_pixels_any_SAT": 22,
+      "likelihood_pixels_fewer_than9valid_groups": 22,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "C",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1387,
+        744
+      ],
+      "bright_pixel_raw9_DN": [
+        14254.0,
+        31715.0,
+        48285.0,
+        60557.0,
+        62330.0,
+        62346.0,
+        62361.0,
+        62357.0,
+        62361.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 57620.51953125,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 3,
+      "central7x7_late_ADC_max": 62691.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 4,
+      "central7x7_reference_threshold_range_DN": [
+        50029.6015625,
+        59004.19921875
+      ],
+      "likelihood_pixels_any_SAT": 18,
+      "likelihood_pixels_fewer_than9valid_groups": 18,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "D",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1404,
+        687
+      ],
+      "bright_pixel_raw9_DN": [
+        12869.0,
+        22597.0,
+        32080.0,
+        41342.0,
+        50322.0,
+        57527.0,
+        62513.0,
+        62752.0,
+        62740.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58089.71875,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 5,
+      "central7x7_late_ADC_max": 62740.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 2,
+      "central7x7_reference_threshold_range_DN": [
+        50585.28125,
+        58746.6015625
+      ],
+      "likelihood_pixels_any_SAT": 12,
+      "likelihood_pixels_fewer_than9valid_groups": 12,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3_histories.npz",
+      "label": "FIELD",
+      "likelihood_valid_pixels": 289,
+      "firstgroup_brightest_native_xy": [
+        1474,
+        309
+      ],
+      "bright_pixel_raw9_DN": [
+        16659.0,
+        36782.0,
+        54997.0,
+        63151.0,
+        63155.0,
+        63155.0,
+        63182.0,
+        63127.0,
+        63172.0
+      ],
+      "bright_pixel_saturation_threshold_raw_DN": 58419.078125,
+      "bright_pixel_groupdq": [
+        0,
+        0,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "bright_pixel_valid_groups": 2,
+      "central7x7_late_ADC_max": 63234.0,
+      "central7x7_late_values_ge65534": 0,
+      "central7x7_late_above_SAT_reference": 5,
+      "central7x7_reference_threshold_range_DN": [
+        49696.55859375,
+        59087.921875
+      ],
+      "likelihood_pixels_any_SAT": 21,
+      "likelihood_pixels_fewer_than9valid_groups": 21,
+      "raw_ADC_clipping_is_not_fullwell_measurement": true
+    }
+  ],
+  "remaining_physical_freedom": [
+    "Physicalwell Qwell may differ from SATreference and electronicADCclip; actual lateADCplateau censors the readout but does not distinguish continuedstoredcharge, rejectedcharge, or redistributedoverflow.",
+    "Any boundedpositive collectioncompletion must state separate storedstate dynamics, ADCobservation, and overflow sink/neighbor channels. Recoveredgroups supply actualcensor/support constraints; they do not authorize extrapolating L afterSAT."
+  ],
+  "input_sha256": {
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00001_nrcb3_histories.npz": "5eccce890376c3eba306ea46a9a81acc5b5dceca1375eae43e471b0fdea949f2",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00002_nrcb3_histories.npz": "d19cff8ae511a46f31068094a8ab379bd9b6f45fd9d57df5155df84b23043f9f",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00003_nrcb3_histories.npz": "6426441a6775090d57858740ee2a246daf8870994da12a539743b54ed63d8a63",
+    "data/strong_lensing_response_completion_20261021/histories/jw01198007001_02101_00004_nrcb3_histories.npz": "0fcfc231023073db3b4b0120627f351d7147ff7d4007691da6e21092c84f5836"
+  },
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

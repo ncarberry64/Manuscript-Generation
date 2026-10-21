@@ -1,0 +1,294 @@
+{
+  "scope": "No-fit partition of unchanged official-native saved residuals. Jump flags identify potentially unmodeled deposited charge/segment-state response; they are not discarded to improve fit.",
+  "rows": [
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_A",
+      "label": "A",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2727.078809577097,
+        "raw_RMS_SCI": 1.2671855409010984
+      },
+      "native_jump_history": {
+        "pixels": 37,
+        "Q_original_native_ERR": 358.91636568937776,
+        "raw_RMS_SCI": 0.9613058667651182
+      },
+      "no_native_jump_history": {
+        "pixels": 252,
+        "Q_original_native_ERR": 2368.1624438877184,
+        "raw_RMS_SCI": 1.306079155310827
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 273,
+        "Q_original_native_ERR": 2544.1776360592667,
+        "raw_RMS_SCI": 0.5476635567971031
+      },
+      "fewer_eligible_groups": {
+        "pixels": 16,
+        "Q_original_native_ERR": 182.9011735178301,
+        "raw_RMS_SCI": 4.88736924998235
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 47.849291695805015,
+          "raw_RMS_SCI": 6.188783084043588
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 357.6853756028444,
+          "raw_RMS_SCI": 2.603554417661672
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 1173.454649185567,
+          "raw_RMS_SCI": 0.8827303859364529
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 210,
+          "Q_original_native_ERR": 1148.0894930928807,
+          "raw_RMS_SCI": 0.2569870070664897
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.0906704885843477,
+        "y": 0.2189890051856035
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_B",
+      "label": "B",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 3660.5687517559477,
+        "raw_RMS_SCI": 2.7990582925147525
+      },
+      "native_jump_history": {
+        "pixels": 17,
+        "Q_original_native_ERR": 429.6160126299997,
+        "raw_RMS_SCI": 2.7789759510338694
+      },
+      "no_native_jump_history": {
+        "pixels": 272,
+        "Q_original_native_ERR": 3230.9527391259476,
+        "raw_RMS_SCI": 2.800308656947487
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 267,
+        "Q_original_native_ERR": 3154.40345573563,
+        "raw_RMS_SCI": 0.7720526717403272
+      },
+      "fewer_eligible_groups": {
+        "pixels": 22,
+        "Q_original_native_ERR": 506.16529602031756,
+        "raw_RMS_SCI": 9.781909913746816
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 29.553542731139295,
+          "raw_RMS_SCI": 15.892919209760734
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 22,
+          "Q_original_native_ERR": 642.9760454290405,
+          "raw_RMS_SCI": 4.173208290734291
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 49,
+          "Q_original_native_ERR": 1504.9610943175355,
+          "raw_RMS_SCI": 1.3360731673693094
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 1483.0780692782325,
+          "raw_RMS_SCI": 0.3478291668622103
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.10877424029452938,
+        "y": 0.09434148435284755
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_C",
+      "label": "C",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2467.3111449010535,
+        "raw_RMS_SCI": 1.212455531132029
+      },
+      "native_jump_history": {
+        "pixels": 9,
+        "Q_original_native_ERR": 160.62543324640524,
+        "raw_RMS_SCI": 1.9743104925407555
+      },
+      "no_native_jump_history": {
+        "pixels": 280,
+        "Q_original_native_ERR": 2306.6857116546485,
+        "raw_RMS_SCI": 1.1798348471570188
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 271,
+        "Q_original_native_ERR": 2152.753593346996,
+        "raw_RMS_SCI": 0.6129959435810451
+      },
+      "fewer_eligible_groups": {
+        "pixels": 18,
+        "Q_original_native_ERR": 314.5575515540587,
+        "raw_RMS_SCI": 4.236166641431646
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 8,
+          "Q_original_native_ERR": 21.373184606529225,
+          "raw_RMS_SCI": 5.2324481221458825
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 19,
+          "Q_original_native_ERR": 619.5994335010968,
+          "raw_RMS_SCI": 2.960640389325267
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 972.8299052660593,
+          "raw_RMS_SCI": 0.7585286472654916
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 211,
+          "Q_original_native_ERR": 853.5086215273685,
+          "raw_RMS_SCI": 0.21693464619089783
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.14367255420830063,
+        "y": 0.24488289372968067
+      }
+    },
+    {
+      "name": "jw01198007001_02101_00004_nrcb3_cal_D",
+      "label": "D",
+      "all": {
+        "pixels": 289,
+        "Q_original_native_ERR": 2119.1067134879095,
+        "raw_RMS_SCI": 1.0472705827906934
+      },
+      "native_jump_history": {
+        "pixels": 35,
+        "Q_original_native_ERR": 157.07121708663422,
+        "raw_RMS_SCI": 1.7654670320826193
+      },
+      "no_native_jump_history": {
+        "pixels": 254,
+        "Q_original_native_ERR": 1962.035496401275,
+        "raw_RMS_SCI": 0.9046633019128787
+      },
+      "all9groups_DNU_SAT_eligible": {
+        "pixels": 277,
+        "Q_original_native_ERR": 1960.4680234858524,
+        "raw_RMS_SCI": 0.47095519679935205
+      },
+      "fewer_eligible_groups": {
+        "pixels": 12,
+        "Q_original_native_ERR": 158.63869000205702,
+        "raw_RMS_SCI": 4.614559411856036
+      },
+      "radial": [
+        {
+          "radius_pixel": [
+            0,
+            1.5
+          ],
+          "pixels": 7,
+          "Q_original_native_ERR": 51.46110969022195,
+          "raw_RMS_SCI": 5.538919435546507
+        },
+        {
+          "radius_pixel": [
+            1.5,
+            3
+          ],
+          "pixels": 21,
+          "Q_original_native_ERR": 520.285014467409,
+          "raw_RMS_SCI": 1.9376836501448464
+        },
+        {
+          "radius_pixel": [
+            3,
+            5
+          ],
+          "pixels": 51,
+          "Q_original_native_ERR": 664.3719112505972,
+          "raw_RMS_SCI": 0.5498369876655648
+        },
+        {
+          "radius_pixel": [
+            5,
+            13
+          ],
+          "pixels": 210,
+          "Q_original_native_ERR": 882.988678079681,
+          "raw_RMS_SCI": 0.19451327801247573
+        }
+      ],
+      "adjacent_standardized_residual_correlation": {
+        "x": 0.12045703698987788,
+        "y": 0.3016718996824462
+      }
+    }
+  ],
+  "source_sha256": "2b69697188efad1a22017c9ff6238d4a99a474169b571afe4f7196477838b97a",
+  "saved_mean_sha256": "9a965ddf0b3ef76e0536ae235c5460b38f651c1935c32f6a0e73acc430a040a0",
+  "physical_validation_pass": false,
+  "physical_admission": false,
+  "physical_guard": 2e-10
+}

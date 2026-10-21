@@ -1,0 +1,15 @@
+{
+  "reason": "Independent review: adding non-Gaussian Poisson controls does not preserve an exact Gaussian conditional-mean interpretation. Covariance formula is the best linear predictor/error covariance.",
+  "prior_report_sha256": "050f73cf9dc33cdeecf16b7b9be6bfd9226e4cd38224e0d6fe91b4e91a47e002",
+  "prior_arrays_sha256": "d49f6ca0f15958bb40e6c45a5d0507122328448f37bc258ba6c33ee6d75272f5",
+  "current_report_sha256": "6a043d820b25d89c07c98ac28b35f2aeab9d79b03a2188dd9744d4877a549204",
+  "current_arrays_sha256": "74b007e0e0a114f20ad7c733a49fb422e70d74849ddc58775d7d2b3555a969c9",
+  "array_key_renamed": {
+    "shot_aware_conditional_READ_DARK_covariance_SCI2": "shot_aware_linear_prediction_error_READ_DARK_covariance_SCI2"
+  },
+  "numerical_arrays_recomputed": false,
+  "numerical_values_changed": false,
+  "model_or_control_selection_changed": false,
+  "data_reopened_for_refit": false,
+  "main_Gaussian_READ_DARK_application_unchanged": true
+}

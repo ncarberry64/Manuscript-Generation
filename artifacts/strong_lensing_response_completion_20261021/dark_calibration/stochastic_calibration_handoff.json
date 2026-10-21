@@ -1,0 +1,178 @@
+{
+  "status": "Stochastic counting and source calibration implemented; synthetic and actual applications executed within the stated conditional scope.",
+  "primary_source_trail": "Actual READNOISE HISTORY \u2192 public MAST programs1453/4442 \u2192 exact18-read subsets, two epochs/two integrations \u2192 matched nine two-read groups \u2192 current native bias/SIRS \u2192 measured science/reference/cross/post covariance \u2192 fixed earliest spectrum \u2192 exact analytic native-rate projection \u2192 unchanged saved residual scores.",
+  "actual_equations": [
+    "A_pq = kappa*(lambda_p+lambda_q) for neighboring pixels; A*lambda = kappa*L(lambda^2). The explicit positive counting completion matches the original leading mean.",
+    "dmu/dt = lambda+A*mu; dC/dt = A*C+C*A^T+diag(lambda+A*mu); Cov[N(t),N(s)] = exp[A*(t-s)]*C(s), t>=s.",
+    "Cov[sum_t H_t*N_t] = integral B(u)*diag(exp[A*u]*lambda)*B(u)^T du, where B(u)=sum_(t>=u) H_t*exp[A*(t-u)]. Sparse exponential error bound and quadrature check retained.",
+    "C_postSIRS = C_science + C_correction - C_science,correction - C_correction,science, measured from the SAME independent-dark realization.",
+    "S_bin = mean_k Fourier(z)_k * Fourier(z)_k^dagger across36 amplifier/group channels, using fixed logarithmic frequency cells; PSD by construction, with no eigenvalue floor.",
+    "C_native_rate = sum_gh diag(W_g*Lprime_g*PHOT/flat) * K_gh(read-clock separation) * diag(W_h*Lprime_h*PHOT/flat).",
+    "Noisy-boundary residual Jacobian = J_observed - J_prediction,boundary * J_boundary,noise. Full nonlocal IPC maps are required; the scalar helper is explicitly pixelwise only.",
+    "Gaussian NLL = 0.5*(r^T*C^-1*r + logdet(C) + n*log(2*pi)). Its parameter score includes covariance derivatives; fixed STATIC scoring is not a full nonlinear state/noise likelihood."
+  ],
+  "executed_native_early_group_scan": "stochastic/native_early_groups/results.json retains actual A/FIELD coefficient scans, original mean residuals, ADC domain checks,19/2 explicit harmonic context initializers and native curvature contractions. This is not an identified kappa calibration.",
+  "calibration_source_data": {
+    "exact_original_pixel_transfer_bytes": 603979776,
+    "source_epochs": [
+      "jw01453022001_02301_00001_nrcb3_uncal.fits",
+      "jw01453020001_02201_00001_nrcb3_uncal.fits"
+    ],
+    "independent_realizations": "Two ramps per epoch give one integration difference/sqrt2 per epoch. Spatial pooling is an explicit stationarity assumption, not millions of independent ramp realizations.",
+    "all_owned_large_raw_intermediates_in_ignored_cache": true,
+    "canonical_cache": "data/strong_lensing_response_completion_20261021/native_cache/dark_calibration",
+    "compact_source_spectrum": {
+      "file": "data/strong_lensing_response_completion_20261021/dark_calibration/earliest_epoch_binned_cross_spectrum_512.npz",
+      "sha256": "311aa6cfabed3fadf0f41c5f75110c45cafb5b53b49fe230d420897bad5dc1f3",
+      "bytes": 2599865,
+      "spectral_matrix_shape": [
+        22,
+        10,
+        36,
+        36
+      ],
+      "calibration_window_coverage": [
+        0.9796788832720589,
+        0.9868518305759804,
+        0.9861443014705882,
+        0.9785108379289216
+      ],
+      "minimum_Fourier_modes_per_bin": 1,
+      "maximum_Fourier_modes_per_bin": 65024,
+      "protocol_sha256": "c676334a04fa21654fb873ef327371a158cfe3e0b5fb0edd787a01ebfe9cee68"
+    }
+  },
+  "native_analytic_projection": [
+    {
+      "exposure": "jw01198007001_02101_00001_nrcb3",
+      "n": 1444,
+      "native_C_value_bitwise_match": true,
+      "observed_nonunique_branches": 0,
+      "original_ERR_Q": 11022.277620218336,
+      "conditional_sourceCov_Q": 3520.1972812768777,
+      "raw_RMS_unchanged_SCI": 2.360087834998588,
+      "Q_per_observation": 2.437809751576785,
+      "target_FIELD_cross_cov_max_SCI2": 0.0016934260010692485
+    },
+    {
+      "exposure": "jw01198007001_02101_00002_nrcb3",
+      "n": 1444,
+      "native_C_value_bitwise_match": true,
+      "observed_nonunique_branches": 0,
+      "original_ERR_Q": 11721.092170147636,
+      "conditional_sourceCov_Q": 4119.719244953145,
+      "raw_RMS_unchanged_SCI": 1.7018730840591492,
+      "Q_per_observation": 2.852991166865059,
+      "target_FIELD_cross_cov_max_SCI2": 0.0013928964870376405
+    },
+    {
+      "exposure": "jw01198007001_02101_00003_nrcb3",
+      "n": 1443,
+      "native_C_value_bitwise_match": true,
+      "observed_nonunique_branches": 0,
+      "original_ERR_Q": 8542.348422424622,
+      "conditional_sourceCov_Q": 2610.6608405782044,
+      "raw_RMS_unchanged_SCI": 1.8385747813567486,
+      "Q_per_observation": 1.8091897717104675,
+      "target_FIELD_cross_cov_max_SCI2": 0.009502830618249029
+    },
+    {
+      "exposure": "jw01198007001_02101_00004_nrcb3",
+      "n": 1445,
+      "native_C_value_bitwise_match": true,
+      "observed_nonunique_branches": 0,
+      "original_ERR_Q": 12348.944091863732,
+      "conditional_sourceCov_Q": 4199.174347176566,
+      "raw_RMS_unchanged_SCI": 1.5870792311399144,
+      "Q_per_observation": 2.9060030084266892,
+      "target_FIELD_cross_cov_max_SCI2": 0.009511690485121516
+    }
+  ],
+  "strictheld_E4_unchanged_mean": {
+    "n": 1156,
+    "raw_RMS": 1.5251460047423564,
+    "Q": 3901.2782755346593,
+    "Q_per_observation": 3.37480819682929,
+    "logdet": -2727.2943165742,
+    "Gaussian_NLL": 1649.2849238648314,
+    "physical_validation": false
+  },
+  "later_dark_same_screen": [
+    {
+      "exposure": 1,
+      "original_native_outputs": 1444,
+      "same_fixed_calibration_screen_retained": 1433,
+      "excluded_dark_particle_or_DQ": 11,
+      "conditional_calibration_held_Q": 961.5335514798006,
+      "Q_per_observation": 0.6709934064757855,
+      "projected_covariance_sha256": "12793e938bf6ce7d2424890af8e78b6ee65955382e3610010e48bd8f6f70470a"
+    },
+    {
+      "exposure": 2,
+      "original_native_outputs": 1444,
+      "same_fixed_calibration_screen_retained": 1430,
+      "excluded_dark_particle_or_DQ": 14,
+      "conditional_calibration_held_Q": 1941.3695770796019,
+      "Q_per_observation": 1.3576011028528685,
+      "projected_covariance_sha256": "bbc08e95c8928c082d83086b4b800897dbb8eecfd886ca454c2332c97e3bc45d"
+    },
+    {
+      "exposure": 3,
+      "original_native_outputs": 1443,
+      "same_fixed_calibration_screen_retained": 1424,
+      "excluded_dark_particle_or_DQ": 19,
+      "conditional_calibration_held_Q": 1235.9232281066365,
+      "Q_per_observation": 0.8679236152434245,
+      "projected_covariance_sha256": "18f0619fa7dd4c78423b7f2bec46b17aa65e1eec90dbcc1fb350ca8fedef2023"
+    },
+    {
+      "exposure": 4,
+      "original_native_outputs": 1445,
+      "same_fixed_calibration_screen_retained": 1433,
+      "excluded_dark_particle_or_DQ": 12,
+      "conditional_calibration_held_Q": 1049.0335743375906,
+      "Q_per_observation": 0.7320541342202307,
+      "projected_covariance_sha256": "d7c36be1693f619a3a535fa24f201f10b82964e0e332f75a950fc73f95aa8e1f"
+    }
+  ],
+  "original_h1_projection_preserved": true,
+  "original_native_ERR_failure_preserved": true,
+  "focused_tests": {
+    "stochastic": 12,
+    "spectral_covariance": 6,
+    "raw_dark_covariance": 4,
+    "total_owned": 22,
+    "independent_root_chain_tests": 5
+  },
+  "independent_review_receipts": [
+    "independent_measured_covariance_review.json",
+    "independent_spectral_projection_review.json"
+  ],
+  "remaining_state_domain_relations": [
+    "The measured spectrum uses stationarity, periodic boundary, fixed data window and fixed frequency pooling. Finite epoch/state and sampling uncertainty remain; no calibration variance is fitted to lens residuals.",
+    "Measured READ+DARK is not pure white ADC noise. Its physical dark shot component must be separated from added source Poisson noise before claiming a complete instrument covariance.",
+    "Matching source-Poisson IPC/collection/full-well covariance and the nonlocal noisy-G0 boundary projection are not automatically supplied by fixed STATIC weighting matrices.",
+    "Flat, kernel, linearity and gain reference ERR marginals do not identify their complete shared calibration covariance.",
+    "The saved STATIC means remain unchanged; these scores are not the newly bounded native coupled-mean likelihood.",
+    "Microscopic BHSM U,V contractions and the optical statistical-state kernel remain separate from this conditional detector counting/readout law. Exclusive two-point, inclusive four-point and matched-occupation distinctions remain unchanged."
+  ],
+  "physical_guard": 2e-10,
+  "physical_validation": false,
+  "reserved_science_observations_unused": true,
+  "error_rescaling": false,
+  "calibration_state_residuals_used_to_tune_spectrum": false,
+  "no_commit_or_push_by_subagent": true,
+  "file_sha256": {
+    "code/strong_lensing_stochastic_response.py": "35a670e1fdb2cf73231fc3f373a718a053006a801e1af9ab49f78fd7ccb0fad1",
+    "code/strong_lensing_dark_covariance.py": "b22943a006972a0ea05c3ed6f0448c23e3e2b0f1ba3b66f5a7a2dacd6682f1eb",
+    "scripts/run_he0435_stochastic_response.py": "e116dc29c0ca0508c55b5c7a0832dc619b80435c1c33c438f65f120f52cd0123",
+    "scripts/scan_he0435_early_group_covariance.py": "2097698b01ecde814701c929efd5076097598fe4fe23bbc85b0d54e93599a058",
+    "scripts/calibrate_he0435_raw_dark_covariance.py": "45db566e9f62441df49faf99172aabfbeebc61d6297cd3103fa1bdde0ffeaa48",
+    "scripts/measure_he0435_raw_dark_covariance.py": "659ef6d7144daf470a4aebc0ce285abab2b941b9c9e0816b8eac7298fa35daba",
+    "scripts/project_he0435_dark_covariance.py": "c770a8e2c3a13306d378b34f22e7add3bf98e218a86d0eb53a2a7f455a41c74f",
+    "scripts/diagnose_he0435_dark_calibration_holdout.py": "343b82f6e0b2a61c3396d54fd669ccc1e06b2ffedd2bb085807cbfb7183363ca",
+    "tests/test_strong_lensing_stochastic_response.py": "f39139f0138c388747347e75712cf37982bc32bc40686d72633538b1d341537d",
+    "tests/test_strong_lensing_dark_covariance.py": "30a6075a05d4f0a3f0010ce611542784588baadc3370d393a0775a2a787710ac",
+    "tests/test_strong_lensing_raw_dark_covariance.py": "87d3afe9a0fac7ce8fdc7c8fb63d0997d8f83ca77cf5ce2f6ec56d0a34b0ec73"
+  }
+}
