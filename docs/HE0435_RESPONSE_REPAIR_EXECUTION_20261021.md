@@ -74,6 +74,8 @@ On the existing local `.venv-geometry` runtime:
 .venv-geometry/Scripts/python.exe -X utf8 scripts/replay_he0435_verified_rate_mask.py --root . --baseline-manifest artifacts/strong_lensing_response_repair_20261021/mask_verified_baseline_manifest.json --native-dir data/strong_lensing_geometry_20261021/native --output artifacts/strong_lensing_response_repair_20261021/mask_verified_native_replay.json
 .venv-geometry/Scripts/python.exe -X utf8 scripts/run_he0435_read_history.py
 .venv-geometry/Scripts/python.exe -X utf8 scripts/run_he0435_joint_scene.py --resume-development
+.venv-geometry/Scripts/python.exe -X utf8 scripts/export_he0435_joint_scene_residuals.py
+.venv-geometry/Scripts/python.exe -X utf8 scripts/check_he0435_joint_scene_stationarity.py
 .venv-geometry/Scripts/python.exe -X utf8 scripts/r1_screened_review/check_remaining_field_algebra.py --output artifacts/strong_lensing_response_repair_20261021/remaining_field_algebra_check.json
 ```
 
@@ -83,3 +85,9 @@ The first published delivery exposed a new whole-repository pytest import collis
 Whole-repository local collection then reaches 281 tests with that collision resolved, but stops on three unrelated pandas-import errors in the geometry-only local environment. No whole-repository pass or installation of unrelated dependencies is claimed; the focused 146-test result above is the executed application-suite result.
 
 `independent_response_review.json` independently checks the new source equations, held-group statistics, electron conservation, positivity, ranks, exact response family, active-bound limitations and saved residuals. `joint_scene/independent_covariance_review.json` independently checks the saved full covariance, cross correlations, moment transforms and analytic derivatives without refitting. Original failed adequacy flags are preserved. The manuscript build and rendering audit are recorded separately after regeneration.
+
+## Publication and regenerated paper
+
+The executed numerical applications and reviews are published at immutable revision `34694083c22d32261c6f0ac27211d8e3f984803d`; the focused Linux source/algebra and real-MDPI build jobs passed in [run 39634766236](https://github.com/ncarberry64/Manuscript-Generation/actions/runs/39634766236). The subsequent manuscript pins that archive and integrates the corrected current/superseded units, explicit native residual equations, actual held failures and precise remaining state/history/covariance dependencies.
+
+The final local Galaxies draft is **44 pages**, with a 187-word abstract, zero LaTeX warnings, no overfull/underfull boxes, no unresolved references/citations and all 42 original main math environments unchanged. All pages were rendered and reviewed. The old diagnostic figure was replayed from saved JSON with `scripts/plot_he0435_jwst_geometry.py --figures-only`, stacking its panels and enlarging labels without changing the original scientific receipt. The new residual figure uses full journal width. `paper_review/publication_manifest.json` binds the final sources, PDF and rendered contact sheets. These are internal computational/layout reviews, not external human peer review. The draft is not merged or submitted to a journal, and physical admission remains false.

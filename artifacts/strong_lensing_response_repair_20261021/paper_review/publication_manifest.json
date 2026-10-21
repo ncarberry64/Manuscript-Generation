@@ -1,0 +1,66 @@
+{
+  "status": "PASS_FINAL_BUILD_AND_VISUAL_PUBLICATION_REVIEW",
+  "numerical_archive_commit": "34694083c22d32261c6f0ac27211d8e3f984803d",
+  "mask_integration_commit": "f77af4f6a192f519d411866569bdef5853d795cb",
+  "basis_commit": "7ec9cea7b4d1c642e04407a6ef2f0a4eaef1baf9",
+  "source_and_output_sha256": {
+    "manuscript/strong_lensing_main.tex": "2e15ea3bed32c72958a148b5c564dc385c03d601d445af569c6a0f115505e7f3",
+    "manuscript/strong_lensing_main.pdf": "9228ad4c4c9adefb6291333e475ff483b582b8f30cfcf4e911724c33a8d5bd04",
+    "manuscript/sections/strong_lensing_galaxies_20261020.tex": "30c386859f20b5f25ea98c0075fd321d4bc661f3ae1c4fcfb66cf6b59805b764",
+    "manuscript/sections/he0435_geometry_20261021.tex": "2e158cc6e8da41e045caaee03e9ed65abf38e66287b14389aebbe7cc77930fde",
+    "manuscript/sections/he0435_response_repair_20261021.tex": "213c25936b24a8b4ee2e5ddbd302ed4b8ab2e0da315052ffc6ff241c78125e00",
+    "scripts/plot_he0435_jwst_geometry.py": "0e88c7e82cabc0a40899553b6e9ed261f63bf39eb378154faa6ced9b0e4ce961",
+    "manuscript/figures/he0435_jwst_geometry_diagnostic.pdf": "13776a67cbb238fbe0a3bfc18d7ca8848ce9fc7e96372398c03e8c1cd946043f",
+    "manuscript/figures/he0435_joint_scene_residuals_20261021.png": "87f8447b2fb395488a710387683523012ce82b318e936c86063293cd9efdfcee"
+  },
+  "build": {
+    "command": ".venv-geometry/Scripts/python.exe -X utf8 scripts/build_strong_lensing_manuscript.py",
+    "exit_code": 0,
+    "real_unmodified_MDPI_class": true,
+    "pages": 44,
+    "PDF_bytes": 827196,
+    "LaTeX_warnings": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 0,
+    "unresolved_references_or_citations": 0,
+    "abstract_words": 187,
+    "log_sha256": "2b83dd16a1514cdac0f2d46f19366f86b0fe2b28460c13e2c930c8a3c96c7ec2"
+  },
+  "visual_review": {
+    "status": "PASS",
+    "all_pages_rendered": 44,
+    "contact_sheets": {
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-01.png": "d352572b1d3c3ff79a1b2b0cc0021fe39865eebd520de6139faa16871cb4b36d",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-02.png": "06a09ae4f4455a9939de5a18e73c4440194c7df499f1a80a7108001c2a147cb6",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-03.png": "7447f7ecf187b37afa4f6c8da3453a4ca05b105fb7ad0d561bc5782006b96d85",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-04.png": "8d15d29cd78dd2827f5e3a98a3552d8b8dc64ecb5bc77e1da005b3ea045c33dd",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-05.png": "f94594246c17f96bc09bff4eab84b27e0cf9f3d9cb78207857b971425ad3cbaf",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-06.png": "960c9894dbcf55f4daf68927ddcf4c221c612c197ea8e1a3cfe4fb192384f709",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-07.png": "ad70c52005266da10c50f382b7abd83241e09e40106ecbbca6c4e6c4459b90f2",
+      "artifacts/strong_lensing_response_repair_20261021/paper_review/response-contact-08.png": "07056a7940d6c8a648488dfa79050e1f7c16d470eee84f436033e03130b3cf46"
+    },
+    "review": "Independent reviewer inspected pages1-30 of first final layout and found old Figure5 labels too small. Parent regenerated that figure in stacked/full-width format from saved results only, preserving its scientific receipt; parent inspected corrected page30, full-width new residual page35, title, equations, bibliography and final contact sheets. No clipping/overlap/illegible labels remain. Author-review status and blank journal-submission metadata retained.",
+    "figure5_replay_command": ".venv-geometry/Scripts/python.exe -X utf8 scripts/plot_he0435_jwst_geometry.py --figures-only",
+    "original_figure5_scientific_receipt_unchanged": true
+  },
+  "preservation": {
+    "original_math_environments": 42,
+    "original_math_environments_unchanged": true,
+    "template_and_unrelated_main_unchanged": true,
+    "original_prediction_and_data_paths_unchanged": true,
+    "old_scientific_fitter_not_modified": true
+  },
+  "scientific_scope": "Corrected rate eligibility and actual conditional temporal/coherent-sky applications; every incomplete calibration and adequacy failure retained. No physical validation, BHSM detection, microscopic U/V current solve, Wick factorization or new unused-observation claim.",
+  "validation": {
+    "focused_tests_passed": 146,
+    "field_identities_passed": 12,
+    "independent_new_operator_tests_passed": 13,
+    "numeric_commit_focused_Linux_run": "https://github.com/ncarberry64/Manuscript-Generation/actions/runs/39634766236",
+    "numeric_commit_focused_Linux_conclusion": "SUCCESS",
+    "whole_repository_local_suite": "Not run; collection diagnostic reported three missing-pandas import errors in local geometry-only venv."
+  },
+  "physical_admission": false,
+  "physical_guard": 2e-10,
+  "reserved_observations_opened": false,
+  "native_detector_processing_repeated": false
+}

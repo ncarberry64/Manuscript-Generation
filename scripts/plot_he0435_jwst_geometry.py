@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import matplotlib
@@ -112,13 +113,15 @@ def main() -> None:
         "remaining_dependency": "A demonstrably adequate instrument/scene mean response, independently calibrated and with its uncertainty characterized, is required before calibrated geometry inference from this dataset. Finite PSF uncertainty is not supplied by native ERR. These target photons have now been consumed for diagnosis and are not unused future validation data.",
         "physical_admission": False, "unchanged_physical_guard": 2e-10,
     }
-    (ART / "target_response_findings.json").write_text(json.dumps(findings, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    # A print-layout replay must preserve the original scientific receipt.
+    if "--figures-only" not in sys.argv:
+        (ART / "target_response_findings.json").write_text(json.dumps(findings, indent=2, allow_nan=False) + "\n", encoding="utf-8")
 
-    plt.rcParams.update({"font.size": 9, "axes.labelsize": 10, "axes.titlesize": 10,
-                         "legend.fontsize": 8, "pdf.fonttype": 42, "ps.fonttype": 42,
+    plt.rcParams.update({"font.size": 11, "axes.labelsize": 12, "axes.titlesize": 12,
+                         "legend.fontsize": 10.5, "pdf.fonttype": 42, "ps.fonttype": 42,
                          "axes.spines.top": False, "axes.spines.right": False})
-    fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.35))
-    fig.subplots_adjust(left=.075, right=.985, bottom=.23, top=.77, wspace=.29)
+    fig, axes = plt.subplots(2, 1, figsize=(7.4, 8.0))
+    fig.subplots_adjust(left=.12, right=.98, bottom=.16, top=.84, hspace=.95)
     fig.suptitle("HE 0435−1223: JWST F115W diagnostic — no validation", fontsize=13, y=.97)
     ax = axes[0]
     x = np.arange(5)
@@ -138,7 +141,7 @@ def main() -> None:
     ax.legend(ncol=2, loc="lower left", bbox_to_anchor=(-.015, 1.005), borderaxespad=0,
               frameon=False, handlelength=2.1, columnspacing=1.1)
     ax.text(.02, .96, "Coordinate RMS: 3.31 → 0.78 mas\nConventional and R1 nearly coincide", transform=ax.transAxes,
-            fontsize=8, va="top", bbox={"facecolor": "white", "edgecolor": "none", "alpha": .85})
+            fontsize=10.5, va="top", bbox={"facecolor": "white", "edgecolor": "none", "alpha": .85})
     ax.set_ylim(-5.45, 6.25)
     ax = axes[1]
     colors = ["#286a9d", "#b44c19", "#22845b", "#9163a4", "#333333"]
@@ -155,14 +158,17 @@ def main() -> None:
     ax.set_title("(b) Independent PSF fails field and target", loc="left", pad=44)
     ax.legend(ncol=3, loc="lower left", bbox_to_anchor=(-.02, 1.005), borderaxespad=0,
               frameon=False, handlelength=1.3, columnspacing=.65, handletextpad=.4)
-    ax.text(.02, .96, "All 20 fits fail fixed-ERR adequacy", transform=ax.transAxes, va="top", fontsize=8)
-    fig.text(.075, .095, "Independent PSF calibration and exposure-consistency gates both fail; every validation flag is false.", color="#a02e2e", fontsize=9, fontweight="bold")
-    fig.text(.075, .045, r"Conditional known-ERR statistics; no covariance inflation. Exposure consistency: $Q=432.3$ for 15 dof. No response refit.", fontsize=8)
+    ax.text(.02, .96, "All 20 fits fail fixed-ERR adequacy", transform=ax.transAxes, va="top", fontsize=10.5)
+    fig.text(.12, .075, "Independent PSF and exposure consistency both fail; validation remains false.", color="#a02e2e", fontsize=10, fontweight="bold")
+    fig.text(.12, .042, r"Known-ERR diagnostics; no inflation or response refit. $Q=432.3$ for 15 dof.", fontsize=10)
     FIG.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIG.with_suffix(".pdf"), metadata={"Title": "HE 0435 JWST geometry diagnostic: no validation", "Creator": "plot_he0435_jwst_geometry.py; saved JSON only"})
     fig.savefig(FIG.with_suffix(".png"), dpi=220)
     plt.close(fig)
-    for path in [FIG.with_suffix(".pdf"), FIG.with_suffix(".png"), ART / "target_response_findings.json"]:
+    outputs = [FIG.with_suffix(".pdf"), FIG.with_suffix(".png")]
+    if "--figures-only" not in sys.argv:
+        outputs.append(ART / "target_response_findings.json")
+    for path in outputs:
         print(path.relative_to(ROOT), digest(path))
 
 

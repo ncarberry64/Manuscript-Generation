@@ -1,0 +1,295 @@
+\subsection{Rate eligibility and read-history-aware response development}
+\label{sec:he0435-response-repair}
+
+The preceding first extraction contains a specific pixel-selection error.
+For the archived native JWST/NIRCam \texttt{CAL\_VER=2.0.1} rate products,
+\texttt{SATURATED} can report saturation in a later group while earlier
+groups still supply a usable slope \citep{STCalChanges}.
+Rejecting every such rate discards
+information. An additive, release-checked adapter retains a slope only
+when SCI and ERR are finite, ERR is positive and \texttt{DO\_NOT\_USE}
+is absent. It checks native two-dimensional ImageModel/rate provenance
+and completed ramp fitting; it does not apply this rule to raw GROUPDQ,
+mosaics or unverified releases. The original fitter, SCI/ERR/DQ arrays
+and frozen checkpoints are preserved.
+
+The supplied repair package cited the correct immutable source revision
+but carried a legacy-fitter digest inconsistent with that revision.
+Its default guard rejected the replay before data application. A
+separate integration manifest binds the actual original Git object and
+the same ten JSON inputs; it changes neither the fitter nor any physical
+prediction. The delivered files and failed guard remain archived.
+Canonical native-coordinate replay then reproduces all sixteen original
+centroids exactly in the current runtime. This is an explicit provenance
+correction, not a silent relaxation of an input check.
+
+The verified adapter restores 303 valid slope pixels. With the original
+fixed library response, the G1-reference raw $q$ RMS becomes
+$0.448457055$ mas and the R1-inclusive value $0.448562655$ mas.
+The exposure statistic becomes $253.027695$ for 15 coordinates.
+All sixteen absolute profile checks still fail, with quadratic residual
+per degree of freedom $27.57$--$83.55$. Restoring information tightens
+conditional centroid errors: the G1-reference formal geometry statistic
+is $1033.114$ for five coordinates despite its smaller raw discrepancy.
+The original $0.779400$ mas result remains the historical first extraction;
+the correction is a development reanalysis of the same photons.
+
+The package also contains completed response trials, preserved as delivered
+rather than rerun here. A positive field-trained response transfers partly,
+giving about $0.362$ mas raw RMS, but held field and target profiles fail.
+Finer response bases, limited spatial gradients, local-quasar calibration,
+dated optical color/diffusion and eight bounded pupil-phase modes also
+remain inadequate. Those prior trials do not authorize a new arbitrary
+PSF family or a coefficient fitted to the gravitational residual.
+
+The delivered native detector-history calculation supplies a more specific
+lead. A numerically compatible \texttt{stcal 1.18.0} ramp fit reproduces
+the archived field rate and ERR within $8.97\times10^{-8}$ and
+$1.65\times10^{-7}$ relative, respectively. The archived installation
+version is not recorded; numerical agreement is not proof of that
+installation history. The earlier incompatible replay is retained.
+No completed native detector processing is repeated for this integration.
+On exactly 289 matched field-star pixels, a separately calibrated
+first-two-read difference reduces normalized raw profile residual from
+$7.6653\%$ to $5.1787\%$. Its $p=0.00984653$ still fails the declared
+$0.01$ gate, formal centroid errors grow about threefold, and several
+wing annuli worsen. Neither the lower quadratic statistic nor a
+shorter common-time extraction is promoted to validation.
+
+The image operator must therefore expose the consumed histories and
+extended light. For a conditional BHSM sky and instrumental parameters
+$\eta$, the native pixel mean has the evaluated structure
+\begin{align}
+ I(\theta,\lambda)&=\sum_i F_i(\lambda)
+          \delta^2(\theta-q_i)+\sum_k a_k(\lambda)B_k(\theta),\nonumber\\
+ f_{ep}&=\int\!\dd\lambda\,T_e(\lambda)
+            \int\!\dd^2\theta\,
+            P_{ep}(\theta,\lambda;\eta)I(\theta,\lambda),
+ \label{eq:he0435-scene-native-operator}
+\end{align}
+followed by the read-accumulation and slope-estimation operator.
+Here $P_{ep}$ already includes the native pixel integral. The sky
+quadrature in this equation integrates over source position and does
+not integrate that pixel response a second time. The frozen optical
+map supplies the physical predicted point positions; during response
+development the measured $q_i$ are independent nuisance coordinates.
+Agreement with a lens prediction is never the calibration objective.
+The shared observed-sky basis describes only the sampled neighborhoods;
+these disjoint stamps do not uniquely reconstruct galaxy and lensed-host
+light over the full field.
+
+With the actual individual read times $t_{jr}$, we evaluate the
+following leading time/illumination candidate:
+\begin{align}
+ \mathbb E[G_{pj}]&=a_{p,s(j)}+\langle t\rangle_j f_p
+            +\frac{\kappa_e}{2g_p}\langle t^2\rangle_j
+                    [L((gf)^2)]_p,\label{eq:he0435-read-history-candidate}\\
+ \mathbb E[\widehat f_p]&=f_p+
+       \frac{\kappa_e}{2g_p}\sum_j w_{pj}\langle t^2\rangle_j
+                    [L((gf)^2)]_p .\nonumber
+\end{align}
+The symmetric neighbor-exchange graph $L$ has zero total flux, so this
+candidate conserves charge at each read on its specified domain.
+Pixel-specific slope weights can nevertheless yield a nonconserved sum
+of the final slopes; renormalizing those slopes would hide the history
+dependence. DNU and SAT exclude a group, while a jump starts a new
+intercept segment. The actual group average of $t^2$, rather than the
+square of the group mean time, is required. For static linear response,
+the group-estimator identities $w_p^TH_p=0$ and $w_p^Tm=1$
+eliminate segment intercepts $H_p a_p$ and return $f_p$;
+different histories alone cannot alter a static linear profile.
+The second line of Equation~\eqref{eq:he0435-read-history-candidate}
+is this linear group-estimator identity. Exact archived OLS\_C weights
+and individual ZEROFRAME branches are not reconstructed or applied;
+the actual new likelihood fits the corrected groups directly.
+This candidate is a specified leading response hypothesis, not a
+uniquely derived charge-migration law or a measured detector constant.
+In this direct-group application $f_p$ is in corrected DN s$^{-1}$,
+$g_p$ is the recorded gain in electrons per DN and $\kappa_e$ is in
+electron$^{-1}$. The graph acts on accumulated electron charge; conserving
+DN alone would not conserve charge when the gain varies. Fixed flat and
+photometric maps convert the optical surface-brightness prediction to
+the count units. An initial DN-conserving surrogate is retained as a
+superseded development implementation, with its unit correction explicit.
+The delivered gain is spatially constant at $2.05$ electrons/DN, so its
+predicted means coincide with the corrected electron formulation after
+rescaling the coefficient. A nonuniform-gain regression checks the
+general conservation law; no electron leakage is inferred for this
+particular constant-gain data set.
+
+Shared reads also require temporal covariance. With the reference
+CDS read-noise convention \citep{JWSTReadnoise201}, the conditional photon
+term for two two-read groups is
+\begin{equation}
+ C^{\rm ph}_{p,jk}=\frac{f_p}{4g_p}
+       \sum_{r,s}\min(t_{jr},t_{ks}),
+ \qquad C^{\rm read}_{p,jk}=
+       \delta_{jk}\frac{R_{{\rm CDS},p}^2}{4}.
+ \label{eq:he0435-group-noise}
+\end{equation}
+The common-read covariance must enter a held-group prediction, instead
+of summing early and full-rate likelihoods as independent data.
+Linearity derivatives, SIRS-induced spatial covariance, dark/reference
+covariance and observed-selection effects remain distinct limitations.
+Moreover, the stipulated mean exchange does not specify a stochastic
+electron-transfer law, so it does not determine redistribution-induced
+interpixel covariance. These are conditional mean applications with a
+frozen working covariance, not a complete detector likelihood.
+
+Learned optical-response uncertainty also induces correlations between
+image centroids. With one declared SVD convention on a whitened,
+dimensionless Jacobian, the local joint information must profile all
+shared response and sky nuisance directions together. A fixed-PSF
+two-by-two inverse information per image omits those correlations.
+All resulting uncertainty statements remain conditional when the mean
+profile is inadequate. The following new applications assess this
+functional structure on consumed development observations; none opens
+a reserved band, repeats the original blinded experiment, or changes
+the $2\times10^{-10}$ physical guard and false admission state.
+
+The first executed temporal application jointly fits the first eight
+groups with independent pixel rates and segment intercepts, using the
+ninth group only for a conditional prediction. Its working covariance
+is frozen from training-only rates and includes the shared-read term.
+The ninth group was already present in the delivered observations;
+this is an internal temporal holdout, not a new unused-photon test.
+The fit gives $\kappa_e=2.3627\times10^{-7}$ electron$^{-1}$ with local
+conditional curvature error $3.3518\times10^{-8}$ electron$^{-1}$.
+Training $Q$ falls from 1621.402 to 1566.524. On 257 retained held
+pixels, conditional-prediction $Q$ falls from 272.942 to 260.747 and
+raw residual RMS from 10.20884 to 9.67245 DN, a 5.25\% reduction.
+Free pixel rates make this a temporal-curvature diagnostic rather
+than optical-profile calibration. Missing calibration/spatial
+covariance prevents interpreting the curvature error as a complete
+detector-coefficient measurement.
+
+An actual coupled optical test then restricts the rate map to the
+fixed dated 4000 K, equal-sampling STPSF \citep{STPSFMeasuredOPD}, free centroid and flux, and
+one background plane. These six optical nuisance coordinates are
+jointly fitted with $\kappa_e$ through the original group operator.
+The full seven-parameter local covariance retains their correlations.
+Although training $Q$ improves from 11909.177 to 11569.456, the held
+group worsens: $Q$ rises from 1542.413 to 1573.909 for 257 pixels and
+raw residual RMS from 25.23791 to 25.58811 DN. The fitted conditional
+$\kappa_e\simeq2.3665\times10^{-7}$ electron$^{-1}$ therefore does not repair
+the optical mean. This controlled failure distinguishes a measurable
+temporal lead from a sufficient PSF response; no such coefficient is
+transferred to quasar extraction or assigned to a gravitational term.
+
+The separate rate-image application evaluates
+Equation~\eqref{eq:he0435-scene-native-operator} with a coherent sky.
+Each of the four disjoint image neighborhoods has a $3\times3$ basis
+of nonnegative observed-sky Gaussians of width $0.10$ arcsec and spacing
+$0.18$ arcsec. Its 36 coefficients are common to all exposures, with
+a declared zero-centered Gaussian penalty of scale 10 in SCI units
+restricted to nonnegative coefficients. Exact archived GWCS maps
+sample that sky at one quarter of a native pixel. The already
+pixel-integrated response is convolved once, with zero response
+outside its declared 25-pixel support and padded sky quadrature;
+the likelihood uses the canonical $17\times17$ native stamps.
+One detector background plane per exposure replaces independent
+quadratic backgrounds around each image. Point coordinates and fluxes
+remain free measurement nuisances. No physical lens prediction is
+loaded by this calculation.
+
+The response retains the delivered positive field family with 318
+coordinates:
+\begin{equation}
+ P(u;\eta)=\frac{\operatorname{spline}(P_0)(u)
+                    \exp[B(u)\eta]}{Z(\eta)}.
+\end{equation}
+Its original gauge removal and finite-grid normalization are retained.
+Four field-star stamps supply the calibration
+likelihood; the declared coefficient prior has scale $0.2$.
+The objective evaluated retains the original native residuals
+\begin{align}
+ r_{ep}&=\frac{d_{ep}-f_{ep}(q,F,a,\eta)
+                    -b_{e0}-b_{ex}x_p-b_{ey}y_p}{\mathrm{ERR}_{ep}},\nonumber\\
+ Q&=\sum_{ep}r_{ep}^2+Q_{\rm field}
+             +\|a/10\|^2+\|\eta/0.2\|^2 .
+ \label{eq:he0435-scene-original-residual}
+\end{align}
+Field flux, position and affine background are profiled at each
+evaluated response. Native ERR is unchanged. This sky is a finite
+observed-light nuisance description; its positive patches do not
+identify the separate galaxy and source-plane host components.
+
+First, field-only calibration uncertainty is propagated at the
+delivered response. If $A$ and $B$ are the whitened point/sky nuisance
+and response Jacobians and $F_p$ includes the stated sky penalty,
+the cut covariance is
+$C_p=F_p^{-1}+S C_{\eta,\rm field}S^T$ with
+$S=-F_p^{-1}A^TB$. This retains common calibration uncertainty
+without allowing target pixels to update its mean. A separate
+coupled Gauss--Newton application then updates point, sky and response
+coordinates together, re-profiles the field nuisances, and accepts
+a step only after re-evaluating the original nonlinear
+Equation~\eqref{eq:he0435-scene-original-residual}.
+All ranks use singular values of dimensionless columns above
+$10^{-10}$ times the largest value. Null projections and the
+distinction between data rank and prior-supported rank are recorded.
+
+One actual coupled step lowers target raw $Q$ from $50121.532$ to
+$34712.081$ on 4620 pixels; the complete field-plus-target-plus-prior
+objective falls from $57432.279$ to $45065.902$. It is an executed
+continuation iterate, not a converged fit. The largest unconstrained
+scaled residual gradient is $14477$ and includes active-bound
+directions; it is not a projected convergence statistic. A separate
+saved-mean evaluation gives a free detector-plane scaled
+half-objective gradient of $12254$ and projected nonnegative-sky
+violation $7605$, establishing a remaining stationarity failure.
+Thirteen sky coefficients are on their zero bound.
+The 414-column local joint problem has rank 414, but
+its covariance is unconstrained local curvature at this nonstationary
+iterate, not a truncated or calibrated posterior. The full
+$32\times32$ centroid covariance and $20\times20$ intrinsic-geometry
+covariance include shared-response, sky and cross-exposure terms.
+The largest absolute off-diagonal centroid correlation is $0.333$.
+Raw centers, full finite-grid response moments and baseline-relative
+moments are retained separately; no finite-grid convention establishes
+physical centroid accuracy.
+
+Figure~\ref{fig:he0435-joint-scene-residuals} retains the actual
+native residual pattern at this saved iterate, rather than displaying
+only a reduced objective.
+\begin{figure}[p]
+ \begin{adjustwidth}{-\extralength}{0cm}
+ \centering
+ \includegraphics[width=\fulllength]{figures/he0435_joint_scene_residuals_20261021.png}
+ \caption{Native $17\times17$ standardized residuals after the one-step
+ coherent-sky/response application. Rows are the four consumed
+ exposures; columns are images A--D. Color shows
+ $(\mathrm{mean}-\mathrm{SCI})/\mathrm{ERR}$, the opposite sign to
+ Equation~\eqref{eq:he0435-scene-original-residual}. Colors alone are
+ clipped at $\pm10$; raw arrays, quoted $Q$ and maximum absolute
+ residuals are not clipped. Excluded pixels are masked. All profiles
+ remain inadequate; this is development evidence, not validation.}
+ \label{fig:he0435-joint-scene-residuals}
+ \end{adjustwidth}
+\end{figure}
+
+A second application trains the shared sky and response on three
+target exposures, retaining all four field-star calibrations. The
+fourth target exposure is then evaluated with only its independent
+point/flux and detector-plane nuisances free. Its native residual is
+$Q=10906.483$ for 1141 nominal conditional degrees of freedom, and
+fails absolute adequacy. The full trained sky/response covariance,
+including their cross block, is propagated to its centroids; it is
+not used to inflate ERR or turn the failed profile into a pass.
+This whole-exposure check uses already consumed photons and a
+provisional training iterate. It is neither a fresh physical
+validation nor a definitive rejection of every converged coherent-sky
+model.
+
+The concrete remaining measurement dependency is thus an adequate
+calibrated mean together with its stochastic and reference covariance.
+The compact supplied read-history array covers one field star in one
+exposure, rather than all quasar groups and selections. Those actual
+histories are required for a joint target history/sky application;
+their absence from that compact delivery is not evidence that they
+do not exist. The failed optical transfer already prevents exporting
+the fitted $\kappa_e$ to the target images. Neither substituting an
+unmeasured target history nor assigning the field residual to an
+extra envelope amplitude supplies this dependency. The microscopic
+state/source and domain conditions stated in the Discussion remain
+separate from these instrumental limitations.

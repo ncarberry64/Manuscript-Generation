@@ -57,6 +57,13 @@ followed by a positive nearby G1 perturber in the full two-plane
 equations. Gaia is consumed in that revision. A further, separately
 frozen native JWST experiment tests its predictions without fitting
 the new target geometry or enlarging the errors.
+Its failed calibration motivates a separately labeled development
+calculation on those consumed photons: corrected native-rate selection,
+an electron-conserving read-history mean and a coherent sky with shared
+calibration covariance. Their actual residuals distinguish a repaired
+implementation from an adequate precision measurement. This extends
+the chain from a conditional optical transfer to the measurement
+operator that would be needed to infer its state dependence.
 
 BHSM determines the research question and interpretation. The R1 action
 is an effective representation with its own independent rolling scalar;
@@ -1085,6 +1092,21 @@ guard checks bring the focused suite to 123 passing tests; internal
 post-opening checks reproduce the saved extraction and scores without
 refitting. Reproduction checks are not observational validation.
 
+The additive response repair is documented in
+\path{docs/HE0435_RESPONSE_REPAIR_EXECUTION_20261021.md}, with its
+delivered byte manifest, failed initial source guard, explicit
+Git-bound provenance correction and canonical native replay. New
+read-group and joint-sky applications retain actual residuals,
+covariances, rank/bound diagnostics and superseded implementations
+under \path{artifacts/strong_lensing_response_repair_20261021/}.
+Independent reviews recompute held-group statistics and covariance
+transforms from saved arrays. The current focused suite has 146 passing
+tests, including the new mask, history and joint-scene checks; the
+12 algebra identities retain their separate successful audit.
+These implementation tests do not repair failed empirical adequacy.
+The repair source, numerical applications and reviews are frozen at
+revision \texttt{34694083c22d}.
+
 \section{Discussion: State Inference and Physical Scope}
 \label{sec:discussion}
 The calculation answers one forward and inverse modeling question.
@@ -1169,6 +1191,22 @@ An adequate response in Equation~\eqref{eq:he0435-instrument-response}
 must precede a physical interpretation of the remaining sub-mas
 residual. The unused bands remain reserved, rather than replacing
 the primary outcome.
+
+The subsequent rate-mask correction in
+Section~\ref{sec:he0435-response-repair} reduces the same-data raw RMS
+to $0.448$ mas by restoring 303 usable native slopes. Its reduced
+raw residual does not override the failed profiles or the larger
+formal geometry statistic after conditional errors tighten. The
+delivered common-time history lead is then tested through actual
+electron-conserving group means: free pixel rates improve an internal
+temporal prediction, but coupling the same term to the dated optical
+profile worsens the held residual. A coherent shared sky and learned
+response covariance remove the assumption of independent fixed-PSF
+centroid errors; the executed nonconverged continuation nevertheless
+fails a held target exposure. Thus the calibrated instrumental
+likelihood remains an empirical dependency of envelope-state
+inference, distinct from the microscopic state-to-source map. No
+field-star residual is assigned to an extra gravitational response.
 
 The approximation controls have separate meanings. The common GR2 term
 moves absolute image coordinates by up to $1.72$ microarcsec, while its
@@ -1281,7 +1319,13 @@ in Section~\ref{sec:he0435-jwst-geometry} improves raw geometry RMS from
 $3.31$ to $0.779$ mas on previously unused photons, but fails its
 instrumental and exposure-consistency gates. Neither conventional nor
 R1 receives a validation pass. The remaining precision-inference task
-requires an adequate instrumental mean response and its uncertainty,
+is sharpened by an explicit valid-rate correction and two new consumed-data
+applications. Restoring 303 valid slopes gives $0.448$ mas raw RMS while
+all profiles still fail. An electron-conserving history term does not
+repair the held optical mean. A coherent sky with shared calibration
+uncertainty lowers training residuals at a provisional coupled iterate,
+but also fails a held-exposure profile. Precision inference therefore
+requires an adequate instrumental mean and stochastic/reference covariance,
 with the physical-state and global-matching dependencies still explicit.
 
 Prepared light constrains an envelope encounter transfer. Identifying
@@ -1330,7 +1374,15 @@ This includes the separate pretarget protocols, independent LMC PSF
 file, exact native target windows, embedded official GWCS exports,
 raw residuals and failed adequacy diagnostics. Full native JWST files
 remain available from MAST under the recorded product URLs and hashes;
-the complete 470~MB native streams are not duplicated in the repository.}
+the complete 470~MB native streams are not duplicated in the repository.
+The additive native-rate repair, byte-preserved supplied package,
+actual read-group and coherent-sky applications, residual maps and
+independent computational reviews are archived at
+\href{https://github.com/ncarberry64/Manuscript-Generation/tree/34694083c22d32261c6f0ac27211d8e3f984803d}{\texttt{34694083c22d}}.
+The supplied detector processing is preserved without a new replay;
+the new applications and their failed adequacy gates are separately
+identified. Reserved observations are not included in the development
+fits.}
 % Numerical Gaia quasar targets were queried only after their separate freeze.
 \acknowledgments{The author acknowledges COSMOGRAIL, the original LCO
 investigators and CDS/VizieR for the public photometry, and NASA/ESA HST

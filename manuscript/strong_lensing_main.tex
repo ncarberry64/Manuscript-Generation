@@ -20,7 +20,7 @@
 \AuthorNames{Norman P. Carberry}
 \address[1]{Independent Researcher, Oconomowoc, Wisconsin, USA;\\
 Correspondence: \href{mailto:carberry8878130@hotmail.com}{carberry8878130@hotmail.com}}
-\abstract{Prepared environmental light probes a state-conditioned optical transfer in the Berger--Hopf interpretation. We construct a regular finite-body response from the specified R1 cubic scalar--tensor action, with fixed-preparation delay offsets of 25.9593 s and 8.6490 s. A positive conventional effective mass reproduces the retained metric, limiting state identifiability. An observed HE 0435-1223 baseline exposes brightness undercoverage, a conditional HST central-image tension and a 3.26 mas Gaia geometry discrepancy. Development diagnosis excludes a coordinate-frame correction as the principal remedy and identifies missing spatial variation in the restricted constant-tide model. An explicit positive nearby G1 perturber in the full two-plane equations reduces consumed-Gaia coordinate RMS to about 0.011 mas without enlarging catalogue errors; its central/A ratio is 0.00165 and remains HST-permitted. Predictions are frozen before the archival JWST F115W target files are downloaded. Their first diagnostic application reduces raw five-coordinate geometry RMS from 3.31 to 0.779 mas for both conventional and R1 models. Independent field-star PSF calibration, all target pixel fits and inter-exposure consistency nevertheless fail. This improvement is therefore not precision validation, and broader errors are not used to declare success. The calculation specifies the forward response, constructive geometry correction and remaining instrumental and physical-state dependencies; it establishes no BHSM detection or unique envelope-state measurement.}
+\abstract{Prepared environmental light probes a state-conditioned optical transfer in the Berger--Hopf interpretation. We calculate a regular finite-body response from the specified R1 cubic scalar--tensor action, obtaining fixed-preparation delay offsets of 25.9593 s and 8.6490 s. A positive conventional effective mass reproduces the retained metric, limiting state identifiability. We construct an HE 0435-1223 observed-light baseline and test separately frozen predictions. Brightness undercoverage, conditional HST central-image tension and a 3.26 mas Gaia discrepancy motivate source and geometry revisions. A positive G1 perturber reduces consumed-Gaia coordinate RMS to about 0.011 mas without enlarging errors, but the new JWST test fails instrumental adequacy. Correcting native-rate eligibility restores 303 valid slopes and gives about 0.45 mas raw geometry RMS for both reference and R1-inclusive controls; all sixteen profiles still fail. Actual read-group calculations evaluate an electron-conserving temporal mean, while a coherent observed-sky calculation propagates shared calibration uncertainty. The temporal term worsens the held optical-profile prediction. A provisional coupled sky/response step lowers training residuals but fails a held target exposure. These development applications specify the remaining measurement and physical-state dependencies; they establish neither precision validation nor a BHSM detection or unique envelope-state measurement.}
 \keyword{Berger--Hopf framework; strong gravitational lensing; time delays; envelope response; Vainshtein screening; effective-mass representation}
 \begin{document}
 % This is an author-review artifact, not a record of a journal submission.
@@ -173,5 +173,22 @@ Photutils Developers. PSF Photometry and Gridded PSF Models.
 \emph{Photutils Documentation}, version 3.1.1.
 Available online: \url{https://photutils.readthedocs.io/en/stable/user_guide/psf.html}
 (accessed on 21 October 2026).
+\bibitem{STCalChanges}
+STScI Calibration Software Developers. stcal Change Log:
+Saturation flag semantics (1.16.0) and segment-slope weighting (1.19.0).
+Available online: \url{https://stcal.readthedocs.io/en/latest/stcal/changes.html}
+(accessed on 21 October 2026).
+\bibitem{JWSTReadnoise201}
+Space Telescope Science Institute. READNOISE Reference File.
+\emph{JWST Calibration Pipeline Documentation}, version 2.0.1.
+Available online:
+\url{https://jwst-pipeline.readthedocs.io/en/2.0.1/jwst/references_general/readnoise_reffile.html}
+(accessed on 21 October 2026).
+\bibitem{STPSFMeasuredOPD}
+Space Telescope Science Institute. JWST Using Wavefronts Measured On Orbit.
+\emph{STPSF Documentation}.
+Available online: \url{https://stpsf.readthedocs.io/en/latest/jwst_measured_opds.html}
+(accessed on 21 October 2026). The delivered version 2.2.0 PSF and dated OPD
+used here are identified by exact hashes in the calculation archive.
 \end{thebibliography}
 \end{document}
