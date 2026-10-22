@@ -173,10 +173,10 @@
     "product/bhtracker/inference.py": "b5e3ea0b81079080fd1a1c3c0286e337afb4299fd58244ac240887f0d678dc5a",
     "product/bhtracker/forward.py": "54035f500c3c8f1b8ae606e45c178c4e9b09e31b083b152f52d479654b7066f5"
   },
-  "final_source_recheck_status": "PASS_ON_REVIEWED_SELECTOR_SOURCE; OWNER_FINITE_CANDIDATE_GUARDS_PENDING",
+  "final_source_recheck_status": "PASS_ON_OWNER_FROZEN_SELECTOR_AND_FINITE_GUARDS",
   "exact_Windows_CI_after_change": "PENDING_COORDINATOR_CI; current local Windows interpreter/dependencies differ from hosted job.",
   "observational_claims": "None. This is declared synthetic covariance numerical verification, not BH mass recovery or new interval coverage.",
-  "final_source_recheck": {
+  "selector_source_recheck_before_candidate_guards": {
     "utc": "2026-10-22T22:09:35.559047+00:00",
     "command": "python -m pytest tests/test_reviewed_inference_corrections.py -q -k 'covariance_resolution_accepts_zero or covariance_variance_resolution_is_reporting or reporting_covariance_resolution_across' --junitxml=validation/rc4_covariance_resolution_focused_tests.xml",
     "passed": 3,
@@ -274,6 +274,25 @@
         "minimum_motion_covariance_eigenvalue": 1.3920677165219728e-06
       }
     ],
-    "qualification": "Owner selector is a separately reviewed production change. This recheck pins its exact current source bytes; additional owner finite-candidate guards require a subsequent source recheck before final release binding."
+    "qualification": "Owner selector is a separately reviewed production change. This recheck pins its exact current source bytes; additional owner finite-candidate guards require a subsequent source recheck before final release binding.",
+    "junit_historical_development_commit": "e30ca44"
+  },
+  "final_source_recheck": {
+    "utc": "2026-10-22T22:11:18.785696+00:00",
+    "command": "python -m pytest tests/test_reviewed_inference_corrections.py -q -k 'covariance_resolution_accepts_zero or covariance_variance_resolution_is_reporting or reporting_covariance_resolution_across' --junitxml=validation/rc4_covariance_resolution_focused_tests.xml",
+    "passed": 3,
+    "failed": 0,
+    "deselected": 8,
+    "seconds": 1.13,
+    "junit_sha256": "038d7d4ab9a2144b8f58e848db03cc2a767062e9c9a4d78de4c3f50431dc451f",
+    "source_sha256": {
+      "product/bhtracker/inference.py": "35d0bba9db08feb22584d7234e62ea9bd6ef34d6feb325258892d51118f986f9",
+      "product/bhtracker/forward.py": "54035f500c3c8f1b8ae606e45c178c4e9b09e31b083b152f52d479654b7066f5",
+      "product/tests/test_reviewed_inference_corrections.py": "670ea1b8459678f8a7e286d278ea0a459ece5105ecc9bf0a187b32a3dad53824"
+    },
+    "all_four_derivative_step_covariance_variance_errors_within": 1e-09,
+    "all_four_derivative_step_mass_sigma_relative_errors_within": 1e-09,
+    "separate_matrix_checks": "Finite/symmetric/positive definite motion covariance and unchanged fitted Jacobian rank verified at each step.",
+    "qualification": "Final source includes owner selector and finite-candidate guards. Earlier detailed numerical records remain separately attributed to their exact earlier source hashes. No inference/source change by covariance reviewer."
   }
 }
