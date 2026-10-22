@@ -5,6 +5,9 @@ import hashlib
 from io import BytesIO
 import json
 import time
+import subprocess
+import sys
+from pathlib import Path
 import zipfile
 from urllib.error import HTTPError
 
@@ -140,3 +143,14 @@ def test_joint_export_rejects_parameter_tamper_even_with_rehashed_manifest(joint
     (root/'manifest.json').write_text(json.dumps(manifest),encoding='utf-8')
     with pytest.raises(ValueError,match='physical parameters'):
         replay_analysis(root,tmp_path/'replayed')
+
+
+def test_python_module_cli_propagates_failed_joint_replay_status(joint_result,tmp_path):
+    altered=copy.deepcopy(joint_result)
+    altered['photometric_predictions_magnitude'][0]+=.01
+    saved=tmp_path/'bad-forward-state.json'
+    saved.write_text(json.dumps(altered),encoding='utf-8')
+    checked=subprocess.run([sys.executable,'-m','bhtracker','joint','--scientific-version','v1','replay',str(saved)],
+                           cwd=Path(__file__).resolve().parents[1],capture_output=True,text=True,timeout=25)
+    assert checked.returncode==1,checked.stdout+checked.stderr
+    assert json.loads(checked.stdout)['passed'] is False

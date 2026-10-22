@@ -7,7 +7,7 @@ from .inference import fit,profile
 from .report import export_result,replay_analysis
 
 def main(argv=None):
-    parser=argparse.ArgumentParser(prog='blackhole-tracker',description='BHSM resolved compact-lens inference and native unresolved photometry; mass requires identifying observations')
+    parser=argparse.ArgumentParser(prog='blackhole-tracker',description='BHSM compact-lens research: resolved images, native photometry and optional joint astrometry; mass requires identifying observations')
     commands=parser.add_subparsers(dest='command',required=True)
     ex=commands.add_parser('example',help='write a reproducible synthetic measurement set')
     ex.add_argument('name',choices=list(TITLES),nargs='?',default='nearby_motion');ex.add_argument('--output',type=Path,required=True)
@@ -130,4 +130,6 @@ def main(argv=None):
     except (ValueError,OSError,KeyError) as error:
         parser.exit(2,f'Input/model error: {error}\n')
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import sys
+    sys.exit(main())
