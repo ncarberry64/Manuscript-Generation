@@ -86,3 +86,15 @@ def test_noiseless_injection_recovery_and_zero_parallax_mass_unavailable():
 def test_explicit_native_clock_and_axis_required():
     d=synthetic_document();d['metadata']['ra_axis']='RA_ANGLE_UNSPECIFIED'
     with pytest.raises(ValueError,match='east tangent'):JointData(d)
+
+
+def test_invalid_public_math_and_window_inputs_rejected():
+    with pytest.raises(ValueError):ou_whiten(np.arange(2.),np.ones(2),np.ones(2),np.nan,1.)
+    with pytest.raises(ValueError):ou_whiten(np.arange(2.),np.array([0.,1.]),np.ones(2),1.,1.)
+    with pytest.raises(ValueError):centroid_unit([[np.nan,1.]])
+    with pytest.raises(ValueError):centroid_unit([[1.,1.]],np.inf)
+    d=synthetic_document();d['astrometry'][0]['exposure_window_jd_tdb']=[float('nan'),2459999.]
+    with pytest.raises(ValueError,match='exposure window'):JointData(d)
+    d=synthetic_document()
+    for row in d['photometry']:row['instrument']='other'
+    with pytest.raises(ValueError,match='OGLE instrument'):JointModel(d,gp=True)

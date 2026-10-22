@@ -66,13 +66,18 @@ def hjd_utc_to_tdb(hjd,ra_deg,dec_deg,location,clock_offset_seconds=0.):
 
 
 def trajectory(times,p,earth):
+    times=np.asarray(times,dtype=float);earth=np.asarray(earth,dtype=float)
+    if times.ndim!=1 or earth.shape!=(len(times),2) or not np.isfinite(times).all() or not np.isfinite(earth).all():raise ValueError('finite one-dimensional times and matching NE Earth vectors required')
+    if not np.isfinite([p[k] for k in ['angle_source_minus_lens_rad','u0_heliocentric','t0_jd_tdb','tE_days','pi_E']]).all() or p['tE_days']<=0 or p['pi_E']<0:raise ValueError('finite physical trajectory parameters required')
     angle=p['angle_source_minus_lens_rad'];n=np.array([np.cos(angle),np.sin(angle)])
     b=np.array([-n[1],n[0]])
     return p['u0_heliocentric']*b+((np.asarray(times)-p['t0_jd_tdb'])/p['tE_days'])[:,None]*n+p['pi_E']*np.asarray(earth)
 
 
 def amplification(q):
-    squared=np.sum(np.asarray(q)**2,axis=-1)
+    q=np.asarray(q,dtype=float)
+    if q.ndim<1 or q.shape[-1]!=2 or not np.isfinite(q).all():raise ValueError('finite NE separation vectors required')
+    squared=np.sum(q**2,axis=-1)
     if np.any(squared<=1e-16):raise ValueError('exact critical alignment outside numerical domain')
     return (squared+2)/np.sqrt(squared*(squared+4))
 
@@ -84,7 +89,7 @@ def centroid_unit(q,blend_to_source=0.):
     unresolved stellar blend locations require a separately declared model.
     """
     q=np.asarray(q);a=amplification(q);g=np.asarray(blend_to_source)
-    if np.any(g<0):raise ValueError('luminous lens blend ratio must be nonnegative')
+    if not np.isfinite(g).all() or np.any(g<0):raise ValueError('luminous lens blend ratio must be nonnegative')
     return q*((a/(np.sum(q*q,axis=-1)+2)-g)/(a+g))[...,None]
 
 
@@ -96,6 +101,7 @@ def ou_whiten(times,error,residual,amplitude,tau_days,return_mean=False):
     Numeric duplicates are retained with independent marginal measurement noise.
     """
     t=np.asarray(times);sigma=np.asarray(error);r=np.asarray(residual)
+    if t.ndim!=1 or not len(t) or sigma.shape!=t.shape or r.shape!=t.shape or not np.isfinite(t).all() or not np.isfinite(sigma).all() or not np.isfinite(r).all() or np.any(sigma<=0) or not np.isfinite([amplitude,tau_days]).all():raise ValueError('finite matched OU arrays, positive errors/amplitude/tau required')
     if np.any(np.diff(t)<0) or min(amplitude,tau_days)<=0:raise ValueError('sorted times and positive OU amplitude/tau required')
     transition=np.exp(-np.diff(t)/tau_days)
     innovation=amplitude**2*(-np.expm1(-2*np.diff(t)/tau_days))
@@ -143,6 +149,9 @@ class JointData:
             if min(row['north_error_mas'],row['east_error_mas'])<=0:raise ValueError('positive native astrometric errors required')
             times=row['exposure_midpoints_jd_tdb']
             if not times or any(isinstance(t,bool) or not isinstance(t,(int,float)) or not np.isfinite(t) for t in times):raise ValueError('actual exposure midpoint samples required; no guessed precise HST epoch')
+            if 'exposure_window_jd_tdb' in row:
+                window=row['exposure_window_jd_tdb']
+                if len(window)!=2 or any(isinstance(t,bool) or not isinstance(t,(int,float)) or not np.isfinite(t) for t in window) or window[0]>min(times) or window[1]<max(times):raise ValueError('finite ordered exposure window must contain all actual midpoints')
             ids.append(row['source_row_id'])
         if len(ids)!=len(set(ids)):raise ValueError('distinct observation source row IDs required')
     @property
@@ -161,19 +170,21 @@ class JointModel:
         if not np.isfinite([cross_filter_correlation,astrometric_jitter_mas]).all() or not 0<=cross_filter_correlation<1 or astrometric_jitter_mas<0:raise ValueError('invalid assumed astrometric noise sensitivity')
         self.ref=float(d['reference_jd_tdb']);self.ra=d['ra_deg'];self.dec=d['dec_deg']
         self.pr=d['photometry'];self.ar=d['astrometry'];self.names=list(dict.fromkeys(r['instrument'] for r in self.pr))
-        self.tp=np.array([r.get('exposure_window_jd_tdb',[r['time_jd_tdb'],r['time_jd_tdb']])[0 if exposure_time_choice=='earliest' else 1] if exposure_time_choice in ['earliest','latest'] else r['time_jd_tdb'] for r in self.pr]);self.yp=np.array([r['magnitude'] for r in self.pr]);self.sp=np.array([r['magnitude_error'] for r in self.pr])
+        self.tp=np.array([float(np.average(r['exposure_midpoints_jd_tdb'],weights=[e['duration_seconds'] for e in r['native_exposure_metadata']])) if exposure_time_choice=='duration_weighted' and r.get('native_exposure_metadata') else r.get('exposure_window_jd_tdb',[r['time_jd_tdb'],r['time_jd_tdb']])[0 if exposure_time_choice=='earliest' else 1] if exposure_time_choice in ['earliest','latest'] else r['time_jd_tdb'] for r in self.pr]);self.yp=np.array([r['magnitude'] for r in self.pr]);self.sp=np.array([r['magnitude_error'] for r in self.pr])
         self.group=np.array([self.names.index(r['instrument']) for r in self.pr]);self.gp_indices=np.flatnonzero(self.group==self.names.index('OGLE')) if 'OGLE' in self.names else np.array([],dtype=int)
         if gp and not len(self.gp_indices):raise ValueError('OGLE instrument required for optional OGLE OU noise model')
         if source_parallax_prior is not None and (len(source_parallax_prior)!=2 or not np.isfinite(source_parallax_prior).all() or source_parallax_prior[1]<=0):raise ValueError('finite source parallax prior with positive sigma required')
         self.gp_indices=self.gp_indices[np.argsort(self.tp[self.gp_indices],kind='stable')]
-        self.ta=[];self.starts=[];self.counts=[]
+        self.ta=[];self.starts=[];self.counts=[];self.weights=[];self.weight_sums=[]
         for row in self.ar:
             times=np.asarray(row['exposure_midpoints_jd_tdb'])
             if exposure_time_choice=='earliest':times=np.array([row.get('exposure_window_jd_tdb',[min(times),max(times)])[0]])
             elif exposure_time_choice=='latest':times=np.array([row.get('exposure_window_jd_tdb',[min(times),max(times)])[1]])
-            elif exposure_time_choice!='all_midpoints_equal_weight':raise ValueError('unsupported exposure time choice')
-            self.starts.append(len(self.ta));self.counts.append(len(times));self.ta.extend(times)
-        self.ta=np.array(self.ta);self.counts=np.array(self.counts)
+            elif exposure_time_choice not in ['all_midpoints_equal_weight','duration_weighted']:raise ValueError('unsupported exposure time choice')
+            weights=np.array([e['duration_seconds'] for e in row['native_exposure_metadata']]) if exposure_time_choice=='duration_weighted' else np.ones(len(times))
+            if not np.isfinite(weights).all() or np.any(weights<=0) or len(weights)!=len(times):raise ValueError('positive matched declared exposure weights required')
+            self.starts.append(len(self.ta));self.counts.append(len(times));self.ta.extend(times);self.weights.extend(weights);self.weight_sums.append(float(sum(weights)))
+        self.ta=np.array(self.ta);self.counts=np.array(self.counts);self.weights=np.array(self.weights);self.weight_sums=np.array(self.weight_sums)
         self.ep=earth_heliocentric_ne(self.tp,self.ra,self.dec,d.get('ephemeris','builtin'))
         self.ea=earth_heliocentric_ne(self.ta,self.ra,self.dec,d.get('ephemeris','builtin'))
         self.eref=earth_heliocentric_ne([self.ref],self.ra,self.dec,d.get('ephemeris','builtin'))[0]
@@ -198,7 +209,7 @@ class JointModel:
             self.lower +=[np.log(1e-5),np.log(.05)];self.upper +=[np.log(.3),np.log(100)]
         self.lower=np.array(self.lower);self.upper=np.array(self.upper)
 
-    def average(self,value):return np.add.reduceat(value,self.starts,axis=0)/self.counts.reshape((-1,)+(1,)*(value.ndim-1))
+    def average(self,value):return np.add.reduceat(value*self.weights.reshape((-1,)+(1,)*(value.ndim-1)),self.starts,axis=0)/self.weight_sums.reshape((-1,)+(1,)*(value.ndim-1))
     def decode(self,x):
         p={'t0_jd_tdb':2450000.+float(x[0]),'tE_days':float(np.exp(x[1])),'u0_heliocentric':float(x[2]),
            'angle_source_minus_lens_rad':float(x[3]),'pi_E':float(x[4]),'instruments':{}}
