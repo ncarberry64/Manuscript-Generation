@@ -40,6 +40,12 @@ pathlib.Path('input.json').write_text(json.dumps(raw),encoding='utf8')
 result = fit(raw, family='gr', starts=1)
 assert result['status'] == 'TRACKED', result['diagnostics']
 assert result['bhsm_interpretation']['spherical_boundary']['status'] == 'AVAILABLE'
+meaning=result['bhsm_interpretation']
+assert meaning['interpretation_schema_version']==2
+assert meaning['core_surface']['status']=='PROPOSED_NOT_INFERRED'
+assert meaning['core_surface']['core_parameters_fitted'] is False
+assert all(v['value'] is None for v in meaning['core_surface']['unavailable_quantities'].values())
+assert json.loads((root/'theory'/meaning['source_provenance']['interpretation_contract_path']).read_text(encoding='utf8'))==meaning['core_surface']
 # Exercise the conditional provider and its packaged action/source pins.
 r1 = fit(raw, family='r1', starts=1, max_nfev=30)
 assert r1['model']['family'] == 'r1'
@@ -54,6 +60,7 @@ saved=json.loads(pathlib.Path('cli analysis/result.json').read_text())
 assert saved['data_summary']['sha256'] == result['data_summary']['sha256']
 import numpy as np
 np.testing.assert_allclose(saved['predictions'],result['predictions'],rtol=2e-11,atol=2e-11)
+assert saved['bhsm_interpretation']==result['bhsm_interpretation']
 assert json.loads(pathlib.Path('CLI replay/replay_check.json').read_text())['passed']
 from bhtracker.report import export_analysis_bundle, replay_analysis
 pathlib.Path('analysis.zip').write_bytes(export_analysis_bundle(result))

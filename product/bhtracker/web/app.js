@@ -370,8 +370,62 @@
     $('bhsm-weyl-convention').textContent = weyl; $('bhsm-weyl-convention').hidden = !weyl;
     $('bhsm-dictionary-details').hidden = !available;
     const radius = finite(model?.r0_pc) ? distance(model.r0_pc) : 'not supplied';
-    $('boundary-choice-summary').textContent = `Boundary representation radius: ${radius}${model?.worldtube_policy === 'supplied' ? ' · declared and fixed' : ' · model default, not measured'}.`;
+    $('boundary-choice-summary').textContent = `Derived boundary quantities use an enclosing radius of ${radius}${model?.worldtube_policy === 'supplied' ? ' · declared and fixed' : ' · model default'}. This is not a measured hard-boundary or horizon radius.`;
     renderSphericalBoundary(available ? interpretation.spherical_boundary : null, model);
+    renderCoreSurface(available ? interpretation.core_surface : null, available ? interpretation.source_provenance : null);
+  }
+  function renderCoreSurface(context, provenance) {
+    $('bhsm-core-surface-summary')?.remove();
+    $('bhsm-core-surface-details')?.remove();
+    if (!context || typeof context !== 'object') return;
+    const anchor = $('boundary-choice-summary'), panel = anchor?.parentElement;
+    if (!panel) return;
+    const summary = document.createElement('div'); summary.id = 'bhsm-core-surface-summary';
+    const labels = [['Spacetime-side surface', context.surface_summary], ['Core', context.core_summary]];
+    for (const [label, text] of labels) {
+      if (typeof text !== 'string' || !text) continue;
+      const paragraph = document.createElement('p'), heading = document.createElement('strong');
+      paragraph.className = 'interpretation-scope'; heading.textContent = `${label}: `;
+      paragraph.append(heading, document.createTextNode(text)); summary.append(paragraph);
+    }
+    if (summary.childElementCount) {
+      const qualification = document.createElement('p'); qualification.className = 'field-help';
+      qualification.textContent = 'Proposed BHSM interpretation · not a classification measured by this lens fit.';
+      summary.append(qualification); panel.insertBefore(summary, anchor);
+    }
+    const details = document.createElement('details'); details.id = 'bhsm-core-surface-details';
+    details.className = 'interpretation-dictionary';
+    const title = document.createElement('summary'); title.textContent = 'BHSM surface/core theory and provenance'; details.append(title);
+    function paragraph(text) {
+      if (typeof text !== 'string' || !text) return;
+      const element = document.createElement('p'); element.textContent = text; details.append(element);
+    }
+    paragraph(context.attribution);
+    paragraph(context.matching_summary);
+    paragraph(context.inference_scope);
+    const ledger = document.createElement('dl');
+    for (const entry of Array.isArray(context.claim_ledger) ? context.claim_ledger : []) {
+      if (!entry || typeof entry !== 'object' || typeof entry.statement !== 'string') continue;
+      const row = document.createElement('div'), label = document.createElement('dt'), content = document.createElement('dd');
+      label.textContent = typeof entry.label === 'string' ? entry.label : 'Theory statement';
+      const statement = document.createElement('p'); statement.textContent = entry.statement; content.append(statement);
+      if (typeof entry.status === 'string' && entry.status) {
+        const status = document.createElement('p'); status.className = 'dictionary-qualification';
+        status.textContent = `Scope: ${human(entry.status)}.`; content.append(status);
+      }
+      if (Array.isArray(entry.source_refs) && entry.source_refs.length) {
+        const sources = document.createElement('p'); sources.className = 'dictionary-qualification';
+        sources.textContent = `Source references: ${entry.source_refs.filter(value => typeof value === 'string').join('; ')}`; content.append(sources);
+      }
+      row.append(label, content); ledger.append(row);
+    }
+    if (ledger.childElementCount) details.append(ledger);
+    if (provenance && typeof provenance === 'object') {
+      const sourceDetails = document.createElement('details'), sourceTitle = document.createElement('summary'), sourceRecord = document.createElement('pre');
+      sourceTitle.textContent = 'Versioned source record'; sourceRecord.className = 'admission-details';
+      sourceRecord.textContent = JSON.stringify(provenance, null, 2); sourceDetails.append(sourceTitle, sourceRecord); details.append(sourceDetails);
+    }
+    panel.insertBefore(details, $('bhsm-dictionary-details'));
   }
   function renderSphericalBoundary(boundary, model) {
     const container = $('bhsm-spherical-boundary'); container.replaceChildren();
@@ -663,7 +717,7 @@
       line(frame, track);
       measured.forEach(({ point: p, sigma: sig, index }) => { errorBar(frame, p[0], p[1], sig[0], sig[1]); marker(frame, p[0], p[1], { label: `Pair-derived GR center, epoch ${epochs[index] ?? index}: (${number(p[0])}, ${number(p[1])}) mas` }); });
       if (track.length > 1) {
-        [0, track.length - 1].forEach(i => { const p = track[i]; frame.svg.append(svgElement('text', { x: frame.x(p[0]) + 7, y: frame.y(p[1]) - 8, fill: '#007f93', 'font-size': 9 }, `t=${number(epochs[i] ?? i, 3)}`)); });
+        [0, track.length - 1].forEach(i => { const p = track[i]; frame.svg.append(svgElement('text', { x: frame.x(p[0]) + 7, y: frame.y(p[1]) - 8, fill: '#007f93', 'font-size': 9 }, `t=${String(epochs[i] ?? i)}`)); });
       }
       $('track-title').textContent = 'Lens-center trajectory';
       $('track-caption').textContent = 'Dots: centers inferred from the observed pairs using the isolated GR identity, a diagnostic rather than an independent observable. Cyan: fitted center track. Bars show marginal 1σ uncertainties where identified; the fit retains the full covariance.';

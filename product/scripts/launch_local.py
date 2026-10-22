@@ -7,7 +7,7 @@ import sys
 import venv
 
 ROOT=Path(__file__).resolve().parents[1]
-VERSION='0.2.0rc1'
+VERSION='0.2.0rc2'
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)

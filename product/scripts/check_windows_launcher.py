@@ -52,7 +52,7 @@ def main():
             assert 'ready at http://127.0.0.1:' in line,line
             url=line.split('ready at ',1)[1].strip()
             with urllib.request.urlopen(url+'api/health') as response:health=json.load(response)
-            assert health['version']=='0.2.0rc1'
+            assert health['version']=='0.2.0rc2'
             receipt['checks']['actual_launcher_server']={'url':url,'health':health}
         finally:
             # Terminate only the process tree created by this test.

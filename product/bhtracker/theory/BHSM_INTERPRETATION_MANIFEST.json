@@ -21,6 +21,42 @@
       "archive": "C:\\Users\\carbe\\Downloads\\BHSM_v14_25_seam_threshold_Brown_York_package.zip",
       "member": "docs/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md",
       "role": "Same constrained gravitational boundary charge; no separate gravity addition"
+    },
+    {
+      "path": "BHSM_CORE_SURFACE_CONTRACT.json",
+      "sha256": "1b2a44d1d424cf1ad4786d57695c9ab5a9fa5946af7362f05c5e4fb52a251b97",
+      "role": "Versioned tracker interpretation adapter; the dated BHSM amendment supplies its attributed scientific source."
+    },
+    {
+      "path": "bhsm_sources/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.md",
+      "sha256": "db244adeb07e5e5d5df1689986d542cd83a58268a1ba09c53bb8ca3ccbc720f7",
+      "repository": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model",
+      "commit": "3c820fee74a5c715ef58bf30998edb1d7b26fe78",
+      "original_path": "docs/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.md",
+      "url": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/3c820fee74a5c715ef58bf30998edb1d7b26fe78/docs/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.md",
+      "role": "Dated core/surface proposal and scoped regular-side derivations; no derived terminal core-transition or new optical response is asserted."
+    },
+    {
+      "path": "bhsm_sources/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.json",
+      "sha256": "a5df72ff970b098a8963ebeb0694227e0f6412e10a726529f0a1436414d5dae4",
+      "repository": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model",
+      "commit": "3c820fee74a5c715ef58bf30998edb1d7b26fe78",
+      "original_path": "artifacts/current_semantics/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.json",
+      "url": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model/blob/3c820fee74a5c715ef58bf30998edb1d7b26fe78/artifacts/current_semantics/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.json",
+      "role": "Dated core/surface proposal and scoped regular-side derivations; no derived terminal core-transition or new optical response is asserted."
     }
-  ]
+  ],
+  "schema_version": 2,
+  "interpretation_revision": "2026-10-22",
+  "interpretation_contract_path": "BHSM_CORE_SURFACE_CONTRACT.json",
+  "theory_amendment": {
+    "author": "Norman P. Carberry",
+    "source_date": "2026-10-22",
+    "repository": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model",
+    "commit": "3c820fee74a5c715ef58bf30998edb1d7b26fe78",
+    "path": "docs/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.md",
+    "sha256": "db244adeb07e5e5d5df1689986d542cd83a58268a1ba09c53bb8ca3ccbc720f7",
+    "draft_pr": "https://github.com/ncarberry64/Berger-Hopf-Standard-Model/pull/470"
+  },
+  "packaging_note": "Sources are copied byte-for-byte. Relative document links refer to the original repository paths at the pinned commit; use each public source URL for its original context."
 }

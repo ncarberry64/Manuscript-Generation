@@ -1,4 +1,24 @@
-# Blackhole Tracker 0.2.0rc1
+# Blackhole Tracker 0.2.0rc2
+
+This release fixes the trajectory date-label rounding defect and integrates Norman P. Carberry's dated core/surface amendment through the shared BHSM interpretation. It preserves the ordinary compact-lens engine, one-potential accounting, supplied radius and the conditional R1 metric/source-mass distinction.
+
+- SVG trajectory endpoint labels preserve the complete supplied integer or fractional epoch. The previous three-significant-digit display rounded 2015/2025 to 2020/2030; fitted/exported dates were already correct.
+- Additive interpretation schema 2 supplies a hash-checked `core_surface` contract, attributed proposal/status, concise surface/core summaries, advanced matching/claim ledger and exact source provenance. The result/measurement schema remains 1. Legacy reports stay usable.
+- The shared explanation separates fitted exterior parameters, derived boundary representations and proposed core ontology. No core slider, daughter/rate probability, new halo or additional optical contribution is introduced. Unsupported numerical boundary outputs remain suppressed.
+- Replay records original/current interpretation schemas and whether interpretation changed, while preserving input/covariance and the saved original bundle. The new analysis bundle and executed notebooks carry the updated metadata.
+- Prospective discovery of uncatalogued compact-lens/black-hole candidates is explicit. A supported track requires suitable supplied observations/model assumptions and is not a horizon classification.
+
+Focused numerical regression compares predictions, likelihood, all stored estimates, mass/center/motion uncertainties and motion covariance with the preserved pre-interpretation and installed 0.2.0rc1 baselines at the unchanged 2e-11 tolerance. Current installed-app/export/replay, source-pin, notebook, renderer, PDF and final-head CI outcomes are recorded in the external release receipt. The original calibration and launcher hardening records below are retained; their expensive campaigns are not repeated for this interpretation/display update.
+
+```text
+python -m pip install bhsm_blackhole_tracker-0.2.0rc2-py3-none-any.whl
+python -m bhtracker serve --open
+python -m bhtracker replay BHSM_Blackhole_Tracker_Example_Analysis.zip --output replayed
+```
+
+The accompanying BHSM amendment carries the actual regular-side interface response calculation and constrained matching specification, and identifies the remaining terminal/core correspondence. Passing software checks is not physical confirmation of those hypotheses. See the source manifest and final two-repository commit/PR receipt.
+
+## Previous release candidate 0.2.0rc1
 
 This release candidate makes the BHSM-interpreted compact-lens workflow portable and reproducible. It analyzes supplied resolved image pairs, corrected geometric flux ratios, delays and full covariance.
 

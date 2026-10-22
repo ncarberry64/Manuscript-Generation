@@ -18,14 +18,17 @@ def test_complete_export_replay_and_tamper_detection(tmp_path):
         saved=json.loads(archive.read('dataset.json'))
         assert saved==load_dataset(raw).raw
         assert json.loads(archive.read('analysis_config.json'))==result['analysis_configuration']
+        assert json.loads(archive.read('result.json'))['bhsm_interpretation']==result['bhsm_interpretation']
         for name in ('measurements_and_model.png','track_and_residuals.png','report.html','REPRODUCE.md','software_provenance.json'):
             assert len(archive.read(name))>100
         files={name:archive.read(name) for name in archive.namelist()}
     destination=tmp_path/'replayed'
     check=replay_analysis(source,destination)
     assert check['passed'] and check['same_status'] and check['same_package_content']
+    assert check['same_interpretation'] and check['original_interpretation_schema_version']==check['current_interpretation_schema_version']==2
     replay=json.loads((destination/'result.json').read_text())
     np.testing.assert_allclose(replay['predictions'],result['predictions'],rtol=2e-11,atol=1e-12)
+    assert replay['bhsm_interpretation']==result['bhsm_interpretation']
     files['dataset.json']=files['dataset.json'].replace(b'2026',b'2027',1)
     with zipfile.ZipFile(source,'w') as archive:
         for name,blob in files.items():archive.writestr(name,blob)

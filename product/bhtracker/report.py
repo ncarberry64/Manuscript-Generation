@@ -31,13 +31,18 @@ def report_html(result):
         boundary_html=f"<h3>Spherical boundary representation of the same monopole</h3><p>Declared radius {fmt(boundary['radius_pc'])} pc. Principal extrinsic-curvature deficit of the enclosing sphere {fmt(boundary['curvature_deficit_pc_inverse'])} ± {fmt(boundary['curvature_deficit_sigma_pc_inverse'])} pc⁻¹; Brown–York E/c² {fmt(boundary['boundary_energy_over_Msun_c2'])} ± {fmt(boundary['boundary_energy_sigma_over_Msun_c2'])} solar masses (local 1σ, fixed radius).</p><p><small>{escape(boundary['geometry'])} {escape(boundary['qualification'])} Radius policy: {escape(r['model'].get('worldtube_policy','not recorded'))}.</small></p>"
     elif boundary.get('reason'):
         boundary_html=f"<p>{escape(boundary['reason'])}</p>"
+    core_surface=interpretation.get('core_surface')
+    core_html=''
+    if core_surface:
+        ledger=''.join(f"<tr><th>{escape(item['label'])}<br><small>{escape(item['status'])}</small></th><td>{escape(item['statement'])}</td></tr>" for item in core_surface.get('claim_ledger',[]))
+        core_html=f"<h3>Spacetime-side fit and proposed core interpretation</h3><p>{escape(core_surface['surface_summary'])}</p><p>{escape(core_surface['core_summary'])}</p><p><small>Interpretation status: {escape(core_surface['status'])}; this does not change the scientific fit status.</small></p><details><summary>Core, surface and matching theory</summary><p>{escape(core_surface['attribution'])}</p><p>{escape(core_surface['matching_summary'])}</p><p>{escape(core_surface['inference_scope'])}</p><table>{ledger}</table><h4>Versioned theory/source provenance</h4><pre>{escape(json.dumps(interpretation.get('source_provenance',{}),indent=2))}</pre></details>"
     return f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <title>Blackhole Tracker research report</title><style>body{{font:16px/1.55 system-ui;max-width:1050px;margin:3rem auto;padding:0 1.5rem;color:#172b40}}h1{{font-size:2.2rem}}table{{border-collapse:collapse;width:100%}}th,td{{padding:.7rem;border-bottom:1px solid #dce3e9;text-align:left}}pre{{background:#f1f5f8;padding:1rem;overflow:auto;white-space:pre-wrap}}small{{color:#4f657a}}.status{{padding:1rem;background:#edf6fa;border-left:4px solid #167e9b}}</style>
 <h1>BHSM Blackhole Tracker</h1><p class="status">{escape(r['status'])} · {escape(r['data_summary']['provenance']['kind'])} measurements</p>
 <p>Reference epoch {fmt(r['reference_epoch_yr'])}; family {escape(r['model']['family'])}; nuisance {escape(r['model']['nuisance'])}.</p>
 <table><tr><th>Quantity</th><th>Estimate</th><th>Local 1σ</th></tr>{rows}</table>
 <p>χ² {fmt(r['chi2'])} for {r['dof']} degrees of freedom; goodness-of-fit p={fmt(r['goodness_of_fit_p'])}. Uncertainties are local known-covariance approximations; active bounds and nulls require the stated qualification.</p>
-<h2>BHSM interpretation</h2><p>{escape(interpretation['model_role'])}</p><p>{escape(interpretation['one_potential_rule'])}</p><p>{escape(interpretation['inference_scope'])}</p>{boundary_html}<details><summary>Parameter interpretation</summary><table>{meanings}</table><p>{escape(interpretation['conditional_extension'])}</p></details>
+<h2>BHSM interpretation</h2><p>{escape(interpretation['model_role'])}</p><p>{escape(interpretation['one_potential_rule'])}</p><p>{escape(interpretation['inference_scope'])}</p>{core_html}{boundary_html}<details><summary>Parameter interpretation</summary><table>{meanings}</table><p>{escape(interpretation['conditional_extension'])}</p></details>
 <h2>Fit diagnostics</h2><ul>{diagnostics}</ul><h2>Conditional envelope</h2><pre>{escape(json.dumps(r['conditional_envelope'],indent=2))}</pre>
 <h2>Model and domain</h2><pre>{escape(json.dumps(r['model'],indent=2))}</pre><pre>{escape(json.dumps(r.get('physics_admission'),indent=2))}</pre>
 <h2>Reproduction</h2><pre>{escape(json.dumps(r['data_summary'],indent=2))}</pre><pre>{escape(json.dumps(r['runtime'],indent=2))}</pre>
@@ -182,7 +187,10 @@ def replay_analysis(source,output):
            'maximum_prediction_difference_in_supplied_sigma':maximum,'tolerance_in_supplied_sigma':.001,
            'same_status':result['status']==old['status'],'original_version':old['product_version'],
            'current_version':result['product_version'],
-           'same_package_content':old.get('software_provenance',{}).get('package_files_sha256')==result['software_provenance']['package_files_sha256']}
+           'same_package_content':old.get('software_provenance',{}).get('package_files_sha256')==result['software_provenance']['package_files_sha256'],
+           'original_interpretation_schema_version':old.get('bhsm_interpretation',{}).get('interpretation_schema_version',1),
+           'current_interpretation_schema_version':result['bhsm_interpretation']['interpretation_schema_version'],
+           'same_interpretation':old.get('bhsm_interpretation')==result['bhsm_interpretation']}
     export_result(result,output)
     (Path(output)/'replay_check.json').write_text(json.dumps(check,indent=2)+'\n',encoding='utf8')
     if not check['passed']:raise ValueError(f'replay differs from saved result: inspect {Path(output)/"replay_check.json"}')

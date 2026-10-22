@@ -32,8 +32,10 @@ def main():
         record={'same_input':result['dataset_input']==gui['dataset_input'],
                 'same_serialized_input_hash':result['data_summary']['sha256']==gui['data_summary']['sha256'],
                 'same_configuration':result['analysis_configuration']==config,'status':result['status'],
+                'same_interpretation':result['bhsm_interpretation']==gui['bhsm_interpretation'],
+                'interpretation_schema_version':result['bhsm_interpretation']['interpretation_schema_version'],
                 'maximum_prediction_difference_in_supplied_sigma':difference}
-        record['passed']=record['same_input'] and record['same_configuration'] and result['status']==gui['status'] and difference<=.001
+        record['passed']=record['same_input'] and record['same_configuration'] and record['same_interpretation'] and result['status']==gui['status'] and difference<=.001
         records[name]=record
     receipt={'passed':all(row['passed'] for row in records.values()),'tolerance_in_supplied_sigma':.001,
              'package':str(package),'python':sys.version,'interfaces':records,

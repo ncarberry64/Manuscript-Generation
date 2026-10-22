@@ -1,4 +1,4 @@
-# BHSM Blackhole Tracker 0.2.0rc1
+# BHSM Blackhole Tracker 0.2.0rc2
 
 BHSM Blackhole Tracker reconstructs the effective gravitational mass, location and motion of a BHSM-described compact configuration from resolved image pairs, their magnification ratio and their delay. The ordinary lens response and the BHSM boundary/envelope interpretation use the **same optical potential, counted once**. Agreement with ordinary gravity is an allowed result; a non-GR deviation is not required to use this interpretation.
 
@@ -52,7 +52,7 @@ python -m bhtracker serve --port 8766 --open
 For development and notebook replay, use `python -m pip install -e ".[dev]"`. To install a supplied wheel, replace the path below with its actual location:
 
 ```text
-python -m pip install path/to/bhsm_blackhole_tracker-0.2.0rc1-py3-none-any.whl
+python -m pip install path/to/bhsm_blackhole_tracker-0.2.0rc2-py3-none-any.whl
 python -m bhtracker serve --open
 ```
 
@@ -263,6 +263,16 @@ export_result(result, "user_runs/python_fit")
 Shear uses the potential `0.5*gamma_plus*(x*x-y*y) + gamma_cross*x*y`; `compact_quad` multiplies the two ordinary `r^-2` harmonics in the reference lens coordinates. `fit` always fits mass, center, proper motion and all source positions. It fits the requested finite nuisance family, not arbitrary environmental structure. Inspect `model.fitted_parameters`, `model.bounds_internal`, the numerical reference scales and diagnostics for the actual fit domain.
 
 Result schema version 1 includes `status`, `estimates`, `uncertainty`, `chi2`, `dof`, `diagnostics`, `model`, `predictions`, `physics_admission`, `bhsm_interpretation` and `conditional_envelope`. Local coordinate uncertainties are 1σ; the mass interval named `mass_68pct_interval_msun` is a local log-Gaussian interval. Null directions return JSON `null`, not zero uncertainty. The parameter covariance uses the supplied known measurement covariance without reduced-χ² rescaling. The full result also retains measurements, source positions, covariance, branch checks, singular values, runtime and dataset hash.
+
+### Core/surface interpretation revision and discovery use
+
+Version **0.2.0rc2** fixes trajectory endpoint year labels without rounding supplied integer or fractional epochs. It adds interpretation schema **2** inside the existing result schema 1; the separate measurement-input schema stays unchanged. Existing interpretation fields remain present. The additive `core_surface` dictionary is read from one hash-checked `theory/BHSM_CORE_SURFACE_CONTRACT.json` adapter and shared by fit/API/CLI, the app, notebooks and JSON/HTML/replay exports. Its dated source amendment is packaged in `theory/bhsm_sources/` and pinned to an exact BHSM repository revision in `BHSM_INTERPRETATION_MANIFEST.json`.
+
+Norman P. Carberry's 22 October 2026 proposal distinguishes abstract core harmonic relationships from spacetime-side fields and interfaces. The core has no ordinary internal metric, clock, trajectory or propagation speed. Surface Berger–Hopf harmonics retain their declared geometry. The inherited differential, formation, boundary dominance and terminal transition are distinct questions. Existing regular carrier/attachment/response constructions are retained; they are not silently a terminal core-transfer law. The expandable theory section carries the attributed ontology, matching scope and claim ledger. The main result remains the mass/motion fit and its declared boundary representation.
+
+Machine status `PROPOSED_NOT_INFERRED` is interpretation provenance, not a new observed class. `core_parameters_fitted` and `new_optical_term_added` are false. Underived core modes, interface strength, daughter channels, conversion rate, horizon and neutron-star endpoint remain `NOT_INFERRED` with JSON `null` and a reason. They are not rendered as an empty control grid. Old result dictionaries without the additive metadata retain their original report view. Replaying an older complete analysis evaluates the current interpretation and reports original/current interpretation schemas and whether it changed; it does not rewrite the saved original bundle.
+
+The engine is intended to help identify previously uncatalogued compact lenses and black-hole candidates from supplied observations. For an observational candidate, supply actual associated primary pairs, full covariance and justified geometry/frame/flux/delay calibration, then inspect identifiability, residuals, branch/domain admission and alternative source/environment models. Catalogue novelty and additional observations distinguishing unresolved stellar systems, multiple lenses and other compact interiors must be evaluated separately. This specialist engine does not acquire raw sky images or infer a horizon from a track. No non-GR residual is required for its BHSM interpretation.
 
 ### BHSM interpretation and fixed-radius boundary output
 

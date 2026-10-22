@@ -53,7 +53,12 @@ def spherical_boundary(mass_msun, radius_pc, sigma_mass_msun=None):
 
 
 def bhsm_interpretation(family,estimates=None,uncertainty=None,model=None,fit_status=None):
+    provenance=_source_provenance()
+    contract_path=Path(__file__).resolve().parent/'theory'/provenance['interpretation_contract_path']
+    core_surface=json.loads(contract_path.read_text(encoding='utf8'))
     interpretation={
+        'interpretation_schema_version':2,
+        'interpretation_revision':'2026-10-22',
         'framework':'BHSM',
         'model_role':'One compact-configuration optical response in the adopted BHSM Einstein/GHY sector, described in boundary/envelope language.',
         'one_potential_rule':'Equivalent ordinary-gravity and BHSM envelope descriptions represent the same fitted lens potential and are counted once. A separately derived response is added only when it is a distinct term of the same physical model.',
@@ -77,6 +82,7 @@ def bhsm_interpretation(family,estimates=None,uncertainty=None,model=None,fit_st
             if family=='r1' else
             'No separate scalar deformation was requested. The ordinary monopole, motion and admitted shape terms retain their BHSM interpretation without an additional envelope force.'),
         'weyl_convention':'The tracker propagates W_full=Phi+Psi. A BHSM source using W_topo=(Phi_topo+Psi_topo)/2 contributes 2*W_topo to that same full Weyl response, not a second copy of an already represented term.',
+        'core_surface':core_surface,
     }
     if family=='r1':
         boundary={'status':'NOT_ASSUMED_FOR_R1_METRIC','reason':'The Schwarzschild boundary identity is not substituted into the modified R1 metric. Its total boundary energy needs the corresponding metric and reference subtraction.'}
@@ -92,5 +98,5 @@ def bhsm_interpretation(family,estimates=None,uncertainty=None,model=None,fit_st
     else:
         boundary={'status':'NOT_EVALUATED'}
     interpretation['spherical_boundary']=boundary
-    interpretation['source_provenance']=deepcopy(_source_provenance())
+    interpretation['source_provenance']=deepcopy(provenance)
     return interpretation

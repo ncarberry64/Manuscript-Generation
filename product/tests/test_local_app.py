@@ -34,6 +34,8 @@ def test_app_full_flow(service):
         time.sleep(.02)
     assert out['status']=='complete',out
     result=out['result'];assert result['status']=='TRACKED'
+    from bhtracker.interpretation import bhsm_interpretation
+    assert result['bhsm_interpretation']==bhsm_interpretation('gr',result['estimates'],result['uncertainty'],result['model'],result['status'])
     _,body,_=request(service,'/api/report',{'result':result});report=json.loads(body)['html']
     assert '<html' in report and 'TRACKED' in report and 'known' in report
     assert result['data_summary']['provenance']['kind']=='synthetic'
@@ -41,6 +43,7 @@ def test_app_full_flow(service):
     assert headers['Content-Type']=='application/zip'
     with zipfile.ZipFile(BytesIO(body)) as archive:
         assert json.loads(archive.read('dataset.json'))==result['dataset_input']
+        assert json.loads(archive.read('result.json'))['bhsm_interpretation']==result['bhsm_interpretation']
     _,body,headers=request(service,'/api/examples/nearby_motion/bundle')
     with zipfile.ZipFile(BytesIO(body)) as archive:
         assert {'dataset.json','measurements.csv','metadata.json','full_covariance.csv'}<=set(archive.namelist())

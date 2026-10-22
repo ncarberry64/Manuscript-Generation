@@ -5,7 +5,7 @@ from importlib.metadata import version, PackageNotFoundError
 from pathlib import Path
 import platform
 
-VERSION='0.2.0rc1'
+VERSION='0.2.0rc2'
 
 @lru_cache(maxsize=1)
 def software_provenance():
