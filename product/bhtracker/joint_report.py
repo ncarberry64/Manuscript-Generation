@@ -27,6 +27,8 @@ def validate_result(result):
     """Check saved predictions AND physical summaries against the recorded state."""
     if not is_joint_result(result) or 'dataset_input' not in result:
         raise ValueError('A completed versioned joint result with its native input is required')
+    if result.get('status')=='JOINT_SEARCH_FAILED' or not isinstance(result.get('parameters'),dict) or 'best_internal_state' not in result:
+        raise ValueError('No converged joint physical state is available; inspect the retained all_starts diagnostic JSON before refitting')
     if result['schema'].endswith('.v2'):
         from .joint_mass_v2 import JointData, JointModel
         from .joint_workflow_v2 import replay
@@ -82,7 +84,7 @@ def report_html(result):
 <details><summary>Pinned BHSM theory and source versions</summary><pre>{esc(json.dumps(interpretation['source_provenance'],indent=2))}</pre><pre>{esc(json.dumps(interpretation['core_surface'],indent=2))}</pre></details>
 <h2>Conditional solver parameters</h2><table>{parameters}</table>
 <h2>Separate acceptance checks</h2><p>Inspect all starts, fixed-mass profiles, both tails and dependence of noise residuals, timing and calibration sensitivity, lens-light assumptions and prior literature. A scalar goodness-of-fit probability or a successful replay is insufficient. The benchmark validation receipt is separate from this individual fit.</p>
-<pre>{esc(json.dumps(result.get('diagnostics'), indent=2))}</pre><h2>Model options</h2><pre>{esc(json.dumps(result['model_options'], indent=2))}</pre>
+<pre>{esc(json.dumps(result.get('diagnostics'), indent=2))}</pre><h3>Residual structure and failed bins</h3><pre>{esc(json.dumps(result.get('residual_structure'),indent=2))}</pre><h2>Model options</h2><pre>{esc(json.dumps(result['model_options'], indent=2))}</pre>
 <h2>Native clocks and frame</h2><pre>{esc(json.dumps(dataset.document['metadata'], indent=2))}</pre>
 <h2>Numerical replay</h2><pre>{esc(json.dumps(checked, indent=2))}</pre><p>Forward replay evaluates the saved state with the exact scientific source. It does not repeat the optimizer or establish scientific reliability. See REPRODUCE.md for refitting and profile commands.</p></html>'''
 

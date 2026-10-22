@@ -100,6 +100,16 @@ def test_joint_sourcepack_rejects_unreviewed_bytes_before_import(service):
     assert 'source pack hash differs' in json.loads(error.value.read())['error']
 
 
+def test_joint_failed_search_has_actionable_reopen_error(service,joint_result):
+    failed=copy.deepcopy(joint_result)
+    failed['status']='JOINT_SEARCH_FAILED'
+    failed.pop('parameters');failed.pop('best_internal_state')
+    with pytest.raises(HTTPError) as error:
+        request(service,'/api/joint/result',{'result_json':json.dumps(failed)})
+    assert error.value.code==400
+    assert 'No converged joint physical state' in json.loads(error.value.read())['error']
+
+
 @pytest.mark.parametrize('change',['mass','residual','native_bytes','scientific_source'])
 def test_joint_verification_rejects_tampered_scientific_summary(service,joint_result,change):
     altered=copy.deepcopy(joint_result)
