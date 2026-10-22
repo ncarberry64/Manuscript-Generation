@@ -14,18 +14,20 @@ black hole. The100-event photometric pilot is a separate frozen analysis.
    astrometry/dev extras, then run the19 focused joint tests. A different
    environment is a separately recorded reproduction if derived times change;
    the wrapper refuses to silently mix results.
-3. Verify the exact observations without fitting:
+3. From the formal BHSM repository root, verify the exact observations without fitting:
 
    ```powershell
-   python product/research/reproduce_joint_campaign.py --sourcepack "PATH/TO/BHSM_OB110462_2023_SourcePack_v1.zip" --output "PATH/TO/NEW_OUTPUT" --verify-only
+   python products/blackhole_tracker/research/reproduce_joint_campaign.py --sourcepack "PATH/TO/BHSM_OB110462_2023_SourcePack_v1.zip" --output "PATH/TO/NEW_OUTPUT" --verify-only
    ```
 
 4. Run the full frozen campaign in that output directory:
 
    ```powershell
-   python product/research/reproduce_joint_campaign.py --sourcepack "PATH/TO/BHSM_OB110462_2023_SourcePack_v1.zip" --output "PATH/TO/NEW_OUTPUT"
+   python products/blackhole_tracker/research/reproduce_joint_campaign.py --sourcepack "PATH/TO/BHSM_OB110462_2023_SourcePack_v1.zip" --output "PATH/TO/NEW_OUTPUT"
    ```
 
+In the manuscript development workspace, replace `products/blackhole_tracker/`
+with `product/` in those commands. The formal BHSM repository is the reviewer source.
 The wrapper works from any current directory when invoked by its absolute path;
 `--repository` can explicitly select the checkout. The package is located as
 either development `product/` or formal `products/blackhole_tracker/`; the
