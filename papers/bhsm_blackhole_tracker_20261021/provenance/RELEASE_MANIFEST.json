@@ -859,13 +859,13 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/admission_bound.tex",
-      "sha256": "fc02af5357582789a72e891024df4400be911b985f52645d9120e89d278c66a7",
-      "bytes": 6031
+      "sha256": "e40fa679a31d74f631e98d5e851abddae911648d4fa10c340d5c3eb06a1683c8",
+      "bytes": 6754
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/bhsm_interpretation.tex",
-      "sha256": "b56aae687f8b4f5dffc55f15fb725868e127575eb8c57df446bfdbde552e05dd",
-      "bytes": 6416
+      "sha256": "6dc57ff854d8570279b9791b6d7d92b4fd138c9845f9734f3cea9b30fbe64423",
+      "bytes": 6865
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/estimator_derivation.tex",
@@ -884,13 +884,13 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/main.pdf",
-      "sha256": "ffe436090a7795b06499647d47800f4ad3735ab821560719163e2fc763637fd7",
-      "bytes": 780114
+      "sha256": "92554dfe2601707e2d8237e01615704e3c857b6c399276dba24fa42aa65a0556",
+      "bytes": 793985
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/main.tex",
-      "sha256": "5a4cf7067db5c1170caf3fdb42383843383d59173fe017456bb34180ae3977c8",
-      "bytes": 30918
+      "sha256": "4c5bcaa8b0652adc1c100a2286f25c027c49d0c18148e4aff37c80425d16b115",
+      "bytes": 31942
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/numerical_table.tex",
@@ -899,18 +899,18 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/product_validation.tex",
-      "sha256": "a98eacb6c53fb0a0f1330ac312afa9415ca349154ae7f00217377c5de071d451",
-      "bytes": 7003
+      "sha256": "3090c44a3c3ed33abc65b7d534bbdb5451828a6c20a21138500f9ae0fc27ec11",
+      "bytes": 11034
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/product_workflow.tex",
-      "sha256": "8a86f9408ccc012c2a5b6bb14f35ae37f339f2fd7e74d6d8715c25e8f8701eaa",
-      "bytes": 7560
+      "sha256": "954ce08ee52f46bdcc2277908c184bee2f84ef32deff020923940b23a5cee232",
+      "bytes": 9172
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/projection_theorem.tex",
-      "sha256": "e411422663b70692a23cbef0ba5bf3b116517ebe64a49333ceadf4d9549743b1",
-      "bytes": 10184
+      "sha256": "16d5148a7ac76f95296313a9f08f765d7076f71154fba26cc2ac669e61c5dbc7",
+      "bytes": 10651
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/manuscript/refs.bib",
@@ -1108,6 +1108,11 @@
       "bytes": 2830
     },
     {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/CI_INTEGRATION_REVIEW.md",
+      "sha256": "fc60f3147932558fde22869ea5b6312833da513ea4cdcd2a2774f4af7902e4d4",
+      "bytes": 1790
+    },
+    {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/cosmological_hair_applicability.md",
       "sha256": "b91abb0c537af03c866d75c604a73c26605e0087d230b80735645d44b690cba2",
       "bytes": 3549
@@ -1228,6 +1233,26 @@
       "bytes": 4269
     },
     {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/RC_PDF_VISUAL_REVIEW.md",
+      "sha256": "64a86ae056bf2a7786418e2261ded159128ee2d0844a37b73cf9dcb7821126fc",
+      "bytes": 801
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/RC_USABILITY_REVIEW.md",
+      "sha256": "585ba77e96c3674a8e36773213126b153883e5edddd81d1f41a703236d6ee3c1",
+      "bytes": 11990
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/RELEASE_CANDIDATE_SCIENTIFIC_REVIEW.md",
+      "sha256": "b86a71e74ec1413d4df7e543ab4accb38599b47e8c336d9b44cbe5d95625472a",
+      "bytes": 14821
+    },
+    {
+      "path": "papers/bhsm_blackhole_tracker_20261021/review/STATISTICAL_RISK_REVIEW.md",
+      "sha256": "e5efc1904c7a8a92d54c7bcb5d2c63b419883d58abffa2c94d7cfe5c28a76db8",
+      "bytes": 5919
+    },
+    {
       "path": "papers/bhsm_blackhole_tracker_20261021/review/tracker_response_check.json",
       "sha256": "3ac9006324669e4b3017418be9b304c0028d9d82cae2a598d26c3acdeb5eef9a",
       "bytes": 4278
@@ -1264,8 +1289,8 @@
     },
     {
       "path": "papers/bhsm_blackhole_tracker_20261021/VALIDATION.md",
-      "sha256": "62b5b95cf3fbd08759c2ebda4fb2332f6ce639146f98c87fa98ae5a57fd6034f",
-      "bytes": 10769
+      "sha256": "2f2fcfe653191856c288db21e7be739a9d44e9d6ddf33fa4ccf48f2ce55d18c4",
+      "bytes": 12428
     },
     {
       "path": "product/.gitattributes",
@@ -1279,8 +1304,8 @@
     },
     {
       "path": "product/bhtracker/__init__.py",
-      "sha256": "602e46f2eefd1987e45396f940d19987cb84c43f60c0df28ece81307dd95046b",
-      "bytes": 258
+      "sha256": "7554aba0148077d095bf520b5a4ce161ec4daabf2fdfa1b7d66aa4eedceb8eb7",
+      "bytes": 283
     },
     {
       "path": "product/bhtracker/__main__.py",
@@ -1289,13 +1314,13 @@
     },
     {
       "path": "product/bhtracker/cli.py",
-      "sha256": "2912a3a2abffe0e5ad0ef303ef834712446c8bc2e94f48ea300cd1b8e6b0c950",
-      "bytes": 3566
+      "sha256": "724e286a1955e3a4ab5c678e9f8ca1fa1bafa4efab63be873444fd10d1870f86",
+      "bytes": 3963
     },
     {
       "path": "product/bhtracker/data.py",
-      "sha256": "832b6c210cf4eb4f18383ff7a3f47a12e6e7d9c87a767488e5db31affd633d04",
-      "bytes": 5028
+      "sha256": "e24b0d31227c9923259a101214d21f96de94937021cbbcd0faf2712024e54e28",
+      "bytes": 8684
     },
     {
       "path": "product/bhtracker/envelope.py",
@@ -1369,18 +1394,23 @@
     },
     {
       "path": "product/bhtracker/inference.py",
-      "sha256": "f5be57d250e63c81458505da31c6f0816eb409e591072f52effb273dacbc9e67",
-      "bytes": 16089
+      "sha256": "77942f22714579ce97855e54d14702d57d72d26fd7c7b421463b2d377dd59eae",
+      "bytes": 16877
     },
     {
       "path": "product/bhtracker/interpretation.py",
-      "sha256": "cfbc6faff975d5254dc7fd59c5b735a33d89ab4de4fc1f26757b2dee898f1314",
-      "bytes": 6682
+      "sha256": "8b898d80d7cdb3f9c3d1a2bd929372b92c2e575827025013c0c5dff232c859c5",
+      "bytes": 6804
     },
     {
       "path": "product/bhtracker/physics_admission.py",
-      "sha256": "6dce22bee33a77414f61775197a1f61119eb3508112ee9855d74cd0cb6766655",
-      "bytes": 23358
+      "sha256": "eb89ef40f95128078df390ce813c312ad302b1494424d57faea3191cafa58e60",
+      "bytes": 24635
+    },
+    {
+      "path": "product/bhtracker/provenance.py",
+      "sha256": "1c056438e642206274b3af115919006a2a7d6afe9263651b57ab6692cbca7f3b",
+      "bytes": 1052
     },
     {
       "path": "product/bhtracker/r1_runtime.py",
@@ -1389,13 +1419,18 @@
     },
     {
       "path": "product/bhtracker/report.py",
-      "sha256": "49e9f45f3598a9fda810f2034543c11401f792f828f01ad97d1b015081ae2ca2",
-      "bytes": 6257
+      "sha256": "65752361c20d13a3591bede266618a8e5596c4c08af8095cfd572a0ba0388d38",
+      "bytes": 14460
+    },
+    {
+      "path": "product/bhtracker/sample_bundle.py",
+      "sha256": "2a69023a658722c24471fe78e10ac4cce734cef9e836f33acdd2e63557452eee",
+      "bytes": 4789
     },
     {
       "path": "product/bhtracker/server.py",
-      "sha256": "5469b838736f7231e76c4649e06718921ecbc9799de5badc2f4b819ca5eee9d0",
-      "bytes": 5224
+      "sha256": "5fd1a9f8a7d7c6ac1caac35b8c69e327f164eadddda1b8a53a0a450dcbad0340",
+      "bytes": 7184
     },
     {
       "path": "product/bhtracker/theory/__init__.py",
@@ -1469,43 +1504,103 @@
     },
     {
       "path": "product/bhtracker/web/app.js",
-      "sha256": "5d39632d89ad025c89abc654c66fe81e58366bcc51038797e5c2ca0076a420f2",
-      "bytes": 43905
+      "sha256": "36d03a669e5116a25b4673e96e57af802048da61bf348564913d05120d38176f",
+      "bytes": 56072
     },
     {
       "path": "product/bhtracker/web/index.html",
-      "sha256": "e3410b1d77ab03ce668f9f5eb13636de24a84f05b253c65628f17b6ec9dcd54e",
-      "bytes": 12471
+      "sha256": "b0adc25c6ccbe9dc3453691fe9653f99c3e8d7b5bfca9f4ce1849011f9117ee7",
+      "bytes": 16262
     },
     {
       "path": "product/bhtracker/web/style.css",
-      "sha256": "fef963c532fa0df698f98d3c4e70745ed5008143a6e6421dab5a06758492d6b7",
-      "bytes": 22036
+      "sha256": "41ee09f787768c53765cad5d44ef58366d98845c227e85bd2aa1c21be55cad4e",
+      "bytes": 26484
+    },
+    {
+      "path": "product/examples/nearby_motion/dataset.json",
+      "sha256": "c6eceba975fc29dd2c1866ec3bbaa3f433eb4fb109d05cc636ef7d70aafa9851",
+      "bytes": 42947
+    },
+    {
+      "path": "product/examples/nearby_motion/full_covariance.csv",
+      "sha256": "f545bcdcd960a35267c9c1a5cef8cf86ac1721873c9124d98da880066c3891ac",
+      "bytes": 19440
+    },
+    {
+      "path": "product/examples/nearby_motion/manifest.json",
+      "sha256": "491f87916a5271761e34f65ebd28097d391329668c4ba5da63053fefa224a5b1",
+      "bytes": 647
+    },
+    {
+      "path": "product/examples/nearby_motion/measurements.csv",
+      "sha256": "525a894fff62317f35808783675b145d1f89c804b7b60c6c4d0c1269ffc41fea",
+      "bytes": 1167
+    },
+    {
+      "path": "product/examples/nearby_motion/metadata.json",
+      "sha256": "2c9a15e1b90954e933fffddb5f507b63dee4132b6379495ed15583603d7c4844",
+      "bytes": 765
+    },
+    {
+      "path": "product/examples/nearby_motion/README.md",
+      "sha256": "3c5be288136e3b4928738594e5ffac479a4d5981fee1d8cb2932b62495695f49",
+      "bytes": 2614
+    },
+    {
+      "path": "product/examples/nearby_motion_bundle.zip",
+      "sha256": "9c5a2d36cd6d3662c4c08ba6fcb9eb1c740f3a1d72930a6797ac85444b869479",
+      "bytes": 5457
     },
     {
       "path": "product/notebooks/01_compact_mass_and_motion.ipynb",
-      "sha256": "dbecce64d8d0e72a1d60f4ed3c9412302a26e72873ea48cd18fe94ca95f108d4",
-      "bytes": 83283
+      "sha256": "91f52d134ae0101d62d995cbfe05cebef6088c793de36f00f15d57e0098e6114",
+      "bytes": 84541
     },
     {
       "path": "product/notebooks/02_conditional_boundary_response.ipynb",
-      "sha256": "90d387bcd879e6c3734e9f9ba16389d938e8d01be482aa8dc0312d22f016d775",
-      "bytes": 13729
+      "sha256": "a1d4bd7da632c06f648e98bc4db25d36839ecdd6b306131d27bdad1ed73657e1",
+      "bytes": 13960
     },
     {
       "path": "product/pyproject.toml",
-      "sha256": "90544368a4fee60196c3b1403d2b8620de0242b03fddcb88651a343ccc31a817",
-      "bytes": 799
+      "sha256": "5c6641e048a4f5648484f078eddaf86bd9a5f06cf3c4bf678545f7d1edf8f56c",
+      "bytes": 802
     },
     {
       "path": "product/README.md",
-      "sha256": "ea94a544e5f6d8e816c1c40946bd8fc7e4908f8f45c6a249310d4e8ed3b38d25",
-      "bytes": 33465
+      "sha256": "01a9b9c4ec6f40270cb0a9bb02a2def28b62c7467540509302d11d7ecf9927ea",
+      "bytes": 36656
+    },
+    {
+      "path": "product/RELEASE_NOTES.md",
+      "sha256": "5adc756f4aa1b60c62a0ee1018172e528b004846d5840d538d3e02cbd564e994",
+      "bytes": 4653
+    },
+    {
+      "path": "product/scripts/check_installed_wheel.py",
+      "sha256": "298b0d149b7939b39298dfe8f7ab08c9f390b5f854013d72daf2cf044c610f25",
+      "bytes": 6563
+    },
+    {
+      "path": "product/scripts/check_windows_launcher.py",
+      "sha256": "efae735c2e8628a0d8b85f3c2520b0c69b20e612e8759eb36268c292832f0232",
+      "bytes": 3775
+    },
+    {
+      "path": "product/scripts/compare_interfaces.py",
+      "sha256": "6ca90eaa8781715a2c585c50bec46b7e3e8ee89c68ff665e71ab8849e21d3aca",
+      "bytes": 3067
     },
     {
       "path": "product/scripts/execute_notebooks.py",
-      "sha256": "3d54ec365a9d0d74b1523b9a5bb02bc5347f5e98f5a2837bd8fe3303e9645f38",
-      "bytes": 811
+      "sha256": "225589603ecddd7c8a33e8d28058ef3ca9f68c118ad4eefda1be64ef70565e8f",
+      "bytes": 1699
+    },
+    {
+      "path": "product/scripts/launch_local.py",
+      "sha256": "350852ec12f3877ee87225d515f31b4800a1d7b23747df6f9812663ad0d206c9",
+      "bytes": 2070
     },
     {
       "path": "product/scripts/make_notebooks.py",
@@ -1514,8 +1609,8 @@
     },
     {
       "path": "product/scripts/package_product.py",
-      "sha256": "adbc67d01291bea8373e1b7d0eeb94aea09240d9793ae38698efc368d788a846",
-      "bytes": 14304
+      "sha256": "e2bb93a7dbe1c9eaecdf36c780a95a315e144399a72c6c11e272b39c5fb66c2e",
+      "bytes": 14271
     },
     {
       "path": "product/scripts/sync_theory.py",
@@ -1529,8 +1624,8 @@
     },
     {
       "path": "product/Start_Blackhole_Tracker.cmd",
-      "sha256": "2ea2b1d22c210f47fb10be77f7a0ee60bd591fc017d4726a5ddd4b26379447d7",
-      "bytes": 391
+      "sha256": "ffc145e5c7e92f635ae180de91c90c1f9677dbbe2d119239a5a19ffb5f24a205",
+      "bytes": 720
     },
     {
       "path": "product/tests/calibrate_product.py",
@@ -1546,6 +1641,11 @@
       "path": "product/tests/fixtures/pre_interpretation_fit.json",
       "sha256": "dfd06d5db4317b5f6b1eff3faf13dbd45df9bc1d734e3c65dd22c63d1d52a5a1",
       "bytes": 2325
+    },
+    {
+      "path": "product/tests/statistical_risk_review.py",
+      "sha256": "d68af366b4b908b306901e4992e1b3b507fc74c0b8386704db7ccc0d6ae58a19",
+      "bytes": 26070
     },
     {
       "path": "product/tests/test_bhsm_interpretation.py",
@@ -1564,13 +1664,13 @@
     },
     {
       "path": "product/tests/test_local_app.py",
-      "sha256": "b53519dd95fb8f0db62c6169b5f1a3cfd4b1e46d81803e3349b05c80a67f86e7",
-      "bytes": 2515
+      "sha256": "b4a2483b3ec996ab59e8c1cb8e6ae69fa4db321fad188eb31ae82fc4a71866dd",
+      "bytes": 3281
     },
     {
       "path": "product/tests/test_physics_admission.py",
-      "sha256": "ec3279d5f8d6cf3428baea00f9de61df227ed4cd544dc8aa4e947d817afe2de0",
-      "bytes": 15185
+      "sha256": "293bc4c49a816e1af64dc07ca8fd85a947fe63eefcf9157b5558214699d4e31f",
+      "bytes": 20613
     },
     {
       "path": "product/tests/test_r1_runtime.py",
@@ -1578,9 +1678,19 @@
       "bytes": 14378
     },
     {
+      "path": "product/tests/test_replay.py",
+      "sha256": "9c524200cc67f43b484996438fff352b6345d223604e01b3d89f294893dd6148",
+      "bytes": 2605
+    },
+    {
       "path": "product/tests/test_reproduction.py",
       "sha256": "bf415536d0e8ec17568bc24f51ebe7028ad53bee7ae69aab427014562445d02d",
       "bytes": 859
+    },
+    {
+      "path": "product/tests/test_sample_bundle.py",
+      "sha256": "8ab817abc4710d5e6864f301d0181580ae6e9fae32299c9a7d395f90d8c439bb",
+      "bytes": 2584
     },
     {
       "path": "product/validation/bhsm_interpretation_ui_receipt.json",
@@ -1594,8 +1704,8 @@
     },
     {
       "path": "product/validation/notebook_receipt.json",
-      "sha256": "35b4eeb25a5f62a781a899efd3337420ac58b64d27727605c13afb993b3f45b3",
-      "bytes": 421
+      "sha256": "ff4fc907a077422af1cf02654b52b5936dfd194ff260cfb434c15e6b83296a95",
+      "bytes": 897
     },
     {
       "path": "product/validation/package_install_receipt.json",
@@ -1618,6 +1728,31 @@
       "bytes": 2699
     },
     {
+      "path": "product/validation/rc_four_interface_receipt.json",
+      "sha256": "f18a2d5214b08ef147b8e39d5c05948021e595e961e1ebb557602c7183b18c67",
+      "bytes": 1772
+    },
+    {
+      "path": "product/validation/rc_product_tests.xml",
+      "sha256": "9591e7e8033171377a3dd411fcf473b76771953c0ea1656d18311e2a33d2c213",
+      "bytes": 14797
+    },
+    {
+      "path": "product/validation/rc_windows_clean_wheel.json",
+      "sha256": "2da0ddacee8f99f9cd1fbbae23f40c5b73a188c543fe007ca9abed0826dffcd8",
+      "bytes": 9503
+    },
+    {
+      "path": "product/validation/rc_windows_launcher.json",
+      "sha256": "78fbe8e992a246a4e77aab836be69b2618b4f3fad5ee52b20d066be11ca46826",
+      "bytes": 5778
+    },
+    {
+      "path": "product/validation/report.md",
+      "sha256": "16dd1ac8d3f2b7c2461159672b0f52b25da658fe7cb00b15c758a4f52718748f",
+      "bytes": 10465
+    },
+    {
       "path": "product/validation/stage_1.txt",
       "sha256": "b9b4609c6dbf6e6220328caa4b9a15f51ebbc6b2ac287964f578db34a7511e0e",
       "bytes": 183
@@ -1631,6 +1766,16 @@
       "path": "product/validation/stage_3.txt",
       "sha256": "13af014c0eacddb36a308741f8c960d5dd60c242632eec452cdfd3d1fa53ab8e",
       "bytes": 3291
+    },
+    {
+      "path": "product/validation/statistical_risk_protocol.md",
+      "sha256": "b316c22240954a4dc023a3864ff4276357e6f2e83084fc03e362967c775304f5",
+      "bytes": 7586
+    },
+    {
+      "path": "product/validation/statistical_risk_receipt.json",
+      "sha256": "87729edd0383c8e9bfc2c4a7b161aa60d4ca42558dcd12702651672b1e2f74fe",
+      "bytes": 454236
     },
     {
       "path": "product/validation/ui_acceptance_receipt.json",

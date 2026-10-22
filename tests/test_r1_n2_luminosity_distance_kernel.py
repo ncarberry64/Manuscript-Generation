@@ -2,6 +2,7 @@ from pathlib import Path
 import sys
 
 import numpy as np
+import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 CODE = ROOT / "code"
@@ -36,23 +37,30 @@ def test_distance_row_is_finite_and_dual():
     assert np.allclose(r["F_DA"], r["F_DL"], atol=0.0)
 
 
-def test_calibration_null_is_exact():
-    report = dl.diagnostics()
+@pytest.fixture(scope="module")
+def diagnostics_report():
+    # All three checks use the identical fixed, deterministic light-cone input.
+    # Reuse its expensive integration; assertions and production code are unchanged.
+    return dl.diagnostics()
+
+
+def test_calibration_null_is_exact(diagnostics_report):
+    report = diagnostics_report
     assert abs(
         report["calibration"]["null_residual"]
     ) < 1e-12
 
 
-def test_single_calibration_leaves_one_state_direction():
-    report = dl.diagnostics()
+def test_single_calibration_leaves_one_state_direction(diagnostics_report):
+    report = diagnostics_report
     audit = report["calibration_rank_audit"]
     assert audit["phase_space_dimension"] == 2
     assert audit["rank"] == 1
     assert audit["remaining_state_direction_dimension"] == 1
 
 
-def test_cross_observable_rows_not_all_parallel_to_DL():
-    report = dl.diagnostics()
+def test_cross_observable_rows_not_all_parallel_to_DL(diagnostics_report):
+    report = diagnostics_report
     rows = report["calibration_rank_audit"]["cross_observable_rows"]
     assert any(
         abs(r["det_DL_fsigma8"]) > 1e-8

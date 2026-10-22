@@ -26,12 +26,16 @@ pdftitle={Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, 
 \maketitle
 \begin{center}\small Research article draft for \emph{Galaxies}: Strong Gravitational Lens Modeling\end{center}
 \begin{abstract}
-We present Blackhole Tracker with an explicit BHSM interpretation of
-ordinary compact-lens mass, center and proper motion. In the program's
-adopted Einstein/GHY boundary sector, the fitted monopole determines a
-curvature deficit and a radius-dependent boundary energy of the same
-exterior. These quantities enter one optical potential; a departure from
-GR is not required. The runnable toolkit fits resolved image pairs,
+Blackhole Tracker combines a normalized conditional boundary-to-optical
+transfer, an exterior-wide sufficient state bound and exact
+information-loss results with a reproducible compact-lens inference
+workflow. Its ordinary mass, center and proper motion describe one
+effective exterior in the adopted Einstein/GHY sector of the
+Berger--Hopf Standard Model (BHSM) program. At a declared radius, that same
+monopole determines the principal extrinsic-curvature deficit of the
+enclosing sphere and its radius-dependent boundary energy. One optical
+potential is counted once; a departure from GR is not required.
+The runnable toolkit fits resolved image pairs,
 flux ratios and delays with a full supplied covariance. A local app,
 command line, Python package and executed notebooks share nonlinear
 inference, nuisance profiling and explicit rejection or unresolved
@@ -40,7 +44,7 @@ noise realizations complete; nominal local 95\% interval coverage is
 59--61 of 64 across five tested mass, center and motion components.
 Short cosmological tracks remain motion unresolved, and an omitted
 ordinary shear produces a rejected fit. The optional scalar--tensor
-realization used by the Berger--Hopf Standard Model (BHSM) program
+realization used by the BHSM program
 supplies a normalized boundary-to-lensing response and a uniform
 sufficient amplitude bound throughout its retained exterior. It also
 exposes exact information losses: two projected quadrupole modes vanish,
@@ -74,7 +78,9 @@ BHSM organizes its research around boundary geometry, constrained actions
 and envelope matching. That language does not by itself fix a metric,
 surface state or optical coefficient. An ordinary gravitational potential
 may already describe the same boundary contribution. We therefore use a
-single scalar--tensor action and count its metric response once. The name
+declared Einstein/GHY sector for the ordinary fit and a single
+scalar--tensor action for the optional R1 response, counting each
+physical contribution once. The name
 \emph{Blackhole Tracker} denotes the proposed application to a candidate
 compact dark source. All rays in this paper lie far outside a declared
 worldtube, itself far outside the gravitational radius. Lensing on that
@@ -138,7 +144,7 @@ does not fix a cosmological or black-hole deformation state.\\\bottomrule
 \end{tabular}
 \end{table}
 
-The strongest feasible tracker route is thus a normalized \emph{conditional
+The strongest feasible action-specific deformation route is thus a normalized \emph{conditional
 effective-action} calculation. We do not substitute a familiar surface
 mass identity for the missing horizon problem. The spherical flux is
 kept as an exterior matching datum; the physical state remains free.
@@ -515,8 +521,8 @@ The addition combines their normalized R1 optical composition with an
 exterior-wide sufficient state cap and a runnable compact-lens inference
 workflow. Its theory exposes a delay-blind leading response, an exact
 apparent-mass/shear degeneracy and line-of-sight nulls. Its product retains
-full covariance and source freedom, and reports calibrated synthetic
-recovery together with weak-motion, mismatch and physically unresolved
+full covariance and source freedom, and reports synthetic recovery with
+limited local-interval coverage checks together with weak-motion, mismatch and physically unresolved
 outcomes. The finite harmonic control makes a cause ambiguity exact
 rather than assigning every structured residual to BHSM.
 
@@ -545,6 +551,15 @@ are synthetic or theoretical; no fresh observational validation set is
 used. The released source and draft revision are available in the
 \href{https://github.com/ncarberry64/Manuscript-Generation/pull/24}{author's
 repository draft}.
+The inference code version for this release candidate is
+\texttt{bhsm-blackhole-tracker 0.2.0rc1}, code commit
+\href{https://github.com/ncarberry64/Manuscript-Generation/commit/d786a6dd067fbe0a3bb63094f8e440ff83e0491b}{\texttt{d786a6dd067f}}.
+The final release receipt binds the reviewed manuscript/source archive,
+wheel hashes and CI runs to the completed PR revision. A beginner can
+install the wheel, run \texttt{python -m bhtracker serve --open}, load the
+labeled nearby synthetic example and download its replay bundle.
+\texttt{python -m bhtracker replay analysis.zip --output replayed}
+repeats that saved configuration without an original private path.
 
 \paragraph{Author and AI disclosure.}
 The manuscript was prepared for Norman P. Carberry with AI assistance

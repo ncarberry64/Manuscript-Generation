@@ -18,6 +18,21 @@ supports sophisticated lens inference: \texttt{lensmodel},
 \cite{Lu2025}. No first mass/motion tracker or general replacement for
 those tools is claimed.
 
+The comparison is specific. Cubic-Galileon multipole calculations
+\cite{Chu2013,Brito2014} supply screening powers and Green functions;
+general STF lens projection \cite{Turyshev2022} supplies multipole
+transfer methods. Here those ingredients are composed with the adopted
+R1 coefficients, a normalized boundary/conormal pairing and a sufficient
+state cap, followed by explicit delay/statistic nulls. The extended-source
+lens packages above address broader image reconstruction and lens
+inference; \texttt{BAGLE} models moving microlenses with astrometric,
+photometric and parallax information. This product instead takes
+resolved primary pairs, their geometric flux ratio, supplied delays and
+a full covariance, and reports the conditional BHSM dictionary and R1
+admission/information assessment. It supplies no general extended-image
+reconstruction, survey acquisition or observational validation of those
+assumptions. No superiority or priority follows from these scope differences.
+
 \subsection{Measurement contract and likelihood}
 An input supplies angular-diameter distances $D_l,D_s,D_{ls}$, redshifts,
 a reference observer epoch, and $N$ epoch/source rows, with $3\le N\le80$.
@@ -62,8 +77,9 @@ mass scale, followed by deterministic perturbed starts and bounded
 nonlinear least squares. The default mass search domain is
 $[10^{-3},10^{12}]M_\odot$, exposed in the input rather than confused
 with a detection prior. A conservative slow-motion domain is declared
-separately. Final solutions undergo branch, worldtube, weak-field and
-motion checks. Local covariance follows the whitened Jacobian SVD,
+separately. Final solutions undergo primary-branch, actual-impact
+weak-field and motion checks; R1 additionally requires its exterior
+worldtube and state-admission conditions. Local covariance follows the whitened Jacobian SVD,
 without rescaling the supplied $C$ by reduced $\chi^2$. Null directions
 have unavailable uncertainties. Center-track bands propagate the
 center--motion cross covariance. Reoptimized one-coordinate likelihood
@@ -112,8 +128,16 @@ evidence for the proposed BHSM deformation signal.
 
 The app supports input inspection, validation, fitting, track and
 observable plots, uncertainty/null diagnostics and JSON/HTML export.
-Command-line export additionally supplies prediction CSV, a static
-track/residual figure and SHA-256 manifest. The first notebook reproduces
+Both app and command line export a complete replay analysis: original
+input with full covariance and calibrations, fit configuration, installed
+software/source hashes, fitted parameters, predictions, diagnostics,
+interpretation, plots and a SHA-256 manifest. The command
+\texttt{python -m bhtracker replay analysis.zip --output replayed}
+verifies hashes and repeats inference. Its declared numerical comparison
+requires unchanged scientific status and prediction differences below
+$10^{-3}$ of each supplied marginal standard deviation; this is not a
+rescaling of measurement error or a statistical detection threshold.
+The first notebook reproduces
 mass/motion inference, a mass profile and the weak-motion control; the
 second evaluates conditional response and admission. Raw theory inputs
 are packaged and hash checked, so these interfaces do not depend on a

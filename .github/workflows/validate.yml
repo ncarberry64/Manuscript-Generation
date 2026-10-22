@@ -52,10 +52,13 @@ jobs:
       - run: |
           mkdir -p tracker-artifacts
           cp papers/bhsm_blackhole_tracker_20261021/manuscript/main.pdf tracker-artifacts/BHSM_Blackhole_Tracker_Manuscript.pdf
+      - run: python3 papers/bhsm_blackhole_tracker_20261021/scripts/package_release.py tracker-artifacts
       - uses: actions/upload-artifact@v4
         with:
           name: tracker-manuscript
-          path: tracker-artifacts/BHSM_Blackhole_Tracker_Manuscript.pdf
+          path: |
+            tracker-artifacts/BHSM_Blackhole_Tracker_Manuscript.pdf
+            tracker-artifacts/BHSM_Blackhole_Tracker_Source.zip
 
   tracker-wheel-smoke:
     strategy:

@@ -78,6 +78,79 @@ mean $y$-motion error is $3.98\times10^{-4}$ mas/yr, about 2.75 estimated
 standard errors of its ensemble mean. Passing the frozen coverage test
 does not establish negligible bias or universal coverage.
 
+\subsection{A bounded investigation of the mean offset}
+Before generating follow-up data, a separate protocol fixed an independent
+analytic linear-noise control, tighter checks of original indices 0--7,
+and, conditional on those checks, exactly 128 further draws from PCG64
+seed 202610210128. The original receipt, thresholds and 64-draw table are
+unchanged; the two ensembles are not pooled. The protocol's initially
+announced version was clarified before execution to specify that mean
+diagnostics use all finite returned estimates, including those returned
+with rejected decisions; such decisions remain interval-coverage misses.
+The revision history and both hashes are retained in the risk receipt.
+
+The independent 25-column point-lens, shear and free-source Jacobian uses
+stationary-image derivatives in physical units. Its whitened relative
+discrepancy from the production Jacobian is $2.50\times10^{-11}$, and the
+largest discrepancy of the five covariance diagonals is
+$2.91\times10^{-11}$, below fixed bounds $10^{-5}$ and $10^{-4}$.
+Its original-sample mean $y$-motion error is
+$3.98022\times10^{-4}$ mas/yr, versus the nonlinear
+$3.97992\times10^{-4}$ mas/yr: their difference is only
+$-0.000199$ analytic standard errors of the ensemble mean.
+The offset is therefore already present in a first-order response with
+exactly zero expected error. The largest mean nonlinear-minus-linear
+discrepancy among all five coordinates is $0.00509$ analytic standard
+errors, below the fixed $0.1$ concern level. Eight tighter refinements
+change estimates by at most $4.57\times10^{-8}$ local standard deviations
+and improve $\chi^2$ by at most $1.55\times10^{-12}$, below the respective
+fixed bounds $0.01$ and $10^{-6}$. These checks find no material covariance
+or local convergence discrepancy in this fixture.
+
+\begin{table}[!b]
+\centering\small
+\caption{Separate fixed 128-draw follow-up. Rejected decisions count as
+misses. Coverage tests retain null 0.95 and per-coordinate
+$\alpha=0.01$. Mean $z$ uses the known truth linear covariance; the
+prespecified five-coordinate mean guard has Bonferroni familywise
+$\alpha=0.01$.}
+\label{tab:product-risk-followup}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+Coordinate & Covered / 128 & Exact coverage $p$ & Mean $z$\\
+\midrule
+Mass $M$ & 118 & 0.1513 & $-0.4555$\\
+Center $x$ & 120 & 0.5383 & $-0.2571$\\
+Center $y$ & 119 & 0.3045 & $-0.1777$\\
+Motion $x$ & 120 & 0.5383 & $-0.7367$\\
+Motion $y$ & 121 & 0.6872 & $0.8394$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All 128 optimizers converge and return finite estimates; 126 decisions
+are \texttt{TRACKED} and two are \texttt{FIT\_REJECTED} at the unchanged
+goodness-of-fit guard $p<0.001$. All remain in the record and denominator
+(Table~\ref{tab:product-risk-followup}). Neither the coverage nor local
+mean-error guards reject. The follow-up $y$-motion mean is
+$9.13\times10^{-5}$ mas/yr, or $0.879$ empirical ensemble standard errors.
+The mean diagnostics include finite estimates from the two rejected
+decisions as specified; they are not admitted tracks. A labeled post-hoc
+projection of the already-used noise through the independent linear
+model rejects exactly the same two draws, with $\chi^2=65.4492,70.3639$
+on 29 degrees of freedom, compared with nonlinear $65.4439,70.3620$.
+Two such rejections are uncommon under an ideal size-0.001 guard:
+$\Pr[\mathrm{Binomial}(128,0.001)\geq2]=0.00748$. This limitation is
+retained without changing thresholds or replacing data. The study does
+not calibrate an operational false-rejection rate.
+
+The bounded execution uses 145 solves and leaves the reserved correction
+stream unused. No production bias correction or recentering is applied.
+These results are consistent with finite-sample fluctuation of the
+highlighted offset in this fixture, while preserving its observed value.
+They support limited synthetic local-interval calibration, not proven
+unbiasedness, universal coverage or observational sensitivity.
+
 \subsection{Weak information, model mismatch and finite cause ambiguity}
 The negative controls preserve unsuccessful scientific outcomes
 (Table~\ref{tab:product-controls}). The ten-year cosmological fixture

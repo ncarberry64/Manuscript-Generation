@@ -15,7 +15,9 @@ in $x=r/L_0$. In an orthonormal real quadrupole basis, write
 where $\mathsf Q$ is symmetric and trace free and $f_2(x_0)=1$.
 The result covers all five coordinates, including the two erased by a
 symmetric line-of-sight projection. A smaller template family specifies
-its omitted coordinates separately.
+its omitted coordinates separately. The product uses the two transverse
+and one axial coordinates, with the two odd coordinates fixed to zero;
+their absence is a model convention, not a measurement of their values.
 
 \begin{proposition}[Uniform retained-exterior control]
 \label{prop:admission-bound}
@@ -61,7 +63,8 @@ The elliptic maximum principle gives positive $f_2$ and also
  \label{eq:admission-radial-comparison}
 \end{equation}
 Indeed $L_2f_1=-4K_\Omega f_1/r^2<0$, whereas $L_2f_2=0$;
-their normalized inner and decaying outer boundary data agree.
+their normalized inner and decaying outer boundary data agree. Here
+$L_\ell f=r^{-2}(r^2K_rf')'-\ell(\ell+1)K_\Omega f/r^2$.
 
 Rotate the evaluation direction to the third axis. The Hessian map on
 the orthogonal $m=2,1,0$ matrix subspaces has singular coefficients
@@ -80,7 +83,7 @@ Finally, with $s=K_r/C\ge1$, Eq.~\eqref{eq:ext-principal} gives
  \frac{K_t}{|p|/(\widehat\lambda x)}
  =6-\frac6s+\frac{8d_*}{s-1}\ge R_t.
 \end{equation}
-Minimization over $s$ yields Eq.~\eqref{eq:admission-time-minimum};
+Taking the infimum over $s$ yields Eq.~\eqref{eq:admission-time-minimum};
 $|\tr H|\le\sqrt3\|H\|_F$ completes the result.
 \end{proof}
 
@@ -96,7 +99,10 @@ $\eta_{\max}>0$, a sufficient state cap is
 \end{equation}
 This preserves the retained principal signs throughout the exterior and
 bounds the relative Hessian. These are approximation budgets, rather than
-a selected astrophysical amplitude. The exact quadratic scalar remainder
+a selected astrophysical amplitude. The cap is sufficient, not necessary:
+exceeding it is outside this guarantee and the product's declared admitted
+family; it does not establish physical impossibility or an actual change
+of principal sign. The exact quadratic scalar remainder
 obeys $|\mathcal R_2|\le4\|\delta\mathcal H\|_F^2/
 \widehat\lambda$; a residual bound alone is not an inverse-operator error
 estimate. The conormal map is exact for the linear exterior:
@@ -126,9 +132,13 @@ spatial-gradient control is
 $[(|p_0|+\sqrt6N_{\rm STF}\mathcal A/x_0)/|\widehat v|]^2\ll1$.
 For a patch scale $L$, the implemented drift estimate is
 $\max(|\widehat H|,2|\widehat d/\widehat v|)L/L_0$.
-The retained sound-speed lower bound follows by minimizing
+The spherical-background sound-speed lower bound $c_{\rm bg}$ follows by minimizing
 $\min(4s^2,s^2+3)/[3(s-1)^2+4d_*s]$ over $s\ge1$.
-Writing its square root as $c_{\min}$ in units of $c$, require
+Here its minimum is $c_{\rm bg}^2$ in units of $c^2$.
+For a state with the spatial and time bounds $e_s<1,e_t$ in
+Eq.~\eqref{eq:admission-uniform-bounds}, the Rayleigh quotient instead gives
+$c_{\min}=c_{\rm bg}\sqrt{(1-e_s)/(1+e_t)}$.
+The implementation uses this conservative state-inclusive bound. Require
 $v_\perp/(cc_{\min})\ll1$ and
 $L/(cc_{\min}\tau_{\rm local})\ll1$ for intrinsic evolution.
 Observer proper motion gives $v_\perp=|\mu_{\rm obs}|D_l(1+z_l)$;
