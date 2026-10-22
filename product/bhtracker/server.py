@@ -63,11 +63,27 @@ def joint_dataset(raw):
 
 def joint_summary(dataset):
     d=dataset.document
+    analysis_ready=bool(str(d.get('data_version','')).startswith('OGLE-Mroz2022-corrected_LamLu2023v2') or d.get('analysis'))
+    effective_bounds=None
+    if analysis_ready:
+        import math
+        module=joint_module('v2' if dataset.__class__.__module__.endswith('_v2') else 'v1')
+        model=module.JointModel(d)
+        center=getattr(model,'time_origin_jd_tdb',2450000.)
+        declared=getattr(model,'analysis_bounds',{})
+        effective_bounds={'t0_jd_tdb':[center+model.lower[0],center+model.upper[0]],
+                          'tE_days':[math.exp(model.lower[1]),math.exp(model.upper[1])],
+                          'u0_heliocentric':[model.lower[2],model.upper[2]],'pi_E':[model.lower[4],model.upper[4]],
+                          'theta_E_mas':declared.get('theta_E_mas',[.01,40.]),
+                          'relative_frame_source_parallax_mas':declared.get('relative_frame_source_parallax_mas',[-1.,1.]),
+                          'qualification':'Declared search domains; artificial caps are not observational limits.'}
     return {'schema':d['schema'],'sha256':dataset.sha256,'target':d.get('target'),
             'input_hash_algorithm':('bhtracker.canonical_numeric_json.v2' if dataset.__class__.__module__.endswith('_v2') else 'archived_v1_json_numeric_spelling'),
             'photometry_rows':len(d['photometry']),'astrometry_rows':len(d['astrometry']),
             'time_coordinate':d['time_coordinate'],'metadata':d['metadata'],
             'data_version':d.get('data_version'),'analysis':d.get('analysis'),'bounds':d.get('bounds'),
+            'fit_readiness':'DECLARED_ANALYSIS_DOMAIN' if analysis_ready else 'ANALYSIS_BOUNDS_AND_INITIAL_GUESSES_REQUIRED',
+            'effective_physical_search_bounds':effective_bounds,
             'unavailable':['absolute source parallax','absolute lens proper motion','lens distance','horizon','core state']}
 
 def photometry_dataset(raw):
