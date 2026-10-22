@@ -27,7 +27,9 @@ black hole. The100-event photometric pilot is a separate frozen analysis.
    ```
 
 The wrapper works from any current directory when invoked by its absolute path;
-`--repository` can explicitly select the checkout. It verifies source and raw
+`--repository` can explicitly select the checkout. The package is located as
+either development `product/` or formal `products/blackhole_tracker/`; the
+script also resolves its own package location independently of current directory. It verifies all three frozen scientific/import/workflow source pins and raw
 hashes, imports15533nativeOGLErows while retaining the published12500-row primary
 window plus21HSTphotometric/21angularrows, records the environment/citation,
 and copies byte-exact original drivers into output. No C: workspace path is
@@ -39,7 +41,9 @@ conditional prediction and corrected v2.1 whole-night prediction, and20 fixed-se
 parametric controls per OU family (including truth profiles/night predictions).
 The complete run can take substantial computing time. `--stages` can select
 `baselines,profiles,predictions,controls,summary`; completed compatible outputs
-are reused. Incomplete control outputs are copied to a resume snapshot before
+are reused after strict schema/input/source/likelihood and baseline linkage
+checks. Twenty-control completion requires all full sample artifacts. Unknown
+stage names are rejected. Incomplete control outputs are copied to a resume snapshot before
 regeneration. Every command and log is retained. Use a separate output per
 concurrent campaign/environment.
 
