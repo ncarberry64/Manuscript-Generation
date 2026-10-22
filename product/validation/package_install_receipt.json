@@ -1,8 +1,8 @@
 {
   "status": "CLEAN_WHEEL_INSTALL_PASSED",
-  "created_utc": "2026-10-22T21:25:26.414341+00:00",
+  "created_utc": "2026-10-22T21:43:20.209441+00:00",
   "dependency_scope": "Fresh noneditable venv; runtime dependencies installed from the configured package index, no system-site-packages.",
-  "outside_checkout_working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r",
+  "outside_checkout_working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt",
   "commands": [
     {
       "command": [
@@ -14,23 +14,23 @@
         "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\build.log",
-      "log_sha256": "d1d667e465f3ace46e25469c5635658ea622b65376be4df537eda6ea16bbe995"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\build.log",
+      "log_sha256": "231ccaed75f7a749eea34db672d1f694aa56c20e5d23a3eed4ad105acc2ded80"
     },
     {
       "command": [
         "C:\\Python314\\python.exe",
         "-m",
         "venv",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\venv.log",
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\venv.log",
       "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\python.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Scripts\\python.exe",
         "-m",
         "pip",
         "install",
@@ -38,62 +38,62 @@
         "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\install.log",
-      "log_sha256": "5968c441ac7703d1ee2de9a6099ae388ecb4b7365f158b35fba887cca653b59a"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\install.log",
+      "log_sha256": "444fd772d112452b569d0c32c9b3a62f833db9a5a8704ddc5f8e729dfe605d8a"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\python.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Scripts\\python.exe",
         "-I",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\probe_install.py"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\probe_install.py"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\api_probe.log",
-      "log_sha256": "351fb7ccee72d44ff8d022e2eb02ee036475ad44fbccd6c232454a7a2db9ff13"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\api_probe.log",
+      "log_sha256": "57596d14d9f52b6c118b4da312cd4ac5f6fb7215432149f3f6d0b12349e8e8ea"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Scripts\\blackhole-tracker.exe",
         "example",
         "nearby_motion",
         "--output",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_nearby.json"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_nearby.json"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_example.log",
-      "log_sha256": "861e559808ce47b548ce2f09b17c79048cb2b0b091ecf5b685e3bac8a2decc8e"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_example.log",
+      "log_sha256": "c71ffd1733cd054c9dc41340c3f72d506285484f472b4e0af8c4d03e839364bd"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Scripts\\blackhole-tracker.exe",
         "validate",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_nearby.json"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_nearby.json"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_validate.log",
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_validate.log",
       "log_sha256": "955925bc30785853acca1f505bce75fb1bdc74b050f9388a0d01d6b7d5405beb"
     },
     {
       "command": [
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Scripts\\blackhole-tracker.exe",
         "fit",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_nearby.json",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_nearby.json",
         "--family",
         "gr",
         "--starts",
         "1",
         "--output",
-        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_fit"
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_fit"
       ],
       "returncode": 0,
-      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\cli_fit.log",
-      "log_sha256": "6e023e1f4f45021cc86b484c6ccba946b02adc07f34dc1f3b4863986debcfc21"
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\cli_fit.log",
+      "log_sha256": "6a67c139385f67afc9862a9676e708eb37b9391bbb593350833bdf9ce8d2862d"
     }
   ],
   "wheel": {
     "filename": "bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl",
-    "sha256": "2d0861485f993c8e34d9b2c2824e1606051f9aa4ebd41fc2d85ab7f36ee7ff2e",
-    "bytes": 286639,
+    "sha256": "95ce4f546924a3425c74efafe822ca213f6e51ad8a72e4c57a70ac7639711a99",
+    "bytes": 288256,
     "contents": {
       "file_count": 66,
       "provider_files": {
@@ -114,8 +114,8 @@
   "installed_api": {
     "passed": true,
     "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
-    "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv",
-    "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
+    "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv",
+    "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
     "editable": false,
     "dependency_versions": {
       "numpy": "2.5.4",
@@ -519,13 +519,13 @@
     "exports": {
       "analysis_config.json": "040b94b17d8f9a2116701e735559eb300cc9c19e0f0201c4866b00423fae7366",
       "dataset.json": "dc0a6e871e4da6a37d4be74a8fc1fe966ebfe6abd17698122611339c30d84c26",
-      "manifest.json": "1ba78517bfe65f8cd7907044acb50df50ed95129551242d3f7f7b18ca84f0f97",
+      "manifest.json": "f98d942515078dd5a573b4b3274af5f960da10c077a543b68ec7ecf4784d1dba",
       "measurements_and_model.png": "9ebad111356007955a6bae592c6effd1e4eef8b2d15b98d55b186acc4752fb95",
       "predictions.csv": "1ee44ed09431193ca540ddfcc9cd4fb433d9a4bb65566488d8b5b130799cb1c1",
       "report.html": "b5d4fba1356795c805f0775ecea8d4c0c082b17e6b88eb2ac0aa4388c6509206",
       "REPRODUCE.md": "d99b67e0ed08673a74d506cdf1c94f88936082de42467b8d6816fa254abd2c75",
-      "result.json": "9cb3ebb1438769acae7d5a854be9e4667dda1cc8d835ef377e871510791d8643",
-      "software_provenance.json": "8f0b300cd8c0a12c643a1c057452d0dd461e247269d7847970347a8b78068ae5",
+      "result.json": "5e61cadf5c3c9afa086a13f40705e14f9881fdbcf65a7dc775afefefa3093835",
+      "software_provenance.json": "a8c6bbfa530a2f5b808c5c97fef27c6318263f9deaab8888df31f3e1e0e41035",
       "track_and_residuals.png": "5e16728bd4ec4c9acaf140454bc682cd9f7312d81ab09802c2bef44ab5c3b17f"
     }
   },
@@ -555,7 +555,7 @@
     "bhtracker/joint_benchmark_v2.py": "83f599f7cdd616690fdcbf61f30ec05145719cc5b343d083cfe4c0a45ff940a6",
     "bhtracker/joint_mass.py": "507874d1adb27440abc3add6aab6ac5caf45f871b7ba58b8206d3fdceef32ff0",
     "bhtracker/joint_mass_v2.py": "6eaf050481fc23aebf4b929e49fdab57e324ee80eb08e1547b69f056269eeaaa",
-    "bhtracker/joint_report.py": "42e38dae8b7ad60c05893715b91375cbf269c8ce0b5839644623e97336a11ce2",
+    "bhtracker/joint_report.py": "f5a5d08ee76a53027f089d630e72ec9d15d4f7347e37a045016e401ee186752b",
     "bhtracker/joint_workflow.py": "838f97c94213cc155ba4447b232e39209cdf11c0d0ae1ebd769aa1fc3cc1d61d",
     "bhtracker/joint_workflow_v2.py": "3597564b3f7cf628fd13d003ad18fb5aff7f03aea644e86ece0664d75b7e1698",
     "bhtracker/observations.py": "5c9b07c1887c9a299ca8505b323462d41f314457f2bff3b5b2b2ca1970a21c0b",
@@ -565,7 +565,7 @@
     "bhtracker/r1_runtime.py": "f3cc2074d915ad02ba6549209d0b0cd532304fa71d2930bb7cbc3d5fc2a39250",
     "bhtracker/report.py": "15f17c02821d88a639f0af0a426af954467700f057635d4f76497fc0e8c18847",
     "bhtracker/sample_bundle.py": "8d145f0d16a2d9f2a63706b0fb5f26d187e33589597ae7ee7182cec8b15613ad",
-    "bhtracker/server.py": "439063f09c10da5a7ecc01543f1d9046ee6f98af1153591675730f867411b1b3",
+    "bhtracker/server.py": "532e99844fddea8a01b94210805f365b4607b717c47db0e534019ee8d6e7b84a",
     "bhtracker/theory/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "bhtracker/theory/ADAPTATION.json": "e35a9530a932522ee3ca5b8a85166c89e22f2f24e0b3c717cff948c2b216118b",
     "bhtracker/theory/BHSM_CORE_SURFACE_CONTRACT.json": "a0561d8fe7d1031daa2a56c433d46b99734b20f850e02e16d0e5095b32fc3507",

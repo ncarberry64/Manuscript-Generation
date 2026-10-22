@@ -1,8 +1,8 @@
 {
   "schema": "bhtracker.installed_joint_probe.v1",
   "passed": true,
-  "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv",
-  "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
+  "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv",
+  "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
   "editable": false,
   "versions": {
     "product": "0.2.0rc4",
@@ -33,6 +33,7 @@
     "max_astrometric_difference_mas": 0.0,
     "same_physical_parameters": true,
     "same_native_residuals": true,
+    "same_recorded_diagnostic_gates": true,
     "method": "FORWARD_STATE_REPLAY; optimization and scientific acceptance are separate"
   },
   "native_sourcepack": {
@@ -126,6 +127,7 @@
     "max_astrometric_difference_mas": 2.930988785010413e-14,
     "same_physical_parameters": true,
     "same_native_residuals": true,
+    "same_recorded_diagnostic_gates": true,
     "method": "FORWARD_STATE_REPLAY; optimization and scientific acceptance are separate"
   },
   "native_export_replay": {
@@ -142,6 +144,7 @@
     "max_astrometric_difference_mas": 2.930988785010413e-14,
     "same_physical_parameters": true,
     "same_native_residuals": true,
+    "same_recorded_diagnostic_gates": true,
     "method": "FORWARD_STATE_REPLAY; optimization and scientific acceptance are separate"
   },
   "archived_result_sha256": "0d1b9d5471d7030843aeef0bb1f5d5e1ca475907109514e08c42f1260bb67f54",
@@ -160,5 +163,11 @@
       "status": 200,
       "bytes": 615
     }
-  }
+  },
+  "tested_wheel_sha256": "95ce4f546924a3425c74efafe822ca213f6e51ad8a72e4c57a70ac7639711a99",
+  "tested_wheel_bytes": 288256,
+  "outside_checkout_working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_uomwr8jt",
+  "python_isolated_mode": true,
+  "optional_install_after_base_probe_completed": true,
+  "probe_script_sha256": "9d8aa5f1dfb2d73c8a3905a53eedb00d9cbca60557e5c2ecacc819492992c90e"
 }

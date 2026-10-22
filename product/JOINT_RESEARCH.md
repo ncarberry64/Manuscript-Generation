@@ -25,6 +25,10 @@ is executed by the app. A result is never loaded automatically.
 Choose the declared method, inspect its bounds and clock/frame assumptions,
 then run all prescribed starts. Export the replay bundle before closing.
 The app displays every row in each selected instrument and every angular row.
+Reopening a result recomputes its recorded diagnostics and status as well as
+its predictions; changing a saved label cannot certify a failed model. A
+failed search keeps every attempted start in an explicitly downloadable
+diagnostic JSON and supplies no converged physical parameters.
 
 ## What mass requires
 
