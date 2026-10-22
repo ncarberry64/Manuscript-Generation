@@ -1,4 +1,4 @@
-# BHSM Blackhole Tracker 0.2.0rc3
+# BHSM Blackhole Tracker 0.2.0rc4
 
 BHSM Blackhole Tracker reconstructs the effective gravitational mass, location and motion of a BHSM-described compact configuration from resolved image pairs, their magnification ratio and their delay. The ordinary lens response and the BHSM boundary/envelope interpretation use the **same optical potential, counted once**. Agreement with ordinary gravity is an allowed result; a non-GR deviation is not required to use this interpretation.
 
@@ -69,6 +69,21 @@ On first launch the script creates `.venv`, installs the package and runtime dep
 
 The default address is **http://127.0.0.1:8765/**. If the browser does not open, enter that address manually. If the port is occupied, run `Start_Blackhole_Tracker.cmd --port 8766`. `--no-open` suppresses browser opening; `--check-install` installs/checks dependencies and exits. A missing or old Python produces an installation message and a nonzero exit code. Paths containing spaces are supported.
 
+### Enable joint astrometry explicitly
+
+The standard launcher installs the resolved-image and native-photometry routes. Joint parallax and angular-centroid research also needs **Astropy**. To choose that extra, double-click **`Start_Blackhole_Tracker_Joint.cmd`**, or run `Start_Blackhole_Tracker.cmd --astrometry`. This explicitly installs/checks the same package with its `astrometry` extra, then starts the same local app. Initial dependency installation needs network access. The ordinary launcher never adds optional dependencies merely because the joint page is opened.
+
+For an existing source installation, close the app and run these PowerShell commands from the unpacked product directory:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install ".[astrometry]"
+.\.venv\Scripts\python.exe -m bhtracker serve --open
+```
+
+If the environment does not exist yet, use the explicit joint launcher or the environment-creation commands below first. A wheel installation uses its actual local path: `python -m pip install "./bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl[astrometry]"`. Quoting keeps the path and extra together, including paths containing spaces. On Linux/macOS, use the interpreter in your chosen virtual environment with the same wheel-extra command.
+
+Open **Joint astrometry research** and follow [JOINT_RESEARCH.md](JOINT_RESEARCH.md) for the reviewed source-pack import, explicit clock/frame assumptions, fitting, export and replay. Enabling the dependency does not validate a noise model or establish a black-hole mass. The original 2022 ambiguous HST export and the separately versioned 2023 benchmark remain distinct.
+
 For an explicit PowerShell installation, start in this `product` directory:
 
 ```powershell
@@ -88,10 +103,10 @@ python -m pip install .
 python -m bhtracker serve --port 8766 --open
 ```
 
-For development and notebook replay, use `python -m pip install -e ".[dev]"`. To install a supplied wheel, replace the path below with its actual location:
+For development and notebook replay, use `python -m pip install -e ".[dev]"`. To run the optional joint tests and notebooks, explicitly use `python -m pip install -e ".[dev,astrometry]"`. To install a supplied wheel, replace the path below with its actual location:
 
 ```text
-python -m pip install path/to/bhsm_blackhole_tracker-0.2.0rc3-py3-none-any.whl
+python -m pip install path/to/bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl
 python -m bhtracker serve --open
 ```
 

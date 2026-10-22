@@ -11,6 +11,10 @@ The ordinary resolved and native-photometry routes do not require this extra.
     python -m pip install "./bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl[astrometry]"
     blackhole-tracker serve --open
 
+For the complete Windows source package, double-click **`Start_Blackhole_Tracker_Joint.cmd`**. This is an explicit request to install/check Astropy in the package's local `.venv`; the standard launcher keeps the base installation. You can also run `Start_Blackhole_Tracker.cmd --astrometry --check-install` to install/check the extra and exit, then launch normally. Close an existing app before updating its environment.
+
+For an existing Windows source environment, run `.\.venv\Scripts\python.exe -m pip install ".[astrometry]"` from the unpacked product folder. Linux/macOS users can run their virtual environment's Python with the wheel-extra installation command above. See [README.md](README.md#enable-joint-astrometry-explicitly) for complete setup commands. Opening a web page never installs dependencies.
+
 Open **Joint astrometry research** in the app. Select the reviewed 2023
 `BHSM_OB110462_2023_SourcePack_v1.zip` for direct native benchmark import,
 import a versioned calibrated joint JSON, or verify and open a saved result.
