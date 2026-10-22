@@ -238,7 +238,11 @@ def make_server(port=8765):
                     if not isinstance(masses,list) or not 3<=len(masses)<=61 or any(isinstance(v,bool) or not isinstance(v,(int,float)) or not .05<=v<=200 for v in masses):raise ValueError('profile requires 3 to 61 finite masses in .05..200 solar masses')
                     if any(b<=a for a,b in zip(masses,masses[1:])):raise ValueError('profile masses must increase strictly')
                     if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=2000:raise ValueError('profile max_nfev must be an integer from 1 to 2000')
-                    key=hashlib.sha256(json.dumps(['joint_profile',result['scientific_source_sha256'],result['input_sha256'],result['best_internal_state'],masses,maximum],sort_keys=True).encode()).hexdigest()
+                    # Profiling uses the likelihood, reference objective and all
+                    # retained start states, not just the best forward state.
+                    # Preserve the parsed lossless result's numeric semantics.
+                    profile_identity=hashlib.sha256(json.dumps(result,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
+                    key=hashlib.sha256(json.dumps(['joint_profile',profile_identity,masses,maximum],sort_keys=True).encode()).hexdigest()
                     self.submit_job(key,lambda:module.profile_joint_mass(dataset.document,result,masses,max_nfev=maximum));return
                 if self.path=='/api/photometry/import':
                     from .observations import parse_ogle_photometry,parse_benchmark_photometry

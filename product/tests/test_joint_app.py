@@ -7,6 +7,7 @@ import json
 import time
 import subprocess
 import sys
+import threading
 from pathlib import Path
 import zipfile
 from urllib.error import HTTPError
@@ -164,3 +165,80 @@ def test_python_module_cli_propagates_failed_joint_replay_status(joint_result,tm
                            cwd=Path(__file__).resolve().parents[1],capture_output=True,text=True,timeout=25)
     assert checked.returncode==1,checked.stdout+checked.stderr
     assert json.loads(checked.stdout)['passed'] is False
+
+
+def test_joint_profile_job_guard_preserves_retained_modes(service,joint_result,monkeypatch):
+    """Same forward state can have a different set of profile search modes."""
+    import bhtracker.joint_mass as module
+    release=threading.Event();entered=threading.Event()
+    def held_profile(dataset,saved,masses,**options):
+        entered.set();assert release.wait(10)
+        return {'retained_start_count':len(saved['all_starts'])}
+    monkeypatch.setattr(module,'profile_joint_mass',held_profile)
+    changed=copy.deepcopy(joint_result)
+    extra=copy.deepcopy(changed['all_starts'][0])
+    extra['internal_state'][3]+=.4
+    extra['objective_deviance']+=1
+    changed['all_starts'].append(extra)
+    try:
+        _,body,_=request(service,'/api/joint/profile',{'result':joint_result,'masses':[5.,7.,10.]})
+        first=json.loads(body)
+        assert entered.wait(3)
+        _,body,_=request(service,'/api/joint/profile',{'result_json':json.dumps(joint_result),'masses':[5.,7.,10.]})
+        duplicate=json.loads(body)
+        assert duplicate['job_id']==first['job_id'] and duplicate['duplicate_prevented']
+        _,body,_=request(service,'/api/joint/profile',{'result_json':json.dumps(changed),'masses':[5.,7.,10.]})
+        distinct=json.loads(body)
+        assert distinct['job_id']!=first['job_id'] and not distinct.get('duplicate_prevented')
+    finally:release.set()
+    for job,count in [(first['job_id'],len(joint_result['all_starts'])),(distinct['job_id'],len(changed['all_starts']))]:
+        deadline=time.monotonic()+5
+        while time.monotonic()<deadline:
+            _,body,_=request(service,'/api/jobs/'+job);output=json.loads(body)
+            if output['status'] not in ('pending','running'):break
+            time.sleep(.02)
+        assert output['status']=='complete'
+        assert output['result']['retained_start_count']==count
+
+
+@pytest.mark.parametrize('route',['resolved','photometry','joint'])
+def test_fit_job_guards_preserve_options_and_do_not_reuse_completed_results(service,joint_result,monkeypatch,route):
+    """Guard only identical pending work; retain separate analysis choices."""
+    release=threading.Event();entered=threading.Event()
+    def held_fit(*args,**options):
+        entered.set();assert release.wait(10)
+        return {'recorded_options':options}
+    if route=='resolved':
+        import bhtracker.server as module
+        monkeypatch.setattr(module,'fit',held_fit)
+        _,body,_=request(service,'/api/examples/nearby_motion')
+        payload={'dataset':json.loads(body),'family':'gr','nuisance':'shear','starts':1}
+        changed=copy.deepcopy(payload);changed['starts']=2;endpoint='/api/fit'
+    elif route=='photometry':
+        import bhtracker.photometry as module
+        from test_photometry_app import upload
+        monkeypatch.setattr(module,'fit_photometry',held_fit)
+        payload={'dataset':upload(service)['dataset'],'options':{'starts':1,'max_nfev':100}}
+        changed=copy.deepcopy(payload);changed['options']['starts']=2;endpoint='/api/photometry/fit'
+    else:
+        import bhtracker.joint_mass as module
+        monkeypatch.setattr(module,'fit_joint',held_fit)
+        payload={'dataset':joint_result['dataset_input'],'scientific_version':'v1','options':{'starts':1,'max_nfev':100}}
+        changed=copy.deepcopy(payload);changed['options']['starts']=2;endpoint='/api/joint/fit'
+    try:
+        _,body,_=request(service,endpoint,payload);first=json.loads(body)
+        assert entered.wait(3)
+        _,body,_=request(service,endpoint,payload);duplicate=json.loads(body)
+        assert duplicate['job_id']==first['job_id'] and duplicate['duplicate_prevented']
+        _,body,_=request(service,endpoint,changed);distinct=json.loads(body)
+        assert distinct['job_id']!=first['job_id'] and not distinct.get('duplicate_prevented')
+    finally:release.set()
+    for job in [first['job_id'],distinct['job_id']]:
+        deadline=time.monotonic()+5
+        while time.monotonic()<deadline:
+            _,body,_=request(service,'/api/jobs/'+job);output=json.loads(body)
+            if output['status'] not in ('pending','running'):break
+            time.sleep(.02)
+        assert output['status']=='complete'
+    _,body,_=request(service,endpoint,payload)
+    assert json.loads(body)['job_id']!=first['job_id']
