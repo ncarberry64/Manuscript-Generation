@@ -55,6 +55,7 @@ def joint_dataset(raw):
     from .joint_mass_v2 import JointData
     if not isinstance(raw,dict):raise ValueError('joint dataset must be a versioned JSON object')
     if not isinstance(raw.get('metadata'),dict):raise ValueError('joint metadata must document its native clocks and reference frame')
+    if 'analysis' in raw and not isinstance(raw['analysis'],dict):raise ValueError('joint analysis bounds and initial guesses must be a JSON object')
     if len(json.dumps(raw,allow_nan=False).encode())>PHOTOMETRY_DATASET_LIMIT:
         raise ValueError('Joint dataset JSON must contain at most 32 MB')
     if not all(isinstance(raw.get(key),list) and all(isinstance(row,dict) for row in raw[key]) for key in ('photometry','astrometry')):
@@ -213,7 +214,7 @@ def make_server(port=8765):
                     if not isinstance(options,dict) or set(options)-allowed:raise ValueError('unsupported joint fit options')
                     starts=options.get('starts',16);maximum=options.get('max_nfev',600)
                     if isinstance(starts,bool) or not isinstance(starts,int) or not 1<=starts<=16:raise ValueError('joint starts must be an integer from 1 to 16')
-                    if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=1000:raise ValueError('joint max_nfev must be an integer from 1 to 1000')
+                    if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=2000:raise ValueError('joint max_nfev must be an integer from 1 to 2000')
                     for key in ['gp','free_filter_offsets','astrometric_lens_light']:
                         if key in options and not isinstance(options[key],bool):raise ValueError(key+' must be true or false')
                     for key in ['cross_filter_correlation','astrometric_jitter_mas']:
@@ -231,7 +232,7 @@ def make_server(port=8765):
                     masses=data.get('masses');maximum=data.get('max_nfev',600)
                     if not isinstance(masses,list) or not 3<=len(masses)<=61 or any(isinstance(v,bool) or not isinstance(v,(int,float)) or not .05<=v<=200 for v in masses):raise ValueError('profile requires 3 to 61 finite masses in .05..200 solar masses')
                     if any(b<=a for a,b in zip(masses,masses[1:])):raise ValueError('profile masses must increase strictly')
-                    if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=1000:raise ValueError('profile max_nfev must be an integer from 1 to 1000')
+                    if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=2000:raise ValueError('profile max_nfev must be an integer from 1 to 2000')
                     key=hashlib.sha256(json.dumps(['joint_profile',result['scientific_source_sha256'],result['input_sha256'],result['best_internal_state'],masses,maximum],sort_keys=True).encode()).hexdigest()
                     self.submit_job(key,lambda:module.profile_joint_mass(dataset.document,result,masses,max_nfev=maximum));return
                 if self.path=='/api/photometry/import':

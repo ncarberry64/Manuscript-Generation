@@ -56,7 +56,7 @@ def source_archive(output):
         for path, relative in portable_files():
             target.write(path, (Path("product") / relative).as_posix())
             included.append(relative.as_posix())
-    for required in ["README.md", "pyproject.toml", "Start_Blackhole_Tracker.cmd",
+    for required in ["README.md", "pyproject.toml", "Start_Blackhole_Tracker.cmd", "Start_Blackhole_Tracker_Joint.cmd",
                      "scripts/package_product.py", "validation/package_install_receipt.json"]:
         if required not in included:
             raise ValueError(f"portable source is missing {required}")
