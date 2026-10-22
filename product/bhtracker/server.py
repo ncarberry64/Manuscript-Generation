@@ -17,6 +17,33 @@ from .provenance import VERSION, project_citation
 WEB=Path(__file__).resolve().parent/'web'
 PHOTOMETRY_DATASET_LIMIT=32_000_000
 
+def joint_module(version):
+    if version=='v1':
+        from . import joint_mass
+        return joint_mass
+    if version=='v2':
+        from . import joint_mass_v2
+        return joint_mass_v2
+    raise ValueError('joint scientific_version must be explicitly v1 or v2')
+
+def joint_dataset(raw):
+    from .joint_mass import JointData
+    if not isinstance(raw,dict):raise ValueError('joint dataset must be a versioned JSON object')
+    if not isinstance(raw.get('metadata'),dict):raise ValueError('joint metadata must document its native clocks and reference frame')
+    if len(json.dumps(raw,allow_nan=False).encode())>PHOTOMETRY_DATASET_LIMIT:
+        raise ValueError('Joint dataset JSON must contain at most 32 MB')
+    if not all(isinstance(raw.get(key),list) and all(isinstance(row,dict) for row in raw[key]) for key in ('photometry','astrometry')):
+        raise ValueError('joint photometry and astrometry must be native measurement object arrays')
+    return JointData(raw)
+
+def joint_summary(dataset):
+    d=dataset.document
+    return {'schema':d['schema'],'sha256':dataset.sha256,'target':d.get('target'),
+            'photometry_rows':len(d['photometry']),'astrometry_rows':len(d['astrometry']),
+            'time_coordinate':d['time_coordinate'],'metadata':d['metadata'],
+            'data_version':d.get('data_version'),'analysis':d.get('analysis'),'bounds':d.get('bounds'),
+            'unavailable':['absolute source parallax','absolute lens proper motion','lens distance','horizon','core state']}
+
 def photometry_dataset(raw):
     from .observations import UnresolvedPhotometry
     if not isinstance(raw,dict):raise ValueError('unresolved dataset must be a versioned JSON object')
@@ -58,7 +85,7 @@ def make_server(port=8765):
             if self.headers.get('Host') not in hosts:return False
             origin=self.headers.get('Origin')
             return origin is None or origin in {f'http://{h}' for h in hosts}
-        def submit_job(self,key,operation):
+        def submit_job(self,key,operation,*,lossless_json=False):
             with lock:
                 prior=fingerprints.get(key)
                 if prior and jobs[prior]['status'] in ('pending','running'):
@@ -67,7 +94,12 @@ def make_server(port=8765):
                 name=uuid.uuid4().hex;jobs[name]={'status':'pending'};fingerprints[key]=name
             def work():
                 with lock:jobs[name]={'status':'running'}
-                try:item={'status':'complete','result':operation()}
+                try:
+                    value=operation()
+                    # A JSON string preserves numeric spelling for archived v1
+                    # hashes through a JavaScript browser's number conversion.
+                    item={'status':'complete',('result_json' if lossless_json else 'result'):
+                          json.dumps(value,allow_nan=False) if lossless_json else value}
                 except Exception as error:item={'status':'failed','error':str(error)}
                 with lock:jobs[name]=item
             pool.submit(work);self.send_json({'job_id':name},202)
@@ -89,7 +121,8 @@ def make_server(port=8765):
                 with lock:item=jobs.get(name)
                 self.send_json(item or {'error':'Unknown job'},200 if item else 404);return
             path={'/':'index.html','/index.html':'index.html','/app.js':'app.js','/style.css':'style.css',
-                  '/photometry':'photometry.html','/photometry/':'photometry.html','/photometry.js':'photometry.js'}.get(self.path)
+                  '/photometry':'photometry.html','/photometry/':'photometry.html','/photometry.js':'photometry.js',
+                  '/joint':'joint.html','/joint/':'joint.html','/joint.js':'joint.js'}.get(self.path)
             if not path:self.send_json({'error':'Not found'},404);return
             blob=(WEB/path).read_bytes();self.send_response(200)
             self.send_header('Content-Type',{'html':'text/html; charset=utf-8','js':'text/javascript','css':'text/css'}[path.rsplit('.',1)[1]])
@@ -103,12 +136,55 @@ def make_server(port=8765):
                 if not 0<size<=40_000_000:raise ValueError('Request must contain at most 40 MB of JSON (resolved dataset files: 8 MB; unresolved JSON: 32 MB)')
                 data=read_json(self.rfile.read(size))
                 if not isinstance(data,dict):raise ValueError('request body must be a JSON object')
+                if 'result_json' in data:
+                    if 'result' in data:raise ValueError('provide result or lossless result_json, not both')
+                    data['result']=read_json(data['result_json'])
                 if self.path=='/api/validate':
                     raw=read_json(data['dataset_json']) if 'dataset_json' in data else data['dataset']
                     dataset=load_dataset(raw);self.send_json({'valid':True,'summary':dataset.summary()});return
                 if self.path=='/api/report':self.send_json({'html':report_html(data['result'])});return
                 if self.path=='/api/export':
                     self.send_zip(export_analysis_bundle(data['result']),'Blackhole_Tracker_analysis.zip');return
+                if self.path=='/api/joint/validate':
+                    raw=read_json(data['dataset_json']) if 'dataset_json' in data else data['dataset']
+                    dataset=joint_dataset(raw);self.send_json({'valid':True,'summary':joint_summary(dataset)});return
+                if self.path in ('/api/joint/result','/api/joint/replay'):
+                    from .joint_report import validate_result
+                    dataset,_,checked=validate_result(data['result'])
+                    self.send_json({'valid':True,'summary':joint_summary(dataset),'replay':checked,
+                                    'dataset_json':json.dumps(dataset.document,allow_nan=False)});return
+                if self.path=='/api/joint/fit':
+                    version=data.get('scientific_version')
+                    module=joint_module(version)
+                    raw=read_json(data['dataset_json']) if 'dataset_json' in data else data['dataset']
+                    dataset=joint_dataset(raw)
+                    options=data.get('options',{})
+                    allowed={'starts','max_nfev','gp','cross_filter_correlation','astrometric_jitter_mas',
+                             'source_parallax_prior','free_filter_offsets','astrometric_lens_light','exposure_time_choice','noise_model'}
+                    if not isinstance(options,dict) or set(options)-allowed:raise ValueError('unsupported joint fit options')
+                    starts=options.get('starts',16);maximum=options.get('max_nfev',600)
+                    if isinstance(starts,bool) or not isinstance(starts,int) or not 1<=starts<=16:raise ValueError('joint starts must be an integer from 1 to 16')
+                    if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=1000:raise ValueError('joint max_nfev must be an integer from 1 to 1000')
+                    for key in ['gp','free_filter_offsets','astrometric_lens_light']:
+                        if key in options and not isinstance(options[key],bool):raise ValueError(key+' must be true or false')
+                    for key in ['cross_filter_correlation','astrometric_jitter_mas']:
+                        if key in options and (isinstance(options[key],bool) or not isinstance(options[key],(int,float))):raise ValueError(key+' must be numeric')
+                    options={'starts':starts,'max_nfev':maximum,**options}
+                    model_options={k:v for k,v in options.items() if k not in ('starts','max_nfev')}
+                    # Validate the declared likelihood before accepting a long job.
+                    module.JointModel(dataset.document,**model_options)
+                    key=hashlib.sha256(json.dumps(['native_joint_mass',version,dataset.sha256,options],sort_keys=True).encode()).hexdigest()
+                    self.submit_job(key,lambda:module.fit_joint(dataset.document,**options),lossless_json=True);return
+                if self.path=='/api/joint/profile':
+                    from .joint_report import validate_result
+                    result=data['result'];dataset,_,_=validate_result(result)
+                    module=joint_module('v2' if result['schema'].endswith('.v2') else 'v1')
+                    masses=data.get('masses');maximum=data.get('max_nfev',600)
+                    if not isinstance(masses,list) or not 3<=len(masses)<=61 or any(isinstance(v,bool) or not isinstance(v,(int,float)) or not .05<=v<=200 for v in masses):raise ValueError('profile requires 3 to 61 finite masses in .05..200 solar masses')
+                    if any(b<=a for a,b in zip(masses,masses[1:])):raise ValueError('profile masses must increase strictly')
+                    if isinstance(maximum,bool) or not isinstance(maximum,int) or not 1<=maximum<=1000:raise ValueError('profile max_nfev must be an integer from 1 to 1000')
+                    key=hashlib.sha256(json.dumps(['joint_profile',result['scientific_source_sha256'],result['input_sha256'],result['best_internal_state'],masses,maximum],sort_keys=True).encode()).hexdigest()
+                    self.submit_job(key,lambda:module.profile_joint_mass(dataset.document,result,masses,max_nfev=maximum));return
                 if self.path=='/api/photometry/import':
                     from .observations import parse_ogle_photometry,parse_benchmark_photometry
                     files=data['files'];metadata=data.get('metadata',{})
@@ -157,6 +233,8 @@ def make_server(port=8765):
                     key=hashlib.sha256(json.dumps([dataset.sha256,data.get('family','gr'),data.get('nuisance','shear'),data.get('starts',2)],sort_keys=True).encode()).hexdigest()
                     self.submit_job(key,lambda:fit(dataset,family=data.get('family','gr'),nuisance=data.get('nuisance','shear'),starts=data.get('starts',2)));return
                 self.send_json({'error':'Not found'},404)
+            except ImportError:
+                self.send_json({'error':'The joint astrometry route requires the optional astrometry dependencies. Install the matching local wheel with its [astrometry] extra, including Astropy.'},400)
             except (ValueError,KeyError,TypeError) as error:self.send_json({'error':str(error)},400)
     try:server=ThreadingHTTPServer(('127.0.0.1',port),Handler)
     except OSError as error:
