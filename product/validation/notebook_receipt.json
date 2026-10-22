@@ -3,27 +3,32 @@
     "notebook": "01_compact_mass_and_motion.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 6,
-    "sha256": "8963837f43884c1aea7320422a8fe12fde0b4c67e49c76f71b3e3c3198d00e2a",
-    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc3\\package_install_lq9p7wjz\\clean_venv\\Scripts\\python.exe",
-    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\installed_notebooks",
-    "metadata_update_after_execution": "Version label refreshed only; code cells and executed outputs unchanged."
+    "sha256": "3606f3483905300a6205a086207a641756621ffefd890c85e7c22e0661bc4648",
+    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\python.exe",
+    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\notebook_runtime_final2d0"
   },
   {
     "notebook": "02_conditional_boundary_response.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 5,
-    "sha256": "1ff779d20b8a04c6d42f2330edb3abc856a919ebc43d7ab513a4b6a89bd5cd39",
-    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc3\\package_install_lq9p7wjz\\clean_venv\\Scripts\\python.exe",
-    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\installed_notebooks",
-    "metadata_update_after_execution": "Version label refreshed only; code cells and executed outputs unchanged."
+    "sha256": "f7ae35c2f3240f8b9992ade8312d600f6c59fbdc00e1e1b083d7374e0cee1f94",
+    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\python.exe",
+    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\notebook_runtime_final2d0"
   },
   {
     "notebook": "03_native_unresolved_photometry.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 4,
-    "sha256": "b972e7f57267574834bf2149ca32716369d4301790bcb1bf11c19ae3a152aef0",
-    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc3\\package_install_lq9p7wjz\\clean_venv\\Scripts\\python.exe",
-    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\installed_notebooks",
-    "metadata_update_after_execution": "Version label refreshed only; code cells and executed outputs unchanged."
+    "sha256": "3c8dec35bb5ce37559ff9a017914aa40619c63eacff2ddbc31b44f92056c7ffc",
+    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\python.exe",
+    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\notebook_runtime_final2d0"
+  },
+  {
+    "notebook": "04_joint_astrometry_and_parallax.ipynb",
+    "status": "EXECUTED_NO_ERRORS",
+    "code_cells": 5,
+    "sha256": "0f2376a775682ce219403f9e34a83a5354ccafba289713a6cb9dfd91944ec444",
+    "kernel_python": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\package_install_t7kdsi7r\\clean_venv\\Scripts\\python.exe",
+    "working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc4\\notebook_runtime_final2d0"
   }
 ]

@@ -1,0 +1,26 @@
+{
+  "schema": "bhtracker.rc4_release_validation.v1",
+  "status": "LOCAL_SOFTWARE_CHECKS_PASSED",
+  "product_version": "0.2.0rc4",
+  "wheel": {
+    "filename": "bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl",
+    "bytes": 286639,
+    "sha256": "2d0861485f993c8e34d9b2c2824e1606051f9aa4ebd41fc2d85ab7f36ee7ff2e"
+  },
+  "full_product_tests": {
+    "passed": 212,
+    "failed": 0,
+    "seconds": 74.79,
+    "receipt": "rc4_product_tests.xml"
+  },
+  "base_only_install_receipt": "package_install_receipt.json",
+  "optional_joint_install_receipt": "rc4_installed_joint_probe.json",
+  "notebooks": {
+    "executed": 4,
+    "receipt": "notebook_receipt.json",
+    "environment": "Clean noneditable installed wheel, kernel and cwd outside checkout"
+  },
+  "scientific_acceptance": "NOT_ESTABLISHED; every frozen measured joint noise candidate fails adequacy. Software checks and forward replay do not classify a black hole.",
+  "frozen_scientific_source_sha256": "6eaf050481fc23aebf4b929e49fdab57e324ee80eb08e1547b69f056269eeaaa",
+  "ci": "Final remote heads are recorded separately after push; this local receipt does not claim CI success."
+}
