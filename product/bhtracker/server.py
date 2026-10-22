@@ -8,6 +8,9 @@ import threading
 import uuid
 import webbrowser
 import base64
+from io import BytesIO
+import tempfile
+import zipfile
 from .data import load_dataset,read_json
 from .examples import example_names,make_example
 from .inference import fit,profile
@@ -16,6 +19,28 @@ from .provenance import VERSION, project_citation
 
 WEB=Path(__file__).resolve().parent/'web'
 PHOTOMETRY_DATASET_LIMIT=32_000_000
+JOINT_SOURCEPACK_SHA256='71d36a03e4ba275e91bea62f4784a5193f34ad32d3777b637453f91151bafa99'
+
+def import_joint_sourcepack(content):
+    """Import only the reviewed source pack; never execute archived helpers."""
+    if hashlib.sha256(content).hexdigest()!=JOINT_SOURCEPACK_SHA256:
+        raise ValueError('Known-system source pack hash differs from the reviewed 2023 data version; use the accompanying unchanged SourcePack_v1.zip')
+    from .joint_benchmark_v2 import import_2023_benchmark
+    with zipfile.ZipFile(BytesIO(content)) as archive, tempfile.TemporaryDirectory(prefix='bhtracker native sources ') as temporary:
+        infos=archive.infolist()
+        if len(infos)>110 or sum(item.file_size for item in infos)>5_000_000:
+            raise ValueError('Known-system source pack exceeds its reviewed inventory bounds')
+        if len({i.filename for i in infos})!=len(infos):raise ValueError('Source pack contains duplicate filenames')
+        root=Path(temporary).resolve()
+        for item in infos:
+            if '\\' in item.filename or ':' in item.filename:raise ValueError('Source pack contains a nonportable path')
+            target=(root/item.filename).resolve()
+            if not target.is_relative_to(root):raise ValueError('Source pack path is outside its temporary import directory')
+            if item.is_dir():target.mkdir(parents=True,exist_ok=True)
+            else:
+                target.parent.mkdir(parents=True,exist_ok=True)
+                target.write_bytes(archive.read(item))
+        return import_2023_benchmark(root/'portable_2023_benchmark_v1')
 
 def joint_module(version):
     if version=='v1':
@@ -27,7 +52,7 @@ def joint_module(version):
     raise ValueError('joint scientific_version must be explicitly v1 or v2')
 
 def joint_dataset(raw):
-    from .joint_mass import JointData
+    from .joint_mass_v2 import JointData
     if not isinstance(raw,dict):raise ValueError('joint dataset must be a versioned JSON object')
     if not isinstance(raw.get('metadata'),dict):raise ValueError('joint metadata must document its native clocks and reference frame')
     if len(json.dumps(raw,allow_nan=False).encode())>PHOTOMETRY_DATASET_LIMIT:
@@ -39,6 +64,7 @@ def joint_dataset(raw):
 def joint_summary(dataset):
     d=dataset.document
     return {'schema':d['schema'],'sha256':dataset.sha256,'target':d.get('target'),
+            'input_hash_algorithm':('bhtracker.canonical_numeric_json.v2' if dataset.__class__.__module__.endswith('_v2') else 'archived_v1_json_numeric_spelling'),
             'photometry_rows':len(d['photometry']),'astrometry_rows':len(d['astrometry']),
             'time_coordinate':d['time_coordinate'],'metadata':d['metadata'],
             'data_version':d.get('data_version'),'analysis':d.get('analysis'),'bounds':d.get('bounds'),
@@ -148,6 +174,13 @@ def make_server(port=8765):
                 if self.path=='/api/joint/validate':
                     raw=read_json(data['dataset_json']) if 'dataset_json' in data else data['dataset']
                     dataset=joint_dataset(raw);self.send_json({'valid':True,'summary':joint_summary(dataset)});return
+                if self.path=='/api/joint/import-benchmark':
+                    encoded=data.get('content_base64')
+                    if not isinstance(encoded,str) or len(encoded)>4_000_000:raise ValueError('provide the reviewed known-system source ZIP, at most 3 MB before base64 encoding')
+                    dataset=import_joint_sourcepack(base64.b64decode(encoded,validate=True))
+                    self.send_json({'valid':True,'summary':joint_summary(dataset),
+                                    'sourcepack_sha256':JOINT_SOURCEPACK_SHA256,
+                                    'dataset_json':json.dumps(dataset.document,allow_nan=False)});return
                 if self.path in ('/api/joint/result','/api/joint/replay'):
                     from .joint_report import validate_result
                     dataset,_,checked=validate_result(data['result'])

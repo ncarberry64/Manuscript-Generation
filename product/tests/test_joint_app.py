@@ -86,6 +86,13 @@ def test_archived_v1_lossless_browser_json_preserves_whole_float_hash(service,jo
     assert 'BHSM' in json.loads(body)['html']
 
 
+def test_joint_sourcepack_rejects_unreviewed_bytes_before_import(service):
+    with pytest.raises(HTTPError) as error:
+        request(service,'/api/joint/import-benchmark',{'content_base64':base64.b64encode(b'other data').decode()})
+    assert error.value.code==400
+    assert 'source pack hash differs' in json.loads(error.value.read())['error']
+
+
 @pytest.mark.parametrize('change',['mass','residual','native_bytes','scientific_source'])
 def test_joint_verification_rejects_tampered_scientific_summary(service,joint_result,change):
     altered=copy.deepcopy(joint_result)

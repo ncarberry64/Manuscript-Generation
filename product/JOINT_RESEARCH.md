@@ -11,8 +11,13 @@ The ordinary resolved and native-photometry routes do not require this extra.
     python -m pip install "./bhsm_blackhole_tracker-0.2.0rc4-py3-none-any.whl[astrometry]"
     blackhole-tracker serve --open
 
-Open **Joint astrometry research** in the app. Import a versioned joint input
-JSON or verify and open a saved result. A result is never loaded automatically.
+Open **Joint astrometry research** in the app. Select the reviewed 2023
+`BHSM_OB110462_2023_SourcePack_v1.zip` for direct native benchmark import,
+import a versioned calibrated joint JSON, or verify and open a saved result.
+The source ZIP's SHA-256 is checked before any contained data are imported.
+It contains public author data and exposure headers with their own attribution
+and rights; those rights are not replaced by BHSM licensing. No archived helper
+is executed by the app. A result is never loaded automatically.
 Choose the declared method, inspect its bounds and clock/frame assumptions,
 then run all prescribed starts. Export the replay bundle before closing.
 The app displays every row in each selected instrument and every angular row.
