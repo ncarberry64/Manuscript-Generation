@@ -8,6 +8,12 @@ The formal source and reviewer record are in the [BHSM GitHub repository](https:
 
 The fitted object is a **compact exterior**. Its BHSM interpretation does not uniquely identify the microscopic theory, establish a horizon or select an R1 deformation state. Bundled resolved measurement examples are explicitly synthetic. Actual downloaded observations remain in the external data handoff; the paper includes the complete derived 100-event results, residual plots and protocol without redistributing those raw files.
 
+## Joint angular observations and annual parallax
+
+Version 0.2.0rc4 adds `/joint`, `blackhole-tracker joint`, a versioned Python API and `04_joint_astrometry_and_parallax.ipynb`. The GUI imports the reviewed 2023 known-system source ZIP directly, or calibrated joint JSON, and verifies/reopens saved results. Use the explicit Joint launcher or install the wheel's `[astrometry]` extra. [JOINT_RESEARCH.md](JOINT_RESEARCH.md) explains inputs, formulas, complete likelihood choices, interpretation, export and replay.
+
+The new source version uses actual corrected author OGLE data and 21 HST centroid rows across 11 visits, with 82 mapped exposure headers. It preserves unknown clock and averaging conventions as explicit assumptions. This route is separate from the original 2022 benchmark. All three declared v2 benchmark noise models fail an adequacy check; their conditional masses are not reliable black-hole measurements. The software retains those failures, profile degeneracies and the required additional calibration evidence. Successful state replay does not change that scientific outcome. It has not validated general recognition of known black holes or identified a new one.
+
 ## Native unresolved observations: app, CLI, Python and notebook
 
 Use **Unresolved photometry** in the app, or open `http://127.0.0.1:8765/photometry`. Import an optimized OGLE-III `.dat` file, the corresponding benchmark OGLE/MOA files, or a saved `bhsm_unresolved_observations/1` JSON. The import preserves byte hashes, source-line identities, native magnitude/errors/time, filter/instrument calibration, literal source warnings and transformation history. Original files remain unchanged. The separate native page supports a 32 MB versioned input; the resolved page retains its 8 MB limit. The local server has a 40 MB total request limit.
@@ -35,7 +41,7 @@ export_result(result, 'native_fit')
 replay_analysis('native_fit', 'native_replayed')
 ```
 
-The notebook `03_native_unresolved_photometry.ipynb` uses the actual external observations when `BHSM_DATA_ROOT` points to the handoff's `data` directory; its portable fallback is explicitly synthetic. The frozen measured pilot lives in the paper's `real_data_pilot_20261022/` directory. It processed **all 100 events / 76,344 rows**: 89 simple-model inadequate and 11 photometric fits. Two predeclared archival follow-up targets pass stricter checks, with no mass-supported black-hole candidate or new black-hole interpretation. Neither ranking nor duration is a black-hole probability. The benchmark remains photometric-model inadequate; released HST timing/frame conventions prevent a validated joint mass inference.
+The notebook `03_native_unresolved_photometry.ipynb` uses the actual external observations when `BHSM_DATA_ROOT` points to the handoff's `data` directory; its portable fallback is explicitly synthetic. The frozen measured pilot lives in the paper's `real_data_pilot_20261022/` directory. It processed **all 100 events / 76,344 rows**: 89 simple-model inadequate and 11 photometric fits. Two predeclared archival follow-up targets pass stricter checks, with no mass-supported black-hole candidate or new black-hole interpretation. Neither ranking nor duration is a black-hole probability. The original 2022 benchmark remains photometric-model inadequate; its released HST timing/frame conventions prevent a validated joint mass inference. The separate 2023 joint route above uses independently versioned observations and retains its own failed noise checks.
 
 The native model identifies only supported model-conditional photometric combinations. Since `tE = thetaE / mu_rel` and `thetaE^2 = kappa M pi_rel`, mass, distance, absolute angular proper motion, horizon and core state remain `null`. One effective optical potential has the explicit BHSM interpretation and is counted once. No inferred surface deformation or core dynamics are added to an inadequate light curve. See [UNRESOLVED_OBSERVATIONS.md](UNRESOLVED_OBSERVATIONS.md) for the likelihood and optional astrometric metadata gates.
 
@@ -386,12 +392,14 @@ Envelope status `UNRESOLVED` means the admitted design has weak or rank-deficien
 
 ## Executed notebooks and validation
 
-Both notebooks are saved with executed outputs; their cell counts and SHA-256 hashes are recorded in `validation/notebook_receipt.json`:
+The notebooks are saved with executed outputs; their cell counts and SHA-256 hashes are recorded in `validation/notebook_receipt.json`:
 
 | Notebook | Walkthrough |
 |---|---|
 | `notebooks/01_compact_mass_and_motion.ipynb` | Full-covariance ordinary fit, BHSM interpretation and fixed-radius spherical boundary output, center track, reoptimized mass profile, weak-motion control and portable exports. Six code cells. |
 | `notebooks/02_conditional_boundary_response.ipynb` | Same-potential BHSM reporting contract, conditional R1 fit, physical admission, Dirichlet/conormal cap, unresolved envelope and rejection of an inadmissible state. Five code cells. |
+| `notebooks/03_native_unresolved_photometry.ipynb` | Native OGLE import, all-row fit/residuals and export/refit replay. Four code cells; actual external observations when configured. |
+| `notebooks/04_joint_astrometry_and_parallax.ipynb` | Verified 2023 source import, recorded conditional joint fit/profile audit, all-row plots and forward-state replay. Five code cells; no automatic measured fit or accepted mass claim. |
 
 Open them in an editor with Jupyter support and select the environment in which this product is installed. With development dependencies installed, replay them and the product checks from this source directory:
 

@@ -224,7 +224,12 @@ def make_server(port=8765):
                     # Validate the declared likelihood before accepting a long job.
                     module.JointModel(dataset.document,**model_options)
                     key=hashlib.sha256(json.dumps(['native_joint_mass',version,dataset.sha256,options],sort_keys=True).encode()).hexdigest()
-                    self.submit_job(key,lambda:module.fit_joint(dataset.document,**options),lossless_json=True);return
+                    def joint_fit_operation():
+                        from .provenance import software_provenance
+                        result=module.fit_joint(dataset.document,**options)
+                        result['software_provenance']=software_provenance()
+                        return result
+                    self.submit_job(key,joint_fit_operation,lossless_json=True);return
                 if self.path=='/api/joint/profile':
                     from .joint_report import validate_result
                     result=data['result'];dataset,_,_=validate_result(result)

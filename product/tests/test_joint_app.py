@@ -62,6 +62,10 @@ def test_joint_saved_result_native_export_and_generic_replay(service,joint_resul
         assert len(archive.read('astrometry.csv').splitlines())==25
         assert archive.read('native_source_01.bin')==b'Independent synthetic regression control; not a measured event.\n'
         assert json.loads(archive.read('manifest.json'))['replay_method']=='FORWARD_STATE_REPLAY'
+        provenance=json.loads(archive.read('software_provenance.json'))
+        assert provenance['export_environment']['project_citation']['repository_url']=='https://github.com/ncarberry64/Berger-Hopf-Standard-Model'
+        interpretation=json.loads(archive.read('bhsm_interpretation_sources.json'))
+        assert interpretation['framework']=='BHSM' and interpretation['source_provenance']['sources']
     bundle=tmp_path/'joint.zip';bundle.write_bytes(body)
     from bhtracker.report import replay_analysis
     replay=replay_analysis(bundle,tmp_path/'replayed')

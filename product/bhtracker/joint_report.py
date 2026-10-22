@@ -13,7 +13,7 @@ from pathlib import Path
 
 import numpy as np
 
-from .provenance import REPOSITORY_URL, project_citation
+from .provenance import REPOSITORY_URL, project_citation, software_provenance
 
 BUNDLE_SCHEMA = 'bhtracker.joint_analysis_bundle.v1'
 
@@ -69,6 +69,8 @@ def report_html(result):
     dataset, _, checked = validate_result(result)
     esc = lambda value: html.escape(str(value))
     parameters = ''.join(f'<tr><th>{esc(k)}</th><td>{esc(v)}</td></tr>' for k, v in result['parameters'].items() if not isinstance(v, dict))
+    from .interpretation import bhsm_interpretation
+    interpretation=bhsm_interpretation('gr',fit_status='INSUFFICIENT_INFORMATION')
     return f'''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
 <title>BHSM Blackhole Tracker · Joint astrometry research</title>
 <style>body{{font:16px/1.6 system-ui;max-width:1050px;margin:3rem auto;padding:0 1.5rem;color:#172b40}}table{{border-collapse:collapse;width:100%}}td,th{{padding:.5rem;text-align:left;border-bottom:1px solid #dce3e9}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;background:#f1f5f8;padding:1rem}}.status{{background:#fff3d8;padding:1rem}}</style>
@@ -77,6 +79,7 @@ def report_html(result):
 <p>Target: {esc(dataset.document.get('target', 'not supplied'))}. {len(dataset.document['photometry'])} native photometric rows; {len(dataset.document['astrometry'])} native angular rows. Selected rows, exclusions, native bytes, time assumptions and frame provenance are retained in dataset.json.</p>
 <h2>What the calculation measures</h2><p>Under the compact-lens model, θE² = κ M πrel and πE = πrel/θE, so M = θE/(κ πE); μrel = θE/tE. Angular centroid data and annual photometric parallax must independently constrain the two scales. Duration alone is not a mass measurement. A boundary-limited or degenerate fit leaves mass unidentified.</p>
 <h2>BHSM interpretation</h2><p>One ordinary compact-lens optical potential represents the BHSM Einstein/GHY spacetime-side response, counted once. This calculation supplies no separate optical term for the proposed nongeometric core, envelope or membrane.</p><p>Absolute lens motion, absolute source distance, lens distance, horizon and core state remain unavailable unless independent frame, distance and dark-lens evidence are supplied. A conditional mass above a remnant threshold does not identify a horizon.</p>
+<details><summary>Pinned BHSM theory and source versions</summary><pre>{esc(json.dumps(interpretation['source_provenance'],indent=2))}</pre><pre>{esc(json.dumps(interpretation['core_surface'],indent=2))}</pre></details>
 <h2>Conditional solver parameters</h2><table>{parameters}</table>
 <h2>Separate acceptance checks</h2><p>Inspect all starts, fixed-mass profiles, both tails and dependence of noise residuals, timing and calibration sensitivity, lens-light assumptions and prior literature. A scalar goodness-of-fit probability or a successful replay is insufficient. The benchmark validation receipt is separate from this individual fit.</p>
 <pre>{esc(json.dumps(result.get('diagnostics'), indent=2))}</pre><h2>Model options</h2><pre>{esc(json.dumps(result['model_options'], indent=2))}</pre>
@@ -92,6 +95,13 @@ def export_result(result, directory):
                         ('forward_replay_check.json', checked), ('model_options.json', result['model_options'])]:
         (dest / name).write_text(json.dumps(value, indent=2, allow_nan=False) + '\n', encoding='utf-8')
     (dest / 'report.html').write_text(report_html(result), encoding='utf-8')
+    from .interpretation import bhsm_interpretation
+    (dest/'bhsm_interpretation_sources.json').write_text(json.dumps(bhsm_interpretation('gr',fit_status='INSUFFICIENT_INFORMATION'),indent=2)+'\n',encoding='utf-8')
+    provenance={'export_environment':software_provenance(),
+                'capture_scope':'Export/replay environment; original solver environment is retained only when supplied in result.json.',
+                'recorded_solver_environment':result.get('environment'),
+                'recorded_solver_provenance':result.get('software_provenance')}
+    (dest/'software_provenance.json').write_text(json.dumps(provenance,indent=2)+'\n',encoding='utf-8')
     with (dest / 'photometry.csv').open('w', newline='', encoding='utf-8') as stream:
         writer = csv.writer(stream)
         writer.writerow(['source_row_id', 'instrument', 'JD_TDB_model_epoch', 'native_magnitude', 'supplied_sigma_mag', 'model_magnitude', 'residual_mag', 'whitened_innovation'])
