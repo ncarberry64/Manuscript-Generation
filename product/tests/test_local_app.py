@@ -4,6 +4,8 @@ import time
 from urllib.request import Request,urlopen
 from urllib.error import HTTPError
 import pytest
+from io import BytesIO
+import zipfile
 from bhtracker.server import make_server
 
 @pytest.fixture
@@ -28,19 +30,29 @@ def test_app_full_flow(service):
     deadline=time.monotonic()+20
     while time.monotonic()<deadline:
         _,body,_=request(service,'/api/jobs/'+job);out=json.loads(body)
-        if out['status']!='running':break
+        if out['status'] not in ('pending','running'):break
         time.sleep(.02)
     assert out['status']=='complete',out
     result=out['result'];assert result['status']=='TRACKED'
     _,body,_=request(service,'/api/report',{'result':result});report=json.loads(body)['html']
     assert '<html' in report and 'TRACKED' in report and 'known' in report
     assert result['data_summary']['provenance']['kind']=='synthetic'
+    _,body,headers=request(service,'/api/export',{'result':result})
+    assert headers['Content-Type']=='application/zip'
+    with zipfile.ZipFile(BytesIO(body)) as archive:
+        assert json.loads(archive.read('dataset.json'))==result['dataset_input']
+    _,body,headers=request(service,'/api/examples/nearby_motion/bundle')
+    with zipfile.ZipFile(BytesIO(body)) as archive:
+        assert {'dataset.json','measurements.csv','metadata.json','full_covariance.csv'}<=set(archive.namelist())
 
 def test_bad_covariance_rejected(service):
     _,body,_=request(service,'/api/examples/nearby_motion');dataset=json.loads(body)
     dataset['covariance'][0][0]=0
     with pytest.raises(HTTPError) as error:request(service,'/api/validate',{'dataset':dataset})
     assert error.value.code==400
+    with pytest.raises(HTTPError) as error:
+        request(service,'/api/validate',{'dataset_json':'{"schema_version":1,"schema_version":1}'})
+    assert 'duplicate field' in json.loads(error.value.read())['error']
 
 def test_cross_origin_and_path_rejected(service):
     with pytest.raises(HTTPError) as error:request(service,'/api/health',headers={'Origin':'https://example.com'})

@@ -4,7 +4,7 @@ from pathlib import Path
 from .data import load_dataset
 from .examples import make_example,TITLES
 from .inference import fit,profile
-from .report import export_result
+from .report import export_result,replay_analysis
 
 def main(argv=None):
     parser=argparse.ArgumentParser(prog='blackhole-tracker',description='Resolved compact-lens mass/motion and conditional R1 research inference')
@@ -18,6 +18,8 @@ def main(argv=None):
     run=commands.add_parser('fit');run.add_argument('dataset',type=Path);run.add_argument('--family',choices=['gr','r1'],default='gr')
     run.add_argument('--nuisance',choices=['none','shear','full'],default='shear');run.add_argument('--starts',type=int,default=2)
     run.add_argument('--output',type=Path,required=True)
+    replay=commands.add_parser('replay',help='verify and reproduce an exported analysis ZIP or directory')
+    replay.add_argument('analysis',type=Path);replay.add_argument('--output',type=Path,required=True)
     prof=commands.add_parser('profile');prof.add_argument('dataset',type=Path);prof.add_argument('result',type=Path)
     prof.add_argument('--parameter',choices=['mass_msun','motion_x','motion_y'],default='mass_msun');prof.add_argument('--output',type=Path,required=True)
     serve=commands.add_parser('serve');serve.add_argument('--port',type=int,default=8765);serve.add_argument('--open',action='store_true')
@@ -40,7 +42,9 @@ def main(argv=None):
                   'bhsm_interpretation':result['bhsm_interpretation'],'output':str(args.output.resolve())},indent=2))
         elif args.command=='profile':
             r=profile(args.dataset,json.loads(args.result.read_text()),parameter=args.parameter)
+            args.output.parent.mkdir(parents=True,exist_ok=True)
             args.output.write_text(json.dumps(r,indent=2)+'\n');print(str(args.output.resolve()))
+        elif args.command=='replay':print(json.dumps(replay_analysis(args.analysis,args.output),indent=2))
         elif args.command=='serve':
             from .server import serve
             serve(args.port,args.open)

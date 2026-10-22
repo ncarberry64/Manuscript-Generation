@@ -217,6 +217,95 @@ def test_principal_coefficient_lower_bounds():
     assert grid["minimum_sound_bound_ratio"] >= 1 - 1e-10
 
 
+def test_sufficient_cap_exceedance_is_not_a_principal_instability_claim():
+    config = {"geometry": {"D_l_pc": 9e8, "D_s_pc": 1.5e9,
+                            "D_ls_pc": 9e8, "z_l": .3, "z_s": 1.},
+              "analysis": {"r0_pc": 10., "flux_ratio": 1.,
+                           "flux_provenance": "regular_body_proxy"}}
+    base = pa.assess_physics(config, {"mass_msun": 1e9}, [100.])
+    cap = base["boundary_state"]["amplitude_norm_max"]
+    larger = pa.assess_physics(config, {"mass_msun": 1e9,
+                  "boundary_amplitudes": [2 * cap, 0., 0.]}, [100.])
+    assert not larger["checks"]["state_within_sufficient_cap"]
+    assert not larger["allowed_physics_models"]["r1_boundary_conditional"]
+    # The chosen eta budget fails while stronger analytic sign guarantees
+    # still hold. Cap exceedance is therefore not an instability theorem.
+    assert larger["checks"]["retained_spatial_principal_positive"]
+    assert larger["checks"]["retained_time_principal_positive"]
+    assert "not proof of physical impossibility" in larger["boundary_state"]["cap_semantics"]
+
+
+@pytest.mark.parametrize("location", ["analysis", "parameters"])
+@pytest.mark.parametrize("invalid", ["not-a-timescale", None, float("nan"), float("inf"), 0., -1.])
+def test_supplied_invalid_evolution_timescale_cannot_become_fixed_state(location, invalid):
+    config = {"geometry": {"D_l_pc": 9e8, "D_s_pc": 1.5e9,
+                            "D_ls_pc": 9e8, "z_l": .3, "z_s": 1.},
+              "analysis": {"r0_pc": 10., "flux_ratio": 1.,
+                           "flux_provenance": "regular_body_proxy"}}
+    parameters = {"mass_msun": 1e9}
+    target = config["analysis"] if location == "analysis" else parameters
+    target["intrinsic_timescale_observer_yr"] = invalid
+    result = pa.assess_physics(config, parameters, [100.])
+    assert result["allowed_physics_models"]["baseline_point_mass"]
+    assert not result["allowed_physics_models"]["r1_boundary_conditional"]
+    assert not result["checks"]["valid_r1_input"]
+    assert any("finite and positive when supplied" in reason for reason in result["reasons"])
+
+
+def test_valid_evolution_timescale_and_parameter_override():
+    config = {"geometry": {"D_l_pc": 9e8, "D_s_pc": 1.5e9,
+                            "D_ls_pc": 9e8, "z_l": .3, "z_s": 1.},
+              "analysis": {"r0_pc": 10., "flux_ratio": 1.,
+                           "flux_provenance": "regular_body_proxy"}}
+    fixed = pa.assess_physics(config, {"mass_msun": 1e9}, [100.])
+    assert fixed["allowed_physics_models"]["r1_boundary_conditional"]
+    assert fixed["scales"]["intrinsic_evolution_assumption"] == "fixed prescribed state"
+    config["analysis"]["intrinsic_timescale_observer_yr"] = "inactive-config-value"
+    slow = pa.assess_physics(config, {"mass_msun": 1e9,
+                    "intrinsic_timescale_observer_yr": 1e12}, [100.])
+    fast = pa.assess_physics(config, {"mass_msun": 1e9,
+                    "intrinsic_timescale_observer_yr": 1.}, [100.])
+    assert slow["allowed_physics_models"]["r1_boundary_conditional"]
+    assert slow["scales"]["intrinsic_evolution_assumption"] == "supplied observer timescale"
+    assert not fast["checks"]["quasistatic_intrinsic_evolution"]
+    assert not fast["allowed_physics_models"]["r1_boundary_conditional"]
+
+
+@pytest.mark.parametrize("evolution", [False, True])
+def test_speed_threshold_uses_state_inclusive_principal_certificate(evolution):
+    config = {"geometry": {"D_l_pc": 9e8, "D_s_pc": 1.5e9,
+                            "D_ls_pc": 9e8, "z_l": .3, "z_s": 1.},
+              "analysis": {"r0_pc": 10., "flux_ratio": 1.,
+                           "flux_provenance": "regular_body_proxy"}}
+    zero = pa.assess_physics(config, {"mass_msun": 1e9}, [100.])
+    amplitude = zero["boundary_state"]["amplitude_norm_max"]
+    parameters = {"mass_msun": 1e9, "boundary_amplitudes": [amplitude, 0., 0.]}
+    state = pa.assess_physics(config, parameters, [100.])
+    background = state["scales"]["background_characteristic_speed_lower_over_c"]
+    corrected = state["scales"]["characteristic_speed_lower_over_c"]
+    assert 0 < corrected < background
+    assert zero["scales"]["characteristic_speed_lower_over_c"] == background
+    spatial = state["boundary_state"]["uniform_spatial_principal_fraction_bound"]
+    temporal = state["boundary_state"]["uniform_time_principal_fraction_bound"]
+    assert corrected == pytest.approx(background * np.sqrt((1-spatial)/(1+temporal)), rel=1e-15)
+    cap = state["approximation_budgets"]["quasistatic_speed_ratio_cap"]
+    midpoint_speed = cap * (background + corrected) / 2
+    if evolution:
+        scale = state["scales"]["local_patch_scale_pc"]
+        parameters["intrinsic_timescale_observer_yr"] = scale * 1.3 / (pa.C_PC_YR * midpoint_speed)
+        key = "quasistatic_intrinsic_evolution"
+    else:
+        parameters["proper_motion_mas_yr"] = [midpoint_speed * pa.C_PC_YR / (pa.MAS_RAD * 9e8 * 1.3), 0.]
+        key = "quasistatic_motion"
+    # This lies below the old spherical-background cutoff, above the
+    # rigorous state-inclusive cutoff, and inside baseline slow motion.
+    assert midpoint_speed / background < cap < midpoint_speed / corrected
+    rejected = pa.assess_physics(config, parameters, [100.])
+    assert rejected["allowed_physics_models"]["baseline_point_mass"]
+    assert not rejected["checks"][key]
+    assert not rejected["allowed_physics_models"]["r1_boundary_conditional"]
+
+
 def test_public_conormal_and_dirichlet_physical_predictions_agree():
     from bhtracker.examples import make_example
     from bhtracker.forward import LensEngine

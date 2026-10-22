@@ -257,7 +257,7 @@ def assess_physics(config: dict, parameters: dict, impact_pc=None) -> dict:
         d_ratio = exterior.D / exterior.C
         rt = _time_ratio_min(d_ratio)
         cmin2 = _sound_speed_lower_squared(d_ratio)
-        cmin = math.sqrt(cmin2)
+        background_cmin = math.sqrt(cmin2)
 
         # The analytic inequalities cover every exterior radius and every
         # normalized STF orientation, including states beyond the 3-mode UI.
@@ -328,23 +328,33 @@ def assess_physics(config: dict, parameters: dict, impact_pc=None) -> dict:
             "sampled_radii": 129,
             "uniform_hessian_coefficient": HESSIAN_B,
             "sampling_is_certificate": False,
+            "cap_semantics": "Sufficient retained-model guarantee. Exceeding this cap is outside the declared admitted family, not proof of physical impossibility or a principal-sign change.",
         }
+        # Rayleigh bounds on Z0+deltaZ and Kt0+deltaKt give a state-
+        # inclusive speed certificate. Zero means this sufficient bound
+        # gives no positive speed, not that the actual characteristic is zero.
+        cmin = background_cmin * math.sqrt(max(0., 1 - spatial_fraction) / (1 + time_fraction))
         mu = np.asarray(parameters.get("proper_motion_mas_yr", [0., 0.]), dtype=float)
         if mu.shape != (2,) or np.any(~np.isfinite(mu)):
             raise ValueError("proper_motion_mas_yr must be a finite length-2 vector")
         mu_norm = float(np.linalg.norm(mu))
         motion_verified = mu_norm == 0 or dl is not None
         speed = 0. if mu_norm == 0 else (mu_norm * MAS_RAD * dl * (1 + z_l) / C_PC_YR if dl is not None else None)
-        speed_ratio = None if speed is None else speed / cmin
+        speed_ratio = None if speed is None or cmin <= 0 else speed / cmin
         local_scale = max(r0, exterior.rV_pc, float(np.max(impact)) if impact_verified else r0)
         background_drift = max(abs(exterior.H), 2 * abs(exterior.d / exterior.v)) * local_scale / exterior.L0_pc
-        timescale = _number(parameters, ["intrinsic_timescale_observer_yr"],
-                            _number(analysis, ["intrinsic_timescale_observer_yr"]))
+        timescale_key = "intrinsic_timescale_observer_yr"
+        timescale_source = parameters if timescale_key in parameters else analysis
+        timescale = None
+        if timescale_key in timescale_source:
+            # Missing means a prescribed fixed state. A supplied invalid value
+            # must not silently select that more restrictive physical model.
+            timescale = _number(timescale_source, [timescale_key])
+            if timescale is None or timescale <= 0:
+                raise ValueError("intrinsic timescale must be finite and positive when supplied")
         intrinsic_ratio = 0.
         if timescale is not None:
-            if timescale <= 0:
-                raise ValueError("intrinsic timescale must be positive")
-            intrinsic_ratio = local_scale * (1 + z_l) / (C_PC_YR * cmin * timescale)
+            intrinsic_ratio = None if cmin <= 0 else local_scale * (1 + z_l) / (C_PC_YR * cmin * timescale)
         weak_monopole = (1 + exterior.epsilon_infty) * exterior.m_pc / r0
         weak_state = .5 * abs(exterior.beta_hat) * Y_MAX_PER_STATE_NORM * amplitude
         total_spatial_gradient_ratio = ((p0 + math.sqrt(6) * N_STF * amplitude / exterior.x0) / exterior.v) ** 2
@@ -366,7 +376,7 @@ def assess_physics(config: dict, parameters: dict, impact_pc=None) -> dict:
             "flux_provenance_selected": provenance_ok,
             "motion_units_verified": motion_verified,
             "quasistatic_motion": speed_ratio is not None and speed_ratio <= budgets["quasistatic_speed_ratio_cap"],
-            "quasistatic_intrinsic_evolution": intrinsic_ratio <= budgets["quasistatic_speed_ratio_cap"],
+            "quasistatic_intrinsic_evolution": intrinsic_ratio is not None and intrinsic_ratio <= budgets["quasistatic_speed_ratio_cap"],
             "frozen_background": background_drift <= budgets["background_drift_cap"],
             "small_spatial_background_gradient": total_spatial_gradient_ratio <= budgets["spatial_gradient_ratio_cap"],
         })
@@ -403,6 +413,8 @@ def assess_physics(config: dict, parameters: dict, impact_pc=None) -> dict:
             "local_patch_scale_pc": local_scale,
             "background_drift_ratio": background_drift,
             "speed_over_c": speed, "characteristic_speed_lower_over_c": cmin,
+            "background_characteristic_speed_lower_over_c": background_cmin,
+            "characteristic_speed_bound_kind": "state-inclusive retained principal bound; zero means no positive guarantee",
             "quasistatic_advection_ratio": speed_ratio,
             "intrinsic_evolution_ratio": intrinsic_ratio,
             "intrinsic_evolution_assumption": "fixed prescribed state" if timescale is None else "supplied observer timescale",
@@ -411,6 +423,7 @@ def assess_physics(config: dict, parameters: dict, impact_pc=None) -> dict:
         out["approximation_budgets"] = budgets
         out["limits"] = [
             "Bounds certify the retained local QS principal coefficients and perturbation size, not full covariant stability or observational accuracy.",
+            "A false principal-positivity check means the sufficient bound does not guarantee the sign; it is not a calculation of a negative principal coefficient.",
             "Line-of-sight projection is the declared decaying local extension; cosmological matching and time corrections remain separate model errors.",
             "No near-horizon boundary value or black-hole charge follows from regular-body or worldtube proxy provenance.",
         ]

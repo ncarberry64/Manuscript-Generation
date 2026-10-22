@@ -215,7 +215,7 @@ def main(argv=None):
     environment["PYTHONUTF8"] = "1"
     steps = []
     receipt = {"status": "RUNNING", "created_utc": datetime.now(timezone.utc).isoformat(),
-               "dependency_scope": "Clean noneditable package installation with --system-site-packages; existing scientific dependencies reused.",
+               "dependency_scope": "Fresh noneditable venv; runtime dependencies installed from the configured package index, no system-site-packages.",
                "outside_checkout_working_directory": str(work), "commands": steps}
     try:
         print("Building wheel with the invoking development interpreter...", flush=True)
@@ -229,10 +229,10 @@ def main(argv=None):
                             "bytes": wheel.stat().st_size, "contents": wheel_contents(wheel)}
         clean = work / "clean_venv"
         print("Creating a clean environment and installing the wheel...", flush=True)
-        steps.append(run_logged([args.base_python.resolve(), "-m", "venv", "--system-site-packages", clean],
+        steps.append(run_logged([args.base_python.resolve(), "-m", "venv", clean],
                                 work, work / "venv.log", environment))
         python = clean / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
-        steps.append(run_logged([python, "-m", "pip", "install", "--no-deps", "--force-reinstall", wheel],
+        steps.append(run_logged([python, "-m", "pip", "install", "--force-reinstall", wheel],
                                 work, work / "install.log", environment))
         (work / "probe_install.py").write_text(PROBE, encoding="utf-8")
         print("Checking public prediction, GR/R1 fits, provider hashes and installed app resources...", flush=True)

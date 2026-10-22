@@ -3,12 +3,16 @@
     "notebook": "01_compact_mass_and_motion.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 6,
-    "sha256": "dbecce64d8d0e72a1d60f4ed3c9412302a26e72873ea48cd18fe94ca95f108d4"
+    "sha256": "91f52d134ae0101d62d995cbfe05cebef6088c793de36f00f15d57e0098e6114",
+    "kernel_python": "C:\\Users\\carbe\\AppData\\Local\\Temp\\bhtracker clean wheel sh6ytnem\\venv\\Scripts\\python.exe",
+    "working_directory": "C:\\Users\\carbe\\AppData\\Local\\Temp\\bhtracker clean wheel sh6ytnem\\notebook work"
   },
   {
     "notebook": "02_conditional_boundary_response.ipynb",
     "status": "EXECUTED_NO_ERRORS",
     "code_cells": 5,
-    "sha256": "90d387bcd879e6c3734e9f9ba16389d938e8d01be482aa8dc0312d22f016d775"
+    "sha256": "a1d4bd7da632c06f648e98bc4db25d36839ecdd6b306131d27bdad1ed73657e1",
+    "kernel_python": "C:\\Users\\carbe\\AppData\\Local\\Temp\\bhtracker clean wheel sh6ytnem\\venv\\Scripts\\python.exe",
+    "working_directory": "C:\\Users\\carbe\\AppData\\Local\\Temp\\bhtracker clean wheel sh6ytnem\\notebook work"
   }
 ]

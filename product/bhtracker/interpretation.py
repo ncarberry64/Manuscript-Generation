@@ -47,7 +47,7 @@ def spherical_boundary(mass_msun, radius_pc, sigma_mass_msun=None):
         'boundary_energy_sigma_over_Msun_c2':None if sigma is None else sigma/lapse,
         'mixed_curvature_velocity2_km2_s2':GM_SUN*mass/(radius*PC*1e6),
         'reconstructed_monopole_msun':by_mass-GM_SUN*by_mass*by_mass/(2*C*C*radius*PC),
-        'geometry':'Static spherical Schwarzschild equivalent of the fitted ordinary monopole; flat reference subtraction.',
+        'geometry':'Principal extrinsic-curvature deficit of the enclosing sphere on the static spatial slice of the spherical Schwarzschild-equivalent ordinary monopole; flat Euclidean reference subtraction.',
         'qualification':'The radius is supplied, and errors condition on it. These are alternative representations of the same monopole, not a second mass or the full nonspherical/environmental boundary energy. Changing the enclosing radius is not physical mass drift.',
     }
 
@@ -55,7 +55,7 @@ def spherical_boundary(mass_msun, radius_pc, sigma_mass_msun=None):
 def bhsm_interpretation(family,estimates=None,uncertainty=None,model=None,fit_status=None):
     interpretation={
         'framework':'BHSM',
-        'model_role':'One compact-configuration optical response described in BHSM boundary/envelope language.',
+        'model_role':'One compact-configuration optical response in the adopted BHSM Einstein/GHY sector, described in boundary/envelope language.',
         'one_potential_rule':'Equivalent ordinary-gravity and BHSM envelope descriptions represent the same fitted lens potential and are counted once. A separately derived response is added only when it is a distinct term of the same physical model.',
         'parameter_meanings':[
             {'parameter':'mass_msun',

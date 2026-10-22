@@ -1,4 +1,4 @@
-# BHSM Blackhole Tracker 0.1.1
+# BHSM Blackhole Tracker 0.2.0rc1
 
 BHSM Blackhole Tracker reconstructs the effective gravitational mass, location and motion of a BHSM-described compact configuration from resolved image pairs, their magnification ratio and their delay. The ordinary lens response and the BHSM boundary/envelope interpretation use the **same optical potential, counted once**. Agreement with ordinary gravity is an allowed result; a non-GR deviation is not required to use this interpretation.
 
@@ -26,15 +26,15 @@ The result's `bhsm_interpretation` dictionary records these meanings and the one
 
 Install Python **3.11 or newer**, with the `python` command available on PATH. Unpack the complete product folder and double-click **`Start_Blackhole_Tracker.cmd`**.
 
-On first launch the script creates `.venv`, installs the source package and development dependencies, and opens the local app. Dependency installation needs access to your configured package index; fitting uses no remote service or API key. Keep the console open while using the app. Press **Ctrl+C** there to stop it.
+On first launch the script creates `.venv`, installs the package and runtime dependencies, and opens the local app. It also checks an existing environment and repairs missing dependencies. Dependency installation needs access to your configured package index; fitting uses no remote service or API key. Keep the console open while using the app. Press **Ctrl+C** there to stop it. The launcher also accepts the Windows `py -3` launcher when `python` is unavailable.
 
-The default address is **http://127.0.0.1:8765/**. If the browser does not open, enter that address manually. If the port is occupied, use the explicit command below with another port.
+The default address is **http://127.0.0.1:8765/**. If the browser does not open, enter that address manually. If the port is occupied, run `Start_Blackhole_Tracker.cmd --port 8766`. `--no-open` suppresses browser opening; `--check-install` installs/checks dependencies and exits. A missing or old Python produces an installation message and a nonzero exit code. Paths containing spaces are supported.
 
 For an explicit PowerShell installation, start in this `product` directory:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pip install .
 .\.venv\Scripts\python.exe -m bhtracker serve --open
 ```
 
@@ -52,7 +52,7 @@ python -m bhtracker serve --port 8766 --open
 For development and notebook replay, use `python -m pip install -e ".[dev]"`. To install a supplied wheel, replace the path below with its actual location:
 
 ```text
-python -m pip install path/to/bhsm_blackhole_tracker-0.1.1-py3-none-any.whl
+python -m pip install path/to/bhsm_blackhole_tracker-0.2.0rc1-py3-none-any.whl
 python -m bhtracker serve --open
 ```
 
@@ -60,15 +60,18 @@ The wheel contains the browser assets, example JSON files and pinned R1 provider
 
 The commands below use `python` to mean the interpreter with this package installed. With the Windows environment above, substitute `.\.venv\Scripts\python.exe`. The installed `blackhole-tracker` executable is equivalent to `python -m bhtracker`.
 
+On Linux, create a fresh environment with `python3 -m venv tracker-env`, install the wheel with `tracker-env/bin/python -m pip install /path/to/the.whl`, then run `tracker-env/bin/python -m bhtracker serve --open`. The source installation uses the same `pip install .` command from the unpacked product directory. Distribution-provided Python installations may require their `python3-venv` package first.
+
 ## Use the local app
 
 1. Choose a built-in example and **Load**, or **Import your dataset** from a JSON file.
 2. Select **Validate dataset**. Inspect the dataset summary and the input JSON under **Inspect dataset & configuration**.
-3. Start with **Ordinary lens response** and **Shear** nuisance parameters. Select 1–8 optimization starts, then **Run inference**. Its API/CLI family name remains `gr`.
+3. Keep the recommended **Ordinary lens response** and select **Run fit**. It defaults to smooth tidal shear and two optimization starts. Its API/CLI family name remains `gr`; R1, environment and starts are inside **Advanced model options**.
 4. Read the fit status, BHSM interpretation, uncertainties, residuals and diagnostics. The spherical boundary cards describe the same fitted monopole at the displayed fixed radius. **Conditional R1 response** additionally requires declared scalar-flux provenance and an admitted physical domain.
-5. Use **Export JSON** to retain the complete fit or **Export report** for a self-contained HTML report. Download the input separately if you edited or constructed it elsewhere.
+5. Select **Download replay bundle**. It includes the original input, full covariance and calibrations, exact fit controls, result, HTML, prediction CSV, two plots, software/source hashes and a reproduction guide. JSON and HTML remain separately available.
+6. Install the same wheel in another working directory and run `python -m bhtracker replay bhsm-analysis-replay.zip --output replayed`. Read `replayed/replay_check.json`; no original private input path is needed.
 
-The server binds only to `127.0.0.1`. Inputs and jobs remain in that local process until you export them; it uses no remote fitting service. Closing the process clears its in-memory jobs. The server accepts JSON requests up to 10 MB and retains at most 64 jobs per session; restart it to clear a full session. It runs one fit worker at a time. This is a local research tool, not an authenticated network deployment.
+The server binds only to `127.0.0.1`. Inputs and jobs remain in that local process until you export them; it uses no remote fitting service. Closing the process clears its in-memory jobs. Dataset imports are limited to 8 MB; JSON requests are limited to 40 MB to accommodate result exports. At most 64 jobs are retained per session; restart to clear a full session. One worker runs fits sequentially: **pending** means queued, **running** means inference is executing, **complete** means a scientific result is available (which may be rejected or unresolved), and **failed** means computation raised an error. Duplicate pending/running submissions of the same dataset/configuration reuse the existing job. Cancellation is unavailable. This is a local research tool, not an authenticated network deployment.
 
 ### Bundled examples
 
@@ -81,6 +84,8 @@ The server binds only to `127.0.0.1`. Inputs and jobs remain in that local proce
 
 The example `seed` controls generated Gaussian noise. Example uncertainties are declared test inputs, not an instrument forecast. The synthetic truth is used for validation and is not supplied to the ordinary example fit.
 
+Choose **Download example files · ZIP** in the app, or use `examples/nearby_motion/` in the source package. The complete bundle supplies `measurements.csv`, `metadata.json`, `full_covariance.csv`, `dataset.json`, a short units/ordering guide and file hashes. Import the native JSON in the app; the CLI conversion below supports the three CSV/metadata files.
+
 ## Command-line workflow
 
 Run these commands in a working directory where you want `user_runs` created:
@@ -89,6 +94,7 @@ Run these commands in a working directory where you want `user_runs` created:
 python -m bhtracker example nearby_motion --output user_runs/nearby_motion.json
 python -m bhtracker validate user_runs/nearby_motion.json
 python -m bhtracker fit user_runs/nearby_motion.json --family gr --nuisance shear --starts 3 --output user_runs/nearby_fit
+python -m bhtracker replay user_runs/nearby_fit --output user_runs/replayed_fit
 python -m bhtracker profile user_runs/nearby_motion.json user_runs/nearby_fit/result.json --parameter mass_msun --output user_runs/mass_profile.json
 ```
 
@@ -139,7 +145,7 @@ For the conditional family:
 python -m bhtracker fit user_runs/nearby_motion.json --family r1 --nuisance shear --starts 2 --output user_runs/nearby_r1
 ```
 
-Profile parameters are `mass_msun`, `motion_x` and `motion_y`. A profile reoptimizes the other parameters; its reference levels Δχ² = 1 and 3.84146 are not automatically calibrated confidence limits at a bound or other nonregular point. Inspect convergence and truncation. Use the same original dataset and full, unstripped `result.json`; profiles require its saved internal fit state. The CLI output file's parent directory must already exist.
+Profile parameters are `mass_msun`, `motion_x` and `motion_y`. A profile reoptimizes the other parameters; its reference levels Δχ² = 1 and 3.84146 are not automatically calibrated confidence limits at a bound or other nonregular point. Inspect convergence and truncation. Use the same original dataset and full, unstripped `result.json`; profiles require its saved internal fit state. The CLI checks the original dataset hash and creates the output file's parent directory when needed.
 
 Run `python -m bhtracker --help` or append `--help` to a subcommand for the installed interface.
 
@@ -260,14 +266,16 @@ Result schema version 1 includes `status`, `estimates`, `uncertainty`, `chi2`, `
 
 ### BHSM interpretation and fixed-radius boundary output
 
+Version 0.2.0rc1 also retains `dataset_input` (the full original input and calibrations), `analysis_configuration` (family, nuisance, starts, evaluation budget and explicit initial values) and `software_provenance` (runtime versions and installed file hashes). `export_result` writes a replay directory; `export_analysis_bundle` returns its ZIP bytes. `replay_analysis(path, output)` checks all manifest hashes before fitting `dataset.json` with `analysis_config.json`. Replay requires the same scientific status and predicted observable differences at most 0.001 of the supplied marginal standard deviation. This numerical comparison never alters the covariance; `replay_check.json` reports version/content changes and the measured difference.
+
 `bhsm_interpretation` contains `framework`, `model_role`, `one_potential_rule`, a `parameter_meanings` list, `inference_scope`, `conditional_extension`, `weyl_convention`, `source_provenance` and `spherical_boundary`. Each parameter entry gives its `parameter`, `interpretation` and `qualification`. These metadata explain the fitted physical configuration without changing the likelihood, adding a second mass or requiring a non-GR residual.
 
-For an admitted ordinary fit with supported mass, `spherical_boundary.status` is `AVAILABLE`. It is the **static spherical Schwarzschild equivalent of the ordinary monopole**, with flat reference subtraction, evaluated at `model.r0_pc`. It is not the boundary energy of the complete nonspherical lens/environment. At fixed radius `R`, write `m = G*M_opt/c²` and `f = 1 - 2m/R > 0`. The principal curvature deficit is `delta_k = (1 - sqrt(f))/R`, and Brown–York energy satisfies `E_BY/c² = (c²*R/G)*(1 - sqrt(f))`. Its inverse gives the same optical mass: `M_opt = E_BY/c² - G*E_BY²/(2*c^6*R)`.
+For an admitted ordinary fit with supported mass, `spherical_boundary.status` is `AVAILABLE`. It is the **static spherical Schwarzschild equivalent of the ordinary monopole**, with flat Euclidean reference subtraction on a static spatial slice, evaluated at `model.r0_pc`. It is not the boundary energy of the complete nonspherical lens/environment. At fixed radius `R`, write `m = G*M_opt/c²` and `f = 1 - 2m/R > 0`. The principal extrinsic-curvature deficit of the enclosing sphere is `delta_k = (1 - sqrt(f))/R`, and Brown–York energy satisfies `E_BY/c² = (c²*R/G)*(1 - sqrt(f))`. Its inverse gives the same optical mass: `M_opt = E_BY/c² - G*E_BY²/(2*c^6*R)`.
 
 | `spherical_boundary` field | Units / meaning |
 |---|---|
 | `radius_pc` | Fixed enclosing radius `R` in pc; not inferred from the lens fit. |
-| `curvature_deficit_pc_inverse` | Principal spatial-curvature deficit `delta_k`, pc⁻¹. |
+| `curvature_deficit_pc_inverse` | Principal extrinsic-curvature deficit of the enclosing sphere `delta_k`, pc⁻¹. |
 | `curvature_deficit_sigma_pc_inverse` | Local propagated 1σ error on `delta_k`, conditional on fixed `R`, or `null`. |
 | `boundary_energy_over_Msun_c2` | `E_BY/(M_sun*c²)`, equivalently `E_BY/c²` in solar masses. |
 | `boundary_energy_sigma_over_Msun_c2` | Local propagated 1σ error on that mass-equivalent boundary energy, conditional on fixed `R`, or `null`. |
@@ -293,6 +301,8 @@ Rejected fits and unresolved masses suppress this numeric representation. R1 ret
 The motion threshold concerns the **joint two-component** Mahalanobis SNR, not a requirement that each component separately exceeds five standard deviations. An optimizer success flag alone is not a scientific acceptance. Rank truncation, active bounds, approximation budgets and residual mismatch can qualify the result. Local errors and profile reference levels have a finite tested domain; they are not universal interval-coverage guarantees.
 
 ## Conditional R1 policy
+
+The exterior-wide bound is **sufficient**, not necessary. Exceeding its cap is outside the proved guarantee and the product's admitted domain; it does not prove physical impossibility. Retained principal-sign control is separate from full-system stability, a nonlinear solution-error bound, horizon regularity and ultraviolet completion.
 
 R1 is an adopted weak-metric, frozen-background, quasistatic scalar–tensor exterior outside a supplied worldtube. Its pinned background covers lens redshifts `0 <= z_l <= 2.1`. The code computes admission information, the normalized boundary/conormal pairing and a sufficient state-norm cap; it does not derive a black-hole horizon charge or a preferred deformation amplitude.
 

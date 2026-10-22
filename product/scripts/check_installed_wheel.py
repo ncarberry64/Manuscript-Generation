@@ -28,6 +28,11 @@ for manifest in (root/'theory').rglob('*.json'):
     # All package files are hashed below; runtime checks exercise the pinned providers.
     pins.append(str(manifest.relative_to(root)))
 assert len(pins) >= 2
+for manifest_name,list_key,base in [('provider/SOURCE_MANIFEST.json','files','provider/'),
+                                  ('BHSM_INTERPRETATION_MANIFEST.json','sources','')]:
+    manifest=json.loads((root/'theory'/manifest_name).read_text())
+    for entry in manifest[list_key]:
+        assert hashlib.sha256((root/'theory'/base/entry['path']).read_bytes()).hexdigest()==entry['sha256']
 raw, truth = make_example('nearby_motion')
 d = load_dataset(raw)
 assert len(d.epochs) >= 3
@@ -40,7 +45,8 @@ r1 = fit(raw, family='r1', starts=1, max_nfev=30)
 assert r1['model']['family'] == 'r1'
 commands=[['example','nearby_motion','--output','cli-input.json'],
           ['validate','cli-input.json'],
-          ['fit','cli-input.json','--starts','1','--output','cli analysis']]
+          ['fit','cli-input.json','--starts','1','--output','cli analysis'],
+          ['replay','cli analysis','--output','CLI replay']]
 for args in commands:
     subprocess.run([sys.executable,'-I','-m','bhtracker',*args],check=True,
                    stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
@@ -48,6 +54,10 @@ saved=json.loads(pathlib.Path('cli analysis/result.json').read_text())
 assert saved['data_summary']['sha256'] == result['data_summary']['sha256']
 import numpy as np
 np.testing.assert_allclose(saved['predictions'],result['predictions'],rtol=2e-11,atol=2e-11)
+assert json.loads(pathlib.Path('CLI replay/replay_check.json').read_text())['passed']
+from bhtracker.report import export_analysis_bundle, replay_analysis
+pathlib.Path('analysis.zip').write_bytes(export_analysis_bundle(result))
+assert replay_analysis('analysis.zip','API replay')['passed']
 proc=subprocess.Popen([sys.executable,'-I','-u','-m','bhtracker','serve','--port','0'],
                       stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True)
 lines=queue.Queue()
@@ -58,7 +68,7 @@ try:
     line=lines.get(timeout=40)
     assert 'ready at http://127.0.0.1:' in line,line
     url=line.split('ready at ',1)[1].strip()
-    for endpoint in ('api/health','','app.js','style.css','api/examples/nearby_motion'):
+    for endpoint in ('api/health','','app.js','style.css','api/examples/nearby_motion','api/examples/nearby_motion/bundle'):
         with urllib.request.urlopen(url+endpoint,timeout=10) as response:
             assert response.status == 200
             assert len(response.read()) > 0
@@ -73,7 +83,8 @@ receipt={'status':'passed','python':sys.version,'executable':sys.executable,
  'dependencies':{n:version(n) for n in ('numpy','scipy','matplotlib')},
  'checks':['fresh venv with resolved dependencies','outside-checkout isolated import',
  'packaged assets/examples','GR and R1 runtime providers','API/CLI prediction agreement',
- 'CLI example validate fit export','actual loopback HTTP startup'],
+ 'CLI example validate fit export and replay','API ZIP export and replay',
+ 'six R1 and BHSM source pin checks','actual loopback HTTP startup and complete example download'],
  'packaged_files':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest()
   for p in sorted(root.rglob('*')) if p.is_file() and '__pycache__' not in p.parts}}
 pathlib.Path('receipt.json').write_text(json.dumps(receipt,indent=2),encoding='utf8')

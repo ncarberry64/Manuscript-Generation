@@ -1,5 +1,7 @@
 """Full-covariance nonlinear primary-pair inference with honest local errors."""
 import platform
+import copy
+import json
 import time
 import numpy as np
 import scipy
@@ -94,7 +96,9 @@ def _local_covariance(J,relative_cut=1e-9):
 
 def fit(dataset,family='gr',starts=2,nuisance='shear',initial=None,max_nfev=160):
     beginning=time.perf_counter();d=load_dataset(dataset)
-    if not isinstance(starts,int) or not 1<=starts<=8:raise ValueError('starts must be an integer from 1 to 8')
+    if isinstance(starts,bool) or not isinstance(starts,int) or not 1<=starts<=8:raise ValueError('starts must be an integer from 1 to 8')
+    if isinstance(max_nfev,bool) or not isinstance(max_nfev,int) or not 1<=max_nfev<=2000:
+        raise ValueError('max_nfev must be an integer from 1 to 2000')
     seed_parameters=initial or initial_parameters(d)
     reference_mass=d.analysis.get('reference_mass_msun',seed_parameters['mass_msun'])
     e=LensEngine(d,family,reference_mass=reference_mass)
@@ -177,7 +181,8 @@ def fit(dataset,family='gr',starts=2,nuisance='shear',initial=None,max_nfev=160)
         if not physics['allowed_physics_models']['r1_spherical_conditional']:
             note('error','R1_DOMAIN','The fitted state is outside the declared conditional R1 exterior domain.')
             status='FIT_REJECTED'
-    result={'schema_version':1,'product_version':'0.1.1','status':status,'model':{'family':family,'nuisance':nuisance,
+    from .provenance import VERSION,software_provenance
+    result={'schema_version':1,'product_version':VERSION,'status':status,'model':{'family':family,'nuisance':nuisance,
             'source_policy':'free_per_epoch','distance_and_frame':'supplied and fixed','fitted_parameters':mapping.names,
             'reference_mass_msun':e.ref_mass,'theta_reference_mas':e.theta,'time_reference_seconds':e.time,
             'r0_pc':e.r0,'worldtube_policy':'supplied' if 'r0_pc' in d.analysis else '0.001 times the computational reference Einstein radius; supply r0_pc for a fixed physical worldtube',
@@ -191,6 +196,10 @@ def fit(dataset,family='gr',starts=2,nuisance='shear',initial=None,max_nfev=160)
             'center_track_mas':track,'center_track_sigma_mas':track_sigma,
             'observations':d.observations.tolist(),'predictions':pred.tolist(),'whitened_residuals':white.tolist(),
             'covariance':d.covariance.tolist(),'data_summary':d.summary(),'geometry':d.geometry,'physics_admission':physics,
+            'dataset_input':copy.deepcopy(d.raw),
+            'analysis_configuration':{'family':family,'nuisance':nuisance,'starts':starts,
+                'max_nfev':max_nfev,'initial':None if initial is None else json.loads(json.dumps(initial,default=lambda v:v.tolist()))},
+            'software_provenance':copy.deepcopy(software_provenance()),
             'multistart_chi2':[float(sol.fun@sol.fun) for sol in solutions],
             'runtime_seconds':time.perf_counter()-beginning,
             'runtime':{'python':platform.python_version(),'numpy':np.__version__,'scipy':scipy.__version__},
@@ -213,6 +222,8 @@ def profile(dataset,result,parameter='mass_msun',points=17):
     theorem. Returned crossings expose intervals truncated by domain bounds.
     """
     d=load_dataset(dataset);model=result['model']
+    if d.sha256!=result['data_summary']['sha256']:
+        raise ValueError('profile dataset differs from the fitted input; use dataset.json from this analysis export')
     e=LensEngine(d,model['family'],reference_mass=model['reference_mass_msun'])
     mapping=ParameterMap(e,model['nuisance']);x0=np.asarray(result['_internal']['x'])
     indices={'mass_msun':0,'motion_x':3,'motion_y':4}
