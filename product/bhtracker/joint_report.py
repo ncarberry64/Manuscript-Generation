@@ -23,6 +23,58 @@ def is_joint_result(result):
         'bhtracker.native_joint_mass_result.v1', 'bhtracker.native_joint_mass_result.v2'}
 
 
+def _replayed_gates(model, detail, state, version):
+    """Recompute recorded gate summaries without repeating optimization.
+
+    Archived v1 keeps its original upper-tail-only definition. V2 adds its
+    frozen two-tail and residual-structure definitions; neither is acceptance.
+    """
+    from scipy.stats import chi2
+    if version == 'v2':
+        from .joint_mass_v2 import _safe, residual_structure
+    else:
+        from .joint_mass import _safe
+    nlinear = len(detail['linear_parameter_names'])
+    photo_dof = max(1, len(model.pr) - len(state))
+    astro_dof = max(1, len(model.ya) - nlinear - 5)
+    photo_q, astro_q = detail['photometric_innovation_chi2'], detail['astrometric_chi2']
+    diagnostics = {
+        'astrometry_chi2': astro_q, 'astrometry_dof_conservative': astro_dof,
+        'astrometry_chi2_tail_probability': float(chi2.sf(astro_q, astro_dof)),
+        'photometry_innovation_chi2': photo_q, 'photometry_dof_approximate': photo_dof,
+        'photometry_chi2_tail_probability_approximate': float(chi2.sf(photo_q, photo_dof)),
+        'GP_noise_inference_requires_simulation_calibration': bool(model.options['gp'])}
+    white = np.asarray(detail['whitened_photometric_residuals'])[model.gp_indices]
+    diagnostics['OGLE_sorted_innovation_lag1'] = float(np.corrcoef(white[:-1], white[1:])[0, 1]) if len(white) > 3 else None
+    if version == 'v2':
+        diagnostics['photometry_chi2_two_sided_probability_approximate'] = float(min(1., 2 * min(chi2.cdf(photo_q, photo_dof), chi2.sf(photo_q, photo_dof))))
+        diagnostics['astrometry_chi2_two_sided_probability_approximate'] = float(min(1., 2 * min(chi2.cdf(astro_q, astro_dof), chi2.sf(astro_q, astro_dof))))
+        structure = residual_structure(model, detail, len(state) + nlinear)
+        good = diagnostics['astrometry_chi2_two_sided_probability_approximate'] >= .01 and diagnostics['photometry_chi2_two_sided_probability_approximate'] >= .01 and structure['screen_passed']
+    else:
+        good = diagnostics['astrometry_chi2_tail_probability'] >= .01 and diagnostics['photometry_chi2_tail_probability_approximate'] >= .01
+    expected = {
+        'diagnostics': diagnostics,
+        'status': 'JOINT_MODEL_NOT_REJECTED' if good else 'JOINT_MODEL_OR_NOISE_INADEQUATE',
+        'mass_status': 'MASS_UNIDENTIFIED_BOUNDARY' if state[4] < 1e-6 or detail['linear_active_bounds'] else 'PROFILE_AND_SYSTEMATICS_REQUIRED',
+        'experimental_validation_status': 'EXPERIMENTAL_RESEARCH_REQUIRES_PROFILE_AND_SYSTEMATIC_GATES',
+        'unavailable': {'absolute_lens_proper_motion': None, 'absolute_source_parallax': None,
+                        'lens_distance_pc': None, 'horizon': None, 'core_state': None},
+        'bhsm_interpretation': {
+            'framework': 'BHSM',
+            'one_potential_rule': 'One ordinary compact-lens optical potential counted once; no extra core or envelope term.',
+            'luminous_lens_sensitivity': 'If enabled, ALL non-source HST flux is assigned to lens as limiting assumption. Blend location is not supplied by photometry.',
+            'scope': 'Conditional mass from independently modeled thetaE and photometric parallax. No horizon, core state, membrane radius or new-discovery claim.'},
+        'linear_active_bounds': detail['linear_active_bounds'],
+        'linear_parameter_names': detail['linear_parameter_names'],
+        'parameter_order_internal': model.parameter_names,
+        'nonlinear_active_bounds': [name for i, name in enumerate(model.parameter_names)
+            if name != 'angle_source_minus_lens_rad' and min((state[i]-model.lower[i])/(model.upper[i]-model.lower[i]), (model.upper[i]-state[i])/(model.upper[i]-model.lower[i])) < 1e-5]}
+    if version == 'v2':
+        expected['residual_structure'] = structure
+    return _safe(expected)
+
+
 def validate_result(result):
     """Check saved predictions AND physical summaries against the recorded state."""
     if not is_joint_result(result) or 'dataset_input' not in result:
@@ -45,8 +97,12 @@ def validate_result(result):
     def same(a, b):
         if isinstance(b, dict):
             return isinstance(a, dict) and set(a) == set(b) and all(same(a[k], b[k]) for k in b)
+        if isinstance(b, list):
+            return isinstance(a, list) and len(a) == len(b) and all(same(x, y) for x, y in zip(a, b))
         if b is None:
             return a is None
+        if isinstance(b, bool):
+            return isinstance(a, bool) and a == b
         if isinstance(b, (float, int, np.number)):
             return not isinstance(a, bool) and isinstance(a, (int, float, np.number)) and bool(np.isclose(a, b, rtol=2e-10, atol=2e-8))
         return a == b
@@ -57,12 +113,29 @@ def validate_result(result):
                 'astrometric_residuals_NE_mas', 'whitened_astrometric_residuals'):
         if not np.allclose(np.asarray(result[key]), actual[key], rtol=2e-10, atol=2e-8):
             raise ValueError(f'Reported joint {key} differ from the native data and saved state')
+    expected = _replayed_gates(model, actual, np.asarray(result['best_internal_state']),
+                               'v2' if result['schema'].endswith('.v2') else 'v1')
+    for key, value in expected.items():
+        if not same(result.get(key), value):
+            raise ValueError(f'Reported joint {key} differs from the replayed diagnostic gates')
+    starts = result.get('all_starts')
+    if not isinstance(starts, list) or any(not isinstance(row, dict) or not isinstance(row.get('converged'), bool) for row in starts):
+        raise ValueError('Joint numerical convergence requires the retained start reports')
+    expected_counts = {'attempted_starts': len(starts),
+                       'converged_starts': sum(row['converged'] for row in starts),
+                       'nonlinear_parameter_count': len(result['best_internal_state']),
+                       'linear_parameter_count': len(actual['linear_parameter_names']),
+                       'best_objective_deviance': actual['objective_deviance']}
+    numerical = result.get('numerical_convergence', {})
+    if not all(same(numerical.get(key), value) for key, value in expected_counts.items()):
+        raise ValueError('Joint numerical summary differs from the model and retained start reports')
     for name, source in dataset.document.get('native_files', {}).items():
         raw = base64.b64decode(source['raw_bytes_base64'], validate=True)
         if hashlib.sha256(raw).hexdigest() != source['sha256']:
             raise ValueError(f'Native source byte hash mismatch: {name}')
     checked['same_physical_parameters'] = True
     checked['same_native_residuals'] = True
+    checked['same_recorded_diagnostic_gates'] = True
     checked['method'] = 'FORWARD_STATE_REPLAY; optimization and scientific acceptance are separate'
     return dataset, model, checked
 

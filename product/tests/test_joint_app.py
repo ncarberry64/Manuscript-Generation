@@ -41,6 +41,18 @@ def joint_result():
     return fitted
 
 
+@pytest.fixture(scope='module')
+def joint_result_v2(joint_result):
+    from bhtracker.joint_mass_v2 import JointModel, fit_joint
+    from test_joint_mass_v2 import document
+    data=copy.deepcopy(joint_result['dataset_input'])
+    data['analysis']=document()['analysis']
+    model=JointModel(data)
+    state=np.asarray(joint_result['best_internal_state']).copy()
+    state[0]+=2450000.-model.time_origin_jd_tdb
+    return fit_joint(data,initial_states=[state],max_nfev=30)
+
+
 def test_joint_saved_result_native_export_and_generic_replay(service,joint_result,tmp_path):
     for path in ['/joint','/joint/','/joint.js']:
         status,body,_=request(service,path)
@@ -167,6 +179,36 @@ def test_python_module_cli_propagates_failed_joint_replay_status(joint_result,tm
     assert json.loads(checked.stdout)['passed'] is False
 
 
+@pytest.mark.parametrize('version',[1,2])
+@pytest.mark.parametrize('change',['status','mass_status','diagnostics','active_bounds','counts','experimental','unavailable','bhsm'])
+def test_saved_joint_gate_summaries_are_recomputed(joint_result,joint_result_v2,version,change):
+    from bhtracker.joint_report import validate_result
+    original=joint_result_v2 if version==2 else joint_result
+    assert validate_result(original)[2]['same_recorded_diagnostic_gates']
+    altered=copy.deepcopy(original)
+    if change=='status':
+        altered['status']='JOINT_MODEL_OR_NOISE_INADEQUATE' if original['status']=='JOINT_MODEL_NOT_REJECTED' else 'JOINT_MODEL_NOT_REJECTED'
+    elif change=='mass_status':altered['mass_status']='MASS_IDENTIFIED'
+    elif change=='diagnostics':altered['diagnostics']['astrometry_chi2']+=1
+    elif change=='active_bounds':altered['nonlinear_active_bounds']=['invented_bound']
+    elif change=='counts':altered['numerical_convergence']['linear_parameter_count']+=1
+    elif change=='unavailable':altered['unavailable']['lens_distance_pc']=1000.
+    elif change=='bhsm':altered['bhsm_interpretation']['one_potential_rule']='A second core optical potential was measured.'
+    else:altered['experimental_validation_status']='ACCEPTED_BLACK_HOLE'
+    with pytest.raises(ValueError,match='diagnostic gates|numerical summary'):
+        validate_result(altered)
+
+
+def test_saved_v2_failed_residual_bins_cannot_be_cleared(joint_result_v2):
+    from bhtracker.joint_report import validate_result
+    assert joint_result_v2['residual_structure']['failed_bins']
+    altered=copy.deepcopy(joint_result_v2)
+    altered['residual_structure']['failed_bins']=[]
+    altered['residual_structure']['screen_passed']=True
+    with pytest.raises(ValueError,match='residual_structure'):
+        validate_result(altered)
+
+
 def test_joint_profile_job_guard_preserves_retained_modes(service,joint_result,monkeypatch):
     """Same forward state can have a different set of profile search modes."""
     import bhtracker.joint_mass as module
@@ -180,6 +222,8 @@ def test_joint_profile_job_guard_preserves_retained_modes(service,joint_result,m
     extra['internal_state'][3]+=.4
     extra['objective_deviance']+=1
     changed['all_starts'].append(extra)
+    changed['numerical_convergence']['attempted_starts']+=1
+    changed['numerical_convergence']['converged_starts']+=int(extra['converged'])
     try:
         _,body,_=request(service,'/api/joint/profile',{'result':joint_result,'masses':[5.,7.,10.]})
         first=json.loads(body)
