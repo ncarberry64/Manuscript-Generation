@@ -7,10 +7,11 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black,
-pdftitle={Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, Motion, and Conditional Response},pdfauthor={Norman P. Carberry}}
+pdftitle={Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, Motion, and Conditional Response},pdfauthor={Norman P. Carberry},
+pdfsubject={Formal source and reviewer repository: https://github.com/ncarberry64/Berger-Hopf-Standard-Model},pdfkeywords={BHSM, Blackhole Tracker, gravitational lensing, boundary response}}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small Blackhole Tracker: BHSM boundary interpretation}
-\fancyhead[R]{\small Author review draft}\fancyfoot[C]{\thepage}
+\fancyhead[R]{\small Research article}\fancyfoot[C]{\thepage}
 \setlength{\parskip}{.3em}\setlength{\parindent}{1em}
 \setlength{\emergencystretch}{3em}
 \renewcommand{\topfraction}{.93}\renewcommand{\textfraction}{.06}
@@ -20,48 +21,40 @@ pdftitle={Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, 
 \newcommand{\asinh}{\operatorname{asinh}}
 \title{\textbf{Blackhole Tracker: BHSM Boundary Interpretation of Compact-Lens Mass, Motion, and Conditional Response}}
 \author{Norman P. Carberry\\\small Independent Researcher, Oconomowoc, Wisconsin, USA\\
+\small \href{mailto:carberry8878130@hotmail.com}{carberry8878130@hotmail.com}\\
 \small ORCID: \href{https://orcid.org/0009-0000-6650-3485}{0009-0000-6650-3485}}
 \date{}
 \begin{document}
 \maketitle
-\begin{center}\small Research article draft for \emph{Galaxies}: Strong Gravitational Lens Modeling\end{center}
+\begin{center}\small Research article for \emph{Galaxies}: Strong Gravitational Lens Modeling\end{center}
 \begin{abstract}
-Blackhole Tracker combines a normalized conditional boundary-to-optical
-transfer, an exterior-wide sufficient state bound and exact
-information-loss results with a reproducible compact-lens inference
-workflow. Its ordinary mass, center and proper motion describe one
-effective exterior in the adopted Einstein/GHY sector of the
-Berger--Hopf Standard Model (BHSM) program. At a declared radius, that same
-monopole determines the principal extrinsic-curvature deficit of the
-enclosing sphere and its radius-dependent boundary energy. One optical
-potential is counted once; a departure from GR is not required.
-The runnable toolkit fits resolved image pairs,
-flux ratios and delays with a full supplied covariance. A local app,
-command line, Python package and executed notebooks share nonlinear
-inference, nuisance profiling and explicit rejection or unresolved
-outcomes. In a fixed synthetic ten-year, three-source validation, all 64
-noise realizations complete; nominal local 95\% interval coverage is
-59--61 of 64 across five tested mass, center and motion components.
-Short cosmological tracks remain motion unresolved, and an omitted
-ordinary shear produces a rejected fit. The optional scalar--tensor
-realization used by the BHSM program
-supplies a normalized boundary-to-lensing response and a uniform
-sufficient amplitude bound throughout its retained exterior. It also
-exposes exact information losses: two projected quadrupole modes vanish,
-the leading screened primary-pair delay perturbation vanishes, and a
-standard apparent-mass statistic confounds its leading response with
-external shear. At an admitted state cap the nearby example's conditional
-envelope remains far below the supplied noise. The contribution combines the explicit BHSM boundary interpretation with a
-validated specialist workflow, action-specific admission and blind-direction
-results. The boundary identities and ordinary mass/motion inference are
-established ingredients; no first tracker or empirical detection is claimed. Distances and calibrations are supplied; neither a
-microscopic BHSM-to-action map nor a horizon flux or physical deformation
-state is selected.
+Blackhole Tracker provides reproducible compact-lens inference with an
+explicit Berger--Hopf Standard Model (BHSM) boundary interpretation.
+Ordinary mass, center and motion describe one effective exterior in the
+adopted Einstein/GHY sector; its monopole also determines the principal
+extrinsic-curvature deficit and boundary energy of a declared enclosing sphere. One optical
+potential is counted once. A local app, command line, Python package and
+executed notebooks fit resolved image pairs, flux ratios and delays with
+full supplied covariance, nuisance profiling and explicit rejection or
+unresolved outcomes. In a fixed synthetic ten-year, three-source
+validation, all 64 noise realizations complete; nominal local 95\%
+interval coverage is 59--61 of 64 across five mass, center and motion
+components. Short cosmological tracks remain motion unresolved, and
+omitted shear produces a rejected fit. An optional scalar--tensor
+realization supplies a normalized boundary-to-lensing transfer and a
+uniform sufficient state bound throughout its retained exterior.
+Frozen full-line projection erases two quadrupole modes; the leading screened primary-pair
+delay response vanishes; a standard apparent-mass statistic confounds the
+leading response with shear. The admitted nearby envelope remains below
+the supplied noise. These results support candidate tracking and
+conditional response tests. No new black-hole detection, horizon
+classification, physical core-transfer law or selected deformation state
+is established.
 \end{abstract}
 \noindent\textbf{Keywords:} strong gravitational lensing; compact objects;
 Vainshtein screening; scalar--tensor gravity; boundary response; identifiability
 
-\section{The Blackhole Tracker question}
+\section{Introduction: the Blackhole Tracker question}
 
 Lensing already measures the mass and motion of dark compact objects.
 Astrometric microlensing has been used to infer an isolated stellar-mass
@@ -508,7 +501,7 @@ potentials, uncertain distances, evolving macrostructure and flux
 propagation effects can also change the finite-family inference result.
 Multiple source redshifts alone do not remove every such freedom.
 
-\section{Scientific advance and limits}
+\section{Discussion and conclusions: scientific advance and limits}
 
 Static cubic screening, its multipole powers and exact Green functions
 are established \cite{Kimura2012,Chu2013,Brito2014,Kobayashi2026}.
@@ -541,19 +534,22 @@ submission is reported.
 
 \paragraph{Data and code availability.}
 The complete source package contains the three preserved research
-projects, this manuscript, the \texttt{product/} package, executed
+projects, this manuscript, the \texttt{products/blackhole\_tracker/} package, executed
 notebooks, synthetic examples, source pins and numerical/review receipts.
 The paper's theoretical replay entry point is
 \texttt{scripts/reproduce.py}; the product's is
-\texttt{product/scripts/validate\_product.py}. Its README documents app,
+\texttt{products/blackhole\_tracker/scripts/validate\_product.py}. Its README documents app,
 command-line and Python use and the data contract. All validation inputs
 are synthetic or theoretical; no fresh observational validation set is
-used. The released source and draft revision are available in the
-\href{https://github.com/ncarberry64/Manuscript-Generation/pull/24}{author's
-repository draft}.
+used. The formal reviewer repository is
+\href{https://github.com/ncarberry64/Berger-Hopf-Standard-Model}{Berger--Hopf Standard Model},
+with this paper under \texttt{papers/bhsm\_blackhole\_tracker\_20261021/}
+and the reviewable integration in
+\href{https://github.com/ncarberry64/Berger-Hopf-Standard-Model/pull/470}{draft PR 470}.
+The separate Manuscript-Generation repository is a development workspace.
 The inference code version for this release candidate is
-\texttt{bhsm-blackhole-tracker 0.2.0rc1}, code commit
-\href{https://github.com/ncarberry64/Manuscript-Generation/commit/d786a6dd067fbe0a3bb63094f8e440ff83e0491b}{\texttt{d786a6dd067f}}.
+\texttt{bhsm-blackhole-tracker 0.2.0rc2}, code commit
+\href{https://github.com/ncarberry64/Berger-Hopf-Standard-Model/tree/33f26a5113392c0d2c323d7e4a36c7e81bd3ee29/products/blackhole_tracker}{\texttt{33f26a511339}}.
 The final release receipt binds the reviewed manuscript/source archive,
 wheel hashes and CI runs to the completed PR revision. A beginner can
 install the wheel, run \texttt{python -m bhtracker serve --open}, load the
@@ -561,13 +557,32 @@ labeled nearby synthetic example and download its replay bundle.
 \texttt{python -m bhtracker replay analysis.zip --output replayed}
 repeats that saved configuration without an original private path.
 
-\paragraph{Author and AI disclosure.}
-The manuscript was prepared for Norman P. Carberry with AI assistance
-for recovery, algebra, implementation, literature checking and drafting.
-Independent agent checks are internal computational reviews, not
-external peer review. Scientific authorship and submission require
-human review. No external funding or conflict is asserted by the
-calculation.
+\paragraph{Author contributions.}
+Conceptualization, methodology, formal analysis and writing:
+Norman P. Carberry. Software, validation and visualization were prepared
+with the AI/tool assistance described below. Scientific responsibility
+and final manuscript approval rest with the author.
+
+\paragraph{Funding.}
+This research received no external funding.
+
+\paragraph{Conflicts of interest.}
+The author declares no conflicts of interest.
+
+\paragraph{Institutional review board and informed consent.}
+Not applicable. This theoretical and computational study uses synthetic
+measurements and introduces no human-participant or animal research.
+
+\paragraph{Acknowledgments and AI/tool disclosure.}
+During preparation of this manuscript and study, OpenAI ChatGPT and
+Codex (GPT-6 model family) were used for source recovery, symbolic
+calculation and checking, software generation and revision, numerical
+verification, visualization, literature checking and manuscript drafting.
+Retained claims are supported by the stated mathematics, source records
+and executable checks; AI output is not independent physical evidence.
+Independent agent reviews are internal computational checks, not external
+peer review. Responsibility for the retained scientific content rests
+with Norman P. Carberry.
 
 \appendix
 \input{estimator_derivation}
