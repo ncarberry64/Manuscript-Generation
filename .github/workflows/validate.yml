@@ -80,6 +80,15 @@ jobs:
       - name: Product contracts, both joint versions, browser fixture and replay
         working-directory: product
         run: python -m pytest -q tests --junitxml=../test-results/product-junit.xml
+      - name: Replay deterministic research controls without observations
+        working-directory: product
+        shell: python
+        run: |
+          from pathlib import Path
+          import os, subprocess, sys
+          subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "research/known2023_student_20261024", "-p", "test*.py", "-v"], check=True)
+          output = Path(os.environ["RUNNER_TEMP"]) / "tracker-ideal-algebra-replay"
+          subprocess.run([sys.executable, "research/bhsm_claim_20261024/replay_ideal_controls.py", "--output", str(output)], check=True)
       - run: python -m build --wheel --outdir wheelhouse ./product
       - run: python product/scripts/check_installed_wheel.py --wheel-dir wheelhouse --output test-results/wheel-smoke.json
       - name: Optional joint route from an isolated astrometry wheel installation
