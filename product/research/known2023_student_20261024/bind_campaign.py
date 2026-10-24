@@ -15,6 +15,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 NATIVE_SHA = 'd2409db410e113872781494ca4d73db57d2a44fd65146c4e7ec2f40828448428'
+KNOWN_LF_TRANSPORT_SHA = 'aa22272bea32ff17cf9be409822e7af52adc9520dbedeb877d62856d93bb3f7b'
 RUNTIME = {'python':'3.11.9','numpy':'1.26.4','scipy':'1.12.0','astropy':'6.0.0'}
 CONFIG = {'starts':16,'candidate':'ST6_SEEING','numerical_time_origin_jd_tdb':2455765.,
           'angular_reference_jd_tdb':2456000.,'worker_wall_seconds':1740.,
@@ -35,7 +36,7 @@ def actual_runtime():
     return dict(python=sys.version.split()[0], **{name:importlib.metadata.version(name) for name in ('numpy','scipy','astropy')})
 
 def verify_sources(root=ROOT, core_path=None):
-    root=Path(root).resolve();manifest_path=root/'SOURCE_MANIFEST_v2.json'
+    root=Path(root).resolve();manifest_path=root/'SOURCE_MANIFEST_v3.json'
     manifest=load_json(manifest_path.read_bytes());sources=[]
     for expected in manifest['members']:
         name=expected['relative_path'];relative=PurePosixPath(name)
@@ -78,12 +79,27 @@ def verify_input(raw,purpose,registry):
     else:raise ValueError('Explicit registered purpose required')
     return identity
 
-def prepare(input_path,purpose,output,*,registry_path=None,root=ROOT,core_path=None,runtime=None,method='periodic-trust-v3'):
+def registered_native_transport(raw,purpose,explicit=False):
+    """Only the known final-LF transport, with exact byte hashes on both sides."""
+    if not explicit:return raw,None
+    if purpose!='AUTHENTIC2023':raise ValueError('Known transport option applies only to exact authentic2023 input')
+    if sha(raw)==NATIVE_SHA:return raw,{'status':'ALREADY_EXACT_NATIVE_BYTES','changed':False}
+    if sha(raw)!=KNOWN_LF_TRANSPORT_SHA or not raw.endswith(b'\n') or raw.endswith(b'\r\n'):
+        raise ValueError('Only the exact registered LF transport may be explicitly bound')
+    candidate=raw[:-1]+b'\r\n'
+    if sha(candidate)!=NATIVE_SHA:raise ValueError('Registered final-newline change did not produce exact native binding')
+    return candidate,{'status':'EXPLICIT_KNOWN_FINAL_LF_TO_CRLF','changed':True,
+        'original_sha256':sha(raw),'bound_sha256':sha(candidate),
+        'only_change':'One CR byte inserted before the existing final LF; body bytes unchanged.',
+        'parse_reserialization_or_time_value_changes':False}
+
+def prepare(input_path,purpose,output,*,registry_path=None,root=ROOT,core_path=None,runtime=None,method='periodic-trust-v3',normalize_known_transport=False):
     root=Path(root).resolve();binding=verify_sources(root,core_path)
     if method not in ('original-v2','periodic-trust-v3'):raise ValueError('Explicit reviewed numerical method required')
     runtime=actual_runtime()if runtime is None else runtime
     if runtime!=RUNTIME:raise ValueError('Preparing this reviewed campaign requires exact runtime '+repr(RUNTIME))
-    input_path=Path(input_path).resolve();raw=input_path.read_bytes()
+    input_path=Path(input_path).resolve();original_raw=input_path.read_bytes()
+    raw,transport=registered_native_transport(original_raw,purpose,normalize_known_transport)
     if purpose=='WHOLLY_INVENTED'and registry_path is None:registry_path=root/'invented_fixture_v1/CONTROL_REGISTRY_v1.json'
     registry=load_json(Path(registry_path).read_bytes())if registry_path else {}
     verify_input(raw,purpose,registry)
@@ -95,6 +111,12 @@ def prepare(input_path,purpose,output,*,registry_path=None,root=ROOT,core_path=N
     freeze['numerical_method']=method
     if registry_path:freeze['control_registry']=pin(registry_path)
     output=Path(output).resolve();output.mkdir(parents=False,exist_ok=False)
+    if transport and transport['changed']:
+        original_copy=output/'input_source.original.json';bound_copy=output/'input_native_bound.CRLF.json'
+        with original_copy.open('xb')as stream:stream.write(original_raw)
+        with bound_copy.open('xb')as stream:stream.write(raw)
+        freeze['input']=pin(bound_copy)
+        transport.update(original_copy=pin(original_copy),bound_copy=pin(bound_copy),source_input=pin(input_path))
     freeze_path=output/'POINT_FREEZE.json'
     freeze_raw=(json.dumps(freeze,indent=2,allow_nan=False)+'\n').encode('utf-8')
     with freeze_path.open('xb')as stream:stream.write(freeze_raw)
@@ -104,7 +126,8 @@ def prepare(input_path,purpose,output,*,registry_path=None,root=ROOT,core_path=N
     if purpose!='WHOLLY_INVENTED':command+=['--admission','EXACT_REVIEWED_EXECUTION_RECEIPT.json','--admission-sha256','EXACT_RECEIPT_SHA256']
     receipt={'schema':'bhsm.known2023.portable_binding.v1','freeze':pin(freeze_path),'commands_not_executed':[command],
         'purpose':purpose,'numerical_method':method,'runtime':runtime,'native_or_model_calls':0,'scientific_acceptance':False,
-        'requires_separate_reviewed_exact_execution_receipt':purpose!='WHOLLY_INVENTED'}
+        'requires_separate_reviewed_exact_execution_receipt':purpose!='WHOLLY_INVENTED',
+        'explicit_transport_binding':transport}
     with (output/'BINDING_RECEIPT.json').open('x',encoding='utf-8')as stream:json.dump(receipt,stream,indent=2);stream.write('\n')
     return receipt
 
@@ -124,14 +147,16 @@ def main():
     parser.add_argument('--registry',type=Path)
     parser.add_argument('--core-path',type=Path)
     parser.add_argument('--method',choices=('original-v2','periodic-trust-v3'),default='periodic-trust-v3')
+    parser.add_argument('--normalize-known-transport',action='store_true',help='Explicitly bind only known aa222 LF transport to exact D2409 CRLF bytes, preserving original')
     parser.add_argument('--verify-existing',type=Path)
     args=parser.parse_args()
+    if args.normalize_known_transport and not args.prepare:parser.error('--normalize-known-transport requires explicit --prepare')
     if args.verify_existing:
         if args.prepare:parser.error('--prepare and --verify-existing are separate actions')
         result=verify_existing(args.verify_existing)
     elif args.prepare:
         if not args.input or not args.purpose or not args.output:parser.error('--prepare requires --input --purpose --output')
-        result=prepare(args.input,args.purpose,args.output,registry_path=args.registry,core_path=args.core_path,method=args.method)
+        result=prepare(args.input,args.purpose,args.output,registry_path=args.registry,core_path=args.core_path,method=args.method,normalize_known_transport=args.normalize_known_transport)
     else:result=verify_sources(core_path=args.core_path)
     print(json.dumps(result,indent=2,allow_nan=False))
 

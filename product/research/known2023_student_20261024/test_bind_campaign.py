@@ -56,4 +56,15 @@ class BindingControls(unittest.TestCase):
             self.assertIn('run_known2023_point_v2.py',record['commands_not_executed'][0][2])
             with self.assertRaises(ValueError):binding.prepare(ROOT/'invented_fixture_v1/INVENTED_DATASET_v1.json','WHOLLY_INVENTED',Path(tmp)/'invalid',runtime=binding.RUNTIME,method='unknown')
 
+    def test_explicit_known_transport_only_byte_change_and_strict_default(self):
+        raw=b'{"invented":true}\n';expected=raw[:-1]+b'\r\n'
+        with patch.object(binding,'KNOWN_LF_TRANSPORT_SHA',binding.sha(raw)),patch.object(binding,'NATIVE_SHA',binding.sha(expected)):
+            untouched,record=binding.registered_native_transport(raw,'AUTHENTIC2023',False)
+            self.assertEqual(untouched,raw);self.assertIsNone(record)
+            result,record=binding.registered_native_transport(raw,'AUTHENTIC2023',True)
+            self.assertEqual(result,expected);self.assertEqual(result[:-2],raw[:-1]);self.assertTrue(record['changed'])
+            self.assertFalse(record['parse_reserialization_or_time_value_changes'])
+            with self.assertRaises(ValueError):binding.registered_native_transport(raw+b' ','AUTHENTIC2023',True)
+            with self.assertRaises(ValueError):binding.registered_native_transport(raw,'WHOLLY_INVENTED',True)
+
 if __name__=='__main__':unittest.main()

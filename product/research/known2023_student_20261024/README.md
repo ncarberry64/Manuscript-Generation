@@ -34,7 +34,7 @@ python products/blackhole_tracker/research/known2023_student_20261024/bind_campa
 Use `product/` instead of `products/blackhole_tracker/` in the manuscript workspace.
 The helper resolves its own source location; the current directory is immaterial.
 An explicit `--core-path` can select a relocated geometry source with the same
-reviewed hash. Full source integrity is in `SOURCE_MANIFEST_v2.json`; original
+reviewed hash. Full source integrity is in `SOURCE_MANIFEST_v3.json`; original
 experiment provenance and the portable-test path-only change are recorded there.
 The v1 manifest and failed v1 numerical-control contract are retained as history;
 they do not override the current manifest or turn a failed campaign into a pass.
@@ -60,6 +60,14 @@ G0/G1/G2 fits. Use the input/time-reproduction environment recorded by that
 workflow, then keep the resulting prepared file unchanged. This route accepts
 only prepared raw bytes SHA256
 `d2409db410e113872781494ca4d73db57d2a44fd65146c4e7ec2f40828448428`.
+The existing wrapper emits the identical JSON body with a final LF, hash
+`aa22272bea32ff17cf9be409822e7af52adc9520dbedeb877d62856d93bb3f7b`.
+For that exact file only, add `--normalize-known-transport` to explicit
+`--prepare`. The helper inserts one CR before the existing final LF, verifies
+the exact D2409 hash, retains the original and new bound copy in the fresh output
+directory, and records both identities. It does not parse/re-serialize the input,
+change a numeric value or time convention, modify the caller's file or accept
+any other hash. Default preparation remains strict and refuses that mismatch.
 Do not recalculate unspecified native clocks to force the hash. The prepared file
 retains all original raw data, selection/row IDs, calibration and time assumptions.
 No original observations, actual-cadence daughter or 2025 native arrays are
