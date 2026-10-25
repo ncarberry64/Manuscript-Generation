@@ -1,0 +1,653 @@
+{
+  "status": "CLEAN_WHEEL_INSTALL_PASSED",
+  "created_utc": "2026-10-23T14:29:31.109893+00:00",
+  "dependency_scope": "Fresh noneditable venv; runtime dependencies installed from the configured package index, no system-site-packages.",
+  "outside_checkout_working_directory": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp",
+  "commands": [
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "-m",
+        "build",
+        "--wheel",
+        "--outdir",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\build.log",
+      "log_sha256": "ea06b08d8ede3e40ed7ddf966877607d9c254cccb51b94ee2e5a858eb3592a99"
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "-m",
+        "venv",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\venv.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--force-reinstall",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\bhsm_blackhole_tracker-0.2.0rc5-py3-none-any.whl"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\install.log",
+      "log_sha256": "5885f94bac96b90a254526dc673fff78ba5a3487bcfdae670e88ce8949b1c80e"
+    },
+    {
+      "command": [
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv\\Scripts\\python.exe",
+        "-I",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\probe_install.py"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\api_probe.log",
+      "log_sha256": "5e6311b85c2c502c74ce834e78b1733d53fdc47d38407f9b6a491df235ca16b0"
+    },
+    {
+      "command": [
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "example",
+        "nearby_motion",
+        "--output",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_nearby.json"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_example.log",
+      "log_sha256": "a5ae0d595511349dfbcb0dc9b5ad7d0f3f1b2ed2875934e15d914c0418adaffc"
+    },
+    {
+      "command": [
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "validate",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_nearby.json"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_validate.log",
+      "log_sha256": "955925bc30785853acca1f505bce75fb1bdc74b050f9388a0d01d6b7d5405beb"
+    },
+    {
+      "command": [
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv\\Scripts\\blackhole-tracker.exe",
+        "fit",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_nearby.json",
+        "--family",
+        "gr",
+        "--starts",
+        "1",
+        "--output",
+        "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_fit"
+      ],
+      "returncode": 0,
+      "log": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\cli_fit.log",
+      "log_sha256": "56c3bb8d4eb9d50ef189456f8857628b6fabe2669dbc6b5473519de0936d7744"
+    }
+  ],
+  "wheel": {
+    "filename": "bhsm_blackhole_tracker-0.2.0rc5-py3-none-any.whl",
+    "sha256": "93c8d8fe51f80e31f73c3461f80be6af968ae0e1b9839d989d6400508d1d91e2",
+    "bytes": 473884,
+    "contents": {
+      "file_count": 73,
+      "provider_files": {
+        "code/strong_lensing_transport.py": "eb67bf7c112257df80f2b9d2185c5ede3ae20f2f3a13c6bd348699d39cf419ed",
+        "code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+        "code/background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+        "code/closed_horndeski_n2.py": "0d7e596ae40bd01ba9331128afdda9d163e52c955096f70209f06975e197f36d",
+        "code/bhsm_optical_transfer.py": "63e660f0e97e42c5363740bcafe6407a9bd5e4eb2bcd7f9d36c059de64dd9c5d",
+        "preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113"
+      },
+      "web_files": {
+        "bhtracker/web/index.html": "1280bcfdaab42aebed3c4ff9cceb50d533822fd640a9743a58d3384dba3386da",
+        "bhtracker/web/app.js": "131c41cb48c3118317fc53a894859761ae03796aa5a35cce70f2559e68f15cea",
+        "bhtracker/web/style.css": "1d1b092b6d852ace80c29915beb54f83518d59a2eae685b893cbbb987c90962f"
+      }
+    }
+  },
+  "installed_api": {
+    "passed": true,
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "prefix": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv",
+    "bhtracker_file": "C:\\Users\\carbe\\OneDrive\\Documents\\CODEX\\outputs\\bhsm_real_data_corrections_20261022\\release_rc5\\package_install_u3rfmlbp\\clean_venv\\Lib\\site-packages\\bhtracker\\__init__.py",
+    "editable": false,
+    "dependency_versions": {
+      "numpy": "2.5.4",
+      "scipy": "1.18.1"
+    },
+    "public_predict_max_absolute_error": 0.0,
+    "fits": {
+      "gr": {
+        "status": "TRACKED",
+        "estimates": {
+          "mass_msun": 100000.0,
+          "center_mas": [
+            0.7999999999999998,
+            -0.6000000000000001
+          ],
+          "proper_motion_mas_yr": [
+            0.06500000000000006,
+            -0.03800000000000049
+          ],
+          "shear": [
+            -7.316083669788551e-18,
+            1.2583353128986738e-17
+          ],
+          "compact_quad": [
+            0.0,
+            0.0
+          ],
+          "convergence": 0.0,
+          "flux_ratio": 1.0
+        },
+        "uncertainty": {
+          "mass_msun": 38.7106826758766,
+          "center_mas": [
+            0.007559218334421627,
+            0.0056162444789566056
+          ],
+          "proper_motion_mas_yr": [
+            0.0011866149270938827,
+            0.001230502950337614
+          ],
+          "method": "local Gaussian, known supplied covariance; no chi2 rescaling; null directions return null",
+          "mass_68pct_interval_msun": [
+            99961.29680894216,
+            100038.71817622754
+          ]
+        },
+        "chi2": 6.575404884660792e-23,
+        "dof": 29,
+        "model": {
+          "family": "gr",
+          "nuisance": "shear",
+          "source_policy": "free_per_epoch",
+          "distance_and_frame": "supplied and fixed",
+          "fitted_parameters": [
+            "log_mass",
+            "center_x",
+            "center_y",
+            "motion_x",
+            "motion_y",
+            "shear_plus",
+            "shear_cross",
+            "source_0_x",
+            "source_0_y",
+            "source_1_x",
+            "source_1_y",
+            "source_2_x",
+            "source_2_y",
+            "source_3_x",
+            "source_3_y",
+            "source_4_x",
+            "source_4_y",
+            "source_5_x",
+            "source_5_y",
+            "source_6_x",
+            "source_6_y",
+            "source_7_x",
+            "source_7_y",
+            "source_8_x",
+            "source_8_y"
+          ],
+          "reference_mass_msun": 100000.0,
+          "theta_reference_mas": 28.52316501276399,
+          "time_reference_seconds": 1.9706396732417946,
+          "r0_pc": 0.0001,
+          "worldtube_policy": "supplied",
+          "flux_policy": "not_used",
+          "parameter_basis": {
+            "schema": "bhtracker.resolved_parameter_basis.v2",
+            "optimization_epoch_yr": 2020.0,
+            "reporting_epoch_yr": 2020.0,
+            "angular_scale_mas": 31.64175628696617,
+            "time_scale_yr": 5.0,
+            "mass_scale_msun": 100000.00000000003,
+            "origin_mas": [
+              5.5538608354606644,
+              2.727702584822466
+            ],
+            "compact_quad_convention": "public coefficients retain the computational reference Einstein-radius convention; internal coefficients/bounds use the separately fixed physical compact basis",
+            "compact_quad_reference_mass_msun": 100000.00000000003,
+            "compact_quad_internal_to_public_factor": 1.0000000000000004,
+            "compact_quad_physical_bound_rule": "internal plus/cross each in [-0.01,0.01]; physical angular coefficients are public compact_quad * theta_reference_mas**4",
+            "unbounded_positions": "center and free sources have no numerical positional prior"
+          },
+          "bounds_internal": {
+            "lower": [
+              -18.420680743952367,
+              null,
+              null,
+              -0.0706473665999361,
+              -0.0706473665999361,
+              -0.08,
+              -0.08,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "upper": [
+              16.11809565095832,
+              null,
+              null,
+              0.0706473665999361,
+              0.0706473665999361,
+              0.08,
+              0.08,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "conditional_envelope": {
+          "status": "NOT_REQUESTED"
+        }
+      },
+      "r1": {
+        "status": "TRACKED",
+        "estimates": {
+          "mass_msun": 99999.99942066347,
+          "center_mas": [
+            0.799999981600152,
+            -0.6000000322841439
+          ],
+          "proper_motion_mas_yr": [
+            0.06500000011235538,
+            -0.03800000000782648
+          ],
+          "shear": [
+            -8.660662362053195e-10,
+            1.0104614681500837e-09
+          ],
+          "compact_quad": [
+            0.0,
+            0.0
+          ],
+          "convergence": 0.0,
+          "flux_ratio": 1.0
+        },
+        "uncertainty": {
+          "mass_msun": 38.71068238670149,
+          "center_mas": [
+            0.007559218336112815,
+            0.0056162444839704525
+          ],
+          "proper_motion_mas_yr": [
+            0.0011866149274041748,
+            0.001230502950970367
+          ],
+          "method": "local Gaussian, known supplied covariance; no chi2 rescaling; null directions return null",
+          "mass_68pct_interval_msun": [
+            99961.29622989475,
+            100038.71759660178
+          ]
+        },
+        "chi2": 1.844945156336909e-10,
+        "dof": 29,
+        "model": {
+          "family": "r1",
+          "nuisance": "shear",
+          "source_policy": "free_per_epoch",
+          "distance_and_frame": "supplied and fixed",
+          "fitted_parameters": [
+            "log_mass",
+            "center_x",
+            "center_y",
+            "motion_x",
+            "motion_y",
+            "shear_plus",
+            "shear_cross",
+            "source_0_x",
+            "source_0_y",
+            "source_1_x",
+            "source_1_y",
+            "source_2_x",
+            "source_2_y",
+            "source_3_x",
+            "source_3_y",
+            "source_4_x",
+            "source_4_y",
+            "source_5_x",
+            "source_5_y",
+            "source_6_x",
+            "source_6_y",
+            "source_7_x",
+            "source_7_y",
+            "source_8_x",
+            "source_8_y"
+          ],
+          "reference_mass_msun": 100000.0,
+          "theta_reference_mas": 28.52316501276399,
+          "time_reference_seconds": 1.9706396732417946,
+          "r0_pc": 0.0001,
+          "worldtube_policy": "supplied",
+          "flux_policy": "fixed_regular_body_proxy",
+          "parameter_basis": {
+            "schema": "bhtracker.resolved_parameter_basis.v2",
+            "optimization_epoch_yr": 2020.0,
+            "reporting_epoch_yr": 2020.0,
+            "angular_scale_mas": 31.64175628696617,
+            "time_scale_yr": 5.0,
+            "mass_scale_msun": 100000.00000000003,
+            "origin_mas": [
+              5.5538608354606644,
+              2.727702584822466
+            ],
+            "compact_quad_convention": "public coefficients retain the computational reference Einstein-radius convention; internal coefficients/bounds use the separately fixed physical compact basis",
+            "compact_quad_reference_mass_msun": 100000.00000000003,
+            "compact_quad_internal_to_public_factor": 1.0000000000000004,
+            "compact_quad_physical_bound_rule": "internal plus/cross each in [-0.01,0.01]; physical angular coefficients are public compact_quad * theta_reference_mas**4",
+            "unbounded_positions": "center and free sources have no numerical positional prior"
+          },
+          "bounds_internal": {
+            "lower": [
+              -18.420680743952367,
+              null,
+              null,
+              -0.040788276124011286,
+              -0.040788276124011286,
+              -0.08,
+              -0.08,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "upper": [
+              16.11809565095832,
+              null,
+              null,
+              0.040788276124011286,
+              0.040788276124011286,
+              0.08,
+              0.08,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          }
+        },
+        "conditional_envelope": {
+          "status": "UNRESOLVED",
+          "boundary_amplitude_cap": 5.336924113604687e-21,
+          "cap_definition": "uniform sufficient retained-action admission bound; not a selected astrophysical amplitude",
+          "rank": 2,
+          "nuisance_rank": 25,
+          "projected_singular_values_per_boundary_amplitude": [
+            4364131.014932511,
+            2296491.5650198865
+          ],
+          "unconstrained_local_amplitude_estimate": [
+            -4.257273691341834e-12,
+            -5.006200537131001e-13
+          ],
+          "unconstrained_estimate_inside_admitted_ball": false,
+          "maximum_admitted_local_snr": 2.3291036048523416e-14,
+          "worst_orientation_admitted_local_snr": 1.2256201210044399e-14,
+          "all_admitted_states_below_unit_snr": true,
+          "interpretation": "Local GLS information after source/lens and axial profiling. Outside-cap unconstrained estimates are not physical R1 state measurements. No horizon/detection claim.",
+          "normalization": "unit L2 scalar Dirichlet amplitudes; one metric response; same supplied covariance",
+          "derivative_accuracy": "symmetric base-Hessian directional derivative at relative annulus step1e-4"
+        }
+      }
+    },
+    "provider_files": {
+      "code/strong_lensing_transport.py": "eb67bf7c112257df80f2b9d2185c5ede3ae20f2f3a13c6bd348699d39cf419ed",
+      "code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+      "code/background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+      "code/closed_horndeski_n2.py": "0d7e596ae40bd01ba9331128afdda9d163e52c955096f70209f06975e197f36d",
+      "code/bhsm_optical_transfer.py": "63e660f0e97e42c5363740bcafe6407a9bd5e4eb2bcd7f9d36c059de64dd9c5d",
+      "preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113"
+    },
+    "web_files": {
+      "index.html": "1280bcfdaab42aebed3c4ff9cceb50d533822fd640a9743a58d3384dba3386da",
+      "app.js": "131c41cb48c3118317fc53a894859761ae03796aa5a35cce70f2559e68f15cea",
+      "style.css": "1d1b092b6d852ace80c29915beb54f83518d59a2eae685b893cbbb987c90962f",
+      "photometry.html": "2294396ad0a96dfa955abebeee0e846e975cb616bda7dc9809b5e4ce0940c241",
+      "photometry.js": "4b374054b2d6eaa8992bfa3e6ee4ccf14e7f42f69ddfb607b621825badb559ff",
+      "joint.html": "3f5bd9722c1e4e262fb082c91b0f901f8c879e4549d929cf27a47a23a87ec226",
+      "joint.js": "42c54379bf7bf1b8a22b78cb9e13b7d219470cee1c369757d1b5012a960442c6",
+      "atlas.html": "7b758f32707d5dac5d233b4fcf1ac9ee28a8bca8efa14c2453c8fef9f02c3f3b",
+      "atlas.js": "99e106e5c04a69d0282e83a21b2e9b1f62818a1c952aeff972b3555f648deb7b",
+      "atlas-core.js": "fd2779a4d068ba360279a20c14d0504d3e3cebb78938f2470b15b6385df686e1",
+      "atlas.css": "1c55ac8c499d8cfd462a3627e659d5b123937af3d8c58aec1de9fa3469cf53c8",
+      "atlas_data.json": "4a76300f0e0e3883a0c9c343e1e0c5fbead595c9b4f333aaa01ec05c9ec9debc",
+      "atlas_manifest.json": "831b96ade43a46f9af7c948cc2daca9f7c9e1c886b69fcfca0cef450b521a9a8"
+    },
+    "loopback_resource_checks": {
+      "/": {
+        "status": 200,
+        "bytes": 17087
+      },
+      "/app.js": {
+        "status": 200,
+        "bytes": 61618
+      },
+      "/style.css": {
+        "status": 200,
+        "bytes": 27637
+      },
+      "/photometry": {
+        "status": 200,
+        "bytes": 9661
+      },
+      "/photometry.js": {
+        "status": 200,
+        "bytes": 13330
+      },
+      "/joint": {
+        "status": 200,
+        "bytes": 11158
+      },
+      "/joint.js": {
+        "status": 200,
+        "bytes": 14713
+      },
+      "/api/health": {
+        "status": 200,
+        "bytes": 615
+      },
+      "/api/examples": {
+        "status": 200,
+        "bytes": 651
+      },
+      "/atlas": {
+        "status": 200,
+        "bytes": 6245
+      },
+      "/atlas/": {
+        "status": 200,
+        "bytes": 6245
+      },
+      "/atlas.js": {
+        "status": 200,
+        "bytes": 18788
+      },
+      "/atlas-core.js": {
+        "status": 200,
+        "bytes": 15413
+      },
+      "/atlas.css": {
+        "status": 200,
+        "bytes": 9184
+      },
+      "/atlas_data.json": {
+        "status": 200,
+        "bytes": 1824076
+      },
+      "/atlas_manifest.json": {
+        "status": 200,
+        "bytes": 610
+      },
+      "/atlas/atlas_data.json": {
+        "status": 200,
+        "bytes": 1824076
+      }
+    },
+    "candidate_atlas": {
+      "events": 155,
+      "separate_benchmarks": 1,
+      "search_targets": 3,
+      "mass_identified": false,
+      "new_black_hole_interpretation": false,
+      "inventory_utf8_sha256": "4a76300f0e0e3883a0c9c343e1e0c5fbead595c9b4f333aaa01ec05c9ec9debc",
+      "API_and_CLI_replay_original_bytes_exact": true
+    }
+  },
+  "cli": {
+    "status": "TRACKED",
+    "mass_msun": 99947.19892950804,
+    "exports": {
+      "analysis_config.json": "040b94b17d8f9a2116701e735559eb300cc9c19e0f0201c4866b00423fae7366",
+      "dataset.json": "dc0a6e871e4da6a37d4be74a8fc1fe966ebfe6abd17698122611339c30d84c26",
+      "manifest.json": "a5828aca66113c503dbe1e7bccb3cf2b0768822ad79508468014119bbe834091",
+      "measurements_and_model.png": "9ebad111356007955a6bae592c6effd1e4eef8b2d15b98d55b186acc4752fb95",
+      "predictions.csv": "1ee44ed09431193ca540ddfcc9cd4fb433d9a4bb65566488d8b5b130799cb1c1",
+      "report.html": "81cdedbd89f1c8f8d2fc8c979a1b40fb2576cf393c96c9ffb1f2820eb96d60a5",
+      "REPRODUCE.md": "d99b67e0ed08673a74d506cdf1c94f88936082de42467b8d6816fa254abd2c75",
+      "result.json": "bbcdc698212e5795073be0cda2e0552ef0c9957c90129070a6aaecddb3a714d2",
+      "software_provenance.json": "c09f344bbe5dfeb9d7514f982be9ab85239525b79e5d27dcc3ed6aa503e42af0",
+      "track_and_residuals.png": "5e16728bd4ec4c9acaf140454bc682cd9f7312d81ab09802c2bef44ab5c3b17f"
+    }
+  },
+  "package_source_sha256": {
+    "bhtracker/__init__.py": "270fb98a0bb0abd35a504ceb23405bfb32fbfc831e0536539def9a63c81e1d8f",
+    "bhtracker/__main__.py": "6ce05b79ee1666025af142adc913f1d468781e77af67ae431fe163472a52fb3a",
+    "bhtracker/astrometry.py": "a74dd19625f4bf463249ab9d3cb80ee8794e3e12c5d728f5fbdf5817f1002daa",
+    "bhtracker/candidate_atlas.py": "9446b7c19414566b6ddd3921ccd1b9a38c46450d15a4074e881e0dd47714c624",
+    "bhtracker/cli.py": "dbd4db3a190f5d5f2d3e899c189e9b7d89f9f35fbb51c0c608f6bec7707c588b",
+    "bhtracker/data.py": "6ef640052af40d95056ce4d15a508096d678737ba09afdb24c0df09df03d6b63",
+    "bhtracker/envelope.py": "c08bbf41cf58878db0a825247812f19b642280c1cd908f4a8a099c7d16f7c285",
+    "bhtracker/examples/cosmological_short_track.json": "9585f83e2ba1f9a8ad845107d3451235ad4c229b4dc22547b07750dc80d1bed8",
+    "bhtracker/examples/cosmological_short_track.truth.json": "cb7850b81d9cf527cbb6bc277c9999b1d54f9b91696327dc1ab23b7b609eb0d9",
+    "bhtracker/examples/nearby_motion.json": "dc0a6e871e4da6a37d4be74a8fc1fe966ebfe6abd17698122611339c30d84c26",
+    "bhtracker/examples/nearby_motion.r1.result.json": "dd568febed6a36c258bdb450a15fdde98801b8cb90652c3436dc6648d49c4948",
+    "bhtracker/examples/nearby_motion.result.json": "a88ac046d1661cc51ca80d59dccf9483e83a4a5325c94f4ff9331ce37131733a",
+    "bhtracker/examples/nearby_motion.truth.json": "bea9c83f8cb4432e3a220c687d14abe7bc600fd7553f4e723c08d6ab082cb99b",
+    "bhtracker/examples/ordinary_shear.json": "22ab8120ee2686569b16a5699a8b206f3f1dcd8a3e62506aa475ae4d62c4ec6f",
+    "bhtracker/examples/ordinary_shear.truth.json": "6daf30e9be75e61205d5febd39a75c2a977055fb3c3ff7897fc246bc3ce9ff0f",
+    "bhtracker/examples/stellar_benchmark.json": "9b202c825a1ddc3a35507da74e5cc207c8ee14af9c057bf49080e4c2cb097f2f",
+    "bhtracker/examples/stellar_benchmark.truth.json": "76a1f89eb3370dad13d33028623cbf7d837b58813c186a51df42ecf2f50d2f93",
+    "bhtracker/examples.py": "6694293c27930087cbc0866d83aa657ea70c6dd6cb2a6b1d6a59a693a6bf8f26",
+    "bhtracker/forward.py": "54035f500c3c8f1b8ae606e45c178c4e9b09e31b083b152f52d479654b7066f5",
+    "bhtracker/importers.py": "12c2c97700432f675f9c69eb74f2b3010ac318972dc2f04f7c172fa53a492396",
+    "bhtracker/inference.py": "35d0bba9db08feb22584d7234e62ea9bd6ef34d6feb325258892d51118f986f9",
+    "bhtracker/interpretation.py": "8a87a192e7bd3558bd3ae0a04bce955de8140a872b380412ffa21240c63de010",
+    "bhtracker/joint_benchmark.py": "d3811ccb1214ab6ac3f307033fbcb6e9fc89ad7201de4c3b91faeeec47f94480",
+    "bhtracker/joint_benchmark_v2.py": "83f599f7cdd616690fdcbf61f30ec05145719cc5b343d083cfe4c0a45ff940a6",
+    "bhtracker/joint_mass.py": "507874d1adb27440abc3add6aab6ac5caf45f871b7ba58b8206d3fdceef32ff0",
+    "bhtracker/joint_mass_v2.py": "6eaf050481fc23aebf4b929e49fdab57e324ee80eb08e1547b69f056269eeaaa",
+    "bhtracker/joint_report.py": "f5a5d08ee76a53027f089d630e72ec9d15d4f7347e37a045016e401ee186752b",
+    "bhtracker/joint_workflow.py": "838f97c94213cc155ba4447b232e39209cdf11c0d0ae1ebd769aa1fc3cc1d61d",
+    "bhtracker/joint_workflow_v2.py": "3597564b3f7cf628fd13d003ad18fb5aff7f03aea644e86ece0664d75b7e1698",
+    "bhtracker/observations.py": "5c9b07c1887c9a299ca8505b323462d41f314457f2bff3b5b2b2ca1970a21c0b",
+    "bhtracker/photometry.py": "e51e83a8754666fe3746d037a80f7cfc25818a846297357222f38f3d1033bdac",
+    "bhtracker/physics_admission.py": "eb89ef40f95128078df390ce813c312ad302b1494424d57faea3191cafa58e60",
+    "bhtracker/provenance.py": "59665d20fb49651ac974ab9b0fb5f1b3de05ec345e361c6cfc70510d9b9673c1",
+    "bhtracker/r1_runtime.py": "f3cc2074d915ad02ba6549209d0b0cd532304fa71d2930bb7cbc3d5fc2a39250",
+    "bhtracker/report.py": "15f17c02821d88a639f0af0a426af954467700f057635d4f76497fc0e8c18847",
+    "bhtracker/sample_bundle.py": "8d145f0d16a2d9f2a63706b0fb5f26d187e33589597ae7ee7182cec8b15613ad",
+    "bhtracker/server.py": "3ef0f7fda2b25f71b79c9d5bec1c96e0e5262f0d77b6bc8fb7cc1d0edc2a620e",
+    "bhtracker/theory/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bhtracker/theory/ADAPTATION.json": "e35a9530a932522ee3ca5b8a85166c89e22f2f24e0b3c717cff948c2b216118b",
+    "bhtracker/theory/BHSM_CORE_SURFACE_CONTRACT.json": "a0561d8fe7d1031daa2a56c433d46b99734b20f850e02e16d0e5095b32fc3507",
+    "bhtracker/theory/BHSM_INTERPRETATION_MANIFEST.json": "e82a4d84533593576a0999753d9d2d1f95e2f6b214805a6829d93129a48dac64",
+    "bhtracker/theory/bhsm_sources/BHSM_ETA_SEAM_THRESHOLD_BY_v14_25.md": "6dba2dd7837b77ff24e7ea2c1a3733edf0b6ab8ac024a9a0d4481cadaf90046a",
+    "bhtracker/theory/bhsm_sources/BHSM_Galaxy_Gravity_Loaded_Schur_Hessian_v0_5.md": "718cdac692ae6030eb70c327771343267c4517c1a69a01454a32872579013816",
+    "bhtracker/theory/bhsm_sources/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.json": "48515f3eeb0179d724213b9e030410927d73a9fc97c022cc98853c37dd793256",
+    "bhtracker/theory/bhsm_sources/BHSM_NORMAN_CORE_SURFACE_AMENDMENT_20261022.md": "028158078ae6ac2c32f44f3539c2598ade810f5ef77fff66b7e854cb9d4f959a",
+    "bhtracker/theory/bhsm_sources/BHSM_Topographic_Galaxy_Encapsulation_Solution_v0_3.md": "c9eaee920746c024b695c722fc783aea53dfc9da5660a92150de4b05d9c7ba0a",
+    "bhtracker/theory/provider/code/action_native_matter_n2.py": "eee6ffc6f31d743cc36c31300c8a51c6a28cc50fbbb7526342b7f88978dfcb81",
+    "bhtracker/theory/provider/code/background.py": "9bf7107e0e9f716a8176baed6ae638f887c3aabb295b580bf09d6c51364aae89",
+    "bhtracker/theory/provider/code/bhsm_optical_transfer.py": "63e660f0e97e42c5363740bcafe6407a9bd5e4eb2bcd7f9d36c059de64dd9c5d",
+    "bhtracker/theory/provider/code/closed_horndeski_n2.py": "0d7e596ae40bd01ba9331128afdda9d163e52c955096f70209f06975e197f36d",
+    "bhtracker/theory/provider/code/strong_lensing_transport.py": "eb67bf7c112257df80f2b9d2185c5ede3ae20f2f3a13c6bd348699d39cf419ed",
+    "bhtracker/theory/provider/preregistration/prediction_manifest.json": "afaf697100a70d43eab2a6086931bad5efe1ced02f9a56d422b709896be51113",
+    "bhtracker/theory/provider/SOURCE_MANIFEST.json": "39e65bbe5dc57a371f4bf3221d7294f561fb2c0f9f6c5917028c1b235de9e4d3",
+    "bhtracker/theory/radial_response.py": "d7a90db765d89c9b56d5129a2bbb937238c364ddf09d8683c7b5bbfca0c17514",
+    "bhtracker/unresolved_report.py": "3ff5cba6f550f1ee6aa4b5a39f52a5acb2d9c4fc5c1220e5c3a6cac5e52c5420",
+    "bhtracker/web/app.js": "131c41cb48c3118317fc53a894859761ae03796aa5a35cce70f2559e68f15cea",
+    "bhtracker/web/atlas-core.js": "fd2779a4d068ba360279a20c14d0504d3e3cebb78938f2470b15b6385df686e1",
+    "bhtracker/web/atlas.css": "1c55ac8c499d8cfd462a3627e659d5b123937af3d8c58aec1de9fa3469cf53c8",
+    "bhtracker/web/atlas.html": "7b758f32707d5dac5d233b4fcf1ac9ee28a8bca8efa14c2453c8fef9f02c3f3b",
+    "bhtracker/web/atlas.js": "99e106e5c04a69d0282e83a21b2e9b1f62818a1c952aeff972b3555f648deb7b",
+    "bhtracker/web/atlas_data.json": "4a76300f0e0e3883a0c9c343e1e0c5fbead595c9b4f333aaa01ec05c9ec9debc",
+    "bhtracker/web/atlas_manifest.json": "831b96ade43a46f9af7c948cc2daca9f7c9e1c886b69fcfca0cef450b521a9a8",
+    "bhtracker/web/index.html": "1280bcfdaab42aebed3c4ff9cceb50d533822fd640a9743a58d3384dba3386da",
+    "bhtracker/web/joint.html": "3f5bd9722c1e4e262fb082c91b0f901f8c879e4549d929cf27a47a23a87ec226",
+    "bhtracker/web/joint.js": "42c54379bf7bf1b8a22b78cb9e13b7d219470cee1c369757d1b5012a960442c6",
+    "bhtracker/web/photometry.html": "2294396ad0a96dfa955abebeee0e846e975cb616bda7dc9809b5e4ce0940c241",
+    "bhtracker/web/photometry.js": "4b374054b2d6eaa8992bfa3e6ee4ccf14e7f42f69ddfb607b621825badb559ff",
+    "bhtracker/web/style.css": "1d1b092b6d852ace80c29915beb54f83518d59a2eae685b893cbbb987c90962f"
+  },
+  "source_archive": {
+    "filename": "Blackhole_Tracker_Product_Source.zip",
+    "hash_location": "external release_manifest.json; regenerate with --source-only after final edits"
+  }
+}
